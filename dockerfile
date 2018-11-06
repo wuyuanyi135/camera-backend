@@ -9,7 +9,7 @@ RUN apt update && apt install -y cmake build-essential git udev gdb python
 ADD VimbaUSBTL VimbaUSBTL
 RUN cd VimbaUSBTL && bash Install.sh
 
-RUN service udev start
+# RUN service udev start
 ADD inc inc
 ADD lib lib
 
