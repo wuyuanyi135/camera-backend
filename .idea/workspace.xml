@@ -12,17 +12,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a23e60ba-2f13-4dfd-9f58-962b3f794ff5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/build_time.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run_time.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/camera.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/camera.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vimba-backend.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vimba-backend.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dockerfile.dev" beforeDir="false" afterPath="$PROJECT_DIR$/dockerfile.release" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/update_dev.sh" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -123,22 +115,22 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="c" value="177" />
+          <entry key="c" value="237" />
           <entry key="dev" value="4" />
-          <entry key="dockerfile" value="416" />
+          <entry key="dockerfile" value="688" />
           <entry key="dummy" value="18" />
           <entry key="h" value="18" />
           <entry key="py" value="335" />
           <entry key="sh" value="121" />
-          <entry key="txt" value="33" />
+          <entry key="txt" value="72" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Bash" value="121" />
           <entry key="CMakeLists.txt" value="33" />
-          <entry key="ObjectiveC" value="195" />
-          <entry key="PLAIN_TEXT" value="438" />
+          <entry key="ObjectiveC" value="255" />
+          <entry key="PLAIN_TEXT" value="749" />
           <entry key="Python" value="335" />
         </counts>
       </usages-collector>
@@ -155,11 +147,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/dockerfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="18" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
+            <state relative-caret-position="435">
+              <caret line="29" column="33" lean-forward="true" selection-start-line="29" selection-start-column="33" selection-end-line="29" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -197,8 +189,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+            <state relative-caret-position="225">
+              <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
               <folding>
                 <element signature="e#42#60#0" expanded="true" />
               </folding>
@@ -206,11 +198,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/camera.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+            <state relative-caret-position="120">
+              <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -241,9 +233,9 @@
         <option value="$PROJECT_DIR$/src/camera.h" />
         <option value="$PROJECT_DIR$/run_time.py" />
         <option value="$PROJECT_DIR$/build_time.sh" />
-        <option value="$PROJECT_DIR$/dockerfile" />
-        <option value="$PROJECT_DIR$/src/main.c" />
         <option value="$PROJECT_DIR$/src/camera.c" />
+        <option value="$PROJECT_DIR$/src/main.c" />
+        <option value="$PROJECT_DIR$/dockerfile" />
       </list>
     </option>
   </component>
@@ -349,10 +341,10 @@
         <settings>
           <option name="JSONFilePath" value="" />
           <option name="command" value="" />
-          <option name="commandLineOptions" value="-it -v vimba:/root/build" />
-          <option name="containerName" value="vimba_backend_run" />
+          <option name="commandLineOptions" value="-it -v vimba:/root/build --privileged" />
+          <option name="containerName" value="vimba_backend_run_bor" />
           <option name="entrypoint" value="" />
-          <option name="imageTag" value="vimba_backend_run" />
+          <option name="imageTag" value="vimba_backend_run_bor" />
           <option name="sourceFilePath" value="dockerfile" />
           <option name="startBrowserSettings">
             <browser url="http://127.0.0.1" />
@@ -509,12 +501,20 @@
       <workItem from="1541455028582" duration="5188000" />
       <workItem from="1541463194987" duration="224000" />
       <workItem from="1541463434263" duration="617000" />
-      <workItem from="1541464110903" duration="4635000" />
+      <workItem from="1541464110903" duration="8905000" />
     </task>
+    <task id="LOCAL-00001" summary="persist, selectable build configuration">
+      <created>1541468783830</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1541468783830</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16697000" />
+    <option name="totallyTimeSpent" value="20967000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -529,7 +529,7 @@
     <frame x="67" y="27" width="1853" height="1053" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4978166" visible="true" weight="0.27559492" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4978166" visible="true" weight="0.27559492" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.5021834" side_tool="true" weight="0.25302014" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -544,7 +544,7 @@
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5002767" side_tool="true" weight="0.2489083" />
       <window_info anchor="bottom" id="Version Control" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="CMake" order="11" weight="0.32969433" />
-      <window_info anchor="bottom" id="Docker" order="12" sideWeight="0.4997233" visible="true" weight="0.2489083" />
+      <window_info active="true" anchor="bottom" id="Docker" order="12" sideWeight="0.4997233" visible="true" weight="0.2489083" />
       <window_info anchor="bottom" id="Messages" order="13" weight="0.32969433" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -557,6 +557,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="persist, selectable build configuration" />
+    <option name="LAST_COMMIT_MESSAGE" value="persist, selectable build configuration" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/main.c" />
@@ -628,27 +632,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dockerfile">
+    <entry file="file://$PROJECT_DIR$/src/camera.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="18" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
+        <state relative-caret-position="120">
+          <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+        <state relative-caret-position="225">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
           <folding>
             <element signature="e#42#60#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/camera.c">
+    <entry file="file://$PROJECT_DIR$/dockerfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+        <state relative-caret-position="435">
+          <caret line="29" column="33" lean-forward="true" selection-start-line="29" selection-start-column="33" selection-end-line="29" selection-end-column="33" />
         </state>
       </provider>
     </entry>

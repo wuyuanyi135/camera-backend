@@ -11,7 +11,7 @@ int main() {
   VmbVersionQuery (&version, sizeof(version));
 
   printf ("Version = %d.%d.%d \n", version.major, version.minor, version.patch);
-  test ();
-
+  VmbError_t result = VmbStartup ();
+  printf ("result = %d\n", result);
   getchar ();
 }
