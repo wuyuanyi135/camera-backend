@@ -1,5 +1,3 @@
-# development script
-
 FROM ubuntu:latest
 
 WORKDIR /root
@@ -17,5 +15,6 @@ RUN cp inc/* /usr/local/include && cp lib/x86_64bit/* /usr/local/lib && ldconfig
 ADD CMakeLists.txt CMakeLists.txt
 ADD src src
 
-ADD update_dev.sh .
-CMD ["/bin/bash", "update_dev.sh", "&&", "/bin/bash"]
+RUN mkdir build && cd build && cmake .. && make
+
+CMD build/src/vimba_backend
