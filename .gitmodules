@@ -1,0 +1,3 @@
+[submodule "core/inc/critical_wait_flags"]
+	path = core/inc/critical_wait_flags
+	url = https://github.com/wuyuanyi135/critical_wait_flags

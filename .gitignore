@@ -1,1 +1,4 @@
 cmake-build-*
+qemu-arch/qemu-*-static
+Dockerfile*.amd64
+Dockerfile*.arm64v8

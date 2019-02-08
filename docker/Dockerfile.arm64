@@ -1,0 +1,32 @@
+#: TAG = wuyuanyi/camera-backend:latest-arm64
+
+FROM wuyuanyi/grpc-cxx:latest-arm64 as grpc
+
+FROM wuyuanyi/camera-backend-env:latest-arm64 as full
+
+
+
+# port for gdb
+EXPOSE 1234
+EXPOSE 80
+
+WORKDIR /root
+
+COPY environment environment
+COPY core core
+
+# build the program
+RUN cd core && /bin/bash -l -c ../environment/scripts/build_time.sh
+
+
+FROM arm64v8/ubuntu:18.04
+
+# Vimba driver installation
+# no need for udev because device is handled by the host
+COPY environment environment
+RUN mkdir -p /etc/udev/rules.d/ && cd environment/driver_install/VimbaUSBTL && /bin/sh Install.sh
+
+# program installation
+COPY --from=full /root/core/build /root
+
+CMD /bin/bash # -l -c "environment/scripts/run_time.py"

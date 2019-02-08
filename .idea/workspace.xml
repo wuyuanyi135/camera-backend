@@ -1,22 +1,118 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true" buildAllGenerated="true">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
-      <config projectName="vimba_backend" targetName="vimba_backend" />
+      <config projectName="camera_backend" targetName="shared" />
+      <config projectName="camera_backend" targetName="test_grpc_server" />
+      <config projectName="camera_backend" targetName="test_aravis_driver.cpp" />
+      <config projectName="camera_backend" targetName="proto" />
+      <config projectName="camera_backend" targetName="test_framework.cpp" />
+      <config projectName="camera_backend" targetName="aravis_adapter" />
+      <config projectName="camera_backend" targetName="grpc_server_app" />
+      <config projectName="camera_backend" targetName="camera_driver" />
+      <config projectName="camera_backend" targetName="grpc_server" />
     </generated>
   </component>
-  <component name="CMakeSettings" AUTO_RELOAD="true">
+  <component name="CMakeSettings">
     <configurations>
       <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a23e60ba-2f13-4dfd-9f58-962b3f794ff5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+    <list default="true" id="a23e60ba-2f13-4dfd-9f58-962b3f794ff5" name="Default Changelist" comment="source the profile to make vimba work">
+      <change afterPath="$PROJECT_DIR$/.dockerignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitmodules" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/inc/critical_wait_flags" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/protos/camera_definitions.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/protos/camera_service.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src/camera_driver/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src/camera_driver/src/adapter.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src/camera_driver/src/aravis/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src/camera_driver/src/aravis/aravis_adapter.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src/camera_driver/src/aravis/aravis_adapter.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src/camera_driver/src/aravis/aravis_camera.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src/camera_driver/src/aravis/aravis_camera.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src/camera_driver/src/aravis/aravis_camera_internal.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src/camera_driver/src/aravis/aravis_camera_template_impl.tcc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src/camera_driver/src/aravis/test/test_aravis_driver.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src/camera_driver/src/camera_container.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src/camera_driver/src/camera_descriptor.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src/camera_driver/src/camera_driver.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src/camera_driver/src/camera_parameter.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src/camera_driver/src/capability.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src/camera_driver/src/event_handlers.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src/camera_driver/src/exceptions.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src/camera_driver/src/frame.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src/camera_driver/src/frame_handler.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src/camera_driver/src/framework.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src/camera_driver/src/framework.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src/camera_driver/src/status.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src/camera_driver/src/test/test_framework.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src/grpc_server/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src/grpc_server/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src/grpc_server/src/config.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src/grpc_server/src/config.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src/grpc_server/src/error.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src/grpc_server/src/error.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src/grpc_server/src/main.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src/grpc_server/src/server.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src/grpc_server/src/server.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src/grpc_server/src/server_auxiliary_impl.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src/grpc_server/test/test_grpc_server.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src/shared/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src/shared/src/finally.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src/shared/src/logging.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src/shared/src/logging.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/Dockerfile.cross" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/Dockerfile.env.cross" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/Dockerfile_exec.cross" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/build.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/build_dockerfiles.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/environment/driver_install/VimbaUSBTL/CTI/arm_64bit/VimbaUSBTL.cti" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/environment/driver_install/VimbaUSBTL/CTI/arm_64bit/VimbaUSBTL.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/environment/scripts/build_time.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/qemu_arch/get_qemu.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/qemu_arch/qemu-aarch64-static" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/qemu_arch/qemu-arm-static" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/qemu_arch/qemu-x86_64-static" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/grpc_server/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VimbaUSBTL/CTI/x86_32bit/VimbaUSBTL.cti" beforeDir="false" afterPath="$PROJECT_DIR$/environment/driver_install/VimbaUSBTL/CTI/x86_32bit/VimbaUSBTL.cti" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VimbaUSBTL/CTI/x86_32bit/VimbaUSBTL.xml" beforeDir="false" afterPath="$PROJECT_DIR$/environment/driver_install/VimbaUSBTL/CTI/x86_32bit/VimbaUSBTL.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VimbaUSBTL/CTI/x86_64bit/VimbaUSBTL.cti" beforeDir="false" afterPath="$PROJECT_DIR$/environment/driver_install/VimbaUSBTL/CTI/x86_64bit/VimbaUSBTL.cti" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VimbaUSBTL/CTI/x86_64bit/VimbaUSBTL.xml" beforeDir="false" afterPath="$PROJECT_DIR$/environment/driver_install/VimbaUSBTL/CTI/x86_64bit/VimbaUSBTL.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VimbaUSBTL/Install.sh" beforeDir="false" afterPath="$PROJECT_DIR$/environment/driver_install/VimbaUSBTL/Install.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VimbaUSBTL/SetGenTLPath.sh" beforeDir="false" afterPath="$PROJECT_DIR$/environment/driver_install/VimbaUSBTL/SetGenTLPath.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VimbaUSBTL/Uninstall.sh" beforeDir="false" afterPath="$PROJECT_DIR$/environment/driver_install/VimbaUSBTL/Uninstall.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build_time.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dockerfile.release" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/inc/VimbaC.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/inc/VmbCommonTypes.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/x86_32bit/VimbaC.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/x86_32bit/libVimbaC.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/x86_64bit/VimbaC.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/x86_64bit/libVimbaC.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run_time.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/camera.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/camera.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.h" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
+    <ignored path="$PROJECT_DIR$/CMakeFiles/" />
+    <ignored path="$PROJECT_DIR$/grpc/CMakeFiles/" />
+    <ignored path="$PROJECT_DIR$/core/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,172 +133,80 @@
     <expand />
     <select />
   </component>
-  <component name="FUSProjectUsageTrigger">
-    <session id="-353476139">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="2" />
-          <entry key="project.open.time.1" value="1" />
-          <entry key="project.open.time.13" value="2" />
-          <entry key="project.opened" value="3" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="c" value="1" />
-          <entry key="dev" value="1" />
-          <entry key="dockerfile" value="1" />
-          <entry key="gitignore" value="1" />
-          <entry key="h" value="1" />
-          <entry key="sh" value="2" />
-          <entry key="txt" value="2" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="CMakeLists.txt" value="1" />
-          <entry key="ObjectiveC" value="2" />
-          <entry key="PLAIN_TEXT" value="5" />
-          <entry key="Scratch" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="c" value="69" />
-          <entry key="dev" value="97" />
-          <entry key="dockerfile" value="469" />
-          <entry key="gitignore" value="13" />
-          <entry key="sh" value="86" />
-          <entry key="txt" value="74" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="Bash" value="67" />
-          <entry key="CMakeLists.txt" value="74" />
-          <entry key="ObjectiveC" value="69" />
-          <entry key="PLAIN_TEXT" value="598" />
-        </counts>
-      </usages-collector>
-    </session>
-    <session id="47006338">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="6" />
-          <entry key="project.open.time.1" value="1" />
-          <entry key="project.open.time.5" value="2" />
-          <entry key="project.open.time.6" value="3" />
-          <entry key="project.opened" value="6" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="c" value="3" />
-          <entry key="debug in docker (disassembly)" value="1" />
-          <entry key="dev" value="1" />
-          <entry key="dockerfile" value="1" />
-          <entry key="h" value="2" />
-          <entry key="sh" value="3" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="Bash" value="2" />
-          <entry key="Disassembly" value="1" />
-          <entry key="ObjectiveC" value="5" />
-          <entry key="PLAIN_TEXT" value="3" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="c" value="424" />
-          <entry key="dev" value="4" />
-          <entry key="dockerfile" value="688" />
-          <entry key="dummy" value="18" />
-          <entry key="h" value="18" />
-          <entry key="py" value="335" />
-          <entry key="sh" value="121" />
-          <entry key="txt" value="137" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="Bash" value="121" />
-          <entry key="CMakeLists.txt" value="33" />
-          <entry key="ObjectiveC" value="442" />
-          <entry key="PLAIN_TEXT" value="814" />
-          <entry key="Python" value="335" />
-        </counts>
-      </usages-collector>
-    </session>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="FavoritesManager">
+    <favorites_list name="camera_backend" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+        <entry file="file://$PROJECT_DIR$/core/CMakeLists.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="35" selection-start-column="35" selection-end-column="35" />
+            <state relative-caret-position="300">
+              <caret line="20" column="53" selection-start-line="20" selection-start-column="53" selection-end-line="20" selection-end-column="53" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dockerfile">
+        <entry file="file://$PROJECT_DIR$/core/src/shared/CMakeLists.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="28" selection-start-line="28" selection-end-line="28" />
+            <state relative-caret-position="210">
+              <caret line="14" column="43" selection-start-line="14" selection-start-column="43" selection-end-line="14" selection-end-column="61" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/run_time.py">
+        <entry file="file://$PROJECT_DIR$/core/src/grpc_server/CMakeLists.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="23" />
-              <folding>
-                <element signature="e#23#32#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="408">
+              <caret line="33" column="53" selection-start-line="33" selection-start-column="53" selection-end-line="33" selection-end-column="53" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/build_time.sh">
+        <entry file="file://$PROJECT_DIR$/core/src/camera_driver/CMakeLists.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+            <state relative-caret-position="78">
+              <caret line="19" column="67" selection-start-line="19" selection-start-column="67" selection-end-line="19" selection-end-column="67" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/CMakeLists.txt">
+        <entry file="file://$PROJECT_DIR$/core/src/camera_driver/src/aravis/CMakeLists.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="43" selection-start-line="2" selection-start-column="43" selection-end-line="2" selection-end-column="43" />
+            <state relative-caret-position="408">
+              <caret line="32" column="20" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/src/grpc_server/src/main.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" selection-start-line="4" selection-end-line="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docker/Dockerfile.cross">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="18" column="62" selection-start-line="18" selection-start-column="62" selection-end-line="18" selection-end-column="62" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main.c">
+        <entry file="file://$PROJECT_DIR$/environment/scripts/build_time.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="34" lean-forward="true" selection-start-line="1" selection-start-column="34" selection-end-line="1" selection-end-column="34" />
-              <folding>
-                <element signature="e#42#60#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/camera.c">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+            <state relative-caret-position="195">
+              <caret line="13" column="78" selection-start-line="13" selection-start-column="78" selection-end-line="13" selection-end-column="78" />
             </state>
           </provider>
         </entry>
@@ -213,8 +217,43 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CMakeLists.txt" />
+        <option value="Python Script" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>Capt</find>
+      <find>capturing al</find>
+      <find>message</find>
+      <find>push</find>
+      <find>new</find>
+      <find>final</find>
+      <find>buffer</find>
+      <find>finalize</find>
+      <find>camera</find>
+      <find>list</find>
+      <find>capability</find>
+      <find>conf</find>
+      <find>sho</find>
+      <find>getdevice</find>
+      <find>frame</find>
+      <find>rep_</find>
+      <find>rep_-&gt;elements</find>
+      <find>framestream</find>
+      <find>return</find>
+      <find>13</find>
+      <find>async</find>
+      <find>numberFrames</find>
+      <find>cancelled</find>
+      <find>capturing</find>
+      <find>shutdown</find>
+      <find>nan</find>
+      <find>set_confi</find>
+      <find>stream</find>
+      <find>start</find>
+      <find>param</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -222,74 +261,145 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/VimbaUSBTL/Install.sh" />
-        <option value="$PROJECT_DIR$/CMakeLists.txt" />
-        <option value="$PROJECT_DIR$/update_dev.sh" />
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/dockerfile.dev" />
-        <option value="$PROJECT_DIR$/cmd.sh" />
-        <option value="$PROJECT_DIR$/src/CMakeLists.txt" />
-        <option value="$PROJECT_DIR$/cmd.py" />
-        <option value="$PROJECT_DIR$/src/camera.h" />
-        <option value="$PROJECT_DIR$/run_time.py" />
-        <option value="$PROJECT_DIR$/build_time.sh" />
-        <option value="$PROJECT_DIR$/src/camera.c" />
-        <option value="$PROJECT_DIR$/dockerfile" />
-        <option value="$PROJECT_DIR$/src/main.c" />
+        <option value="$PROJECT_DIR$/core/src/shared/src/logging.h" />
+        <option value="$PROJECT_DIR$/core/src/camera_driver/test/test_arvis_driver.cpp" />
+        <option value="$PROJECT_DIR$/core/src/camera_driver/src/camera_descriptor.h" />
+        <option value="$PROJECT_DIR$/core/src/camera_driver/src/aravis/aravis_camera_template_impl.tcc" />
+        <option value="$PROJECT_DIR$/core/src/camera_driver/src/event_handlers.h" />
+        <option value="$PROJECT_DIR$/core/src/camera_driver/src/capability.h" />
+        <option value="$PROJECT_DIR$/core/src/camera_driver/src/camera_container.h" />
+        <option value="$PROJECT_DIR$/core/src/camera_driver/test/test_framework.cpp" />
+        <option value="$PROJECT_DIR$/core/src/camera_driver/src/aravis/aravis_adapter.h" />
+        <option value="$PROJECT_DIR$/core/src/camera_driver/src/adapter.h" />
+        <option value="$PROJECT_DIR$/core/src/grpc_server/src/error.cpp" />
+        <option value="$PROJECT_DIR$/core/src/camera_driver/src/exceptions.h" />
+        <option value="$PROJECT_DIR$/core/src/camera_driver/test/test_aravis_driver.cpp" />
+        <option value="$PROJECT_DIR$/core/src/shared/src/logging.cpp" />
+        <option value="$PROJECT_DIR$/core/src/camera_driver/src/aravis/aravis_adapter.cpp" />
+        <option value="$PROJECT_DIR$/core/src/camera_driver/src/framework.cpp" />
+        <option value="$PROJECT_DIR$/core/src/camera_driver/src/framework.h" />
+        <option value="$PROJECT_DIR$/core/src/camera_driver/src/test/test_framework.cpp" />
+        <option value="$PROJECT_DIR$/core/src/grpc_server/src/error.h" />
+        <option value="$PROJECT_DIR$/core/src/camera_driver/src/camera_driver.h" />
+        <option value="$PROJECT_DIR$/core/src/camera_driver/src/frame_handler.h" />
+        <option value="$PROJECT_DIR$/core/protos/camera_service.proto" />
+        <option value="$PROJECT_DIR$/core/src/camera_driver/src/frame.h" />
+        <option value="$PROJECT_DIR$/core/src/camera_driver/src/aravis/aravis_camera.h" />
+        <option value="$PROJECT_DIR$/core/src/camera_driver/src/aravis/aravis_camera_internal.cpp" />
+        <option value="$PROJECT_DIR$/core/inc/critical_wait_flags/critical_wait_flags.h" />
+        <option value="$PROJECT_DIR$/Dockerfile.aravis" />
+        <option value="$PROJECT_DIR$/.dockerignore" />
+        <option value="$PROJECT_DIR$/core/src/grpc_server/src/server.h" />
+        <option value="$PROJECT_DIR$/Dockerfile.dev.env" />
+        <option value="$PROJECT_DIR$/Dockerfile" />
+        <option value="$PROJECT_DIR$/core/protos/camera_definitions.proto" />
+        <option value="$PROJECT_DIR$/core/src/grpc_server/src/server_auxiliary_impl.cpp" />
+        <option value="$PROJECT_DIR$/core/src/grpc_server/test/test_grpc_server.cpp" />
+        <option value="$PROJECT_DIR$/core/src/camera_driver/src/camera_parameter.h" />
+        <option value="$PROJECT_DIR$/core/src/camera_driver/src/aravis/aravis_camera.cpp" />
+        <option value="$PROJECT_DIR$/core/src/camera_driver/src/aravis/test/test_aravis_driver.cpp" />
+        <option value="$PROJECT_DIR$/core/src/grpc_server/src/server.cpp" />
+        <option value="$PROJECT_DIR$/Dockerfile.grpc" />
+        <option value="$PROJECT_DIR$/docker/Dockerfile" />
+        <option value="$PROJECT_DIR$/docker/Dockerfile.dev.env" />
+        <option value="$PROJECT_DIR$/docker/Dockerfile.env.cross" />
+        <option value="$PROJECT_DIR$/docker/build.py" />
+        <option value="$PROJECT_DIR$/core/src/grpc_server/src/main.cpp" />
+        <option value="$PROJECT_DIR$/core/src/shared/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/core/src/grpc_server/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/core/src/camera_driver/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/core/src/camera_driver/src/aravis/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/core/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/core/PostInstall.cmake" />
+        <option value="$PROJECT_DIR$/environment/scripts/build_time.sh" />
       </list>
     </option>
   </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
-  </component>
+  <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="85" />
-    <option name="y" value="25" />
-    <option name="width" value="1750" />
-    <option name="height" value="970" />
+    <option name="x" value="67" />
+    <option name="y" value="27" />
+    <option name="width" value="1647" />
+    <option name="height" value="939" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
-    <navigator proportions="" version="1">
+    <navigator currentView="Scope" currentSubView="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope" proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="vimba_backend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vimba-backend" type="462c0819:PsiDirectoryNode" />
+              <item name="camera_backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
             </path>
             <path>
-              <item name="vimba_backend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vimba-backend" type="462c0819:PsiDirectoryNode" />
-              <item name="inc" type="462c0819:PsiDirectoryNode" />
+              <item name="camera_backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
+              <item name="Scratches" type="d62648e6:ScratchProjectViewPane$MyRootNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Scope 'Project Non-Source Files'; set:Project Non-Source Files; class com.jetbrains.cidr.lang.search.scopes.ProjectSourcesScopeProvider$NonSourceFilesScope">
+          <expand>
+            <path>
+              <item name="vimba_backend" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+        <subPane subId="Scope 'Project Source Files'; set:Project Source Files; class com.jetbrains.cidr.lang.search.scopes.ProjectSourcesScopeProvider$SourceFilesScope">
+          <expand>
+            <path>
+              <item name="camera_backend" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
             </path>
             <path>
-              <item name="vimba_backend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vimba-backend" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="camera_backend" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="core" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+          <expand>
+            <path>
+              <item name="camera_backend" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
             </path>
             <path>
-              <item name="vimba_backend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vimba-backend" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="x86_64bit" type="462c0819:PsiDirectoryNode" />
+              <item name="camera_backend" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="core" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
-              <item name="vimba_backend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vimba-backend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="camera_backend" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="core" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
-              <item name="vimba_backend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vimba-backend" type="462c0819:PsiDirectoryNode" />
-              <item name="VimbaUSBTL" type="462c0819:PsiDirectoryNode" />
+              <item name="camera_backend" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="docker" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="camera_backend" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="environment" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="camera_backend" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="environment" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="scripts" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
           </expand>
           <select />
@@ -300,12 +410,28 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="TEXT" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.C/C++" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/build_docker.py" />
+    <property name="node.js.detected.package.jscs" value="true" />
+    <property name="node.js.path.for.package.jscs" value="project" />
+    <property name="node.js.selected.package.jscs" value="" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="dynamic.analysis.tools.valgrind" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/core/src/camera_driver/src/aravis/test" />
+      <recent name="$PROJECT_DIR$/core/src/camera_driver/test" />
       <recent name="$PROJECT_DIR$" />
-      <recent name="C:\Users\wuyua\CLionProjects\vimba-backend" />
+      <recent name="$PROJECT_DIR$/inc/VimbaCPP" />
+      <recent name="$PROJECT_DIR$/lib/x86_32" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/docker" />
+      <recent name="$PROJECT_DIR$/core/src/camera_driver/src" />
+      <recent name="$PROJECT_DIR$/core/src/shared/src" />
+      <recent name="$PROJECT_DIR$/core/src/camera_driver/test" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -320,13 +446,91 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Docker.build on runtime run">
-    <configuration name="debug in docker" type="CLion_Remote" factoryName="GDB Remote Debug" activateToolWindowBeforeRun="false" singleton="true" remoteCommand="tcp:127.0.0.1:1234" symbolFile="" sysroot="">
+  <component name="RunManager" selected="Boost.Test.test_async_capture">
+    <configuration name="debug in docker" type="CLion_Remote" activateToolWindowBeforeRun="false" singleton="true" remoteCommand="tcp:127.0.0.1:1234" symbolFile="" sysroot="">
       <pathMapping remote=":/root" local="$PROJECT_DIR$" />
       <pathMapping remote=":" local="" />
       <method v="2" />
     </configuration>
-    <configuration name="vimba_backend" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="vimba_backend" TARGET_NAME="vimba_backend" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="vimba_backend" RUN_TARGET_NAME="vimba_backend">
+    <configuration name="test_aravis_camera_driver" type="CMakeBoostTestRunConfigurationType" factoryName="Boost Test" temporary="true" PASS_PARENT_ENVS_2="true" PROJECT_NAME="camera_backend" TARGET_NAME="test_aravis_driver.cpp" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="camera_backend" RUN_TARGET_NAME="test_aravis_driver.cpp" TEST_CLASS="test_aravis_camera_driver" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="test_aravis_capture_async" type="CMakeBoostTestRunConfigurationType" factoryName="Boost Test" temporary="true" PASS_PARENT_ENVS_2="true" PROJECT_NAME="camera_backend" TARGET_NAME="test_aravis_driver.cpp" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="camera_backend" RUN_TARGET_NAME="test_aravis_driver.cpp" TEST_CLASS="test_aravis_camera_driver" TEST_METHOD="test_aravis_capture_async" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="test_aravis_capture_async_no_shutdown" type="CMakeBoostTestRunConfigurationType" factoryName="Boost Test" temporary="true" PASS_PARENT_ENVS_2="true" PROJECT_NAME="camera_backend" TARGET_NAME="test_aravis_driver.cpp" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="camera_backend" RUN_TARGET_NAME="test_aravis_driver.cpp" TEST_CLASS="test_aravis_camera_driver" TEST_METHOD="test_aravis_capture_async_no_shutdown" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="test_async_capture" type="CMakeBoostTestRunConfigurationType" factoryName="Boost Test" temporary="true" PASS_PARENT_ENVS_2="true" PROJECT_NAME="camera_backend" TARGET_NAME="test_grpc_server" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="camera_backend" RUN_TARGET_NAME="test_grpc_server" TEST_CLASS="test_grpc_camera_server" TEST_METHOD="test_async_capture" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="test_grpc_camera_server" type="CMakeBoostTestRunConfigurationType" factoryName="Boost Test" temporary="true" PASS_PARENT_ENVS_2="true" PROJECT_NAME="camera_backend" TARGET_NAME="test_grpc_server" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="camera_backend" RUN_TARGET_NAME="test_grpc_server" TEST_CLASS="test_grpc_camera_server" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="aravis_adapter" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="camera_backend" TARGET_NAME="aravis_adapter" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="camera_driver" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="camera_backend" TARGET_NAME="camera_driver" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="grpc_server" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="camera_backend" TARGET_NAME="grpc_server" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="camera_backend" RUN_TARGET_NAME="grpc_server">
+      <envs>
+        <env name="GRPC_VERBOSITY" value="DEBUG" />
+      </envs>
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="grpc_server_app" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="camera_backend" TARGET_NAME="grpc_server_app" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="camera_backend" RUN_TARGET_NAME="grpc_server_app">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="proto" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="camera_backend" TARGET_NAME="proto" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="shared" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="camera_backend" TARGET_NAME="shared" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="test_aravis_driver.cpp" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="--log_level=all" PASS_PARENT_ENVS_2="true" PROJECT_NAME="camera_backend" TARGET_NAME="test_aravis_driver.cpp" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="camera_backend" RUN_TARGET_NAME="test_aravis_driver.cpp">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="test_framework.cpp" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="--log_level=all" PASS_PARENT_ENVS_2="true" PROJECT_NAME="camera_backend" TARGET_NAME="test_framework.cpp" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="camera_backend" RUN_TARGET_NAME="test_framework.cpp">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="test_grpc_server" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="--log_level=all" PASS_PARENT_ENVS_2="true" PROJECT_NAME="camera_backend" TARGET_NAME="test_grpc_server" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="camera_backend" RUN_TARGET_NAME="test_grpc_server">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="test_vimba_driver.cpp" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="--log_level=all" PASS_PARENT_ENVS_2="true" PROJECT_NAME="camera_backend" TARGET_NAME="test_vimba_driver.cpp" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="camera_backend" RUN_TARGET_NAME="test_vimba_driver.cpp">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -336,19 +540,53 @@
       <runConfiguration name="debug in docker" type="GDB Remote Debug" />
       <method v="2" />
     </configuration>
+    <configuration name="docker build" type="PythonConfigurationType" factoryName="Python">
+      <module name="vimba-backend" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="/usr/bin/python3.6" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/docker/build_docker.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="build amd64 image" type="docker-deploy" factoryName="dockerfile" server-name="Docker">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="JSONFilePath" value="" />
+          <option name="buildOnly" value="true" />
+          <option name="command" value="" />
+          <option name="containerName" value="" />
+          <option name="entrypoint" value="" />
+          <option name="imageTag" value="camera_backend_amd64" />
+          <option name="publishAllPorts" value="true" />
+          <option name="commandLineOptions" value="" />
+          <option name="sourceFilePath" value="Dockerfile.amd64" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
     <configuration name="build on runtime run" type="docker-deploy" factoryName="dockerfile" folderName="cmake during run" server-name="Docker">
       <deployment type="dockerfile">
         <settings>
           <option name="JSONFilePath" value="" />
           <option name="command" value="" />
-          <option name="commandLineOptions" value="-it -v vimba:/root/build --privileged" />
           <option name="containerName" value="vimba_backend_run_bor" />
           <option name="entrypoint" value="" />
           <option name="imageTag" value="vimba_backend_run_bor" />
+          <option name="commandLineOptions" value="-it -v vimba:/root/build --privileged" />
           <option name="sourceFilePath" value="dockerfile" />
-          <option name="startBrowserSettings">
-            <browser url="http://127.0.0.1" />
-          </option>
         </settings>
       </deployment>
       <method v="2" />
@@ -366,7 +604,6 @@
             </list>
           </option>
           <option name="command" value="" />
-          <option name="commandLineOptions" value="--cap-add=SYS_PTRACE --security-opt seccomp=unconfined --rm" />
           <option name="containerName" value="vimba_backend_dev" />
           <option name="entrypoint" value="" />
           <option name="envVars">
@@ -390,10 +627,8 @@
               </DockerPortBindingImpl>
             </list>
           </option>
+          <option name="commandLineOptions" value="--cap-add=SYS_PTRACE --security-opt seccomp=unconfined --rm" />
           <option name="sourceFilePath" value="dockerfile" />
-          <option name="startBrowserSettings">
-            <browser url="http://127.0.0.1" />
-          </option>
         </settings>
       </deployment>
       <method v="2" />
@@ -411,7 +646,6 @@
             </list>
           </option>
           <option name="command" value="" />
-          <option name="commandLineOptions" value="-it --rm --cap-add=SYS_PTRACE --security-opt seccomp=unconfined" />
           <option name="containerName" value="vimba_backend_dev" />
           <option name="entrypoint" value="" />
           <option name="envVars">
@@ -435,10 +669,8 @@
               </DockerPortBindingImpl>
             </list>
           </option>
+          <option name="commandLineOptions" value="-it --rm --cap-add=SYS_PTRACE --security-opt seccomp=unconfined" />
           <option name="sourceFilePath" value="dockerfile" />
-          <option name="startBrowserSettings">
-            <browser url="http://127.0.0.1" />
-          </option>
         </settings>
       </deployment>
       <method v="2" />
@@ -456,32 +688,53 @@
             </list>
           </option>
           <option name="command" value="" />
-          <option name="commandLineOptions" value="-it --rm" />
           <option name="containerName" value="vimba_backend_run" />
           <option name="entrypoint" value="" />
           <option name="imageTag" value="vimba_backend_run" />
+          <option name="commandLineOptions" value="-it --rm" />
           <option name="sourceFilePath" value="dockerfile" />
-          <option name="startBrowserSettings">
-            <browser url="http://127.0.0.1" />
-          </option>
         </settings>
       </deployment>
       <method v="2" />
     </configuration>
-    <configuration xmlns:elmot-ocd="https://github.com/elmot/clion-embedded-arm" default="true" type="elmot.embedded.openocd.conf.type" factoryName="elmot.embedded.openocd.conf.factory" singleton="false" PASS_PARENT_ENVS_2="true" elmot-ocd:gdb-port="3333" elmot-ocd:telnet-port="4444" elmot-ocd:reset-type="INIT" elmot-ocd:download-type="ALWAYS">
+    <configuration default="true" type="elmot.embedded.openocd.conf.type" factoryName="elmot.embedded.openocd.conf.factory" singleton="false" PASS_PARENT_ENVS_2="true">
+      <openocd gdb-port="3333" telnet-port="4444" reset-type="INIT" download-type="ALWAYS" />
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="Docker.docker build run" />
-      <item itemvalue="Docker.docker build dev" />
-      <item itemvalue="Docker.docker build dev nointeractive" />
-      <item itemvalue="Docker.build on runtime run" />
-      <item itemvalue="Application.vimba_backend" />
+      <item itemvalue="Application.grpc_server" />
+      <item itemvalue="Application.grpc_server_app" />
+      <item itemvalue="Application.test_aravis_driver.cpp" />
+      <item itemvalue="Application.proto" />
+      <item itemvalue="Application.camera_driver" />
+      <item itemvalue="Application.test_framework.cpp" />
+      <item itemvalue="Application.aravis_adapter" />
+      <item itemvalue="Application.test_grpc_server" />
+      <item itemvalue="Application.shared" />
+      <item itemvalue="Application.test_vimba_driver.cpp" />
+      <item itemvalue="Boost.Test.test_aravis_camera_driver" />
+      <item itemvalue="Boost.Test.test_aravis_capture_async" />
+      <item itemvalue="Boost.Test.test_aravis_capture_async_no_shutdown" />
+      <item itemvalue="Boost.Test.test_async_capture" />
+      <item itemvalue="Boost.Test.test_grpc_camera_server" />
       <item itemvalue="GDB Remote Debug.debug in docker" />
-      <item itemvalue="Multirun.run docker &amp;&amp; debug" />
+      <item itemvalue="Python.docker build" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Boost.Test.test_async_capture" />
+        <item itemvalue="Boost.Test.test_grpc_camera_server" />
+        <item itemvalue="Boost.Test.test_aravis_capture_async_no_shutdown" />
+        <item itemvalue="Boost.Test.test_aravis_capture_async" />
+        <item itemvalue="Boost.Test.test_aravis_camera_driver" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="StructureViewFactory">
+    <option name="AUTOSCROLL_FROM_SOURCE" value="true" />
+    <option name="ACTIVE_ACTIONS" value=",INHERITORS_AND_CATEGORIES,ALPHA_COMPARATOR" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -502,6 +755,63 @@
       <workItem from="1541463194987" duration="224000" />
       <workItem from="1541463434263" duration="617000" />
       <workItem from="1541464110903" duration="9487000" />
+      <workItem from="1541692184632" duration="6000" />
+      <workItem from="1541692206691" duration="16000" />
+      <workItem from="1542248266357" duration="508000" />
+      <workItem from="1542248792702" duration="24000" />
+      <workItem from="1542301224565" duration="723000" />
+      <workItem from="1542593145146" duration="10161000" />
+      <workItem from="1542644158018" duration="3780000" />
+      <workItem from="1542647954547" duration="337000" />
+      <workItem from="1542648405521" duration="30000" />
+      <workItem from="1542648516182" duration="7078000" />
+      <workItem from="1542658926571" duration="12761000" />
+      <workItem from="1542758353633" duration="8857000" />
+      <workItem from="1542922887727" duration="8000" />
+      <workItem from="1542922912335" duration="20490000" />
+      <workItem from="1543171548782" duration="1503000" />
+      <workItem from="1544211389228" duration="13000" />
+      <workItem from="1544211425803" duration="28000" />
+      <workItem from="1544211501713" duration="29000" />
+      <workItem from="1545255863285" duration="23581000" />
+      <workItem from="1545953075313" duration="17744000" />
+      <workItem from="1546127906571" duration="121000" />
+      <workItem from="1546128046462" duration="1841000" />
+      <workItem from="1546129996852" duration="578000" />
+      <workItem from="1546130757261" duration="33467000" />
+      <workItem from="1546303775723" duration="2344000" />
+      <workItem from="1546316002164" duration="9198000" />
+      <workItem from="1546325591434" duration="17939000" />
+      <workItem from="1546529354467" duration="3107000" />
+      <workItem from="1546533010712" duration="228000" />
+      <workItem from="1546533407187" duration="28369000" />
+      <workItem from="1546641432578" duration="109000" />
+      <workItem from="1546641966453" duration="4722000" />
+      <workItem from="1546646851171" duration="15588000" />
+      <workItem from="1546674538557" duration="794000" />
+      <workItem from="1546717965903" duration="20540000" />
+      <workItem from="1546885516295" duration="9661000" />
+      <workItem from="1546897246836" duration="188000" />
+      <workItem from="1546898780459" duration="1063000" />
+      <workItem from="1546925201038" duration="19000" />
+      <workItem from="1546961204859" duration="370000" />
+      <workItem from="1546961982009" duration="26289000" />
+      <workItem from="1546994281717" duration="9817000" />
+      <workItem from="1547083977417" duration="34993000" />
+      <workItem from="1547267704531" duration="1785000" />
+      <workItem from="1547270369444" duration="9820000" />
+      <workItem from="1547410615457" duration="108000" />
+      <workItem from="1547486179301" duration="7000" />
+      <workItem from="1547499382271" duration="30088000" />
+      <workItem from="1548101287622" duration="23952000" />
+      <workItem from="1548360850986" duration="34376000" />
+      <workItem from="1548457881178" duration="140000" />
+      <workItem from="1548632543236" duration="46000" />
+      <workItem from="1548693806302" duration="174000" />
+      <workItem from="1548694389314" duration="194000" />
+      <workItem from="1548695920356" duration="2217000" />
+      <workItem from="1548711820350" duration="21294000" />
+      <workItem from="1548866687174" duration="19827000" />
     </task>
     <task id="LOCAL-00001" summary="persist, selectable build configuration">
       <created>1541468783830</created>
@@ -520,8 +830,40 @@
     <option name="localTasksCounter" value="3" />
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="test_async_capture - 2019.01.25 at 17h 57m 12s.xml">
+      <configuration name="test_async_capture" configurationId="CMakeBoostTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="test_async_capture - 2019.01.25 at 17h 58m 04s.xml">
+      <configuration name="test_async_capture" configurationId="CMakeBoostTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="test_async_capture - 2019.01.25 at 18h 02m 56s.xml">
+      <configuration name="test_async_capture" configurationId="CMakeBoostTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="test_async_capture - 2019.01.28 at 12h 44m 59s.xml">
+      <configuration name="test_async_capture" configurationId="CMakeBoostTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="test_aravis_capture_async_no_shutdown - 2019.01.29 at 16h 05m 10s.xml">
+      <configuration name="test_aravis_capture_async_no_shutdown" configurationId="CMakeBoostTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="test_aravis_capture_async_no_shutdown - 2019.01.29 at 16h 06m 02s.xml">
+      <configuration name="test_aravis_capture_async_no_shutdown" configurationId="CMakeBoostTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="test_async_capture - 2019.01.29 at 16h 10m 42s.xml">
+      <configuration name="test_async_capture" configurationId="CMakeBoostTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="test_async_capture - 2019.01.29 at 16h 19m 28s.xml">
+      <configuration name="test_async_capture" configurationId="CMakeBoostTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="test_grpc_camera_server - 2019.01.29 at 16h 21m 03s.xml">
+      <configuration name="test_grpc_camera_server" configurationId="CMakeBoostTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="test_async_capture - 2019.01.29 at 16h 21m 39s.xml">
+      <configuration name="test_async_capture" configurationId="CMakeBoostTestRunConfigurationType" />
+    </history-entry>
+  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21549000" />
+    <option name="totallyTimeSpent" value="498386000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -534,134 +876,569 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="27" width="1853" height="1053" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4978166" visible="true" weight="0.27559492" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" sideWeight="0.5021834" side_tool="true" weight="0.25302014" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.495637" visible="true" weight="0.34698394" />
+      <window_info id="Structure" order="1" sideWeight="0.504363" side_tool="true" weight="0.3431101" />
+      <window_info id="Favorites" order="2" sideWeight="0.504363" side_tool="true" weight="0.3431101" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3286026" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3995633" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3293348" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4997233" weight="0.2868048" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4991699" weight="0.3991276" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32969433" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3293348" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32969433" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5002767" side_tool="true" weight="0.2489083" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49418926" visible="true" weight="0.37513632" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5196458" side_tool="true" weight="0.32969433" />
       <window_info anchor="bottom" id="Version Control" order="10" show_stripe_button="false" />
-      <window_info anchor="bottom" id="CMake" order="11" weight="0.32969433" />
-      <window_info active="true" anchor="bottom" id="Docker" order="12" sideWeight="0.4997233" visible="true" weight="0.2489083" />
-      <window_info anchor="bottom" id="Messages" order="13" weight="0.32969433" />
+      <window_info anchor="bottom" id="CMake" order="11" sideWeight="0.4803542" weight="0.32824427" />
+      <window_info anchor="bottom" id="Docker" order="12" sideWeight="0.49474266" weight="0.47494555" />
+      <window_info anchor="bottom" id="Messages" order="13" sideWeight="0.54178196" weight="0.32824427" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="right" x="0" y="0" width="413" height="853" id="Documentation" order="4" side_tool="true" weight="0.32982844" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
-  </component>
   <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/grpc" />
+      <path value="$PROJECT_DIR$/grpc/third_party/abseil-cpp" />
+      <path value="$PROJECT_DIR$/grpc/third_party/benchmark" />
+      <path value="$PROJECT_DIR$/grpc/third_party/bloaty" />
+      <path value="$PROJECT_DIR$/grpc/third_party/bloaty/third_party/googletest" />
+      <path value="$PROJECT_DIR$/grpc/third_party/bloaty/third_party/libFuzzer" />
+      <path value="$PROJECT_DIR$/grpc/third_party/bloaty/third_party/re2" />
+      <path value="$PROJECT_DIR$/grpc/third_party/boringssl" />
+      <path value="$PROJECT_DIR$/grpc/third_party/boringssl-with-bazel" />
+      <path value="$PROJECT_DIR$/grpc/third_party/cares/cares" />
+      <path value="$PROJECT_DIR$/grpc/third_party/gflags" />
+      <path value="$PROJECT_DIR$/grpc/third_party/gflags/doc" />
+      <path value="$PROJECT_DIR$/grpc/third_party/googletest" />
+      <path value="$PROJECT_DIR$/grpc/third_party/libcxx" />
+      <path value="$PROJECT_DIR$/grpc/third_party/libcxxabi" />
+      <path value="$PROJECT_DIR$/grpc/third_party/protobuf" />
+      <path value="$PROJECT_DIR$/grpc/third_party/protobuf/third_party/benchmark" />
+      <path value="$PROJECT_DIR$/grpc/third_party/protobuf/third_party/googletest" />
+      <path value="$PROJECT_DIR$/grpc/third_party/zlib" />
+    </ignored-roots>
     <MESSAGE value="persist, selectable build configuration" />
     <MESSAGE value="source the profile to make vimba work" />
     <option name="LAST_COMMIT_MESSAGE" value="source the profile to make vimba work" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="CidrExceptionBreakpoint">
+          <properties />
+          <option name="timeStamp" value="7" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="CMakeRunConfiguration">
+        <watch expression="mDeviceMap" language="ObjectiveC" />
+      </configuration>
+      <configuration name="CMakeBoostTestRunConfigurationType">
+        <watch expression="context-&gt;IsCancelled()" language="ObjectiveC" />
+        <watch expression="mBuffers[4]" language="ObjectiveC" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="watch">
+      <expression>
+        <expression-string>mBuffers[4]</expression-string>
+        <language-id>ObjectiveC</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>mBuffers[0]</expression-string>
+        <language-id>ObjectiveC</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>mBuffers</expression-string>
+        <language-id>ObjectiveC</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>context-&gt;IsCancelled()</expression-string>
+        <language-id>ObjectiveC</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>rep_</expression-string>
+        <language-id>ObjectiveC</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>&amp;fs</expression-string>
+        <language-id>ObjectiveC</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>fs</expression-string>
+        <language-id>ObjectiveC</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>fs.mutable_frames()-&gt;mutable_data()</expression-string>
+        <language-id>ObjectiveC</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>fs.frames().size()</expression-string>
+        <language-id>ObjectiveC</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>fs.frames()</expression-string>
+        <language-id>ObjectiveC</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+    <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>fs.mutable_frames()</expression-string>
+        <language-id>ObjectiveC</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>fs.mutable_frames().Capacity()</expression-string>
+        <language-id>ObjectiveC</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>fs.frames().Capacity()</expression-string>
+        <language-id>ObjectiveC</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>fs.frames_size()</expression-string>
+        <language-id>ObjectiveC</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>mDevice</expression-string>
+        <language-id>ObjectiveC</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>(uint8_t*)(&amp;inc)+1</expression-string>
+        <language-id>ObjectiveC</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>(uint8_t*)(&amp;inc)+5</expression-string>
+        <language-id>ObjectiveC</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>(uint8_t*)(&amp;inc)+6</expression-string>
+        <language-id>ObjectiveC</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>(uint8_t*)(&amp;inc)+7</expression-string>
+        <language-id>ObjectiveC</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/main.c" />
-    <entry file="file://$PROJECT_DIR$/VimbaUSBTL/Install.sh">
+    <entry file="file:///usr/include/boost/asio/handler_invoke_hook.hpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="99" selection-start-line="99" selection-end-line="99" />
+        <state relative-caret-position="173">
+          <caret line="69" selection-start-line="69" selection-end-line="69" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.txt" />
-    <entry file="file://$PROJECT_DIR$/update_dev.sh" />
-    <entry file="file://$PROJECT_DIR$/dockerfile.release">
+    <entry file="file://$USER_HOME$/aravis/src/arvuvdevice.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="27" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
+        <state relative-caret-position="155">
+          <caret line="93" selection-start-line="93" selection-end-line="93" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file:///usr/local/include/grpcpp/impl/codegen/sync_stream.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="13" selection-start-column="13" selection-end-column="13" />
+        <state relative-caret-position="290">
+          <caret line="213" selection-start-line="213" selection-end-line="213" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main.h">
+    <entry file="file:///usr/local/include/grpcpp/impl/codegen/core_codegen_interface.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        <state relative-caret-position="173">
+          <caret line="55" column="21" selection-start-line="55" selection-start-column="21" selection-end-line="55" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+    <entry file="file://$PROJECT_DIR$/core/src/camera_driver/src/frame.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="35" selection-start-column="35" selection-end-column="35" />
+        <state relative-caret-position="-39">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/camera.h">
+    <entry file="file:///usr/local/include/grpcpp/impl/codegen/completion_queue.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
+        <state relative-caret-position="173">
+          <caret line="304" selection-start-line="304" selection-end-line="304" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build_time.sh">
+    <entry file="file:///usr/include/c++/8/bits/invoke.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        <state relative-caret-position="257">
+          <caret line="96" selection-start-line="96" selection-end-line="96" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/CMakeLists.txt">
+    <entry file="file:///usr/include/boost/function/function_template.hpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="43" selection-start-line="2" selection-start-column="43" selection-end-line="2" selection-end-column="43" />
+        <state relative-caret-position="173">
+          <caret line="118" selection-start-line="118" selection-end-line="118" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/run_time.py">
+    <entry file="file:///usr/include/c++/8/bits/hashtable_policy.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="23" />
+        <state relative-caret-position="263">
+          <caret line="1458" column="3" lean-forward="true" selection-start-line="1458" selection-start-column="3" selection-end-line="1458" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/c++/8/bits/shared_ptr_base.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="991" selection-start-line="991" selection-end-line="991" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/camera_driver/src/aravis/aravis_adapter.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="975">
+          <caret line="65" selection-start-line="65" selection-end-line="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/c++/8/thread">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2085">
+          <caret line="139" selection-start-line="139" selection-end-line="139" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitmodules">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/camera_driver/src/aravis/aravis_camera.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="110" column="22" selection-start-line="110" selection-start-column="22" selection-end-line="110" selection-end-column="22" />
           <folding>
-            <element signature="e#23#32#0" expanded="true" />
+            <element signature="e#121#137#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/camera.c">
+    <entry file="file://$PROJECT_DIR$/core/inc/critical_wait_flags/critical_wait_flags.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+        <state relative-caret-position="-30">
+          <caret line="29" column="23" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="23" />
+          <folding>
+            <element signature="e#1473#1493#0" expanded="true" />
+            <element signature="e#1583#1603#0" expanded="true" />
+            <element signature="e#1732#1752#0" expanded="true" />
+            <element signature="e#1903#1923#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dockerfile">
+    <entry file="file://$PROJECT_DIR$/core/src/camera_driver/src/aravis/aravis_camera_internal.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" selection-start-line="28" selection-end-line="28" />
+        <state relative-caret-position="335">
+          <caret line="118" column="2" selection-start-line="118" selection-start-column="2" selection-end-line="118" selection-end-column="2" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main.c">
+    <entry file="file://$PROJECT_DIR$/core/inc/critical_wait_flags/test.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="21" column="28" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docker/Dockerfile.amd64">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/grpc_server/src/error.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#105#139#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.dockerignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
-          <caret line="1" column="34" lean-forward="true" selection-start-line="1" selection-start-column="34" selection-end-line="1" selection-end-column="34" />
+          <caret line="1" column="3" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/grpc_server/protos/camera_definitions.pb.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="1797" column="6" selection-start-line="1797" selection-start-column="6" selection-end-line="1797" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/boost/throw_exception.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="68" selection-start-line="68" selection-end-line="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/camera_driver/src/aravis/aravis_camera_template_impl.tcc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="51" selection-start-line="12" selection-start-column="51" selection-end-line="12" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/protos/camera_service.proto">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" column="89" selection-start-line="31" selection-start-column="89" selection-end-line="31" selection-end-column="89" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/camera_driver/src/camera_driver.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="27" column="15" selection-start-line="27" selection-start-column="15" selection-end-line="27" selection-end-column="15" />
           <folding>
-            <element signature="e#42#60#0" expanded="true" />
+            <element signature="e#108#138#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/camera_driver/src/aravis/aravis_camera.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="115" column="5" selection-start-line="115" selection-start-column="5" selection-end-line="115" selection-end-column="5" />
+          <folding>
+            <element signature="e#42#59#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/grpc_server/src/server_auxiliary_impl.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="217" selection-start-line="216" selection-end-line="217" />
+          <folding>
+            <element signature="e#43#75#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docker/Dockerfile_exec.amd64">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/camera_driver/src/aravis/test/test_aravis_driver.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3600">
+          <caret line="240" column="47" selection-start-line="240" selection-start-column="47" selection-end-line="240" selection-end-column="47" />
+          <folding>
+            <element signature="e#88#123#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/camera_driver/src/camera_parameter.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="35" column="58" selection-start-line="35" selection-end-line="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/grpc_server/src/server.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2445">
+          <caret line="163" column="31" selection-start-line="163" selection-start-column="31" selection-end-line="163" selection-end-column="31" />
+          <folding>
+            <element signature="e#43#75#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/environment/scripts/run_time.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/grpc_server/src/server.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="885">
+          <caret line="59" column="47" selection-start-line="59" selection-start-column="47" selection-end-line="59" selection-end-column="47" />
+          <folding>
+            <element signature="e#107#124#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docker/Dockerfile.grpc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="615">
+          <caret line="41" selection-start-line="41" selection-end-line="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docker/build_docker.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/grpc_server/test/test_grpc_server.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="832">
+          <caret line="300" column="20" selection-start-line="300" selection-start-column="20" selection-end-line="300" selection-end-column="20" />
+          <folding>
+            <element signature="e#129#164#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/protos/camera_definitions.proto">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="78" selection-start-line="78" selection-end-line="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docker/Dockerfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docker/Dockerfile.env.cross">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="37" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docker/build.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="24" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/grpc_server/src/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/camera_driver/src/aravis/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="32" column="20" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docker/build_dockerfiles.sh">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/camera_driver/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="78">
+          <caret line="19" column="67" selection-start-line="19" selection-start-column="67" selection-end-line="19" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/grpc_server/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="33" column="53" selection-start-line="33" selection-start-column="53" selection-end-line="33" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/shared/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="43" selection-start-line="14" selection-start-column="43" selection-end-line="14" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="53" selection-start-line="20" selection-start-column="53" selection-end-line="20" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docker/Dockerfile.cross">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="62" selection-start-line="18" selection-start-column="62" selection-end-line="18" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/PostInstall.cmake">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="25" selection-start-line="1" selection-start-column="25" selection-end-line="1" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/environment/scripts/build_time.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="78" selection-start-line="13" selection-start-column="78" selection-end-line="13" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <last-edited>grpc_server</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>

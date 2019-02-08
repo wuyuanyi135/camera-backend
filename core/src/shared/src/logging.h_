@@ -1,0 +1,36 @@
+//
+// Created by wuyuanyi on 19/12/18.
+//
+
+#ifndef CAMERA_BACKEND_LOGGING_H
+#define CAMERA_BACKEND_LOGGING_H
+#include <boost/log/attributes/attribute.hpp>
+#include <boost/log/trivial.hpp>
+#include <boost/log/sources/severity_logger.hpp>
+#include <boost/log/utility/manipulators.hpp>
+
+
+#include <string>
+
+
+#define CDLOGGER(sv) BOOST_LOG_SEV( *Logging::GetInstance(), sv) \
+  << boost::log::add_value("Line", __LINE__)       \
+  << boost::log::add_value("File", __FILE__)       \
+  << boost::log::add_value("Function", BOOST_CURRENT_FUNCTION)
+
+#define CDERROR CDLOGGER(boost::log::trivial::error)
+#define CDWARNING CDLOGGER(boost::log::trivial::warning)
+#define CDINFO CDLOGGER(boost::log::trivial::info)
+class Logging : public boost::log::sources::severity_logger<boost::log::trivial::severity_level> {
+ public:
+  Logging();
+
+  static Logging* GetInstance();
+ private:
+  static Logging* _logger;
+
+ public:
+  void EnableLogging(bool enable);
+};
+
+#endif //CAMERA_BACKEND_LOGGING_H
