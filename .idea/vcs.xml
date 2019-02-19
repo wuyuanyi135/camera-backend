@@ -3,5 +3,6 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/core/inc/critical_wait_flags" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/core/protos/MicroVision-proto" vcs="Git" />
   </component>
 </project>

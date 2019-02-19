@@ -19,8 +19,8 @@
 #endif
 // @@protoc_insertion_point(includes)
 
-namespace CameraServer {
-}  // namespace CameraServer
+namespace mvcam {
+}  // namespace mvcam
 namespace protobuf_camera_5fservice_2eproto {
 void InitDefaults() {
 }
@@ -49,34 +49,33 @@ void protobuf_RegisterTypes(const ::std::string&) {
 void AddDescriptorsImpl() {
   InitDefaults();
   static const char descriptor[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
-      "\n\024camera_service.proto\022\014CameraServer\032\033go"
-      "ogle/protobuf/empty.proto\032\030camera_defini"
-      "tions.proto2\374\006\n\rCameraService\022Y\n\024GetAvai"
-      "lableAdapters\022\026.google.protobuf.Empty\032\'."
-      "CameraServer.AvailableAdaptersResponse\"\000"
-      "\022N\n\nGetDevices\022\034.CameraServer.AdapterReq"
-      "uest\032 .CameraServer.DeviceListResponse\"\000"
-      "\022F\n\017QueryDeviceById\022\027.CameraServer.IdReq"
-      "uest\032\030.CameraServer.DeviceInfo\"\000\022\?\n\nOpen"
-      "Camera\022\027.CameraServer.IdRequest\032\026.google"
-      ".protobuf.Empty\"\000\022C\n\016ShutdownCamera\022\027.Ca"
-      "meraServer.IdRequest\032\026.google.protobuf.E"
-      "mpty\"\000\022K\n\017ConfigureCamera\022\036.CameraServer"
-      ".ConfigureRequest\032\026.google.protobuf.Empt"
-      "y\"\000\022J\n\020GetConfiguration\022\027.CameraServer.I"
-      "dRequest\032\033.CameraServer.Configuration\"\000\022"
-      "<\n\tGetStatus\022\027.CameraServer.IdRequest\032\024."
-      "CameraServer.Status\"\000\0229\n\007Capture\022\027.Camer"
-      "aServer.IdRequest\032\023.CameraServer.Frame\"\000"
-      "\022J\n\tStreaming\022\036.CameraServer.StreamingRe"
-      "quest\032\031.CameraServer.FrameStream\"\0000\001\022@\n\013"
-      "ResetDevice\022\027.CameraServer.IdRequest\032\026.g"
-      "oogle.protobuf.Empty\"\000\022R\n\022ControlDeviceS"
-      "tate\022\".CameraServer.DeviceControlRequest"
-      "\032\026.google.protobuf.Empty\"\000b\006proto3"
+      "\n\024camera_service.proto\022\005mvcam\032\033google/pr"
+      "otobuf/empty.proto\032\030camera_definitions.p"
+      "roto2\376\005\n\rCameraService\022R\n\024GetAvailableAd"
+      "apters\022\026.google.protobuf.Empty\032 .mvcam.A"
+      "vailableAdaptersResponse\"\000\022@\n\nGetDevices"
+      "\022\025.mvcam.AdapterRequest\032\031.mvcam.DeviceLi"
+      "stResponse\"\000\0228\n\017QueryDeviceById\022\020.mvcam."
+      "IdRequest\032\021.mvcam.DeviceInfo\"\000\0228\n\nOpenCa"
+      "mera\022\020.mvcam.IdRequest\032\026.google.protobuf"
+      ".Empty\"\000\022<\n\016ShutdownCamera\022\020.mvcam.IdReq"
+      "uest\032\026.google.protobuf.Empty\"\000\022D\n\017Config"
+      "ureCamera\022\027.mvcam.ConfigureRequest\032\026.goo"
+      "gle.protobuf.Empty\"\000\022<\n\020GetConfiguration"
+      "\022\020.mvcam.IdRequest\032\024.mvcam.Configuration"
+      "\"\000\022.\n\tGetStatus\022\020.mvcam.IdRequest\032\r.mvca"
+      "m.Status\"\000\022+\n\007Capture\022\020.mvcam.IdRequest\032"
+      "\014.mvcam.Frame\"\000\022<\n\tStreaming\022\027.mvcam.Str"
+      "eamingRequest\032\022.mvcam.FrameStream\"\0000\001\0229\n"
+      "\013ResetDevice\022\020.mvcam.IdRequest\032\026.google."
+      "protobuf.Empty\"\000\022K\n\022ControlDeviceState\022\033"
+      ".mvcam.DeviceControlRequest\032\026.google.pro"
+      "tobuf.Empty\"\000B:Z8github.com/wuyuanyi135/"
+      "MicroVisionCGI/server/proto/mvcamb\006proto"
+      "3"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 994);
+      descriptor, 921);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "camera_service.proto", &protobuf_RegisterTypes);
   ::protobuf_google_2fprotobuf_2fempty_2eproto::AddDescriptors();
@@ -94,10 +93,10 @@ struct StaticDescriptorInitializer {
   }
 } static_descriptor_initializer;
 }  // namespace protobuf_camera_5fservice_2eproto
-namespace CameraServer {
+namespace mvcam {
 
 // @@protoc_insertion_point(namespace_scope)
-}  // namespace CameraServer
+}  // namespace mvcam
 namespace google {
 namespace protobuf {
 }  // namespace protobuf

@@ -16,7 +16,7 @@
 
 grpc::Status camera_backend_server::GetAvailableAdapters(::grpc::ServerContext *context,
                                                          const ::google::protobuf::Empty *request,
-                                                         CameraServer::AvailableAdaptersResponse *response) {
+                                                         mvcam::AvailableAdaptersResponse *response) {
   for (auto &adapter : mFramework->adapters()) {
     transform_adapter(adapter, response->add_adapters());
   }
@@ -24,8 +24,8 @@ grpc::Status camera_backend_server::GetAvailableAdapters(::grpc::ServerContext *
   return grpc::Status::OK;
 }
 grpc::Status camera_backend_server::GetDevices(::grpc::ServerContext *context,
-                                               const CameraServer::AdapterRequest *request,
-                                               CameraServer::DeviceListResponse *response) {
+                                               const mvcam::AdapterRequest *request,
+                                               mvcam::DeviceListResponse *response) {
   try {
     std::vector<camera_driver::adapter *> adapter(mFramework->adapters());
     if (!request->name().empty()) {
@@ -35,7 +35,7 @@ grpc::Status camera_backend_server::GetDevices(::grpc::ServerContext *context,
     update_id_index(adapter);
 
     for (const std::pair<std::string, camera_driver::camera_container> it: mCameraCache) {
-      CameraServer::DeviceInfo *pInfo = response->add_devices();
+      mvcam::DeviceInfo *pInfo = response->add_devices();
       transform_device_info(it.second, pInfo);
     }
     return grpc::Status::OK;
@@ -45,8 +45,8 @@ grpc::Status camera_backend_server::GetDevices(::grpc::ServerContext *context,
 }
 
 grpc::Status camera_backend_server::QueryDeviceById(::grpc::ServerContext *context,
-                                                    const CameraServer::IdRequest *request,
-                                                    CameraServer::DeviceInfo *response) {
+                                                    const mvcam::IdRequest *request,
+                                                    mvcam::DeviceInfo *response) {
   // find the device from cache
   return index_camera_call_wrapper(
       request->id(),
@@ -56,7 +56,7 @@ grpc::Status camera_backend_server::QueryDeviceById(::grpc::ServerContext *conte
 }
 
 grpc::Status camera_backend_server::OpenCamera(::grpc::ServerContext *context,
-                                               const CameraServer::IdRequest *request,
+                                               const mvcam::IdRequest *request,
                                                google::protobuf::Empty *response) {
   return index_camera_call_wrapper(request->id(), [](camera_driver::camera_container &container) {
     // Guarded by can_open capability
@@ -70,7 +70,7 @@ grpc::Status camera_backend_server::OpenCamera(::grpc::ServerContext *context,
 }
 
 grpc::Status camera_backend_server::ShutdownCamera(::grpc::ServerContext *context,
-                                                   const CameraServer::IdRequest *request,
+                                                   const mvcam::IdRequest *request,
                                                    ::google::protobuf::Empty *response) {
   return index_camera_call_wrapper(request->id(), [](camera_driver::camera_container &container) {
     if (!container.device->capabilities()->can_shutdown) {
@@ -83,7 +83,7 @@ grpc::Status camera_backend_server::ShutdownCamera(::grpc::ServerContext *contex
 }
 
 grpc::Status camera_backend_server::ConfigureCamera(::grpc::ServerContext *context,
-                                                    const CameraServer::ConfigureRequest *request,
+                                                    const mvcam::ConfigureRequest *request,
                                                     ::google::protobuf::Empty *response) {
   return index_camera_call_wrapper(request->id().id(), [this, request](camera_driver::camera_container &container) {
     configure_camera(container, request);
@@ -91,24 +91,24 @@ grpc::Status camera_backend_server::ConfigureCamera(::grpc::ServerContext *conte
 }
 
 grpc::Status camera_backend_server::GetConfiguration(::grpc::ServerContext *context,
-                                                     const CameraServer::IdRequest *request,
-                                                     CameraServer::Configuration *response) {
+                                                     const mvcam::IdRequest *request,
+                                                     mvcam::Configuration *response) {
   return index_camera_call_wrapper(request->id(), [this, response](camera_driver::camera_container &container) {
     get_configuration_from_camera(container, response);
   });
 }
 
 grpc::Status camera_backend_server::GetStatus(::grpc::ServerContext *context,
-                                              const CameraServer::IdRequest *request,
-                                              CameraServer::Status *response) {
+                                              const mvcam::IdRequest *request,
+                                              mvcam::Status *response) {
   return index_camera_call_wrapper(request->id(), [this, response](camera_driver::camera_container &container) {
     get_status_from_camera(container, response);
   });
 }
 
 grpc::Status camera_backend_server::Capture(::grpc::ServerContext *context,
-                                            const ::CameraServer::IdRequest *request,
-                                            ::CameraServer::Frame *response) {
+                                            const ::mvcam::IdRequest *request,
+                                            ::mvcam::Frame *response) {
   return index_camera_call_wrapper(request->id(), [this, response](camera_driver::camera_container &container) {
     if (!container.device->capabilities()->can_capture) {
       camera_capability_error ex(container.camera_descriptor);
@@ -127,9 +127,9 @@ grpc::Status camera_backend_server::Capture(::grpc::ServerContext *context,
 }
 
 grpc::Status camera_backend_server::Streaming(::grpc::ServerContext *context,
-                                              const ::CameraServer::StreamingRequest *request,
-                                              ::grpc::ServerWriter<::CameraServer::FrameStream> *writer) {
-  CameraServer::FrameStream fs;
+                                              const ::mvcam::StreamingRequest *request,
+                                              ::grpc::ServerWriter<::mvcam::FrameStream> *writer) {
+  mvcam::FrameStream fs;
   std::string id = request->id().id();
 
   camera_driver::camera_container container;
@@ -224,7 +224,7 @@ grpc::Status camera_backend_server::Streaming(::grpc::ServerContext *context,
 }
 
 grpc::Status camera_backend_server::ResetDevice(::grpc::ServerContext *context,
-                                                const ::CameraServer::IdRequest *request,
+                                                const ::mvcam::IdRequest *request,
                                                 ::google::protobuf::Empty *response) {
 
   return index_camera_call_wrapper(request->id(), [this, response](camera_driver::camera_container &container) {
@@ -243,7 +243,7 @@ grpc::Status camera_backend_server::ResetDevice(::grpc::ServerContext *context,
 }
 
 grpc::Status camera_backend_server::ControlDeviceState(::grpc::ServerContext *context,
-                                                       const ::CameraServer::DeviceControlRequest *request,
+                                                       const ::mvcam::DeviceControlRequest *request,
                                                        ::google::protobuf::Empty *response) {
   return index_camera_call_wrapper(request->id().id(), [this, response](camera_driver::camera_container &container) {
     if (!container.device->capabilities()->can_suspend) {

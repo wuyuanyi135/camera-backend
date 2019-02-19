@@ -27,269 +27,269 @@ class ServerCompletionQueue;
 class ServerContext;
 }  // namespace grpc
 
-namespace CameraServer {
+namespace mvcam {
 
 // The capabilities should be checked and implemented by the frontend. However, in the GRPC layer, the capabilities should also be enforced.
 class CameraService final {
  public:
   static constexpr char const* service_full_name() {
-    return "CameraServer.CameraService";
+    return "mvcam.CameraService";
   }
   class StubInterface {
    public:
     virtual ~StubInterface() {}
     // Get the list of drivers
-    virtual ::grpc::Status GetAvailableAdapters(::grpc::ClientContext* context, const ::google::protobuf::Empty& request, ::CameraServer::AvailableAdaptersResponse* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::CameraServer::AvailableAdaptersResponse>> AsyncGetAvailableAdapters(::grpc::ClientContext* context, const ::google::protobuf::Empty& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::CameraServer::AvailableAdaptersResponse>>(AsyncGetAvailableAdaptersRaw(context, request, cq));
+    virtual ::grpc::Status GetAvailableAdapters(::grpc::ClientContext* context, const ::google::protobuf::Empty& request, ::mvcam::AvailableAdaptersResponse* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::mvcam::AvailableAdaptersResponse>> AsyncGetAvailableAdapters(::grpc::ClientContext* context, const ::google::protobuf::Empty& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::mvcam::AvailableAdaptersResponse>>(AsyncGetAvailableAdaptersRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::CameraServer::AvailableAdaptersResponse>> PrepareAsyncGetAvailableAdapters(::grpc::ClientContext* context, const ::google::protobuf::Empty& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::CameraServer::AvailableAdaptersResponse>>(PrepareAsyncGetAvailableAdaptersRaw(context, request, cq));
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::mvcam::AvailableAdaptersResponse>> PrepareAsyncGetAvailableAdapters(::grpc::ClientContext* context, const ::google::protobuf::Empty& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::mvcam::AvailableAdaptersResponse>>(PrepareAsyncGetAvailableAdaptersRaw(context, request, cq));
     }
     // Get devices with the adapter selector. If not provided, all devices are listed.
     // The requested adapter (or all) should be updated upon this invocation.
     // This function will update the id-map if cached.
-    virtual ::grpc::Status GetDevices(::grpc::ClientContext* context, const ::CameraServer::AdapterRequest& request, ::CameraServer::DeviceListResponse* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::CameraServer::DeviceListResponse>> AsyncGetDevices(::grpc::ClientContext* context, const ::CameraServer::AdapterRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::CameraServer::DeviceListResponse>>(AsyncGetDevicesRaw(context, request, cq));
+    virtual ::grpc::Status GetDevices(::grpc::ClientContext* context, const ::mvcam::AdapterRequest& request, ::mvcam::DeviceListResponse* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::mvcam::DeviceListResponse>> AsyncGetDevices(::grpc::ClientContext* context, const ::mvcam::AdapterRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::mvcam::DeviceListResponse>>(AsyncGetDevicesRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::CameraServer::DeviceListResponse>> PrepareAsyncGetDevices(::grpc::ClientContext* context, const ::CameraServer::AdapterRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::CameraServer::DeviceListResponse>>(PrepareAsyncGetDevicesRaw(context, request, cq));
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::mvcam::DeviceListResponse>> PrepareAsyncGetDevices(::grpc::ClientContext* context, const ::mvcam::AdapterRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::mvcam::DeviceListResponse>>(PrepareAsyncGetDevicesRaw(context, request, cq));
     }
     // Get device descriptor by id. This method is rarely used. Query is mainly performed by the framework.
     // The id will be cached by framework. The GetDevices function will invalidate the cache.
-    virtual ::grpc::Status QueryDeviceById(::grpc::ClientContext* context, const ::CameraServer::IdRequest& request, ::CameraServer::DeviceInfo* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::CameraServer::DeviceInfo>> AsyncQueryDeviceById(::grpc::ClientContext* context, const ::CameraServer::IdRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::CameraServer::DeviceInfo>>(AsyncQueryDeviceByIdRaw(context, request, cq));
+    virtual ::grpc::Status QueryDeviceById(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::mvcam::DeviceInfo* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::mvcam::DeviceInfo>> AsyncQueryDeviceById(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::mvcam::DeviceInfo>>(AsyncQueryDeviceByIdRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::CameraServer::DeviceInfo>> PrepareAsyncQueryDeviceById(::grpc::ClientContext* context, const ::CameraServer::IdRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::CameraServer::DeviceInfo>>(PrepareAsyncQueryDeviceByIdRaw(context, request, cq));
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::mvcam::DeviceInfo>> PrepareAsyncQueryDeviceById(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::mvcam::DeviceInfo>>(PrepareAsyncQueryDeviceByIdRaw(context, request, cq));
     }
-    virtual ::grpc::Status OpenCamera(::grpc::ClientContext* context, const ::CameraServer::IdRequest& request, ::google::protobuf::Empty* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::google::protobuf::Empty>> AsyncOpenCamera(::grpc::ClientContext* context, const ::CameraServer::IdRequest& request, ::grpc::CompletionQueue* cq) {
+    virtual ::grpc::Status OpenCamera(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::google::protobuf::Empty* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::google::protobuf::Empty>> AsyncOpenCamera(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::google::protobuf::Empty>>(AsyncOpenCameraRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::google::protobuf::Empty>> PrepareAsyncOpenCamera(::grpc::ClientContext* context, const ::CameraServer::IdRequest& request, ::grpc::CompletionQueue* cq) {
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::google::protobuf::Empty>> PrepareAsyncOpenCamera(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::google::protobuf::Empty>>(PrepareAsyncOpenCameraRaw(context, request, cq));
     }
-    virtual ::grpc::Status ShutdownCamera(::grpc::ClientContext* context, const ::CameraServer::IdRequest& request, ::google::protobuf::Empty* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::google::protobuf::Empty>> AsyncShutdownCamera(::grpc::ClientContext* context, const ::CameraServer::IdRequest& request, ::grpc::CompletionQueue* cq) {
+    virtual ::grpc::Status ShutdownCamera(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::google::protobuf::Empty* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::google::protobuf::Empty>> AsyncShutdownCamera(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::google::protobuf::Empty>>(AsyncShutdownCameraRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::google::protobuf::Empty>> PrepareAsyncShutdownCamera(::grpc::ClientContext* context, const ::CameraServer::IdRequest& request, ::grpc::CompletionQueue* cq) {
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::google::protobuf::Empty>> PrepareAsyncShutdownCamera(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::google::protobuf::Empty>>(PrepareAsyncShutdownCameraRaw(context, request, cq));
     }
-    virtual ::grpc::Status ConfigureCamera(::grpc::ClientContext* context, const ::CameraServer::ConfigureRequest& request, ::google::protobuf::Empty* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::google::protobuf::Empty>> AsyncConfigureCamera(::grpc::ClientContext* context, const ::CameraServer::ConfigureRequest& request, ::grpc::CompletionQueue* cq) {
+    virtual ::grpc::Status ConfigureCamera(::grpc::ClientContext* context, const ::mvcam::ConfigureRequest& request, ::google::protobuf::Empty* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::google::protobuf::Empty>> AsyncConfigureCamera(::grpc::ClientContext* context, const ::mvcam::ConfigureRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::google::protobuf::Empty>>(AsyncConfigureCameraRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::google::protobuf::Empty>> PrepareAsyncConfigureCamera(::grpc::ClientContext* context, const ::CameraServer::ConfigureRequest& request, ::grpc::CompletionQueue* cq) {
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::google::protobuf::Empty>> PrepareAsyncConfigureCamera(::grpc::ClientContext* context, const ::mvcam::ConfigureRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::google::protobuf::Empty>>(PrepareAsyncConfigureCameraRaw(context, request, cq));
     }
-    virtual ::grpc::Status GetConfiguration(::grpc::ClientContext* context, const ::CameraServer::IdRequest& request, ::CameraServer::Configuration* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::CameraServer::Configuration>> AsyncGetConfiguration(::grpc::ClientContext* context, const ::CameraServer::IdRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::CameraServer::Configuration>>(AsyncGetConfigurationRaw(context, request, cq));
+    virtual ::grpc::Status GetConfiguration(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::mvcam::Configuration* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::mvcam::Configuration>> AsyncGetConfiguration(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::mvcam::Configuration>>(AsyncGetConfigurationRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::CameraServer::Configuration>> PrepareAsyncGetConfiguration(::grpc::ClientContext* context, const ::CameraServer::IdRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::CameraServer::Configuration>>(PrepareAsyncGetConfigurationRaw(context, request, cq));
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::mvcam::Configuration>> PrepareAsyncGetConfiguration(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::mvcam::Configuration>>(PrepareAsyncGetConfigurationRaw(context, request, cq));
     }
-    virtual ::grpc::Status GetStatus(::grpc::ClientContext* context, const ::CameraServer::IdRequest& request, ::CameraServer::Status* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::CameraServer::Status>> AsyncGetStatus(::grpc::ClientContext* context, const ::CameraServer::IdRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::CameraServer::Status>>(AsyncGetStatusRaw(context, request, cq));
+    virtual ::grpc::Status GetStatus(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::mvcam::Status* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::mvcam::Status>> AsyncGetStatus(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::mvcam::Status>>(AsyncGetStatusRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::CameraServer::Status>> PrepareAsyncGetStatus(::grpc::ClientContext* context, const ::CameraServer::IdRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::CameraServer::Status>>(PrepareAsyncGetStatusRaw(context, request, cq));
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::mvcam::Status>> PrepareAsyncGetStatus(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::mvcam::Status>>(PrepareAsyncGetStatusRaw(context, request, cq));
     }
-    virtual ::grpc::Status Capture(::grpc::ClientContext* context, const ::CameraServer::IdRequest& request, ::CameraServer::Frame* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::CameraServer::Frame>> AsyncCapture(::grpc::ClientContext* context, const ::CameraServer::IdRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::CameraServer::Frame>>(AsyncCaptureRaw(context, request, cq));
+    virtual ::grpc::Status Capture(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::mvcam::Frame* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::mvcam::Frame>> AsyncCapture(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::mvcam::Frame>>(AsyncCaptureRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::CameraServer::Frame>> PrepareAsyncCapture(::grpc::ClientContext* context, const ::CameraServer::IdRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::CameraServer::Frame>>(PrepareAsyncCaptureRaw(context, request, cq));
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::mvcam::Frame>> PrepareAsyncCapture(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::mvcam::Frame>>(PrepareAsyncCaptureRaw(context, request, cq));
     }
     // Continuous streaming the frames at the preconfigured frame rate.
     // After the given number of frames captured, the stream is finalized.
     // number_frame == 0 results in non-stopping capture. Cancel the stream to interrupt.
-    std::unique_ptr< ::grpc::ClientReaderInterface< ::CameraServer::FrameStream>> Streaming(::grpc::ClientContext* context, const ::CameraServer::StreamingRequest& request) {
-      return std::unique_ptr< ::grpc::ClientReaderInterface< ::CameraServer::FrameStream>>(StreamingRaw(context, request));
+    std::unique_ptr< ::grpc::ClientReaderInterface< ::mvcam::FrameStream>> Streaming(::grpc::ClientContext* context, const ::mvcam::StreamingRequest& request) {
+      return std::unique_ptr< ::grpc::ClientReaderInterface< ::mvcam::FrameStream>>(StreamingRaw(context, request));
     }
-    std::unique_ptr< ::grpc::ClientAsyncReaderInterface< ::CameraServer::FrameStream>> AsyncStreaming(::grpc::ClientContext* context, const ::CameraServer::StreamingRequest& request, ::grpc::CompletionQueue* cq, void* tag) {
-      return std::unique_ptr< ::grpc::ClientAsyncReaderInterface< ::CameraServer::FrameStream>>(AsyncStreamingRaw(context, request, cq, tag));
+    std::unique_ptr< ::grpc::ClientAsyncReaderInterface< ::mvcam::FrameStream>> AsyncStreaming(::grpc::ClientContext* context, const ::mvcam::StreamingRequest& request, ::grpc::CompletionQueue* cq, void* tag) {
+      return std::unique_ptr< ::grpc::ClientAsyncReaderInterface< ::mvcam::FrameStream>>(AsyncStreamingRaw(context, request, cq, tag));
     }
-    std::unique_ptr< ::grpc::ClientAsyncReaderInterface< ::CameraServer::FrameStream>> PrepareAsyncStreaming(::grpc::ClientContext* context, const ::CameraServer::StreamingRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncReaderInterface< ::CameraServer::FrameStream>>(PrepareAsyncStreamingRaw(context, request, cq));
+    std::unique_ptr< ::grpc::ClientAsyncReaderInterface< ::mvcam::FrameStream>> PrepareAsyncStreaming(::grpc::ClientContext* context, const ::mvcam::StreamingRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncReaderInterface< ::mvcam::FrameStream>>(PrepareAsyncStreamingRaw(context, request, cq));
     }
-    virtual ::grpc::Status ResetDevice(::grpc::ClientContext* context, const ::CameraServer::IdRequest& request, ::google::protobuf::Empty* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::google::protobuf::Empty>> AsyncResetDevice(::grpc::ClientContext* context, const ::CameraServer::IdRequest& request, ::grpc::CompletionQueue* cq) {
+    virtual ::grpc::Status ResetDevice(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::google::protobuf::Empty* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::google::protobuf::Empty>> AsyncResetDevice(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::google::protobuf::Empty>>(AsyncResetDeviceRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::google::protobuf::Empty>> PrepareAsyncResetDevice(::grpc::ClientContext* context, const ::CameraServer::IdRequest& request, ::grpc::CompletionQueue* cq) {
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::google::protobuf::Empty>> PrepareAsyncResetDevice(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::google::protobuf::Empty>>(PrepareAsyncResetDeviceRaw(context, request, cq));
     }
-    virtual ::grpc::Status ControlDeviceState(::grpc::ClientContext* context, const ::CameraServer::DeviceControlRequest& request, ::google::protobuf::Empty* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::google::protobuf::Empty>> AsyncControlDeviceState(::grpc::ClientContext* context, const ::CameraServer::DeviceControlRequest& request, ::grpc::CompletionQueue* cq) {
+    virtual ::grpc::Status ControlDeviceState(::grpc::ClientContext* context, const ::mvcam::DeviceControlRequest& request, ::google::protobuf::Empty* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::google::protobuf::Empty>> AsyncControlDeviceState(::grpc::ClientContext* context, const ::mvcam::DeviceControlRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::google::protobuf::Empty>>(AsyncControlDeviceStateRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::google::protobuf::Empty>> PrepareAsyncControlDeviceState(::grpc::ClientContext* context, const ::CameraServer::DeviceControlRequest& request, ::grpc::CompletionQueue* cq) {
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::google::protobuf::Empty>> PrepareAsyncControlDeviceState(::grpc::ClientContext* context, const ::mvcam::DeviceControlRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::google::protobuf::Empty>>(PrepareAsyncControlDeviceStateRaw(context, request, cq));
     }
     class experimental_async_interface {
      public:
       virtual ~experimental_async_interface() {}
       // Get the list of drivers
-      virtual void GetAvailableAdapters(::grpc::ClientContext* context, const ::google::protobuf::Empty* request, ::CameraServer::AvailableAdaptersResponse* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void GetAvailableAdapters(::grpc::ClientContext* context, const ::google::protobuf::Empty* request, ::mvcam::AvailableAdaptersResponse* response, std::function<void(::grpc::Status)>) = 0;
       // Get devices with the adapter selector. If not provided, all devices are listed.
       // The requested adapter (or all) should be updated upon this invocation.
       // This function will update the id-map if cached.
-      virtual void GetDevices(::grpc::ClientContext* context, const ::CameraServer::AdapterRequest* request, ::CameraServer::DeviceListResponse* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void GetDevices(::grpc::ClientContext* context, const ::mvcam::AdapterRequest* request, ::mvcam::DeviceListResponse* response, std::function<void(::grpc::Status)>) = 0;
       // Get device descriptor by id. This method is rarely used. Query is mainly performed by the framework.
       // The id will be cached by framework. The GetDevices function will invalidate the cache.
-      virtual void QueryDeviceById(::grpc::ClientContext* context, const ::CameraServer::IdRequest* request, ::CameraServer::DeviceInfo* response, std::function<void(::grpc::Status)>) = 0;
-      virtual void OpenCamera(::grpc::ClientContext* context, const ::CameraServer::IdRequest* request, ::google::protobuf::Empty* response, std::function<void(::grpc::Status)>) = 0;
-      virtual void ShutdownCamera(::grpc::ClientContext* context, const ::CameraServer::IdRequest* request, ::google::protobuf::Empty* response, std::function<void(::grpc::Status)>) = 0;
-      virtual void ConfigureCamera(::grpc::ClientContext* context, const ::CameraServer::ConfigureRequest* request, ::google::protobuf::Empty* response, std::function<void(::grpc::Status)>) = 0;
-      virtual void GetConfiguration(::grpc::ClientContext* context, const ::CameraServer::IdRequest* request, ::CameraServer::Configuration* response, std::function<void(::grpc::Status)>) = 0;
-      virtual void GetStatus(::grpc::ClientContext* context, const ::CameraServer::IdRequest* request, ::CameraServer::Status* response, std::function<void(::grpc::Status)>) = 0;
-      virtual void Capture(::grpc::ClientContext* context, const ::CameraServer::IdRequest* request, ::CameraServer::Frame* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void QueryDeviceById(::grpc::ClientContext* context, const ::mvcam::IdRequest* request, ::mvcam::DeviceInfo* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void OpenCamera(::grpc::ClientContext* context, const ::mvcam::IdRequest* request, ::google::protobuf::Empty* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void ShutdownCamera(::grpc::ClientContext* context, const ::mvcam::IdRequest* request, ::google::protobuf::Empty* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void ConfigureCamera(::grpc::ClientContext* context, const ::mvcam::ConfigureRequest* request, ::google::protobuf::Empty* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void GetConfiguration(::grpc::ClientContext* context, const ::mvcam::IdRequest* request, ::mvcam::Configuration* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void GetStatus(::grpc::ClientContext* context, const ::mvcam::IdRequest* request, ::mvcam::Status* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void Capture(::grpc::ClientContext* context, const ::mvcam::IdRequest* request, ::mvcam::Frame* response, std::function<void(::grpc::Status)>) = 0;
       // Continuous streaming the frames at the preconfigured frame rate.
       // After the given number of frames captured, the stream is finalized.
       // number_frame == 0 results in non-stopping capture. Cancel the stream to interrupt.
-      virtual void Streaming(::grpc::ClientContext* context, ::CameraServer::StreamingRequest* request, ::grpc::experimental::ClientReadReactor< ::CameraServer::FrameStream>* reactor) = 0;
-      virtual void ResetDevice(::grpc::ClientContext* context, const ::CameraServer::IdRequest* request, ::google::protobuf::Empty* response, std::function<void(::grpc::Status)>) = 0;
-      virtual void ControlDeviceState(::grpc::ClientContext* context, const ::CameraServer::DeviceControlRequest* request, ::google::protobuf::Empty* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void Streaming(::grpc::ClientContext* context, ::mvcam::StreamingRequest* request, ::grpc::experimental::ClientReadReactor< ::mvcam::FrameStream>* reactor) = 0;
+      virtual void ResetDevice(::grpc::ClientContext* context, const ::mvcam::IdRequest* request, ::google::protobuf::Empty* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void ControlDeviceState(::grpc::ClientContext* context, const ::mvcam::DeviceControlRequest* request, ::google::protobuf::Empty* response, std::function<void(::grpc::Status)>) = 0;
     };
     virtual class experimental_async_interface* experimental_async() { return nullptr; }
   private:
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::CameraServer::AvailableAdaptersResponse>* AsyncGetAvailableAdaptersRaw(::grpc::ClientContext* context, const ::google::protobuf::Empty& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::CameraServer::AvailableAdaptersResponse>* PrepareAsyncGetAvailableAdaptersRaw(::grpc::ClientContext* context, const ::google::protobuf::Empty& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::CameraServer::DeviceListResponse>* AsyncGetDevicesRaw(::grpc::ClientContext* context, const ::CameraServer::AdapterRequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::CameraServer::DeviceListResponse>* PrepareAsyncGetDevicesRaw(::grpc::ClientContext* context, const ::CameraServer::AdapterRequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::CameraServer::DeviceInfo>* AsyncQueryDeviceByIdRaw(::grpc::ClientContext* context, const ::CameraServer::IdRequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::CameraServer::DeviceInfo>* PrepareAsyncQueryDeviceByIdRaw(::grpc::ClientContext* context, const ::CameraServer::IdRequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::google::protobuf::Empty>* AsyncOpenCameraRaw(::grpc::ClientContext* context, const ::CameraServer::IdRequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::google::protobuf::Empty>* PrepareAsyncOpenCameraRaw(::grpc::ClientContext* context, const ::CameraServer::IdRequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::google::protobuf::Empty>* AsyncShutdownCameraRaw(::grpc::ClientContext* context, const ::CameraServer::IdRequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::google::protobuf::Empty>* PrepareAsyncShutdownCameraRaw(::grpc::ClientContext* context, const ::CameraServer::IdRequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::google::protobuf::Empty>* AsyncConfigureCameraRaw(::grpc::ClientContext* context, const ::CameraServer::ConfigureRequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::google::protobuf::Empty>* PrepareAsyncConfigureCameraRaw(::grpc::ClientContext* context, const ::CameraServer::ConfigureRequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::CameraServer::Configuration>* AsyncGetConfigurationRaw(::grpc::ClientContext* context, const ::CameraServer::IdRequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::CameraServer::Configuration>* PrepareAsyncGetConfigurationRaw(::grpc::ClientContext* context, const ::CameraServer::IdRequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::CameraServer::Status>* AsyncGetStatusRaw(::grpc::ClientContext* context, const ::CameraServer::IdRequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::CameraServer::Status>* PrepareAsyncGetStatusRaw(::grpc::ClientContext* context, const ::CameraServer::IdRequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::CameraServer::Frame>* AsyncCaptureRaw(::grpc::ClientContext* context, const ::CameraServer::IdRequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::CameraServer::Frame>* PrepareAsyncCaptureRaw(::grpc::ClientContext* context, const ::CameraServer::IdRequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientReaderInterface< ::CameraServer::FrameStream>* StreamingRaw(::grpc::ClientContext* context, const ::CameraServer::StreamingRequest& request) = 0;
-    virtual ::grpc::ClientAsyncReaderInterface< ::CameraServer::FrameStream>* AsyncStreamingRaw(::grpc::ClientContext* context, const ::CameraServer::StreamingRequest& request, ::grpc::CompletionQueue* cq, void* tag) = 0;
-    virtual ::grpc::ClientAsyncReaderInterface< ::CameraServer::FrameStream>* PrepareAsyncStreamingRaw(::grpc::ClientContext* context, const ::CameraServer::StreamingRequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::google::protobuf::Empty>* AsyncResetDeviceRaw(::grpc::ClientContext* context, const ::CameraServer::IdRequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::google::protobuf::Empty>* PrepareAsyncResetDeviceRaw(::grpc::ClientContext* context, const ::CameraServer::IdRequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::google::protobuf::Empty>* AsyncControlDeviceStateRaw(::grpc::ClientContext* context, const ::CameraServer::DeviceControlRequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::google::protobuf::Empty>* PrepareAsyncControlDeviceStateRaw(::grpc::ClientContext* context, const ::CameraServer::DeviceControlRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::mvcam::AvailableAdaptersResponse>* AsyncGetAvailableAdaptersRaw(::grpc::ClientContext* context, const ::google::protobuf::Empty& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::mvcam::AvailableAdaptersResponse>* PrepareAsyncGetAvailableAdaptersRaw(::grpc::ClientContext* context, const ::google::protobuf::Empty& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::mvcam::DeviceListResponse>* AsyncGetDevicesRaw(::grpc::ClientContext* context, const ::mvcam::AdapterRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::mvcam::DeviceListResponse>* PrepareAsyncGetDevicesRaw(::grpc::ClientContext* context, const ::mvcam::AdapterRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::mvcam::DeviceInfo>* AsyncQueryDeviceByIdRaw(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::mvcam::DeviceInfo>* PrepareAsyncQueryDeviceByIdRaw(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::google::protobuf::Empty>* AsyncOpenCameraRaw(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::google::protobuf::Empty>* PrepareAsyncOpenCameraRaw(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::google::protobuf::Empty>* AsyncShutdownCameraRaw(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::google::protobuf::Empty>* PrepareAsyncShutdownCameraRaw(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::google::protobuf::Empty>* AsyncConfigureCameraRaw(::grpc::ClientContext* context, const ::mvcam::ConfigureRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::google::protobuf::Empty>* PrepareAsyncConfigureCameraRaw(::grpc::ClientContext* context, const ::mvcam::ConfigureRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::mvcam::Configuration>* AsyncGetConfigurationRaw(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::mvcam::Configuration>* PrepareAsyncGetConfigurationRaw(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::mvcam::Status>* AsyncGetStatusRaw(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::mvcam::Status>* PrepareAsyncGetStatusRaw(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::mvcam::Frame>* AsyncCaptureRaw(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::mvcam::Frame>* PrepareAsyncCaptureRaw(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientReaderInterface< ::mvcam::FrameStream>* StreamingRaw(::grpc::ClientContext* context, const ::mvcam::StreamingRequest& request) = 0;
+    virtual ::grpc::ClientAsyncReaderInterface< ::mvcam::FrameStream>* AsyncStreamingRaw(::grpc::ClientContext* context, const ::mvcam::StreamingRequest& request, ::grpc::CompletionQueue* cq, void* tag) = 0;
+    virtual ::grpc::ClientAsyncReaderInterface< ::mvcam::FrameStream>* PrepareAsyncStreamingRaw(::grpc::ClientContext* context, const ::mvcam::StreamingRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::google::protobuf::Empty>* AsyncResetDeviceRaw(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::google::protobuf::Empty>* PrepareAsyncResetDeviceRaw(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::google::protobuf::Empty>* AsyncControlDeviceStateRaw(::grpc::ClientContext* context, const ::mvcam::DeviceControlRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::google::protobuf::Empty>* PrepareAsyncControlDeviceStateRaw(::grpc::ClientContext* context, const ::mvcam::DeviceControlRequest& request, ::grpc::CompletionQueue* cq) = 0;
   };
   class Stub final : public StubInterface {
    public:
     Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel);
-    ::grpc::Status GetAvailableAdapters(::grpc::ClientContext* context, const ::google::protobuf::Empty& request, ::CameraServer::AvailableAdaptersResponse* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::CameraServer::AvailableAdaptersResponse>> AsyncGetAvailableAdapters(::grpc::ClientContext* context, const ::google::protobuf::Empty& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::CameraServer::AvailableAdaptersResponse>>(AsyncGetAvailableAdaptersRaw(context, request, cq));
+    ::grpc::Status GetAvailableAdapters(::grpc::ClientContext* context, const ::google::protobuf::Empty& request, ::mvcam::AvailableAdaptersResponse* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::mvcam::AvailableAdaptersResponse>> AsyncGetAvailableAdapters(::grpc::ClientContext* context, const ::google::protobuf::Empty& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::mvcam::AvailableAdaptersResponse>>(AsyncGetAvailableAdaptersRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::CameraServer::AvailableAdaptersResponse>> PrepareAsyncGetAvailableAdapters(::grpc::ClientContext* context, const ::google::protobuf::Empty& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::CameraServer::AvailableAdaptersResponse>>(PrepareAsyncGetAvailableAdaptersRaw(context, request, cq));
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::mvcam::AvailableAdaptersResponse>> PrepareAsyncGetAvailableAdapters(::grpc::ClientContext* context, const ::google::protobuf::Empty& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::mvcam::AvailableAdaptersResponse>>(PrepareAsyncGetAvailableAdaptersRaw(context, request, cq));
     }
-    ::grpc::Status GetDevices(::grpc::ClientContext* context, const ::CameraServer::AdapterRequest& request, ::CameraServer::DeviceListResponse* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::CameraServer::DeviceListResponse>> AsyncGetDevices(::grpc::ClientContext* context, const ::CameraServer::AdapterRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::CameraServer::DeviceListResponse>>(AsyncGetDevicesRaw(context, request, cq));
+    ::grpc::Status GetDevices(::grpc::ClientContext* context, const ::mvcam::AdapterRequest& request, ::mvcam::DeviceListResponse* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::mvcam::DeviceListResponse>> AsyncGetDevices(::grpc::ClientContext* context, const ::mvcam::AdapterRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::mvcam::DeviceListResponse>>(AsyncGetDevicesRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::CameraServer::DeviceListResponse>> PrepareAsyncGetDevices(::grpc::ClientContext* context, const ::CameraServer::AdapterRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::CameraServer::DeviceListResponse>>(PrepareAsyncGetDevicesRaw(context, request, cq));
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::mvcam::DeviceListResponse>> PrepareAsyncGetDevices(::grpc::ClientContext* context, const ::mvcam::AdapterRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::mvcam::DeviceListResponse>>(PrepareAsyncGetDevicesRaw(context, request, cq));
     }
-    ::grpc::Status QueryDeviceById(::grpc::ClientContext* context, const ::CameraServer::IdRequest& request, ::CameraServer::DeviceInfo* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::CameraServer::DeviceInfo>> AsyncQueryDeviceById(::grpc::ClientContext* context, const ::CameraServer::IdRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::CameraServer::DeviceInfo>>(AsyncQueryDeviceByIdRaw(context, request, cq));
+    ::grpc::Status QueryDeviceById(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::mvcam::DeviceInfo* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::mvcam::DeviceInfo>> AsyncQueryDeviceById(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::mvcam::DeviceInfo>>(AsyncQueryDeviceByIdRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::CameraServer::DeviceInfo>> PrepareAsyncQueryDeviceById(::grpc::ClientContext* context, const ::CameraServer::IdRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::CameraServer::DeviceInfo>>(PrepareAsyncQueryDeviceByIdRaw(context, request, cq));
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::mvcam::DeviceInfo>> PrepareAsyncQueryDeviceById(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::mvcam::DeviceInfo>>(PrepareAsyncQueryDeviceByIdRaw(context, request, cq));
     }
-    ::grpc::Status OpenCamera(::grpc::ClientContext* context, const ::CameraServer::IdRequest& request, ::google::protobuf::Empty* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::google::protobuf::Empty>> AsyncOpenCamera(::grpc::ClientContext* context, const ::CameraServer::IdRequest& request, ::grpc::CompletionQueue* cq) {
+    ::grpc::Status OpenCamera(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::google::protobuf::Empty* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::google::protobuf::Empty>> AsyncOpenCamera(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::google::protobuf::Empty>>(AsyncOpenCameraRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::google::protobuf::Empty>> PrepareAsyncOpenCamera(::grpc::ClientContext* context, const ::CameraServer::IdRequest& request, ::grpc::CompletionQueue* cq) {
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::google::protobuf::Empty>> PrepareAsyncOpenCamera(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::google::protobuf::Empty>>(PrepareAsyncOpenCameraRaw(context, request, cq));
     }
-    ::grpc::Status ShutdownCamera(::grpc::ClientContext* context, const ::CameraServer::IdRequest& request, ::google::protobuf::Empty* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::google::protobuf::Empty>> AsyncShutdownCamera(::grpc::ClientContext* context, const ::CameraServer::IdRequest& request, ::grpc::CompletionQueue* cq) {
+    ::grpc::Status ShutdownCamera(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::google::protobuf::Empty* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::google::protobuf::Empty>> AsyncShutdownCamera(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::google::protobuf::Empty>>(AsyncShutdownCameraRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::google::protobuf::Empty>> PrepareAsyncShutdownCamera(::grpc::ClientContext* context, const ::CameraServer::IdRequest& request, ::grpc::CompletionQueue* cq) {
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::google::protobuf::Empty>> PrepareAsyncShutdownCamera(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::google::protobuf::Empty>>(PrepareAsyncShutdownCameraRaw(context, request, cq));
     }
-    ::grpc::Status ConfigureCamera(::grpc::ClientContext* context, const ::CameraServer::ConfigureRequest& request, ::google::protobuf::Empty* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::google::protobuf::Empty>> AsyncConfigureCamera(::grpc::ClientContext* context, const ::CameraServer::ConfigureRequest& request, ::grpc::CompletionQueue* cq) {
+    ::grpc::Status ConfigureCamera(::grpc::ClientContext* context, const ::mvcam::ConfigureRequest& request, ::google::protobuf::Empty* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::google::protobuf::Empty>> AsyncConfigureCamera(::grpc::ClientContext* context, const ::mvcam::ConfigureRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::google::protobuf::Empty>>(AsyncConfigureCameraRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::google::protobuf::Empty>> PrepareAsyncConfigureCamera(::grpc::ClientContext* context, const ::CameraServer::ConfigureRequest& request, ::grpc::CompletionQueue* cq) {
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::google::protobuf::Empty>> PrepareAsyncConfigureCamera(::grpc::ClientContext* context, const ::mvcam::ConfigureRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::google::protobuf::Empty>>(PrepareAsyncConfigureCameraRaw(context, request, cq));
     }
-    ::grpc::Status GetConfiguration(::grpc::ClientContext* context, const ::CameraServer::IdRequest& request, ::CameraServer::Configuration* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::CameraServer::Configuration>> AsyncGetConfiguration(::grpc::ClientContext* context, const ::CameraServer::IdRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::CameraServer::Configuration>>(AsyncGetConfigurationRaw(context, request, cq));
+    ::grpc::Status GetConfiguration(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::mvcam::Configuration* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::mvcam::Configuration>> AsyncGetConfiguration(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::mvcam::Configuration>>(AsyncGetConfigurationRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::CameraServer::Configuration>> PrepareAsyncGetConfiguration(::grpc::ClientContext* context, const ::CameraServer::IdRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::CameraServer::Configuration>>(PrepareAsyncGetConfigurationRaw(context, request, cq));
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::mvcam::Configuration>> PrepareAsyncGetConfiguration(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::mvcam::Configuration>>(PrepareAsyncGetConfigurationRaw(context, request, cq));
     }
-    ::grpc::Status GetStatus(::grpc::ClientContext* context, const ::CameraServer::IdRequest& request, ::CameraServer::Status* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::CameraServer::Status>> AsyncGetStatus(::grpc::ClientContext* context, const ::CameraServer::IdRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::CameraServer::Status>>(AsyncGetStatusRaw(context, request, cq));
+    ::grpc::Status GetStatus(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::mvcam::Status* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::mvcam::Status>> AsyncGetStatus(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::mvcam::Status>>(AsyncGetStatusRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::CameraServer::Status>> PrepareAsyncGetStatus(::grpc::ClientContext* context, const ::CameraServer::IdRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::CameraServer::Status>>(PrepareAsyncGetStatusRaw(context, request, cq));
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::mvcam::Status>> PrepareAsyncGetStatus(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::mvcam::Status>>(PrepareAsyncGetStatusRaw(context, request, cq));
     }
-    ::grpc::Status Capture(::grpc::ClientContext* context, const ::CameraServer::IdRequest& request, ::CameraServer::Frame* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::CameraServer::Frame>> AsyncCapture(::grpc::ClientContext* context, const ::CameraServer::IdRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::CameraServer::Frame>>(AsyncCaptureRaw(context, request, cq));
+    ::grpc::Status Capture(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::mvcam::Frame* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::mvcam::Frame>> AsyncCapture(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::mvcam::Frame>>(AsyncCaptureRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::CameraServer::Frame>> PrepareAsyncCapture(::grpc::ClientContext* context, const ::CameraServer::IdRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::CameraServer::Frame>>(PrepareAsyncCaptureRaw(context, request, cq));
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::mvcam::Frame>> PrepareAsyncCapture(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::mvcam::Frame>>(PrepareAsyncCaptureRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientReader< ::CameraServer::FrameStream>> Streaming(::grpc::ClientContext* context, const ::CameraServer::StreamingRequest& request) {
-      return std::unique_ptr< ::grpc::ClientReader< ::CameraServer::FrameStream>>(StreamingRaw(context, request));
+    std::unique_ptr< ::grpc::ClientReader< ::mvcam::FrameStream>> Streaming(::grpc::ClientContext* context, const ::mvcam::StreamingRequest& request) {
+      return std::unique_ptr< ::grpc::ClientReader< ::mvcam::FrameStream>>(StreamingRaw(context, request));
     }
-    std::unique_ptr< ::grpc::ClientAsyncReader< ::CameraServer::FrameStream>> AsyncStreaming(::grpc::ClientContext* context, const ::CameraServer::StreamingRequest& request, ::grpc::CompletionQueue* cq, void* tag) {
-      return std::unique_ptr< ::grpc::ClientAsyncReader< ::CameraServer::FrameStream>>(AsyncStreamingRaw(context, request, cq, tag));
+    std::unique_ptr< ::grpc::ClientAsyncReader< ::mvcam::FrameStream>> AsyncStreaming(::grpc::ClientContext* context, const ::mvcam::StreamingRequest& request, ::grpc::CompletionQueue* cq, void* tag) {
+      return std::unique_ptr< ::grpc::ClientAsyncReader< ::mvcam::FrameStream>>(AsyncStreamingRaw(context, request, cq, tag));
     }
-    std::unique_ptr< ::grpc::ClientAsyncReader< ::CameraServer::FrameStream>> PrepareAsyncStreaming(::grpc::ClientContext* context, const ::CameraServer::StreamingRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncReader< ::CameraServer::FrameStream>>(PrepareAsyncStreamingRaw(context, request, cq));
+    std::unique_ptr< ::grpc::ClientAsyncReader< ::mvcam::FrameStream>> PrepareAsyncStreaming(::grpc::ClientContext* context, const ::mvcam::StreamingRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncReader< ::mvcam::FrameStream>>(PrepareAsyncStreamingRaw(context, request, cq));
     }
-    ::grpc::Status ResetDevice(::grpc::ClientContext* context, const ::CameraServer::IdRequest& request, ::google::protobuf::Empty* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::google::protobuf::Empty>> AsyncResetDevice(::grpc::ClientContext* context, const ::CameraServer::IdRequest& request, ::grpc::CompletionQueue* cq) {
+    ::grpc::Status ResetDevice(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::google::protobuf::Empty* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::google::protobuf::Empty>> AsyncResetDevice(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::google::protobuf::Empty>>(AsyncResetDeviceRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::google::protobuf::Empty>> PrepareAsyncResetDevice(::grpc::ClientContext* context, const ::CameraServer::IdRequest& request, ::grpc::CompletionQueue* cq) {
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::google::protobuf::Empty>> PrepareAsyncResetDevice(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::google::protobuf::Empty>>(PrepareAsyncResetDeviceRaw(context, request, cq));
     }
-    ::grpc::Status ControlDeviceState(::grpc::ClientContext* context, const ::CameraServer::DeviceControlRequest& request, ::google::protobuf::Empty* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::google::protobuf::Empty>> AsyncControlDeviceState(::grpc::ClientContext* context, const ::CameraServer::DeviceControlRequest& request, ::grpc::CompletionQueue* cq) {
+    ::grpc::Status ControlDeviceState(::grpc::ClientContext* context, const ::mvcam::DeviceControlRequest& request, ::google::protobuf::Empty* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::google::protobuf::Empty>> AsyncControlDeviceState(::grpc::ClientContext* context, const ::mvcam::DeviceControlRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::google::protobuf::Empty>>(AsyncControlDeviceStateRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::google::protobuf::Empty>> PrepareAsyncControlDeviceState(::grpc::ClientContext* context, const ::CameraServer::DeviceControlRequest& request, ::grpc::CompletionQueue* cq) {
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::google::protobuf::Empty>> PrepareAsyncControlDeviceState(::grpc::ClientContext* context, const ::mvcam::DeviceControlRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::google::protobuf::Empty>>(PrepareAsyncControlDeviceStateRaw(context, request, cq));
     }
     class experimental_async final :
       public StubInterface::experimental_async_interface {
      public:
-      void GetAvailableAdapters(::grpc::ClientContext* context, const ::google::protobuf::Empty* request, ::CameraServer::AvailableAdaptersResponse* response, std::function<void(::grpc::Status)>) override;
-      void GetDevices(::grpc::ClientContext* context, const ::CameraServer::AdapterRequest* request, ::CameraServer::DeviceListResponse* response, std::function<void(::grpc::Status)>) override;
-      void QueryDeviceById(::grpc::ClientContext* context, const ::CameraServer::IdRequest* request, ::CameraServer::DeviceInfo* response, std::function<void(::grpc::Status)>) override;
-      void OpenCamera(::grpc::ClientContext* context, const ::CameraServer::IdRequest* request, ::google::protobuf::Empty* response, std::function<void(::grpc::Status)>) override;
-      void ShutdownCamera(::grpc::ClientContext* context, const ::CameraServer::IdRequest* request, ::google::protobuf::Empty* response, std::function<void(::grpc::Status)>) override;
-      void ConfigureCamera(::grpc::ClientContext* context, const ::CameraServer::ConfigureRequest* request, ::google::protobuf::Empty* response, std::function<void(::grpc::Status)>) override;
-      void GetConfiguration(::grpc::ClientContext* context, const ::CameraServer::IdRequest* request, ::CameraServer::Configuration* response, std::function<void(::grpc::Status)>) override;
-      void GetStatus(::grpc::ClientContext* context, const ::CameraServer::IdRequest* request, ::CameraServer::Status* response, std::function<void(::grpc::Status)>) override;
-      void Capture(::grpc::ClientContext* context, const ::CameraServer::IdRequest* request, ::CameraServer::Frame* response, std::function<void(::grpc::Status)>) override;
-      void Streaming(::grpc::ClientContext* context, ::CameraServer::StreamingRequest* request, ::grpc::experimental::ClientReadReactor< ::CameraServer::FrameStream>* reactor) override;
-      void ResetDevice(::grpc::ClientContext* context, const ::CameraServer::IdRequest* request, ::google::protobuf::Empty* response, std::function<void(::grpc::Status)>) override;
-      void ControlDeviceState(::grpc::ClientContext* context, const ::CameraServer::DeviceControlRequest* request, ::google::protobuf::Empty* response, std::function<void(::grpc::Status)>) override;
+      void GetAvailableAdapters(::grpc::ClientContext* context, const ::google::protobuf::Empty* request, ::mvcam::AvailableAdaptersResponse* response, std::function<void(::grpc::Status)>) override;
+      void GetDevices(::grpc::ClientContext* context, const ::mvcam::AdapterRequest* request, ::mvcam::DeviceListResponse* response, std::function<void(::grpc::Status)>) override;
+      void QueryDeviceById(::grpc::ClientContext* context, const ::mvcam::IdRequest* request, ::mvcam::DeviceInfo* response, std::function<void(::grpc::Status)>) override;
+      void OpenCamera(::grpc::ClientContext* context, const ::mvcam::IdRequest* request, ::google::protobuf::Empty* response, std::function<void(::grpc::Status)>) override;
+      void ShutdownCamera(::grpc::ClientContext* context, const ::mvcam::IdRequest* request, ::google::protobuf::Empty* response, std::function<void(::grpc::Status)>) override;
+      void ConfigureCamera(::grpc::ClientContext* context, const ::mvcam::ConfigureRequest* request, ::google::protobuf::Empty* response, std::function<void(::grpc::Status)>) override;
+      void GetConfiguration(::grpc::ClientContext* context, const ::mvcam::IdRequest* request, ::mvcam::Configuration* response, std::function<void(::grpc::Status)>) override;
+      void GetStatus(::grpc::ClientContext* context, const ::mvcam::IdRequest* request, ::mvcam::Status* response, std::function<void(::grpc::Status)>) override;
+      void Capture(::grpc::ClientContext* context, const ::mvcam::IdRequest* request, ::mvcam::Frame* response, std::function<void(::grpc::Status)>) override;
+      void Streaming(::grpc::ClientContext* context, ::mvcam::StreamingRequest* request, ::grpc::experimental::ClientReadReactor< ::mvcam::FrameStream>* reactor) override;
+      void ResetDevice(::grpc::ClientContext* context, const ::mvcam::IdRequest* request, ::google::protobuf::Empty* response, std::function<void(::grpc::Status)>) override;
+      void ControlDeviceState(::grpc::ClientContext* context, const ::mvcam::DeviceControlRequest* request, ::google::protobuf::Empty* response, std::function<void(::grpc::Status)>) override;
      private:
       friend class Stub;
       explicit experimental_async(Stub* stub): stub_(stub) { }
@@ -301,31 +301,31 @@ class CameraService final {
    private:
     std::shared_ptr< ::grpc::ChannelInterface> channel_;
     class experimental_async async_stub_{this};
-    ::grpc::ClientAsyncResponseReader< ::CameraServer::AvailableAdaptersResponse>* AsyncGetAvailableAdaptersRaw(::grpc::ClientContext* context, const ::google::protobuf::Empty& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::CameraServer::AvailableAdaptersResponse>* PrepareAsyncGetAvailableAdaptersRaw(::grpc::ClientContext* context, const ::google::protobuf::Empty& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::CameraServer::DeviceListResponse>* AsyncGetDevicesRaw(::grpc::ClientContext* context, const ::CameraServer::AdapterRequest& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::CameraServer::DeviceListResponse>* PrepareAsyncGetDevicesRaw(::grpc::ClientContext* context, const ::CameraServer::AdapterRequest& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::CameraServer::DeviceInfo>* AsyncQueryDeviceByIdRaw(::grpc::ClientContext* context, const ::CameraServer::IdRequest& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::CameraServer::DeviceInfo>* PrepareAsyncQueryDeviceByIdRaw(::grpc::ClientContext* context, const ::CameraServer::IdRequest& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::google::protobuf::Empty>* AsyncOpenCameraRaw(::grpc::ClientContext* context, const ::CameraServer::IdRequest& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::google::protobuf::Empty>* PrepareAsyncOpenCameraRaw(::grpc::ClientContext* context, const ::CameraServer::IdRequest& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::google::protobuf::Empty>* AsyncShutdownCameraRaw(::grpc::ClientContext* context, const ::CameraServer::IdRequest& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::google::protobuf::Empty>* PrepareAsyncShutdownCameraRaw(::grpc::ClientContext* context, const ::CameraServer::IdRequest& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::google::protobuf::Empty>* AsyncConfigureCameraRaw(::grpc::ClientContext* context, const ::CameraServer::ConfigureRequest& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::google::protobuf::Empty>* PrepareAsyncConfigureCameraRaw(::grpc::ClientContext* context, const ::CameraServer::ConfigureRequest& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::CameraServer::Configuration>* AsyncGetConfigurationRaw(::grpc::ClientContext* context, const ::CameraServer::IdRequest& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::CameraServer::Configuration>* PrepareAsyncGetConfigurationRaw(::grpc::ClientContext* context, const ::CameraServer::IdRequest& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::CameraServer::Status>* AsyncGetStatusRaw(::grpc::ClientContext* context, const ::CameraServer::IdRequest& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::CameraServer::Status>* PrepareAsyncGetStatusRaw(::grpc::ClientContext* context, const ::CameraServer::IdRequest& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::CameraServer::Frame>* AsyncCaptureRaw(::grpc::ClientContext* context, const ::CameraServer::IdRequest& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::CameraServer::Frame>* PrepareAsyncCaptureRaw(::grpc::ClientContext* context, const ::CameraServer::IdRequest& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientReader< ::CameraServer::FrameStream>* StreamingRaw(::grpc::ClientContext* context, const ::CameraServer::StreamingRequest& request) override;
-    ::grpc::ClientAsyncReader< ::CameraServer::FrameStream>* AsyncStreamingRaw(::grpc::ClientContext* context, const ::CameraServer::StreamingRequest& request, ::grpc::CompletionQueue* cq, void* tag) override;
-    ::grpc::ClientAsyncReader< ::CameraServer::FrameStream>* PrepareAsyncStreamingRaw(::grpc::ClientContext* context, const ::CameraServer::StreamingRequest& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::google::protobuf::Empty>* AsyncResetDeviceRaw(::grpc::ClientContext* context, const ::CameraServer::IdRequest& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::google::protobuf::Empty>* PrepareAsyncResetDeviceRaw(::grpc::ClientContext* context, const ::CameraServer::IdRequest& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::google::protobuf::Empty>* AsyncControlDeviceStateRaw(::grpc::ClientContext* context, const ::CameraServer::DeviceControlRequest& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::google::protobuf::Empty>* PrepareAsyncControlDeviceStateRaw(::grpc::ClientContext* context, const ::CameraServer::DeviceControlRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::mvcam::AvailableAdaptersResponse>* AsyncGetAvailableAdaptersRaw(::grpc::ClientContext* context, const ::google::protobuf::Empty& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::mvcam::AvailableAdaptersResponse>* PrepareAsyncGetAvailableAdaptersRaw(::grpc::ClientContext* context, const ::google::protobuf::Empty& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::mvcam::DeviceListResponse>* AsyncGetDevicesRaw(::grpc::ClientContext* context, const ::mvcam::AdapterRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::mvcam::DeviceListResponse>* PrepareAsyncGetDevicesRaw(::grpc::ClientContext* context, const ::mvcam::AdapterRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::mvcam::DeviceInfo>* AsyncQueryDeviceByIdRaw(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::mvcam::DeviceInfo>* PrepareAsyncQueryDeviceByIdRaw(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::google::protobuf::Empty>* AsyncOpenCameraRaw(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::google::protobuf::Empty>* PrepareAsyncOpenCameraRaw(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::google::protobuf::Empty>* AsyncShutdownCameraRaw(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::google::protobuf::Empty>* PrepareAsyncShutdownCameraRaw(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::google::protobuf::Empty>* AsyncConfigureCameraRaw(::grpc::ClientContext* context, const ::mvcam::ConfigureRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::google::protobuf::Empty>* PrepareAsyncConfigureCameraRaw(::grpc::ClientContext* context, const ::mvcam::ConfigureRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::mvcam::Configuration>* AsyncGetConfigurationRaw(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::mvcam::Configuration>* PrepareAsyncGetConfigurationRaw(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::mvcam::Status>* AsyncGetStatusRaw(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::mvcam::Status>* PrepareAsyncGetStatusRaw(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::mvcam::Frame>* AsyncCaptureRaw(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::mvcam::Frame>* PrepareAsyncCaptureRaw(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientReader< ::mvcam::FrameStream>* StreamingRaw(::grpc::ClientContext* context, const ::mvcam::StreamingRequest& request) override;
+    ::grpc::ClientAsyncReader< ::mvcam::FrameStream>* AsyncStreamingRaw(::grpc::ClientContext* context, const ::mvcam::StreamingRequest& request, ::grpc::CompletionQueue* cq, void* tag) override;
+    ::grpc::ClientAsyncReader< ::mvcam::FrameStream>* PrepareAsyncStreamingRaw(::grpc::ClientContext* context, const ::mvcam::StreamingRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::google::protobuf::Empty>* AsyncResetDeviceRaw(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::google::protobuf::Empty>* PrepareAsyncResetDeviceRaw(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::google::protobuf::Empty>* AsyncControlDeviceStateRaw(::grpc::ClientContext* context, const ::mvcam::DeviceControlRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::google::protobuf::Empty>* PrepareAsyncControlDeviceStateRaw(::grpc::ClientContext* context, const ::mvcam::DeviceControlRequest& request, ::grpc::CompletionQueue* cq) override;
     const ::grpc::internal::RpcMethod rpcmethod_GetAvailableAdapters_;
     const ::grpc::internal::RpcMethod rpcmethod_GetDevices_;
     const ::grpc::internal::RpcMethod rpcmethod_QueryDeviceById_;
@@ -346,26 +346,26 @@ class CameraService final {
     Service();
     virtual ~Service();
     // Get the list of drivers
-    virtual ::grpc::Status GetAvailableAdapters(::grpc::ServerContext* context, const ::google::protobuf::Empty* request, ::CameraServer::AvailableAdaptersResponse* response);
+    virtual ::grpc::Status GetAvailableAdapters(::grpc::ServerContext* context, const ::google::protobuf::Empty* request, ::mvcam::AvailableAdaptersResponse* response);
     // Get devices with the adapter selector. If not provided, all devices are listed.
     // The requested adapter (or all) should be updated upon this invocation.
     // This function will update the id-map if cached.
-    virtual ::grpc::Status GetDevices(::grpc::ServerContext* context, const ::CameraServer::AdapterRequest* request, ::CameraServer::DeviceListResponse* response);
+    virtual ::grpc::Status GetDevices(::grpc::ServerContext* context, const ::mvcam::AdapterRequest* request, ::mvcam::DeviceListResponse* response);
     // Get device descriptor by id. This method is rarely used. Query is mainly performed by the framework.
     // The id will be cached by framework. The GetDevices function will invalidate the cache.
-    virtual ::grpc::Status QueryDeviceById(::grpc::ServerContext* context, const ::CameraServer::IdRequest* request, ::CameraServer::DeviceInfo* response);
-    virtual ::grpc::Status OpenCamera(::grpc::ServerContext* context, const ::CameraServer::IdRequest* request, ::google::protobuf::Empty* response);
-    virtual ::grpc::Status ShutdownCamera(::grpc::ServerContext* context, const ::CameraServer::IdRequest* request, ::google::protobuf::Empty* response);
-    virtual ::grpc::Status ConfigureCamera(::grpc::ServerContext* context, const ::CameraServer::ConfigureRequest* request, ::google::protobuf::Empty* response);
-    virtual ::grpc::Status GetConfiguration(::grpc::ServerContext* context, const ::CameraServer::IdRequest* request, ::CameraServer::Configuration* response);
-    virtual ::grpc::Status GetStatus(::grpc::ServerContext* context, const ::CameraServer::IdRequest* request, ::CameraServer::Status* response);
-    virtual ::grpc::Status Capture(::grpc::ServerContext* context, const ::CameraServer::IdRequest* request, ::CameraServer::Frame* response);
+    virtual ::grpc::Status QueryDeviceById(::grpc::ServerContext* context, const ::mvcam::IdRequest* request, ::mvcam::DeviceInfo* response);
+    virtual ::grpc::Status OpenCamera(::grpc::ServerContext* context, const ::mvcam::IdRequest* request, ::google::protobuf::Empty* response);
+    virtual ::grpc::Status ShutdownCamera(::grpc::ServerContext* context, const ::mvcam::IdRequest* request, ::google::protobuf::Empty* response);
+    virtual ::grpc::Status ConfigureCamera(::grpc::ServerContext* context, const ::mvcam::ConfigureRequest* request, ::google::protobuf::Empty* response);
+    virtual ::grpc::Status GetConfiguration(::grpc::ServerContext* context, const ::mvcam::IdRequest* request, ::mvcam::Configuration* response);
+    virtual ::grpc::Status GetStatus(::grpc::ServerContext* context, const ::mvcam::IdRequest* request, ::mvcam::Status* response);
+    virtual ::grpc::Status Capture(::grpc::ServerContext* context, const ::mvcam::IdRequest* request, ::mvcam::Frame* response);
     // Continuous streaming the frames at the preconfigured frame rate.
     // After the given number of frames captured, the stream is finalized.
     // number_frame == 0 results in non-stopping capture. Cancel the stream to interrupt.
-    virtual ::grpc::Status Streaming(::grpc::ServerContext* context, const ::CameraServer::StreamingRequest* request, ::grpc::ServerWriter< ::CameraServer::FrameStream>* writer);
-    virtual ::grpc::Status ResetDevice(::grpc::ServerContext* context, const ::CameraServer::IdRequest* request, ::google::protobuf::Empty* response);
-    virtual ::grpc::Status ControlDeviceState(::grpc::ServerContext* context, const ::CameraServer::DeviceControlRequest* request, ::google::protobuf::Empty* response);
+    virtual ::grpc::Status Streaming(::grpc::ServerContext* context, const ::mvcam::StreamingRequest* request, ::grpc::ServerWriter< ::mvcam::FrameStream>* writer);
+    virtual ::grpc::Status ResetDevice(::grpc::ServerContext* context, const ::mvcam::IdRequest* request, ::google::protobuf::Empty* response);
+    virtual ::grpc::Status ControlDeviceState(::grpc::ServerContext* context, const ::mvcam::DeviceControlRequest* request, ::google::protobuf::Empty* response);
   };
   template <class BaseClass>
   class WithAsyncMethod_GetAvailableAdapters : public BaseClass {
@@ -379,11 +379,11 @@ class CameraService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetAvailableAdapters(::grpc::ServerContext* context, const ::google::protobuf::Empty* request, ::CameraServer::AvailableAdaptersResponse* response) override {
+    ::grpc::Status GetAvailableAdapters(::grpc::ServerContext* context, const ::google::protobuf::Empty* request, ::mvcam::AvailableAdaptersResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestGetAvailableAdapters(::grpc::ServerContext* context, ::google::protobuf::Empty* request, ::grpc::ServerAsyncResponseWriter< ::CameraServer::AvailableAdaptersResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+    void RequestGetAvailableAdapters(::grpc::ServerContext* context, ::google::protobuf::Empty* request, ::grpc::ServerAsyncResponseWriter< ::mvcam::AvailableAdaptersResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncUnary(0, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
@@ -399,11 +399,11 @@ class CameraService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetDevices(::grpc::ServerContext* context, const ::CameraServer::AdapterRequest* request, ::CameraServer::DeviceListResponse* response) override {
+    ::grpc::Status GetDevices(::grpc::ServerContext* context, const ::mvcam::AdapterRequest* request, ::mvcam::DeviceListResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestGetDevices(::grpc::ServerContext* context, ::CameraServer::AdapterRequest* request, ::grpc::ServerAsyncResponseWriter< ::CameraServer::DeviceListResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+    void RequestGetDevices(::grpc::ServerContext* context, ::mvcam::AdapterRequest* request, ::grpc::ServerAsyncResponseWriter< ::mvcam::DeviceListResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncUnary(1, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
@@ -419,11 +419,11 @@ class CameraService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status QueryDeviceById(::grpc::ServerContext* context, const ::CameraServer::IdRequest* request, ::CameraServer::DeviceInfo* response) override {
+    ::grpc::Status QueryDeviceById(::grpc::ServerContext* context, const ::mvcam::IdRequest* request, ::mvcam::DeviceInfo* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestQueryDeviceById(::grpc::ServerContext* context, ::CameraServer::IdRequest* request, ::grpc::ServerAsyncResponseWriter< ::CameraServer::DeviceInfo>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+    void RequestQueryDeviceById(::grpc::ServerContext* context, ::mvcam::IdRequest* request, ::grpc::ServerAsyncResponseWriter< ::mvcam::DeviceInfo>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncUnary(2, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
@@ -439,11 +439,11 @@ class CameraService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status OpenCamera(::grpc::ServerContext* context, const ::CameraServer::IdRequest* request, ::google::protobuf::Empty* response) override {
+    ::grpc::Status OpenCamera(::grpc::ServerContext* context, const ::mvcam::IdRequest* request, ::google::protobuf::Empty* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestOpenCamera(::grpc::ServerContext* context, ::CameraServer::IdRequest* request, ::grpc::ServerAsyncResponseWriter< ::google::protobuf::Empty>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+    void RequestOpenCamera(::grpc::ServerContext* context, ::mvcam::IdRequest* request, ::grpc::ServerAsyncResponseWriter< ::google::protobuf::Empty>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncUnary(3, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
@@ -459,11 +459,11 @@ class CameraService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status ShutdownCamera(::grpc::ServerContext* context, const ::CameraServer::IdRequest* request, ::google::protobuf::Empty* response) override {
+    ::grpc::Status ShutdownCamera(::grpc::ServerContext* context, const ::mvcam::IdRequest* request, ::google::protobuf::Empty* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestShutdownCamera(::grpc::ServerContext* context, ::CameraServer::IdRequest* request, ::grpc::ServerAsyncResponseWriter< ::google::protobuf::Empty>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+    void RequestShutdownCamera(::grpc::ServerContext* context, ::mvcam::IdRequest* request, ::grpc::ServerAsyncResponseWriter< ::google::protobuf::Empty>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncUnary(4, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
@@ -479,11 +479,11 @@ class CameraService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status ConfigureCamera(::grpc::ServerContext* context, const ::CameraServer::ConfigureRequest* request, ::google::protobuf::Empty* response) override {
+    ::grpc::Status ConfigureCamera(::grpc::ServerContext* context, const ::mvcam::ConfigureRequest* request, ::google::protobuf::Empty* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestConfigureCamera(::grpc::ServerContext* context, ::CameraServer::ConfigureRequest* request, ::grpc::ServerAsyncResponseWriter< ::google::protobuf::Empty>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+    void RequestConfigureCamera(::grpc::ServerContext* context, ::mvcam::ConfigureRequest* request, ::grpc::ServerAsyncResponseWriter< ::google::protobuf::Empty>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncUnary(5, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
@@ -499,11 +499,11 @@ class CameraService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetConfiguration(::grpc::ServerContext* context, const ::CameraServer::IdRequest* request, ::CameraServer::Configuration* response) override {
+    ::grpc::Status GetConfiguration(::grpc::ServerContext* context, const ::mvcam::IdRequest* request, ::mvcam::Configuration* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestGetConfiguration(::grpc::ServerContext* context, ::CameraServer::IdRequest* request, ::grpc::ServerAsyncResponseWriter< ::CameraServer::Configuration>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+    void RequestGetConfiguration(::grpc::ServerContext* context, ::mvcam::IdRequest* request, ::grpc::ServerAsyncResponseWriter< ::mvcam::Configuration>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncUnary(6, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
@@ -519,11 +519,11 @@ class CameraService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetStatus(::grpc::ServerContext* context, const ::CameraServer::IdRequest* request, ::CameraServer::Status* response) override {
+    ::grpc::Status GetStatus(::grpc::ServerContext* context, const ::mvcam::IdRequest* request, ::mvcam::Status* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestGetStatus(::grpc::ServerContext* context, ::CameraServer::IdRequest* request, ::grpc::ServerAsyncResponseWriter< ::CameraServer::Status>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+    void RequestGetStatus(::grpc::ServerContext* context, ::mvcam::IdRequest* request, ::grpc::ServerAsyncResponseWriter< ::mvcam::Status>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncUnary(7, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
@@ -539,11 +539,11 @@ class CameraService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status Capture(::grpc::ServerContext* context, const ::CameraServer::IdRequest* request, ::CameraServer::Frame* response) override {
+    ::grpc::Status Capture(::grpc::ServerContext* context, const ::mvcam::IdRequest* request, ::mvcam::Frame* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestCapture(::grpc::ServerContext* context, ::CameraServer::IdRequest* request, ::grpc::ServerAsyncResponseWriter< ::CameraServer::Frame>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+    void RequestCapture(::grpc::ServerContext* context, ::mvcam::IdRequest* request, ::grpc::ServerAsyncResponseWriter< ::mvcam::Frame>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncUnary(8, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
@@ -559,11 +559,11 @@ class CameraService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status Streaming(::grpc::ServerContext* context, const ::CameraServer::StreamingRequest* request, ::grpc::ServerWriter< ::CameraServer::FrameStream>* writer) override {
+    ::grpc::Status Streaming(::grpc::ServerContext* context, const ::mvcam::StreamingRequest* request, ::grpc::ServerWriter< ::mvcam::FrameStream>* writer) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestStreaming(::grpc::ServerContext* context, ::CameraServer::StreamingRequest* request, ::grpc::ServerAsyncWriter< ::CameraServer::FrameStream>* writer, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+    void RequestStreaming(::grpc::ServerContext* context, ::mvcam::StreamingRequest* request, ::grpc::ServerAsyncWriter< ::mvcam::FrameStream>* writer, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncServerStreaming(9, context, request, writer, new_call_cq, notification_cq, tag);
     }
   };
@@ -579,11 +579,11 @@ class CameraService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status ResetDevice(::grpc::ServerContext* context, const ::CameraServer::IdRequest* request, ::google::protobuf::Empty* response) override {
+    ::grpc::Status ResetDevice(::grpc::ServerContext* context, const ::mvcam::IdRequest* request, ::google::protobuf::Empty* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestResetDevice(::grpc::ServerContext* context, ::CameraServer::IdRequest* request, ::grpc::ServerAsyncResponseWriter< ::google::protobuf::Empty>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+    void RequestResetDevice(::grpc::ServerContext* context, ::mvcam::IdRequest* request, ::grpc::ServerAsyncResponseWriter< ::google::protobuf::Empty>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncUnary(10, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
@@ -599,11 +599,11 @@ class CameraService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status ControlDeviceState(::grpc::ServerContext* context, const ::CameraServer::DeviceControlRequest* request, ::google::protobuf::Empty* response) override {
+    ::grpc::Status ControlDeviceState(::grpc::ServerContext* context, const ::mvcam::DeviceControlRequest* request, ::google::protobuf::Empty* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestControlDeviceState(::grpc::ServerContext* context, ::CameraServer::DeviceControlRequest* request, ::grpc::ServerAsyncResponseWriter< ::google::protobuf::Empty>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+    void RequestControlDeviceState(::grpc::ServerContext* context, ::mvcam::DeviceControlRequest* request, ::grpc::ServerAsyncResponseWriter< ::google::protobuf::Empty>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncUnary(11, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
@@ -615,10 +615,10 @@ class CameraService final {
    public:
     ExperimentalWithCallbackMethod_GetAvailableAdapters() {
       ::grpc::Service::experimental().MarkMethodCallback(0,
-        new ::grpc::internal::CallbackUnaryHandler< ::google::protobuf::Empty, ::CameraServer::AvailableAdaptersResponse>(
+        new ::grpc::internal::CallbackUnaryHandler< ::google::protobuf::Empty, ::mvcam::AvailableAdaptersResponse>(
           [this](::grpc::ServerContext* context,
                  const ::google::protobuf::Empty* request,
-                 ::CameraServer::AvailableAdaptersResponse* response,
+                 ::mvcam::AvailableAdaptersResponse* response,
                  ::grpc::experimental::ServerCallbackRpcController* controller) {
                    return this->GetAvailableAdapters(context, request, response, controller);
                  }));
@@ -627,11 +627,11 @@ class CameraService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetAvailableAdapters(::grpc::ServerContext* context, const ::google::protobuf::Empty* request, ::CameraServer::AvailableAdaptersResponse* response) override {
+    ::grpc::Status GetAvailableAdapters(::grpc::ServerContext* context, const ::google::protobuf::Empty* request, ::mvcam::AvailableAdaptersResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual void GetAvailableAdapters(::grpc::ServerContext* context, const ::google::protobuf::Empty* request, ::CameraServer::AvailableAdaptersResponse* response, ::grpc::experimental::ServerCallbackRpcController* controller) { controller->Finish(::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "")); }
+    virtual void GetAvailableAdapters(::grpc::ServerContext* context, const ::google::protobuf::Empty* request, ::mvcam::AvailableAdaptersResponse* response, ::grpc::experimental::ServerCallbackRpcController* controller) { controller->Finish(::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "")); }
   };
   template <class BaseClass>
   class ExperimentalWithCallbackMethod_GetDevices : public BaseClass {
@@ -640,10 +640,10 @@ class CameraService final {
    public:
     ExperimentalWithCallbackMethod_GetDevices() {
       ::grpc::Service::experimental().MarkMethodCallback(1,
-        new ::grpc::internal::CallbackUnaryHandler< ::CameraServer::AdapterRequest, ::CameraServer::DeviceListResponse>(
+        new ::grpc::internal::CallbackUnaryHandler< ::mvcam::AdapterRequest, ::mvcam::DeviceListResponse>(
           [this](::grpc::ServerContext* context,
-                 const ::CameraServer::AdapterRequest* request,
-                 ::CameraServer::DeviceListResponse* response,
+                 const ::mvcam::AdapterRequest* request,
+                 ::mvcam::DeviceListResponse* response,
                  ::grpc::experimental::ServerCallbackRpcController* controller) {
                    return this->GetDevices(context, request, response, controller);
                  }));
@@ -652,11 +652,11 @@ class CameraService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetDevices(::grpc::ServerContext* context, const ::CameraServer::AdapterRequest* request, ::CameraServer::DeviceListResponse* response) override {
+    ::grpc::Status GetDevices(::grpc::ServerContext* context, const ::mvcam::AdapterRequest* request, ::mvcam::DeviceListResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual void GetDevices(::grpc::ServerContext* context, const ::CameraServer::AdapterRequest* request, ::CameraServer::DeviceListResponse* response, ::grpc::experimental::ServerCallbackRpcController* controller) { controller->Finish(::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "")); }
+    virtual void GetDevices(::grpc::ServerContext* context, const ::mvcam::AdapterRequest* request, ::mvcam::DeviceListResponse* response, ::grpc::experimental::ServerCallbackRpcController* controller) { controller->Finish(::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "")); }
   };
   template <class BaseClass>
   class ExperimentalWithCallbackMethod_QueryDeviceById : public BaseClass {
@@ -665,10 +665,10 @@ class CameraService final {
    public:
     ExperimentalWithCallbackMethod_QueryDeviceById() {
       ::grpc::Service::experimental().MarkMethodCallback(2,
-        new ::grpc::internal::CallbackUnaryHandler< ::CameraServer::IdRequest, ::CameraServer::DeviceInfo>(
+        new ::grpc::internal::CallbackUnaryHandler< ::mvcam::IdRequest, ::mvcam::DeviceInfo>(
           [this](::grpc::ServerContext* context,
-                 const ::CameraServer::IdRequest* request,
-                 ::CameraServer::DeviceInfo* response,
+                 const ::mvcam::IdRequest* request,
+                 ::mvcam::DeviceInfo* response,
                  ::grpc::experimental::ServerCallbackRpcController* controller) {
                    return this->QueryDeviceById(context, request, response, controller);
                  }));
@@ -677,11 +677,11 @@ class CameraService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status QueryDeviceById(::grpc::ServerContext* context, const ::CameraServer::IdRequest* request, ::CameraServer::DeviceInfo* response) override {
+    ::grpc::Status QueryDeviceById(::grpc::ServerContext* context, const ::mvcam::IdRequest* request, ::mvcam::DeviceInfo* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual void QueryDeviceById(::grpc::ServerContext* context, const ::CameraServer::IdRequest* request, ::CameraServer::DeviceInfo* response, ::grpc::experimental::ServerCallbackRpcController* controller) { controller->Finish(::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "")); }
+    virtual void QueryDeviceById(::grpc::ServerContext* context, const ::mvcam::IdRequest* request, ::mvcam::DeviceInfo* response, ::grpc::experimental::ServerCallbackRpcController* controller) { controller->Finish(::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "")); }
   };
   template <class BaseClass>
   class ExperimentalWithCallbackMethod_OpenCamera : public BaseClass {
@@ -690,9 +690,9 @@ class CameraService final {
    public:
     ExperimentalWithCallbackMethod_OpenCamera() {
       ::grpc::Service::experimental().MarkMethodCallback(3,
-        new ::grpc::internal::CallbackUnaryHandler< ::CameraServer::IdRequest, ::google::protobuf::Empty>(
+        new ::grpc::internal::CallbackUnaryHandler< ::mvcam::IdRequest, ::google::protobuf::Empty>(
           [this](::grpc::ServerContext* context,
-                 const ::CameraServer::IdRequest* request,
+                 const ::mvcam::IdRequest* request,
                  ::google::protobuf::Empty* response,
                  ::grpc::experimental::ServerCallbackRpcController* controller) {
                    return this->OpenCamera(context, request, response, controller);
@@ -702,11 +702,11 @@ class CameraService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status OpenCamera(::grpc::ServerContext* context, const ::CameraServer::IdRequest* request, ::google::protobuf::Empty* response) override {
+    ::grpc::Status OpenCamera(::grpc::ServerContext* context, const ::mvcam::IdRequest* request, ::google::protobuf::Empty* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual void OpenCamera(::grpc::ServerContext* context, const ::CameraServer::IdRequest* request, ::google::protobuf::Empty* response, ::grpc::experimental::ServerCallbackRpcController* controller) { controller->Finish(::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "")); }
+    virtual void OpenCamera(::grpc::ServerContext* context, const ::mvcam::IdRequest* request, ::google::protobuf::Empty* response, ::grpc::experimental::ServerCallbackRpcController* controller) { controller->Finish(::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "")); }
   };
   template <class BaseClass>
   class ExperimentalWithCallbackMethod_ShutdownCamera : public BaseClass {
@@ -715,9 +715,9 @@ class CameraService final {
    public:
     ExperimentalWithCallbackMethod_ShutdownCamera() {
       ::grpc::Service::experimental().MarkMethodCallback(4,
-        new ::grpc::internal::CallbackUnaryHandler< ::CameraServer::IdRequest, ::google::protobuf::Empty>(
+        new ::grpc::internal::CallbackUnaryHandler< ::mvcam::IdRequest, ::google::protobuf::Empty>(
           [this](::grpc::ServerContext* context,
-                 const ::CameraServer::IdRequest* request,
+                 const ::mvcam::IdRequest* request,
                  ::google::protobuf::Empty* response,
                  ::grpc::experimental::ServerCallbackRpcController* controller) {
                    return this->ShutdownCamera(context, request, response, controller);
@@ -727,11 +727,11 @@ class CameraService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status ShutdownCamera(::grpc::ServerContext* context, const ::CameraServer::IdRequest* request, ::google::protobuf::Empty* response) override {
+    ::grpc::Status ShutdownCamera(::grpc::ServerContext* context, const ::mvcam::IdRequest* request, ::google::protobuf::Empty* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual void ShutdownCamera(::grpc::ServerContext* context, const ::CameraServer::IdRequest* request, ::google::protobuf::Empty* response, ::grpc::experimental::ServerCallbackRpcController* controller) { controller->Finish(::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "")); }
+    virtual void ShutdownCamera(::grpc::ServerContext* context, const ::mvcam::IdRequest* request, ::google::protobuf::Empty* response, ::grpc::experimental::ServerCallbackRpcController* controller) { controller->Finish(::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "")); }
   };
   template <class BaseClass>
   class ExperimentalWithCallbackMethod_ConfigureCamera : public BaseClass {
@@ -740,9 +740,9 @@ class CameraService final {
    public:
     ExperimentalWithCallbackMethod_ConfigureCamera() {
       ::grpc::Service::experimental().MarkMethodCallback(5,
-        new ::grpc::internal::CallbackUnaryHandler< ::CameraServer::ConfigureRequest, ::google::protobuf::Empty>(
+        new ::grpc::internal::CallbackUnaryHandler< ::mvcam::ConfigureRequest, ::google::protobuf::Empty>(
           [this](::grpc::ServerContext* context,
-                 const ::CameraServer::ConfigureRequest* request,
+                 const ::mvcam::ConfigureRequest* request,
                  ::google::protobuf::Empty* response,
                  ::grpc::experimental::ServerCallbackRpcController* controller) {
                    return this->ConfigureCamera(context, request, response, controller);
@@ -752,11 +752,11 @@ class CameraService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status ConfigureCamera(::grpc::ServerContext* context, const ::CameraServer::ConfigureRequest* request, ::google::protobuf::Empty* response) override {
+    ::grpc::Status ConfigureCamera(::grpc::ServerContext* context, const ::mvcam::ConfigureRequest* request, ::google::protobuf::Empty* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual void ConfigureCamera(::grpc::ServerContext* context, const ::CameraServer::ConfigureRequest* request, ::google::protobuf::Empty* response, ::grpc::experimental::ServerCallbackRpcController* controller) { controller->Finish(::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "")); }
+    virtual void ConfigureCamera(::grpc::ServerContext* context, const ::mvcam::ConfigureRequest* request, ::google::protobuf::Empty* response, ::grpc::experimental::ServerCallbackRpcController* controller) { controller->Finish(::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "")); }
   };
   template <class BaseClass>
   class ExperimentalWithCallbackMethod_GetConfiguration : public BaseClass {
@@ -765,10 +765,10 @@ class CameraService final {
    public:
     ExperimentalWithCallbackMethod_GetConfiguration() {
       ::grpc::Service::experimental().MarkMethodCallback(6,
-        new ::grpc::internal::CallbackUnaryHandler< ::CameraServer::IdRequest, ::CameraServer::Configuration>(
+        new ::grpc::internal::CallbackUnaryHandler< ::mvcam::IdRequest, ::mvcam::Configuration>(
           [this](::grpc::ServerContext* context,
-                 const ::CameraServer::IdRequest* request,
-                 ::CameraServer::Configuration* response,
+                 const ::mvcam::IdRequest* request,
+                 ::mvcam::Configuration* response,
                  ::grpc::experimental::ServerCallbackRpcController* controller) {
                    return this->GetConfiguration(context, request, response, controller);
                  }));
@@ -777,11 +777,11 @@ class CameraService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetConfiguration(::grpc::ServerContext* context, const ::CameraServer::IdRequest* request, ::CameraServer::Configuration* response) override {
+    ::grpc::Status GetConfiguration(::grpc::ServerContext* context, const ::mvcam::IdRequest* request, ::mvcam::Configuration* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual void GetConfiguration(::grpc::ServerContext* context, const ::CameraServer::IdRequest* request, ::CameraServer::Configuration* response, ::grpc::experimental::ServerCallbackRpcController* controller) { controller->Finish(::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "")); }
+    virtual void GetConfiguration(::grpc::ServerContext* context, const ::mvcam::IdRequest* request, ::mvcam::Configuration* response, ::grpc::experimental::ServerCallbackRpcController* controller) { controller->Finish(::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "")); }
   };
   template <class BaseClass>
   class ExperimentalWithCallbackMethod_GetStatus : public BaseClass {
@@ -790,10 +790,10 @@ class CameraService final {
    public:
     ExperimentalWithCallbackMethod_GetStatus() {
       ::grpc::Service::experimental().MarkMethodCallback(7,
-        new ::grpc::internal::CallbackUnaryHandler< ::CameraServer::IdRequest, ::CameraServer::Status>(
+        new ::grpc::internal::CallbackUnaryHandler< ::mvcam::IdRequest, ::mvcam::Status>(
           [this](::grpc::ServerContext* context,
-                 const ::CameraServer::IdRequest* request,
-                 ::CameraServer::Status* response,
+                 const ::mvcam::IdRequest* request,
+                 ::mvcam::Status* response,
                  ::grpc::experimental::ServerCallbackRpcController* controller) {
                    return this->GetStatus(context, request, response, controller);
                  }));
@@ -802,11 +802,11 @@ class CameraService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetStatus(::grpc::ServerContext* context, const ::CameraServer::IdRequest* request, ::CameraServer::Status* response) override {
+    ::grpc::Status GetStatus(::grpc::ServerContext* context, const ::mvcam::IdRequest* request, ::mvcam::Status* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual void GetStatus(::grpc::ServerContext* context, const ::CameraServer::IdRequest* request, ::CameraServer::Status* response, ::grpc::experimental::ServerCallbackRpcController* controller) { controller->Finish(::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "")); }
+    virtual void GetStatus(::grpc::ServerContext* context, const ::mvcam::IdRequest* request, ::mvcam::Status* response, ::grpc::experimental::ServerCallbackRpcController* controller) { controller->Finish(::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "")); }
   };
   template <class BaseClass>
   class ExperimentalWithCallbackMethod_Capture : public BaseClass {
@@ -815,10 +815,10 @@ class CameraService final {
    public:
     ExperimentalWithCallbackMethod_Capture() {
       ::grpc::Service::experimental().MarkMethodCallback(8,
-        new ::grpc::internal::CallbackUnaryHandler< ::CameraServer::IdRequest, ::CameraServer::Frame>(
+        new ::grpc::internal::CallbackUnaryHandler< ::mvcam::IdRequest, ::mvcam::Frame>(
           [this](::grpc::ServerContext* context,
-                 const ::CameraServer::IdRequest* request,
-                 ::CameraServer::Frame* response,
+                 const ::mvcam::IdRequest* request,
+                 ::mvcam::Frame* response,
                  ::grpc::experimental::ServerCallbackRpcController* controller) {
                    return this->Capture(context, request, response, controller);
                  }));
@@ -827,11 +827,11 @@ class CameraService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status Capture(::grpc::ServerContext* context, const ::CameraServer::IdRequest* request, ::CameraServer::Frame* response) override {
+    ::grpc::Status Capture(::grpc::ServerContext* context, const ::mvcam::IdRequest* request, ::mvcam::Frame* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual void Capture(::grpc::ServerContext* context, const ::CameraServer::IdRequest* request, ::CameraServer::Frame* response, ::grpc::experimental::ServerCallbackRpcController* controller) { controller->Finish(::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "")); }
+    virtual void Capture(::grpc::ServerContext* context, const ::mvcam::IdRequest* request, ::mvcam::Frame* response, ::grpc::experimental::ServerCallbackRpcController* controller) { controller->Finish(::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "")); }
   };
   template <class BaseClass>
   class ExperimentalWithCallbackMethod_Streaming : public BaseClass {
@@ -840,20 +840,20 @@ class CameraService final {
    public:
     ExperimentalWithCallbackMethod_Streaming() {
       ::grpc::Service::experimental().MarkMethodCallback(9,
-        new ::grpc::internal::CallbackServerStreamingHandler< ::CameraServer::StreamingRequest, ::CameraServer::FrameStream>(
+        new ::grpc::internal::CallbackServerStreamingHandler< ::mvcam::StreamingRequest, ::mvcam::FrameStream>(
           [this] { return this->Streaming(); }));
     }
     ~ExperimentalWithCallbackMethod_Streaming() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status Streaming(::grpc::ServerContext* context, const ::CameraServer::StreamingRequest* request, ::grpc::ServerWriter< ::CameraServer::FrameStream>* writer) override {
+    ::grpc::Status Streaming(::grpc::ServerContext* context, const ::mvcam::StreamingRequest* request, ::grpc::ServerWriter< ::mvcam::FrameStream>* writer) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual ::grpc::experimental::ServerWriteReactor< ::CameraServer::StreamingRequest, ::CameraServer::FrameStream>* Streaming() {
+    virtual ::grpc::experimental::ServerWriteReactor< ::mvcam::StreamingRequest, ::mvcam::FrameStream>* Streaming() {
       return new ::grpc::internal::UnimplementedWriteReactor<
-        ::CameraServer::StreamingRequest, ::CameraServer::FrameStream>;}
+        ::mvcam::StreamingRequest, ::mvcam::FrameStream>;}
   };
   template <class BaseClass>
   class ExperimentalWithCallbackMethod_ResetDevice : public BaseClass {
@@ -862,9 +862,9 @@ class CameraService final {
    public:
     ExperimentalWithCallbackMethod_ResetDevice() {
       ::grpc::Service::experimental().MarkMethodCallback(10,
-        new ::grpc::internal::CallbackUnaryHandler< ::CameraServer::IdRequest, ::google::protobuf::Empty>(
+        new ::grpc::internal::CallbackUnaryHandler< ::mvcam::IdRequest, ::google::protobuf::Empty>(
           [this](::grpc::ServerContext* context,
-                 const ::CameraServer::IdRequest* request,
+                 const ::mvcam::IdRequest* request,
                  ::google::protobuf::Empty* response,
                  ::grpc::experimental::ServerCallbackRpcController* controller) {
                    return this->ResetDevice(context, request, response, controller);
@@ -874,11 +874,11 @@ class CameraService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status ResetDevice(::grpc::ServerContext* context, const ::CameraServer::IdRequest* request, ::google::protobuf::Empty* response) override {
+    ::grpc::Status ResetDevice(::grpc::ServerContext* context, const ::mvcam::IdRequest* request, ::google::protobuf::Empty* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual void ResetDevice(::grpc::ServerContext* context, const ::CameraServer::IdRequest* request, ::google::protobuf::Empty* response, ::grpc::experimental::ServerCallbackRpcController* controller) { controller->Finish(::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "")); }
+    virtual void ResetDevice(::grpc::ServerContext* context, const ::mvcam::IdRequest* request, ::google::protobuf::Empty* response, ::grpc::experimental::ServerCallbackRpcController* controller) { controller->Finish(::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "")); }
   };
   template <class BaseClass>
   class ExperimentalWithCallbackMethod_ControlDeviceState : public BaseClass {
@@ -887,9 +887,9 @@ class CameraService final {
    public:
     ExperimentalWithCallbackMethod_ControlDeviceState() {
       ::grpc::Service::experimental().MarkMethodCallback(11,
-        new ::grpc::internal::CallbackUnaryHandler< ::CameraServer::DeviceControlRequest, ::google::protobuf::Empty>(
+        new ::grpc::internal::CallbackUnaryHandler< ::mvcam::DeviceControlRequest, ::google::protobuf::Empty>(
           [this](::grpc::ServerContext* context,
-                 const ::CameraServer::DeviceControlRequest* request,
+                 const ::mvcam::DeviceControlRequest* request,
                  ::google::protobuf::Empty* response,
                  ::grpc::experimental::ServerCallbackRpcController* controller) {
                    return this->ControlDeviceState(context, request, response, controller);
@@ -899,11 +899,11 @@ class CameraService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status ControlDeviceState(::grpc::ServerContext* context, const ::CameraServer::DeviceControlRequest* request, ::google::protobuf::Empty* response) override {
+    ::grpc::Status ControlDeviceState(::grpc::ServerContext* context, const ::mvcam::DeviceControlRequest* request, ::google::protobuf::Empty* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual void ControlDeviceState(::grpc::ServerContext* context, const ::CameraServer::DeviceControlRequest* request, ::google::protobuf::Empty* response, ::grpc::experimental::ServerCallbackRpcController* controller) { controller->Finish(::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "")); }
+    virtual void ControlDeviceState(::grpc::ServerContext* context, const ::mvcam::DeviceControlRequest* request, ::google::protobuf::Empty* response, ::grpc::experimental::ServerCallbackRpcController* controller) { controller->Finish(::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "")); }
   };
   typedef ExperimentalWithCallbackMethod_GetAvailableAdapters<ExperimentalWithCallbackMethod_GetDevices<ExperimentalWithCallbackMethod_QueryDeviceById<ExperimentalWithCallbackMethod_OpenCamera<ExperimentalWithCallbackMethod_ShutdownCamera<ExperimentalWithCallbackMethod_ConfigureCamera<ExperimentalWithCallbackMethod_GetConfiguration<ExperimentalWithCallbackMethod_GetStatus<ExperimentalWithCallbackMethod_Capture<ExperimentalWithCallbackMethod_Streaming<ExperimentalWithCallbackMethod_ResetDevice<ExperimentalWithCallbackMethod_ControlDeviceState<Service > > > > > > > > > > > > ExperimentalCallbackService;
   template <class BaseClass>
@@ -918,7 +918,7 @@ class CameraService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetAvailableAdapters(::grpc::ServerContext* context, const ::google::protobuf::Empty* request, ::CameraServer::AvailableAdaptersResponse* response) override {
+    ::grpc::Status GetAvailableAdapters(::grpc::ServerContext* context, const ::google::protobuf::Empty* request, ::mvcam::AvailableAdaptersResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -935,7 +935,7 @@ class CameraService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetDevices(::grpc::ServerContext* context, const ::CameraServer::AdapterRequest* request, ::CameraServer::DeviceListResponse* response) override {
+    ::grpc::Status GetDevices(::grpc::ServerContext* context, const ::mvcam::AdapterRequest* request, ::mvcam::DeviceListResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -952,7 +952,7 @@ class CameraService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status QueryDeviceById(::grpc::ServerContext* context, const ::CameraServer::IdRequest* request, ::CameraServer::DeviceInfo* response) override {
+    ::grpc::Status QueryDeviceById(::grpc::ServerContext* context, const ::mvcam::IdRequest* request, ::mvcam::DeviceInfo* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -969,7 +969,7 @@ class CameraService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status OpenCamera(::grpc::ServerContext* context, const ::CameraServer::IdRequest* request, ::google::protobuf::Empty* response) override {
+    ::grpc::Status OpenCamera(::grpc::ServerContext* context, const ::mvcam::IdRequest* request, ::google::protobuf::Empty* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -986,7 +986,7 @@ class CameraService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status ShutdownCamera(::grpc::ServerContext* context, const ::CameraServer::IdRequest* request, ::google::protobuf::Empty* response) override {
+    ::grpc::Status ShutdownCamera(::grpc::ServerContext* context, const ::mvcam::IdRequest* request, ::google::protobuf::Empty* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1003,7 +1003,7 @@ class CameraService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status ConfigureCamera(::grpc::ServerContext* context, const ::CameraServer::ConfigureRequest* request, ::google::protobuf::Empty* response) override {
+    ::grpc::Status ConfigureCamera(::grpc::ServerContext* context, const ::mvcam::ConfigureRequest* request, ::google::protobuf::Empty* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1020,7 +1020,7 @@ class CameraService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetConfiguration(::grpc::ServerContext* context, const ::CameraServer::IdRequest* request, ::CameraServer::Configuration* response) override {
+    ::grpc::Status GetConfiguration(::grpc::ServerContext* context, const ::mvcam::IdRequest* request, ::mvcam::Configuration* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1037,7 +1037,7 @@ class CameraService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetStatus(::grpc::ServerContext* context, const ::CameraServer::IdRequest* request, ::CameraServer::Status* response) override {
+    ::grpc::Status GetStatus(::grpc::ServerContext* context, const ::mvcam::IdRequest* request, ::mvcam::Status* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1054,7 +1054,7 @@ class CameraService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status Capture(::grpc::ServerContext* context, const ::CameraServer::IdRequest* request, ::CameraServer::Frame* response) override {
+    ::grpc::Status Capture(::grpc::ServerContext* context, const ::mvcam::IdRequest* request, ::mvcam::Frame* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1071,7 +1071,7 @@ class CameraService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status Streaming(::grpc::ServerContext* context, const ::CameraServer::StreamingRequest* request, ::grpc::ServerWriter< ::CameraServer::FrameStream>* writer) override {
+    ::grpc::Status Streaming(::grpc::ServerContext* context, const ::mvcam::StreamingRequest* request, ::grpc::ServerWriter< ::mvcam::FrameStream>* writer) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1088,7 +1088,7 @@ class CameraService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status ResetDevice(::grpc::ServerContext* context, const ::CameraServer::IdRequest* request, ::google::protobuf::Empty* response) override {
+    ::grpc::Status ResetDevice(::grpc::ServerContext* context, const ::mvcam::IdRequest* request, ::google::protobuf::Empty* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1105,7 +1105,7 @@ class CameraService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status ControlDeviceState(::grpc::ServerContext* context, const ::CameraServer::DeviceControlRequest* request, ::google::protobuf::Empty* response) override {
+    ::grpc::Status ControlDeviceState(::grpc::ServerContext* context, const ::mvcam::DeviceControlRequest* request, ::google::protobuf::Empty* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1122,7 +1122,7 @@ class CameraService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetAvailableAdapters(::grpc::ServerContext* context, const ::google::protobuf::Empty* request, ::CameraServer::AvailableAdaptersResponse* response) override {
+    ::grpc::Status GetAvailableAdapters(::grpc::ServerContext* context, const ::google::protobuf::Empty* request, ::mvcam::AvailableAdaptersResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1142,7 +1142,7 @@ class CameraService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetDevices(::grpc::ServerContext* context, const ::CameraServer::AdapterRequest* request, ::CameraServer::DeviceListResponse* response) override {
+    ::grpc::Status GetDevices(::grpc::ServerContext* context, const ::mvcam::AdapterRequest* request, ::mvcam::DeviceListResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1162,7 +1162,7 @@ class CameraService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status QueryDeviceById(::grpc::ServerContext* context, const ::CameraServer::IdRequest* request, ::CameraServer::DeviceInfo* response) override {
+    ::grpc::Status QueryDeviceById(::grpc::ServerContext* context, const ::mvcam::IdRequest* request, ::mvcam::DeviceInfo* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1182,7 +1182,7 @@ class CameraService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status OpenCamera(::grpc::ServerContext* context, const ::CameraServer::IdRequest* request, ::google::protobuf::Empty* response) override {
+    ::grpc::Status OpenCamera(::grpc::ServerContext* context, const ::mvcam::IdRequest* request, ::google::protobuf::Empty* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1202,7 +1202,7 @@ class CameraService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status ShutdownCamera(::grpc::ServerContext* context, const ::CameraServer::IdRequest* request, ::google::protobuf::Empty* response) override {
+    ::grpc::Status ShutdownCamera(::grpc::ServerContext* context, const ::mvcam::IdRequest* request, ::google::protobuf::Empty* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1222,7 +1222,7 @@ class CameraService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status ConfigureCamera(::grpc::ServerContext* context, const ::CameraServer::ConfigureRequest* request, ::google::protobuf::Empty* response) override {
+    ::grpc::Status ConfigureCamera(::grpc::ServerContext* context, const ::mvcam::ConfigureRequest* request, ::google::protobuf::Empty* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1242,7 +1242,7 @@ class CameraService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetConfiguration(::grpc::ServerContext* context, const ::CameraServer::IdRequest* request, ::CameraServer::Configuration* response) override {
+    ::grpc::Status GetConfiguration(::grpc::ServerContext* context, const ::mvcam::IdRequest* request, ::mvcam::Configuration* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1262,7 +1262,7 @@ class CameraService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetStatus(::grpc::ServerContext* context, const ::CameraServer::IdRequest* request, ::CameraServer::Status* response) override {
+    ::grpc::Status GetStatus(::grpc::ServerContext* context, const ::mvcam::IdRequest* request, ::mvcam::Status* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1282,7 +1282,7 @@ class CameraService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status Capture(::grpc::ServerContext* context, const ::CameraServer::IdRequest* request, ::CameraServer::Frame* response) override {
+    ::grpc::Status Capture(::grpc::ServerContext* context, const ::mvcam::IdRequest* request, ::mvcam::Frame* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1302,7 +1302,7 @@ class CameraService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status Streaming(::grpc::ServerContext* context, const ::CameraServer::StreamingRequest* request, ::grpc::ServerWriter< ::CameraServer::FrameStream>* writer) override {
+    ::grpc::Status Streaming(::grpc::ServerContext* context, const ::mvcam::StreamingRequest* request, ::grpc::ServerWriter< ::mvcam::FrameStream>* writer) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1322,7 +1322,7 @@ class CameraService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status ResetDevice(::grpc::ServerContext* context, const ::CameraServer::IdRequest* request, ::google::protobuf::Empty* response) override {
+    ::grpc::Status ResetDevice(::grpc::ServerContext* context, const ::mvcam::IdRequest* request, ::google::protobuf::Empty* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1342,7 +1342,7 @@ class CameraService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status ControlDeviceState(::grpc::ServerContext* context, const ::CameraServer::DeviceControlRequest* request, ::google::protobuf::Empty* response) override {
+    ::grpc::Status ControlDeviceState(::grpc::ServerContext* context, const ::mvcam::DeviceControlRequest* request, ::google::protobuf::Empty* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1369,7 +1369,7 @@ class CameraService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetAvailableAdapters(::grpc::ServerContext* context, const ::google::protobuf::Empty* request, ::CameraServer::AvailableAdaptersResponse* response) override {
+    ::grpc::Status GetAvailableAdapters(::grpc::ServerContext* context, const ::google::protobuf::Empty* request, ::mvcam::AvailableAdaptersResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1394,7 +1394,7 @@ class CameraService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetDevices(::grpc::ServerContext* context, const ::CameraServer::AdapterRequest* request, ::CameraServer::DeviceListResponse* response) override {
+    ::grpc::Status GetDevices(::grpc::ServerContext* context, const ::mvcam::AdapterRequest* request, ::mvcam::DeviceListResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1419,7 +1419,7 @@ class CameraService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status QueryDeviceById(::grpc::ServerContext* context, const ::CameraServer::IdRequest* request, ::CameraServer::DeviceInfo* response) override {
+    ::grpc::Status QueryDeviceById(::grpc::ServerContext* context, const ::mvcam::IdRequest* request, ::mvcam::DeviceInfo* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1444,7 +1444,7 @@ class CameraService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status OpenCamera(::grpc::ServerContext* context, const ::CameraServer::IdRequest* request, ::google::protobuf::Empty* response) override {
+    ::grpc::Status OpenCamera(::grpc::ServerContext* context, const ::mvcam::IdRequest* request, ::google::protobuf::Empty* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1469,7 +1469,7 @@ class CameraService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status ShutdownCamera(::grpc::ServerContext* context, const ::CameraServer::IdRequest* request, ::google::protobuf::Empty* response) override {
+    ::grpc::Status ShutdownCamera(::grpc::ServerContext* context, const ::mvcam::IdRequest* request, ::google::protobuf::Empty* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1494,7 +1494,7 @@ class CameraService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status ConfigureCamera(::grpc::ServerContext* context, const ::CameraServer::ConfigureRequest* request, ::google::protobuf::Empty* response) override {
+    ::grpc::Status ConfigureCamera(::grpc::ServerContext* context, const ::mvcam::ConfigureRequest* request, ::google::protobuf::Empty* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1519,7 +1519,7 @@ class CameraService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetConfiguration(::grpc::ServerContext* context, const ::CameraServer::IdRequest* request, ::CameraServer::Configuration* response) override {
+    ::grpc::Status GetConfiguration(::grpc::ServerContext* context, const ::mvcam::IdRequest* request, ::mvcam::Configuration* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1544,7 +1544,7 @@ class CameraService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetStatus(::grpc::ServerContext* context, const ::CameraServer::IdRequest* request, ::CameraServer::Status* response) override {
+    ::grpc::Status GetStatus(::grpc::ServerContext* context, const ::mvcam::IdRequest* request, ::mvcam::Status* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1569,7 +1569,7 @@ class CameraService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status Capture(::grpc::ServerContext* context, const ::CameraServer::IdRequest* request, ::CameraServer::Frame* response) override {
+    ::grpc::Status Capture(::grpc::ServerContext* context, const ::mvcam::IdRequest* request, ::mvcam::Frame* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1589,7 +1589,7 @@ class CameraService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status Streaming(::grpc::ServerContext* context, const ::CameraServer::StreamingRequest* request, ::grpc::ServerWriter< ::CameraServer::FrameStream>* writer) override {
+    ::grpc::Status Streaming(::grpc::ServerContext* context, const ::mvcam::StreamingRequest* request, ::grpc::ServerWriter< ::mvcam::FrameStream>* writer) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1616,7 +1616,7 @@ class CameraService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status ResetDevice(::grpc::ServerContext* context, const ::CameraServer::IdRequest* request, ::google::protobuf::Empty* response) override {
+    ::grpc::Status ResetDevice(::grpc::ServerContext* context, const ::mvcam::IdRequest* request, ::google::protobuf::Empty* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1641,7 +1641,7 @@ class CameraService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status ControlDeviceState(::grpc::ServerContext* context, const ::CameraServer::DeviceControlRequest* request, ::google::protobuf::Empty* response) override {
+    ::grpc::Status ControlDeviceState(::grpc::ServerContext* context, const ::mvcam::DeviceControlRequest* request, ::google::protobuf::Empty* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1654,18 +1654,18 @@ class CameraService final {
    public:
     WithStreamedUnaryMethod_GetAvailableAdapters() {
       ::grpc::Service::MarkMethodStreamed(0,
-        new ::grpc::internal::StreamedUnaryHandler< ::google::protobuf::Empty, ::CameraServer::AvailableAdaptersResponse>(std::bind(&WithStreamedUnaryMethod_GetAvailableAdapters<BaseClass>::StreamedGetAvailableAdapters, this, std::placeholders::_1, std::placeholders::_2)));
+        new ::grpc::internal::StreamedUnaryHandler< ::google::protobuf::Empty, ::mvcam::AvailableAdaptersResponse>(std::bind(&WithStreamedUnaryMethod_GetAvailableAdapters<BaseClass>::StreamedGetAvailableAdapters, this, std::placeholders::_1, std::placeholders::_2)));
     }
     ~WithStreamedUnaryMethod_GetAvailableAdapters() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status GetAvailableAdapters(::grpc::ServerContext* context, const ::google::protobuf::Empty* request, ::CameraServer::AvailableAdaptersResponse* response) override {
+    ::grpc::Status GetAvailableAdapters(::grpc::ServerContext* context, const ::google::protobuf::Empty* request, ::mvcam::AvailableAdaptersResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedGetAvailableAdapters(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::google::protobuf::Empty,::CameraServer::AvailableAdaptersResponse>* server_unary_streamer) = 0;
+    virtual ::grpc::Status StreamedGetAvailableAdapters(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::google::protobuf::Empty,::mvcam::AvailableAdaptersResponse>* server_unary_streamer) = 0;
   };
   template <class BaseClass>
   class WithStreamedUnaryMethod_GetDevices : public BaseClass {
@@ -1674,18 +1674,18 @@ class CameraService final {
    public:
     WithStreamedUnaryMethod_GetDevices() {
       ::grpc::Service::MarkMethodStreamed(1,
-        new ::grpc::internal::StreamedUnaryHandler< ::CameraServer::AdapterRequest, ::CameraServer::DeviceListResponse>(std::bind(&WithStreamedUnaryMethod_GetDevices<BaseClass>::StreamedGetDevices, this, std::placeholders::_1, std::placeholders::_2)));
+        new ::grpc::internal::StreamedUnaryHandler< ::mvcam::AdapterRequest, ::mvcam::DeviceListResponse>(std::bind(&WithStreamedUnaryMethod_GetDevices<BaseClass>::StreamedGetDevices, this, std::placeholders::_1, std::placeholders::_2)));
     }
     ~WithStreamedUnaryMethod_GetDevices() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status GetDevices(::grpc::ServerContext* context, const ::CameraServer::AdapterRequest* request, ::CameraServer::DeviceListResponse* response) override {
+    ::grpc::Status GetDevices(::grpc::ServerContext* context, const ::mvcam::AdapterRequest* request, ::mvcam::DeviceListResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedGetDevices(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::CameraServer::AdapterRequest,::CameraServer::DeviceListResponse>* server_unary_streamer) = 0;
+    virtual ::grpc::Status StreamedGetDevices(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::mvcam::AdapterRequest,::mvcam::DeviceListResponse>* server_unary_streamer) = 0;
   };
   template <class BaseClass>
   class WithStreamedUnaryMethod_QueryDeviceById : public BaseClass {
@@ -1694,18 +1694,18 @@ class CameraService final {
    public:
     WithStreamedUnaryMethod_QueryDeviceById() {
       ::grpc::Service::MarkMethodStreamed(2,
-        new ::grpc::internal::StreamedUnaryHandler< ::CameraServer::IdRequest, ::CameraServer::DeviceInfo>(std::bind(&WithStreamedUnaryMethod_QueryDeviceById<BaseClass>::StreamedQueryDeviceById, this, std::placeholders::_1, std::placeholders::_2)));
+        new ::grpc::internal::StreamedUnaryHandler< ::mvcam::IdRequest, ::mvcam::DeviceInfo>(std::bind(&WithStreamedUnaryMethod_QueryDeviceById<BaseClass>::StreamedQueryDeviceById, this, std::placeholders::_1, std::placeholders::_2)));
     }
     ~WithStreamedUnaryMethod_QueryDeviceById() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status QueryDeviceById(::grpc::ServerContext* context, const ::CameraServer::IdRequest* request, ::CameraServer::DeviceInfo* response) override {
+    ::grpc::Status QueryDeviceById(::grpc::ServerContext* context, const ::mvcam::IdRequest* request, ::mvcam::DeviceInfo* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedQueryDeviceById(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::CameraServer::IdRequest,::CameraServer::DeviceInfo>* server_unary_streamer) = 0;
+    virtual ::grpc::Status StreamedQueryDeviceById(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::mvcam::IdRequest,::mvcam::DeviceInfo>* server_unary_streamer) = 0;
   };
   template <class BaseClass>
   class WithStreamedUnaryMethod_OpenCamera : public BaseClass {
@@ -1714,18 +1714,18 @@ class CameraService final {
    public:
     WithStreamedUnaryMethod_OpenCamera() {
       ::grpc::Service::MarkMethodStreamed(3,
-        new ::grpc::internal::StreamedUnaryHandler< ::CameraServer::IdRequest, ::google::protobuf::Empty>(std::bind(&WithStreamedUnaryMethod_OpenCamera<BaseClass>::StreamedOpenCamera, this, std::placeholders::_1, std::placeholders::_2)));
+        new ::grpc::internal::StreamedUnaryHandler< ::mvcam::IdRequest, ::google::protobuf::Empty>(std::bind(&WithStreamedUnaryMethod_OpenCamera<BaseClass>::StreamedOpenCamera, this, std::placeholders::_1, std::placeholders::_2)));
     }
     ~WithStreamedUnaryMethod_OpenCamera() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status OpenCamera(::grpc::ServerContext* context, const ::CameraServer::IdRequest* request, ::google::protobuf::Empty* response) override {
+    ::grpc::Status OpenCamera(::grpc::ServerContext* context, const ::mvcam::IdRequest* request, ::google::protobuf::Empty* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedOpenCamera(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::CameraServer::IdRequest,::google::protobuf::Empty>* server_unary_streamer) = 0;
+    virtual ::grpc::Status StreamedOpenCamera(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::mvcam::IdRequest,::google::protobuf::Empty>* server_unary_streamer) = 0;
   };
   template <class BaseClass>
   class WithStreamedUnaryMethod_ShutdownCamera : public BaseClass {
@@ -1734,18 +1734,18 @@ class CameraService final {
    public:
     WithStreamedUnaryMethod_ShutdownCamera() {
       ::grpc::Service::MarkMethodStreamed(4,
-        new ::grpc::internal::StreamedUnaryHandler< ::CameraServer::IdRequest, ::google::protobuf::Empty>(std::bind(&WithStreamedUnaryMethod_ShutdownCamera<BaseClass>::StreamedShutdownCamera, this, std::placeholders::_1, std::placeholders::_2)));
+        new ::grpc::internal::StreamedUnaryHandler< ::mvcam::IdRequest, ::google::protobuf::Empty>(std::bind(&WithStreamedUnaryMethod_ShutdownCamera<BaseClass>::StreamedShutdownCamera, this, std::placeholders::_1, std::placeholders::_2)));
     }
     ~WithStreamedUnaryMethod_ShutdownCamera() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status ShutdownCamera(::grpc::ServerContext* context, const ::CameraServer::IdRequest* request, ::google::protobuf::Empty* response) override {
+    ::grpc::Status ShutdownCamera(::grpc::ServerContext* context, const ::mvcam::IdRequest* request, ::google::protobuf::Empty* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedShutdownCamera(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::CameraServer::IdRequest,::google::protobuf::Empty>* server_unary_streamer) = 0;
+    virtual ::grpc::Status StreamedShutdownCamera(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::mvcam::IdRequest,::google::protobuf::Empty>* server_unary_streamer) = 0;
   };
   template <class BaseClass>
   class WithStreamedUnaryMethod_ConfigureCamera : public BaseClass {
@@ -1754,18 +1754,18 @@ class CameraService final {
    public:
     WithStreamedUnaryMethod_ConfigureCamera() {
       ::grpc::Service::MarkMethodStreamed(5,
-        new ::grpc::internal::StreamedUnaryHandler< ::CameraServer::ConfigureRequest, ::google::protobuf::Empty>(std::bind(&WithStreamedUnaryMethod_ConfigureCamera<BaseClass>::StreamedConfigureCamera, this, std::placeholders::_1, std::placeholders::_2)));
+        new ::grpc::internal::StreamedUnaryHandler< ::mvcam::ConfigureRequest, ::google::protobuf::Empty>(std::bind(&WithStreamedUnaryMethod_ConfigureCamera<BaseClass>::StreamedConfigureCamera, this, std::placeholders::_1, std::placeholders::_2)));
     }
     ~WithStreamedUnaryMethod_ConfigureCamera() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status ConfigureCamera(::grpc::ServerContext* context, const ::CameraServer::ConfigureRequest* request, ::google::protobuf::Empty* response) override {
+    ::grpc::Status ConfigureCamera(::grpc::ServerContext* context, const ::mvcam::ConfigureRequest* request, ::google::protobuf::Empty* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedConfigureCamera(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::CameraServer::ConfigureRequest,::google::protobuf::Empty>* server_unary_streamer) = 0;
+    virtual ::grpc::Status StreamedConfigureCamera(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::mvcam::ConfigureRequest,::google::protobuf::Empty>* server_unary_streamer) = 0;
   };
   template <class BaseClass>
   class WithStreamedUnaryMethod_GetConfiguration : public BaseClass {
@@ -1774,18 +1774,18 @@ class CameraService final {
    public:
     WithStreamedUnaryMethod_GetConfiguration() {
       ::grpc::Service::MarkMethodStreamed(6,
-        new ::grpc::internal::StreamedUnaryHandler< ::CameraServer::IdRequest, ::CameraServer::Configuration>(std::bind(&WithStreamedUnaryMethod_GetConfiguration<BaseClass>::StreamedGetConfiguration, this, std::placeholders::_1, std::placeholders::_2)));
+        new ::grpc::internal::StreamedUnaryHandler< ::mvcam::IdRequest, ::mvcam::Configuration>(std::bind(&WithStreamedUnaryMethod_GetConfiguration<BaseClass>::StreamedGetConfiguration, this, std::placeholders::_1, std::placeholders::_2)));
     }
     ~WithStreamedUnaryMethod_GetConfiguration() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status GetConfiguration(::grpc::ServerContext* context, const ::CameraServer::IdRequest* request, ::CameraServer::Configuration* response) override {
+    ::grpc::Status GetConfiguration(::grpc::ServerContext* context, const ::mvcam::IdRequest* request, ::mvcam::Configuration* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedGetConfiguration(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::CameraServer::IdRequest,::CameraServer::Configuration>* server_unary_streamer) = 0;
+    virtual ::grpc::Status StreamedGetConfiguration(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::mvcam::IdRequest,::mvcam::Configuration>* server_unary_streamer) = 0;
   };
   template <class BaseClass>
   class WithStreamedUnaryMethod_GetStatus : public BaseClass {
@@ -1794,18 +1794,18 @@ class CameraService final {
    public:
     WithStreamedUnaryMethod_GetStatus() {
       ::grpc::Service::MarkMethodStreamed(7,
-        new ::grpc::internal::StreamedUnaryHandler< ::CameraServer::IdRequest, ::CameraServer::Status>(std::bind(&WithStreamedUnaryMethod_GetStatus<BaseClass>::StreamedGetStatus, this, std::placeholders::_1, std::placeholders::_2)));
+        new ::grpc::internal::StreamedUnaryHandler< ::mvcam::IdRequest, ::mvcam::Status>(std::bind(&WithStreamedUnaryMethod_GetStatus<BaseClass>::StreamedGetStatus, this, std::placeholders::_1, std::placeholders::_2)));
     }
     ~WithStreamedUnaryMethod_GetStatus() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status GetStatus(::grpc::ServerContext* context, const ::CameraServer::IdRequest* request, ::CameraServer::Status* response) override {
+    ::grpc::Status GetStatus(::grpc::ServerContext* context, const ::mvcam::IdRequest* request, ::mvcam::Status* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedGetStatus(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::CameraServer::IdRequest,::CameraServer::Status>* server_unary_streamer) = 0;
+    virtual ::grpc::Status StreamedGetStatus(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::mvcam::IdRequest,::mvcam::Status>* server_unary_streamer) = 0;
   };
   template <class BaseClass>
   class WithStreamedUnaryMethod_Capture : public BaseClass {
@@ -1814,18 +1814,18 @@ class CameraService final {
    public:
     WithStreamedUnaryMethod_Capture() {
       ::grpc::Service::MarkMethodStreamed(8,
-        new ::grpc::internal::StreamedUnaryHandler< ::CameraServer::IdRequest, ::CameraServer::Frame>(std::bind(&WithStreamedUnaryMethod_Capture<BaseClass>::StreamedCapture, this, std::placeholders::_1, std::placeholders::_2)));
+        new ::grpc::internal::StreamedUnaryHandler< ::mvcam::IdRequest, ::mvcam::Frame>(std::bind(&WithStreamedUnaryMethod_Capture<BaseClass>::StreamedCapture, this, std::placeholders::_1, std::placeholders::_2)));
     }
     ~WithStreamedUnaryMethod_Capture() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status Capture(::grpc::ServerContext* context, const ::CameraServer::IdRequest* request, ::CameraServer::Frame* response) override {
+    ::grpc::Status Capture(::grpc::ServerContext* context, const ::mvcam::IdRequest* request, ::mvcam::Frame* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedCapture(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::CameraServer::IdRequest,::CameraServer::Frame>* server_unary_streamer) = 0;
+    virtual ::grpc::Status StreamedCapture(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::mvcam::IdRequest,::mvcam::Frame>* server_unary_streamer) = 0;
   };
   template <class BaseClass>
   class WithStreamedUnaryMethod_ResetDevice : public BaseClass {
@@ -1834,18 +1834,18 @@ class CameraService final {
    public:
     WithStreamedUnaryMethod_ResetDevice() {
       ::grpc::Service::MarkMethodStreamed(10,
-        new ::grpc::internal::StreamedUnaryHandler< ::CameraServer::IdRequest, ::google::protobuf::Empty>(std::bind(&WithStreamedUnaryMethod_ResetDevice<BaseClass>::StreamedResetDevice, this, std::placeholders::_1, std::placeholders::_2)));
+        new ::grpc::internal::StreamedUnaryHandler< ::mvcam::IdRequest, ::google::protobuf::Empty>(std::bind(&WithStreamedUnaryMethod_ResetDevice<BaseClass>::StreamedResetDevice, this, std::placeholders::_1, std::placeholders::_2)));
     }
     ~WithStreamedUnaryMethod_ResetDevice() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status ResetDevice(::grpc::ServerContext* context, const ::CameraServer::IdRequest* request, ::google::protobuf::Empty* response) override {
+    ::grpc::Status ResetDevice(::grpc::ServerContext* context, const ::mvcam::IdRequest* request, ::google::protobuf::Empty* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedResetDevice(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::CameraServer::IdRequest,::google::protobuf::Empty>* server_unary_streamer) = 0;
+    virtual ::grpc::Status StreamedResetDevice(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::mvcam::IdRequest,::google::protobuf::Empty>* server_unary_streamer) = 0;
   };
   template <class BaseClass>
   class WithStreamedUnaryMethod_ControlDeviceState : public BaseClass {
@@ -1854,18 +1854,18 @@ class CameraService final {
    public:
     WithStreamedUnaryMethod_ControlDeviceState() {
       ::grpc::Service::MarkMethodStreamed(11,
-        new ::grpc::internal::StreamedUnaryHandler< ::CameraServer::DeviceControlRequest, ::google::protobuf::Empty>(std::bind(&WithStreamedUnaryMethod_ControlDeviceState<BaseClass>::StreamedControlDeviceState, this, std::placeholders::_1, std::placeholders::_2)));
+        new ::grpc::internal::StreamedUnaryHandler< ::mvcam::DeviceControlRequest, ::google::protobuf::Empty>(std::bind(&WithStreamedUnaryMethod_ControlDeviceState<BaseClass>::StreamedControlDeviceState, this, std::placeholders::_1, std::placeholders::_2)));
     }
     ~WithStreamedUnaryMethod_ControlDeviceState() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status ControlDeviceState(::grpc::ServerContext* context, const ::CameraServer::DeviceControlRequest* request, ::google::protobuf::Empty* response) override {
+    ::grpc::Status ControlDeviceState(::grpc::ServerContext* context, const ::mvcam::DeviceControlRequest* request, ::google::protobuf::Empty* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedControlDeviceState(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::CameraServer::DeviceControlRequest,::google::protobuf::Empty>* server_unary_streamer) = 0;
+    virtual ::grpc::Status StreamedControlDeviceState(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::mvcam::DeviceControlRequest,::google::protobuf::Empty>* server_unary_streamer) = 0;
   };
   typedef WithStreamedUnaryMethod_GetAvailableAdapters<WithStreamedUnaryMethod_GetDevices<WithStreamedUnaryMethod_QueryDeviceById<WithStreamedUnaryMethod_OpenCamera<WithStreamedUnaryMethod_ShutdownCamera<WithStreamedUnaryMethod_ConfigureCamera<WithStreamedUnaryMethod_GetConfiguration<WithStreamedUnaryMethod_GetStatus<WithStreamedUnaryMethod_Capture<WithStreamedUnaryMethod_ResetDevice<WithStreamedUnaryMethod_ControlDeviceState<Service > > > > > > > > > > > StreamedUnaryService;
   template <class BaseClass>
@@ -1875,24 +1875,24 @@ class CameraService final {
    public:
     WithSplitStreamingMethod_Streaming() {
       ::grpc::Service::MarkMethodStreamed(9,
-        new ::grpc::internal::SplitServerStreamingHandler< ::CameraServer::StreamingRequest, ::CameraServer::FrameStream>(std::bind(&WithSplitStreamingMethod_Streaming<BaseClass>::StreamedStreaming, this, std::placeholders::_1, std::placeholders::_2)));
+        new ::grpc::internal::SplitServerStreamingHandler< ::mvcam::StreamingRequest, ::mvcam::FrameStream>(std::bind(&WithSplitStreamingMethod_Streaming<BaseClass>::StreamedStreaming, this, std::placeholders::_1, std::placeholders::_2)));
     }
     ~WithSplitStreamingMethod_Streaming() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status Streaming(::grpc::ServerContext* context, const ::CameraServer::StreamingRequest* request, ::grpc::ServerWriter< ::CameraServer::FrameStream>* writer) override {
+    ::grpc::Status Streaming(::grpc::ServerContext* context, const ::mvcam::StreamingRequest* request, ::grpc::ServerWriter< ::mvcam::FrameStream>* writer) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     // replace default version of method with split streamed
-    virtual ::grpc::Status StreamedStreaming(::grpc::ServerContext* context, ::grpc::ServerSplitStreamer< ::CameraServer::StreamingRequest,::CameraServer::FrameStream>* server_split_streamer) = 0;
+    virtual ::grpc::Status StreamedStreaming(::grpc::ServerContext* context, ::grpc::ServerSplitStreamer< ::mvcam::StreamingRequest,::mvcam::FrameStream>* server_split_streamer) = 0;
   };
   typedef WithSplitStreamingMethod_Streaming<Service > SplitStreamedService;
   typedef WithStreamedUnaryMethod_GetAvailableAdapters<WithStreamedUnaryMethod_GetDevices<WithStreamedUnaryMethod_QueryDeviceById<WithStreamedUnaryMethod_OpenCamera<WithStreamedUnaryMethod_ShutdownCamera<WithStreamedUnaryMethod_ConfigureCamera<WithStreamedUnaryMethod_GetConfiguration<WithStreamedUnaryMethod_GetStatus<WithStreamedUnaryMethod_Capture<WithSplitStreamingMethod_Streaming<WithStreamedUnaryMethod_ResetDevice<WithStreamedUnaryMethod_ControlDeviceState<Service > > > > > > > > > > > > StreamedService;
 };
 
-}  // namespace CameraServer
+}  // namespace mvcam
 
 
 #endif  // GRPC_camera_5fservice_2eproto__INCLUDED

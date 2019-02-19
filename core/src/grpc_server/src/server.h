@@ -12,28 +12,28 @@
 #include "camera_container.h"
 #include "framework.h"
 
-class camera_backend_server : public CameraServer::CameraService::Service {
+class camera_backend_server : public mvcam::CameraService::Service {
  private:
   std::shared_ptr<camera_driver::framework> mFramework;
   void load_adapters();
 
   // modify this function to register new capabilities
   void transform_adapter(camera_driver::adapter *src,
-                         CameraServer::AdapterInfo *dest);
-  void transform_device_info(const camera_driver::camera_container &src, CameraServer::DeviceInfo *dest);
-  void transform_frame(const camera_driver::frame &frame, CameraServer::Frame *dest);
+                         mvcam::AdapterInfo *dest);
+  void transform_device_info(const camera_driver::camera_container &src, mvcam::DeviceInfo *dest);
+  void transform_frame(const camera_driver::frame &frame, mvcam::Frame *dest);
 
 
   /// modify when new parameters are added
   /// \param container
   /// \param dest
-  void get_configuration_from_camera(camera_driver::camera_container &container, CameraServer::Configuration *dest);
-  void configure_camera(camera_driver::camera_container &container, const CameraServer::ConfigureRequest *configuration);
+  void get_configuration_from_camera(camera_driver::camera_container &container, mvcam::Configuration *dest);
+  void configure_camera(camera_driver::camera_container &container, const mvcam::ConfigureRequest *configuration);
 
   /// modify when new status is added
   /// \param container
   /// \param dest
-  void get_status_from_camera(camera_driver::camera_container &container, CameraServer::Status *dest);
+  void get_status_from_camera(camera_driver::camera_container &container, mvcam::Status *dest);
 
 
  private:
@@ -44,7 +44,7 @@ class camera_backend_server : public CameraServer::CameraService::Service {
   template<typename T>
   void apply_parameter(camera_driver::camera_container &container,
                        camera_driver::parameter_write<T> &dest,
-                       const CameraServer::Parameter &param,
+                       const mvcam::Parameter &param,
                        std::string fieldName,
                        bool capability
                        );
@@ -64,30 +64,30 @@ class camera_backend_server : public CameraServer::CameraService::Service {
   ~camera_backend_server() override;
   grpc::Status GetAvailableAdapters(::grpc::ServerContext *context,
                                     const ::google::protobuf::Empty *request,
-                                    CameraServer::AvailableAdaptersResponse *response) override;
+                                    mvcam::AvailableAdaptersResponse *response) override;
   grpc::Status GetDevices(::grpc::ServerContext *context,
-                          const CameraServer::AdapterRequest *request,
-                          CameraServer::DeviceListResponse *response) override;
+                          const mvcam::AdapterRequest *request,
+                          mvcam::DeviceListResponse *response) override;
   grpc::Status QueryDeviceById(::grpc::ServerContext *context,
-                               const CameraServer::IdRequest *request,
-                               CameraServer::DeviceInfo *response) override;
+                               const mvcam::IdRequest *request,
+                               mvcam::DeviceInfo *response) override;
   grpc::Status OpenCamera(::grpc::ServerContext *context,
-                          const CameraServer::IdRequest *request,
+                          const mvcam::IdRequest *request,
                           ::google::protobuf::Empty *response) override;
   grpc::Status ShutdownCamera(::grpc::ServerContext *context,
-                              const CameraServer::IdRequest *request,
+                              const mvcam::IdRequest *request,
                               ::google::protobuf::Empty *response) override;
   grpc::Status ConfigureCamera(::grpc::ServerContext *context,
-                               const CameraServer::ConfigureRequest *request,
+                               const mvcam::ConfigureRequest *request,
                                ::google::protobuf::Empty *response) override;
   grpc::Status GetConfiguration(::grpc::ServerContext *context,
-                                const CameraServer::IdRequest *request,
-                                CameraServer::Configuration *response) override;
+                                const mvcam::IdRequest *request,
+                                mvcam::Configuration *response) override;
   grpc::Status ResetDevice(::grpc::ServerContext *context,
-                           const ::CameraServer::IdRequest *request,
+                           const ::mvcam::IdRequest *request,
                            ::google::protobuf::Empty *response) override;
   grpc::Status ControlDeviceState(::grpc::ServerContext *context,
-                                  const ::CameraServer::DeviceControlRequest *request,
+                                  const ::mvcam::DeviceControlRequest *request,
                                   ::google::protobuf::Empty *response) override;
   /// This function does not check capabilities. Front end should decide whether the status entry should be displayed or not.
   /// \param context
@@ -95,14 +95,14 @@ class camera_backend_server : public CameraServer::CameraService::Service {
   /// \param response
   /// \return
   grpc::Status GetStatus(::grpc::ServerContext *context,
-                         const CameraServer::IdRequest *request,
-                         CameraServer::Status *response) override;
+                         const mvcam::IdRequest *request,
+                         mvcam::Status *response) override;
   grpc::Status Capture(::grpc::ServerContext *context,
-                       const ::CameraServer::IdRequest *request,
-                       ::CameraServer::Frame *response) override;
+                       const ::mvcam::IdRequest *request,
+                       ::mvcam::Frame *response) override;
   grpc::Status Streaming(::grpc::ServerContext *context,
-                         const ::CameraServer::StreamingRequest *request,
-                         ::grpc::ServerWriter<::CameraServer::FrameStream> *writer) override;
-  void transform_device_capabilities(const camera_driver::camera_capability *src, CameraServer::CameraCapability *dest) const;
+                         const ::mvcam::StreamingRequest *request,
+                         ::grpc::ServerWriter<::mvcam::FrameStream> *writer) override;
+  void transform_device_capabilities(const camera_driver::camera_capability *src, mvcam::CameraCapability *dest) const;
 };
 #endif //CAMERA_BACKEND_SERVER_H

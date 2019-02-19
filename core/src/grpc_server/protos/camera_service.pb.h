@@ -45,9 +45,9 @@ struct TableStruct {
 };
 void AddDescriptors();
 }  // namespace protobuf_camera_5fservice_2eproto
-namespace CameraServer {
-}  // namespace CameraServer
-namespace CameraServer {
+namespace mvcam {
+}  // namespace mvcam
+namespace mvcam {
 
 // ===================================================================
 
@@ -67,7 +67,7 @@ namespace CameraServer {
 
 // @@protoc_insertion_point(namespace_scope)
 
-}  // namespace CameraServer
+}  // namespace mvcam
 
 // @@protoc_insertion_point(global_scope)
 

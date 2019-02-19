@@ -27,9 +27,9 @@ class ServerCompletionQueue;
 class ServerContext;
 }  // namespace grpc
 
-namespace CameraServer {
+namespace mvcam {
 
-}  // namespace CameraServer
+}  // namespace mvcam
 
 
 #endif  // GRPC_camera_5fdefinitions_2eproto__INCLUDED

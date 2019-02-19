@@ -47,7 +47,7 @@ struct TableStruct {
 };
 void AddDescriptors();
 }  // namespace protobuf_camera_5fdefinitions_2eproto
-namespace CameraServer {
+namespace mvcam {
 class AdapterCapability;
 class AdapterCapabilityDefaultTypeInternal;
 extern AdapterCapabilityDefaultTypeInternal _AdapterCapability_default_instance_;
@@ -96,28 +96,28 @@ extern StatusDefaultTypeInternal _Status_default_instance_;
 class StreamingRequest;
 class StreamingRequestDefaultTypeInternal;
 extern StreamingRequestDefaultTypeInternal _StreamingRequest_default_instance_;
-}  // namespace CameraServer
+}  // namespace mvcam
 namespace google {
 namespace protobuf {
-template<> ::CameraServer::AdapterCapability* Arena::CreateMaybeMessage<::CameraServer::AdapterCapability>(Arena*);
-template<> ::CameraServer::AdapterInfo* Arena::CreateMaybeMessage<::CameraServer::AdapterInfo>(Arena*);
-template<> ::CameraServer::AdapterRequest* Arena::CreateMaybeMessage<::CameraServer::AdapterRequest>(Arena*);
-template<> ::CameraServer::AvailableAdaptersResponse* Arena::CreateMaybeMessage<::CameraServer::AvailableAdaptersResponse>(Arena*);
-template<> ::CameraServer::CameraCapability* Arena::CreateMaybeMessage<::CameraServer::CameraCapability>(Arena*);
-template<> ::CameraServer::Configuration* Arena::CreateMaybeMessage<::CameraServer::Configuration>(Arena*);
-template<> ::CameraServer::ConfigureRequest* Arena::CreateMaybeMessage<::CameraServer::ConfigureRequest>(Arena*);
-template<> ::CameraServer::DeviceControlRequest* Arena::CreateMaybeMessage<::CameraServer::DeviceControlRequest>(Arena*);
-template<> ::CameraServer::DeviceInfo* Arena::CreateMaybeMessage<::CameraServer::DeviceInfo>(Arena*);
-template<> ::CameraServer::DeviceListResponse* Arena::CreateMaybeMessage<::CameraServer::DeviceListResponse>(Arena*);
-template<> ::CameraServer::Frame* Arena::CreateMaybeMessage<::CameraServer::Frame>(Arena*);
-template<> ::CameraServer::FrameStream* Arena::CreateMaybeMessage<::CameraServer::FrameStream>(Arena*);
-template<> ::CameraServer::IdRequest* Arena::CreateMaybeMessage<::CameraServer::IdRequest>(Arena*);
-template<> ::CameraServer::Parameter* Arena::CreateMaybeMessage<::CameraServer::Parameter>(Arena*);
-template<> ::CameraServer::Status* Arena::CreateMaybeMessage<::CameraServer::Status>(Arena*);
-template<> ::CameraServer::StreamingRequest* Arena::CreateMaybeMessage<::CameraServer::StreamingRequest>(Arena*);
+template<> ::mvcam::AdapterCapability* Arena::CreateMaybeMessage<::mvcam::AdapterCapability>(Arena*);
+template<> ::mvcam::AdapterInfo* Arena::CreateMaybeMessage<::mvcam::AdapterInfo>(Arena*);
+template<> ::mvcam::AdapterRequest* Arena::CreateMaybeMessage<::mvcam::AdapterRequest>(Arena*);
+template<> ::mvcam::AvailableAdaptersResponse* Arena::CreateMaybeMessage<::mvcam::AvailableAdaptersResponse>(Arena*);
+template<> ::mvcam::CameraCapability* Arena::CreateMaybeMessage<::mvcam::CameraCapability>(Arena*);
+template<> ::mvcam::Configuration* Arena::CreateMaybeMessage<::mvcam::Configuration>(Arena*);
+template<> ::mvcam::ConfigureRequest* Arena::CreateMaybeMessage<::mvcam::ConfigureRequest>(Arena*);
+template<> ::mvcam::DeviceControlRequest* Arena::CreateMaybeMessage<::mvcam::DeviceControlRequest>(Arena*);
+template<> ::mvcam::DeviceInfo* Arena::CreateMaybeMessage<::mvcam::DeviceInfo>(Arena*);
+template<> ::mvcam::DeviceListResponse* Arena::CreateMaybeMessage<::mvcam::DeviceListResponse>(Arena*);
+template<> ::mvcam::Frame* Arena::CreateMaybeMessage<::mvcam::Frame>(Arena*);
+template<> ::mvcam::FrameStream* Arena::CreateMaybeMessage<::mvcam::FrameStream>(Arena*);
+template<> ::mvcam::IdRequest* Arena::CreateMaybeMessage<::mvcam::IdRequest>(Arena*);
+template<> ::mvcam::Parameter* Arena::CreateMaybeMessage<::mvcam::Parameter>(Arena*);
+template<> ::mvcam::Status* Arena::CreateMaybeMessage<::mvcam::Status>(Arena*);
+template<> ::mvcam::StreamingRequest* Arena::CreateMaybeMessage<::mvcam::StreamingRequest>(Arena*);
 }  // namespace protobuf
 }  // namespace google
-namespace CameraServer {
+namespace mvcam {
 
 enum DeviceControlAction {
   Suspend = 0,
@@ -142,7 +142,7 @@ inline bool DeviceControlAction_Parse(
 }
 // ===================================================================
 
-class AdapterCapability : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:CameraServer.AdapterCapability) */ {
+class AdapterCapability : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mvcam.AdapterCapability) */ {
  public:
   AdapterCapability();
   virtual ~AdapterCapability();
@@ -235,7 +235,7 @@ class AdapterCapability : public ::google::protobuf::Message /* @@protoc_inserti
   bool should_shut_down() const;
   void set_should_shut_down(bool value);
 
-  // @@protoc_insertion_point(class_scope:CameraServer.AdapterCapability)
+  // @@protoc_insertion_point(class_scope:mvcam.AdapterCapability)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
@@ -245,7 +245,7 @@ class AdapterCapability : public ::google::protobuf::Message /* @@protoc_inserti
 };
 // -------------------------------------------------------------------
 
-class AdapterInfo : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:CameraServer.AdapterInfo) */ {
+class AdapterInfo : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mvcam.AdapterInfo) */ {
  public:
   AdapterInfo();
   virtual ~AdapterInfo();
@@ -374,17 +374,17 @@ class AdapterInfo : public ::google::protobuf::Message /* @@protoc_insertion_poi
   ::std::string* release_description();
   void set_allocated_description(::std::string* description);
 
-  // .CameraServer.AdapterCapability capability = 5;
+  // .mvcam.AdapterCapability capability = 5;
   bool has_capability() const;
   void clear_capability();
   static const int kCapabilityFieldNumber = 5;
   private:
-  const ::CameraServer::AdapterCapability& _internal_capability() const;
+  const ::mvcam::AdapterCapability& _internal_capability() const;
   public:
-  const ::CameraServer::AdapterCapability& capability() const;
-  ::CameraServer::AdapterCapability* release_capability();
-  ::CameraServer::AdapterCapability* mutable_capability();
-  void set_allocated_capability(::CameraServer::AdapterCapability* capability);
+  const ::mvcam::AdapterCapability& capability() const;
+  ::mvcam::AdapterCapability* release_capability();
+  ::mvcam::AdapterCapability* mutable_capability();
+  void set_allocated_capability(::mvcam::AdapterCapability* capability);
 
   // bool in_use = 4;
   void clear_in_use();
@@ -392,21 +392,21 @@ class AdapterInfo : public ::google::protobuf::Message /* @@protoc_insertion_poi
   bool in_use() const;
   void set_in_use(bool value);
 
-  // @@protoc_insertion_point(class_scope:CameraServer.AdapterInfo)
+  // @@protoc_insertion_point(class_scope:mvcam.AdapterInfo)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   ::google::protobuf::internal::ArenaStringPtr name_;
   ::google::protobuf::internal::ArenaStringPtr version_;
   ::google::protobuf::internal::ArenaStringPtr description_;
-  ::CameraServer::AdapterCapability* capability_;
+  ::mvcam::AdapterCapability* capability_;
   bool in_use_;
   mutable ::google::protobuf::internal::CachedSize _cached_size_;
   friend struct ::protobuf_camera_5fdefinitions_2eproto::TableStruct;
 };
 // -------------------------------------------------------------------
 
-class AvailableAdaptersResponse : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:CameraServer.AvailableAdaptersResponse) */ {
+class AvailableAdaptersResponse : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mvcam.AvailableAdaptersResponse) */ {
  public:
   AvailableAdaptersResponse();
   virtual ~AvailableAdaptersResponse();
@@ -493,29 +493,29 @@ class AvailableAdaptersResponse : public ::google::protobuf::Message /* @@protoc
 
   // accessors -------------------------------------------------------
 
-  // repeated .CameraServer.AdapterInfo adapters = 1;
+  // repeated .mvcam.AdapterInfo adapters = 1;
   int adapters_size() const;
   void clear_adapters();
   static const int kAdaptersFieldNumber = 1;
-  ::CameraServer::AdapterInfo* mutable_adapters(int index);
-  ::google::protobuf::RepeatedPtrField< ::CameraServer::AdapterInfo >*
+  ::mvcam::AdapterInfo* mutable_adapters(int index);
+  ::google::protobuf::RepeatedPtrField< ::mvcam::AdapterInfo >*
       mutable_adapters();
-  const ::CameraServer::AdapterInfo& adapters(int index) const;
-  ::CameraServer::AdapterInfo* add_adapters();
-  const ::google::protobuf::RepeatedPtrField< ::CameraServer::AdapterInfo >&
+  const ::mvcam::AdapterInfo& adapters(int index) const;
+  ::mvcam::AdapterInfo* add_adapters();
+  const ::google::protobuf::RepeatedPtrField< ::mvcam::AdapterInfo >&
       adapters() const;
 
-  // @@protoc_insertion_point(class_scope:CameraServer.AvailableAdaptersResponse)
+  // @@protoc_insertion_point(class_scope:mvcam.AvailableAdaptersResponse)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::google::protobuf::RepeatedPtrField< ::CameraServer::AdapterInfo > adapters_;
+  ::google::protobuf::RepeatedPtrField< ::mvcam::AdapterInfo > adapters_;
   mutable ::google::protobuf::internal::CachedSize _cached_size_;
   friend struct ::protobuf_camera_5fdefinitions_2eproto::TableStruct;
 };
 // -------------------------------------------------------------------
 
-class AdapterRequest : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:CameraServer.AdapterRequest) */ {
+class AdapterRequest : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mvcam.AdapterRequest) */ {
  public:
   AdapterRequest();
   virtual ~AdapterRequest();
@@ -616,7 +616,7 @@ class AdapterRequest : public ::google::protobuf::Message /* @@protoc_insertion_
   ::std::string* release_name();
   void set_allocated_name(::std::string* name);
 
-  // @@protoc_insertion_point(class_scope:CameraServer.AdapterRequest)
+  // @@protoc_insertion_point(class_scope:mvcam.AdapterRequest)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
@@ -626,7 +626,7 @@ class AdapterRequest : public ::google::protobuf::Message /* @@protoc_insertion_
 };
 // -------------------------------------------------------------------
 
-class CameraCapability : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:CameraServer.CameraCapability) */ {
+class CameraCapability : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mvcam.CameraCapability) */ {
  public:
   CameraCapability();
   virtual ~CameraCapability();
@@ -791,7 +791,7 @@ class CameraCapability : public ::google::protobuf::Message /* @@protoc_insertio
   bool can_reset() const;
   void set_can_reset(bool value);
 
-  // @@protoc_insertion_point(class_scope:CameraServer.CameraCapability)
+  // @@protoc_insertion_point(class_scope:mvcam.CameraCapability)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
@@ -813,7 +813,7 @@ class CameraCapability : public ::google::protobuf::Message /* @@protoc_insertio
 };
 // -------------------------------------------------------------------
 
-class DeviceInfo : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:CameraServer.DeviceInfo) */ {
+class DeviceInfo : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mvcam.DeviceInfo) */ {
  public:
   DeviceInfo();
   virtual ~DeviceInfo();
@@ -970,31 +970,31 @@ class DeviceInfo : public ::google::protobuf::Message /* @@protoc_insertion_poin
   ::std::string* release_serial();
   void set_allocated_serial(::std::string* serial);
 
-  // .CameraServer.AdapterInfo adapter = 1;
+  // .mvcam.AdapterInfo adapter = 1;
   bool has_adapter() const;
   void clear_adapter();
   static const int kAdapterFieldNumber = 1;
   private:
-  const ::CameraServer::AdapterInfo& _internal_adapter() const;
+  const ::mvcam::AdapterInfo& _internal_adapter() const;
   public:
-  const ::CameraServer::AdapterInfo& adapter() const;
-  ::CameraServer::AdapterInfo* release_adapter();
-  ::CameraServer::AdapterInfo* mutable_adapter();
-  void set_allocated_adapter(::CameraServer::AdapterInfo* adapter);
+  const ::mvcam::AdapterInfo& adapter() const;
+  ::mvcam::AdapterInfo* release_adapter();
+  ::mvcam::AdapterInfo* mutable_adapter();
+  void set_allocated_adapter(::mvcam::AdapterInfo* adapter);
 
-  // .CameraServer.CameraCapability capabilities = 7;
+  // .mvcam.CameraCapability capabilities = 7;
   bool has_capabilities() const;
   void clear_capabilities();
   static const int kCapabilitiesFieldNumber = 7;
   private:
-  const ::CameraServer::CameraCapability& _internal_capabilities() const;
+  const ::mvcam::CameraCapability& _internal_capabilities() const;
   public:
-  const ::CameraServer::CameraCapability& capabilities() const;
-  ::CameraServer::CameraCapability* release_capabilities();
-  ::CameraServer::CameraCapability* mutable_capabilities();
-  void set_allocated_capabilities(::CameraServer::CameraCapability* capabilities);
+  const ::mvcam::CameraCapability& capabilities() const;
+  ::mvcam::CameraCapability* release_capabilities();
+  ::mvcam::CameraCapability* mutable_capabilities();
+  void set_allocated_capabilities(::mvcam::CameraCapability* capabilities);
 
-  // @@protoc_insertion_point(class_scope:CameraServer.DeviceInfo)
+  // @@protoc_insertion_point(class_scope:mvcam.DeviceInfo)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
@@ -1003,14 +1003,14 @@ class DeviceInfo : public ::google::protobuf::Message /* @@protoc_insertion_poin
   ::google::protobuf::internal::ArenaStringPtr model_;
   ::google::protobuf::internal::ArenaStringPtr version_;
   ::google::protobuf::internal::ArenaStringPtr serial_;
-  ::CameraServer::AdapterInfo* adapter_;
-  ::CameraServer::CameraCapability* capabilities_;
+  ::mvcam::AdapterInfo* adapter_;
+  ::mvcam::CameraCapability* capabilities_;
   mutable ::google::protobuf::internal::CachedSize _cached_size_;
   friend struct ::protobuf_camera_5fdefinitions_2eproto::TableStruct;
 };
 // -------------------------------------------------------------------
 
-class DeviceListResponse : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:CameraServer.DeviceListResponse) */ {
+class DeviceListResponse : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mvcam.DeviceListResponse) */ {
  public:
   DeviceListResponse();
   virtual ~DeviceListResponse();
@@ -1097,29 +1097,29 @@ class DeviceListResponse : public ::google::protobuf::Message /* @@protoc_insert
 
   // accessors -------------------------------------------------------
 
-  // repeated .CameraServer.DeviceInfo devices = 1;
+  // repeated .mvcam.DeviceInfo devices = 1;
   int devices_size() const;
   void clear_devices();
   static const int kDevicesFieldNumber = 1;
-  ::CameraServer::DeviceInfo* mutable_devices(int index);
-  ::google::protobuf::RepeatedPtrField< ::CameraServer::DeviceInfo >*
+  ::mvcam::DeviceInfo* mutable_devices(int index);
+  ::google::protobuf::RepeatedPtrField< ::mvcam::DeviceInfo >*
       mutable_devices();
-  const ::CameraServer::DeviceInfo& devices(int index) const;
-  ::CameraServer::DeviceInfo* add_devices();
-  const ::google::protobuf::RepeatedPtrField< ::CameraServer::DeviceInfo >&
+  const ::mvcam::DeviceInfo& devices(int index) const;
+  ::mvcam::DeviceInfo* add_devices();
+  const ::google::protobuf::RepeatedPtrField< ::mvcam::DeviceInfo >&
       devices() const;
 
-  // @@protoc_insertion_point(class_scope:CameraServer.DeviceListResponse)
+  // @@protoc_insertion_point(class_scope:mvcam.DeviceListResponse)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::google::protobuf::RepeatedPtrField< ::CameraServer::DeviceInfo > devices_;
+  ::google::protobuf::RepeatedPtrField< ::mvcam::DeviceInfo > devices_;
   mutable ::google::protobuf::internal::CachedSize _cached_size_;
   friend struct ::protobuf_camera_5fdefinitions_2eproto::TableStruct;
 };
 // -------------------------------------------------------------------
 
-class IdRequest : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:CameraServer.IdRequest) */ {
+class IdRequest : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mvcam.IdRequest) */ {
  public:
   IdRequest();
   virtual ~IdRequest();
@@ -1220,7 +1220,7 @@ class IdRequest : public ::google::protobuf::Message /* @@protoc_insertion_point
   ::std::string* release_id();
   void set_allocated_id(::std::string* id);
 
-  // @@protoc_insertion_point(class_scope:CameraServer.IdRequest)
+  // @@protoc_insertion_point(class_scope:mvcam.IdRequest)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
@@ -1230,7 +1230,7 @@ class IdRequest : public ::google::protobuf::Message /* @@protoc_insertion_point
 };
 // -------------------------------------------------------------------
 
-class Parameter : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:CameraServer.Parameter) */ {
+class Parameter : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mvcam.Parameter) */ {
  public:
   Parameter();
   virtual ~Parameter();
@@ -1329,7 +1329,7 @@ class Parameter : public ::google::protobuf::Message /* @@protoc_insertion_point
   bool should_update() const;
   void set_should_update(bool value);
 
-  // @@protoc_insertion_point(class_scope:CameraServer.Parameter)
+  // @@protoc_insertion_point(class_scope:mvcam.Parameter)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
@@ -1340,7 +1340,7 @@ class Parameter : public ::google::protobuf::Message /* @@protoc_insertion_point
 };
 // -------------------------------------------------------------------
 
-class Configuration : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:CameraServer.Configuration) */ {
+class Configuration : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mvcam.Configuration) */ {
  public:
   Configuration();
   virtual ~Configuration();
@@ -1427,81 +1427,81 @@ class Configuration : public ::google::protobuf::Message /* @@protoc_insertion_p
 
   // accessors -------------------------------------------------------
 
-  // .CameraServer.Parameter exposure = 1;
+  // .mvcam.Parameter exposure = 1;
   bool has_exposure() const;
   void clear_exposure();
   static const int kExposureFieldNumber = 1;
   private:
-  const ::CameraServer::Parameter& _internal_exposure() const;
+  const ::mvcam::Parameter& _internal_exposure() const;
   public:
-  const ::CameraServer::Parameter& exposure() const;
-  ::CameraServer::Parameter* release_exposure();
-  ::CameraServer::Parameter* mutable_exposure();
-  void set_allocated_exposure(::CameraServer::Parameter* exposure);
+  const ::mvcam::Parameter& exposure() const;
+  ::mvcam::Parameter* release_exposure();
+  ::mvcam::Parameter* mutable_exposure();
+  void set_allocated_exposure(::mvcam::Parameter* exposure);
 
-  // .CameraServer.Parameter frame_rate = 2;
+  // .mvcam.Parameter frame_rate = 2;
   bool has_frame_rate() const;
   void clear_frame_rate();
   static const int kFrameRateFieldNumber = 2;
   private:
-  const ::CameraServer::Parameter& _internal_frame_rate() const;
+  const ::mvcam::Parameter& _internal_frame_rate() const;
   public:
-  const ::CameraServer::Parameter& frame_rate() const;
-  ::CameraServer::Parameter* release_frame_rate();
-  ::CameraServer::Parameter* mutable_frame_rate();
-  void set_allocated_frame_rate(::CameraServer::Parameter* frame_rate);
+  const ::mvcam::Parameter& frame_rate() const;
+  ::mvcam::Parameter* release_frame_rate();
+  ::mvcam::Parameter* mutable_frame_rate();
+  void set_allocated_frame_rate(::mvcam::Parameter* frame_rate);
 
-  // .CameraServer.Parameter gain = 3;
+  // .mvcam.Parameter gain = 3;
   bool has_gain() const;
   void clear_gain();
   static const int kGainFieldNumber = 3;
   private:
-  const ::CameraServer::Parameter& _internal_gain() const;
+  const ::mvcam::Parameter& _internal_gain() const;
   public:
-  const ::CameraServer::Parameter& gain() const;
-  ::CameraServer::Parameter* release_gain();
-  ::CameraServer::Parameter* mutable_gain();
-  void set_allocated_gain(::CameraServer::Parameter* gain);
+  const ::mvcam::Parameter& gain() const;
+  ::mvcam::Parameter* release_gain();
+  ::mvcam::Parameter* mutable_gain();
+  void set_allocated_gain(::mvcam::Parameter* gain);
 
-  // .CameraServer.Parameter black_level = 4;
+  // .mvcam.Parameter black_level = 4;
   bool has_black_level() const;
   void clear_black_level();
   static const int kBlackLevelFieldNumber = 4;
   private:
-  const ::CameraServer::Parameter& _internal_black_level() const;
+  const ::mvcam::Parameter& _internal_black_level() const;
   public:
-  const ::CameraServer::Parameter& black_level() const;
-  ::CameraServer::Parameter* release_black_level();
-  ::CameraServer::Parameter* mutable_black_level();
-  void set_allocated_black_level(::CameraServer::Parameter* black_level);
+  const ::mvcam::Parameter& black_level() const;
+  ::mvcam::Parameter* release_black_level();
+  ::mvcam::Parameter* mutable_black_level();
+  void set_allocated_black_level(::mvcam::Parameter* black_level);
 
-  // .CameraServer.Parameter gamma = 5;
+  // .mvcam.Parameter gamma = 5;
   bool has_gamma() const;
   void clear_gamma();
   static const int kGammaFieldNumber = 5;
   private:
-  const ::CameraServer::Parameter& _internal_gamma() const;
+  const ::mvcam::Parameter& _internal_gamma() const;
   public:
-  const ::CameraServer::Parameter& gamma() const;
-  ::CameraServer::Parameter* release_gamma();
-  ::CameraServer::Parameter* mutable_gamma();
-  void set_allocated_gamma(::CameraServer::Parameter* gamma);
+  const ::mvcam::Parameter& gamma() const;
+  ::mvcam::Parameter* release_gamma();
+  ::mvcam::Parameter* mutable_gamma();
+  void set_allocated_gamma(::mvcam::Parameter* gamma);
 
-  // @@protoc_insertion_point(class_scope:CameraServer.Configuration)
+  // @@protoc_insertion_point(class_scope:mvcam.Configuration)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::CameraServer::Parameter* exposure_;
-  ::CameraServer::Parameter* frame_rate_;
-  ::CameraServer::Parameter* gain_;
-  ::CameraServer::Parameter* black_level_;
-  ::CameraServer::Parameter* gamma_;
+  ::mvcam::Parameter* exposure_;
+  ::mvcam::Parameter* frame_rate_;
+  ::mvcam::Parameter* gain_;
+  ::mvcam::Parameter* black_level_;
+  ::mvcam::Parameter* gamma_;
   mutable ::google::protobuf::internal::CachedSize _cached_size_;
   friend struct ::protobuf_camera_5fdefinitions_2eproto::TableStruct;
 };
 // -------------------------------------------------------------------
 
-class ConfigureRequest : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:CameraServer.ConfigureRequest) */ {
+class ConfigureRequest : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mvcam.ConfigureRequest) */ {
  public:
   ConfigureRequest();
   virtual ~ConfigureRequest();
@@ -1588,42 +1588,42 @@ class ConfigureRequest : public ::google::protobuf::Message /* @@protoc_insertio
 
   // accessors -------------------------------------------------------
 
-  // .CameraServer.IdRequest id = 1;
+  // .mvcam.IdRequest id = 1;
   bool has_id() const;
   void clear_id();
   static const int kIdFieldNumber = 1;
   private:
-  const ::CameraServer::IdRequest& _internal_id() const;
+  const ::mvcam::IdRequest& _internal_id() const;
   public:
-  const ::CameraServer::IdRequest& id() const;
-  ::CameraServer::IdRequest* release_id();
-  ::CameraServer::IdRequest* mutable_id();
-  void set_allocated_id(::CameraServer::IdRequest* id);
+  const ::mvcam::IdRequest& id() const;
+  ::mvcam::IdRequest* release_id();
+  ::mvcam::IdRequest* mutable_id();
+  void set_allocated_id(::mvcam::IdRequest* id);
 
-  // .CameraServer.Configuration config = 2;
+  // .mvcam.Configuration config = 2;
   bool has_config() const;
   void clear_config();
   static const int kConfigFieldNumber = 2;
   private:
-  const ::CameraServer::Configuration& _internal_config() const;
+  const ::mvcam::Configuration& _internal_config() const;
   public:
-  const ::CameraServer::Configuration& config() const;
-  ::CameraServer::Configuration* release_config();
-  ::CameraServer::Configuration* mutable_config();
-  void set_allocated_config(::CameraServer::Configuration* config);
+  const ::mvcam::Configuration& config() const;
+  ::mvcam::Configuration* release_config();
+  ::mvcam::Configuration* mutable_config();
+  void set_allocated_config(::mvcam::Configuration* config);
 
-  // @@protoc_insertion_point(class_scope:CameraServer.ConfigureRequest)
+  // @@protoc_insertion_point(class_scope:mvcam.ConfigureRequest)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::CameraServer::IdRequest* id_;
-  ::CameraServer::Configuration* config_;
+  ::mvcam::IdRequest* id_;
+  ::mvcam::Configuration* config_;
   mutable ::google::protobuf::internal::CachedSize _cached_size_;
   friend struct ::protobuf_camera_5fdefinitions_2eproto::TableStruct;
 };
 // -------------------------------------------------------------------
 
-class Frame : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:CameraServer.Frame) */ {
+class Frame : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mvcam.Frame) */ {
  public:
   Frame();
   virtual ~Frame();
@@ -1766,7 +1766,7 @@ class Frame : public ::google::protobuf::Message /* @@protoc_insertion_point(cla
   ::google::protobuf::uint32 pixel_format() const;
   void set_pixel_format(::google::protobuf::uint32 value);
 
-  // @@protoc_insertion_point(class_scope:CameraServer.Frame)
+  // @@protoc_insertion_point(class_scope:mvcam.Frame)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
@@ -1782,7 +1782,7 @@ class Frame : public ::google::protobuf::Message /* @@protoc_insertion_point(cla
 };
 // -------------------------------------------------------------------
 
-class FrameStream : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:CameraServer.FrameStream) */ {
+class FrameStream : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mvcam.FrameStream) */ {
  public:
   FrameStream();
   virtual ~FrameStream();
@@ -1869,29 +1869,29 @@ class FrameStream : public ::google::protobuf::Message /* @@protoc_insertion_poi
 
   // accessors -------------------------------------------------------
 
-  // repeated .CameraServer.Frame frames = 1;
+  // repeated .mvcam.Frame frames = 1;
   int frames_size() const;
   void clear_frames();
   static const int kFramesFieldNumber = 1;
-  ::CameraServer::Frame* mutable_frames(int index);
-  ::google::protobuf::RepeatedPtrField< ::CameraServer::Frame >*
+  ::mvcam::Frame* mutable_frames(int index);
+  ::google::protobuf::RepeatedPtrField< ::mvcam::Frame >*
       mutable_frames();
-  const ::CameraServer::Frame& frames(int index) const;
-  ::CameraServer::Frame* add_frames();
-  const ::google::protobuf::RepeatedPtrField< ::CameraServer::Frame >&
+  const ::mvcam::Frame& frames(int index) const;
+  ::mvcam::Frame* add_frames();
+  const ::google::protobuf::RepeatedPtrField< ::mvcam::Frame >&
       frames() const;
 
-  // @@protoc_insertion_point(class_scope:CameraServer.FrameStream)
+  // @@protoc_insertion_point(class_scope:mvcam.FrameStream)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::google::protobuf::RepeatedPtrField< ::CameraServer::Frame > frames_;
+  ::google::protobuf::RepeatedPtrField< ::mvcam::Frame > frames_;
   mutable ::google::protobuf::internal::CachedSize _cached_size_;
   friend struct ::protobuf_camera_5fdefinitions_2eproto::TableStruct;
 };
 // -------------------------------------------------------------------
 
-class StreamingRequest : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:CameraServer.StreamingRequest) */ {
+class StreamingRequest : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mvcam.StreamingRequest) */ {
  public:
   StreamingRequest();
   virtual ~StreamingRequest();
@@ -1978,17 +1978,17 @@ class StreamingRequest : public ::google::protobuf::Message /* @@protoc_insertio
 
   // accessors -------------------------------------------------------
 
-  // .CameraServer.IdRequest id = 1;
+  // .mvcam.IdRequest id = 1;
   bool has_id() const;
   void clear_id();
   static const int kIdFieldNumber = 1;
   private:
-  const ::CameraServer::IdRequest& _internal_id() const;
+  const ::mvcam::IdRequest& _internal_id() const;
   public:
-  const ::CameraServer::IdRequest& id() const;
-  ::CameraServer::IdRequest* release_id();
-  ::CameraServer::IdRequest* mutable_id();
-  void set_allocated_id(::CameraServer::IdRequest* id);
+  const ::mvcam::IdRequest& id() const;
+  ::mvcam::IdRequest* release_id();
+  ::mvcam::IdRequest* mutable_id();
+  void set_allocated_id(::mvcam::IdRequest* id);
 
   // uint64 number_frames = 2;
   void clear_number_frames();
@@ -2002,11 +2002,11 @@ class StreamingRequest : public ::google::protobuf::Message /* @@protoc_insertio
   ::google::protobuf::uint64 batch_size() const;
   void set_batch_size(::google::protobuf::uint64 value);
 
-  // @@protoc_insertion_point(class_scope:CameraServer.StreamingRequest)
+  // @@protoc_insertion_point(class_scope:mvcam.StreamingRequest)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::CameraServer::IdRequest* id_;
+  ::mvcam::IdRequest* id_;
   ::google::protobuf::uint64 number_frames_;
   ::google::protobuf::uint64 batch_size_;
   mutable ::google::protobuf::internal::CachedSize _cached_size_;
@@ -2014,7 +2014,7 @@ class StreamingRequest : public ::google::protobuf::Message /* @@protoc_insertio
 };
 // -------------------------------------------------------------------
 
-class Status : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:CameraServer.Status) */ {
+class Status : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mvcam.Status) */ {
  public:
   Status();
   virtual ~Status();
@@ -2119,7 +2119,7 @@ class Status : public ::google::protobuf::Message /* @@protoc_insertion_point(cl
   bool capturing() const;
   void set_capturing(bool value);
 
-  // @@protoc_insertion_point(class_scope:CameraServer.Status)
+  // @@protoc_insertion_point(class_scope:mvcam.Status)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
@@ -2131,7 +2131,7 @@ class Status : public ::google::protobuf::Message /* @@protoc_insertion_point(cl
 };
 // -------------------------------------------------------------------
 
-class DeviceControlRequest : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:CameraServer.DeviceControlRequest) */ {
+class DeviceControlRequest : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mvcam.DeviceControlRequest) */ {
  public:
   DeviceControlRequest();
   virtual ~DeviceControlRequest();
@@ -2218,29 +2218,29 @@ class DeviceControlRequest : public ::google::protobuf::Message /* @@protoc_inse
 
   // accessors -------------------------------------------------------
 
-  // .CameraServer.IdRequest id = 1;
+  // .mvcam.IdRequest id = 1;
   bool has_id() const;
   void clear_id();
   static const int kIdFieldNumber = 1;
   private:
-  const ::CameraServer::IdRequest& _internal_id() const;
+  const ::mvcam::IdRequest& _internal_id() const;
   public:
-  const ::CameraServer::IdRequest& id() const;
-  ::CameraServer::IdRequest* release_id();
-  ::CameraServer::IdRequest* mutable_id();
-  void set_allocated_id(::CameraServer::IdRequest* id);
+  const ::mvcam::IdRequest& id() const;
+  ::mvcam::IdRequest* release_id();
+  ::mvcam::IdRequest* mutable_id();
+  void set_allocated_id(::mvcam::IdRequest* id);
 
-  // .CameraServer.DeviceControlAction action = 2;
+  // .mvcam.DeviceControlAction action = 2;
   void clear_action();
   static const int kActionFieldNumber = 2;
-  ::CameraServer::DeviceControlAction action() const;
-  void set_action(::CameraServer::DeviceControlAction value);
+  ::mvcam::DeviceControlAction action() const;
+  void set_action(::mvcam::DeviceControlAction value);
 
-  // @@protoc_insertion_point(class_scope:CameraServer.DeviceControlRequest)
+  // @@protoc_insertion_point(class_scope:mvcam.DeviceControlRequest)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::CameraServer::IdRequest* id_;
+  ::mvcam::IdRequest* id_;
   int action_;
   mutable ::google::protobuf::internal::CachedSize _cached_size_;
   friend struct ::protobuf_camera_5fdefinitions_2eproto::TableStruct;
@@ -2261,13 +2261,13 @@ inline void AdapterCapability::clear_should_shut_down() {
   should_shut_down_ = false;
 }
 inline bool AdapterCapability::should_shut_down() const {
-  // @@protoc_insertion_point(field_get:CameraServer.AdapterCapability.should_shut_down)
+  // @@protoc_insertion_point(field_get:mvcam.AdapterCapability.should_shut_down)
   return should_shut_down_;
 }
 inline void AdapterCapability::set_should_shut_down(bool value) {
   
   should_shut_down_ = value;
-  // @@protoc_insertion_point(field_set:CameraServer.AdapterCapability.should_shut_down)
+  // @@protoc_insertion_point(field_set:mvcam.AdapterCapability.should_shut_down)
 }
 
 // -------------------------------------------------------------------
@@ -2279,41 +2279,41 @@ inline void AdapterInfo::clear_name() {
   name_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline const ::std::string& AdapterInfo::name() const {
-  // @@protoc_insertion_point(field_get:CameraServer.AdapterInfo.name)
+  // @@protoc_insertion_point(field_get:mvcam.AdapterInfo.name)
   return name_.GetNoArena();
 }
 inline void AdapterInfo::set_name(const ::std::string& value) {
   
   name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:CameraServer.AdapterInfo.name)
+  // @@protoc_insertion_point(field_set:mvcam.AdapterInfo.name)
 }
 #if LANG_CXX11
 inline void AdapterInfo::set_name(::std::string&& value) {
   
   name_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:CameraServer.AdapterInfo.name)
+  // @@protoc_insertion_point(field_set_rvalue:mvcam.AdapterInfo.name)
 }
 #endif
 inline void AdapterInfo::set_name(const char* value) {
   GOOGLE_DCHECK(value != NULL);
   
   name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:CameraServer.AdapterInfo.name)
+  // @@protoc_insertion_point(field_set_char:mvcam.AdapterInfo.name)
 }
 inline void AdapterInfo::set_name(const char* value, size_t size) {
   
   name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:CameraServer.AdapterInfo.name)
+  // @@protoc_insertion_point(field_set_pointer:mvcam.AdapterInfo.name)
 }
 inline ::std::string* AdapterInfo::mutable_name() {
   
-  // @@protoc_insertion_point(field_mutable:CameraServer.AdapterInfo.name)
+  // @@protoc_insertion_point(field_mutable:mvcam.AdapterInfo.name)
   return name_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* AdapterInfo::release_name() {
-  // @@protoc_insertion_point(field_release:CameraServer.AdapterInfo.name)
+  // @@protoc_insertion_point(field_release:mvcam.AdapterInfo.name)
   
   return name_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -2324,7 +2324,7 @@ inline void AdapterInfo::set_allocated_name(::std::string* name) {
     
   }
   name_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), name);
-  // @@protoc_insertion_point(field_set_allocated:CameraServer.AdapterInfo.name)
+  // @@protoc_insertion_point(field_set_allocated:mvcam.AdapterInfo.name)
 }
 
 // string version = 2;
@@ -2332,41 +2332,41 @@ inline void AdapterInfo::clear_version() {
   version_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline const ::std::string& AdapterInfo::version() const {
-  // @@protoc_insertion_point(field_get:CameraServer.AdapterInfo.version)
+  // @@protoc_insertion_point(field_get:mvcam.AdapterInfo.version)
   return version_.GetNoArena();
 }
 inline void AdapterInfo::set_version(const ::std::string& value) {
   
   version_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:CameraServer.AdapterInfo.version)
+  // @@protoc_insertion_point(field_set:mvcam.AdapterInfo.version)
 }
 #if LANG_CXX11
 inline void AdapterInfo::set_version(::std::string&& value) {
   
   version_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:CameraServer.AdapterInfo.version)
+  // @@protoc_insertion_point(field_set_rvalue:mvcam.AdapterInfo.version)
 }
 #endif
 inline void AdapterInfo::set_version(const char* value) {
   GOOGLE_DCHECK(value != NULL);
   
   version_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:CameraServer.AdapterInfo.version)
+  // @@protoc_insertion_point(field_set_char:mvcam.AdapterInfo.version)
 }
 inline void AdapterInfo::set_version(const char* value, size_t size) {
   
   version_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:CameraServer.AdapterInfo.version)
+  // @@protoc_insertion_point(field_set_pointer:mvcam.AdapterInfo.version)
 }
 inline ::std::string* AdapterInfo::mutable_version() {
   
-  // @@protoc_insertion_point(field_mutable:CameraServer.AdapterInfo.version)
+  // @@protoc_insertion_point(field_mutable:mvcam.AdapterInfo.version)
   return version_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* AdapterInfo::release_version() {
-  // @@protoc_insertion_point(field_release:CameraServer.AdapterInfo.version)
+  // @@protoc_insertion_point(field_release:mvcam.AdapterInfo.version)
   
   return version_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -2377,7 +2377,7 @@ inline void AdapterInfo::set_allocated_version(::std::string* version) {
     
   }
   version_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), version);
-  // @@protoc_insertion_point(field_set_allocated:CameraServer.AdapterInfo.version)
+  // @@protoc_insertion_point(field_set_allocated:mvcam.AdapterInfo.version)
 }
 
 // string description = 3;
@@ -2385,41 +2385,41 @@ inline void AdapterInfo::clear_description() {
   description_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline const ::std::string& AdapterInfo::description() const {
-  // @@protoc_insertion_point(field_get:CameraServer.AdapterInfo.description)
+  // @@protoc_insertion_point(field_get:mvcam.AdapterInfo.description)
   return description_.GetNoArena();
 }
 inline void AdapterInfo::set_description(const ::std::string& value) {
   
   description_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:CameraServer.AdapterInfo.description)
+  // @@protoc_insertion_point(field_set:mvcam.AdapterInfo.description)
 }
 #if LANG_CXX11
 inline void AdapterInfo::set_description(::std::string&& value) {
   
   description_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:CameraServer.AdapterInfo.description)
+  // @@protoc_insertion_point(field_set_rvalue:mvcam.AdapterInfo.description)
 }
 #endif
 inline void AdapterInfo::set_description(const char* value) {
   GOOGLE_DCHECK(value != NULL);
   
   description_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:CameraServer.AdapterInfo.description)
+  // @@protoc_insertion_point(field_set_char:mvcam.AdapterInfo.description)
 }
 inline void AdapterInfo::set_description(const char* value, size_t size) {
   
   description_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:CameraServer.AdapterInfo.description)
+  // @@protoc_insertion_point(field_set_pointer:mvcam.AdapterInfo.description)
 }
 inline ::std::string* AdapterInfo::mutable_description() {
   
-  // @@protoc_insertion_point(field_mutable:CameraServer.AdapterInfo.description)
+  // @@protoc_insertion_point(field_mutable:mvcam.AdapterInfo.description)
   return description_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* AdapterInfo::release_description() {
-  // @@protoc_insertion_point(field_release:CameraServer.AdapterInfo.description)
+  // @@protoc_insertion_point(field_release:mvcam.AdapterInfo.description)
   
   return description_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -2430,7 +2430,7 @@ inline void AdapterInfo::set_allocated_description(::std::string* description) {
     
   }
   description_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), description);
-  // @@protoc_insertion_point(field_set_allocated:CameraServer.AdapterInfo.description)
+  // @@protoc_insertion_point(field_set_allocated:mvcam.AdapterInfo.description)
 }
 
 // bool in_use = 4;
@@ -2438,16 +2438,16 @@ inline void AdapterInfo::clear_in_use() {
   in_use_ = false;
 }
 inline bool AdapterInfo::in_use() const {
-  // @@protoc_insertion_point(field_get:CameraServer.AdapterInfo.in_use)
+  // @@protoc_insertion_point(field_get:mvcam.AdapterInfo.in_use)
   return in_use_;
 }
 inline void AdapterInfo::set_in_use(bool value) {
   
   in_use_ = value;
-  // @@protoc_insertion_point(field_set:CameraServer.AdapterInfo.in_use)
+  // @@protoc_insertion_point(field_set:mvcam.AdapterInfo.in_use)
 }
 
-// .CameraServer.AdapterCapability capability = 5;
+// .mvcam.AdapterCapability capability = 5;
 inline bool AdapterInfo::has_capability() const {
   return this != internal_default_instance() && capability_ != NULL;
 }
@@ -2457,32 +2457,32 @@ inline void AdapterInfo::clear_capability() {
   }
   capability_ = NULL;
 }
-inline const ::CameraServer::AdapterCapability& AdapterInfo::_internal_capability() const {
+inline const ::mvcam::AdapterCapability& AdapterInfo::_internal_capability() const {
   return *capability_;
 }
-inline const ::CameraServer::AdapterCapability& AdapterInfo::capability() const {
-  const ::CameraServer::AdapterCapability* p = capability_;
-  // @@protoc_insertion_point(field_get:CameraServer.AdapterInfo.capability)
-  return p != NULL ? *p : *reinterpret_cast<const ::CameraServer::AdapterCapability*>(
-      &::CameraServer::_AdapterCapability_default_instance_);
+inline const ::mvcam::AdapterCapability& AdapterInfo::capability() const {
+  const ::mvcam::AdapterCapability* p = capability_;
+  // @@protoc_insertion_point(field_get:mvcam.AdapterInfo.capability)
+  return p != NULL ? *p : *reinterpret_cast<const ::mvcam::AdapterCapability*>(
+      &::mvcam::_AdapterCapability_default_instance_);
 }
-inline ::CameraServer::AdapterCapability* AdapterInfo::release_capability() {
-  // @@protoc_insertion_point(field_release:CameraServer.AdapterInfo.capability)
+inline ::mvcam::AdapterCapability* AdapterInfo::release_capability() {
+  // @@protoc_insertion_point(field_release:mvcam.AdapterInfo.capability)
   
-  ::CameraServer::AdapterCapability* temp = capability_;
+  ::mvcam::AdapterCapability* temp = capability_;
   capability_ = NULL;
   return temp;
 }
-inline ::CameraServer::AdapterCapability* AdapterInfo::mutable_capability() {
+inline ::mvcam::AdapterCapability* AdapterInfo::mutable_capability() {
   
   if (capability_ == NULL) {
-    auto* p = CreateMaybeMessage<::CameraServer::AdapterCapability>(GetArenaNoVirtual());
+    auto* p = CreateMaybeMessage<::mvcam::AdapterCapability>(GetArenaNoVirtual());
     capability_ = p;
   }
-  // @@protoc_insertion_point(field_mutable:CameraServer.AdapterInfo.capability)
+  // @@protoc_insertion_point(field_mutable:mvcam.AdapterInfo.capability)
   return capability_;
 }
-inline void AdapterInfo::set_allocated_capability(::CameraServer::AdapterCapability* capability) {
+inline void AdapterInfo::set_allocated_capability(::mvcam::AdapterCapability* capability) {
   ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
   if (message_arena == NULL) {
     delete capability_;
@@ -2498,40 +2498,40 @@ inline void AdapterInfo::set_allocated_capability(::CameraServer::AdapterCapabil
     
   }
   capability_ = capability;
-  // @@protoc_insertion_point(field_set_allocated:CameraServer.AdapterInfo.capability)
+  // @@protoc_insertion_point(field_set_allocated:mvcam.AdapterInfo.capability)
 }
 
 // -------------------------------------------------------------------
 
 // AvailableAdaptersResponse
 
-// repeated .CameraServer.AdapterInfo adapters = 1;
+// repeated .mvcam.AdapterInfo adapters = 1;
 inline int AvailableAdaptersResponse::adapters_size() const {
   return adapters_.size();
 }
 inline void AvailableAdaptersResponse::clear_adapters() {
   adapters_.Clear();
 }
-inline ::CameraServer::AdapterInfo* AvailableAdaptersResponse::mutable_adapters(int index) {
-  // @@protoc_insertion_point(field_mutable:CameraServer.AvailableAdaptersResponse.adapters)
+inline ::mvcam::AdapterInfo* AvailableAdaptersResponse::mutable_adapters(int index) {
+  // @@protoc_insertion_point(field_mutable:mvcam.AvailableAdaptersResponse.adapters)
   return adapters_.Mutable(index);
 }
-inline ::google::protobuf::RepeatedPtrField< ::CameraServer::AdapterInfo >*
+inline ::google::protobuf::RepeatedPtrField< ::mvcam::AdapterInfo >*
 AvailableAdaptersResponse::mutable_adapters() {
-  // @@protoc_insertion_point(field_mutable_list:CameraServer.AvailableAdaptersResponse.adapters)
+  // @@protoc_insertion_point(field_mutable_list:mvcam.AvailableAdaptersResponse.adapters)
   return &adapters_;
 }
-inline const ::CameraServer::AdapterInfo& AvailableAdaptersResponse::adapters(int index) const {
-  // @@protoc_insertion_point(field_get:CameraServer.AvailableAdaptersResponse.adapters)
+inline const ::mvcam::AdapterInfo& AvailableAdaptersResponse::adapters(int index) const {
+  // @@protoc_insertion_point(field_get:mvcam.AvailableAdaptersResponse.adapters)
   return adapters_.Get(index);
 }
-inline ::CameraServer::AdapterInfo* AvailableAdaptersResponse::add_adapters() {
-  // @@protoc_insertion_point(field_add:CameraServer.AvailableAdaptersResponse.adapters)
+inline ::mvcam::AdapterInfo* AvailableAdaptersResponse::add_adapters() {
+  // @@protoc_insertion_point(field_add:mvcam.AvailableAdaptersResponse.adapters)
   return adapters_.Add();
 }
-inline const ::google::protobuf::RepeatedPtrField< ::CameraServer::AdapterInfo >&
+inline const ::google::protobuf::RepeatedPtrField< ::mvcam::AdapterInfo >&
 AvailableAdaptersResponse::adapters() const {
-  // @@protoc_insertion_point(field_list:CameraServer.AvailableAdaptersResponse.adapters)
+  // @@protoc_insertion_point(field_list:mvcam.AvailableAdaptersResponse.adapters)
   return adapters_;
 }
 
@@ -2544,41 +2544,41 @@ inline void AdapterRequest::clear_name() {
   name_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline const ::std::string& AdapterRequest::name() const {
-  // @@protoc_insertion_point(field_get:CameraServer.AdapterRequest.name)
+  // @@protoc_insertion_point(field_get:mvcam.AdapterRequest.name)
   return name_.GetNoArena();
 }
 inline void AdapterRequest::set_name(const ::std::string& value) {
   
   name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:CameraServer.AdapterRequest.name)
+  // @@protoc_insertion_point(field_set:mvcam.AdapterRequest.name)
 }
 #if LANG_CXX11
 inline void AdapterRequest::set_name(::std::string&& value) {
   
   name_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:CameraServer.AdapterRequest.name)
+  // @@protoc_insertion_point(field_set_rvalue:mvcam.AdapterRequest.name)
 }
 #endif
 inline void AdapterRequest::set_name(const char* value) {
   GOOGLE_DCHECK(value != NULL);
   
   name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:CameraServer.AdapterRequest.name)
+  // @@protoc_insertion_point(field_set_char:mvcam.AdapterRequest.name)
 }
 inline void AdapterRequest::set_name(const char* value, size_t size) {
   
   name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:CameraServer.AdapterRequest.name)
+  // @@protoc_insertion_point(field_set_pointer:mvcam.AdapterRequest.name)
 }
 inline ::std::string* AdapterRequest::mutable_name() {
   
-  // @@protoc_insertion_point(field_mutable:CameraServer.AdapterRequest.name)
+  // @@protoc_insertion_point(field_mutable:mvcam.AdapterRequest.name)
   return name_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* AdapterRequest::release_name() {
-  // @@protoc_insertion_point(field_release:CameraServer.AdapterRequest.name)
+  // @@protoc_insertion_point(field_release:mvcam.AdapterRequest.name)
   
   return name_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -2589,7 +2589,7 @@ inline void AdapterRequest::set_allocated_name(::std::string* name) {
     
   }
   name_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), name);
-  // @@protoc_insertion_point(field_set_allocated:CameraServer.AdapterRequest.name)
+  // @@protoc_insertion_point(field_set_allocated:mvcam.AdapterRequest.name)
 }
 
 // -------------------------------------------------------------------
@@ -2601,13 +2601,13 @@ inline void CameraCapability::clear_can_shutdown() {
   can_shutdown_ = false;
 }
 inline bool CameraCapability::can_shutdown() const {
-  // @@protoc_insertion_point(field_get:CameraServer.CameraCapability.can_shutdown)
+  // @@protoc_insertion_point(field_get:mvcam.CameraCapability.can_shutdown)
   return can_shutdown_;
 }
 inline void CameraCapability::set_can_shutdown(bool value) {
   
   can_shutdown_ = value;
-  // @@protoc_insertion_point(field_set:CameraServer.CameraCapability.can_shutdown)
+  // @@protoc_insertion_point(field_set:mvcam.CameraCapability.can_shutdown)
 }
 
 // bool can_open = 2;
@@ -2615,13 +2615,13 @@ inline void CameraCapability::clear_can_open() {
   can_open_ = false;
 }
 inline bool CameraCapability::can_open() const {
-  // @@protoc_insertion_point(field_get:CameraServer.CameraCapability.can_open)
+  // @@protoc_insertion_point(field_get:mvcam.CameraCapability.can_open)
   return can_open_;
 }
 inline void CameraCapability::set_can_open(bool value) {
   
   can_open_ = value;
-  // @@protoc_insertion_point(field_set:CameraServer.CameraCapability.can_open)
+  // @@protoc_insertion_point(field_set:mvcam.CameraCapability.can_open)
 }
 
 // bool can_capture_async = 3;
@@ -2629,13 +2629,13 @@ inline void CameraCapability::clear_can_capture_async() {
   can_capture_async_ = false;
 }
 inline bool CameraCapability::can_capture_async() const {
-  // @@protoc_insertion_point(field_get:CameraServer.CameraCapability.can_capture_async)
+  // @@protoc_insertion_point(field_get:mvcam.CameraCapability.can_capture_async)
   return can_capture_async_;
 }
 inline void CameraCapability::set_can_capture_async(bool value) {
   
   can_capture_async_ = value;
-  // @@protoc_insertion_point(field_set:CameraServer.CameraCapability.can_capture_async)
+  // @@protoc_insertion_point(field_set:mvcam.CameraCapability.can_capture_async)
 }
 
 // bool can_capture = 4;
@@ -2643,13 +2643,13 @@ inline void CameraCapability::clear_can_capture() {
   can_capture_ = false;
 }
 inline bool CameraCapability::can_capture() const {
-  // @@protoc_insertion_point(field_get:CameraServer.CameraCapability.can_capture)
+  // @@protoc_insertion_point(field_get:mvcam.CameraCapability.can_capture)
   return can_capture_;
 }
 inline void CameraCapability::set_can_capture(bool value) {
   
   can_capture_ = value;
-  // @@protoc_insertion_point(field_set:CameraServer.CameraCapability.can_capture)
+  // @@protoc_insertion_point(field_set:mvcam.CameraCapability.can_capture)
 }
 
 // bool can_adjust_exposure = 5;
@@ -2657,13 +2657,13 @@ inline void CameraCapability::clear_can_adjust_exposure() {
   can_adjust_exposure_ = false;
 }
 inline bool CameraCapability::can_adjust_exposure() const {
-  // @@protoc_insertion_point(field_get:CameraServer.CameraCapability.can_adjust_exposure)
+  // @@protoc_insertion_point(field_get:mvcam.CameraCapability.can_adjust_exposure)
   return can_adjust_exposure_;
 }
 inline void CameraCapability::set_can_adjust_exposure(bool value) {
   
   can_adjust_exposure_ = value;
-  // @@protoc_insertion_point(field_set:CameraServer.CameraCapability.can_adjust_exposure)
+  // @@protoc_insertion_point(field_set:mvcam.CameraCapability.can_adjust_exposure)
 }
 
 // bool can_adjust_gain = 6;
@@ -2671,13 +2671,13 @@ inline void CameraCapability::clear_can_adjust_gain() {
   can_adjust_gain_ = false;
 }
 inline bool CameraCapability::can_adjust_gain() const {
-  // @@protoc_insertion_point(field_get:CameraServer.CameraCapability.can_adjust_gain)
+  // @@protoc_insertion_point(field_get:mvcam.CameraCapability.can_adjust_gain)
   return can_adjust_gain_;
 }
 inline void CameraCapability::set_can_adjust_gain(bool value) {
   
   can_adjust_gain_ = value;
-  // @@protoc_insertion_point(field_set:CameraServer.CameraCapability.can_adjust_gain)
+  // @@protoc_insertion_point(field_set:mvcam.CameraCapability.can_adjust_gain)
 }
 
 // bool can_adjust_gamma = 7;
@@ -2685,13 +2685,13 @@ inline void CameraCapability::clear_can_adjust_gamma() {
   can_adjust_gamma_ = false;
 }
 inline bool CameraCapability::can_adjust_gamma() const {
-  // @@protoc_insertion_point(field_get:CameraServer.CameraCapability.can_adjust_gamma)
+  // @@protoc_insertion_point(field_get:mvcam.CameraCapability.can_adjust_gamma)
   return can_adjust_gamma_;
 }
 inline void CameraCapability::set_can_adjust_gamma(bool value) {
   
   can_adjust_gamma_ = value;
-  // @@protoc_insertion_point(field_set:CameraServer.CameraCapability.can_adjust_gamma)
+  // @@protoc_insertion_point(field_set:mvcam.CameraCapability.can_adjust_gamma)
 }
 
 // bool can_adjust_black_level = 8;
@@ -2699,13 +2699,13 @@ inline void CameraCapability::clear_can_adjust_black_level() {
   can_adjust_black_level_ = false;
 }
 inline bool CameraCapability::can_adjust_black_level() const {
-  // @@protoc_insertion_point(field_get:CameraServer.CameraCapability.can_adjust_black_level)
+  // @@protoc_insertion_point(field_get:mvcam.CameraCapability.can_adjust_black_level)
   return can_adjust_black_level_;
 }
 inline void CameraCapability::set_can_adjust_black_level(bool value) {
   
   can_adjust_black_level_ = value;
-  // @@protoc_insertion_point(field_set:CameraServer.CameraCapability.can_adjust_black_level)
+  // @@protoc_insertion_point(field_set:mvcam.CameraCapability.can_adjust_black_level)
 }
 
 // bool can_adjust_frame_rate = 9;
@@ -2713,13 +2713,13 @@ inline void CameraCapability::clear_can_adjust_frame_rate() {
   can_adjust_frame_rate_ = false;
 }
 inline bool CameraCapability::can_adjust_frame_rate() const {
-  // @@protoc_insertion_point(field_get:CameraServer.CameraCapability.can_adjust_frame_rate)
+  // @@protoc_insertion_point(field_get:mvcam.CameraCapability.can_adjust_frame_rate)
   return can_adjust_frame_rate_;
 }
 inline void CameraCapability::set_can_adjust_frame_rate(bool value) {
   
   can_adjust_frame_rate_ = value;
-  // @@protoc_insertion_point(field_set:CameraServer.CameraCapability.can_adjust_frame_rate)
+  // @@protoc_insertion_point(field_set:mvcam.CameraCapability.can_adjust_frame_rate)
 }
 
 // bool can_set_frame_number = 10;
@@ -2727,13 +2727,13 @@ inline void CameraCapability::clear_can_set_frame_number() {
   can_set_frame_number_ = false;
 }
 inline bool CameraCapability::can_set_frame_number() const {
-  // @@protoc_insertion_point(field_get:CameraServer.CameraCapability.can_set_frame_number)
+  // @@protoc_insertion_point(field_get:mvcam.CameraCapability.can_set_frame_number)
   return can_set_frame_number_;
 }
 inline void CameraCapability::set_can_set_frame_number(bool value) {
   
   can_set_frame_number_ = value;
-  // @@protoc_insertion_point(field_set:CameraServer.CameraCapability.can_set_frame_number)
+  // @@protoc_insertion_point(field_set:mvcam.CameraCapability.can_set_frame_number)
 }
 
 // bool can_get_temperature = 11;
@@ -2741,13 +2741,13 @@ inline void CameraCapability::clear_can_get_temperature() {
   can_get_temperature_ = false;
 }
 inline bool CameraCapability::can_get_temperature() const {
-  // @@protoc_insertion_point(field_get:CameraServer.CameraCapability.can_get_temperature)
+  // @@protoc_insertion_point(field_get:mvcam.CameraCapability.can_get_temperature)
   return can_get_temperature_;
 }
 inline void CameraCapability::set_can_get_temperature(bool value) {
   
   can_get_temperature_ = value;
-  // @@protoc_insertion_point(field_set:CameraServer.CameraCapability.can_get_temperature)
+  // @@protoc_insertion_point(field_set:mvcam.CameraCapability.can_get_temperature)
 }
 
 // bool can_suspend = 12;
@@ -2755,13 +2755,13 @@ inline void CameraCapability::clear_can_suspend() {
   can_suspend_ = false;
 }
 inline bool CameraCapability::can_suspend() const {
-  // @@protoc_insertion_point(field_get:CameraServer.CameraCapability.can_suspend)
+  // @@protoc_insertion_point(field_get:mvcam.CameraCapability.can_suspend)
   return can_suspend_;
 }
 inline void CameraCapability::set_can_suspend(bool value) {
   
   can_suspend_ = value;
-  // @@protoc_insertion_point(field_set:CameraServer.CameraCapability.can_suspend)
+  // @@protoc_insertion_point(field_set:mvcam.CameraCapability.can_suspend)
 }
 
 // bool can_reset = 13;
@@ -2769,20 +2769,20 @@ inline void CameraCapability::clear_can_reset() {
   can_reset_ = false;
 }
 inline bool CameraCapability::can_reset() const {
-  // @@protoc_insertion_point(field_get:CameraServer.CameraCapability.can_reset)
+  // @@protoc_insertion_point(field_get:mvcam.CameraCapability.can_reset)
   return can_reset_;
 }
 inline void CameraCapability::set_can_reset(bool value) {
   
   can_reset_ = value;
-  // @@protoc_insertion_point(field_set:CameraServer.CameraCapability.can_reset)
+  // @@protoc_insertion_point(field_set:mvcam.CameraCapability.can_reset)
 }
 
 // -------------------------------------------------------------------
 
 // DeviceInfo
 
-// .CameraServer.AdapterInfo adapter = 1;
+// .mvcam.AdapterInfo adapter = 1;
 inline bool DeviceInfo::has_adapter() const {
   return this != internal_default_instance() && adapter_ != NULL;
 }
@@ -2792,32 +2792,32 @@ inline void DeviceInfo::clear_adapter() {
   }
   adapter_ = NULL;
 }
-inline const ::CameraServer::AdapterInfo& DeviceInfo::_internal_adapter() const {
+inline const ::mvcam::AdapterInfo& DeviceInfo::_internal_adapter() const {
   return *adapter_;
 }
-inline const ::CameraServer::AdapterInfo& DeviceInfo::adapter() const {
-  const ::CameraServer::AdapterInfo* p = adapter_;
-  // @@protoc_insertion_point(field_get:CameraServer.DeviceInfo.adapter)
-  return p != NULL ? *p : *reinterpret_cast<const ::CameraServer::AdapterInfo*>(
-      &::CameraServer::_AdapterInfo_default_instance_);
+inline const ::mvcam::AdapterInfo& DeviceInfo::adapter() const {
+  const ::mvcam::AdapterInfo* p = adapter_;
+  // @@protoc_insertion_point(field_get:mvcam.DeviceInfo.adapter)
+  return p != NULL ? *p : *reinterpret_cast<const ::mvcam::AdapterInfo*>(
+      &::mvcam::_AdapterInfo_default_instance_);
 }
-inline ::CameraServer::AdapterInfo* DeviceInfo::release_adapter() {
-  // @@protoc_insertion_point(field_release:CameraServer.DeviceInfo.adapter)
+inline ::mvcam::AdapterInfo* DeviceInfo::release_adapter() {
+  // @@protoc_insertion_point(field_release:mvcam.DeviceInfo.adapter)
   
-  ::CameraServer::AdapterInfo* temp = adapter_;
+  ::mvcam::AdapterInfo* temp = adapter_;
   adapter_ = NULL;
   return temp;
 }
-inline ::CameraServer::AdapterInfo* DeviceInfo::mutable_adapter() {
+inline ::mvcam::AdapterInfo* DeviceInfo::mutable_adapter() {
   
   if (adapter_ == NULL) {
-    auto* p = CreateMaybeMessage<::CameraServer::AdapterInfo>(GetArenaNoVirtual());
+    auto* p = CreateMaybeMessage<::mvcam::AdapterInfo>(GetArenaNoVirtual());
     adapter_ = p;
   }
-  // @@protoc_insertion_point(field_mutable:CameraServer.DeviceInfo.adapter)
+  // @@protoc_insertion_point(field_mutable:mvcam.DeviceInfo.adapter)
   return adapter_;
 }
-inline void DeviceInfo::set_allocated_adapter(::CameraServer::AdapterInfo* adapter) {
+inline void DeviceInfo::set_allocated_adapter(::mvcam::AdapterInfo* adapter) {
   ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
   if (message_arena == NULL) {
     delete adapter_;
@@ -2833,7 +2833,7 @@ inline void DeviceInfo::set_allocated_adapter(::CameraServer::AdapterInfo* adapt
     
   }
   adapter_ = adapter;
-  // @@protoc_insertion_point(field_set_allocated:CameraServer.DeviceInfo.adapter)
+  // @@protoc_insertion_point(field_set_allocated:mvcam.DeviceInfo.adapter)
 }
 
 // string manufacture = 2;
@@ -2841,41 +2841,41 @@ inline void DeviceInfo::clear_manufacture() {
   manufacture_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline const ::std::string& DeviceInfo::manufacture() const {
-  // @@protoc_insertion_point(field_get:CameraServer.DeviceInfo.manufacture)
+  // @@protoc_insertion_point(field_get:mvcam.DeviceInfo.manufacture)
   return manufacture_.GetNoArena();
 }
 inline void DeviceInfo::set_manufacture(const ::std::string& value) {
   
   manufacture_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:CameraServer.DeviceInfo.manufacture)
+  // @@protoc_insertion_point(field_set:mvcam.DeviceInfo.manufacture)
 }
 #if LANG_CXX11
 inline void DeviceInfo::set_manufacture(::std::string&& value) {
   
   manufacture_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:CameraServer.DeviceInfo.manufacture)
+  // @@protoc_insertion_point(field_set_rvalue:mvcam.DeviceInfo.manufacture)
 }
 #endif
 inline void DeviceInfo::set_manufacture(const char* value) {
   GOOGLE_DCHECK(value != NULL);
   
   manufacture_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:CameraServer.DeviceInfo.manufacture)
+  // @@protoc_insertion_point(field_set_char:mvcam.DeviceInfo.manufacture)
 }
 inline void DeviceInfo::set_manufacture(const char* value, size_t size) {
   
   manufacture_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:CameraServer.DeviceInfo.manufacture)
+  // @@protoc_insertion_point(field_set_pointer:mvcam.DeviceInfo.manufacture)
 }
 inline ::std::string* DeviceInfo::mutable_manufacture() {
   
-  // @@protoc_insertion_point(field_mutable:CameraServer.DeviceInfo.manufacture)
+  // @@protoc_insertion_point(field_mutable:mvcam.DeviceInfo.manufacture)
   return manufacture_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* DeviceInfo::release_manufacture() {
-  // @@protoc_insertion_point(field_release:CameraServer.DeviceInfo.manufacture)
+  // @@protoc_insertion_point(field_release:mvcam.DeviceInfo.manufacture)
   
   return manufacture_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -2886,7 +2886,7 @@ inline void DeviceInfo::set_allocated_manufacture(::std::string* manufacture) {
     
   }
   manufacture_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), manufacture);
-  // @@protoc_insertion_point(field_set_allocated:CameraServer.DeviceInfo.manufacture)
+  // @@protoc_insertion_point(field_set_allocated:mvcam.DeviceInfo.manufacture)
 }
 
 // string id = 3;
@@ -2894,41 +2894,41 @@ inline void DeviceInfo::clear_id() {
   id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline const ::std::string& DeviceInfo::id() const {
-  // @@protoc_insertion_point(field_get:CameraServer.DeviceInfo.id)
+  // @@protoc_insertion_point(field_get:mvcam.DeviceInfo.id)
   return id_.GetNoArena();
 }
 inline void DeviceInfo::set_id(const ::std::string& value) {
   
   id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:CameraServer.DeviceInfo.id)
+  // @@protoc_insertion_point(field_set:mvcam.DeviceInfo.id)
 }
 #if LANG_CXX11
 inline void DeviceInfo::set_id(::std::string&& value) {
   
   id_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:CameraServer.DeviceInfo.id)
+  // @@protoc_insertion_point(field_set_rvalue:mvcam.DeviceInfo.id)
 }
 #endif
 inline void DeviceInfo::set_id(const char* value) {
   GOOGLE_DCHECK(value != NULL);
   
   id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:CameraServer.DeviceInfo.id)
+  // @@protoc_insertion_point(field_set_char:mvcam.DeviceInfo.id)
 }
 inline void DeviceInfo::set_id(const char* value, size_t size) {
   
   id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:CameraServer.DeviceInfo.id)
+  // @@protoc_insertion_point(field_set_pointer:mvcam.DeviceInfo.id)
 }
 inline ::std::string* DeviceInfo::mutable_id() {
   
-  // @@protoc_insertion_point(field_mutable:CameraServer.DeviceInfo.id)
+  // @@protoc_insertion_point(field_mutable:mvcam.DeviceInfo.id)
   return id_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* DeviceInfo::release_id() {
-  // @@protoc_insertion_point(field_release:CameraServer.DeviceInfo.id)
+  // @@protoc_insertion_point(field_release:mvcam.DeviceInfo.id)
   
   return id_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -2939,7 +2939,7 @@ inline void DeviceInfo::set_allocated_id(::std::string* id) {
     
   }
   id_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), id);
-  // @@protoc_insertion_point(field_set_allocated:CameraServer.DeviceInfo.id)
+  // @@protoc_insertion_point(field_set_allocated:mvcam.DeviceInfo.id)
 }
 
 // string model = 4;
@@ -2947,41 +2947,41 @@ inline void DeviceInfo::clear_model() {
   model_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline const ::std::string& DeviceInfo::model() const {
-  // @@protoc_insertion_point(field_get:CameraServer.DeviceInfo.model)
+  // @@protoc_insertion_point(field_get:mvcam.DeviceInfo.model)
   return model_.GetNoArena();
 }
 inline void DeviceInfo::set_model(const ::std::string& value) {
   
   model_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:CameraServer.DeviceInfo.model)
+  // @@protoc_insertion_point(field_set:mvcam.DeviceInfo.model)
 }
 #if LANG_CXX11
 inline void DeviceInfo::set_model(::std::string&& value) {
   
   model_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:CameraServer.DeviceInfo.model)
+  // @@protoc_insertion_point(field_set_rvalue:mvcam.DeviceInfo.model)
 }
 #endif
 inline void DeviceInfo::set_model(const char* value) {
   GOOGLE_DCHECK(value != NULL);
   
   model_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:CameraServer.DeviceInfo.model)
+  // @@protoc_insertion_point(field_set_char:mvcam.DeviceInfo.model)
 }
 inline void DeviceInfo::set_model(const char* value, size_t size) {
   
   model_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:CameraServer.DeviceInfo.model)
+  // @@protoc_insertion_point(field_set_pointer:mvcam.DeviceInfo.model)
 }
 inline ::std::string* DeviceInfo::mutable_model() {
   
-  // @@protoc_insertion_point(field_mutable:CameraServer.DeviceInfo.model)
+  // @@protoc_insertion_point(field_mutable:mvcam.DeviceInfo.model)
   return model_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* DeviceInfo::release_model() {
-  // @@protoc_insertion_point(field_release:CameraServer.DeviceInfo.model)
+  // @@protoc_insertion_point(field_release:mvcam.DeviceInfo.model)
   
   return model_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -2992,7 +2992,7 @@ inline void DeviceInfo::set_allocated_model(::std::string* model) {
     
   }
   model_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), model);
-  // @@protoc_insertion_point(field_set_allocated:CameraServer.DeviceInfo.model)
+  // @@protoc_insertion_point(field_set_allocated:mvcam.DeviceInfo.model)
 }
 
 // string version = 5;
@@ -3000,41 +3000,41 @@ inline void DeviceInfo::clear_version() {
   version_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline const ::std::string& DeviceInfo::version() const {
-  // @@protoc_insertion_point(field_get:CameraServer.DeviceInfo.version)
+  // @@protoc_insertion_point(field_get:mvcam.DeviceInfo.version)
   return version_.GetNoArena();
 }
 inline void DeviceInfo::set_version(const ::std::string& value) {
   
   version_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:CameraServer.DeviceInfo.version)
+  // @@protoc_insertion_point(field_set:mvcam.DeviceInfo.version)
 }
 #if LANG_CXX11
 inline void DeviceInfo::set_version(::std::string&& value) {
   
   version_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:CameraServer.DeviceInfo.version)
+  // @@protoc_insertion_point(field_set_rvalue:mvcam.DeviceInfo.version)
 }
 #endif
 inline void DeviceInfo::set_version(const char* value) {
   GOOGLE_DCHECK(value != NULL);
   
   version_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:CameraServer.DeviceInfo.version)
+  // @@protoc_insertion_point(field_set_char:mvcam.DeviceInfo.version)
 }
 inline void DeviceInfo::set_version(const char* value, size_t size) {
   
   version_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:CameraServer.DeviceInfo.version)
+  // @@protoc_insertion_point(field_set_pointer:mvcam.DeviceInfo.version)
 }
 inline ::std::string* DeviceInfo::mutable_version() {
   
-  // @@protoc_insertion_point(field_mutable:CameraServer.DeviceInfo.version)
+  // @@protoc_insertion_point(field_mutable:mvcam.DeviceInfo.version)
   return version_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* DeviceInfo::release_version() {
-  // @@protoc_insertion_point(field_release:CameraServer.DeviceInfo.version)
+  // @@protoc_insertion_point(field_release:mvcam.DeviceInfo.version)
   
   return version_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -3045,7 +3045,7 @@ inline void DeviceInfo::set_allocated_version(::std::string* version) {
     
   }
   version_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), version);
-  // @@protoc_insertion_point(field_set_allocated:CameraServer.DeviceInfo.version)
+  // @@protoc_insertion_point(field_set_allocated:mvcam.DeviceInfo.version)
 }
 
 // string serial = 6;
@@ -3053,41 +3053,41 @@ inline void DeviceInfo::clear_serial() {
   serial_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline const ::std::string& DeviceInfo::serial() const {
-  // @@protoc_insertion_point(field_get:CameraServer.DeviceInfo.serial)
+  // @@protoc_insertion_point(field_get:mvcam.DeviceInfo.serial)
   return serial_.GetNoArena();
 }
 inline void DeviceInfo::set_serial(const ::std::string& value) {
   
   serial_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:CameraServer.DeviceInfo.serial)
+  // @@protoc_insertion_point(field_set:mvcam.DeviceInfo.serial)
 }
 #if LANG_CXX11
 inline void DeviceInfo::set_serial(::std::string&& value) {
   
   serial_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:CameraServer.DeviceInfo.serial)
+  // @@protoc_insertion_point(field_set_rvalue:mvcam.DeviceInfo.serial)
 }
 #endif
 inline void DeviceInfo::set_serial(const char* value) {
   GOOGLE_DCHECK(value != NULL);
   
   serial_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:CameraServer.DeviceInfo.serial)
+  // @@protoc_insertion_point(field_set_char:mvcam.DeviceInfo.serial)
 }
 inline void DeviceInfo::set_serial(const char* value, size_t size) {
   
   serial_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:CameraServer.DeviceInfo.serial)
+  // @@protoc_insertion_point(field_set_pointer:mvcam.DeviceInfo.serial)
 }
 inline ::std::string* DeviceInfo::mutable_serial() {
   
-  // @@protoc_insertion_point(field_mutable:CameraServer.DeviceInfo.serial)
+  // @@protoc_insertion_point(field_mutable:mvcam.DeviceInfo.serial)
   return serial_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* DeviceInfo::release_serial() {
-  // @@protoc_insertion_point(field_release:CameraServer.DeviceInfo.serial)
+  // @@protoc_insertion_point(field_release:mvcam.DeviceInfo.serial)
   
   return serial_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -3098,10 +3098,10 @@ inline void DeviceInfo::set_allocated_serial(::std::string* serial) {
     
   }
   serial_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), serial);
-  // @@protoc_insertion_point(field_set_allocated:CameraServer.DeviceInfo.serial)
+  // @@protoc_insertion_point(field_set_allocated:mvcam.DeviceInfo.serial)
 }
 
-// .CameraServer.CameraCapability capabilities = 7;
+// .mvcam.CameraCapability capabilities = 7;
 inline bool DeviceInfo::has_capabilities() const {
   return this != internal_default_instance() && capabilities_ != NULL;
 }
@@ -3111,32 +3111,32 @@ inline void DeviceInfo::clear_capabilities() {
   }
   capabilities_ = NULL;
 }
-inline const ::CameraServer::CameraCapability& DeviceInfo::_internal_capabilities() const {
+inline const ::mvcam::CameraCapability& DeviceInfo::_internal_capabilities() const {
   return *capabilities_;
 }
-inline const ::CameraServer::CameraCapability& DeviceInfo::capabilities() const {
-  const ::CameraServer::CameraCapability* p = capabilities_;
-  // @@protoc_insertion_point(field_get:CameraServer.DeviceInfo.capabilities)
-  return p != NULL ? *p : *reinterpret_cast<const ::CameraServer::CameraCapability*>(
-      &::CameraServer::_CameraCapability_default_instance_);
+inline const ::mvcam::CameraCapability& DeviceInfo::capabilities() const {
+  const ::mvcam::CameraCapability* p = capabilities_;
+  // @@protoc_insertion_point(field_get:mvcam.DeviceInfo.capabilities)
+  return p != NULL ? *p : *reinterpret_cast<const ::mvcam::CameraCapability*>(
+      &::mvcam::_CameraCapability_default_instance_);
 }
-inline ::CameraServer::CameraCapability* DeviceInfo::release_capabilities() {
-  // @@protoc_insertion_point(field_release:CameraServer.DeviceInfo.capabilities)
+inline ::mvcam::CameraCapability* DeviceInfo::release_capabilities() {
+  // @@protoc_insertion_point(field_release:mvcam.DeviceInfo.capabilities)
   
-  ::CameraServer::CameraCapability* temp = capabilities_;
+  ::mvcam::CameraCapability* temp = capabilities_;
   capabilities_ = NULL;
   return temp;
 }
-inline ::CameraServer::CameraCapability* DeviceInfo::mutable_capabilities() {
+inline ::mvcam::CameraCapability* DeviceInfo::mutable_capabilities() {
   
   if (capabilities_ == NULL) {
-    auto* p = CreateMaybeMessage<::CameraServer::CameraCapability>(GetArenaNoVirtual());
+    auto* p = CreateMaybeMessage<::mvcam::CameraCapability>(GetArenaNoVirtual());
     capabilities_ = p;
   }
-  // @@protoc_insertion_point(field_mutable:CameraServer.DeviceInfo.capabilities)
+  // @@protoc_insertion_point(field_mutable:mvcam.DeviceInfo.capabilities)
   return capabilities_;
 }
-inline void DeviceInfo::set_allocated_capabilities(::CameraServer::CameraCapability* capabilities) {
+inline void DeviceInfo::set_allocated_capabilities(::mvcam::CameraCapability* capabilities) {
   ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
   if (message_arena == NULL) {
     delete capabilities_;
@@ -3152,40 +3152,40 @@ inline void DeviceInfo::set_allocated_capabilities(::CameraServer::CameraCapabil
     
   }
   capabilities_ = capabilities;
-  // @@protoc_insertion_point(field_set_allocated:CameraServer.DeviceInfo.capabilities)
+  // @@protoc_insertion_point(field_set_allocated:mvcam.DeviceInfo.capabilities)
 }
 
 // -------------------------------------------------------------------
 
 // DeviceListResponse
 
-// repeated .CameraServer.DeviceInfo devices = 1;
+// repeated .mvcam.DeviceInfo devices = 1;
 inline int DeviceListResponse::devices_size() const {
   return devices_.size();
 }
 inline void DeviceListResponse::clear_devices() {
   devices_.Clear();
 }
-inline ::CameraServer::DeviceInfo* DeviceListResponse::mutable_devices(int index) {
-  // @@protoc_insertion_point(field_mutable:CameraServer.DeviceListResponse.devices)
+inline ::mvcam::DeviceInfo* DeviceListResponse::mutable_devices(int index) {
+  // @@protoc_insertion_point(field_mutable:mvcam.DeviceListResponse.devices)
   return devices_.Mutable(index);
 }
-inline ::google::protobuf::RepeatedPtrField< ::CameraServer::DeviceInfo >*
+inline ::google::protobuf::RepeatedPtrField< ::mvcam::DeviceInfo >*
 DeviceListResponse::mutable_devices() {
-  // @@protoc_insertion_point(field_mutable_list:CameraServer.DeviceListResponse.devices)
+  // @@protoc_insertion_point(field_mutable_list:mvcam.DeviceListResponse.devices)
   return &devices_;
 }
-inline const ::CameraServer::DeviceInfo& DeviceListResponse::devices(int index) const {
-  // @@protoc_insertion_point(field_get:CameraServer.DeviceListResponse.devices)
+inline const ::mvcam::DeviceInfo& DeviceListResponse::devices(int index) const {
+  // @@protoc_insertion_point(field_get:mvcam.DeviceListResponse.devices)
   return devices_.Get(index);
 }
-inline ::CameraServer::DeviceInfo* DeviceListResponse::add_devices() {
-  // @@protoc_insertion_point(field_add:CameraServer.DeviceListResponse.devices)
+inline ::mvcam::DeviceInfo* DeviceListResponse::add_devices() {
+  // @@protoc_insertion_point(field_add:mvcam.DeviceListResponse.devices)
   return devices_.Add();
 }
-inline const ::google::protobuf::RepeatedPtrField< ::CameraServer::DeviceInfo >&
+inline const ::google::protobuf::RepeatedPtrField< ::mvcam::DeviceInfo >&
 DeviceListResponse::devices() const {
-  // @@protoc_insertion_point(field_list:CameraServer.DeviceListResponse.devices)
+  // @@protoc_insertion_point(field_list:mvcam.DeviceListResponse.devices)
   return devices_;
 }
 
@@ -3198,41 +3198,41 @@ inline void IdRequest::clear_id() {
   id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline const ::std::string& IdRequest::id() const {
-  // @@protoc_insertion_point(field_get:CameraServer.IdRequest.id)
+  // @@protoc_insertion_point(field_get:mvcam.IdRequest.id)
   return id_.GetNoArena();
 }
 inline void IdRequest::set_id(const ::std::string& value) {
   
   id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:CameraServer.IdRequest.id)
+  // @@protoc_insertion_point(field_set:mvcam.IdRequest.id)
 }
 #if LANG_CXX11
 inline void IdRequest::set_id(::std::string&& value) {
   
   id_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:CameraServer.IdRequest.id)
+  // @@protoc_insertion_point(field_set_rvalue:mvcam.IdRequest.id)
 }
 #endif
 inline void IdRequest::set_id(const char* value) {
   GOOGLE_DCHECK(value != NULL);
   
   id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:CameraServer.IdRequest.id)
+  // @@protoc_insertion_point(field_set_char:mvcam.IdRequest.id)
 }
 inline void IdRequest::set_id(const char* value, size_t size) {
   
   id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:CameraServer.IdRequest.id)
+  // @@protoc_insertion_point(field_set_pointer:mvcam.IdRequest.id)
 }
 inline ::std::string* IdRequest::mutable_id() {
   
-  // @@protoc_insertion_point(field_mutable:CameraServer.IdRequest.id)
+  // @@protoc_insertion_point(field_mutable:mvcam.IdRequest.id)
   return id_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* IdRequest::release_id() {
-  // @@protoc_insertion_point(field_release:CameraServer.IdRequest.id)
+  // @@protoc_insertion_point(field_release:mvcam.IdRequest.id)
   
   return id_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -3243,7 +3243,7 @@ inline void IdRequest::set_allocated_id(::std::string* id) {
     
   }
   id_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), id);
-  // @@protoc_insertion_point(field_set_allocated:CameraServer.IdRequest.id)
+  // @@protoc_insertion_point(field_set_allocated:mvcam.IdRequest.id)
 }
 
 // -------------------------------------------------------------------
@@ -3255,13 +3255,13 @@ inline void Parameter::clear_should_update() {
   should_update_ = false;
 }
 inline bool Parameter::should_update() const {
-  // @@protoc_insertion_point(field_get:CameraServer.Parameter.should_update)
+  // @@protoc_insertion_point(field_get:mvcam.Parameter.should_update)
   return should_update_;
 }
 inline void Parameter::set_should_update(bool value) {
   
   should_update_ = value;
-  // @@protoc_insertion_point(field_set:CameraServer.Parameter.should_update)
+  // @@protoc_insertion_point(field_set:mvcam.Parameter.should_update)
 }
 
 // double value = 2;
@@ -3269,20 +3269,20 @@ inline void Parameter::clear_value() {
   value_ = 0;
 }
 inline double Parameter::value() const {
-  // @@protoc_insertion_point(field_get:CameraServer.Parameter.value)
+  // @@protoc_insertion_point(field_get:mvcam.Parameter.value)
   return value_;
 }
 inline void Parameter::set_value(double value) {
   
   value_ = value;
-  // @@protoc_insertion_point(field_set:CameraServer.Parameter.value)
+  // @@protoc_insertion_point(field_set:mvcam.Parameter.value)
 }
 
 // -------------------------------------------------------------------
 
 // Configuration
 
-// .CameraServer.Parameter exposure = 1;
+// .mvcam.Parameter exposure = 1;
 inline bool Configuration::has_exposure() const {
   return this != internal_default_instance() && exposure_ != NULL;
 }
@@ -3292,32 +3292,32 @@ inline void Configuration::clear_exposure() {
   }
   exposure_ = NULL;
 }
-inline const ::CameraServer::Parameter& Configuration::_internal_exposure() const {
+inline const ::mvcam::Parameter& Configuration::_internal_exposure() const {
   return *exposure_;
 }
-inline const ::CameraServer::Parameter& Configuration::exposure() const {
-  const ::CameraServer::Parameter* p = exposure_;
-  // @@protoc_insertion_point(field_get:CameraServer.Configuration.exposure)
-  return p != NULL ? *p : *reinterpret_cast<const ::CameraServer::Parameter*>(
-      &::CameraServer::_Parameter_default_instance_);
+inline const ::mvcam::Parameter& Configuration::exposure() const {
+  const ::mvcam::Parameter* p = exposure_;
+  // @@protoc_insertion_point(field_get:mvcam.Configuration.exposure)
+  return p != NULL ? *p : *reinterpret_cast<const ::mvcam::Parameter*>(
+      &::mvcam::_Parameter_default_instance_);
 }
-inline ::CameraServer::Parameter* Configuration::release_exposure() {
-  // @@protoc_insertion_point(field_release:CameraServer.Configuration.exposure)
+inline ::mvcam::Parameter* Configuration::release_exposure() {
+  // @@protoc_insertion_point(field_release:mvcam.Configuration.exposure)
   
-  ::CameraServer::Parameter* temp = exposure_;
+  ::mvcam::Parameter* temp = exposure_;
   exposure_ = NULL;
   return temp;
 }
-inline ::CameraServer::Parameter* Configuration::mutable_exposure() {
+inline ::mvcam::Parameter* Configuration::mutable_exposure() {
   
   if (exposure_ == NULL) {
-    auto* p = CreateMaybeMessage<::CameraServer::Parameter>(GetArenaNoVirtual());
+    auto* p = CreateMaybeMessage<::mvcam::Parameter>(GetArenaNoVirtual());
     exposure_ = p;
   }
-  // @@protoc_insertion_point(field_mutable:CameraServer.Configuration.exposure)
+  // @@protoc_insertion_point(field_mutable:mvcam.Configuration.exposure)
   return exposure_;
 }
-inline void Configuration::set_allocated_exposure(::CameraServer::Parameter* exposure) {
+inline void Configuration::set_allocated_exposure(::mvcam::Parameter* exposure) {
   ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
   if (message_arena == NULL) {
     delete exposure_;
@@ -3333,10 +3333,10 @@ inline void Configuration::set_allocated_exposure(::CameraServer::Parameter* exp
     
   }
   exposure_ = exposure;
-  // @@protoc_insertion_point(field_set_allocated:CameraServer.Configuration.exposure)
+  // @@protoc_insertion_point(field_set_allocated:mvcam.Configuration.exposure)
 }
 
-// .CameraServer.Parameter frame_rate = 2;
+// .mvcam.Parameter frame_rate = 2;
 inline bool Configuration::has_frame_rate() const {
   return this != internal_default_instance() && frame_rate_ != NULL;
 }
@@ -3346,32 +3346,32 @@ inline void Configuration::clear_frame_rate() {
   }
   frame_rate_ = NULL;
 }
-inline const ::CameraServer::Parameter& Configuration::_internal_frame_rate() const {
+inline const ::mvcam::Parameter& Configuration::_internal_frame_rate() const {
   return *frame_rate_;
 }
-inline const ::CameraServer::Parameter& Configuration::frame_rate() const {
-  const ::CameraServer::Parameter* p = frame_rate_;
-  // @@protoc_insertion_point(field_get:CameraServer.Configuration.frame_rate)
-  return p != NULL ? *p : *reinterpret_cast<const ::CameraServer::Parameter*>(
-      &::CameraServer::_Parameter_default_instance_);
+inline const ::mvcam::Parameter& Configuration::frame_rate() const {
+  const ::mvcam::Parameter* p = frame_rate_;
+  // @@protoc_insertion_point(field_get:mvcam.Configuration.frame_rate)
+  return p != NULL ? *p : *reinterpret_cast<const ::mvcam::Parameter*>(
+      &::mvcam::_Parameter_default_instance_);
 }
-inline ::CameraServer::Parameter* Configuration::release_frame_rate() {
-  // @@protoc_insertion_point(field_release:CameraServer.Configuration.frame_rate)
+inline ::mvcam::Parameter* Configuration::release_frame_rate() {
+  // @@protoc_insertion_point(field_release:mvcam.Configuration.frame_rate)
   
-  ::CameraServer::Parameter* temp = frame_rate_;
+  ::mvcam::Parameter* temp = frame_rate_;
   frame_rate_ = NULL;
   return temp;
 }
-inline ::CameraServer::Parameter* Configuration::mutable_frame_rate() {
+inline ::mvcam::Parameter* Configuration::mutable_frame_rate() {
   
   if (frame_rate_ == NULL) {
-    auto* p = CreateMaybeMessage<::CameraServer::Parameter>(GetArenaNoVirtual());
+    auto* p = CreateMaybeMessage<::mvcam::Parameter>(GetArenaNoVirtual());
     frame_rate_ = p;
   }
-  // @@protoc_insertion_point(field_mutable:CameraServer.Configuration.frame_rate)
+  // @@protoc_insertion_point(field_mutable:mvcam.Configuration.frame_rate)
   return frame_rate_;
 }
-inline void Configuration::set_allocated_frame_rate(::CameraServer::Parameter* frame_rate) {
+inline void Configuration::set_allocated_frame_rate(::mvcam::Parameter* frame_rate) {
   ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
   if (message_arena == NULL) {
     delete frame_rate_;
@@ -3387,10 +3387,10 @@ inline void Configuration::set_allocated_frame_rate(::CameraServer::Parameter* f
     
   }
   frame_rate_ = frame_rate;
-  // @@protoc_insertion_point(field_set_allocated:CameraServer.Configuration.frame_rate)
+  // @@protoc_insertion_point(field_set_allocated:mvcam.Configuration.frame_rate)
 }
 
-// .CameraServer.Parameter gain = 3;
+// .mvcam.Parameter gain = 3;
 inline bool Configuration::has_gain() const {
   return this != internal_default_instance() && gain_ != NULL;
 }
@@ -3400,32 +3400,32 @@ inline void Configuration::clear_gain() {
   }
   gain_ = NULL;
 }
-inline const ::CameraServer::Parameter& Configuration::_internal_gain() const {
+inline const ::mvcam::Parameter& Configuration::_internal_gain() const {
   return *gain_;
 }
-inline const ::CameraServer::Parameter& Configuration::gain() const {
-  const ::CameraServer::Parameter* p = gain_;
-  // @@protoc_insertion_point(field_get:CameraServer.Configuration.gain)
-  return p != NULL ? *p : *reinterpret_cast<const ::CameraServer::Parameter*>(
-      &::CameraServer::_Parameter_default_instance_);
+inline const ::mvcam::Parameter& Configuration::gain() const {
+  const ::mvcam::Parameter* p = gain_;
+  // @@protoc_insertion_point(field_get:mvcam.Configuration.gain)
+  return p != NULL ? *p : *reinterpret_cast<const ::mvcam::Parameter*>(
+      &::mvcam::_Parameter_default_instance_);
 }
-inline ::CameraServer::Parameter* Configuration::release_gain() {
-  // @@protoc_insertion_point(field_release:CameraServer.Configuration.gain)
+inline ::mvcam::Parameter* Configuration::release_gain() {
+  // @@protoc_insertion_point(field_release:mvcam.Configuration.gain)
   
-  ::CameraServer::Parameter* temp = gain_;
+  ::mvcam::Parameter* temp = gain_;
   gain_ = NULL;
   return temp;
 }
-inline ::CameraServer::Parameter* Configuration::mutable_gain() {
+inline ::mvcam::Parameter* Configuration::mutable_gain() {
   
   if (gain_ == NULL) {
-    auto* p = CreateMaybeMessage<::CameraServer::Parameter>(GetArenaNoVirtual());
+    auto* p = CreateMaybeMessage<::mvcam::Parameter>(GetArenaNoVirtual());
     gain_ = p;
   }
-  // @@protoc_insertion_point(field_mutable:CameraServer.Configuration.gain)
+  // @@protoc_insertion_point(field_mutable:mvcam.Configuration.gain)
   return gain_;
 }
-inline void Configuration::set_allocated_gain(::CameraServer::Parameter* gain) {
+inline void Configuration::set_allocated_gain(::mvcam::Parameter* gain) {
   ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
   if (message_arena == NULL) {
     delete gain_;
@@ -3441,10 +3441,10 @@ inline void Configuration::set_allocated_gain(::CameraServer::Parameter* gain) {
     
   }
   gain_ = gain;
-  // @@protoc_insertion_point(field_set_allocated:CameraServer.Configuration.gain)
+  // @@protoc_insertion_point(field_set_allocated:mvcam.Configuration.gain)
 }
 
-// .CameraServer.Parameter black_level = 4;
+// .mvcam.Parameter black_level = 4;
 inline bool Configuration::has_black_level() const {
   return this != internal_default_instance() && black_level_ != NULL;
 }
@@ -3454,32 +3454,32 @@ inline void Configuration::clear_black_level() {
   }
   black_level_ = NULL;
 }
-inline const ::CameraServer::Parameter& Configuration::_internal_black_level() const {
+inline const ::mvcam::Parameter& Configuration::_internal_black_level() const {
   return *black_level_;
 }
-inline const ::CameraServer::Parameter& Configuration::black_level() const {
-  const ::CameraServer::Parameter* p = black_level_;
-  // @@protoc_insertion_point(field_get:CameraServer.Configuration.black_level)
-  return p != NULL ? *p : *reinterpret_cast<const ::CameraServer::Parameter*>(
-      &::CameraServer::_Parameter_default_instance_);
+inline const ::mvcam::Parameter& Configuration::black_level() const {
+  const ::mvcam::Parameter* p = black_level_;
+  // @@protoc_insertion_point(field_get:mvcam.Configuration.black_level)
+  return p != NULL ? *p : *reinterpret_cast<const ::mvcam::Parameter*>(
+      &::mvcam::_Parameter_default_instance_);
 }
-inline ::CameraServer::Parameter* Configuration::release_black_level() {
-  // @@protoc_insertion_point(field_release:CameraServer.Configuration.black_level)
+inline ::mvcam::Parameter* Configuration::release_black_level() {
+  // @@protoc_insertion_point(field_release:mvcam.Configuration.black_level)
   
-  ::CameraServer::Parameter* temp = black_level_;
+  ::mvcam::Parameter* temp = black_level_;
   black_level_ = NULL;
   return temp;
 }
-inline ::CameraServer::Parameter* Configuration::mutable_black_level() {
+inline ::mvcam::Parameter* Configuration::mutable_black_level() {
   
   if (black_level_ == NULL) {
-    auto* p = CreateMaybeMessage<::CameraServer::Parameter>(GetArenaNoVirtual());
+    auto* p = CreateMaybeMessage<::mvcam::Parameter>(GetArenaNoVirtual());
     black_level_ = p;
   }
-  // @@protoc_insertion_point(field_mutable:CameraServer.Configuration.black_level)
+  // @@protoc_insertion_point(field_mutable:mvcam.Configuration.black_level)
   return black_level_;
 }
-inline void Configuration::set_allocated_black_level(::CameraServer::Parameter* black_level) {
+inline void Configuration::set_allocated_black_level(::mvcam::Parameter* black_level) {
   ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
   if (message_arena == NULL) {
     delete black_level_;
@@ -3495,10 +3495,10 @@ inline void Configuration::set_allocated_black_level(::CameraServer::Parameter* 
     
   }
   black_level_ = black_level;
-  // @@protoc_insertion_point(field_set_allocated:CameraServer.Configuration.black_level)
+  // @@protoc_insertion_point(field_set_allocated:mvcam.Configuration.black_level)
 }
 
-// .CameraServer.Parameter gamma = 5;
+// .mvcam.Parameter gamma = 5;
 inline bool Configuration::has_gamma() const {
   return this != internal_default_instance() && gamma_ != NULL;
 }
@@ -3508,32 +3508,32 @@ inline void Configuration::clear_gamma() {
   }
   gamma_ = NULL;
 }
-inline const ::CameraServer::Parameter& Configuration::_internal_gamma() const {
+inline const ::mvcam::Parameter& Configuration::_internal_gamma() const {
   return *gamma_;
 }
-inline const ::CameraServer::Parameter& Configuration::gamma() const {
-  const ::CameraServer::Parameter* p = gamma_;
-  // @@protoc_insertion_point(field_get:CameraServer.Configuration.gamma)
-  return p != NULL ? *p : *reinterpret_cast<const ::CameraServer::Parameter*>(
-      &::CameraServer::_Parameter_default_instance_);
+inline const ::mvcam::Parameter& Configuration::gamma() const {
+  const ::mvcam::Parameter* p = gamma_;
+  // @@protoc_insertion_point(field_get:mvcam.Configuration.gamma)
+  return p != NULL ? *p : *reinterpret_cast<const ::mvcam::Parameter*>(
+      &::mvcam::_Parameter_default_instance_);
 }
-inline ::CameraServer::Parameter* Configuration::release_gamma() {
-  // @@protoc_insertion_point(field_release:CameraServer.Configuration.gamma)
+inline ::mvcam::Parameter* Configuration::release_gamma() {
+  // @@protoc_insertion_point(field_release:mvcam.Configuration.gamma)
   
-  ::CameraServer::Parameter* temp = gamma_;
+  ::mvcam::Parameter* temp = gamma_;
   gamma_ = NULL;
   return temp;
 }
-inline ::CameraServer::Parameter* Configuration::mutable_gamma() {
+inline ::mvcam::Parameter* Configuration::mutable_gamma() {
   
   if (gamma_ == NULL) {
-    auto* p = CreateMaybeMessage<::CameraServer::Parameter>(GetArenaNoVirtual());
+    auto* p = CreateMaybeMessage<::mvcam::Parameter>(GetArenaNoVirtual());
     gamma_ = p;
   }
-  // @@protoc_insertion_point(field_mutable:CameraServer.Configuration.gamma)
+  // @@protoc_insertion_point(field_mutable:mvcam.Configuration.gamma)
   return gamma_;
 }
-inline void Configuration::set_allocated_gamma(::CameraServer::Parameter* gamma) {
+inline void Configuration::set_allocated_gamma(::mvcam::Parameter* gamma) {
   ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
   if (message_arena == NULL) {
     delete gamma_;
@@ -3549,14 +3549,14 @@ inline void Configuration::set_allocated_gamma(::CameraServer::Parameter* gamma)
     
   }
   gamma_ = gamma;
-  // @@protoc_insertion_point(field_set_allocated:CameraServer.Configuration.gamma)
+  // @@protoc_insertion_point(field_set_allocated:mvcam.Configuration.gamma)
 }
 
 // -------------------------------------------------------------------
 
 // ConfigureRequest
 
-// .CameraServer.IdRequest id = 1;
+// .mvcam.IdRequest id = 1;
 inline bool ConfigureRequest::has_id() const {
   return this != internal_default_instance() && id_ != NULL;
 }
@@ -3566,32 +3566,32 @@ inline void ConfigureRequest::clear_id() {
   }
   id_ = NULL;
 }
-inline const ::CameraServer::IdRequest& ConfigureRequest::_internal_id() const {
+inline const ::mvcam::IdRequest& ConfigureRequest::_internal_id() const {
   return *id_;
 }
-inline const ::CameraServer::IdRequest& ConfigureRequest::id() const {
-  const ::CameraServer::IdRequest* p = id_;
-  // @@protoc_insertion_point(field_get:CameraServer.ConfigureRequest.id)
-  return p != NULL ? *p : *reinterpret_cast<const ::CameraServer::IdRequest*>(
-      &::CameraServer::_IdRequest_default_instance_);
+inline const ::mvcam::IdRequest& ConfigureRequest::id() const {
+  const ::mvcam::IdRequest* p = id_;
+  // @@protoc_insertion_point(field_get:mvcam.ConfigureRequest.id)
+  return p != NULL ? *p : *reinterpret_cast<const ::mvcam::IdRequest*>(
+      &::mvcam::_IdRequest_default_instance_);
 }
-inline ::CameraServer::IdRequest* ConfigureRequest::release_id() {
-  // @@protoc_insertion_point(field_release:CameraServer.ConfigureRequest.id)
+inline ::mvcam::IdRequest* ConfigureRequest::release_id() {
+  // @@protoc_insertion_point(field_release:mvcam.ConfigureRequest.id)
   
-  ::CameraServer::IdRequest* temp = id_;
+  ::mvcam::IdRequest* temp = id_;
   id_ = NULL;
   return temp;
 }
-inline ::CameraServer::IdRequest* ConfigureRequest::mutable_id() {
+inline ::mvcam::IdRequest* ConfigureRequest::mutable_id() {
   
   if (id_ == NULL) {
-    auto* p = CreateMaybeMessage<::CameraServer::IdRequest>(GetArenaNoVirtual());
+    auto* p = CreateMaybeMessage<::mvcam::IdRequest>(GetArenaNoVirtual());
     id_ = p;
   }
-  // @@protoc_insertion_point(field_mutable:CameraServer.ConfigureRequest.id)
+  // @@protoc_insertion_point(field_mutable:mvcam.ConfigureRequest.id)
   return id_;
 }
-inline void ConfigureRequest::set_allocated_id(::CameraServer::IdRequest* id) {
+inline void ConfigureRequest::set_allocated_id(::mvcam::IdRequest* id) {
   ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
   if (message_arena == NULL) {
     delete id_;
@@ -3607,10 +3607,10 @@ inline void ConfigureRequest::set_allocated_id(::CameraServer::IdRequest* id) {
     
   }
   id_ = id;
-  // @@protoc_insertion_point(field_set_allocated:CameraServer.ConfigureRequest.id)
+  // @@protoc_insertion_point(field_set_allocated:mvcam.ConfigureRequest.id)
 }
 
-// .CameraServer.Configuration config = 2;
+// .mvcam.Configuration config = 2;
 inline bool ConfigureRequest::has_config() const {
   return this != internal_default_instance() && config_ != NULL;
 }
@@ -3620,32 +3620,32 @@ inline void ConfigureRequest::clear_config() {
   }
   config_ = NULL;
 }
-inline const ::CameraServer::Configuration& ConfigureRequest::_internal_config() const {
+inline const ::mvcam::Configuration& ConfigureRequest::_internal_config() const {
   return *config_;
 }
-inline const ::CameraServer::Configuration& ConfigureRequest::config() const {
-  const ::CameraServer::Configuration* p = config_;
-  // @@protoc_insertion_point(field_get:CameraServer.ConfigureRequest.config)
-  return p != NULL ? *p : *reinterpret_cast<const ::CameraServer::Configuration*>(
-      &::CameraServer::_Configuration_default_instance_);
+inline const ::mvcam::Configuration& ConfigureRequest::config() const {
+  const ::mvcam::Configuration* p = config_;
+  // @@protoc_insertion_point(field_get:mvcam.ConfigureRequest.config)
+  return p != NULL ? *p : *reinterpret_cast<const ::mvcam::Configuration*>(
+      &::mvcam::_Configuration_default_instance_);
 }
-inline ::CameraServer::Configuration* ConfigureRequest::release_config() {
-  // @@protoc_insertion_point(field_release:CameraServer.ConfigureRequest.config)
+inline ::mvcam::Configuration* ConfigureRequest::release_config() {
+  // @@protoc_insertion_point(field_release:mvcam.ConfigureRequest.config)
   
-  ::CameraServer::Configuration* temp = config_;
+  ::mvcam::Configuration* temp = config_;
   config_ = NULL;
   return temp;
 }
-inline ::CameraServer::Configuration* ConfigureRequest::mutable_config() {
+inline ::mvcam::Configuration* ConfigureRequest::mutable_config() {
   
   if (config_ == NULL) {
-    auto* p = CreateMaybeMessage<::CameraServer::Configuration>(GetArenaNoVirtual());
+    auto* p = CreateMaybeMessage<::mvcam::Configuration>(GetArenaNoVirtual());
     config_ = p;
   }
-  // @@protoc_insertion_point(field_mutable:CameraServer.ConfigureRequest.config)
+  // @@protoc_insertion_point(field_mutable:mvcam.ConfigureRequest.config)
   return config_;
 }
-inline void ConfigureRequest::set_allocated_config(::CameraServer::Configuration* config) {
+inline void ConfigureRequest::set_allocated_config(::mvcam::Configuration* config) {
   ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
   if (message_arena == NULL) {
     delete config_;
@@ -3661,7 +3661,7 @@ inline void ConfigureRequest::set_allocated_config(::CameraServer::Configuration
     
   }
   config_ = config;
-  // @@protoc_insertion_point(field_set_allocated:CameraServer.ConfigureRequest.config)
+  // @@protoc_insertion_point(field_set_allocated:mvcam.ConfigureRequest.config)
 }
 
 // -------------------------------------------------------------------
@@ -3677,12 +3677,12 @@ inline const ::google::protobuf::Timestamp& Frame::_internal_timestamp() const {
 }
 inline const ::google::protobuf::Timestamp& Frame::timestamp() const {
   const ::google::protobuf::Timestamp* p = timestamp_;
-  // @@protoc_insertion_point(field_get:CameraServer.Frame.timestamp)
+  // @@protoc_insertion_point(field_get:mvcam.Frame.timestamp)
   return p != NULL ? *p : *reinterpret_cast<const ::google::protobuf::Timestamp*>(
       &::google::protobuf::_Timestamp_default_instance_);
 }
 inline ::google::protobuf::Timestamp* Frame::release_timestamp() {
-  // @@protoc_insertion_point(field_release:CameraServer.Frame.timestamp)
+  // @@protoc_insertion_point(field_release:mvcam.Frame.timestamp)
   
   ::google::protobuf::Timestamp* temp = timestamp_;
   timestamp_ = NULL;
@@ -3694,7 +3694,7 @@ inline ::google::protobuf::Timestamp* Frame::mutable_timestamp() {
     auto* p = CreateMaybeMessage<::google::protobuf::Timestamp>(GetArenaNoVirtual());
     timestamp_ = p;
   }
-  // @@protoc_insertion_point(field_mutable:CameraServer.Frame.timestamp)
+  // @@protoc_insertion_point(field_mutable:mvcam.Frame.timestamp)
   return timestamp_;
 }
 inline void Frame::set_allocated_timestamp(::google::protobuf::Timestamp* timestamp) {
@@ -3714,7 +3714,7 @@ inline void Frame::set_allocated_timestamp(::google::protobuf::Timestamp* timest
     
   }
   timestamp_ = timestamp;
-  // @@protoc_insertion_point(field_set_allocated:CameraServer.Frame.timestamp)
+  // @@protoc_insertion_point(field_set_allocated:mvcam.Frame.timestamp)
 }
 
 // uint64 id = 2;
@@ -3722,13 +3722,13 @@ inline void Frame::clear_id() {
   id_ = GOOGLE_ULONGLONG(0);
 }
 inline ::google::protobuf::uint64 Frame::id() const {
-  // @@protoc_insertion_point(field_get:CameraServer.Frame.id)
+  // @@protoc_insertion_point(field_get:mvcam.Frame.id)
   return id_;
 }
 inline void Frame::set_id(::google::protobuf::uint64 value) {
   
   id_ = value;
-  // @@protoc_insertion_point(field_set:CameraServer.Frame.id)
+  // @@protoc_insertion_point(field_set:mvcam.Frame.id)
 }
 
 // uint32 size = 3;
@@ -3736,13 +3736,13 @@ inline void Frame::clear_size() {
   size_ = 0u;
 }
 inline ::google::protobuf::uint32 Frame::size() const {
-  // @@protoc_insertion_point(field_get:CameraServer.Frame.size)
+  // @@protoc_insertion_point(field_get:mvcam.Frame.size)
   return size_;
 }
 inline void Frame::set_size(::google::protobuf::uint32 value) {
   
   size_ = value;
-  // @@protoc_insertion_point(field_set:CameraServer.Frame.size)
+  // @@protoc_insertion_point(field_set:mvcam.Frame.size)
 }
 
 // uint32 height = 4;
@@ -3750,13 +3750,13 @@ inline void Frame::clear_height() {
   height_ = 0u;
 }
 inline ::google::protobuf::uint32 Frame::height() const {
-  // @@protoc_insertion_point(field_get:CameraServer.Frame.height)
+  // @@protoc_insertion_point(field_get:mvcam.Frame.height)
   return height_;
 }
 inline void Frame::set_height(::google::protobuf::uint32 value) {
   
   height_ = value;
-  // @@protoc_insertion_point(field_set:CameraServer.Frame.height)
+  // @@protoc_insertion_point(field_set:mvcam.Frame.height)
 }
 
 // uint32 width = 5;
@@ -3764,13 +3764,13 @@ inline void Frame::clear_width() {
   width_ = 0u;
 }
 inline ::google::protobuf::uint32 Frame::width() const {
-  // @@protoc_insertion_point(field_get:CameraServer.Frame.width)
+  // @@protoc_insertion_point(field_get:mvcam.Frame.width)
   return width_;
 }
 inline void Frame::set_width(::google::protobuf::uint32 value) {
   
   width_ = value;
-  // @@protoc_insertion_point(field_set:CameraServer.Frame.width)
+  // @@protoc_insertion_point(field_set:mvcam.Frame.width)
 }
 
 // uint32 pixel_format = 6;
@@ -3778,13 +3778,13 @@ inline void Frame::clear_pixel_format() {
   pixel_format_ = 0u;
 }
 inline ::google::protobuf::uint32 Frame::pixel_format() const {
-  // @@protoc_insertion_point(field_get:CameraServer.Frame.pixel_format)
+  // @@protoc_insertion_point(field_get:mvcam.Frame.pixel_format)
   return pixel_format_;
 }
 inline void Frame::set_pixel_format(::google::protobuf::uint32 value) {
   
   pixel_format_ = value;
-  // @@protoc_insertion_point(field_set:CameraServer.Frame.pixel_format)
+  // @@protoc_insertion_point(field_set:mvcam.Frame.pixel_format)
 }
 
 // bytes data = 7;
@@ -3792,41 +3792,41 @@ inline void Frame::clear_data() {
   data_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline const ::std::string& Frame::data() const {
-  // @@protoc_insertion_point(field_get:CameraServer.Frame.data)
+  // @@protoc_insertion_point(field_get:mvcam.Frame.data)
   return data_.GetNoArena();
 }
 inline void Frame::set_data(const ::std::string& value) {
   
   data_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:CameraServer.Frame.data)
+  // @@protoc_insertion_point(field_set:mvcam.Frame.data)
 }
 #if LANG_CXX11
 inline void Frame::set_data(::std::string&& value) {
   
   data_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:CameraServer.Frame.data)
+  // @@protoc_insertion_point(field_set_rvalue:mvcam.Frame.data)
 }
 #endif
 inline void Frame::set_data(const char* value) {
   GOOGLE_DCHECK(value != NULL);
   
   data_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:CameraServer.Frame.data)
+  // @@protoc_insertion_point(field_set_char:mvcam.Frame.data)
 }
 inline void Frame::set_data(const void* value, size_t size) {
   
   data_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:CameraServer.Frame.data)
+  // @@protoc_insertion_point(field_set_pointer:mvcam.Frame.data)
 }
 inline ::std::string* Frame::mutable_data() {
   
-  // @@protoc_insertion_point(field_mutable:CameraServer.Frame.data)
+  // @@protoc_insertion_point(field_mutable:mvcam.Frame.data)
   return data_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* Frame::release_data() {
-  // @@protoc_insertion_point(field_release:CameraServer.Frame.data)
+  // @@protoc_insertion_point(field_release:mvcam.Frame.data)
   
   return data_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -3837,40 +3837,40 @@ inline void Frame::set_allocated_data(::std::string* data) {
     
   }
   data_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), data);
-  // @@protoc_insertion_point(field_set_allocated:CameraServer.Frame.data)
+  // @@protoc_insertion_point(field_set_allocated:mvcam.Frame.data)
 }
 
 // -------------------------------------------------------------------
 
 // FrameStream
 
-// repeated .CameraServer.Frame frames = 1;
+// repeated .mvcam.Frame frames = 1;
 inline int FrameStream::frames_size() const {
   return frames_.size();
 }
 inline void FrameStream::clear_frames() {
   frames_.Clear();
 }
-inline ::CameraServer::Frame* FrameStream::mutable_frames(int index) {
-  // @@protoc_insertion_point(field_mutable:CameraServer.FrameStream.frames)
+inline ::mvcam::Frame* FrameStream::mutable_frames(int index) {
+  // @@protoc_insertion_point(field_mutable:mvcam.FrameStream.frames)
   return frames_.Mutable(index);
 }
-inline ::google::protobuf::RepeatedPtrField< ::CameraServer::Frame >*
+inline ::google::protobuf::RepeatedPtrField< ::mvcam::Frame >*
 FrameStream::mutable_frames() {
-  // @@protoc_insertion_point(field_mutable_list:CameraServer.FrameStream.frames)
+  // @@protoc_insertion_point(field_mutable_list:mvcam.FrameStream.frames)
   return &frames_;
 }
-inline const ::CameraServer::Frame& FrameStream::frames(int index) const {
-  // @@protoc_insertion_point(field_get:CameraServer.FrameStream.frames)
+inline const ::mvcam::Frame& FrameStream::frames(int index) const {
+  // @@protoc_insertion_point(field_get:mvcam.FrameStream.frames)
   return frames_.Get(index);
 }
-inline ::CameraServer::Frame* FrameStream::add_frames() {
-  // @@protoc_insertion_point(field_add:CameraServer.FrameStream.frames)
+inline ::mvcam::Frame* FrameStream::add_frames() {
+  // @@protoc_insertion_point(field_add:mvcam.FrameStream.frames)
   return frames_.Add();
 }
-inline const ::google::protobuf::RepeatedPtrField< ::CameraServer::Frame >&
+inline const ::google::protobuf::RepeatedPtrField< ::mvcam::Frame >&
 FrameStream::frames() const {
-  // @@protoc_insertion_point(field_list:CameraServer.FrameStream.frames)
+  // @@protoc_insertion_point(field_list:mvcam.FrameStream.frames)
   return frames_;
 }
 
@@ -3878,7 +3878,7 @@ FrameStream::frames() const {
 
 // StreamingRequest
 
-// .CameraServer.IdRequest id = 1;
+// .mvcam.IdRequest id = 1;
 inline bool StreamingRequest::has_id() const {
   return this != internal_default_instance() && id_ != NULL;
 }
@@ -3888,32 +3888,32 @@ inline void StreamingRequest::clear_id() {
   }
   id_ = NULL;
 }
-inline const ::CameraServer::IdRequest& StreamingRequest::_internal_id() const {
+inline const ::mvcam::IdRequest& StreamingRequest::_internal_id() const {
   return *id_;
 }
-inline const ::CameraServer::IdRequest& StreamingRequest::id() const {
-  const ::CameraServer::IdRequest* p = id_;
-  // @@protoc_insertion_point(field_get:CameraServer.StreamingRequest.id)
-  return p != NULL ? *p : *reinterpret_cast<const ::CameraServer::IdRequest*>(
-      &::CameraServer::_IdRequest_default_instance_);
+inline const ::mvcam::IdRequest& StreamingRequest::id() const {
+  const ::mvcam::IdRequest* p = id_;
+  // @@protoc_insertion_point(field_get:mvcam.StreamingRequest.id)
+  return p != NULL ? *p : *reinterpret_cast<const ::mvcam::IdRequest*>(
+      &::mvcam::_IdRequest_default_instance_);
 }
-inline ::CameraServer::IdRequest* StreamingRequest::release_id() {
-  // @@protoc_insertion_point(field_release:CameraServer.StreamingRequest.id)
+inline ::mvcam::IdRequest* StreamingRequest::release_id() {
+  // @@protoc_insertion_point(field_release:mvcam.StreamingRequest.id)
   
-  ::CameraServer::IdRequest* temp = id_;
+  ::mvcam::IdRequest* temp = id_;
   id_ = NULL;
   return temp;
 }
-inline ::CameraServer::IdRequest* StreamingRequest::mutable_id() {
+inline ::mvcam::IdRequest* StreamingRequest::mutable_id() {
   
   if (id_ == NULL) {
-    auto* p = CreateMaybeMessage<::CameraServer::IdRequest>(GetArenaNoVirtual());
+    auto* p = CreateMaybeMessage<::mvcam::IdRequest>(GetArenaNoVirtual());
     id_ = p;
   }
-  // @@protoc_insertion_point(field_mutable:CameraServer.StreamingRequest.id)
+  // @@protoc_insertion_point(field_mutable:mvcam.StreamingRequest.id)
   return id_;
 }
-inline void StreamingRequest::set_allocated_id(::CameraServer::IdRequest* id) {
+inline void StreamingRequest::set_allocated_id(::mvcam::IdRequest* id) {
   ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
   if (message_arena == NULL) {
     delete id_;
@@ -3929,7 +3929,7 @@ inline void StreamingRequest::set_allocated_id(::CameraServer::IdRequest* id) {
     
   }
   id_ = id;
-  // @@protoc_insertion_point(field_set_allocated:CameraServer.StreamingRequest.id)
+  // @@protoc_insertion_point(field_set_allocated:mvcam.StreamingRequest.id)
 }
 
 // uint64 number_frames = 2;
@@ -3937,13 +3937,13 @@ inline void StreamingRequest::clear_number_frames() {
   number_frames_ = GOOGLE_ULONGLONG(0);
 }
 inline ::google::protobuf::uint64 StreamingRequest::number_frames() const {
-  // @@protoc_insertion_point(field_get:CameraServer.StreamingRequest.number_frames)
+  // @@protoc_insertion_point(field_get:mvcam.StreamingRequest.number_frames)
   return number_frames_;
 }
 inline void StreamingRequest::set_number_frames(::google::protobuf::uint64 value) {
   
   number_frames_ = value;
-  // @@protoc_insertion_point(field_set:CameraServer.StreamingRequest.number_frames)
+  // @@protoc_insertion_point(field_set:mvcam.StreamingRequest.number_frames)
 }
 
 // uint64 batch_size = 4;
@@ -3951,13 +3951,13 @@ inline void StreamingRequest::clear_batch_size() {
   batch_size_ = GOOGLE_ULONGLONG(0);
 }
 inline ::google::protobuf::uint64 StreamingRequest::batch_size() const {
-  // @@protoc_insertion_point(field_get:CameraServer.StreamingRequest.batch_size)
+  // @@protoc_insertion_point(field_get:mvcam.StreamingRequest.batch_size)
   return batch_size_;
 }
 inline void StreamingRequest::set_batch_size(::google::protobuf::uint64 value) {
   
   batch_size_ = value;
-  // @@protoc_insertion_point(field_set:CameraServer.StreamingRequest.batch_size)
+  // @@protoc_insertion_point(field_set:mvcam.StreamingRequest.batch_size)
 }
 
 // -------------------------------------------------------------------
@@ -3969,13 +3969,13 @@ inline void Status::clear_temperature() {
   temperature_ = 0;
 }
 inline double Status::temperature() const {
-  // @@protoc_insertion_point(field_get:CameraServer.Status.temperature)
+  // @@protoc_insertion_point(field_get:mvcam.Status.temperature)
   return temperature_;
 }
 inline void Status::set_temperature(double value) {
   
   temperature_ = value;
-  // @@protoc_insertion_point(field_set:CameraServer.Status.temperature)
+  // @@protoc_insertion_point(field_set:mvcam.Status.temperature)
 }
 
 // bool opened = 2;
@@ -3983,13 +3983,13 @@ inline void Status::clear_opened() {
   opened_ = false;
 }
 inline bool Status::opened() const {
-  // @@protoc_insertion_point(field_get:CameraServer.Status.opened)
+  // @@protoc_insertion_point(field_get:mvcam.Status.opened)
   return opened_;
 }
 inline void Status::set_opened(bool value) {
   
   opened_ = value;
-  // @@protoc_insertion_point(field_set:CameraServer.Status.opened)
+  // @@protoc_insertion_point(field_set:mvcam.Status.opened)
 }
 
 // bool capturing = 3;
@@ -3997,20 +3997,20 @@ inline void Status::clear_capturing() {
   capturing_ = false;
 }
 inline bool Status::capturing() const {
-  // @@protoc_insertion_point(field_get:CameraServer.Status.capturing)
+  // @@protoc_insertion_point(field_get:mvcam.Status.capturing)
   return capturing_;
 }
 inline void Status::set_capturing(bool value) {
   
   capturing_ = value;
-  // @@protoc_insertion_point(field_set:CameraServer.Status.capturing)
+  // @@protoc_insertion_point(field_set:mvcam.Status.capturing)
 }
 
 // -------------------------------------------------------------------
 
 // DeviceControlRequest
 
-// .CameraServer.IdRequest id = 1;
+// .mvcam.IdRequest id = 1;
 inline bool DeviceControlRequest::has_id() const {
   return this != internal_default_instance() && id_ != NULL;
 }
@@ -4020,32 +4020,32 @@ inline void DeviceControlRequest::clear_id() {
   }
   id_ = NULL;
 }
-inline const ::CameraServer::IdRequest& DeviceControlRequest::_internal_id() const {
+inline const ::mvcam::IdRequest& DeviceControlRequest::_internal_id() const {
   return *id_;
 }
-inline const ::CameraServer::IdRequest& DeviceControlRequest::id() const {
-  const ::CameraServer::IdRequest* p = id_;
-  // @@protoc_insertion_point(field_get:CameraServer.DeviceControlRequest.id)
-  return p != NULL ? *p : *reinterpret_cast<const ::CameraServer::IdRequest*>(
-      &::CameraServer::_IdRequest_default_instance_);
+inline const ::mvcam::IdRequest& DeviceControlRequest::id() const {
+  const ::mvcam::IdRequest* p = id_;
+  // @@protoc_insertion_point(field_get:mvcam.DeviceControlRequest.id)
+  return p != NULL ? *p : *reinterpret_cast<const ::mvcam::IdRequest*>(
+      &::mvcam::_IdRequest_default_instance_);
 }
-inline ::CameraServer::IdRequest* DeviceControlRequest::release_id() {
-  // @@protoc_insertion_point(field_release:CameraServer.DeviceControlRequest.id)
+inline ::mvcam::IdRequest* DeviceControlRequest::release_id() {
+  // @@protoc_insertion_point(field_release:mvcam.DeviceControlRequest.id)
   
-  ::CameraServer::IdRequest* temp = id_;
+  ::mvcam::IdRequest* temp = id_;
   id_ = NULL;
   return temp;
 }
-inline ::CameraServer::IdRequest* DeviceControlRequest::mutable_id() {
+inline ::mvcam::IdRequest* DeviceControlRequest::mutable_id() {
   
   if (id_ == NULL) {
-    auto* p = CreateMaybeMessage<::CameraServer::IdRequest>(GetArenaNoVirtual());
+    auto* p = CreateMaybeMessage<::mvcam::IdRequest>(GetArenaNoVirtual());
     id_ = p;
   }
-  // @@protoc_insertion_point(field_mutable:CameraServer.DeviceControlRequest.id)
+  // @@protoc_insertion_point(field_mutable:mvcam.DeviceControlRequest.id)
   return id_;
 }
-inline void DeviceControlRequest::set_allocated_id(::CameraServer::IdRequest* id) {
+inline void DeviceControlRequest::set_allocated_id(::mvcam::IdRequest* id) {
   ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
   if (message_arena == NULL) {
     delete id_;
@@ -4061,21 +4061,21 @@ inline void DeviceControlRequest::set_allocated_id(::CameraServer::IdRequest* id
     
   }
   id_ = id;
-  // @@protoc_insertion_point(field_set_allocated:CameraServer.DeviceControlRequest.id)
+  // @@protoc_insertion_point(field_set_allocated:mvcam.DeviceControlRequest.id)
 }
 
-// .CameraServer.DeviceControlAction action = 2;
+// .mvcam.DeviceControlAction action = 2;
 inline void DeviceControlRequest::clear_action() {
   action_ = 0;
 }
-inline ::CameraServer::DeviceControlAction DeviceControlRequest::action() const {
-  // @@protoc_insertion_point(field_get:CameraServer.DeviceControlRequest.action)
-  return static_cast< ::CameraServer::DeviceControlAction >(action_);
+inline ::mvcam::DeviceControlAction DeviceControlRequest::action() const {
+  // @@protoc_insertion_point(field_get:mvcam.DeviceControlRequest.action)
+  return static_cast< ::mvcam::DeviceControlAction >(action_);
 }
-inline void DeviceControlRequest::set_action(::CameraServer::DeviceControlAction value) {
+inline void DeviceControlRequest::set_action(::mvcam::DeviceControlAction value) {
   
   action_ = value;
-  // @@protoc_insertion_point(field_set:CameraServer.DeviceControlRequest.action)
+  // @@protoc_insertion_point(field_set:mvcam.DeviceControlRequest.action)
 }
 
 #ifdef __GNUC__
@@ -4114,15 +4114,15 @@ inline void DeviceControlRequest::set_action(::CameraServer::DeviceControlAction
 
 // @@protoc_insertion_point(namespace_scope)
 
-}  // namespace CameraServer
+}  // namespace mvcam
 
 namespace google {
 namespace protobuf {
 
-template <> struct is_proto_enum< ::CameraServer::DeviceControlAction> : ::std::true_type {};
+template <> struct is_proto_enum< ::mvcam::DeviceControlAction> : ::std::true_type {};
 template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::CameraServer::DeviceControlAction>() {
-  return ::CameraServer::DeviceControlAction_descriptor();
+inline const EnumDescriptor* GetEnumDescriptor< ::mvcam::DeviceControlAction>() {
+  return ::mvcam::DeviceControlAction_descriptor();
 }
 
 }  // namespace protobuf

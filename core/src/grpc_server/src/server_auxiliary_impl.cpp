@@ -26,13 +26,13 @@ void camera_backend_server::load_adapters() {
 }
 
 void camera_backend_server::transform_adapter(camera_driver::adapter *src,
-                                              CameraServer::AdapterInfo *dest) {
+                                              mvcam::AdapterInfo *dest) {
   dest->set_description(src->description());
   dest->set_name(src->name());
   dest->set_in_use(true);
   dest->set_version(src->version());
   camera_driver::adapter_capability *adapterCapability = src->capabilities();
-  CameraServer::AdapterCapability *capability = dest->mutable_capability();
+  mvcam::AdapterCapability *capability = dest->mutable_capability();
   capability->set_should_shut_down(adapterCapability->should_shutdown);
 }
 
@@ -80,7 +80,7 @@ void camera_backend_server::update_id_index(std::vector<camera_driver::adapter *
   }
 }
 void camera_backend_server::transform_device_info(const camera_driver::camera_container &src,
-                                                  CameraServer::DeviceInfo *dest) {
+                                                  mvcam::DeviceInfo *dest) {
   dest->set_id(src.camera_descriptor.id);
   dest->set_version("N/A");
   dest->set_manufacture(src.camera_descriptor.manufacture);
@@ -90,7 +90,7 @@ void camera_backend_server::transform_device_info(const camera_driver::camera_co
   transform_device_capabilities(src.device->capabilities(), dest->mutable_capabilities());
 }
 void camera_backend_server::transform_device_capabilities(const camera_driver::camera_capability *src,
-                                                          CameraServer::CameraCapability *dest) const {
+                                                          mvcam::CameraCapability *dest) const {
   dest->set_can_shutdown(src->can_shutdown);
   dest->set_can_open(src->should_open);
   dest->set_can_capture_async(src->can_capture_async);
@@ -112,7 +112,7 @@ void camera_backend_server::transform_device_capabilities(const camera_driver::c
 template<typename T>
 void camera_backend_server::apply_parameter(camera_driver::camera_container &container,
                                             camera_driver::parameter_write<T> &dest,
-                                            const CameraServer::Parameter &param,
+                                            const mvcam::Parameter &param,
                                             std::string fieldName,
                                             bool capability
 ) {
@@ -128,7 +128,7 @@ void camera_backend_server::apply_parameter(camera_driver::camera_container &con
   }
 }
 void camera_backend_server::configure_camera(camera_driver::camera_container &container,
-                                             const CameraServer::ConfigureRequest *configuration) {
+                                             const mvcam::ConfigureRequest *configuration) {
   if (!configuration->has_config()) {
     return;
   }
@@ -136,7 +136,7 @@ void camera_backend_server::configure_camera(camera_driver::camera_container &co
   camera_driver::camera_parameter_write internalConfiguration{};
   camera_driver::camera_capability *cap = container.device->capabilities();
   // configure gain
-  const CameraServer::Configuration &config = configuration->config();
+  const mvcam::Configuration &config = configuration->config();
   if (config.has_gain()) {
     apply_parameter(container,
                     internalConfiguration.gain,
@@ -205,7 +205,7 @@ grpc::Status camera_backend_server::index_camera_call_wrapper(std::string id,
   }
 }
 void camera_backend_server::get_configuration_from_camera(camera_driver::camera_container &container,
-                                                          CameraServer::Configuration *dest) {
+                                                          mvcam::Configuration *dest) {
   camera_driver::camera_parameter_read param{};
   container.device->get_configuration(param);
 
@@ -217,7 +217,7 @@ void camera_backend_server::get_configuration_from_camera(camera_driver::camera_
 //  dest->mutable_frame_number()->set_value(param.frame_number.value);
 }
 
-void camera_backend_server::get_status_from_camera(camera_driver::camera_container &container, CameraServer::Status *dest) {
+void camera_backend_server::get_status_from_camera(camera_driver::camera_container &container, mvcam::Status *dest) {
   camera_driver::status status{};
   if(container.device->opened()) {
     container.device->get_status(status);
@@ -231,7 +231,7 @@ void camera_backend_server::get_status_from_camera(camera_driver::camera_contain
 
 }
 
-void camera_backend_server::transform_frame(const camera_driver::frame &frame, CameraServer::Frame *dest) {
+void camera_backend_server::transform_frame(const camera_driver::frame &frame, mvcam::Frame *dest) {
   dest->set_id(frame.id);
   dest->set_pixel_format(frame.pixel_format);
   dest->set_height(frame.height);

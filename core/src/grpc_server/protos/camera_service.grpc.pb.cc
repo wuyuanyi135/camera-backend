@@ -16,21 +16,21 @@
 #include <grpcpp/impl/codegen/server_callback.h>
 #include <grpcpp/impl/codegen/service_type.h>
 #include <grpcpp/impl/codegen/sync_stream.h>
-namespace CameraServer {
+namespace mvcam {
 
 static const char* CameraService_method_names[] = {
-  "/CameraServer.CameraService/GetAvailableAdapters",
-  "/CameraServer.CameraService/GetDevices",
-  "/CameraServer.CameraService/QueryDeviceById",
-  "/CameraServer.CameraService/OpenCamera",
-  "/CameraServer.CameraService/ShutdownCamera",
-  "/CameraServer.CameraService/ConfigureCamera",
-  "/CameraServer.CameraService/GetConfiguration",
-  "/CameraServer.CameraService/GetStatus",
-  "/CameraServer.CameraService/Capture",
-  "/CameraServer.CameraService/Streaming",
-  "/CameraServer.CameraService/ResetDevice",
-  "/CameraServer.CameraService/ControlDeviceState",
+  "/mvcam.CameraService/GetAvailableAdapters",
+  "/mvcam.CameraService/GetDevices",
+  "/mvcam.CameraService/QueryDeviceById",
+  "/mvcam.CameraService/OpenCamera",
+  "/mvcam.CameraService/ShutdownCamera",
+  "/mvcam.CameraService/ConfigureCamera",
+  "/mvcam.CameraService/GetConfiguration",
+  "/mvcam.CameraService/GetStatus",
+  "/mvcam.CameraService/Capture",
+  "/mvcam.CameraService/Streaming",
+  "/mvcam.CameraService/ResetDevice",
+  "/mvcam.CameraService/ControlDeviceState",
 };
 
 std::unique_ptr< CameraService::Stub> CameraService::NewStub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options) {
@@ -54,195 +54,195 @@ CameraService::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& chan
   , rpcmethod_ControlDeviceState_(CameraService_method_names[11], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   {}
 
-::grpc::Status CameraService::Stub::GetAvailableAdapters(::grpc::ClientContext* context, const ::google::protobuf::Empty& request, ::CameraServer::AvailableAdaptersResponse* response) {
+::grpc::Status CameraService::Stub::GetAvailableAdapters(::grpc::ClientContext* context, const ::google::protobuf::Empty& request, ::mvcam::AvailableAdaptersResponse* response) {
   return ::grpc::internal::BlockingUnaryCall(channel_.get(), rpcmethod_GetAvailableAdapters_, context, request, response);
 }
 
-void CameraService::Stub::experimental_async::GetAvailableAdapters(::grpc::ClientContext* context, const ::google::protobuf::Empty* request, ::CameraServer::AvailableAdaptersResponse* response, std::function<void(::grpc::Status)> f) {
+void CameraService::Stub::experimental_async::GetAvailableAdapters(::grpc::ClientContext* context, const ::google::protobuf::Empty* request, ::mvcam::AvailableAdaptersResponse* response, std::function<void(::grpc::Status)> f) {
   return ::grpc::internal::CallbackUnaryCall(stub_->channel_.get(), stub_->rpcmethod_GetAvailableAdapters_, context, request, response, std::move(f));
 }
 
-::grpc::ClientAsyncResponseReader< ::CameraServer::AvailableAdaptersResponse>* CameraService::Stub::AsyncGetAvailableAdaptersRaw(::grpc::ClientContext* context, const ::google::protobuf::Empty& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::CameraServer::AvailableAdaptersResponse>::Create(channel_.get(), cq, rpcmethod_GetAvailableAdapters_, context, request, true);
+::grpc::ClientAsyncResponseReader< ::mvcam::AvailableAdaptersResponse>* CameraService::Stub::AsyncGetAvailableAdaptersRaw(::grpc::ClientContext* context, const ::google::protobuf::Empty& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::mvcam::AvailableAdaptersResponse>::Create(channel_.get(), cq, rpcmethod_GetAvailableAdapters_, context, request, true);
 }
 
-::grpc::ClientAsyncResponseReader< ::CameraServer::AvailableAdaptersResponse>* CameraService::Stub::PrepareAsyncGetAvailableAdaptersRaw(::grpc::ClientContext* context, const ::google::protobuf::Empty& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::CameraServer::AvailableAdaptersResponse>::Create(channel_.get(), cq, rpcmethod_GetAvailableAdapters_, context, request, false);
+::grpc::ClientAsyncResponseReader< ::mvcam::AvailableAdaptersResponse>* CameraService::Stub::PrepareAsyncGetAvailableAdaptersRaw(::grpc::ClientContext* context, const ::google::protobuf::Empty& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::mvcam::AvailableAdaptersResponse>::Create(channel_.get(), cq, rpcmethod_GetAvailableAdapters_, context, request, false);
 }
 
-::grpc::Status CameraService::Stub::GetDevices(::grpc::ClientContext* context, const ::CameraServer::AdapterRequest& request, ::CameraServer::DeviceListResponse* response) {
+::grpc::Status CameraService::Stub::GetDevices(::grpc::ClientContext* context, const ::mvcam::AdapterRequest& request, ::mvcam::DeviceListResponse* response) {
   return ::grpc::internal::BlockingUnaryCall(channel_.get(), rpcmethod_GetDevices_, context, request, response);
 }
 
-void CameraService::Stub::experimental_async::GetDevices(::grpc::ClientContext* context, const ::CameraServer::AdapterRequest* request, ::CameraServer::DeviceListResponse* response, std::function<void(::grpc::Status)> f) {
+void CameraService::Stub::experimental_async::GetDevices(::grpc::ClientContext* context, const ::mvcam::AdapterRequest* request, ::mvcam::DeviceListResponse* response, std::function<void(::grpc::Status)> f) {
   return ::grpc::internal::CallbackUnaryCall(stub_->channel_.get(), stub_->rpcmethod_GetDevices_, context, request, response, std::move(f));
 }
 
-::grpc::ClientAsyncResponseReader< ::CameraServer::DeviceListResponse>* CameraService::Stub::AsyncGetDevicesRaw(::grpc::ClientContext* context, const ::CameraServer::AdapterRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::CameraServer::DeviceListResponse>::Create(channel_.get(), cq, rpcmethod_GetDevices_, context, request, true);
+::grpc::ClientAsyncResponseReader< ::mvcam::DeviceListResponse>* CameraService::Stub::AsyncGetDevicesRaw(::grpc::ClientContext* context, const ::mvcam::AdapterRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::mvcam::DeviceListResponse>::Create(channel_.get(), cq, rpcmethod_GetDevices_, context, request, true);
 }
 
-::grpc::ClientAsyncResponseReader< ::CameraServer::DeviceListResponse>* CameraService::Stub::PrepareAsyncGetDevicesRaw(::grpc::ClientContext* context, const ::CameraServer::AdapterRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::CameraServer::DeviceListResponse>::Create(channel_.get(), cq, rpcmethod_GetDevices_, context, request, false);
+::grpc::ClientAsyncResponseReader< ::mvcam::DeviceListResponse>* CameraService::Stub::PrepareAsyncGetDevicesRaw(::grpc::ClientContext* context, const ::mvcam::AdapterRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::mvcam::DeviceListResponse>::Create(channel_.get(), cq, rpcmethod_GetDevices_, context, request, false);
 }
 
-::grpc::Status CameraService::Stub::QueryDeviceById(::grpc::ClientContext* context, const ::CameraServer::IdRequest& request, ::CameraServer::DeviceInfo* response) {
+::grpc::Status CameraService::Stub::QueryDeviceById(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::mvcam::DeviceInfo* response) {
   return ::grpc::internal::BlockingUnaryCall(channel_.get(), rpcmethod_QueryDeviceById_, context, request, response);
 }
 
-void CameraService::Stub::experimental_async::QueryDeviceById(::grpc::ClientContext* context, const ::CameraServer::IdRequest* request, ::CameraServer::DeviceInfo* response, std::function<void(::grpc::Status)> f) {
+void CameraService::Stub::experimental_async::QueryDeviceById(::grpc::ClientContext* context, const ::mvcam::IdRequest* request, ::mvcam::DeviceInfo* response, std::function<void(::grpc::Status)> f) {
   return ::grpc::internal::CallbackUnaryCall(stub_->channel_.get(), stub_->rpcmethod_QueryDeviceById_, context, request, response, std::move(f));
 }
 
-::grpc::ClientAsyncResponseReader< ::CameraServer::DeviceInfo>* CameraService::Stub::AsyncQueryDeviceByIdRaw(::grpc::ClientContext* context, const ::CameraServer::IdRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::CameraServer::DeviceInfo>::Create(channel_.get(), cq, rpcmethod_QueryDeviceById_, context, request, true);
+::grpc::ClientAsyncResponseReader< ::mvcam::DeviceInfo>* CameraService::Stub::AsyncQueryDeviceByIdRaw(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::mvcam::DeviceInfo>::Create(channel_.get(), cq, rpcmethod_QueryDeviceById_, context, request, true);
 }
 
-::grpc::ClientAsyncResponseReader< ::CameraServer::DeviceInfo>* CameraService::Stub::PrepareAsyncQueryDeviceByIdRaw(::grpc::ClientContext* context, const ::CameraServer::IdRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::CameraServer::DeviceInfo>::Create(channel_.get(), cq, rpcmethod_QueryDeviceById_, context, request, false);
+::grpc::ClientAsyncResponseReader< ::mvcam::DeviceInfo>* CameraService::Stub::PrepareAsyncQueryDeviceByIdRaw(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::mvcam::DeviceInfo>::Create(channel_.get(), cq, rpcmethod_QueryDeviceById_, context, request, false);
 }
 
-::grpc::Status CameraService::Stub::OpenCamera(::grpc::ClientContext* context, const ::CameraServer::IdRequest& request, ::google::protobuf::Empty* response) {
+::grpc::Status CameraService::Stub::OpenCamera(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::google::protobuf::Empty* response) {
   return ::grpc::internal::BlockingUnaryCall(channel_.get(), rpcmethod_OpenCamera_, context, request, response);
 }
 
-void CameraService::Stub::experimental_async::OpenCamera(::grpc::ClientContext* context, const ::CameraServer::IdRequest* request, ::google::protobuf::Empty* response, std::function<void(::grpc::Status)> f) {
+void CameraService::Stub::experimental_async::OpenCamera(::grpc::ClientContext* context, const ::mvcam::IdRequest* request, ::google::protobuf::Empty* response, std::function<void(::grpc::Status)> f) {
   return ::grpc::internal::CallbackUnaryCall(stub_->channel_.get(), stub_->rpcmethod_OpenCamera_, context, request, response, std::move(f));
 }
 
-::grpc::ClientAsyncResponseReader< ::google::protobuf::Empty>* CameraService::Stub::AsyncOpenCameraRaw(::grpc::ClientContext* context, const ::CameraServer::IdRequest& request, ::grpc::CompletionQueue* cq) {
+::grpc::ClientAsyncResponseReader< ::google::protobuf::Empty>* CameraService::Stub::AsyncOpenCameraRaw(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::grpc::CompletionQueue* cq) {
   return ::grpc::internal::ClientAsyncResponseReaderFactory< ::google::protobuf::Empty>::Create(channel_.get(), cq, rpcmethod_OpenCamera_, context, request, true);
 }
 
-::grpc::ClientAsyncResponseReader< ::google::protobuf::Empty>* CameraService::Stub::PrepareAsyncOpenCameraRaw(::grpc::ClientContext* context, const ::CameraServer::IdRequest& request, ::grpc::CompletionQueue* cq) {
+::grpc::ClientAsyncResponseReader< ::google::protobuf::Empty>* CameraService::Stub::PrepareAsyncOpenCameraRaw(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::grpc::CompletionQueue* cq) {
   return ::grpc::internal::ClientAsyncResponseReaderFactory< ::google::protobuf::Empty>::Create(channel_.get(), cq, rpcmethod_OpenCamera_, context, request, false);
 }
 
-::grpc::Status CameraService::Stub::ShutdownCamera(::grpc::ClientContext* context, const ::CameraServer::IdRequest& request, ::google::protobuf::Empty* response) {
+::grpc::Status CameraService::Stub::ShutdownCamera(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::google::protobuf::Empty* response) {
   return ::grpc::internal::BlockingUnaryCall(channel_.get(), rpcmethod_ShutdownCamera_, context, request, response);
 }
 
-void CameraService::Stub::experimental_async::ShutdownCamera(::grpc::ClientContext* context, const ::CameraServer::IdRequest* request, ::google::protobuf::Empty* response, std::function<void(::grpc::Status)> f) {
+void CameraService::Stub::experimental_async::ShutdownCamera(::grpc::ClientContext* context, const ::mvcam::IdRequest* request, ::google::protobuf::Empty* response, std::function<void(::grpc::Status)> f) {
   return ::grpc::internal::CallbackUnaryCall(stub_->channel_.get(), stub_->rpcmethod_ShutdownCamera_, context, request, response, std::move(f));
 }
 
-::grpc::ClientAsyncResponseReader< ::google::protobuf::Empty>* CameraService::Stub::AsyncShutdownCameraRaw(::grpc::ClientContext* context, const ::CameraServer::IdRequest& request, ::grpc::CompletionQueue* cq) {
+::grpc::ClientAsyncResponseReader< ::google::protobuf::Empty>* CameraService::Stub::AsyncShutdownCameraRaw(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::grpc::CompletionQueue* cq) {
   return ::grpc::internal::ClientAsyncResponseReaderFactory< ::google::protobuf::Empty>::Create(channel_.get(), cq, rpcmethod_ShutdownCamera_, context, request, true);
 }
 
-::grpc::ClientAsyncResponseReader< ::google::protobuf::Empty>* CameraService::Stub::PrepareAsyncShutdownCameraRaw(::grpc::ClientContext* context, const ::CameraServer::IdRequest& request, ::grpc::CompletionQueue* cq) {
+::grpc::ClientAsyncResponseReader< ::google::protobuf::Empty>* CameraService::Stub::PrepareAsyncShutdownCameraRaw(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::grpc::CompletionQueue* cq) {
   return ::grpc::internal::ClientAsyncResponseReaderFactory< ::google::protobuf::Empty>::Create(channel_.get(), cq, rpcmethod_ShutdownCamera_, context, request, false);
 }
 
-::grpc::Status CameraService::Stub::ConfigureCamera(::grpc::ClientContext* context, const ::CameraServer::ConfigureRequest& request, ::google::protobuf::Empty* response) {
+::grpc::Status CameraService::Stub::ConfigureCamera(::grpc::ClientContext* context, const ::mvcam::ConfigureRequest& request, ::google::protobuf::Empty* response) {
   return ::grpc::internal::BlockingUnaryCall(channel_.get(), rpcmethod_ConfigureCamera_, context, request, response);
 }
 
-void CameraService::Stub::experimental_async::ConfigureCamera(::grpc::ClientContext* context, const ::CameraServer::ConfigureRequest* request, ::google::protobuf::Empty* response, std::function<void(::grpc::Status)> f) {
+void CameraService::Stub::experimental_async::ConfigureCamera(::grpc::ClientContext* context, const ::mvcam::ConfigureRequest* request, ::google::protobuf::Empty* response, std::function<void(::grpc::Status)> f) {
   return ::grpc::internal::CallbackUnaryCall(stub_->channel_.get(), stub_->rpcmethod_ConfigureCamera_, context, request, response, std::move(f));
 }
 
-::grpc::ClientAsyncResponseReader< ::google::protobuf::Empty>* CameraService::Stub::AsyncConfigureCameraRaw(::grpc::ClientContext* context, const ::CameraServer::ConfigureRequest& request, ::grpc::CompletionQueue* cq) {
+::grpc::ClientAsyncResponseReader< ::google::protobuf::Empty>* CameraService::Stub::AsyncConfigureCameraRaw(::grpc::ClientContext* context, const ::mvcam::ConfigureRequest& request, ::grpc::CompletionQueue* cq) {
   return ::grpc::internal::ClientAsyncResponseReaderFactory< ::google::protobuf::Empty>::Create(channel_.get(), cq, rpcmethod_ConfigureCamera_, context, request, true);
 }
 
-::grpc::ClientAsyncResponseReader< ::google::protobuf::Empty>* CameraService::Stub::PrepareAsyncConfigureCameraRaw(::grpc::ClientContext* context, const ::CameraServer::ConfigureRequest& request, ::grpc::CompletionQueue* cq) {
+::grpc::ClientAsyncResponseReader< ::google::protobuf::Empty>* CameraService::Stub::PrepareAsyncConfigureCameraRaw(::grpc::ClientContext* context, const ::mvcam::ConfigureRequest& request, ::grpc::CompletionQueue* cq) {
   return ::grpc::internal::ClientAsyncResponseReaderFactory< ::google::protobuf::Empty>::Create(channel_.get(), cq, rpcmethod_ConfigureCamera_, context, request, false);
 }
 
-::grpc::Status CameraService::Stub::GetConfiguration(::grpc::ClientContext* context, const ::CameraServer::IdRequest& request, ::CameraServer::Configuration* response) {
+::grpc::Status CameraService::Stub::GetConfiguration(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::mvcam::Configuration* response) {
   return ::grpc::internal::BlockingUnaryCall(channel_.get(), rpcmethod_GetConfiguration_, context, request, response);
 }
 
-void CameraService::Stub::experimental_async::GetConfiguration(::grpc::ClientContext* context, const ::CameraServer::IdRequest* request, ::CameraServer::Configuration* response, std::function<void(::grpc::Status)> f) {
+void CameraService::Stub::experimental_async::GetConfiguration(::grpc::ClientContext* context, const ::mvcam::IdRequest* request, ::mvcam::Configuration* response, std::function<void(::grpc::Status)> f) {
   return ::grpc::internal::CallbackUnaryCall(stub_->channel_.get(), stub_->rpcmethod_GetConfiguration_, context, request, response, std::move(f));
 }
 
-::grpc::ClientAsyncResponseReader< ::CameraServer::Configuration>* CameraService::Stub::AsyncGetConfigurationRaw(::grpc::ClientContext* context, const ::CameraServer::IdRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::CameraServer::Configuration>::Create(channel_.get(), cq, rpcmethod_GetConfiguration_, context, request, true);
+::grpc::ClientAsyncResponseReader< ::mvcam::Configuration>* CameraService::Stub::AsyncGetConfigurationRaw(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::mvcam::Configuration>::Create(channel_.get(), cq, rpcmethod_GetConfiguration_, context, request, true);
 }
 
-::grpc::ClientAsyncResponseReader< ::CameraServer::Configuration>* CameraService::Stub::PrepareAsyncGetConfigurationRaw(::grpc::ClientContext* context, const ::CameraServer::IdRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::CameraServer::Configuration>::Create(channel_.get(), cq, rpcmethod_GetConfiguration_, context, request, false);
+::grpc::ClientAsyncResponseReader< ::mvcam::Configuration>* CameraService::Stub::PrepareAsyncGetConfigurationRaw(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::mvcam::Configuration>::Create(channel_.get(), cq, rpcmethod_GetConfiguration_, context, request, false);
 }
 
-::grpc::Status CameraService::Stub::GetStatus(::grpc::ClientContext* context, const ::CameraServer::IdRequest& request, ::CameraServer::Status* response) {
+::grpc::Status CameraService::Stub::GetStatus(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::mvcam::Status* response) {
   return ::grpc::internal::BlockingUnaryCall(channel_.get(), rpcmethod_GetStatus_, context, request, response);
 }
 
-void CameraService::Stub::experimental_async::GetStatus(::grpc::ClientContext* context, const ::CameraServer::IdRequest* request, ::CameraServer::Status* response, std::function<void(::grpc::Status)> f) {
+void CameraService::Stub::experimental_async::GetStatus(::grpc::ClientContext* context, const ::mvcam::IdRequest* request, ::mvcam::Status* response, std::function<void(::grpc::Status)> f) {
   return ::grpc::internal::CallbackUnaryCall(stub_->channel_.get(), stub_->rpcmethod_GetStatus_, context, request, response, std::move(f));
 }
 
-::grpc::ClientAsyncResponseReader< ::CameraServer::Status>* CameraService::Stub::AsyncGetStatusRaw(::grpc::ClientContext* context, const ::CameraServer::IdRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::CameraServer::Status>::Create(channel_.get(), cq, rpcmethod_GetStatus_, context, request, true);
+::grpc::ClientAsyncResponseReader< ::mvcam::Status>* CameraService::Stub::AsyncGetStatusRaw(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::mvcam::Status>::Create(channel_.get(), cq, rpcmethod_GetStatus_, context, request, true);
 }
 
-::grpc::ClientAsyncResponseReader< ::CameraServer::Status>* CameraService::Stub::PrepareAsyncGetStatusRaw(::grpc::ClientContext* context, const ::CameraServer::IdRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::CameraServer::Status>::Create(channel_.get(), cq, rpcmethod_GetStatus_, context, request, false);
+::grpc::ClientAsyncResponseReader< ::mvcam::Status>* CameraService::Stub::PrepareAsyncGetStatusRaw(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::mvcam::Status>::Create(channel_.get(), cq, rpcmethod_GetStatus_, context, request, false);
 }
 
-::grpc::Status CameraService::Stub::Capture(::grpc::ClientContext* context, const ::CameraServer::IdRequest& request, ::CameraServer::Frame* response) {
+::grpc::Status CameraService::Stub::Capture(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::mvcam::Frame* response) {
   return ::grpc::internal::BlockingUnaryCall(channel_.get(), rpcmethod_Capture_, context, request, response);
 }
 
-void CameraService::Stub::experimental_async::Capture(::grpc::ClientContext* context, const ::CameraServer::IdRequest* request, ::CameraServer::Frame* response, std::function<void(::grpc::Status)> f) {
+void CameraService::Stub::experimental_async::Capture(::grpc::ClientContext* context, const ::mvcam::IdRequest* request, ::mvcam::Frame* response, std::function<void(::grpc::Status)> f) {
   return ::grpc::internal::CallbackUnaryCall(stub_->channel_.get(), stub_->rpcmethod_Capture_, context, request, response, std::move(f));
 }
 
-::grpc::ClientAsyncResponseReader< ::CameraServer::Frame>* CameraService::Stub::AsyncCaptureRaw(::grpc::ClientContext* context, const ::CameraServer::IdRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::CameraServer::Frame>::Create(channel_.get(), cq, rpcmethod_Capture_, context, request, true);
+::grpc::ClientAsyncResponseReader< ::mvcam::Frame>* CameraService::Stub::AsyncCaptureRaw(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::mvcam::Frame>::Create(channel_.get(), cq, rpcmethod_Capture_, context, request, true);
 }
 
-::grpc::ClientAsyncResponseReader< ::CameraServer::Frame>* CameraService::Stub::PrepareAsyncCaptureRaw(::grpc::ClientContext* context, const ::CameraServer::IdRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::CameraServer::Frame>::Create(channel_.get(), cq, rpcmethod_Capture_, context, request, false);
+::grpc::ClientAsyncResponseReader< ::mvcam::Frame>* CameraService::Stub::PrepareAsyncCaptureRaw(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::mvcam::Frame>::Create(channel_.get(), cq, rpcmethod_Capture_, context, request, false);
 }
 
-::grpc::ClientReader< ::CameraServer::FrameStream>* CameraService::Stub::StreamingRaw(::grpc::ClientContext* context, const ::CameraServer::StreamingRequest& request) {
-  return ::grpc::internal::ClientReaderFactory< ::CameraServer::FrameStream>::Create(channel_.get(), rpcmethod_Streaming_, context, request);
+::grpc::ClientReader< ::mvcam::FrameStream>* CameraService::Stub::StreamingRaw(::grpc::ClientContext* context, const ::mvcam::StreamingRequest& request) {
+  return ::grpc::internal::ClientReaderFactory< ::mvcam::FrameStream>::Create(channel_.get(), rpcmethod_Streaming_, context, request);
 }
 
-void CameraService::Stub::experimental_async::Streaming(::grpc::ClientContext* context, ::CameraServer::StreamingRequest* request, ::grpc::experimental::ClientReadReactor< ::CameraServer::FrameStream>* reactor) {
-  ::grpc::internal::ClientCallbackReaderFactory< ::CameraServer::FrameStream>::Create(stub_->channel_.get(), stub_->rpcmethod_Streaming_, context, request, reactor);
+void CameraService::Stub::experimental_async::Streaming(::grpc::ClientContext* context, ::mvcam::StreamingRequest* request, ::grpc::experimental::ClientReadReactor< ::mvcam::FrameStream>* reactor) {
+  ::grpc::internal::ClientCallbackReaderFactory< ::mvcam::FrameStream>::Create(stub_->channel_.get(), stub_->rpcmethod_Streaming_, context, request, reactor);
 }
 
-::grpc::ClientAsyncReader< ::CameraServer::FrameStream>* CameraService::Stub::AsyncStreamingRaw(::grpc::ClientContext* context, const ::CameraServer::StreamingRequest& request, ::grpc::CompletionQueue* cq, void* tag) {
-  return ::grpc::internal::ClientAsyncReaderFactory< ::CameraServer::FrameStream>::Create(channel_.get(), cq, rpcmethod_Streaming_, context, request, true, tag);
+::grpc::ClientAsyncReader< ::mvcam::FrameStream>* CameraService::Stub::AsyncStreamingRaw(::grpc::ClientContext* context, const ::mvcam::StreamingRequest& request, ::grpc::CompletionQueue* cq, void* tag) {
+  return ::grpc::internal::ClientAsyncReaderFactory< ::mvcam::FrameStream>::Create(channel_.get(), cq, rpcmethod_Streaming_, context, request, true, tag);
 }
 
-::grpc::ClientAsyncReader< ::CameraServer::FrameStream>* CameraService::Stub::PrepareAsyncStreamingRaw(::grpc::ClientContext* context, const ::CameraServer::StreamingRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncReaderFactory< ::CameraServer::FrameStream>::Create(channel_.get(), cq, rpcmethod_Streaming_, context, request, false, nullptr);
+::grpc::ClientAsyncReader< ::mvcam::FrameStream>* CameraService::Stub::PrepareAsyncStreamingRaw(::grpc::ClientContext* context, const ::mvcam::StreamingRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncReaderFactory< ::mvcam::FrameStream>::Create(channel_.get(), cq, rpcmethod_Streaming_, context, request, false, nullptr);
 }
 
-::grpc::Status CameraService::Stub::ResetDevice(::grpc::ClientContext* context, const ::CameraServer::IdRequest& request, ::google::protobuf::Empty* response) {
+::grpc::Status CameraService::Stub::ResetDevice(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::google::protobuf::Empty* response) {
   return ::grpc::internal::BlockingUnaryCall(channel_.get(), rpcmethod_ResetDevice_, context, request, response);
 }
 
-void CameraService::Stub::experimental_async::ResetDevice(::grpc::ClientContext* context, const ::CameraServer::IdRequest* request, ::google::protobuf::Empty* response, std::function<void(::grpc::Status)> f) {
+void CameraService::Stub::experimental_async::ResetDevice(::grpc::ClientContext* context, const ::mvcam::IdRequest* request, ::google::protobuf::Empty* response, std::function<void(::grpc::Status)> f) {
   return ::grpc::internal::CallbackUnaryCall(stub_->channel_.get(), stub_->rpcmethod_ResetDevice_, context, request, response, std::move(f));
 }
 
-::grpc::ClientAsyncResponseReader< ::google::protobuf::Empty>* CameraService::Stub::AsyncResetDeviceRaw(::grpc::ClientContext* context, const ::CameraServer::IdRequest& request, ::grpc::CompletionQueue* cq) {
+::grpc::ClientAsyncResponseReader< ::google::protobuf::Empty>* CameraService::Stub::AsyncResetDeviceRaw(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::grpc::CompletionQueue* cq) {
   return ::grpc::internal::ClientAsyncResponseReaderFactory< ::google::protobuf::Empty>::Create(channel_.get(), cq, rpcmethod_ResetDevice_, context, request, true);
 }
 
-::grpc::ClientAsyncResponseReader< ::google::protobuf::Empty>* CameraService::Stub::PrepareAsyncResetDeviceRaw(::grpc::ClientContext* context, const ::CameraServer::IdRequest& request, ::grpc::CompletionQueue* cq) {
+::grpc::ClientAsyncResponseReader< ::google::protobuf::Empty>* CameraService::Stub::PrepareAsyncResetDeviceRaw(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::grpc::CompletionQueue* cq) {
   return ::grpc::internal::ClientAsyncResponseReaderFactory< ::google::protobuf::Empty>::Create(channel_.get(), cq, rpcmethod_ResetDevice_, context, request, false);
 }
 
-::grpc::Status CameraService::Stub::ControlDeviceState(::grpc::ClientContext* context, const ::CameraServer::DeviceControlRequest& request, ::google::protobuf::Empty* response) {
+::grpc::Status CameraService::Stub::ControlDeviceState(::grpc::ClientContext* context, const ::mvcam::DeviceControlRequest& request, ::google::protobuf::Empty* response) {
   return ::grpc::internal::BlockingUnaryCall(channel_.get(), rpcmethod_ControlDeviceState_, context, request, response);
 }
 
-void CameraService::Stub::experimental_async::ControlDeviceState(::grpc::ClientContext* context, const ::CameraServer::DeviceControlRequest* request, ::google::protobuf::Empty* response, std::function<void(::grpc::Status)> f) {
+void CameraService::Stub::experimental_async::ControlDeviceState(::grpc::ClientContext* context, const ::mvcam::DeviceControlRequest* request, ::google::protobuf::Empty* response, std::function<void(::grpc::Status)> f) {
   return ::grpc::internal::CallbackUnaryCall(stub_->channel_.get(), stub_->rpcmethod_ControlDeviceState_, context, request, response, std::move(f));
 }
 
-::grpc::ClientAsyncResponseReader< ::google::protobuf::Empty>* CameraService::Stub::AsyncControlDeviceStateRaw(::grpc::ClientContext* context, const ::CameraServer::DeviceControlRequest& request, ::grpc::CompletionQueue* cq) {
+::grpc::ClientAsyncResponseReader< ::google::protobuf::Empty>* CameraService::Stub::AsyncControlDeviceStateRaw(::grpc::ClientContext* context, const ::mvcam::DeviceControlRequest& request, ::grpc::CompletionQueue* cq) {
   return ::grpc::internal::ClientAsyncResponseReaderFactory< ::google::protobuf::Empty>::Create(channel_.get(), cq, rpcmethod_ControlDeviceState_, context, request, true);
 }
 
-::grpc::ClientAsyncResponseReader< ::google::protobuf::Empty>* CameraService::Stub::PrepareAsyncControlDeviceStateRaw(::grpc::ClientContext* context, const ::CameraServer::DeviceControlRequest& request, ::grpc::CompletionQueue* cq) {
+::grpc::ClientAsyncResponseReader< ::google::protobuf::Empty>* CameraService::Stub::PrepareAsyncControlDeviceStateRaw(::grpc::ClientContext* context, const ::mvcam::DeviceControlRequest& request, ::grpc::CompletionQueue* cq) {
   return ::grpc::internal::ClientAsyncResponseReaderFactory< ::google::protobuf::Empty>::Create(channel_.get(), cq, rpcmethod_ControlDeviceState_, context, request, false);
 }
 
@@ -250,146 +250,146 @@ CameraService::Service::Service() {
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       CameraService_method_names[0],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< CameraService::Service, ::google::protobuf::Empty, ::CameraServer::AvailableAdaptersResponse>(
+      new ::grpc::internal::RpcMethodHandler< CameraService::Service, ::google::protobuf::Empty, ::mvcam::AvailableAdaptersResponse>(
           std::mem_fn(&CameraService::Service::GetAvailableAdapters), this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       CameraService_method_names[1],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< CameraService::Service, ::CameraServer::AdapterRequest, ::CameraServer::DeviceListResponse>(
+      new ::grpc::internal::RpcMethodHandler< CameraService::Service, ::mvcam::AdapterRequest, ::mvcam::DeviceListResponse>(
           std::mem_fn(&CameraService::Service::GetDevices), this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       CameraService_method_names[2],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< CameraService::Service, ::CameraServer::IdRequest, ::CameraServer::DeviceInfo>(
+      new ::grpc::internal::RpcMethodHandler< CameraService::Service, ::mvcam::IdRequest, ::mvcam::DeviceInfo>(
           std::mem_fn(&CameraService::Service::QueryDeviceById), this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       CameraService_method_names[3],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< CameraService::Service, ::CameraServer::IdRequest, ::google::protobuf::Empty>(
+      new ::grpc::internal::RpcMethodHandler< CameraService::Service, ::mvcam::IdRequest, ::google::protobuf::Empty>(
           std::mem_fn(&CameraService::Service::OpenCamera), this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       CameraService_method_names[4],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< CameraService::Service, ::CameraServer::IdRequest, ::google::protobuf::Empty>(
+      new ::grpc::internal::RpcMethodHandler< CameraService::Service, ::mvcam::IdRequest, ::google::protobuf::Empty>(
           std::mem_fn(&CameraService::Service::ShutdownCamera), this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       CameraService_method_names[5],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< CameraService::Service, ::CameraServer::ConfigureRequest, ::google::protobuf::Empty>(
+      new ::grpc::internal::RpcMethodHandler< CameraService::Service, ::mvcam::ConfigureRequest, ::google::protobuf::Empty>(
           std::mem_fn(&CameraService::Service::ConfigureCamera), this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       CameraService_method_names[6],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< CameraService::Service, ::CameraServer::IdRequest, ::CameraServer::Configuration>(
+      new ::grpc::internal::RpcMethodHandler< CameraService::Service, ::mvcam::IdRequest, ::mvcam::Configuration>(
           std::mem_fn(&CameraService::Service::GetConfiguration), this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       CameraService_method_names[7],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< CameraService::Service, ::CameraServer::IdRequest, ::CameraServer::Status>(
+      new ::grpc::internal::RpcMethodHandler< CameraService::Service, ::mvcam::IdRequest, ::mvcam::Status>(
           std::mem_fn(&CameraService::Service::GetStatus), this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       CameraService_method_names[8],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< CameraService::Service, ::CameraServer::IdRequest, ::CameraServer::Frame>(
+      new ::grpc::internal::RpcMethodHandler< CameraService::Service, ::mvcam::IdRequest, ::mvcam::Frame>(
           std::mem_fn(&CameraService::Service::Capture), this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       CameraService_method_names[9],
       ::grpc::internal::RpcMethod::SERVER_STREAMING,
-      new ::grpc::internal::ServerStreamingHandler< CameraService::Service, ::CameraServer::StreamingRequest, ::CameraServer::FrameStream>(
+      new ::grpc::internal::ServerStreamingHandler< CameraService::Service, ::mvcam::StreamingRequest, ::mvcam::FrameStream>(
           std::mem_fn(&CameraService::Service::Streaming), this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       CameraService_method_names[10],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< CameraService::Service, ::CameraServer::IdRequest, ::google::protobuf::Empty>(
+      new ::grpc::internal::RpcMethodHandler< CameraService::Service, ::mvcam::IdRequest, ::google::protobuf::Empty>(
           std::mem_fn(&CameraService::Service::ResetDevice), this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       CameraService_method_names[11],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< CameraService::Service, ::CameraServer::DeviceControlRequest, ::google::protobuf::Empty>(
+      new ::grpc::internal::RpcMethodHandler< CameraService::Service, ::mvcam::DeviceControlRequest, ::google::protobuf::Empty>(
           std::mem_fn(&CameraService::Service::ControlDeviceState), this)));
 }
 
 CameraService::Service::~Service() {
 }
 
-::grpc::Status CameraService::Service::GetAvailableAdapters(::grpc::ServerContext* context, const ::google::protobuf::Empty* request, ::CameraServer::AvailableAdaptersResponse* response) {
+::grpc::Status CameraService::Service::GetAvailableAdapters(::grpc::ServerContext* context, const ::google::protobuf::Empty* request, ::mvcam::AvailableAdaptersResponse* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status CameraService::Service::GetDevices(::grpc::ServerContext* context, const ::CameraServer::AdapterRequest* request, ::CameraServer::DeviceListResponse* response) {
+::grpc::Status CameraService::Service::GetDevices(::grpc::ServerContext* context, const ::mvcam::AdapterRequest* request, ::mvcam::DeviceListResponse* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status CameraService::Service::QueryDeviceById(::grpc::ServerContext* context, const ::CameraServer::IdRequest* request, ::CameraServer::DeviceInfo* response) {
+::grpc::Status CameraService::Service::QueryDeviceById(::grpc::ServerContext* context, const ::mvcam::IdRequest* request, ::mvcam::DeviceInfo* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status CameraService::Service::OpenCamera(::grpc::ServerContext* context, const ::CameraServer::IdRequest* request, ::google::protobuf::Empty* response) {
+::grpc::Status CameraService::Service::OpenCamera(::grpc::ServerContext* context, const ::mvcam::IdRequest* request, ::google::protobuf::Empty* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status CameraService::Service::ShutdownCamera(::grpc::ServerContext* context, const ::CameraServer::IdRequest* request, ::google::protobuf::Empty* response) {
+::grpc::Status CameraService::Service::ShutdownCamera(::grpc::ServerContext* context, const ::mvcam::IdRequest* request, ::google::protobuf::Empty* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status CameraService::Service::ConfigureCamera(::grpc::ServerContext* context, const ::CameraServer::ConfigureRequest* request, ::google::protobuf::Empty* response) {
+::grpc::Status CameraService::Service::ConfigureCamera(::grpc::ServerContext* context, const ::mvcam::ConfigureRequest* request, ::google::protobuf::Empty* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status CameraService::Service::GetConfiguration(::grpc::ServerContext* context, const ::CameraServer::IdRequest* request, ::CameraServer::Configuration* response) {
+::grpc::Status CameraService::Service::GetConfiguration(::grpc::ServerContext* context, const ::mvcam::IdRequest* request, ::mvcam::Configuration* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status CameraService::Service::GetStatus(::grpc::ServerContext* context, const ::CameraServer::IdRequest* request, ::CameraServer::Status* response) {
+::grpc::Status CameraService::Service::GetStatus(::grpc::ServerContext* context, const ::mvcam::IdRequest* request, ::mvcam::Status* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status CameraService::Service::Capture(::grpc::ServerContext* context, const ::CameraServer::IdRequest* request, ::CameraServer::Frame* response) {
+::grpc::Status CameraService::Service::Capture(::grpc::ServerContext* context, const ::mvcam::IdRequest* request, ::mvcam::Frame* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status CameraService::Service::Streaming(::grpc::ServerContext* context, const ::CameraServer::StreamingRequest* request, ::grpc::ServerWriter< ::CameraServer::FrameStream>* writer) {
+::grpc::Status CameraService::Service::Streaming(::grpc::ServerContext* context, const ::mvcam::StreamingRequest* request, ::grpc::ServerWriter< ::mvcam::FrameStream>* writer) {
   (void) context;
   (void) request;
   (void) writer;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status CameraService::Service::ResetDevice(::grpc::ServerContext* context, const ::CameraServer::IdRequest* request, ::google::protobuf::Empty* response) {
+::grpc::Status CameraService::Service::ResetDevice(::grpc::ServerContext* context, const ::mvcam::IdRequest* request, ::google::protobuf::Empty* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status CameraService::Service::ControlDeviceState(::grpc::ServerContext* context, const ::CameraServer::DeviceControlRequest* request, ::google::protobuf::Empty* response) {
+::grpc::Status CameraService::Service::ControlDeviceState(::grpc::ServerContext* context, const ::mvcam::DeviceControlRequest* request, ::google::protobuf::Empty* response) {
   (void) context;
   (void) request;
   (void) response;
@@ -397,5 +397,5 @@ CameraService::Service::~Service() {
 }
 
 
-}  // namespace CameraServer
+}  // namespace mvcam
 

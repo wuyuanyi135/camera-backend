@@ -38,7 +38,7 @@ struct client_fixture {
         std::string("localhost:") + config_provider::get_instance()->read("listen_port"),
         grpc::InsecureChannelCredentials()
     );
-    stub = CameraServer::CameraService::NewStub(channel);
+    stub = mvcam::CameraService::NewStub(channel);
 
     BOOST_TEST_MESSAGE("Starting grpc client");
   }
@@ -46,7 +46,7 @@ struct client_fixture {
   }
   std::shared_ptr<grpc::Channel> channel;
  public:
-  std::unique_ptr<CameraServer::CameraService::Stub> stub;
+  std::unique_ptr<mvcam::CameraService::Stub> stub;
 
 };
 BOOST_AUTO_TEST_SUITE(test_grpc_camera_server)
@@ -55,7 +55,7 @@ BOOST_AUTO_TEST_CASE(test_get_adapter) {
   client_fixture client;
   grpc::ClientContext context;
   google::protobuf::Empty empty;
-  CameraServer::AvailableAdaptersResponse resp;
+  mvcam::AvailableAdaptersResponse resp;
   grpc::Status status = client.stub->GetAvailableAdapters(&context, empty, &resp);
   if (!status.ok()) {
     BOOST_TEST_FAIL(status.error_message());
@@ -73,8 +73,8 @@ BOOST_AUTO_TEST_CASE(test_get_adapter) {
 BOOST_AUTO_TEST_CASE(test_list_cameras) {
   client_fixture client;
   grpc::ClientContext context;
-  CameraServer::AdapterRequest req;
-  CameraServer::DeviceListResponse resp;
+  mvcam::AdapterRequest req;
+  mvcam::DeviceListResponse resp;
 
   grpc::Status status = client.stub->GetDevices(&context, req, &resp);
   if (!status.ok()) {
@@ -94,8 +94,8 @@ BOOST_AUTO_TEST_CASE(test_list_cameras) {
 }
 BOOST_AUTO_TEST_CASE(test_detect_multiple_times) {
   client_fixture client;
-  CameraServer::AdapterRequest req;
-  CameraServer::DeviceListResponse resp;
+  mvcam::AdapterRequest req;
+  mvcam::DeviceListResponse resp;
 
   for (int i = 0; i < 10; ++i) {
     grpc::ClientContext context;
@@ -114,15 +114,15 @@ BOOST_AUTO_TEST_CASE(test_detect_multiple_times) {
 BOOST_AUTO_TEST_CASE(test_open_shutdown_existing_camera) {
 
   client_fixture client;
-  CameraServer::DeviceInfo device;
-  CameraServer::IdRequest idRequest;
+  mvcam::DeviceInfo device;
+  mvcam::IdRequest idRequest;
   google::protobuf::Empty emptyResponse;
-  CameraServer::Status statusResponse;
+  mvcam::Status statusResponse;
 
   {
     grpc::ClientContext context;
-    CameraServer::AdapterRequest req;
-    CameraServer::DeviceListResponse resp;
+    mvcam::AdapterRequest req;
+    mvcam::DeviceListResponse resp;
 
     grpc::Status status = client.stub->GetDevices(&context, req, &resp);
     if (!status.ok()) {
@@ -158,7 +158,7 @@ BOOST_AUTO_TEST_CASE(test_open_shutdown_existing_camera) {
 
   {
     grpc::ClientContext context;
-    CameraServer::Status statusResponse;
+    mvcam::Status statusResponse;
 
     grpc::Status status = client.stub->GetStatus(&context, idRequest, &statusResponse);
     if (!status.ok()) {
@@ -196,8 +196,8 @@ BOOST_AUTO_TEST_CASE(test_open_non_existing_camera) {
 
   {
     grpc::ClientContext context;
-    CameraServer::AdapterRequest req;
-    CameraServer::DeviceListResponse resp;
+    mvcam::AdapterRequest req;
+    mvcam::DeviceListResponse resp;
 
     grpc::Status status = client.stub->GetDevices(&context, req, &resp);
     if (!status.ok()) {
@@ -207,7 +207,7 @@ BOOST_AUTO_TEST_CASE(test_open_non_existing_camera) {
 
   {
     grpc::ClientContext context;
-    CameraServer::IdRequest idRequest;
+    mvcam::IdRequest idRequest;
     idRequest.set_id("ARBITRARYID");
     google::protobuf::Empty emptyResponse;
     grpc::Status status = client.stub->OpenCamera(&context, idRequest, &emptyResponse);
@@ -221,15 +221,15 @@ BOOST_AUTO_TEST_CASE(test_open_non_existing_camera) {
 }
 BOOST_AUTO_TEST_CASE(test_configure) {
   client_fixture client;
-  CameraServer::IdRequest idRequest;
+  mvcam::IdRequest idRequest;
   google::protobuf::Empty emptyResponse;
 
   std::string id;
 
   {
     grpc::ClientContext context;
-    CameraServer::AdapterRequest req;
-    CameraServer::DeviceListResponse resp;
+    mvcam::AdapterRequest req;
+    mvcam::DeviceListResponse resp;
 
     grpc::Status status = client.stub->GetDevices(&context, req, &resp);
     if (!status.ok()) {
@@ -253,7 +253,7 @@ BOOST_AUTO_TEST_CASE(test_configure) {
 
   {
     grpc::ClientContext context;
-    CameraServer::Configuration resp;
+    mvcam::Configuration resp;
     grpc::Status status = client.stub->GetConfiguration(&context, idRequest, &resp);
     if (!status.ok()) {
       BOOST_TEST_FAIL(status.error_message());
@@ -267,10 +267,10 @@ BOOST_AUTO_TEST_CASE(test_configure) {
 
   {
     grpc::ClientContext context;
-    CameraServer::ConfigureRequest req;
+    mvcam::ConfigureRequest req;
 
     req.mutable_id()->set_id(id);
-    CameraServer::Configuration *const pConfiguration = req.mutable_config();
+    mvcam::Configuration *const pConfiguration = req.mutable_config();
 //    pConfiguration->mutable_frame_number()->set_value(5);
 //    pConfiguration->mutable_frame_number()->set_should_update(true);
     pConfiguration->mutable_frame_rate()->set_value(30);
@@ -289,7 +289,7 @@ BOOST_AUTO_TEST_CASE(test_configure) {
 
   {
     grpc::ClientContext context;
-    CameraServer::Configuration resp;
+    mvcam::Configuration resp;
     grpc::Status status = client.stub->GetConfiguration(&context, idRequest, &resp);
     if (!status.ok()) {
       BOOST_TEST_FAIL(status.error_message());
@@ -313,14 +313,14 @@ BOOST_AUTO_TEST_CASE(test_configure) {
 
 BOOST_AUTO_TEST_CASE(test_sync_capture) {
   client_fixture client;
-  CameraServer::IdRequest idRequst;
+  mvcam::IdRequest idRequst;
   google::protobuf::Empty emptyResponse;
 
   std::string id;
   {
     grpc::ClientContext context;
-    CameraServer::AdapterRequest req;
-    CameraServer::DeviceListResponse resp;
+    mvcam::AdapterRequest req;
+    mvcam::DeviceListResponse resp;
 
     grpc::Status status = client.stub->GetDevices(&context, req, &resp);
     if (!status.ok()) {
@@ -345,7 +345,7 @@ BOOST_AUTO_TEST_CASE(test_sync_capture) {
 
   {
     grpc::ClientContext context;
-    CameraServer::Frame resp;
+    mvcam::Frame resp;
     grpc::Status status = client.stub->Capture(&context, idRequst, &resp);
     if (!status.ok()) {
       BOOST_TEST_FAIL(status.error_message());
@@ -371,13 +371,13 @@ BOOST_AUTO_TEST_CASE(test_sync_capture) {
 BOOST_AUTO_TEST_CASE(test_async_capture) {
   client_fixture client;
   std::string id;
-  CameraServer::IdRequest idRequest;
+  mvcam::IdRequest idRequest;
   google::protobuf::Empty emptyResponse;
 
   {
     grpc::ClientContext context;
-    CameraServer::AdapterRequest req;
-    CameraServer::DeviceListResponse resp;
+    mvcam::AdapterRequest req;
+    mvcam::DeviceListResponse resp;
 
     grpc::Status status = client.stub->GetDevices(&context, req, &resp);
     if (!status.ok()) {
@@ -402,17 +402,17 @@ BOOST_AUTO_TEST_CASE(test_async_capture) {
 
   {
     grpc::ClientContext context;
-    CameraServer::Frame resp;
+    mvcam::Frame resp;
 
 
     BOOST_TEST_MESSAGE("Trigger stream for 10 images, batch size = 1");
-    CameraServer::StreamingRequest msg;
+    mvcam::StreamingRequest msg;
     msg.mutable_id()->set_id(id);
     msg.set_batch_size(1);
     msg.set_number_frames(10);
-    const std::unique_ptr<grpc::ClientReader<CameraServer::FrameStream>> &stream = client.stub->Streaming(&context, msg);
+    const std::unique_ptr<grpc::ClientReader<mvcam::FrameStream>> &stream = client.stub->Streaming(&context, msg);
 
-    CameraServer::FrameStream fs;
+    mvcam::FrameStream fs;
 
     int frameCount = 0;
     while (stream->Read(&fs)) {
@@ -425,17 +425,17 @@ BOOST_AUTO_TEST_CASE(test_async_capture) {
 
   {
     grpc::ClientContext context;
-    CameraServer::Frame resp;
+    mvcam::Frame resp;
 
 
     BOOST_TEST_MESSAGE("Trigger stream for 30 images, batch size = 2");
-    CameraServer::StreamingRequest msg;
+    mvcam::StreamingRequest msg;
     msg.mutable_id()->set_id(id);
     msg.set_batch_size(2);
     msg.set_number_frames(30);
-    const std::unique_ptr<grpc::ClientReader<CameraServer::FrameStream>> &stream = client.stub->Streaming(&context, msg);
+    const std::unique_ptr<grpc::ClientReader<mvcam::FrameStream>> &stream = client.stub->Streaming(&context, msg);
 
-    CameraServer::FrameStream fs;
+    mvcam::FrameStream fs;
 
     int frameCount = 0;
     while (stream->Read(&fs)) {
@@ -449,17 +449,17 @@ BOOST_AUTO_TEST_CASE(test_async_capture) {
 
   {
     grpc::ClientContext context;
-    CameraServer::Frame resp;
+    mvcam::Frame resp;
 
 
     BOOST_TEST_MESSAGE("Trigger stream for infinite images, batch size = 1");
-    CameraServer::StreamingRequest msg;
+    mvcam::StreamingRequest msg;
     msg.mutable_id()->set_id(id);
     msg.set_batch_size(1);
     msg.set_number_frames(0);
-    const std::unique_ptr<grpc::ClientReader<CameraServer::FrameStream>> &stream = client.stub->Streaming(&context, msg);
+    const std::unique_ptr<grpc::ClientReader<mvcam::FrameStream>> &stream = client.stub->Streaming(&context, msg);
 
-    CameraServer::FrameStream fs;
+    mvcam::FrameStream fs;
 
     int frameCount = 0;
     auto begin = std::chrono::high_resolution_clock::now();

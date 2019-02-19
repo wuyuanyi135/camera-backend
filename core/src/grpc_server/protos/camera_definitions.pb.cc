@@ -32,7 +32,7 @@ extern PROTOBUF_INTERNAL_EXPORT_protobuf_camera_5fdefinitions_2eproto ::google::
 namespace protobuf_google_2fprotobuf_2ftimestamp_2eproto {
 extern PROTOBUF_INTERNAL_EXPORT_protobuf_google_2fprotobuf_2ftimestamp_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_Timestamp;
 }  // namespace protobuf_google_2fprotobuf_2ftimestamp_2eproto
-namespace CameraServer {
+namespace mvcam {
 class AdapterCapabilityDefaultTypeInternal {
  public:
   ::google::protobuf::internal::ExplicitlyConstructed<AdapterCapability>
@@ -113,17 +113,17 @@ class DeviceControlRequestDefaultTypeInternal {
   ::google::protobuf::internal::ExplicitlyConstructed<DeviceControlRequest>
       _instance;
 } _DeviceControlRequest_default_instance_;
-}  // namespace CameraServer
+}  // namespace mvcam
 namespace protobuf_camera_5fdefinitions_2eproto {
 static void InitDefaultsAdapterCapability() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::CameraServer::_AdapterCapability_default_instance_;
-    new (ptr) ::CameraServer::AdapterCapability();
+    void* ptr = &::mvcam::_AdapterCapability_default_instance_;
+    new (ptr) ::mvcam::AdapterCapability();
     ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::CameraServer::AdapterCapability::InitAsDefaultInstance();
+  ::mvcam::AdapterCapability::InitAsDefaultInstance();
 }
 
 ::google::protobuf::internal::SCCInfo<0> scc_info_AdapterCapability =
@@ -133,11 +133,11 @@ static void InitDefaultsAdapterInfo() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::CameraServer::_AdapterInfo_default_instance_;
-    new (ptr) ::CameraServer::AdapterInfo();
+    void* ptr = &::mvcam::_AdapterInfo_default_instance_;
+    new (ptr) ::mvcam::AdapterInfo();
     ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::CameraServer::AdapterInfo::InitAsDefaultInstance();
+  ::mvcam::AdapterInfo::InitAsDefaultInstance();
 }
 
 ::google::protobuf::internal::SCCInfo<1> scc_info_AdapterInfo =
@@ -148,11 +148,11 @@ static void InitDefaultsAvailableAdaptersResponse() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::CameraServer::_AvailableAdaptersResponse_default_instance_;
-    new (ptr) ::CameraServer::AvailableAdaptersResponse();
+    void* ptr = &::mvcam::_AvailableAdaptersResponse_default_instance_;
+    new (ptr) ::mvcam::AvailableAdaptersResponse();
     ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::CameraServer::AvailableAdaptersResponse::InitAsDefaultInstance();
+  ::mvcam::AvailableAdaptersResponse::InitAsDefaultInstance();
 }
 
 ::google::protobuf::internal::SCCInfo<1> scc_info_AvailableAdaptersResponse =
@@ -163,11 +163,11 @@ static void InitDefaultsAdapterRequest() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::CameraServer::_AdapterRequest_default_instance_;
-    new (ptr) ::CameraServer::AdapterRequest();
+    void* ptr = &::mvcam::_AdapterRequest_default_instance_;
+    new (ptr) ::mvcam::AdapterRequest();
     ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::CameraServer::AdapterRequest::InitAsDefaultInstance();
+  ::mvcam::AdapterRequest::InitAsDefaultInstance();
 }
 
 ::google::protobuf::internal::SCCInfo<0> scc_info_AdapterRequest =
@@ -177,11 +177,11 @@ static void InitDefaultsCameraCapability() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::CameraServer::_CameraCapability_default_instance_;
-    new (ptr) ::CameraServer::CameraCapability();
+    void* ptr = &::mvcam::_CameraCapability_default_instance_;
+    new (ptr) ::mvcam::CameraCapability();
     ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::CameraServer::CameraCapability::InitAsDefaultInstance();
+  ::mvcam::CameraCapability::InitAsDefaultInstance();
 }
 
 ::google::protobuf::internal::SCCInfo<0> scc_info_CameraCapability =
@@ -191,11 +191,11 @@ static void InitDefaultsDeviceInfo() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::CameraServer::_DeviceInfo_default_instance_;
-    new (ptr) ::CameraServer::DeviceInfo();
+    void* ptr = &::mvcam::_DeviceInfo_default_instance_;
+    new (ptr) ::mvcam::DeviceInfo();
     ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::CameraServer::DeviceInfo::InitAsDefaultInstance();
+  ::mvcam::DeviceInfo::InitAsDefaultInstance();
 }
 
 ::google::protobuf::internal::SCCInfo<2> scc_info_DeviceInfo =
@@ -207,11 +207,11 @@ static void InitDefaultsDeviceListResponse() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::CameraServer::_DeviceListResponse_default_instance_;
-    new (ptr) ::CameraServer::DeviceListResponse();
+    void* ptr = &::mvcam::_DeviceListResponse_default_instance_;
+    new (ptr) ::mvcam::DeviceListResponse();
     ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::CameraServer::DeviceListResponse::InitAsDefaultInstance();
+  ::mvcam::DeviceListResponse::InitAsDefaultInstance();
 }
 
 ::google::protobuf::internal::SCCInfo<1> scc_info_DeviceListResponse =
@@ -222,11 +222,11 @@ static void InitDefaultsIdRequest() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::CameraServer::_IdRequest_default_instance_;
-    new (ptr) ::CameraServer::IdRequest();
+    void* ptr = &::mvcam::_IdRequest_default_instance_;
+    new (ptr) ::mvcam::IdRequest();
     ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::CameraServer::IdRequest::InitAsDefaultInstance();
+  ::mvcam::IdRequest::InitAsDefaultInstance();
 }
 
 ::google::protobuf::internal::SCCInfo<0> scc_info_IdRequest =
@@ -236,11 +236,11 @@ static void InitDefaultsParameter() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::CameraServer::_Parameter_default_instance_;
-    new (ptr) ::CameraServer::Parameter();
+    void* ptr = &::mvcam::_Parameter_default_instance_;
+    new (ptr) ::mvcam::Parameter();
     ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::CameraServer::Parameter::InitAsDefaultInstance();
+  ::mvcam::Parameter::InitAsDefaultInstance();
 }
 
 ::google::protobuf::internal::SCCInfo<0> scc_info_Parameter =
@@ -250,11 +250,11 @@ static void InitDefaultsConfiguration() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::CameraServer::_Configuration_default_instance_;
-    new (ptr) ::CameraServer::Configuration();
+    void* ptr = &::mvcam::_Configuration_default_instance_;
+    new (ptr) ::mvcam::Configuration();
     ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::CameraServer::Configuration::InitAsDefaultInstance();
+  ::mvcam::Configuration::InitAsDefaultInstance();
 }
 
 ::google::protobuf::internal::SCCInfo<1> scc_info_Configuration =
@@ -265,11 +265,11 @@ static void InitDefaultsConfigureRequest() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::CameraServer::_ConfigureRequest_default_instance_;
-    new (ptr) ::CameraServer::ConfigureRequest();
+    void* ptr = &::mvcam::_ConfigureRequest_default_instance_;
+    new (ptr) ::mvcam::ConfigureRequest();
     ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::CameraServer::ConfigureRequest::InitAsDefaultInstance();
+  ::mvcam::ConfigureRequest::InitAsDefaultInstance();
 }
 
 ::google::protobuf::internal::SCCInfo<2> scc_info_ConfigureRequest =
@@ -281,11 +281,11 @@ static void InitDefaultsFrame() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::CameraServer::_Frame_default_instance_;
-    new (ptr) ::CameraServer::Frame();
+    void* ptr = &::mvcam::_Frame_default_instance_;
+    new (ptr) ::mvcam::Frame();
     ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::CameraServer::Frame::InitAsDefaultInstance();
+  ::mvcam::Frame::InitAsDefaultInstance();
 }
 
 ::google::protobuf::internal::SCCInfo<1> scc_info_Frame =
@@ -296,11 +296,11 @@ static void InitDefaultsFrameStream() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::CameraServer::_FrameStream_default_instance_;
-    new (ptr) ::CameraServer::FrameStream();
+    void* ptr = &::mvcam::_FrameStream_default_instance_;
+    new (ptr) ::mvcam::FrameStream();
     ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::CameraServer::FrameStream::InitAsDefaultInstance();
+  ::mvcam::FrameStream::InitAsDefaultInstance();
 }
 
 ::google::protobuf::internal::SCCInfo<1> scc_info_FrameStream =
@@ -311,11 +311,11 @@ static void InitDefaultsStreamingRequest() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::CameraServer::_StreamingRequest_default_instance_;
-    new (ptr) ::CameraServer::StreamingRequest();
+    void* ptr = &::mvcam::_StreamingRequest_default_instance_;
+    new (ptr) ::mvcam::StreamingRequest();
     ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::CameraServer::StreamingRequest::InitAsDefaultInstance();
+  ::mvcam::StreamingRequest::InitAsDefaultInstance();
 }
 
 ::google::protobuf::internal::SCCInfo<1> scc_info_StreamingRequest =
@@ -326,11 +326,11 @@ static void InitDefaultsStatus() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::CameraServer::_Status_default_instance_;
-    new (ptr) ::CameraServer::Status();
+    void* ptr = &::mvcam::_Status_default_instance_;
+    new (ptr) ::mvcam::Status();
     ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::CameraServer::Status::InitAsDefaultInstance();
+  ::mvcam::Status::InitAsDefaultInstance();
 }
 
 ::google::protobuf::internal::SCCInfo<0> scc_info_Status =
@@ -340,11 +340,11 @@ static void InitDefaultsDeviceControlRequest() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::CameraServer::_DeviceControlRequest_default_instance_;
-    new (ptr) ::CameraServer::DeviceControlRequest();
+    void* ptr = &::mvcam::_DeviceControlRequest_default_instance_;
+    new (ptr) ::mvcam::DeviceControlRequest();
     ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::CameraServer::DeviceControlRequest::InitAsDefaultInstance();
+  ::mvcam::DeviceControlRequest::InitAsDefaultInstance();
 }
 
 ::google::protobuf::internal::SCCInfo<1> scc_info_DeviceControlRequest =
@@ -375,177 +375,177 @@ const ::google::protobuf::EnumDescriptor* file_level_enum_descriptors[1];
 
 const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
   ~0u,  // no _has_bits_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::CameraServer::AdapterCapability, _internal_metadata_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::AdapterCapability, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::CameraServer::AdapterCapability, should_shut_down_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::AdapterCapability, should_shut_down_),
   ~0u,  // no _has_bits_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::CameraServer::AdapterInfo, _internal_metadata_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::AdapterInfo, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::CameraServer::AdapterInfo, name_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::CameraServer::AdapterInfo, version_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::CameraServer::AdapterInfo, description_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::CameraServer::AdapterInfo, in_use_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::CameraServer::AdapterInfo, capability_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::AdapterInfo, name_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::AdapterInfo, version_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::AdapterInfo, description_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::AdapterInfo, in_use_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::AdapterInfo, capability_),
   ~0u,  // no _has_bits_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::CameraServer::AvailableAdaptersResponse, _internal_metadata_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::AvailableAdaptersResponse, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::CameraServer::AvailableAdaptersResponse, adapters_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::AvailableAdaptersResponse, adapters_),
   ~0u,  // no _has_bits_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::CameraServer::AdapterRequest, _internal_metadata_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::AdapterRequest, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::CameraServer::AdapterRequest, name_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::AdapterRequest, name_),
   ~0u,  // no _has_bits_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::CameraServer::CameraCapability, _internal_metadata_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::CameraCapability, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::CameraServer::CameraCapability, can_shutdown_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::CameraServer::CameraCapability, can_open_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::CameraServer::CameraCapability, can_capture_async_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::CameraServer::CameraCapability, can_capture_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::CameraServer::CameraCapability, can_adjust_exposure_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::CameraServer::CameraCapability, can_adjust_gain_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::CameraServer::CameraCapability, can_adjust_gamma_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::CameraServer::CameraCapability, can_adjust_black_level_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::CameraServer::CameraCapability, can_adjust_frame_rate_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::CameraServer::CameraCapability, can_set_frame_number_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::CameraServer::CameraCapability, can_get_temperature_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::CameraServer::CameraCapability, can_suspend_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::CameraServer::CameraCapability, can_reset_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::CameraCapability, can_shutdown_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::CameraCapability, can_open_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::CameraCapability, can_capture_async_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::CameraCapability, can_capture_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::CameraCapability, can_adjust_exposure_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::CameraCapability, can_adjust_gain_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::CameraCapability, can_adjust_gamma_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::CameraCapability, can_adjust_black_level_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::CameraCapability, can_adjust_frame_rate_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::CameraCapability, can_set_frame_number_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::CameraCapability, can_get_temperature_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::CameraCapability, can_suspend_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::CameraCapability, can_reset_),
   ~0u,  // no _has_bits_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::CameraServer::DeviceInfo, _internal_metadata_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::DeviceInfo, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::CameraServer::DeviceInfo, adapter_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::CameraServer::DeviceInfo, manufacture_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::CameraServer::DeviceInfo, id_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::CameraServer::DeviceInfo, model_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::CameraServer::DeviceInfo, version_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::CameraServer::DeviceInfo, serial_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::CameraServer::DeviceInfo, capabilities_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::DeviceInfo, adapter_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::DeviceInfo, manufacture_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::DeviceInfo, id_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::DeviceInfo, model_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::DeviceInfo, version_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::DeviceInfo, serial_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::DeviceInfo, capabilities_),
   ~0u,  // no _has_bits_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::CameraServer::DeviceListResponse, _internal_metadata_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::DeviceListResponse, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::CameraServer::DeviceListResponse, devices_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::DeviceListResponse, devices_),
   ~0u,  // no _has_bits_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::CameraServer::IdRequest, _internal_metadata_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::IdRequest, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::CameraServer::IdRequest, id_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::IdRequest, id_),
   ~0u,  // no _has_bits_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::CameraServer::Parameter, _internal_metadata_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::Parameter, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::CameraServer::Parameter, should_update_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::CameraServer::Parameter, value_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::Parameter, should_update_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::Parameter, value_),
   ~0u,  // no _has_bits_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::CameraServer::Configuration, _internal_metadata_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::Configuration, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::CameraServer::Configuration, exposure_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::CameraServer::Configuration, frame_rate_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::CameraServer::Configuration, gain_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::CameraServer::Configuration, black_level_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::CameraServer::Configuration, gamma_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::Configuration, exposure_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::Configuration, frame_rate_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::Configuration, gain_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::Configuration, black_level_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::Configuration, gamma_),
   ~0u,  // no _has_bits_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::CameraServer::ConfigureRequest, _internal_metadata_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::ConfigureRequest, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::CameraServer::ConfigureRequest, id_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::CameraServer::ConfigureRequest, config_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::ConfigureRequest, id_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::ConfigureRequest, config_),
   ~0u,  // no _has_bits_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::CameraServer::Frame, _internal_metadata_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::Frame, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::CameraServer::Frame, timestamp_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::CameraServer::Frame, id_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::CameraServer::Frame, size_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::CameraServer::Frame, height_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::CameraServer::Frame, width_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::CameraServer::Frame, pixel_format_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::CameraServer::Frame, data_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::Frame, timestamp_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::Frame, id_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::Frame, size_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::Frame, height_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::Frame, width_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::Frame, pixel_format_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::Frame, data_),
   ~0u,  // no _has_bits_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::CameraServer::FrameStream, _internal_metadata_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::FrameStream, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::CameraServer::FrameStream, frames_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::FrameStream, frames_),
   ~0u,  // no _has_bits_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::CameraServer::StreamingRequest, _internal_metadata_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::StreamingRequest, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::CameraServer::StreamingRequest, id_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::CameraServer::StreamingRequest, number_frames_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::CameraServer::StreamingRequest, batch_size_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::StreamingRequest, id_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::StreamingRequest, number_frames_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::StreamingRequest, batch_size_),
   ~0u,  // no _has_bits_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::CameraServer::Status, _internal_metadata_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::Status, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::CameraServer::Status, temperature_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::CameraServer::Status, opened_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::CameraServer::Status, capturing_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::Status, temperature_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::Status, opened_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::Status, capturing_),
   ~0u,  // no _has_bits_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::CameraServer::DeviceControlRequest, _internal_metadata_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::DeviceControlRequest, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::CameraServer::DeviceControlRequest, id_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::CameraServer::DeviceControlRequest, action_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::DeviceControlRequest, id_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::DeviceControlRequest, action_),
 };
 static const ::google::protobuf::internal::MigrationSchema schemas[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, sizeof(::CameraServer::AdapterCapability)},
-  { 6, -1, sizeof(::CameraServer::AdapterInfo)},
-  { 16, -1, sizeof(::CameraServer::AvailableAdaptersResponse)},
-  { 22, -1, sizeof(::CameraServer::AdapterRequest)},
-  { 28, -1, sizeof(::CameraServer::CameraCapability)},
-  { 46, -1, sizeof(::CameraServer::DeviceInfo)},
-  { 58, -1, sizeof(::CameraServer::DeviceListResponse)},
-  { 64, -1, sizeof(::CameraServer::IdRequest)},
-  { 70, -1, sizeof(::CameraServer::Parameter)},
-  { 77, -1, sizeof(::CameraServer::Configuration)},
-  { 87, -1, sizeof(::CameraServer::ConfigureRequest)},
-  { 94, -1, sizeof(::CameraServer::Frame)},
-  { 106, -1, sizeof(::CameraServer::FrameStream)},
-  { 112, -1, sizeof(::CameraServer::StreamingRequest)},
-  { 120, -1, sizeof(::CameraServer::Status)},
-  { 128, -1, sizeof(::CameraServer::DeviceControlRequest)},
+  { 0, -1, sizeof(::mvcam::AdapterCapability)},
+  { 6, -1, sizeof(::mvcam::AdapterInfo)},
+  { 16, -1, sizeof(::mvcam::AvailableAdaptersResponse)},
+  { 22, -1, sizeof(::mvcam::AdapterRequest)},
+  { 28, -1, sizeof(::mvcam::CameraCapability)},
+  { 46, -1, sizeof(::mvcam::DeviceInfo)},
+  { 58, -1, sizeof(::mvcam::DeviceListResponse)},
+  { 64, -1, sizeof(::mvcam::IdRequest)},
+  { 70, -1, sizeof(::mvcam::Parameter)},
+  { 77, -1, sizeof(::mvcam::Configuration)},
+  { 87, -1, sizeof(::mvcam::ConfigureRequest)},
+  { 94, -1, sizeof(::mvcam::Frame)},
+  { 106, -1, sizeof(::mvcam::FrameStream)},
+  { 112, -1, sizeof(::mvcam::StreamingRequest)},
+  { 120, -1, sizeof(::mvcam::Status)},
+  { 128, -1, sizeof(::mvcam::DeviceControlRequest)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
-  reinterpret_cast<const ::google::protobuf::Message*>(&::CameraServer::_AdapterCapability_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&::CameraServer::_AdapterInfo_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&::CameraServer::_AvailableAdaptersResponse_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&::CameraServer::_AdapterRequest_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&::CameraServer::_CameraCapability_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&::CameraServer::_DeviceInfo_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&::CameraServer::_DeviceListResponse_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&::CameraServer::_IdRequest_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&::CameraServer::_Parameter_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&::CameraServer::_Configuration_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&::CameraServer::_ConfigureRequest_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&::CameraServer::_Frame_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&::CameraServer::_FrameStream_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&::CameraServer::_StreamingRequest_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&::CameraServer::_Status_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&::CameraServer::_DeviceControlRequest_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::mvcam::_AdapterCapability_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::mvcam::_AdapterInfo_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::mvcam::_AvailableAdaptersResponse_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::mvcam::_AdapterRequest_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::mvcam::_CameraCapability_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::mvcam::_DeviceInfo_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::mvcam::_DeviceListResponse_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::mvcam::_IdRequest_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::mvcam::_Parameter_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::mvcam::_Configuration_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::mvcam::_ConfigureRequest_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::mvcam::_Frame_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::mvcam::_FrameStream_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::mvcam::_StreamingRequest_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::mvcam::_Status_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::mvcam::_DeviceControlRequest_default_instance_),
 };
 
 void protobuf_AssignDescriptors() {
@@ -569,57 +569,56 @@ void protobuf_RegisterTypes(const ::std::string&) {
 void AddDescriptorsImpl() {
   InitDefaults();
   static const char descriptor[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
-      "\n\030camera_definitions.proto\022\014CameraServer"
-      "\032\037google/protobuf/timestamp.proto\"-\n\021Ada"
-      "pterCapability\022\030\n\020should_shut_down\030\001 \001(\010"
-      "\"\206\001\n\013AdapterInfo\022\014\n\004name\030\001 \001(\t\022\017\n\007versio"
-      "n\030\002 \001(\t\022\023\n\013description\030\003 \001(\t\022\016\n\006in_use\030\004"
-      " \001(\010\0223\n\ncapability\030\005 \001(\0132\037.CameraServer."
-      "AdapterCapability\"H\n\031AvailableAdaptersRe"
-      "sponse\022+\n\010adapters\030\001 \003(\0132\031.CameraServer."
-      "AdapterInfo\"\036\n\016AdapterRequest\022\014\n\004name\030\001 "
-      "\001(\t\"\334\002\n\020CameraCapability\022\024\n\014can_shutdown"
-      "\030\001 \001(\010\022\020\n\010can_open\030\002 \001(\010\022\031\n\021can_capture_"
-      "async\030\003 \001(\010\022\023\n\013can_capture\030\004 \001(\010\022\033\n\023can_"
-      "adjust_exposure\030\005 \001(\010\022\027\n\017can_adjust_gain"
-      "\030\006 \001(\010\022\030\n\020can_adjust_gamma\030\007 \001(\010\022\036\n\026can_"
-      "adjust_black_level\030\010 \001(\010\022\035\n\025can_adjust_f"
-      "rame_rate\030\t \001(\010\022\034\n\024can_set_frame_number\030"
-      "\n \001(\010\022\033\n\023can_get_temperature\030\013 \001(\010\022\023\n\013ca"
-      "n_suspend\030\014 \001(\010\022\021\n\tcan_reset\030\r \001(\010\"\277\001\n\nD"
-      "eviceInfo\022*\n\007adapter\030\001 \001(\0132\031.CameraServe"
-      "r.AdapterInfo\022\023\n\013manufacture\030\002 \001(\t\022\n\n\002id"
-      "\030\003 \001(\t\022\r\n\005model\030\004 \001(\t\022\017\n\007version\030\005 \001(\t\022\016"
-      "\n\006serial\030\006 \001(\t\0224\n\014capabilities\030\007 \001(\0132\036.C"
-      "ameraServer.CameraCapability\"\?\n\022DeviceLi"
-      "stResponse\022)\n\007devices\030\001 \003(\0132\030.CameraServ"
-      "er.DeviceInfo\"\027\n\tIdRequest\022\n\n\002id\030\001 \001(\t\"1"
-      "\n\tParameter\022\025\n\rshould_update\030\001 \001(\010\022\r\n\005va"
-      "lue\030\002 \001(\001\"\344\001\n\rConfiguration\022)\n\010exposure\030"
-      "\001 \001(\0132\027.CameraServer.Parameter\022+\n\nframe_"
-      "rate\030\002 \001(\0132\027.CameraServer.Parameter\022%\n\004g"
-      "ain\030\003 \001(\0132\027.CameraServer.Parameter\022,\n\013bl"
-      "ack_level\030\004 \001(\0132\027.CameraServer.Parameter"
-      "\022&\n\005gamma\030\005 \001(\0132\027.CameraServer.Parameter"
-      "\"d\n\020ConfigureRequest\022#\n\002id\030\001 \001(\0132\027.Camer"
-      "aServer.IdRequest\022+\n\006config\030\002 \001(\0132\033.Came"
-      "raServer.Configuration\"\223\001\n\005Frame\022-\n\ttime"
-      "stamp\030\001 \001(\0132\032.google.protobuf.Timestamp\022"
-      "\n\n\002id\030\002 \001(\004\022\014\n\004size\030\003 \001(\r\022\016\n\006height\030\004 \001("
-      "\r\022\r\n\005width\030\005 \001(\r\022\024\n\014pixel_format\030\006 \001(\r\022\014"
-      "\n\004data\030\007 \001(\014\"2\n\013FrameStream\022#\n\006frames\030\001 "
-      "\003(\0132\023.CameraServer.Frame\"b\n\020StreamingReq"
-      "uest\022#\n\002id\030\001 \001(\0132\027.CameraServer.IdReques"
-      "t\022\025\n\rnumber_frames\030\002 \001(\004\022\022\n\nbatch_size\030\004"
-      " \001(\004\"@\n\006Status\022\023\n\013temperature\030\001 \001(\001\022\016\n\006o"
-      "pened\030\002 \001(\010\022\021\n\tcapturing\030\003 \001(\010\"n\n\024Device"
-      "ControlRequest\022#\n\002id\030\001 \001(\0132\027.CameraServe"
-      "r.IdRequest\0221\n\006action\030\002 \001(\0162!.CameraServ"
-      "er.DeviceControlAction*.\n\023DeviceControlA"
-      "ction\022\013\n\007Suspend\020\000\022\n\n\006Resume\020\001b\006proto3"
+      "\n\030camera_definitions.proto\022\005mvcam\032\037googl"
+      "e/protobuf/timestamp.proto\"-\n\021AdapterCap"
+      "ability\022\030\n\020should_shut_down\030\001 \001(\010\"\177\n\013Ada"
+      "pterInfo\022\014\n\004name\030\001 \001(\t\022\017\n\007version\030\002 \001(\t\022"
+      "\023\n\013description\030\003 \001(\t\022\016\n\006in_use\030\004 \001(\010\022,\n\n"
+      "capability\030\005 \001(\0132\030.mvcam.AdapterCapabili"
+      "ty\"A\n\031AvailableAdaptersResponse\022$\n\010adapt"
+      "ers\030\001 \003(\0132\022.mvcam.AdapterInfo\"\036\n\016Adapter"
+      "Request\022\014\n\004name\030\001 \001(\t\"\334\002\n\020CameraCapabili"
+      "ty\022\024\n\014can_shutdown\030\001 \001(\010\022\020\n\010can_open\030\002 \001"
+      "(\010\022\031\n\021can_capture_async\030\003 \001(\010\022\023\n\013can_cap"
+      "ture\030\004 \001(\010\022\033\n\023can_adjust_exposure\030\005 \001(\010\022"
+      "\027\n\017can_adjust_gain\030\006 \001(\010\022\030\n\020can_adjust_g"
+      "amma\030\007 \001(\010\022\036\n\026can_adjust_black_level\030\010 \001"
+      "(\010\022\035\n\025can_adjust_frame_rate\030\t \001(\010\022\034\n\024can"
+      "_set_frame_number\030\n \001(\010\022\033\n\023can_get_tempe"
+      "rature\030\013 \001(\010\022\023\n\013can_suspend\030\014 \001(\010\022\021\n\tcan"
+      "_reset\030\r \001(\010\"\261\001\n\nDeviceInfo\022#\n\007adapter\030\001"
+      " \001(\0132\022.mvcam.AdapterInfo\022\023\n\013manufacture\030"
+      "\002 \001(\t\022\n\n\002id\030\003 \001(\t\022\r\n\005model\030\004 \001(\t\022\017\n\007vers"
+      "ion\030\005 \001(\t\022\016\n\006serial\030\006 \001(\t\022-\n\014capabilitie"
+      "s\030\007 \001(\0132\027.mvcam.CameraCapability\"8\n\022Devi"
+      "ceListResponse\022\"\n\007devices\030\001 \003(\0132\021.mvcam."
+      "DeviceInfo\"\027\n\tIdRequest\022\n\n\002id\030\001 \001(\t\"1\n\tP"
+      "arameter\022\025\n\rshould_update\030\001 \001(\010\022\r\n\005value"
+      "\030\002 \001(\001\"\301\001\n\rConfiguration\022\"\n\010exposure\030\001 \001"
+      "(\0132\020.mvcam.Parameter\022$\n\nframe_rate\030\002 \001(\013"
+      "2\020.mvcam.Parameter\022\036\n\004gain\030\003 \001(\0132\020.mvcam"
+      ".Parameter\022%\n\013black_level\030\004 \001(\0132\020.mvcam."
+      "Parameter\022\037\n\005gamma\030\005 \001(\0132\020.mvcam.Paramet"
+      "er\"V\n\020ConfigureRequest\022\034\n\002id\030\001 \001(\0132\020.mvc"
+      "am.IdRequest\022$\n\006config\030\002 \001(\0132\024.mvcam.Con"
+      "figuration\"\223\001\n\005Frame\022-\n\ttimestamp\030\001 \001(\0132"
+      "\032.google.protobuf.Timestamp\022\n\n\002id\030\002 \001(\004\022"
+      "\014\n\004size\030\003 \001(\r\022\016\n\006height\030\004 \001(\r\022\r\n\005width\030\005"
+      " \001(\r\022\024\n\014pixel_format\030\006 \001(\r\022\014\n\004data\030\007 \001(\014"
+      "\"+\n\013FrameStream\022\034\n\006frames\030\001 \003(\0132\014.mvcam."
+      "Frame\"[\n\020StreamingRequest\022\034\n\002id\030\001 \001(\0132\020."
+      "mvcam.IdRequest\022\025\n\rnumber_frames\030\002 \001(\004\022\022"
+      "\n\nbatch_size\030\004 \001(\004\"@\n\006Status\022\023\n\013temperat"
+      "ure\030\001 \001(\001\022\016\n\006opened\030\002 \001(\010\022\021\n\tcapturing\030\003"
+      " \001(\010\"`\n\024DeviceControlRequest\022\034\n\002id\030\001 \001(\013"
+      "2\020.mvcam.IdRequest\022*\n\006action\030\002 \001(\0162\032.mvc"
+      "am.DeviceControlAction*.\n\023DeviceControlA"
+      "ction\022\013\n\007Suspend\020\000\022\n\n\006Resume\020\001B:Z8github"
+      ".com/wuyuanyi135/MicroVisionCGI/server/p"
+      "roto/mvcamb\006proto3"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 1918);
+      descriptor, 1858);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "camera_definitions.proto", &protobuf_RegisterTypes);
   ::protobuf_google_2fprotobuf_2ftimestamp_2eproto::AddDescriptors();
@@ -636,7 +635,7 @@ struct StaticDescriptorInitializer {
   }
 } static_descriptor_initializer;
 }  // namespace protobuf_camera_5fdefinitions_2eproto
-namespace CameraServer {
+namespace mvcam {
 const ::google::protobuf::EnumDescriptor* DeviceControlAction_descriptor() {
   protobuf_camera_5fdefinitions_2eproto::protobuf_AssignDescriptorsOnce();
   return protobuf_camera_5fdefinitions_2eproto::file_level_enum_descriptors[0];
@@ -665,14 +664,14 @@ AdapterCapability::AdapterCapability()
   ::google::protobuf::internal::InitSCC(
       &protobuf_camera_5fdefinitions_2eproto::scc_info_AdapterCapability.base);
   SharedCtor();
-  // @@protoc_insertion_point(constructor:CameraServer.AdapterCapability)
+  // @@protoc_insertion_point(constructor:mvcam.AdapterCapability)
 }
 AdapterCapability::AdapterCapability(const AdapterCapability& from)
   : ::google::protobuf::Message(),
       _internal_metadata_(NULL) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   should_shut_down_ = from.should_shut_down_;
-  // @@protoc_insertion_point(copy_constructor:CameraServer.AdapterCapability)
+  // @@protoc_insertion_point(copy_constructor:mvcam.AdapterCapability)
 }
 
 void AdapterCapability::SharedCtor() {
@@ -680,7 +679,7 @@ void AdapterCapability::SharedCtor() {
 }
 
 AdapterCapability::~AdapterCapability() {
-  // @@protoc_insertion_point(destructor:CameraServer.AdapterCapability)
+  // @@protoc_insertion_point(destructor:mvcam.AdapterCapability)
   SharedDtor();
 }
 
@@ -702,7 +701,7 @@ const AdapterCapability& AdapterCapability::default_instance() {
 
 
 void AdapterCapability::Clear() {
-// @@protoc_insertion_point(message_clear_start:CameraServer.AdapterCapability)
+// @@protoc_insertion_point(message_clear_start:mvcam.AdapterCapability)
   ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -715,7 +714,7 @@ bool AdapterCapability::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:CameraServer.AdapterCapability)
+  // @@protoc_insertion_point(parse_start:mvcam.AdapterCapability)
   for (;;) {
     ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
@@ -747,17 +746,17 @@ bool AdapterCapability::MergePartialFromCodedStream(
     }
   }
 success:
-  // @@protoc_insertion_point(parse_success:CameraServer.AdapterCapability)
+  // @@protoc_insertion_point(parse_success:mvcam.AdapterCapability)
   return true;
 failure:
-  // @@protoc_insertion_point(parse_failure:CameraServer.AdapterCapability)
+  // @@protoc_insertion_point(parse_failure:mvcam.AdapterCapability)
   return false;
 #undef DO_
 }
 
 void AdapterCapability::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:CameraServer.AdapterCapability)
+  // @@protoc_insertion_point(serialize_start:mvcam.AdapterCapability)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -770,13 +769,13 @@ void AdapterCapability::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
   }
-  // @@protoc_insertion_point(serialize_end:CameraServer.AdapterCapability)
+  // @@protoc_insertion_point(serialize_end:mvcam.AdapterCapability)
 }
 
 ::google::protobuf::uint8* AdapterCapability::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
   (void)deterministic; // Unused
-  // @@protoc_insertion_point(serialize_to_array_start:CameraServer.AdapterCapability)
+  // @@protoc_insertion_point(serialize_to_array_start:mvcam.AdapterCapability)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -789,12 +788,12 @@ void AdapterCapability::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:CameraServer.AdapterCapability)
+  // @@protoc_insertion_point(serialize_to_array_end:mvcam.AdapterCapability)
   return target;
 }
 
 size_t AdapterCapability::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:CameraServer.AdapterCapability)
+// @@protoc_insertion_point(message_byte_size_start:mvcam.AdapterCapability)
   size_t total_size = 0;
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -813,22 +812,22 @@ size_t AdapterCapability::ByteSizeLong() const {
 }
 
 void AdapterCapability::MergeFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:CameraServer.AdapterCapability)
+// @@protoc_insertion_point(generalized_merge_from_start:mvcam.AdapterCapability)
   GOOGLE_DCHECK_NE(&from, this);
   const AdapterCapability* source =
       ::google::protobuf::internal::DynamicCastToGenerated<const AdapterCapability>(
           &from);
   if (source == NULL) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:CameraServer.AdapterCapability)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:mvcam.AdapterCapability)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:CameraServer.AdapterCapability)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:mvcam.AdapterCapability)
     MergeFrom(*source);
   }
 }
 
 void AdapterCapability::MergeFrom(const AdapterCapability& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:CameraServer.AdapterCapability)
+// @@protoc_insertion_point(class_specific_merge_from_start:mvcam.AdapterCapability)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   ::google::protobuf::uint32 cached_has_bits = 0;
@@ -840,14 +839,14 @@ void AdapterCapability::MergeFrom(const AdapterCapability& from) {
 }
 
 void AdapterCapability::CopyFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:CameraServer.AdapterCapability)
+// @@protoc_insertion_point(generalized_copy_from_start:mvcam.AdapterCapability)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void AdapterCapability::CopyFrom(const AdapterCapability& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:CameraServer.AdapterCapability)
+// @@protoc_insertion_point(class_specific_copy_from_start:mvcam.AdapterCapability)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -876,8 +875,8 @@ void AdapterCapability::InternalSwap(AdapterCapability* other) {
 // ===================================================================
 
 void AdapterInfo::InitAsDefaultInstance() {
-  ::CameraServer::_AdapterInfo_default_instance_._instance.get_mutable()->capability_ = const_cast< ::CameraServer::AdapterCapability*>(
-      ::CameraServer::AdapterCapability::internal_default_instance());
+  ::mvcam::_AdapterInfo_default_instance_._instance.get_mutable()->capability_ = const_cast< ::mvcam::AdapterCapability*>(
+      ::mvcam::AdapterCapability::internal_default_instance());
 }
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int AdapterInfo::kNameFieldNumber;
@@ -892,7 +891,7 @@ AdapterInfo::AdapterInfo()
   ::google::protobuf::internal::InitSCC(
       &protobuf_camera_5fdefinitions_2eproto::scc_info_AdapterInfo.base);
   SharedCtor();
-  // @@protoc_insertion_point(constructor:CameraServer.AdapterInfo)
+  // @@protoc_insertion_point(constructor:mvcam.AdapterInfo)
 }
 AdapterInfo::AdapterInfo(const AdapterInfo& from)
   : ::google::protobuf::Message(),
@@ -911,12 +910,12 @@ AdapterInfo::AdapterInfo(const AdapterInfo& from)
     description_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.description_);
   }
   if (from.has_capability()) {
-    capability_ = new ::CameraServer::AdapterCapability(*from.capability_);
+    capability_ = new ::mvcam::AdapterCapability(*from.capability_);
   } else {
     capability_ = NULL;
   }
   in_use_ = from.in_use_;
-  // @@protoc_insertion_point(copy_constructor:CameraServer.AdapterInfo)
+  // @@protoc_insertion_point(copy_constructor:mvcam.AdapterInfo)
 }
 
 void AdapterInfo::SharedCtor() {
@@ -929,7 +928,7 @@ void AdapterInfo::SharedCtor() {
 }
 
 AdapterInfo::~AdapterInfo() {
-  // @@protoc_insertion_point(destructor:CameraServer.AdapterInfo)
+  // @@protoc_insertion_point(destructor:mvcam.AdapterInfo)
   SharedDtor();
 }
 
@@ -955,7 +954,7 @@ const AdapterInfo& AdapterInfo::default_instance() {
 
 
 void AdapterInfo::Clear() {
-// @@protoc_insertion_point(message_clear_start:CameraServer.AdapterInfo)
+// @@protoc_insertion_point(message_clear_start:mvcam.AdapterInfo)
   ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -975,7 +974,7 @@ bool AdapterInfo::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:CameraServer.AdapterInfo)
+  // @@protoc_insertion_point(parse_start:mvcam.AdapterInfo)
   for (;;) {
     ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
@@ -990,7 +989,7 @@ bool AdapterInfo::MergePartialFromCodedStream(
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
             this->name().data(), static_cast<int>(this->name().length()),
             ::google::protobuf::internal::WireFormatLite::PARSE,
-            "CameraServer.AdapterInfo.name"));
+            "mvcam.AdapterInfo.name"));
         } else {
           goto handle_unusual;
         }
@@ -1006,7 +1005,7 @@ bool AdapterInfo::MergePartialFromCodedStream(
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
             this->version().data(), static_cast<int>(this->version().length()),
             ::google::protobuf::internal::WireFormatLite::PARSE,
-            "CameraServer.AdapterInfo.version"));
+            "mvcam.AdapterInfo.version"));
         } else {
           goto handle_unusual;
         }
@@ -1022,7 +1021,7 @@ bool AdapterInfo::MergePartialFromCodedStream(
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
             this->description().data(), static_cast<int>(this->description().length()),
             ::google::protobuf::internal::WireFormatLite::PARSE,
-            "CameraServer.AdapterInfo.description"));
+            "mvcam.AdapterInfo.description"));
         } else {
           goto handle_unusual;
         }
@@ -1043,7 +1042,7 @@ bool AdapterInfo::MergePartialFromCodedStream(
         break;
       }
 
-      // .CameraServer.AdapterCapability capability = 5;
+      // .mvcam.AdapterCapability capability = 5;
       case 5: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(42u /* 42 & 0xFF */)) {
@@ -1067,17 +1066,17 @@ bool AdapterInfo::MergePartialFromCodedStream(
     }
   }
 success:
-  // @@protoc_insertion_point(parse_success:CameraServer.AdapterInfo)
+  // @@protoc_insertion_point(parse_success:mvcam.AdapterInfo)
   return true;
 failure:
-  // @@protoc_insertion_point(parse_failure:CameraServer.AdapterInfo)
+  // @@protoc_insertion_point(parse_failure:mvcam.AdapterInfo)
   return false;
 #undef DO_
 }
 
 void AdapterInfo::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:CameraServer.AdapterInfo)
+  // @@protoc_insertion_point(serialize_start:mvcam.AdapterInfo)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -1086,7 +1085,7 @@ void AdapterInfo::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->name().data(), static_cast<int>(this->name().length()),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "CameraServer.AdapterInfo.name");
+      "mvcam.AdapterInfo.name");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       1, this->name(), output);
   }
@@ -1096,7 +1095,7 @@ void AdapterInfo::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->version().data(), static_cast<int>(this->version().length()),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "CameraServer.AdapterInfo.version");
+      "mvcam.AdapterInfo.version");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       2, this->version(), output);
   }
@@ -1106,7 +1105,7 @@ void AdapterInfo::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->description().data(), static_cast<int>(this->description().length()),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "CameraServer.AdapterInfo.description");
+      "mvcam.AdapterInfo.description");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       3, this->description(), output);
   }
@@ -1116,7 +1115,7 @@ void AdapterInfo::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteBool(4, this->in_use(), output);
   }
 
-  // .CameraServer.AdapterCapability capability = 5;
+  // .mvcam.AdapterCapability capability = 5;
   if (this->has_capability()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
       5, this->_internal_capability(), output);
@@ -1126,13 +1125,13 @@ void AdapterInfo::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
   }
-  // @@protoc_insertion_point(serialize_end:CameraServer.AdapterInfo)
+  // @@protoc_insertion_point(serialize_end:mvcam.AdapterInfo)
 }
 
 ::google::protobuf::uint8* AdapterInfo::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
   (void)deterministic; // Unused
-  // @@protoc_insertion_point(serialize_to_array_start:CameraServer.AdapterInfo)
+  // @@protoc_insertion_point(serialize_to_array_start:mvcam.AdapterInfo)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -1141,7 +1140,7 @@ void AdapterInfo::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->name().data(), static_cast<int>(this->name().length()),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "CameraServer.AdapterInfo.name");
+      "mvcam.AdapterInfo.name");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
         1, this->name(), target);
@@ -1152,7 +1151,7 @@ void AdapterInfo::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->version().data(), static_cast<int>(this->version().length()),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "CameraServer.AdapterInfo.version");
+      "mvcam.AdapterInfo.version");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
         2, this->version(), target);
@@ -1163,7 +1162,7 @@ void AdapterInfo::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->description().data(), static_cast<int>(this->description().length()),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "CameraServer.AdapterInfo.description");
+      "mvcam.AdapterInfo.description");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
         3, this->description(), target);
@@ -1174,7 +1173,7 @@ void AdapterInfo::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(4, this->in_use(), target);
   }
 
-  // .CameraServer.AdapterCapability capability = 5;
+  // .mvcam.AdapterCapability capability = 5;
   if (this->has_capability()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
@@ -1185,12 +1184,12 @@ void AdapterInfo::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:CameraServer.AdapterInfo)
+  // @@protoc_insertion_point(serialize_to_array_end:mvcam.AdapterInfo)
   return target;
 }
 
 size_t AdapterInfo::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:CameraServer.AdapterInfo)
+// @@protoc_insertion_point(message_byte_size_start:mvcam.AdapterInfo)
   size_t total_size = 0;
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -1219,7 +1218,7 @@ size_t AdapterInfo::ByteSizeLong() const {
         this->description());
   }
 
-  // .CameraServer.AdapterCapability capability = 5;
+  // .mvcam.AdapterCapability capability = 5;
   if (this->has_capability()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSize(
@@ -1237,22 +1236,22 @@ size_t AdapterInfo::ByteSizeLong() const {
 }
 
 void AdapterInfo::MergeFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:CameraServer.AdapterInfo)
+// @@protoc_insertion_point(generalized_merge_from_start:mvcam.AdapterInfo)
   GOOGLE_DCHECK_NE(&from, this);
   const AdapterInfo* source =
       ::google::protobuf::internal::DynamicCastToGenerated<const AdapterInfo>(
           &from);
   if (source == NULL) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:CameraServer.AdapterInfo)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:mvcam.AdapterInfo)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:CameraServer.AdapterInfo)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:mvcam.AdapterInfo)
     MergeFrom(*source);
   }
 }
 
 void AdapterInfo::MergeFrom(const AdapterInfo& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:CameraServer.AdapterInfo)
+// @@protoc_insertion_point(class_specific_merge_from_start:mvcam.AdapterInfo)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   ::google::protobuf::uint32 cached_has_bits = 0;
@@ -1271,7 +1270,7 @@ void AdapterInfo::MergeFrom(const AdapterInfo& from) {
     description_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.description_);
   }
   if (from.has_capability()) {
-    mutable_capability()->::CameraServer::AdapterCapability::MergeFrom(from.capability());
+    mutable_capability()->::mvcam::AdapterCapability::MergeFrom(from.capability());
   }
   if (from.in_use() != 0) {
     set_in_use(from.in_use());
@@ -1279,14 +1278,14 @@ void AdapterInfo::MergeFrom(const AdapterInfo& from) {
 }
 
 void AdapterInfo::CopyFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:CameraServer.AdapterInfo)
+// @@protoc_insertion_point(generalized_copy_from_start:mvcam.AdapterInfo)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void AdapterInfo::CopyFrom(const AdapterInfo& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:CameraServer.AdapterInfo)
+// @@protoc_insertion_point(class_specific_copy_from_start:mvcam.AdapterInfo)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -1332,21 +1331,21 @@ AvailableAdaptersResponse::AvailableAdaptersResponse()
   ::google::protobuf::internal::InitSCC(
       &protobuf_camera_5fdefinitions_2eproto::scc_info_AvailableAdaptersResponse.base);
   SharedCtor();
-  // @@protoc_insertion_point(constructor:CameraServer.AvailableAdaptersResponse)
+  // @@protoc_insertion_point(constructor:mvcam.AvailableAdaptersResponse)
 }
 AvailableAdaptersResponse::AvailableAdaptersResponse(const AvailableAdaptersResponse& from)
   : ::google::protobuf::Message(),
       _internal_metadata_(NULL),
       adapters_(from.adapters_) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  // @@protoc_insertion_point(copy_constructor:CameraServer.AvailableAdaptersResponse)
+  // @@protoc_insertion_point(copy_constructor:mvcam.AvailableAdaptersResponse)
 }
 
 void AvailableAdaptersResponse::SharedCtor() {
 }
 
 AvailableAdaptersResponse::~AvailableAdaptersResponse() {
-  // @@protoc_insertion_point(destructor:CameraServer.AvailableAdaptersResponse)
+  // @@protoc_insertion_point(destructor:mvcam.AvailableAdaptersResponse)
   SharedDtor();
 }
 
@@ -1368,7 +1367,7 @@ const AvailableAdaptersResponse& AvailableAdaptersResponse::default_instance() {
 
 
 void AvailableAdaptersResponse::Clear() {
-// @@protoc_insertion_point(message_clear_start:CameraServer.AvailableAdaptersResponse)
+// @@protoc_insertion_point(message_clear_start:mvcam.AvailableAdaptersResponse)
   ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -1381,13 +1380,13 @@ bool AvailableAdaptersResponse::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:CameraServer.AvailableAdaptersResponse)
+  // @@protoc_insertion_point(parse_start:mvcam.AvailableAdaptersResponse)
   for (;;) {
     ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // repeated .CameraServer.AdapterInfo adapters = 1;
+      // repeated .mvcam.AdapterInfo adapters = 1;
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
@@ -1411,21 +1410,21 @@ bool AvailableAdaptersResponse::MergePartialFromCodedStream(
     }
   }
 success:
-  // @@protoc_insertion_point(parse_success:CameraServer.AvailableAdaptersResponse)
+  // @@protoc_insertion_point(parse_success:mvcam.AvailableAdaptersResponse)
   return true;
 failure:
-  // @@protoc_insertion_point(parse_failure:CameraServer.AvailableAdaptersResponse)
+  // @@protoc_insertion_point(parse_failure:mvcam.AvailableAdaptersResponse)
   return false;
 #undef DO_
 }
 
 void AvailableAdaptersResponse::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:CameraServer.AvailableAdaptersResponse)
+  // @@protoc_insertion_point(serialize_start:mvcam.AvailableAdaptersResponse)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated .CameraServer.AdapterInfo adapters = 1;
+  // repeated .mvcam.AdapterInfo adapters = 1;
   for (unsigned int i = 0,
       n = static_cast<unsigned int>(this->adapters_size()); i < n; i++) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
@@ -1438,17 +1437,17 @@ void AvailableAdaptersResponse::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
   }
-  // @@protoc_insertion_point(serialize_end:CameraServer.AvailableAdaptersResponse)
+  // @@protoc_insertion_point(serialize_end:mvcam.AvailableAdaptersResponse)
 }
 
 ::google::protobuf::uint8* AvailableAdaptersResponse::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
   (void)deterministic; // Unused
-  // @@protoc_insertion_point(serialize_to_array_start:CameraServer.AvailableAdaptersResponse)
+  // @@protoc_insertion_point(serialize_to_array_start:mvcam.AvailableAdaptersResponse)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated .CameraServer.AdapterInfo adapters = 1;
+  // repeated .mvcam.AdapterInfo adapters = 1;
   for (unsigned int i = 0,
       n = static_cast<unsigned int>(this->adapters_size()); i < n; i++) {
     target = ::google::protobuf::internal::WireFormatLite::
@@ -1460,12 +1459,12 @@ void AvailableAdaptersResponse::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:CameraServer.AvailableAdaptersResponse)
+  // @@protoc_insertion_point(serialize_to_array_end:mvcam.AvailableAdaptersResponse)
   return target;
 }
 
 size_t AvailableAdaptersResponse::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:CameraServer.AvailableAdaptersResponse)
+// @@protoc_insertion_point(message_byte_size_start:mvcam.AvailableAdaptersResponse)
   size_t total_size = 0;
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -1473,7 +1472,7 @@ size_t AvailableAdaptersResponse::ByteSizeLong() const {
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
   }
-  // repeated .CameraServer.AdapterInfo adapters = 1;
+  // repeated .mvcam.AdapterInfo adapters = 1;
   {
     unsigned int count = static_cast<unsigned int>(this->adapters_size());
     total_size += 1UL * count;
@@ -1490,22 +1489,22 @@ size_t AvailableAdaptersResponse::ByteSizeLong() const {
 }
 
 void AvailableAdaptersResponse::MergeFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:CameraServer.AvailableAdaptersResponse)
+// @@protoc_insertion_point(generalized_merge_from_start:mvcam.AvailableAdaptersResponse)
   GOOGLE_DCHECK_NE(&from, this);
   const AvailableAdaptersResponse* source =
       ::google::protobuf::internal::DynamicCastToGenerated<const AvailableAdaptersResponse>(
           &from);
   if (source == NULL) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:CameraServer.AvailableAdaptersResponse)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:mvcam.AvailableAdaptersResponse)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:CameraServer.AvailableAdaptersResponse)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:mvcam.AvailableAdaptersResponse)
     MergeFrom(*source);
   }
 }
 
 void AvailableAdaptersResponse::MergeFrom(const AvailableAdaptersResponse& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:CameraServer.AvailableAdaptersResponse)
+// @@protoc_insertion_point(class_specific_merge_from_start:mvcam.AvailableAdaptersResponse)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   ::google::protobuf::uint32 cached_has_bits = 0;
@@ -1515,14 +1514,14 @@ void AvailableAdaptersResponse::MergeFrom(const AvailableAdaptersResponse& from)
 }
 
 void AvailableAdaptersResponse::CopyFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:CameraServer.AvailableAdaptersResponse)
+// @@protoc_insertion_point(generalized_copy_from_start:mvcam.AvailableAdaptersResponse)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void AvailableAdaptersResponse::CopyFrom(const AvailableAdaptersResponse& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:CameraServer.AvailableAdaptersResponse)
+// @@protoc_insertion_point(class_specific_copy_from_start:mvcam.AvailableAdaptersResponse)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -1561,7 +1560,7 @@ AdapterRequest::AdapterRequest()
   ::google::protobuf::internal::InitSCC(
       &protobuf_camera_5fdefinitions_2eproto::scc_info_AdapterRequest.base);
   SharedCtor();
-  // @@protoc_insertion_point(constructor:CameraServer.AdapterRequest)
+  // @@protoc_insertion_point(constructor:mvcam.AdapterRequest)
 }
 AdapterRequest::AdapterRequest(const AdapterRequest& from)
   : ::google::protobuf::Message(),
@@ -1571,7 +1570,7 @@ AdapterRequest::AdapterRequest(const AdapterRequest& from)
   if (from.name().size() > 0) {
     name_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.name_);
   }
-  // @@protoc_insertion_point(copy_constructor:CameraServer.AdapterRequest)
+  // @@protoc_insertion_point(copy_constructor:mvcam.AdapterRequest)
 }
 
 void AdapterRequest::SharedCtor() {
@@ -1579,7 +1578,7 @@ void AdapterRequest::SharedCtor() {
 }
 
 AdapterRequest::~AdapterRequest() {
-  // @@protoc_insertion_point(destructor:CameraServer.AdapterRequest)
+  // @@protoc_insertion_point(destructor:mvcam.AdapterRequest)
   SharedDtor();
 }
 
@@ -1602,7 +1601,7 @@ const AdapterRequest& AdapterRequest::default_instance() {
 
 
 void AdapterRequest::Clear() {
-// @@protoc_insertion_point(message_clear_start:CameraServer.AdapterRequest)
+// @@protoc_insertion_point(message_clear_start:mvcam.AdapterRequest)
   ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -1615,7 +1614,7 @@ bool AdapterRequest::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:CameraServer.AdapterRequest)
+  // @@protoc_insertion_point(parse_start:mvcam.AdapterRequest)
   for (;;) {
     ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
@@ -1630,7 +1629,7 @@ bool AdapterRequest::MergePartialFromCodedStream(
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
             this->name().data(), static_cast<int>(this->name().length()),
             ::google::protobuf::internal::WireFormatLite::PARSE,
-            "CameraServer.AdapterRequest.name"));
+            "mvcam.AdapterRequest.name"));
         } else {
           goto handle_unusual;
         }
@@ -1649,17 +1648,17 @@ bool AdapterRequest::MergePartialFromCodedStream(
     }
   }
 success:
-  // @@protoc_insertion_point(parse_success:CameraServer.AdapterRequest)
+  // @@protoc_insertion_point(parse_success:mvcam.AdapterRequest)
   return true;
 failure:
-  // @@protoc_insertion_point(parse_failure:CameraServer.AdapterRequest)
+  // @@protoc_insertion_point(parse_failure:mvcam.AdapterRequest)
   return false;
 #undef DO_
 }
 
 void AdapterRequest::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:CameraServer.AdapterRequest)
+  // @@protoc_insertion_point(serialize_start:mvcam.AdapterRequest)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -1668,7 +1667,7 @@ void AdapterRequest::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->name().data(), static_cast<int>(this->name().length()),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "CameraServer.AdapterRequest.name");
+      "mvcam.AdapterRequest.name");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       1, this->name(), output);
   }
@@ -1677,13 +1676,13 @@ void AdapterRequest::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
   }
-  // @@protoc_insertion_point(serialize_end:CameraServer.AdapterRequest)
+  // @@protoc_insertion_point(serialize_end:mvcam.AdapterRequest)
 }
 
 ::google::protobuf::uint8* AdapterRequest::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
   (void)deterministic; // Unused
-  // @@protoc_insertion_point(serialize_to_array_start:CameraServer.AdapterRequest)
+  // @@protoc_insertion_point(serialize_to_array_start:mvcam.AdapterRequest)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -1692,7 +1691,7 @@ void AdapterRequest::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->name().data(), static_cast<int>(this->name().length()),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "CameraServer.AdapterRequest.name");
+      "mvcam.AdapterRequest.name");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
         1, this->name(), target);
@@ -1702,12 +1701,12 @@ void AdapterRequest::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:CameraServer.AdapterRequest)
+  // @@protoc_insertion_point(serialize_to_array_end:mvcam.AdapterRequest)
   return target;
 }
 
 size_t AdapterRequest::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:CameraServer.AdapterRequest)
+// @@protoc_insertion_point(message_byte_size_start:mvcam.AdapterRequest)
   size_t total_size = 0;
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -1728,22 +1727,22 @@ size_t AdapterRequest::ByteSizeLong() const {
 }
 
 void AdapterRequest::MergeFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:CameraServer.AdapterRequest)
+// @@protoc_insertion_point(generalized_merge_from_start:mvcam.AdapterRequest)
   GOOGLE_DCHECK_NE(&from, this);
   const AdapterRequest* source =
       ::google::protobuf::internal::DynamicCastToGenerated<const AdapterRequest>(
           &from);
   if (source == NULL) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:CameraServer.AdapterRequest)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:mvcam.AdapterRequest)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:CameraServer.AdapterRequest)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:mvcam.AdapterRequest)
     MergeFrom(*source);
   }
 }
 
 void AdapterRequest::MergeFrom(const AdapterRequest& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:CameraServer.AdapterRequest)
+// @@protoc_insertion_point(class_specific_merge_from_start:mvcam.AdapterRequest)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   ::google::protobuf::uint32 cached_has_bits = 0;
@@ -1756,14 +1755,14 @@ void AdapterRequest::MergeFrom(const AdapterRequest& from) {
 }
 
 void AdapterRequest::CopyFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:CameraServer.AdapterRequest)
+// @@protoc_insertion_point(generalized_copy_from_start:mvcam.AdapterRequest)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void AdapterRequest::CopyFrom(const AdapterRequest& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:CameraServer.AdapterRequest)
+// @@protoc_insertion_point(class_specific_copy_from_start:mvcam.AdapterRequest)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -1815,7 +1814,7 @@ CameraCapability::CameraCapability()
   ::google::protobuf::internal::InitSCC(
       &protobuf_camera_5fdefinitions_2eproto::scc_info_CameraCapability.base);
   SharedCtor();
-  // @@protoc_insertion_point(constructor:CameraServer.CameraCapability)
+  // @@protoc_insertion_point(constructor:mvcam.CameraCapability)
 }
 CameraCapability::CameraCapability(const CameraCapability& from)
   : ::google::protobuf::Message(),
@@ -1824,7 +1823,7 @@ CameraCapability::CameraCapability(const CameraCapability& from)
   ::memcpy(&can_shutdown_, &from.can_shutdown_,
     static_cast<size_t>(reinterpret_cast<char*>(&can_reset_) -
     reinterpret_cast<char*>(&can_shutdown_)) + sizeof(can_reset_));
-  // @@protoc_insertion_point(copy_constructor:CameraServer.CameraCapability)
+  // @@protoc_insertion_point(copy_constructor:mvcam.CameraCapability)
 }
 
 void CameraCapability::SharedCtor() {
@@ -1834,7 +1833,7 @@ void CameraCapability::SharedCtor() {
 }
 
 CameraCapability::~CameraCapability() {
-  // @@protoc_insertion_point(destructor:CameraServer.CameraCapability)
+  // @@protoc_insertion_point(destructor:mvcam.CameraCapability)
   SharedDtor();
 }
 
@@ -1856,7 +1855,7 @@ const CameraCapability& CameraCapability::default_instance() {
 
 
 void CameraCapability::Clear() {
-// @@protoc_insertion_point(message_clear_start:CameraServer.CameraCapability)
+// @@protoc_insertion_point(message_clear_start:mvcam.CameraCapability)
   ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -1871,7 +1870,7 @@ bool CameraCapability::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:CameraServer.CameraCapability)
+  // @@protoc_insertion_point(parse_start:mvcam.CameraCapability)
   for (;;) {
     ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
@@ -2071,17 +2070,17 @@ bool CameraCapability::MergePartialFromCodedStream(
     }
   }
 success:
-  // @@protoc_insertion_point(parse_success:CameraServer.CameraCapability)
+  // @@protoc_insertion_point(parse_success:mvcam.CameraCapability)
   return true;
 failure:
-  // @@protoc_insertion_point(parse_failure:CameraServer.CameraCapability)
+  // @@protoc_insertion_point(parse_failure:mvcam.CameraCapability)
   return false;
 #undef DO_
 }
 
 void CameraCapability::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:CameraServer.CameraCapability)
+  // @@protoc_insertion_point(serialize_start:mvcam.CameraCapability)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -2154,13 +2153,13 @@ void CameraCapability::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
   }
-  // @@protoc_insertion_point(serialize_end:CameraServer.CameraCapability)
+  // @@protoc_insertion_point(serialize_end:mvcam.CameraCapability)
 }
 
 ::google::protobuf::uint8* CameraCapability::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
   (void)deterministic; // Unused
-  // @@protoc_insertion_point(serialize_to_array_start:CameraServer.CameraCapability)
+  // @@protoc_insertion_point(serialize_to_array_start:mvcam.CameraCapability)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -2233,12 +2232,12 @@ void CameraCapability::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:CameraServer.CameraCapability)
+  // @@protoc_insertion_point(serialize_to_array_end:mvcam.CameraCapability)
   return target;
 }
 
 size_t CameraCapability::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:CameraServer.CameraCapability)
+// @@protoc_insertion_point(message_byte_size_start:mvcam.CameraCapability)
   size_t total_size = 0;
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -2317,22 +2316,22 @@ size_t CameraCapability::ByteSizeLong() const {
 }
 
 void CameraCapability::MergeFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:CameraServer.CameraCapability)
+// @@protoc_insertion_point(generalized_merge_from_start:mvcam.CameraCapability)
   GOOGLE_DCHECK_NE(&from, this);
   const CameraCapability* source =
       ::google::protobuf::internal::DynamicCastToGenerated<const CameraCapability>(
           &from);
   if (source == NULL) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:CameraServer.CameraCapability)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:mvcam.CameraCapability)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:CameraServer.CameraCapability)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:mvcam.CameraCapability)
     MergeFrom(*source);
   }
 }
 
 void CameraCapability::MergeFrom(const CameraCapability& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:CameraServer.CameraCapability)
+// @@protoc_insertion_point(class_specific_merge_from_start:mvcam.CameraCapability)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   ::google::protobuf::uint32 cached_has_bits = 0;
@@ -2380,14 +2379,14 @@ void CameraCapability::MergeFrom(const CameraCapability& from) {
 }
 
 void CameraCapability::CopyFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:CameraServer.CameraCapability)
+// @@protoc_insertion_point(generalized_copy_from_start:mvcam.CameraCapability)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void CameraCapability::CopyFrom(const CameraCapability& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:CameraServer.CameraCapability)
+// @@protoc_insertion_point(class_specific_copy_from_start:mvcam.CameraCapability)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -2428,10 +2427,10 @@ void CameraCapability::InternalSwap(CameraCapability* other) {
 // ===================================================================
 
 void DeviceInfo::InitAsDefaultInstance() {
-  ::CameraServer::_DeviceInfo_default_instance_._instance.get_mutable()->adapter_ = const_cast< ::CameraServer::AdapterInfo*>(
-      ::CameraServer::AdapterInfo::internal_default_instance());
-  ::CameraServer::_DeviceInfo_default_instance_._instance.get_mutable()->capabilities_ = const_cast< ::CameraServer::CameraCapability*>(
-      ::CameraServer::CameraCapability::internal_default_instance());
+  ::mvcam::_DeviceInfo_default_instance_._instance.get_mutable()->adapter_ = const_cast< ::mvcam::AdapterInfo*>(
+      ::mvcam::AdapterInfo::internal_default_instance());
+  ::mvcam::_DeviceInfo_default_instance_._instance.get_mutable()->capabilities_ = const_cast< ::mvcam::CameraCapability*>(
+      ::mvcam::CameraCapability::internal_default_instance());
 }
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int DeviceInfo::kAdapterFieldNumber;
@@ -2448,7 +2447,7 @@ DeviceInfo::DeviceInfo()
   ::google::protobuf::internal::InitSCC(
       &protobuf_camera_5fdefinitions_2eproto::scc_info_DeviceInfo.base);
   SharedCtor();
-  // @@protoc_insertion_point(constructor:CameraServer.DeviceInfo)
+  // @@protoc_insertion_point(constructor:mvcam.DeviceInfo)
 }
 DeviceInfo::DeviceInfo(const DeviceInfo& from)
   : ::google::protobuf::Message(),
@@ -2475,16 +2474,16 @@ DeviceInfo::DeviceInfo(const DeviceInfo& from)
     serial_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.serial_);
   }
   if (from.has_adapter()) {
-    adapter_ = new ::CameraServer::AdapterInfo(*from.adapter_);
+    adapter_ = new ::mvcam::AdapterInfo(*from.adapter_);
   } else {
     adapter_ = NULL;
   }
   if (from.has_capabilities()) {
-    capabilities_ = new ::CameraServer::CameraCapability(*from.capabilities_);
+    capabilities_ = new ::mvcam::CameraCapability(*from.capabilities_);
   } else {
     capabilities_ = NULL;
   }
-  // @@protoc_insertion_point(copy_constructor:CameraServer.DeviceInfo)
+  // @@protoc_insertion_point(copy_constructor:mvcam.DeviceInfo)
 }
 
 void DeviceInfo::SharedCtor() {
@@ -2499,7 +2498,7 @@ void DeviceInfo::SharedCtor() {
 }
 
 DeviceInfo::~DeviceInfo() {
-  // @@protoc_insertion_point(destructor:CameraServer.DeviceInfo)
+  // @@protoc_insertion_point(destructor:mvcam.DeviceInfo)
   SharedDtor();
 }
 
@@ -2528,7 +2527,7 @@ const DeviceInfo& DeviceInfo::default_instance() {
 
 
 void DeviceInfo::Clear() {
-// @@protoc_insertion_point(message_clear_start:CameraServer.DeviceInfo)
+// @@protoc_insertion_point(message_clear_start:mvcam.DeviceInfo)
   ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -2553,13 +2552,13 @@ bool DeviceInfo::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:CameraServer.DeviceInfo)
+  // @@protoc_insertion_point(parse_start:mvcam.DeviceInfo)
   for (;;) {
     ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // .CameraServer.AdapterInfo adapter = 1;
+      // .mvcam.AdapterInfo adapter = 1;
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
@@ -2580,7 +2579,7 @@ bool DeviceInfo::MergePartialFromCodedStream(
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
             this->manufacture().data(), static_cast<int>(this->manufacture().length()),
             ::google::protobuf::internal::WireFormatLite::PARSE,
-            "CameraServer.DeviceInfo.manufacture"));
+            "mvcam.DeviceInfo.manufacture"));
         } else {
           goto handle_unusual;
         }
@@ -2596,7 +2595,7 @@ bool DeviceInfo::MergePartialFromCodedStream(
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
             this->id().data(), static_cast<int>(this->id().length()),
             ::google::protobuf::internal::WireFormatLite::PARSE,
-            "CameraServer.DeviceInfo.id"));
+            "mvcam.DeviceInfo.id"));
         } else {
           goto handle_unusual;
         }
@@ -2612,7 +2611,7 @@ bool DeviceInfo::MergePartialFromCodedStream(
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
             this->model().data(), static_cast<int>(this->model().length()),
             ::google::protobuf::internal::WireFormatLite::PARSE,
-            "CameraServer.DeviceInfo.model"));
+            "mvcam.DeviceInfo.model"));
         } else {
           goto handle_unusual;
         }
@@ -2628,7 +2627,7 @@ bool DeviceInfo::MergePartialFromCodedStream(
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
             this->version().data(), static_cast<int>(this->version().length()),
             ::google::protobuf::internal::WireFormatLite::PARSE,
-            "CameraServer.DeviceInfo.version"));
+            "mvcam.DeviceInfo.version"));
         } else {
           goto handle_unusual;
         }
@@ -2644,14 +2643,14 @@ bool DeviceInfo::MergePartialFromCodedStream(
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
             this->serial().data(), static_cast<int>(this->serial().length()),
             ::google::protobuf::internal::WireFormatLite::PARSE,
-            "CameraServer.DeviceInfo.serial"));
+            "mvcam.DeviceInfo.serial"));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // .CameraServer.CameraCapability capabilities = 7;
+      // .mvcam.CameraCapability capabilities = 7;
       case 7: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(58u /* 58 & 0xFF */)) {
@@ -2675,21 +2674,21 @@ bool DeviceInfo::MergePartialFromCodedStream(
     }
   }
 success:
-  // @@protoc_insertion_point(parse_success:CameraServer.DeviceInfo)
+  // @@protoc_insertion_point(parse_success:mvcam.DeviceInfo)
   return true;
 failure:
-  // @@protoc_insertion_point(parse_failure:CameraServer.DeviceInfo)
+  // @@protoc_insertion_point(parse_failure:mvcam.DeviceInfo)
   return false;
 #undef DO_
 }
 
 void DeviceInfo::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:CameraServer.DeviceInfo)
+  // @@protoc_insertion_point(serialize_start:mvcam.DeviceInfo)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .CameraServer.AdapterInfo adapter = 1;
+  // .mvcam.AdapterInfo adapter = 1;
   if (this->has_adapter()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
       1, this->_internal_adapter(), output);
@@ -2700,7 +2699,7 @@ void DeviceInfo::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->manufacture().data(), static_cast<int>(this->manufacture().length()),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "CameraServer.DeviceInfo.manufacture");
+      "mvcam.DeviceInfo.manufacture");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       2, this->manufacture(), output);
   }
@@ -2710,7 +2709,7 @@ void DeviceInfo::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->id().data(), static_cast<int>(this->id().length()),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "CameraServer.DeviceInfo.id");
+      "mvcam.DeviceInfo.id");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       3, this->id(), output);
   }
@@ -2720,7 +2719,7 @@ void DeviceInfo::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->model().data(), static_cast<int>(this->model().length()),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "CameraServer.DeviceInfo.model");
+      "mvcam.DeviceInfo.model");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       4, this->model(), output);
   }
@@ -2730,7 +2729,7 @@ void DeviceInfo::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->version().data(), static_cast<int>(this->version().length()),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "CameraServer.DeviceInfo.version");
+      "mvcam.DeviceInfo.version");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       5, this->version(), output);
   }
@@ -2740,12 +2739,12 @@ void DeviceInfo::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->serial().data(), static_cast<int>(this->serial().length()),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "CameraServer.DeviceInfo.serial");
+      "mvcam.DeviceInfo.serial");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       6, this->serial(), output);
   }
 
-  // .CameraServer.CameraCapability capabilities = 7;
+  // .mvcam.CameraCapability capabilities = 7;
   if (this->has_capabilities()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
       7, this->_internal_capabilities(), output);
@@ -2755,17 +2754,17 @@ void DeviceInfo::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
   }
-  // @@protoc_insertion_point(serialize_end:CameraServer.DeviceInfo)
+  // @@protoc_insertion_point(serialize_end:mvcam.DeviceInfo)
 }
 
 ::google::protobuf::uint8* DeviceInfo::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
   (void)deterministic; // Unused
-  // @@protoc_insertion_point(serialize_to_array_start:CameraServer.DeviceInfo)
+  // @@protoc_insertion_point(serialize_to_array_start:mvcam.DeviceInfo)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .CameraServer.AdapterInfo adapter = 1;
+  // .mvcam.AdapterInfo adapter = 1;
   if (this->has_adapter()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
@@ -2777,7 +2776,7 @@ void DeviceInfo::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->manufacture().data(), static_cast<int>(this->manufacture().length()),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "CameraServer.DeviceInfo.manufacture");
+      "mvcam.DeviceInfo.manufacture");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
         2, this->manufacture(), target);
@@ -2788,7 +2787,7 @@ void DeviceInfo::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->id().data(), static_cast<int>(this->id().length()),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "CameraServer.DeviceInfo.id");
+      "mvcam.DeviceInfo.id");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
         3, this->id(), target);
@@ -2799,7 +2798,7 @@ void DeviceInfo::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->model().data(), static_cast<int>(this->model().length()),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "CameraServer.DeviceInfo.model");
+      "mvcam.DeviceInfo.model");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
         4, this->model(), target);
@@ -2810,7 +2809,7 @@ void DeviceInfo::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->version().data(), static_cast<int>(this->version().length()),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "CameraServer.DeviceInfo.version");
+      "mvcam.DeviceInfo.version");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
         5, this->version(), target);
@@ -2821,13 +2820,13 @@ void DeviceInfo::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->serial().data(), static_cast<int>(this->serial().length()),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "CameraServer.DeviceInfo.serial");
+      "mvcam.DeviceInfo.serial");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
         6, this->serial(), target);
   }
 
-  // .CameraServer.CameraCapability capabilities = 7;
+  // .mvcam.CameraCapability capabilities = 7;
   if (this->has_capabilities()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
@@ -2838,12 +2837,12 @@ void DeviceInfo::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:CameraServer.DeviceInfo)
+  // @@protoc_insertion_point(serialize_to_array_end:mvcam.DeviceInfo)
   return target;
 }
 
 size_t DeviceInfo::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:CameraServer.DeviceInfo)
+// @@protoc_insertion_point(message_byte_size_start:mvcam.DeviceInfo)
   size_t total_size = 0;
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -2886,14 +2885,14 @@ size_t DeviceInfo::ByteSizeLong() const {
         this->serial());
   }
 
-  // .CameraServer.AdapterInfo adapter = 1;
+  // .mvcam.AdapterInfo adapter = 1;
   if (this->has_adapter()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSize(
         *adapter_);
   }
 
-  // .CameraServer.CameraCapability capabilities = 7;
+  // .mvcam.CameraCapability capabilities = 7;
   if (this->has_capabilities()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSize(
@@ -2906,22 +2905,22 @@ size_t DeviceInfo::ByteSizeLong() const {
 }
 
 void DeviceInfo::MergeFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:CameraServer.DeviceInfo)
+// @@protoc_insertion_point(generalized_merge_from_start:mvcam.DeviceInfo)
   GOOGLE_DCHECK_NE(&from, this);
   const DeviceInfo* source =
       ::google::protobuf::internal::DynamicCastToGenerated<const DeviceInfo>(
           &from);
   if (source == NULL) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:CameraServer.DeviceInfo)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:mvcam.DeviceInfo)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:CameraServer.DeviceInfo)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:mvcam.DeviceInfo)
     MergeFrom(*source);
   }
 }
 
 void DeviceInfo::MergeFrom(const DeviceInfo& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:CameraServer.DeviceInfo)
+// @@protoc_insertion_point(class_specific_merge_from_start:mvcam.DeviceInfo)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   ::google::protobuf::uint32 cached_has_bits = 0;
@@ -2948,22 +2947,22 @@ void DeviceInfo::MergeFrom(const DeviceInfo& from) {
     serial_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.serial_);
   }
   if (from.has_adapter()) {
-    mutable_adapter()->::CameraServer::AdapterInfo::MergeFrom(from.adapter());
+    mutable_adapter()->::mvcam::AdapterInfo::MergeFrom(from.adapter());
   }
   if (from.has_capabilities()) {
-    mutable_capabilities()->::CameraServer::CameraCapability::MergeFrom(from.capabilities());
+    mutable_capabilities()->::mvcam::CameraCapability::MergeFrom(from.capabilities());
   }
 }
 
 void DeviceInfo::CopyFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:CameraServer.DeviceInfo)
+// @@protoc_insertion_point(generalized_copy_from_start:mvcam.DeviceInfo)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void DeviceInfo::CopyFrom(const DeviceInfo& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:CameraServer.DeviceInfo)
+// @@protoc_insertion_point(class_specific_copy_from_start:mvcam.DeviceInfo)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -3013,21 +3012,21 @@ DeviceListResponse::DeviceListResponse()
   ::google::protobuf::internal::InitSCC(
       &protobuf_camera_5fdefinitions_2eproto::scc_info_DeviceListResponse.base);
   SharedCtor();
-  // @@protoc_insertion_point(constructor:CameraServer.DeviceListResponse)
+  // @@protoc_insertion_point(constructor:mvcam.DeviceListResponse)
 }
 DeviceListResponse::DeviceListResponse(const DeviceListResponse& from)
   : ::google::protobuf::Message(),
       _internal_metadata_(NULL),
       devices_(from.devices_) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  // @@protoc_insertion_point(copy_constructor:CameraServer.DeviceListResponse)
+  // @@protoc_insertion_point(copy_constructor:mvcam.DeviceListResponse)
 }
 
 void DeviceListResponse::SharedCtor() {
 }
 
 DeviceListResponse::~DeviceListResponse() {
-  // @@protoc_insertion_point(destructor:CameraServer.DeviceListResponse)
+  // @@protoc_insertion_point(destructor:mvcam.DeviceListResponse)
   SharedDtor();
 }
 
@@ -3049,7 +3048,7 @@ const DeviceListResponse& DeviceListResponse::default_instance() {
 
 
 void DeviceListResponse::Clear() {
-// @@protoc_insertion_point(message_clear_start:CameraServer.DeviceListResponse)
+// @@protoc_insertion_point(message_clear_start:mvcam.DeviceListResponse)
   ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -3062,13 +3061,13 @@ bool DeviceListResponse::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:CameraServer.DeviceListResponse)
+  // @@protoc_insertion_point(parse_start:mvcam.DeviceListResponse)
   for (;;) {
     ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // repeated .CameraServer.DeviceInfo devices = 1;
+      // repeated .mvcam.DeviceInfo devices = 1;
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
@@ -3092,21 +3091,21 @@ bool DeviceListResponse::MergePartialFromCodedStream(
     }
   }
 success:
-  // @@protoc_insertion_point(parse_success:CameraServer.DeviceListResponse)
+  // @@protoc_insertion_point(parse_success:mvcam.DeviceListResponse)
   return true;
 failure:
-  // @@protoc_insertion_point(parse_failure:CameraServer.DeviceListResponse)
+  // @@protoc_insertion_point(parse_failure:mvcam.DeviceListResponse)
   return false;
 #undef DO_
 }
 
 void DeviceListResponse::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:CameraServer.DeviceListResponse)
+  // @@protoc_insertion_point(serialize_start:mvcam.DeviceListResponse)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated .CameraServer.DeviceInfo devices = 1;
+  // repeated .mvcam.DeviceInfo devices = 1;
   for (unsigned int i = 0,
       n = static_cast<unsigned int>(this->devices_size()); i < n; i++) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
@@ -3119,17 +3118,17 @@ void DeviceListResponse::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
   }
-  // @@protoc_insertion_point(serialize_end:CameraServer.DeviceListResponse)
+  // @@protoc_insertion_point(serialize_end:mvcam.DeviceListResponse)
 }
 
 ::google::protobuf::uint8* DeviceListResponse::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
   (void)deterministic; // Unused
-  // @@protoc_insertion_point(serialize_to_array_start:CameraServer.DeviceListResponse)
+  // @@protoc_insertion_point(serialize_to_array_start:mvcam.DeviceListResponse)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated .CameraServer.DeviceInfo devices = 1;
+  // repeated .mvcam.DeviceInfo devices = 1;
   for (unsigned int i = 0,
       n = static_cast<unsigned int>(this->devices_size()); i < n; i++) {
     target = ::google::protobuf::internal::WireFormatLite::
@@ -3141,12 +3140,12 @@ void DeviceListResponse::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:CameraServer.DeviceListResponse)
+  // @@protoc_insertion_point(serialize_to_array_end:mvcam.DeviceListResponse)
   return target;
 }
 
 size_t DeviceListResponse::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:CameraServer.DeviceListResponse)
+// @@protoc_insertion_point(message_byte_size_start:mvcam.DeviceListResponse)
   size_t total_size = 0;
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -3154,7 +3153,7 @@ size_t DeviceListResponse::ByteSizeLong() const {
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
   }
-  // repeated .CameraServer.DeviceInfo devices = 1;
+  // repeated .mvcam.DeviceInfo devices = 1;
   {
     unsigned int count = static_cast<unsigned int>(this->devices_size());
     total_size += 1UL * count;
@@ -3171,22 +3170,22 @@ size_t DeviceListResponse::ByteSizeLong() const {
 }
 
 void DeviceListResponse::MergeFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:CameraServer.DeviceListResponse)
+// @@protoc_insertion_point(generalized_merge_from_start:mvcam.DeviceListResponse)
   GOOGLE_DCHECK_NE(&from, this);
   const DeviceListResponse* source =
       ::google::protobuf::internal::DynamicCastToGenerated<const DeviceListResponse>(
           &from);
   if (source == NULL) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:CameraServer.DeviceListResponse)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:mvcam.DeviceListResponse)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:CameraServer.DeviceListResponse)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:mvcam.DeviceListResponse)
     MergeFrom(*source);
   }
 }
 
 void DeviceListResponse::MergeFrom(const DeviceListResponse& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:CameraServer.DeviceListResponse)
+// @@protoc_insertion_point(class_specific_merge_from_start:mvcam.DeviceListResponse)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   ::google::protobuf::uint32 cached_has_bits = 0;
@@ -3196,14 +3195,14 @@ void DeviceListResponse::MergeFrom(const DeviceListResponse& from) {
 }
 
 void DeviceListResponse::CopyFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:CameraServer.DeviceListResponse)
+// @@protoc_insertion_point(generalized_copy_from_start:mvcam.DeviceListResponse)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void DeviceListResponse::CopyFrom(const DeviceListResponse& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:CameraServer.DeviceListResponse)
+// @@protoc_insertion_point(class_specific_copy_from_start:mvcam.DeviceListResponse)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -3242,7 +3241,7 @@ IdRequest::IdRequest()
   ::google::protobuf::internal::InitSCC(
       &protobuf_camera_5fdefinitions_2eproto::scc_info_IdRequest.base);
   SharedCtor();
-  // @@protoc_insertion_point(constructor:CameraServer.IdRequest)
+  // @@protoc_insertion_point(constructor:mvcam.IdRequest)
 }
 IdRequest::IdRequest(const IdRequest& from)
   : ::google::protobuf::Message(),
@@ -3252,7 +3251,7 @@ IdRequest::IdRequest(const IdRequest& from)
   if (from.id().size() > 0) {
     id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.id_);
   }
-  // @@protoc_insertion_point(copy_constructor:CameraServer.IdRequest)
+  // @@protoc_insertion_point(copy_constructor:mvcam.IdRequest)
 }
 
 void IdRequest::SharedCtor() {
@@ -3260,7 +3259,7 @@ void IdRequest::SharedCtor() {
 }
 
 IdRequest::~IdRequest() {
-  // @@protoc_insertion_point(destructor:CameraServer.IdRequest)
+  // @@protoc_insertion_point(destructor:mvcam.IdRequest)
   SharedDtor();
 }
 
@@ -3283,7 +3282,7 @@ const IdRequest& IdRequest::default_instance() {
 
 
 void IdRequest::Clear() {
-// @@protoc_insertion_point(message_clear_start:CameraServer.IdRequest)
+// @@protoc_insertion_point(message_clear_start:mvcam.IdRequest)
   ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -3296,7 +3295,7 @@ bool IdRequest::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:CameraServer.IdRequest)
+  // @@protoc_insertion_point(parse_start:mvcam.IdRequest)
   for (;;) {
     ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
@@ -3311,7 +3310,7 @@ bool IdRequest::MergePartialFromCodedStream(
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
             this->id().data(), static_cast<int>(this->id().length()),
             ::google::protobuf::internal::WireFormatLite::PARSE,
-            "CameraServer.IdRequest.id"));
+            "mvcam.IdRequest.id"));
         } else {
           goto handle_unusual;
         }
@@ -3330,17 +3329,17 @@ bool IdRequest::MergePartialFromCodedStream(
     }
   }
 success:
-  // @@protoc_insertion_point(parse_success:CameraServer.IdRequest)
+  // @@protoc_insertion_point(parse_success:mvcam.IdRequest)
   return true;
 failure:
-  // @@protoc_insertion_point(parse_failure:CameraServer.IdRequest)
+  // @@protoc_insertion_point(parse_failure:mvcam.IdRequest)
   return false;
 #undef DO_
 }
 
 void IdRequest::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:CameraServer.IdRequest)
+  // @@protoc_insertion_point(serialize_start:mvcam.IdRequest)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -3349,7 +3348,7 @@ void IdRequest::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->id().data(), static_cast<int>(this->id().length()),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "CameraServer.IdRequest.id");
+      "mvcam.IdRequest.id");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       1, this->id(), output);
   }
@@ -3358,13 +3357,13 @@ void IdRequest::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
   }
-  // @@protoc_insertion_point(serialize_end:CameraServer.IdRequest)
+  // @@protoc_insertion_point(serialize_end:mvcam.IdRequest)
 }
 
 ::google::protobuf::uint8* IdRequest::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
   (void)deterministic; // Unused
-  // @@protoc_insertion_point(serialize_to_array_start:CameraServer.IdRequest)
+  // @@protoc_insertion_point(serialize_to_array_start:mvcam.IdRequest)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -3373,7 +3372,7 @@ void IdRequest::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->id().data(), static_cast<int>(this->id().length()),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "CameraServer.IdRequest.id");
+      "mvcam.IdRequest.id");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
         1, this->id(), target);
@@ -3383,12 +3382,12 @@ void IdRequest::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:CameraServer.IdRequest)
+  // @@protoc_insertion_point(serialize_to_array_end:mvcam.IdRequest)
   return target;
 }
 
 size_t IdRequest::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:CameraServer.IdRequest)
+// @@protoc_insertion_point(message_byte_size_start:mvcam.IdRequest)
   size_t total_size = 0;
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -3409,22 +3408,22 @@ size_t IdRequest::ByteSizeLong() const {
 }
 
 void IdRequest::MergeFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:CameraServer.IdRequest)
+// @@protoc_insertion_point(generalized_merge_from_start:mvcam.IdRequest)
   GOOGLE_DCHECK_NE(&from, this);
   const IdRequest* source =
       ::google::protobuf::internal::DynamicCastToGenerated<const IdRequest>(
           &from);
   if (source == NULL) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:CameraServer.IdRequest)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:mvcam.IdRequest)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:CameraServer.IdRequest)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:mvcam.IdRequest)
     MergeFrom(*source);
   }
 }
 
 void IdRequest::MergeFrom(const IdRequest& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:CameraServer.IdRequest)
+// @@protoc_insertion_point(class_specific_merge_from_start:mvcam.IdRequest)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   ::google::protobuf::uint32 cached_has_bits = 0;
@@ -3437,14 +3436,14 @@ void IdRequest::MergeFrom(const IdRequest& from) {
 }
 
 void IdRequest::CopyFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:CameraServer.IdRequest)
+// @@protoc_insertion_point(generalized_copy_from_start:mvcam.IdRequest)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void IdRequest::CopyFrom(const IdRequest& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:CameraServer.IdRequest)
+// @@protoc_insertion_point(class_specific_copy_from_start:mvcam.IdRequest)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -3485,7 +3484,7 @@ Parameter::Parameter()
   ::google::protobuf::internal::InitSCC(
       &protobuf_camera_5fdefinitions_2eproto::scc_info_Parameter.base);
   SharedCtor();
-  // @@protoc_insertion_point(constructor:CameraServer.Parameter)
+  // @@protoc_insertion_point(constructor:mvcam.Parameter)
 }
 Parameter::Parameter(const Parameter& from)
   : ::google::protobuf::Message(),
@@ -3494,7 +3493,7 @@ Parameter::Parameter(const Parameter& from)
   ::memcpy(&value_, &from.value_,
     static_cast<size_t>(reinterpret_cast<char*>(&should_update_) -
     reinterpret_cast<char*>(&value_)) + sizeof(should_update_));
-  // @@protoc_insertion_point(copy_constructor:CameraServer.Parameter)
+  // @@protoc_insertion_point(copy_constructor:mvcam.Parameter)
 }
 
 void Parameter::SharedCtor() {
@@ -3504,7 +3503,7 @@ void Parameter::SharedCtor() {
 }
 
 Parameter::~Parameter() {
-  // @@protoc_insertion_point(destructor:CameraServer.Parameter)
+  // @@protoc_insertion_point(destructor:mvcam.Parameter)
   SharedDtor();
 }
 
@@ -3526,7 +3525,7 @@ const Parameter& Parameter::default_instance() {
 
 
 void Parameter::Clear() {
-// @@protoc_insertion_point(message_clear_start:CameraServer.Parameter)
+// @@protoc_insertion_point(message_clear_start:mvcam.Parameter)
   ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -3541,7 +3540,7 @@ bool Parameter::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:CameraServer.Parameter)
+  // @@protoc_insertion_point(parse_start:mvcam.Parameter)
   for (;;) {
     ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
@@ -3587,17 +3586,17 @@ bool Parameter::MergePartialFromCodedStream(
     }
   }
 success:
-  // @@protoc_insertion_point(parse_success:CameraServer.Parameter)
+  // @@protoc_insertion_point(parse_success:mvcam.Parameter)
   return true;
 failure:
-  // @@protoc_insertion_point(parse_failure:CameraServer.Parameter)
+  // @@protoc_insertion_point(parse_failure:mvcam.Parameter)
   return false;
 #undef DO_
 }
 
 void Parameter::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:CameraServer.Parameter)
+  // @@protoc_insertion_point(serialize_start:mvcam.Parameter)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -3615,13 +3614,13 @@ void Parameter::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
   }
-  // @@protoc_insertion_point(serialize_end:CameraServer.Parameter)
+  // @@protoc_insertion_point(serialize_end:mvcam.Parameter)
 }
 
 ::google::protobuf::uint8* Parameter::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
   (void)deterministic; // Unused
-  // @@protoc_insertion_point(serialize_to_array_start:CameraServer.Parameter)
+  // @@protoc_insertion_point(serialize_to_array_start:mvcam.Parameter)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -3639,12 +3638,12 @@ void Parameter::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:CameraServer.Parameter)
+  // @@protoc_insertion_point(serialize_to_array_end:mvcam.Parameter)
   return target;
 }
 
 size_t Parameter::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:CameraServer.Parameter)
+// @@protoc_insertion_point(message_byte_size_start:mvcam.Parameter)
   size_t total_size = 0;
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -3668,22 +3667,22 @@ size_t Parameter::ByteSizeLong() const {
 }
 
 void Parameter::MergeFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:CameraServer.Parameter)
+// @@protoc_insertion_point(generalized_merge_from_start:mvcam.Parameter)
   GOOGLE_DCHECK_NE(&from, this);
   const Parameter* source =
       ::google::protobuf::internal::DynamicCastToGenerated<const Parameter>(
           &from);
   if (source == NULL) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:CameraServer.Parameter)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:mvcam.Parameter)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:CameraServer.Parameter)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:mvcam.Parameter)
     MergeFrom(*source);
   }
 }
 
 void Parameter::MergeFrom(const Parameter& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:CameraServer.Parameter)
+// @@protoc_insertion_point(class_specific_merge_from_start:mvcam.Parameter)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   ::google::protobuf::uint32 cached_has_bits = 0;
@@ -3698,14 +3697,14 @@ void Parameter::MergeFrom(const Parameter& from) {
 }
 
 void Parameter::CopyFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:CameraServer.Parameter)
+// @@protoc_insertion_point(generalized_copy_from_start:mvcam.Parameter)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void Parameter::CopyFrom(const Parameter& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:CameraServer.Parameter)
+// @@protoc_insertion_point(class_specific_copy_from_start:mvcam.Parameter)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -3735,16 +3734,16 @@ void Parameter::InternalSwap(Parameter* other) {
 // ===================================================================
 
 void Configuration::InitAsDefaultInstance() {
-  ::CameraServer::_Configuration_default_instance_._instance.get_mutable()->exposure_ = const_cast< ::CameraServer::Parameter*>(
-      ::CameraServer::Parameter::internal_default_instance());
-  ::CameraServer::_Configuration_default_instance_._instance.get_mutable()->frame_rate_ = const_cast< ::CameraServer::Parameter*>(
-      ::CameraServer::Parameter::internal_default_instance());
-  ::CameraServer::_Configuration_default_instance_._instance.get_mutable()->gain_ = const_cast< ::CameraServer::Parameter*>(
-      ::CameraServer::Parameter::internal_default_instance());
-  ::CameraServer::_Configuration_default_instance_._instance.get_mutable()->black_level_ = const_cast< ::CameraServer::Parameter*>(
-      ::CameraServer::Parameter::internal_default_instance());
-  ::CameraServer::_Configuration_default_instance_._instance.get_mutable()->gamma_ = const_cast< ::CameraServer::Parameter*>(
-      ::CameraServer::Parameter::internal_default_instance());
+  ::mvcam::_Configuration_default_instance_._instance.get_mutable()->exposure_ = const_cast< ::mvcam::Parameter*>(
+      ::mvcam::Parameter::internal_default_instance());
+  ::mvcam::_Configuration_default_instance_._instance.get_mutable()->frame_rate_ = const_cast< ::mvcam::Parameter*>(
+      ::mvcam::Parameter::internal_default_instance());
+  ::mvcam::_Configuration_default_instance_._instance.get_mutable()->gain_ = const_cast< ::mvcam::Parameter*>(
+      ::mvcam::Parameter::internal_default_instance());
+  ::mvcam::_Configuration_default_instance_._instance.get_mutable()->black_level_ = const_cast< ::mvcam::Parameter*>(
+      ::mvcam::Parameter::internal_default_instance());
+  ::mvcam::_Configuration_default_instance_._instance.get_mutable()->gamma_ = const_cast< ::mvcam::Parameter*>(
+      ::mvcam::Parameter::internal_default_instance());
 }
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int Configuration::kExposureFieldNumber;
@@ -3759,38 +3758,38 @@ Configuration::Configuration()
   ::google::protobuf::internal::InitSCC(
       &protobuf_camera_5fdefinitions_2eproto::scc_info_Configuration.base);
   SharedCtor();
-  // @@protoc_insertion_point(constructor:CameraServer.Configuration)
+  // @@protoc_insertion_point(constructor:mvcam.Configuration)
 }
 Configuration::Configuration(const Configuration& from)
   : ::google::protobuf::Message(),
       _internal_metadata_(NULL) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   if (from.has_exposure()) {
-    exposure_ = new ::CameraServer::Parameter(*from.exposure_);
+    exposure_ = new ::mvcam::Parameter(*from.exposure_);
   } else {
     exposure_ = NULL;
   }
   if (from.has_frame_rate()) {
-    frame_rate_ = new ::CameraServer::Parameter(*from.frame_rate_);
+    frame_rate_ = new ::mvcam::Parameter(*from.frame_rate_);
   } else {
     frame_rate_ = NULL;
   }
   if (from.has_gain()) {
-    gain_ = new ::CameraServer::Parameter(*from.gain_);
+    gain_ = new ::mvcam::Parameter(*from.gain_);
   } else {
     gain_ = NULL;
   }
   if (from.has_black_level()) {
-    black_level_ = new ::CameraServer::Parameter(*from.black_level_);
+    black_level_ = new ::mvcam::Parameter(*from.black_level_);
   } else {
     black_level_ = NULL;
   }
   if (from.has_gamma()) {
-    gamma_ = new ::CameraServer::Parameter(*from.gamma_);
+    gamma_ = new ::mvcam::Parameter(*from.gamma_);
   } else {
     gamma_ = NULL;
   }
-  // @@protoc_insertion_point(copy_constructor:CameraServer.Configuration)
+  // @@protoc_insertion_point(copy_constructor:mvcam.Configuration)
 }
 
 void Configuration::SharedCtor() {
@@ -3800,7 +3799,7 @@ void Configuration::SharedCtor() {
 }
 
 Configuration::~Configuration() {
-  // @@protoc_insertion_point(destructor:CameraServer.Configuration)
+  // @@protoc_insertion_point(destructor:mvcam.Configuration)
   SharedDtor();
 }
 
@@ -3827,7 +3826,7 @@ const Configuration& Configuration::default_instance() {
 
 
 void Configuration::Clear() {
-// @@protoc_insertion_point(message_clear_start:CameraServer.Configuration)
+// @@protoc_insertion_point(message_clear_start:mvcam.Configuration)
   ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -3859,13 +3858,13 @@ bool Configuration::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:CameraServer.Configuration)
+  // @@protoc_insertion_point(parse_start:mvcam.Configuration)
   for (;;) {
     ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // .CameraServer.Parameter exposure = 1;
+      // .mvcam.Parameter exposure = 1;
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
@@ -3877,7 +3876,7 @@ bool Configuration::MergePartialFromCodedStream(
         break;
       }
 
-      // .CameraServer.Parameter frame_rate = 2;
+      // .mvcam.Parameter frame_rate = 2;
       case 2: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
@@ -3889,7 +3888,7 @@ bool Configuration::MergePartialFromCodedStream(
         break;
       }
 
-      // .CameraServer.Parameter gain = 3;
+      // .mvcam.Parameter gain = 3;
       case 3: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(26u /* 26 & 0xFF */)) {
@@ -3901,7 +3900,7 @@ bool Configuration::MergePartialFromCodedStream(
         break;
       }
 
-      // .CameraServer.Parameter black_level = 4;
+      // .mvcam.Parameter black_level = 4;
       case 4: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(34u /* 34 & 0xFF */)) {
@@ -3913,7 +3912,7 @@ bool Configuration::MergePartialFromCodedStream(
         break;
       }
 
-      // .CameraServer.Parameter gamma = 5;
+      // .mvcam.Parameter gamma = 5;
       case 5: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(42u /* 42 & 0xFF */)) {
@@ -3937,45 +3936,45 @@ bool Configuration::MergePartialFromCodedStream(
     }
   }
 success:
-  // @@protoc_insertion_point(parse_success:CameraServer.Configuration)
+  // @@protoc_insertion_point(parse_success:mvcam.Configuration)
   return true;
 failure:
-  // @@protoc_insertion_point(parse_failure:CameraServer.Configuration)
+  // @@protoc_insertion_point(parse_failure:mvcam.Configuration)
   return false;
 #undef DO_
 }
 
 void Configuration::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:CameraServer.Configuration)
+  // @@protoc_insertion_point(serialize_start:mvcam.Configuration)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .CameraServer.Parameter exposure = 1;
+  // .mvcam.Parameter exposure = 1;
   if (this->has_exposure()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
       1, this->_internal_exposure(), output);
   }
 
-  // .CameraServer.Parameter frame_rate = 2;
+  // .mvcam.Parameter frame_rate = 2;
   if (this->has_frame_rate()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
       2, this->_internal_frame_rate(), output);
   }
 
-  // .CameraServer.Parameter gain = 3;
+  // .mvcam.Parameter gain = 3;
   if (this->has_gain()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
       3, this->_internal_gain(), output);
   }
 
-  // .CameraServer.Parameter black_level = 4;
+  // .mvcam.Parameter black_level = 4;
   if (this->has_black_level()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
       4, this->_internal_black_level(), output);
   }
 
-  // .CameraServer.Parameter gamma = 5;
+  // .mvcam.Parameter gamma = 5;
   if (this->has_gamma()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
       5, this->_internal_gamma(), output);
@@ -3985,45 +3984,45 @@ void Configuration::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
   }
-  // @@protoc_insertion_point(serialize_end:CameraServer.Configuration)
+  // @@protoc_insertion_point(serialize_end:mvcam.Configuration)
 }
 
 ::google::protobuf::uint8* Configuration::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
   (void)deterministic; // Unused
-  // @@protoc_insertion_point(serialize_to_array_start:CameraServer.Configuration)
+  // @@protoc_insertion_point(serialize_to_array_start:mvcam.Configuration)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .CameraServer.Parameter exposure = 1;
+  // .mvcam.Parameter exposure = 1;
   if (this->has_exposure()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
         1, this->_internal_exposure(), deterministic, target);
   }
 
-  // .CameraServer.Parameter frame_rate = 2;
+  // .mvcam.Parameter frame_rate = 2;
   if (this->has_frame_rate()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
         2, this->_internal_frame_rate(), deterministic, target);
   }
 
-  // .CameraServer.Parameter gain = 3;
+  // .mvcam.Parameter gain = 3;
   if (this->has_gain()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
         3, this->_internal_gain(), deterministic, target);
   }
 
-  // .CameraServer.Parameter black_level = 4;
+  // .mvcam.Parameter black_level = 4;
   if (this->has_black_level()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
         4, this->_internal_black_level(), deterministic, target);
   }
 
-  // .CameraServer.Parameter gamma = 5;
+  // .mvcam.Parameter gamma = 5;
   if (this->has_gamma()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
@@ -4034,12 +4033,12 @@ void Configuration::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:CameraServer.Configuration)
+  // @@protoc_insertion_point(serialize_to_array_end:mvcam.Configuration)
   return target;
 }
 
 size_t Configuration::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:CameraServer.Configuration)
+// @@protoc_insertion_point(message_byte_size_start:mvcam.Configuration)
   size_t total_size = 0;
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -4047,35 +4046,35 @@ size_t Configuration::ByteSizeLong() const {
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
   }
-  // .CameraServer.Parameter exposure = 1;
+  // .mvcam.Parameter exposure = 1;
   if (this->has_exposure()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSize(
         *exposure_);
   }
 
-  // .CameraServer.Parameter frame_rate = 2;
+  // .mvcam.Parameter frame_rate = 2;
   if (this->has_frame_rate()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSize(
         *frame_rate_);
   }
 
-  // .CameraServer.Parameter gain = 3;
+  // .mvcam.Parameter gain = 3;
   if (this->has_gain()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSize(
         *gain_);
   }
 
-  // .CameraServer.Parameter black_level = 4;
+  // .mvcam.Parameter black_level = 4;
   if (this->has_black_level()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSize(
         *black_level_);
   }
 
-  // .CameraServer.Parameter gamma = 5;
+  // .mvcam.Parameter gamma = 5;
   if (this->has_gamma()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSize(
@@ -4088,53 +4087,53 @@ size_t Configuration::ByteSizeLong() const {
 }
 
 void Configuration::MergeFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:CameraServer.Configuration)
+// @@protoc_insertion_point(generalized_merge_from_start:mvcam.Configuration)
   GOOGLE_DCHECK_NE(&from, this);
   const Configuration* source =
       ::google::protobuf::internal::DynamicCastToGenerated<const Configuration>(
           &from);
   if (source == NULL) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:CameraServer.Configuration)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:mvcam.Configuration)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:CameraServer.Configuration)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:mvcam.Configuration)
     MergeFrom(*source);
   }
 }
 
 void Configuration::MergeFrom(const Configuration& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:CameraServer.Configuration)
+// @@protoc_insertion_point(class_specific_merge_from_start:mvcam.Configuration)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from.has_exposure()) {
-    mutable_exposure()->::CameraServer::Parameter::MergeFrom(from.exposure());
+    mutable_exposure()->::mvcam::Parameter::MergeFrom(from.exposure());
   }
   if (from.has_frame_rate()) {
-    mutable_frame_rate()->::CameraServer::Parameter::MergeFrom(from.frame_rate());
+    mutable_frame_rate()->::mvcam::Parameter::MergeFrom(from.frame_rate());
   }
   if (from.has_gain()) {
-    mutable_gain()->::CameraServer::Parameter::MergeFrom(from.gain());
+    mutable_gain()->::mvcam::Parameter::MergeFrom(from.gain());
   }
   if (from.has_black_level()) {
-    mutable_black_level()->::CameraServer::Parameter::MergeFrom(from.black_level());
+    mutable_black_level()->::mvcam::Parameter::MergeFrom(from.black_level());
   }
   if (from.has_gamma()) {
-    mutable_gamma()->::CameraServer::Parameter::MergeFrom(from.gamma());
+    mutable_gamma()->::mvcam::Parameter::MergeFrom(from.gamma());
   }
 }
 
 void Configuration::CopyFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:CameraServer.Configuration)
+// @@protoc_insertion_point(generalized_copy_from_start:mvcam.Configuration)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void Configuration::CopyFrom(const Configuration& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:CameraServer.Configuration)
+// @@protoc_insertion_point(class_specific_copy_from_start:mvcam.Configuration)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -4167,10 +4166,10 @@ void Configuration::InternalSwap(Configuration* other) {
 // ===================================================================
 
 void ConfigureRequest::InitAsDefaultInstance() {
-  ::CameraServer::_ConfigureRequest_default_instance_._instance.get_mutable()->id_ = const_cast< ::CameraServer::IdRequest*>(
-      ::CameraServer::IdRequest::internal_default_instance());
-  ::CameraServer::_ConfigureRequest_default_instance_._instance.get_mutable()->config_ = const_cast< ::CameraServer::Configuration*>(
-      ::CameraServer::Configuration::internal_default_instance());
+  ::mvcam::_ConfigureRequest_default_instance_._instance.get_mutable()->id_ = const_cast< ::mvcam::IdRequest*>(
+      ::mvcam::IdRequest::internal_default_instance());
+  ::mvcam::_ConfigureRequest_default_instance_._instance.get_mutable()->config_ = const_cast< ::mvcam::Configuration*>(
+      ::mvcam::Configuration::internal_default_instance());
 }
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int ConfigureRequest::kIdFieldNumber;
@@ -4182,23 +4181,23 @@ ConfigureRequest::ConfigureRequest()
   ::google::protobuf::internal::InitSCC(
       &protobuf_camera_5fdefinitions_2eproto::scc_info_ConfigureRequest.base);
   SharedCtor();
-  // @@protoc_insertion_point(constructor:CameraServer.ConfigureRequest)
+  // @@protoc_insertion_point(constructor:mvcam.ConfigureRequest)
 }
 ConfigureRequest::ConfigureRequest(const ConfigureRequest& from)
   : ::google::protobuf::Message(),
       _internal_metadata_(NULL) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   if (from.has_id()) {
-    id_ = new ::CameraServer::IdRequest(*from.id_);
+    id_ = new ::mvcam::IdRequest(*from.id_);
   } else {
     id_ = NULL;
   }
   if (from.has_config()) {
-    config_ = new ::CameraServer::Configuration(*from.config_);
+    config_ = new ::mvcam::Configuration(*from.config_);
   } else {
     config_ = NULL;
   }
-  // @@protoc_insertion_point(copy_constructor:CameraServer.ConfigureRequest)
+  // @@protoc_insertion_point(copy_constructor:mvcam.ConfigureRequest)
 }
 
 void ConfigureRequest::SharedCtor() {
@@ -4208,7 +4207,7 @@ void ConfigureRequest::SharedCtor() {
 }
 
 ConfigureRequest::~ConfigureRequest() {
-  // @@protoc_insertion_point(destructor:CameraServer.ConfigureRequest)
+  // @@protoc_insertion_point(destructor:mvcam.ConfigureRequest)
   SharedDtor();
 }
 
@@ -4232,7 +4231,7 @@ const ConfigureRequest& ConfigureRequest::default_instance() {
 
 
 void ConfigureRequest::Clear() {
-// @@protoc_insertion_point(message_clear_start:CameraServer.ConfigureRequest)
+// @@protoc_insertion_point(message_clear_start:mvcam.ConfigureRequest)
   ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -4252,13 +4251,13 @@ bool ConfigureRequest::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:CameraServer.ConfigureRequest)
+  // @@protoc_insertion_point(parse_start:mvcam.ConfigureRequest)
   for (;;) {
     ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // .CameraServer.IdRequest id = 1;
+      // .mvcam.IdRequest id = 1;
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
@@ -4270,7 +4269,7 @@ bool ConfigureRequest::MergePartialFromCodedStream(
         break;
       }
 
-      // .CameraServer.Configuration config = 2;
+      // .mvcam.Configuration config = 2;
       case 2: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
@@ -4294,27 +4293,27 @@ bool ConfigureRequest::MergePartialFromCodedStream(
     }
   }
 success:
-  // @@protoc_insertion_point(parse_success:CameraServer.ConfigureRequest)
+  // @@protoc_insertion_point(parse_success:mvcam.ConfigureRequest)
   return true;
 failure:
-  // @@protoc_insertion_point(parse_failure:CameraServer.ConfigureRequest)
+  // @@protoc_insertion_point(parse_failure:mvcam.ConfigureRequest)
   return false;
 #undef DO_
 }
 
 void ConfigureRequest::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:CameraServer.ConfigureRequest)
+  // @@protoc_insertion_point(serialize_start:mvcam.ConfigureRequest)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .CameraServer.IdRequest id = 1;
+  // .mvcam.IdRequest id = 1;
   if (this->has_id()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
       1, this->_internal_id(), output);
   }
 
-  // .CameraServer.Configuration config = 2;
+  // .mvcam.Configuration config = 2;
   if (this->has_config()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
       2, this->_internal_config(), output);
@@ -4324,24 +4323,24 @@ void ConfigureRequest::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
   }
-  // @@protoc_insertion_point(serialize_end:CameraServer.ConfigureRequest)
+  // @@protoc_insertion_point(serialize_end:mvcam.ConfigureRequest)
 }
 
 ::google::protobuf::uint8* ConfigureRequest::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
   (void)deterministic; // Unused
-  // @@protoc_insertion_point(serialize_to_array_start:CameraServer.ConfigureRequest)
+  // @@protoc_insertion_point(serialize_to_array_start:mvcam.ConfigureRequest)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .CameraServer.IdRequest id = 1;
+  // .mvcam.IdRequest id = 1;
   if (this->has_id()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
         1, this->_internal_id(), deterministic, target);
   }
 
-  // .CameraServer.Configuration config = 2;
+  // .mvcam.Configuration config = 2;
   if (this->has_config()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
@@ -4352,12 +4351,12 @@ void ConfigureRequest::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:CameraServer.ConfigureRequest)
+  // @@protoc_insertion_point(serialize_to_array_end:mvcam.ConfigureRequest)
   return target;
 }
 
 size_t ConfigureRequest::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:CameraServer.ConfigureRequest)
+// @@protoc_insertion_point(message_byte_size_start:mvcam.ConfigureRequest)
   size_t total_size = 0;
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -4365,14 +4364,14 @@ size_t ConfigureRequest::ByteSizeLong() const {
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
   }
-  // .CameraServer.IdRequest id = 1;
+  // .mvcam.IdRequest id = 1;
   if (this->has_id()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSize(
         *id_);
   }
 
-  // .CameraServer.Configuration config = 2;
+  // .mvcam.Configuration config = 2;
   if (this->has_config()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSize(
@@ -4385,44 +4384,44 @@ size_t ConfigureRequest::ByteSizeLong() const {
 }
 
 void ConfigureRequest::MergeFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:CameraServer.ConfigureRequest)
+// @@protoc_insertion_point(generalized_merge_from_start:mvcam.ConfigureRequest)
   GOOGLE_DCHECK_NE(&from, this);
   const ConfigureRequest* source =
       ::google::protobuf::internal::DynamicCastToGenerated<const ConfigureRequest>(
           &from);
   if (source == NULL) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:CameraServer.ConfigureRequest)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:mvcam.ConfigureRequest)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:CameraServer.ConfigureRequest)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:mvcam.ConfigureRequest)
     MergeFrom(*source);
   }
 }
 
 void ConfigureRequest::MergeFrom(const ConfigureRequest& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:CameraServer.ConfigureRequest)
+// @@protoc_insertion_point(class_specific_merge_from_start:mvcam.ConfigureRequest)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from.has_id()) {
-    mutable_id()->::CameraServer::IdRequest::MergeFrom(from.id());
+    mutable_id()->::mvcam::IdRequest::MergeFrom(from.id());
   }
   if (from.has_config()) {
-    mutable_config()->::CameraServer::Configuration::MergeFrom(from.config());
+    mutable_config()->::mvcam::Configuration::MergeFrom(from.config());
   }
 }
 
 void ConfigureRequest::CopyFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:CameraServer.ConfigureRequest)
+// @@protoc_insertion_point(generalized_copy_from_start:mvcam.ConfigureRequest)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void ConfigureRequest::CopyFrom(const ConfigureRequest& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:CameraServer.ConfigureRequest)
+// @@protoc_insertion_point(class_specific_copy_from_start:mvcam.ConfigureRequest)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -4452,7 +4451,7 @@ void ConfigureRequest::InternalSwap(ConfigureRequest* other) {
 // ===================================================================
 
 void Frame::InitAsDefaultInstance() {
-  ::CameraServer::_Frame_default_instance_._instance.get_mutable()->timestamp_ = const_cast< ::google::protobuf::Timestamp*>(
+  ::mvcam::_Frame_default_instance_._instance.get_mutable()->timestamp_ = const_cast< ::google::protobuf::Timestamp*>(
       ::google::protobuf::Timestamp::internal_default_instance());
 }
 void Frame::clear_timestamp() {
@@ -4476,7 +4475,7 @@ Frame::Frame()
   ::google::protobuf::internal::InitSCC(
       &protobuf_camera_5fdefinitions_2eproto::scc_info_Frame.base);
   SharedCtor();
-  // @@protoc_insertion_point(constructor:CameraServer.Frame)
+  // @@protoc_insertion_point(constructor:mvcam.Frame)
 }
 Frame::Frame(const Frame& from)
   : ::google::protobuf::Message(),
@@ -4494,7 +4493,7 @@ Frame::Frame(const Frame& from)
   ::memcpy(&id_, &from.id_,
     static_cast<size_t>(reinterpret_cast<char*>(&pixel_format_) -
     reinterpret_cast<char*>(&id_)) + sizeof(pixel_format_));
-  // @@protoc_insertion_point(copy_constructor:CameraServer.Frame)
+  // @@protoc_insertion_point(copy_constructor:mvcam.Frame)
 }
 
 void Frame::SharedCtor() {
@@ -4505,7 +4504,7 @@ void Frame::SharedCtor() {
 }
 
 Frame::~Frame() {
-  // @@protoc_insertion_point(destructor:CameraServer.Frame)
+  // @@protoc_insertion_point(destructor:mvcam.Frame)
   SharedDtor();
 }
 
@@ -4529,7 +4528,7 @@ const Frame& Frame::default_instance() {
 
 
 void Frame::Clear() {
-// @@protoc_insertion_point(message_clear_start:CameraServer.Frame)
+// @@protoc_insertion_point(message_clear_start:mvcam.Frame)
   ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -4549,7 +4548,7 @@ bool Frame::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:CameraServer.Frame)
+  // @@protoc_insertion_point(parse_start:mvcam.Frame)
   for (;;) {
     ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
@@ -4661,17 +4660,17 @@ bool Frame::MergePartialFromCodedStream(
     }
   }
 success:
-  // @@protoc_insertion_point(parse_success:CameraServer.Frame)
+  // @@protoc_insertion_point(parse_success:mvcam.Frame)
   return true;
 failure:
-  // @@protoc_insertion_point(parse_failure:CameraServer.Frame)
+  // @@protoc_insertion_point(parse_failure:mvcam.Frame)
   return false;
 #undef DO_
 }
 
 void Frame::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:CameraServer.Frame)
+  // @@protoc_insertion_point(serialize_start:mvcam.Frame)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -4716,13 +4715,13 @@ void Frame::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
   }
-  // @@protoc_insertion_point(serialize_end:CameraServer.Frame)
+  // @@protoc_insertion_point(serialize_end:mvcam.Frame)
 }
 
 ::google::protobuf::uint8* Frame::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
   (void)deterministic; // Unused
-  // @@protoc_insertion_point(serialize_to_array_start:CameraServer.Frame)
+  // @@protoc_insertion_point(serialize_to_array_start:mvcam.Frame)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -4769,12 +4768,12 @@ void Frame::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:CameraServer.Frame)
+  // @@protoc_insertion_point(serialize_to_array_end:mvcam.Frame)
   return target;
 }
 
 size_t Frame::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:CameraServer.Frame)
+// @@protoc_insertion_point(message_byte_size_start:mvcam.Frame)
   size_t total_size = 0;
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -4837,22 +4836,22 @@ size_t Frame::ByteSizeLong() const {
 }
 
 void Frame::MergeFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:CameraServer.Frame)
+// @@protoc_insertion_point(generalized_merge_from_start:mvcam.Frame)
   GOOGLE_DCHECK_NE(&from, this);
   const Frame* source =
       ::google::protobuf::internal::DynamicCastToGenerated<const Frame>(
           &from);
   if (source == NULL) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:CameraServer.Frame)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:mvcam.Frame)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:CameraServer.Frame)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:mvcam.Frame)
     MergeFrom(*source);
   }
 }
 
 void Frame::MergeFrom(const Frame& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:CameraServer.Frame)
+// @@protoc_insertion_point(class_specific_merge_from_start:mvcam.Frame)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   ::google::protobuf::uint32 cached_has_bits = 0;
@@ -4883,14 +4882,14 @@ void Frame::MergeFrom(const Frame& from) {
 }
 
 void Frame::CopyFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:CameraServer.Frame)
+// @@protoc_insertion_point(generalized_copy_from_start:mvcam.Frame)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void Frame::CopyFrom(const Frame& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:CameraServer.Frame)
+// @@protoc_insertion_point(class_specific_copy_from_start:mvcam.Frame)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -4936,21 +4935,21 @@ FrameStream::FrameStream()
   ::google::protobuf::internal::InitSCC(
       &protobuf_camera_5fdefinitions_2eproto::scc_info_FrameStream.base);
   SharedCtor();
-  // @@protoc_insertion_point(constructor:CameraServer.FrameStream)
+  // @@protoc_insertion_point(constructor:mvcam.FrameStream)
 }
 FrameStream::FrameStream(const FrameStream& from)
   : ::google::protobuf::Message(),
       _internal_metadata_(NULL),
       frames_(from.frames_) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  // @@protoc_insertion_point(copy_constructor:CameraServer.FrameStream)
+  // @@protoc_insertion_point(copy_constructor:mvcam.FrameStream)
 }
 
 void FrameStream::SharedCtor() {
 }
 
 FrameStream::~FrameStream() {
-  // @@protoc_insertion_point(destructor:CameraServer.FrameStream)
+  // @@protoc_insertion_point(destructor:mvcam.FrameStream)
   SharedDtor();
 }
 
@@ -4972,7 +4971,7 @@ const FrameStream& FrameStream::default_instance() {
 
 
 void FrameStream::Clear() {
-// @@protoc_insertion_point(message_clear_start:CameraServer.FrameStream)
+// @@protoc_insertion_point(message_clear_start:mvcam.FrameStream)
   ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -4985,13 +4984,13 @@ bool FrameStream::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:CameraServer.FrameStream)
+  // @@protoc_insertion_point(parse_start:mvcam.FrameStream)
   for (;;) {
     ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // repeated .CameraServer.Frame frames = 1;
+      // repeated .mvcam.Frame frames = 1;
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
@@ -5015,21 +5014,21 @@ bool FrameStream::MergePartialFromCodedStream(
     }
   }
 success:
-  // @@protoc_insertion_point(parse_success:CameraServer.FrameStream)
+  // @@protoc_insertion_point(parse_success:mvcam.FrameStream)
   return true;
 failure:
-  // @@protoc_insertion_point(parse_failure:CameraServer.FrameStream)
+  // @@protoc_insertion_point(parse_failure:mvcam.FrameStream)
   return false;
 #undef DO_
 }
 
 void FrameStream::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:CameraServer.FrameStream)
+  // @@protoc_insertion_point(serialize_start:mvcam.FrameStream)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated .CameraServer.Frame frames = 1;
+  // repeated .mvcam.Frame frames = 1;
   for (unsigned int i = 0,
       n = static_cast<unsigned int>(this->frames_size()); i < n; i++) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
@@ -5042,17 +5041,17 @@ void FrameStream::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
   }
-  // @@protoc_insertion_point(serialize_end:CameraServer.FrameStream)
+  // @@protoc_insertion_point(serialize_end:mvcam.FrameStream)
 }
 
 ::google::protobuf::uint8* FrameStream::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
   (void)deterministic; // Unused
-  // @@protoc_insertion_point(serialize_to_array_start:CameraServer.FrameStream)
+  // @@protoc_insertion_point(serialize_to_array_start:mvcam.FrameStream)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated .CameraServer.Frame frames = 1;
+  // repeated .mvcam.Frame frames = 1;
   for (unsigned int i = 0,
       n = static_cast<unsigned int>(this->frames_size()); i < n; i++) {
     target = ::google::protobuf::internal::WireFormatLite::
@@ -5064,12 +5063,12 @@ void FrameStream::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:CameraServer.FrameStream)
+  // @@protoc_insertion_point(serialize_to_array_end:mvcam.FrameStream)
   return target;
 }
 
 size_t FrameStream::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:CameraServer.FrameStream)
+// @@protoc_insertion_point(message_byte_size_start:mvcam.FrameStream)
   size_t total_size = 0;
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -5077,7 +5076,7 @@ size_t FrameStream::ByteSizeLong() const {
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
   }
-  // repeated .CameraServer.Frame frames = 1;
+  // repeated .mvcam.Frame frames = 1;
   {
     unsigned int count = static_cast<unsigned int>(this->frames_size());
     total_size += 1UL * count;
@@ -5094,22 +5093,22 @@ size_t FrameStream::ByteSizeLong() const {
 }
 
 void FrameStream::MergeFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:CameraServer.FrameStream)
+// @@protoc_insertion_point(generalized_merge_from_start:mvcam.FrameStream)
   GOOGLE_DCHECK_NE(&from, this);
   const FrameStream* source =
       ::google::protobuf::internal::DynamicCastToGenerated<const FrameStream>(
           &from);
   if (source == NULL) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:CameraServer.FrameStream)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:mvcam.FrameStream)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:CameraServer.FrameStream)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:mvcam.FrameStream)
     MergeFrom(*source);
   }
 }
 
 void FrameStream::MergeFrom(const FrameStream& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:CameraServer.FrameStream)
+// @@protoc_insertion_point(class_specific_merge_from_start:mvcam.FrameStream)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   ::google::protobuf::uint32 cached_has_bits = 0;
@@ -5119,14 +5118,14 @@ void FrameStream::MergeFrom(const FrameStream& from) {
 }
 
 void FrameStream::CopyFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:CameraServer.FrameStream)
+// @@protoc_insertion_point(generalized_copy_from_start:mvcam.FrameStream)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void FrameStream::CopyFrom(const FrameStream& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:CameraServer.FrameStream)
+// @@protoc_insertion_point(class_specific_copy_from_start:mvcam.FrameStream)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -5155,8 +5154,8 @@ void FrameStream::InternalSwap(FrameStream* other) {
 // ===================================================================
 
 void StreamingRequest::InitAsDefaultInstance() {
-  ::CameraServer::_StreamingRequest_default_instance_._instance.get_mutable()->id_ = const_cast< ::CameraServer::IdRequest*>(
-      ::CameraServer::IdRequest::internal_default_instance());
+  ::mvcam::_StreamingRequest_default_instance_._instance.get_mutable()->id_ = const_cast< ::mvcam::IdRequest*>(
+      ::mvcam::IdRequest::internal_default_instance());
 }
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int StreamingRequest::kIdFieldNumber;
@@ -5169,21 +5168,21 @@ StreamingRequest::StreamingRequest()
   ::google::protobuf::internal::InitSCC(
       &protobuf_camera_5fdefinitions_2eproto::scc_info_StreamingRequest.base);
   SharedCtor();
-  // @@protoc_insertion_point(constructor:CameraServer.StreamingRequest)
+  // @@protoc_insertion_point(constructor:mvcam.StreamingRequest)
 }
 StreamingRequest::StreamingRequest(const StreamingRequest& from)
   : ::google::protobuf::Message(),
       _internal_metadata_(NULL) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   if (from.has_id()) {
-    id_ = new ::CameraServer::IdRequest(*from.id_);
+    id_ = new ::mvcam::IdRequest(*from.id_);
   } else {
     id_ = NULL;
   }
   ::memcpy(&number_frames_, &from.number_frames_,
     static_cast<size_t>(reinterpret_cast<char*>(&batch_size_) -
     reinterpret_cast<char*>(&number_frames_)) + sizeof(batch_size_));
-  // @@protoc_insertion_point(copy_constructor:CameraServer.StreamingRequest)
+  // @@protoc_insertion_point(copy_constructor:mvcam.StreamingRequest)
 }
 
 void StreamingRequest::SharedCtor() {
@@ -5193,7 +5192,7 @@ void StreamingRequest::SharedCtor() {
 }
 
 StreamingRequest::~StreamingRequest() {
-  // @@protoc_insertion_point(destructor:CameraServer.StreamingRequest)
+  // @@protoc_insertion_point(destructor:mvcam.StreamingRequest)
   SharedDtor();
 }
 
@@ -5216,7 +5215,7 @@ const StreamingRequest& StreamingRequest::default_instance() {
 
 
 void StreamingRequest::Clear() {
-// @@protoc_insertion_point(message_clear_start:CameraServer.StreamingRequest)
+// @@protoc_insertion_point(message_clear_start:mvcam.StreamingRequest)
   ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -5235,13 +5234,13 @@ bool StreamingRequest::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:CameraServer.StreamingRequest)
+  // @@protoc_insertion_point(parse_start:mvcam.StreamingRequest)
   for (;;) {
     ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // .CameraServer.IdRequest id = 1;
+      // .mvcam.IdRequest id = 1;
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
@@ -5293,21 +5292,21 @@ bool StreamingRequest::MergePartialFromCodedStream(
     }
   }
 success:
-  // @@protoc_insertion_point(parse_success:CameraServer.StreamingRequest)
+  // @@protoc_insertion_point(parse_success:mvcam.StreamingRequest)
   return true;
 failure:
-  // @@protoc_insertion_point(parse_failure:CameraServer.StreamingRequest)
+  // @@protoc_insertion_point(parse_failure:mvcam.StreamingRequest)
   return false;
 #undef DO_
 }
 
 void StreamingRequest::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:CameraServer.StreamingRequest)
+  // @@protoc_insertion_point(serialize_start:mvcam.StreamingRequest)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .CameraServer.IdRequest id = 1;
+  // .mvcam.IdRequest id = 1;
   if (this->has_id()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
       1, this->_internal_id(), output);
@@ -5327,17 +5326,17 @@ void StreamingRequest::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
   }
-  // @@protoc_insertion_point(serialize_end:CameraServer.StreamingRequest)
+  // @@protoc_insertion_point(serialize_end:mvcam.StreamingRequest)
 }
 
 ::google::protobuf::uint8* StreamingRequest::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
   (void)deterministic; // Unused
-  // @@protoc_insertion_point(serialize_to_array_start:CameraServer.StreamingRequest)
+  // @@protoc_insertion_point(serialize_to_array_start:mvcam.StreamingRequest)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .CameraServer.IdRequest id = 1;
+  // .mvcam.IdRequest id = 1;
   if (this->has_id()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
@@ -5358,12 +5357,12 @@ void StreamingRequest::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:CameraServer.StreamingRequest)
+  // @@protoc_insertion_point(serialize_to_array_end:mvcam.StreamingRequest)
   return target;
 }
 
 size_t StreamingRequest::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:CameraServer.StreamingRequest)
+// @@protoc_insertion_point(message_byte_size_start:mvcam.StreamingRequest)
   size_t total_size = 0;
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -5371,7 +5370,7 @@ size_t StreamingRequest::ByteSizeLong() const {
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
   }
-  // .CameraServer.IdRequest id = 1;
+  // .mvcam.IdRequest id = 1;
   if (this->has_id()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSize(
@@ -5398,29 +5397,29 @@ size_t StreamingRequest::ByteSizeLong() const {
 }
 
 void StreamingRequest::MergeFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:CameraServer.StreamingRequest)
+// @@protoc_insertion_point(generalized_merge_from_start:mvcam.StreamingRequest)
   GOOGLE_DCHECK_NE(&from, this);
   const StreamingRequest* source =
       ::google::protobuf::internal::DynamicCastToGenerated<const StreamingRequest>(
           &from);
   if (source == NULL) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:CameraServer.StreamingRequest)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:mvcam.StreamingRequest)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:CameraServer.StreamingRequest)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:mvcam.StreamingRequest)
     MergeFrom(*source);
   }
 }
 
 void StreamingRequest::MergeFrom(const StreamingRequest& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:CameraServer.StreamingRequest)
+// @@protoc_insertion_point(class_specific_merge_from_start:mvcam.StreamingRequest)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from.has_id()) {
-    mutable_id()->::CameraServer::IdRequest::MergeFrom(from.id());
+    mutable_id()->::mvcam::IdRequest::MergeFrom(from.id());
   }
   if (from.number_frames() != 0) {
     set_number_frames(from.number_frames());
@@ -5431,14 +5430,14 @@ void StreamingRequest::MergeFrom(const StreamingRequest& from) {
 }
 
 void StreamingRequest::CopyFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:CameraServer.StreamingRequest)
+// @@protoc_insertion_point(generalized_copy_from_start:mvcam.StreamingRequest)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void StreamingRequest::CopyFrom(const StreamingRequest& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:CameraServer.StreamingRequest)
+// @@protoc_insertion_point(class_specific_copy_from_start:mvcam.StreamingRequest)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -5481,7 +5480,7 @@ Status::Status()
   ::google::protobuf::internal::InitSCC(
       &protobuf_camera_5fdefinitions_2eproto::scc_info_Status.base);
   SharedCtor();
-  // @@protoc_insertion_point(constructor:CameraServer.Status)
+  // @@protoc_insertion_point(constructor:mvcam.Status)
 }
 Status::Status(const Status& from)
   : ::google::protobuf::Message(),
@@ -5490,7 +5489,7 @@ Status::Status(const Status& from)
   ::memcpy(&temperature_, &from.temperature_,
     static_cast<size_t>(reinterpret_cast<char*>(&capturing_) -
     reinterpret_cast<char*>(&temperature_)) + sizeof(capturing_));
-  // @@protoc_insertion_point(copy_constructor:CameraServer.Status)
+  // @@protoc_insertion_point(copy_constructor:mvcam.Status)
 }
 
 void Status::SharedCtor() {
@@ -5500,7 +5499,7 @@ void Status::SharedCtor() {
 }
 
 Status::~Status() {
-  // @@protoc_insertion_point(destructor:CameraServer.Status)
+  // @@protoc_insertion_point(destructor:mvcam.Status)
   SharedDtor();
 }
 
@@ -5522,7 +5521,7 @@ const Status& Status::default_instance() {
 
 
 void Status::Clear() {
-// @@protoc_insertion_point(message_clear_start:CameraServer.Status)
+// @@protoc_insertion_point(message_clear_start:mvcam.Status)
   ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -5537,7 +5536,7 @@ bool Status::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:CameraServer.Status)
+  // @@protoc_insertion_point(parse_start:mvcam.Status)
   for (;;) {
     ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
@@ -5597,17 +5596,17 @@ bool Status::MergePartialFromCodedStream(
     }
   }
 success:
-  // @@protoc_insertion_point(parse_success:CameraServer.Status)
+  // @@protoc_insertion_point(parse_success:mvcam.Status)
   return true;
 failure:
-  // @@protoc_insertion_point(parse_failure:CameraServer.Status)
+  // @@protoc_insertion_point(parse_failure:mvcam.Status)
   return false;
 #undef DO_
 }
 
 void Status::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:CameraServer.Status)
+  // @@protoc_insertion_point(serialize_start:mvcam.Status)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -5630,13 +5629,13 @@ void Status::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
   }
-  // @@protoc_insertion_point(serialize_end:CameraServer.Status)
+  // @@protoc_insertion_point(serialize_end:mvcam.Status)
 }
 
 ::google::protobuf::uint8* Status::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
   (void)deterministic; // Unused
-  // @@protoc_insertion_point(serialize_to_array_start:CameraServer.Status)
+  // @@protoc_insertion_point(serialize_to_array_start:mvcam.Status)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -5659,12 +5658,12 @@ void Status::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:CameraServer.Status)
+  // @@protoc_insertion_point(serialize_to_array_end:mvcam.Status)
   return target;
 }
 
 size_t Status::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:CameraServer.Status)
+// @@protoc_insertion_point(message_byte_size_start:mvcam.Status)
   size_t total_size = 0;
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -5693,22 +5692,22 @@ size_t Status::ByteSizeLong() const {
 }
 
 void Status::MergeFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:CameraServer.Status)
+// @@protoc_insertion_point(generalized_merge_from_start:mvcam.Status)
   GOOGLE_DCHECK_NE(&from, this);
   const Status* source =
       ::google::protobuf::internal::DynamicCastToGenerated<const Status>(
           &from);
   if (source == NULL) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:CameraServer.Status)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:mvcam.Status)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:CameraServer.Status)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:mvcam.Status)
     MergeFrom(*source);
   }
 }
 
 void Status::MergeFrom(const Status& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:CameraServer.Status)
+// @@protoc_insertion_point(class_specific_merge_from_start:mvcam.Status)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   ::google::protobuf::uint32 cached_has_bits = 0;
@@ -5726,14 +5725,14 @@ void Status::MergeFrom(const Status& from) {
 }
 
 void Status::CopyFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:CameraServer.Status)
+// @@protoc_insertion_point(generalized_copy_from_start:mvcam.Status)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void Status::CopyFrom(const Status& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:CameraServer.Status)
+// @@protoc_insertion_point(class_specific_copy_from_start:mvcam.Status)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -5764,8 +5763,8 @@ void Status::InternalSwap(Status* other) {
 // ===================================================================
 
 void DeviceControlRequest::InitAsDefaultInstance() {
-  ::CameraServer::_DeviceControlRequest_default_instance_._instance.get_mutable()->id_ = const_cast< ::CameraServer::IdRequest*>(
-      ::CameraServer::IdRequest::internal_default_instance());
+  ::mvcam::_DeviceControlRequest_default_instance_._instance.get_mutable()->id_ = const_cast< ::mvcam::IdRequest*>(
+      ::mvcam::IdRequest::internal_default_instance());
 }
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int DeviceControlRequest::kIdFieldNumber;
@@ -5777,19 +5776,19 @@ DeviceControlRequest::DeviceControlRequest()
   ::google::protobuf::internal::InitSCC(
       &protobuf_camera_5fdefinitions_2eproto::scc_info_DeviceControlRequest.base);
   SharedCtor();
-  // @@protoc_insertion_point(constructor:CameraServer.DeviceControlRequest)
+  // @@protoc_insertion_point(constructor:mvcam.DeviceControlRequest)
 }
 DeviceControlRequest::DeviceControlRequest(const DeviceControlRequest& from)
   : ::google::protobuf::Message(),
       _internal_metadata_(NULL) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   if (from.has_id()) {
-    id_ = new ::CameraServer::IdRequest(*from.id_);
+    id_ = new ::mvcam::IdRequest(*from.id_);
   } else {
     id_ = NULL;
   }
   action_ = from.action_;
-  // @@protoc_insertion_point(copy_constructor:CameraServer.DeviceControlRequest)
+  // @@protoc_insertion_point(copy_constructor:mvcam.DeviceControlRequest)
 }
 
 void DeviceControlRequest::SharedCtor() {
@@ -5799,7 +5798,7 @@ void DeviceControlRequest::SharedCtor() {
 }
 
 DeviceControlRequest::~DeviceControlRequest() {
-  // @@protoc_insertion_point(destructor:CameraServer.DeviceControlRequest)
+  // @@protoc_insertion_point(destructor:mvcam.DeviceControlRequest)
   SharedDtor();
 }
 
@@ -5822,7 +5821,7 @@ const DeviceControlRequest& DeviceControlRequest::default_instance() {
 
 
 void DeviceControlRequest::Clear() {
-// @@protoc_insertion_point(message_clear_start:CameraServer.DeviceControlRequest)
+// @@protoc_insertion_point(message_clear_start:mvcam.DeviceControlRequest)
   ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -5839,13 +5838,13 @@ bool DeviceControlRequest::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:CameraServer.DeviceControlRequest)
+  // @@protoc_insertion_point(parse_start:mvcam.DeviceControlRequest)
   for (;;) {
     ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // .CameraServer.IdRequest id = 1;
+      // .mvcam.IdRequest id = 1;
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
@@ -5857,7 +5856,7 @@ bool DeviceControlRequest::MergePartialFromCodedStream(
         break;
       }
 
-      // .CameraServer.DeviceControlAction action = 2;
+      // .mvcam.DeviceControlAction action = 2;
       case 2: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(16u /* 16 & 0xFF */)) {
@@ -5865,7 +5864,7 @@ bool DeviceControlRequest::MergePartialFromCodedStream(
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
                  input, &value)));
-          set_action(static_cast< ::CameraServer::DeviceControlAction >(value));
+          set_action(static_cast< ::mvcam::DeviceControlAction >(value));
         } else {
           goto handle_unusual;
         }
@@ -5884,27 +5883,27 @@ bool DeviceControlRequest::MergePartialFromCodedStream(
     }
   }
 success:
-  // @@protoc_insertion_point(parse_success:CameraServer.DeviceControlRequest)
+  // @@protoc_insertion_point(parse_success:mvcam.DeviceControlRequest)
   return true;
 failure:
-  // @@protoc_insertion_point(parse_failure:CameraServer.DeviceControlRequest)
+  // @@protoc_insertion_point(parse_failure:mvcam.DeviceControlRequest)
   return false;
 #undef DO_
 }
 
 void DeviceControlRequest::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:CameraServer.DeviceControlRequest)
+  // @@protoc_insertion_point(serialize_start:mvcam.DeviceControlRequest)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .CameraServer.IdRequest id = 1;
+  // .mvcam.IdRequest id = 1;
   if (this->has_id()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
       1, this->_internal_id(), output);
   }
 
-  // .CameraServer.DeviceControlAction action = 2;
+  // .mvcam.DeviceControlAction action = 2;
   if (this->action() != 0) {
     ::google::protobuf::internal::WireFormatLite::WriteEnum(
       2, this->action(), output);
@@ -5914,24 +5913,24 @@ void DeviceControlRequest::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
   }
-  // @@protoc_insertion_point(serialize_end:CameraServer.DeviceControlRequest)
+  // @@protoc_insertion_point(serialize_end:mvcam.DeviceControlRequest)
 }
 
 ::google::protobuf::uint8* DeviceControlRequest::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
   (void)deterministic; // Unused
-  // @@protoc_insertion_point(serialize_to_array_start:CameraServer.DeviceControlRequest)
+  // @@protoc_insertion_point(serialize_to_array_start:mvcam.DeviceControlRequest)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .CameraServer.IdRequest id = 1;
+  // .mvcam.IdRequest id = 1;
   if (this->has_id()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
         1, this->_internal_id(), deterministic, target);
   }
 
-  // .CameraServer.DeviceControlAction action = 2;
+  // .mvcam.DeviceControlAction action = 2;
   if (this->action() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
       2, this->action(), target);
@@ -5941,12 +5940,12 @@ void DeviceControlRequest::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:CameraServer.DeviceControlRequest)
+  // @@protoc_insertion_point(serialize_to_array_end:mvcam.DeviceControlRequest)
   return target;
 }
 
 size_t DeviceControlRequest::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:CameraServer.DeviceControlRequest)
+// @@protoc_insertion_point(message_byte_size_start:mvcam.DeviceControlRequest)
   size_t total_size = 0;
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -5954,14 +5953,14 @@ size_t DeviceControlRequest::ByteSizeLong() const {
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
   }
-  // .CameraServer.IdRequest id = 1;
+  // .mvcam.IdRequest id = 1;
   if (this->has_id()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSize(
         *id_);
   }
 
-  // .CameraServer.DeviceControlAction action = 2;
+  // .mvcam.DeviceControlAction action = 2;
   if (this->action() != 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::EnumSize(this->action());
@@ -5973,29 +5972,29 @@ size_t DeviceControlRequest::ByteSizeLong() const {
 }
 
 void DeviceControlRequest::MergeFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:CameraServer.DeviceControlRequest)
+// @@protoc_insertion_point(generalized_merge_from_start:mvcam.DeviceControlRequest)
   GOOGLE_DCHECK_NE(&from, this);
   const DeviceControlRequest* source =
       ::google::protobuf::internal::DynamicCastToGenerated<const DeviceControlRequest>(
           &from);
   if (source == NULL) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:CameraServer.DeviceControlRequest)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:mvcam.DeviceControlRequest)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:CameraServer.DeviceControlRequest)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:mvcam.DeviceControlRequest)
     MergeFrom(*source);
   }
 }
 
 void DeviceControlRequest::MergeFrom(const DeviceControlRequest& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:CameraServer.DeviceControlRequest)
+// @@protoc_insertion_point(class_specific_merge_from_start:mvcam.DeviceControlRequest)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from.has_id()) {
-    mutable_id()->::CameraServer::IdRequest::MergeFrom(from.id());
+    mutable_id()->::mvcam::IdRequest::MergeFrom(from.id());
   }
   if (from.action() != 0) {
     set_action(from.action());
@@ -6003,14 +6002,14 @@ void DeviceControlRequest::MergeFrom(const DeviceControlRequest& from) {
 }
 
 void DeviceControlRequest::CopyFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:CameraServer.DeviceControlRequest)
+// @@protoc_insertion_point(generalized_copy_from_start:mvcam.DeviceControlRequest)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void DeviceControlRequest::CopyFrom(const DeviceControlRequest& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:CameraServer.DeviceControlRequest)
+// @@protoc_insertion_point(class_specific_copy_from_start:mvcam.DeviceControlRequest)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -6038,56 +6037,56 @@ void DeviceControlRequest::InternalSwap(DeviceControlRequest* other) {
 
 
 // @@protoc_insertion_point(namespace_scope)
-}  // namespace CameraServer
+}  // namespace mvcam
 namespace google {
 namespace protobuf {
-template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::CameraServer::AdapterCapability* Arena::CreateMaybeMessage< ::CameraServer::AdapterCapability >(Arena* arena) {
-  return Arena::CreateInternal< ::CameraServer::AdapterCapability >(arena);
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::mvcam::AdapterCapability* Arena::CreateMaybeMessage< ::mvcam::AdapterCapability >(Arena* arena) {
+  return Arena::CreateInternal< ::mvcam::AdapterCapability >(arena);
 }
-template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::CameraServer::AdapterInfo* Arena::CreateMaybeMessage< ::CameraServer::AdapterInfo >(Arena* arena) {
-  return Arena::CreateInternal< ::CameraServer::AdapterInfo >(arena);
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::mvcam::AdapterInfo* Arena::CreateMaybeMessage< ::mvcam::AdapterInfo >(Arena* arena) {
+  return Arena::CreateInternal< ::mvcam::AdapterInfo >(arena);
 }
-template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::CameraServer::AvailableAdaptersResponse* Arena::CreateMaybeMessage< ::CameraServer::AvailableAdaptersResponse >(Arena* arena) {
-  return Arena::CreateInternal< ::CameraServer::AvailableAdaptersResponse >(arena);
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::mvcam::AvailableAdaptersResponse* Arena::CreateMaybeMessage< ::mvcam::AvailableAdaptersResponse >(Arena* arena) {
+  return Arena::CreateInternal< ::mvcam::AvailableAdaptersResponse >(arena);
 }
-template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::CameraServer::AdapterRequest* Arena::CreateMaybeMessage< ::CameraServer::AdapterRequest >(Arena* arena) {
-  return Arena::CreateInternal< ::CameraServer::AdapterRequest >(arena);
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::mvcam::AdapterRequest* Arena::CreateMaybeMessage< ::mvcam::AdapterRequest >(Arena* arena) {
+  return Arena::CreateInternal< ::mvcam::AdapterRequest >(arena);
 }
-template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::CameraServer::CameraCapability* Arena::CreateMaybeMessage< ::CameraServer::CameraCapability >(Arena* arena) {
-  return Arena::CreateInternal< ::CameraServer::CameraCapability >(arena);
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::mvcam::CameraCapability* Arena::CreateMaybeMessage< ::mvcam::CameraCapability >(Arena* arena) {
+  return Arena::CreateInternal< ::mvcam::CameraCapability >(arena);
 }
-template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::CameraServer::DeviceInfo* Arena::CreateMaybeMessage< ::CameraServer::DeviceInfo >(Arena* arena) {
-  return Arena::CreateInternal< ::CameraServer::DeviceInfo >(arena);
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::mvcam::DeviceInfo* Arena::CreateMaybeMessage< ::mvcam::DeviceInfo >(Arena* arena) {
+  return Arena::CreateInternal< ::mvcam::DeviceInfo >(arena);
 }
-template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::CameraServer::DeviceListResponse* Arena::CreateMaybeMessage< ::CameraServer::DeviceListResponse >(Arena* arena) {
-  return Arena::CreateInternal< ::CameraServer::DeviceListResponse >(arena);
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::mvcam::DeviceListResponse* Arena::CreateMaybeMessage< ::mvcam::DeviceListResponse >(Arena* arena) {
+  return Arena::CreateInternal< ::mvcam::DeviceListResponse >(arena);
 }
-template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::CameraServer::IdRequest* Arena::CreateMaybeMessage< ::CameraServer::IdRequest >(Arena* arena) {
-  return Arena::CreateInternal< ::CameraServer::IdRequest >(arena);
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::mvcam::IdRequest* Arena::CreateMaybeMessage< ::mvcam::IdRequest >(Arena* arena) {
+  return Arena::CreateInternal< ::mvcam::IdRequest >(arena);
 }
-template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::CameraServer::Parameter* Arena::CreateMaybeMessage< ::CameraServer::Parameter >(Arena* arena) {
-  return Arena::CreateInternal< ::CameraServer::Parameter >(arena);
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::mvcam::Parameter* Arena::CreateMaybeMessage< ::mvcam::Parameter >(Arena* arena) {
+  return Arena::CreateInternal< ::mvcam::Parameter >(arena);
 }
-template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::CameraServer::Configuration* Arena::CreateMaybeMessage< ::CameraServer::Configuration >(Arena* arena) {
-  return Arena::CreateInternal< ::CameraServer::Configuration >(arena);
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::mvcam::Configuration* Arena::CreateMaybeMessage< ::mvcam::Configuration >(Arena* arena) {
+  return Arena::CreateInternal< ::mvcam::Configuration >(arena);
 }
-template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::CameraServer::ConfigureRequest* Arena::CreateMaybeMessage< ::CameraServer::ConfigureRequest >(Arena* arena) {
-  return Arena::CreateInternal< ::CameraServer::ConfigureRequest >(arena);
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::mvcam::ConfigureRequest* Arena::CreateMaybeMessage< ::mvcam::ConfigureRequest >(Arena* arena) {
+  return Arena::CreateInternal< ::mvcam::ConfigureRequest >(arena);
 }
-template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::CameraServer::Frame* Arena::CreateMaybeMessage< ::CameraServer::Frame >(Arena* arena) {
-  return Arena::CreateInternal< ::CameraServer::Frame >(arena);
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::mvcam::Frame* Arena::CreateMaybeMessage< ::mvcam::Frame >(Arena* arena) {
+  return Arena::CreateInternal< ::mvcam::Frame >(arena);
 }
-template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::CameraServer::FrameStream* Arena::CreateMaybeMessage< ::CameraServer::FrameStream >(Arena* arena) {
-  return Arena::CreateInternal< ::CameraServer::FrameStream >(arena);
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::mvcam::FrameStream* Arena::CreateMaybeMessage< ::mvcam::FrameStream >(Arena* arena) {
+  return Arena::CreateInternal< ::mvcam::FrameStream >(arena);
 }
-template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::CameraServer::StreamingRequest* Arena::CreateMaybeMessage< ::CameraServer::StreamingRequest >(Arena* arena) {
-  return Arena::CreateInternal< ::CameraServer::StreamingRequest >(arena);
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::mvcam::StreamingRequest* Arena::CreateMaybeMessage< ::mvcam::StreamingRequest >(Arena* arena) {
+  return Arena::CreateInternal< ::mvcam::StreamingRequest >(arena);
 }
-template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::CameraServer::Status* Arena::CreateMaybeMessage< ::CameraServer::Status >(Arena* arena) {
-  return Arena::CreateInternal< ::CameraServer::Status >(arena);
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::mvcam::Status* Arena::CreateMaybeMessage< ::mvcam::Status >(Arena* arena) {
+  return Arena::CreateInternal< ::mvcam::Status >(arena);
 }
-template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::CameraServer::DeviceControlRequest* Arena::CreateMaybeMessage< ::CameraServer::DeviceControlRequest >(Arena* arena) {
-  return Arena::CreateInternal< ::CameraServer::DeviceControlRequest >(arena);
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::mvcam::DeviceControlRequest* Arena::CreateMaybeMessage< ::mvcam::DeviceControlRequest >(Arena* arena) {
+  return Arena::CreateInternal< ::mvcam::DeviceControlRequest >(arena);
 }
 }  // namespace protobuf
 }  // namespace google
