@@ -2,15 +2,15 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
-      <config projectName="camera_backend" targetName="shared" />
       <config projectName="camera_backend" targetName="test_grpc_server" />
-      <config projectName="camera_backend" targetName="test_aravis_driver.cpp" />
-      <config projectName="camera_backend" targetName="proto" />
       <config projectName="camera_backend" targetName="test_framework.cpp" />
       <config projectName="camera_backend" targetName="grpc_server_app" />
+      <config projectName="camera_backend" targetName="shared" />
+      <config projectName="camera_backend" targetName="test_aravis_driver.cpp" />
       <config projectName="camera_backend" targetName="aravis_adapter" />
       <config projectName="camera_backend" targetName="camera_driver" />
       <config projectName="camera_backend" targetName="grpc_server" />
+      <config projectName="camera_backend" targetName="proto" />
     </generated>
   </component>
   <component name="CMakeSettings">
@@ -19,23 +19,10 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a23e60ba-2f13-4dfd-9f58-962b3f794ff5" name="Default Changelist" comment="update proto">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="a23e60ba-2f13-4dfd-9f58-962b3f794ff5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/core/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/protos/MicroVision-proto" beforeDir="false" afterPath="$PROJECT_DIR$/core/protos/MicroVision-proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/grpc_server/protos/camera_definitions.grpc.pb.cc" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/grpc_server/protos/camera_definitions.grpc.pb.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/grpc_server/protos/camera_definitions.grpc.pb.h" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/grpc_server/protos/camera_definitions.grpc.pb.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/grpc_server/protos/camera_definitions.pb.cc" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/grpc_server/protos/camera_definitions.pb.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/grpc_server/protos/camera_definitions.pb.h" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/grpc_server/protos/camera_definitions.pb.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/grpc_server/protos/camera_service.grpc.pb.cc" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/grpc_server/protos/camera_service.grpc.pb.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/grpc_server/protos/camera_service.grpc.pb.h" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/grpc_server/protos/camera_service.grpc.pb.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/grpc_server/protos/camera_service.pb.cc" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/grpc_server/protos/camera_service.pb.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/grpc_server/protos/camera_service.pb.h" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/grpc_server/protos/camera_service.pb.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/grpc_server/src/server.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/grpc_server/src/server.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/grpc_server/src/server.h" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/grpc_server/src/server.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/grpc_server/src/server_auxiliary_impl.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/grpc_server/src/server_auxiliary_impl.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/grpc_server/test/test_grpc_server.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/grpc_server/test/test_grpc_server.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/Dockerfile.arm64" beforeDir="false" afterPath="$PROJECT_DIR$/docker/Dockerfile.arm64" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/Dockerfile.env.arm64" beforeDir="false" afterPath="$PROJECT_DIR$/docker/Dockerfile.env.arm64" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <ignored path="$PROJECT_DIR$/CMakeFiles/" />
@@ -66,7 +53,65 @@
     <favorites_list name="camera_backend" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docker/build.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="22" column="11" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="11" />
+              <folding>
+                <element signature="e#19#34#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docker/Dockerfile.amd64">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="19" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/environment/scripts/run_time.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/docker/Dockerfile.arm64">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="33">
+              <caret line="4" column="23" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docker/Dockerfile.env.amd64">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="18" selection-start-column="18" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docker/Dockerfile.env.arm64">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="450">
+              <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -119,10 +164,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/core/src/shared/src/logging.h" />
-        <option value="$PROJECT_DIR$/core/src/camera_driver/test/test_arvis_driver.cpp" />
-        <option value="$PROJECT_DIR$/core/src/camera_driver/src/camera_descriptor.h" />
-        <option value="$PROJECT_DIR$/core/src/camera_driver/src/aravis/aravis_camera_template_impl.tcc" />
         <option value="$PROJECT_DIR$/core/src/camera_driver/src/event_handlers.h" />
         <option value="$PROJECT_DIR$/core/src/camera_driver/src/capability.h" />
         <option value="$PROJECT_DIR$/core/src/camera_driver/src/camera_container.h" />
@@ -170,6 +211,10 @@
         <option value="$PROJECT_DIR$/core/src/grpc_server/src/server_auxiliary_impl.cpp" />
         <option value="$PROJECT_DIR$/core/src/grpc_server/src/server.cpp" />
         <option value="$PROJECT_DIR$/core/src/grpc_server/test/test_grpc_server.cpp" />
+        <option value="$PROJECT_DIR$/docker/Dockerfile.env.amd64" />
+        <option value="$PROJECT_DIR$/docker/Dockerfile.env.arm64" />
+        <option value="$PROJECT_DIR$/docker/Dockerfile.amd64" />
+        <option value="$PROJECT_DIR$/docker/Dockerfile.arm64" />
       </list>
     </option>
   </component>
@@ -247,6 +292,17 @@
               <item name="camera_backend" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
               <item name="docker" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="camera_backend" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="environment" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="camera_backend" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="environment" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="scripts" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
           </expand>
           <select />
@@ -666,7 +722,8 @@
       <workItem from="1548711820350" duration="21294000" />
       <workItem from="1548866687174" duration="19827000" />
       <workItem from="1550619292628" duration="11000" />
-      <workItem from="1550619325232" duration="710000" />
+      <workItem from="1550619325232" duration="770000" />
+      <workItem from="1550623344759" duration="2961000" />
     </task>
     <task id="LOCAL-00001" summary="persist, selectable build configuration">
       <created>1541468783830</created>
@@ -682,7 +739,14 @@
       <option name="project" value="LOCAL" />
       <updated>1541519808725</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="update proto">
+      <created>1550620063404</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1550620063404</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -718,7 +782,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="499107000" />
+    <option name="totallyTimeSpent" value="502128000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -732,23 +796,23 @@
   <component name="ToolWindowManager">
     <frame x="67" y="27" width="1853" height="1053" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.495637" visible="true" weight="0.355285" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.495637" visible="true" weight="0.35971224" />
       <window_info id="Structure" order="1" sideWeight="0.504363" side_tool="true" weight="0.3431101" />
       <window_info id="Favorites" order="2" sideWeight="0.504363" side_tool="true" weight="0.3431101" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3293348" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4997233" visible="true" weight="0.2868048" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4997233" weight="0.2868048" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4991699" weight="0.3991276" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3293348" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49418926" weight="0.37513632" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.49418926" visible="true" weight="0.37513632" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5196458" side_tool="true" weight="0.32969433" />
       <window_info anchor="bottom" id="Version Control" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="CMake" order="11" sideWeight="0.4803542" weight="0.32824427" />
       <window_info anchor="bottom" id="Docker" order="12" sideWeight="0.49474266" weight="0.47494555" />
-      <window_info anchor="bottom" id="Messages" order="13" sideWeight="0.54178196" weight="0.32824427" />
+      <window_info active="true" anchor="bottom" id="Messages" order="13" sideWeight="0.54178196" visible="true" weight="0.32824427" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -760,6 +824,7 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <ignored-roots>
       <path value="$PROJECT_DIR$/grpc" />
       <path value="$PROJECT_DIR$/grpc/third_party/abseil-cpp" />
@@ -907,27 +972,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file:///usr/include/boost/asio/handler_invoke_hook.hpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="69" selection-start-line="69" selection-end-line="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/aravis/src/arvuvdevice.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="93" selection-start-line="93" selection-end-line="93" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/include/grpcpp/impl/codegen/sync_stream.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="213" selection-start-line="213" selection-end-line="213" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///usr/local/include/grpcpp/impl/codegen/core_codegen_interface.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="173">
@@ -1035,9 +1079,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docker/Dockerfile.amd64">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/src/grpc_server/src/error.h">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -1051,13 +1092,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="1" column="3" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/grpc_server/protos/camera_definitions.pb.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="1797" column="6" selection-start-line="1797" selection-start-column="6" selection-end-line="1797" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -1114,13 +1148,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/environment/scripts/run_time.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/docker/Dockerfile.grpc" />
     <entry file="file://$PROJECT_DIR$/docker/build_docker.py" />
     <entry file="file://$PROJECT_DIR$/core/protos/camera_definitions.proto" />
@@ -1174,23 +1201,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docker/build.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="17" column="9" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/grpc_server/test/test_grpc_server.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5927">
-          <caret line="463" column="2" selection-start-line="463" selection-start-column="2" selection-end-line="463" selection-end-column="2" />
-          <folding>
-            <element signature="e#129#164#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/src/grpc_server/src/server.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="254">
@@ -1225,6 +1235,68 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="495">
           <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/grpc_server/protos/camera_definitions.pb.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="702" column="11" selection-start-line="702" selection-start-column="11" selection-end-line="702" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/grpc_server/test/test_grpc_server.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="53" selection-start-line="53" selection-end-line="53" />
+          <folding>
+            <element signature="e#129#164#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docker/Dockerfile.env.arm64">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docker/Dockerfile.env.amd64">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="18" selection-start-column="18" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/environment/scripts/run_time.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docker/build.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="11" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="11" />
+          <folding>
+            <element signature="e#19#34#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docker/Dockerfile.amd64">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="19" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docker/Dockerfile.arm64">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="33">
+          <caret line="4" column="23" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
         </state>
       </provider>
     </entry>

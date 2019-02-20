@@ -1,8 +1,8 @@
-#: TAG = wuyuanyi/camera-backend:latest-arm64
+#: TAG = wuyuanyi/mvcam:latest-arm64
 
 FROM wuyuanyi/grpc-cxx:latest-arm64 as grpc
 
-FROM wuyuanyi/camera-backend-env:latest-arm64 as full
+FROM wuyuanyi/mvcam-env:latest-arm64 as full
 
 
 
