@@ -20,8 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a23e60ba-2f13-4dfd-9f58-962b3f794ff5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/docker/build_docker.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/build_docker_env.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/protos/MicroVision-proto" beforeDir="false" afterPath="$PROJECT_DIR$/core/protos/MicroVision-proto" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <ignored path="$PROJECT_DIR$/CMakeFiles/" />
@@ -53,23 +54,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/protos/MicroVision-proto/protoc.sh">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/src/grpc_server/src/server.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="68" selection-start-line="14" selection-start-column="55" selection-end-line="14" selection-end-column="68" />
-              <folding>
-                <element signature="e#107#124#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/src/grpc_server/test/test_grpc_server.cpp">
           <provider selected="true" editor-type-id="text-editor">
@@ -111,9 +95,45 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/src/grpc_server/src/config.cpp">
           <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/CMakeLists.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="495">
+              <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/src/grpc_server/CMakeLists.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="332">
+              <caret line="25" column="22" lean-forward="true" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docker/build_docker_env.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="3" selection-end-column="79" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/docker/build_docker.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="71" lean-forward="true" selection-start-line="3" selection-start-column="71" selection-end-line="3" selection-end-column="71" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -140,7 +160,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>message</find>
       <find>push</find>
       <find>new</find>
       <find>final</find>
@@ -170,6 +189,7 @@
       <find>param</find>
       <find>CameraServer</find>
       <find>cameraservice</find>
+      <find>THIRD_PARTY_LIBRARIES</find>
     </findStrings>
     <replaceStrings>
       <replace>mvcam</replace>
@@ -181,8 +201,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/core/src/camera_driver/src/event_handlers.h" />
-        <option value="$PROJECT_DIR$/core/src/camera_driver/src/capability.h" />
         <option value="$PROJECT_DIR$/core/src/camera_driver/src/camera_container.h" />
         <option value="$PROJECT_DIR$/core/src/camera_driver/test/test_framework.cpp" />
         <option value="$PROJECT_DIR$/core/src/camera_driver/src/aravis/aravis_adapter.h" />
@@ -218,7 +236,6 @@
         <option value="$PROJECT_DIR$/docker/build.py" />
         <option value="$PROJECT_DIR$/core/src/grpc_server/src/main.cpp" />
         <option value="$PROJECT_DIR$/core/src/shared/CMakeLists.txt" />
-        <option value="$PROJECT_DIR$/core/src/grpc_server/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/core/src/camera_driver/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/core/src/camera_driver/src/aravis/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/core/PostInstall.cmake" />
@@ -232,6 +249,9 @@
         <option value="$PROJECT_DIR$/docker/Dockerfile.arm64" />
         <option value="$PROJECT_DIR$/core/src/grpc_server/src/server.h" />
         <option value="$PROJECT_DIR$/core/src/grpc_server/test/test_grpc_server.cpp" />
+        <option value="$PROJECT_DIR$/core/src/grpc_server/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/docker/build_docker_env.sh" />
+        <option value="$PROJECT_DIR$/docker/build_docker.sh" />
       </list>
     </option>
   </component>
@@ -771,7 +791,7 @@
       <workItem from="1550623344759" duration="2986000" />
       <workItem from="1550638297072" duration="205000" />
       <workItem from="1550690735867" duration="89000" />
-      <workItem from="1550698416499" duration="251000" />
+      <workItem from="1550698416499" duration="551000" />
     </task>
     <task id="LOCAL-00001" summary="persist, selectable build configuration">
       <created>1541468783830</created>
@@ -808,7 +828,14 @@
       <option name="project" value="LOCAL" />
       <updated>1550638492810</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="update proto version">
+      <created>1550698765641</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1550698765641</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -844,7 +871,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="502698000" />
+    <option name="totallyTimeSpent" value="502998000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -857,6 +884,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="27" width="1853" height="1053" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.495637" visible="true" weight="0.37299392" />
       <window_info id="Structure" order="1" sideWeight="0.504363" side_tool="true" weight="0.3431101" />
@@ -874,7 +902,7 @@
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.3293348" />
       <window_info anchor="bottom" id="CMake" order="11" sideWeight="0.4803542" weight="0.32824427" />
       <window_info anchor="bottom" id="Docker" order="12" sideWeight="0.49474266" weight="0.47494555" />
-      <window_info active="true" anchor="bottom" id="Messages" order="13" sideWeight="0.54178196" visible="true" weight="0.32824427" />
+      <window_info anchor="bottom" id="Messages" order="13" sideWeight="0.54178196" visible="true" weight="0.32824427" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -913,7 +941,8 @@
     <MESSAGE value="update proto" />
     <MESSAGE value="fix wrong docker file reference" />
     <MESSAGE value="update service name" />
-    <option name="LAST_COMMIT_MESSAGE" value="update service name" />
+    <MESSAGE value="update proto version" />
+    <option name="LAST_COMMIT_MESSAGE" value="update proto version" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1036,20 +1065,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file:///usr/include/c++/8/bits/invoke.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="96" selection-start-line="96" selection-end-line="96" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/include/boost/function/function_template.hpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="118" selection-start-line="118" selection-end-line="118" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///usr/include/c++/8/bits/hashtable_policy.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="263">
@@ -1209,13 +1224,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/grpc_server/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="33" column="53" selection-start-line="33" selection-start-column="53" selection-end-line="33" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/src/camera_driver/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -1234,13 +1242,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
         </state>
       </provider>
     </entry>
@@ -1354,6 +1355,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/core/src/grpc_server/src/config.cpp">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/grpc_server/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="332">
+          <caret line="25" column="22" lean-forward="true" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docker/build_docker_env.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="3" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docker/build_docker.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="71" lean-forward="true" selection-start-line="3" selection-start-column="71" selection-end-line="3" selection-end-column="71" />
+        </state>
+      </provider>
     </entry>
   </component>
   <component name="masterDetails">
