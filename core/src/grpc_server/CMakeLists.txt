@@ -7,7 +7,7 @@ list(FILTER LIBRARY_SOURCES EXCLUDE REGEX "main.cpp")
 
 find_package(Boost COMPONENTS system unit_test_framework thread REQUIRED)
 
-set(THIRD_PARTY_LIBRARIES  ${Boost_SYSTEM_LIBRARY} grpc++_unsecure protobuf -Wl,--no-as-needed grpc++_reflection )
+set(THIRD_PARTY_LIBRARIES ${Boost_SYSTEM_LIBRARY} grpc++_unsecure protobuf -Wl,--no-as-needed grpc++_reflection )
 include_directories(src . ../camera_driver/src ../shared/src)
 
 
