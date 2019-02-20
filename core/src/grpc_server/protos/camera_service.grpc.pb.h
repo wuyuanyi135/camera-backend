@@ -30,10 +30,10 @@ class ServerContext;
 namespace mvcam {
 
 // The capabilities should be checked and implemented by the frontend. However, in the GRPC layer, the capabilities should also be enforced.
-class CameraService final {
+class MicroVisionCameraService final {
  public:
   static constexpr char const* service_full_name() {
-    return "mvcam.CameraService";
+    return "mvcam.MicroVisionCameraService";
   }
   class StubInterface {
    public:

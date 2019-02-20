@@ -613,12 +613,11 @@ void AddDescriptorsImpl() {
       " \001(\010\"`\n\024DeviceControlRequest\022\034\n\002id\030\001 \001(\013"
       "2\020.mvcam.IdRequest\022*\n\006action\030\002 \001(\0162\032.mvc"
       "am.DeviceControlAction*.\n\023DeviceControlA"
-      "ction\022\013\n\007Suspend\020\000\022\n\n\006Resume\020\001B:Z8github"
-      ".com/wuyuanyi135/MicroVisionCGI/server/p"
-      "roto/mvcamb\006proto3"
+      "ction\022\013\n\007Suspend\020\000\022\n\n\006Resume\020\001B\'Z%github"
+      ".com/wuyuanyi135/mvprotos/mvcamb\006proto3"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 1858);
+      descriptor, 1839);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "camera_definitions.proto", &protobuf_RegisterTypes);
   ::protobuf_google_2fprotobuf_2ftimestamp_2eproto::AddDescriptors();

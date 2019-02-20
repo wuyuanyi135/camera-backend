@@ -38,7 +38,7 @@ struct client_fixture {
         std::string("localhost:") + config_provider::get_instance()->read("listen_port"),
         grpc::InsecureChannelCredentials()
     );
-    stub = mvcam::CameraService::NewStub(channel);
+    stub = mvcam::MicroVisionCameraService::NewStub(channel);
 
     BOOST_TEST_MESSAGE("Starting grpc client");
   }
@@ -46,7 +46,7 @@ struct client_fixture {
   }
   std::shared_ptr<grpc::Channel> channel;
  public:
-  std::unique_ptr<mvcam::CameraService::Stub> stub;
+  std::unique_ptr<mvcam::MicroVisionCameraService::Stub> stub;
 
 };
 BOOST_AUTO_TEST_SUITE(test_grpc_camera_server)

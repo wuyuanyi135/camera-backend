@@ -12,7 +12,7 @@
 #include "camera_container.h"
 #include "framework.h"
 
-class camera_backend_server : public mvcam::CameraService::Service {
+class camera_backend_server : public mvcam::MicroVisionCameraService::Service {
  private:
   std::shared_ptr<camera_driver::framework> mFramework;
   void load_adapters();
