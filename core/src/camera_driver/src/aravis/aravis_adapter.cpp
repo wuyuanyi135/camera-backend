@@ -47,6 +47,7 @@ void aravis_adapter::camera_list(std::vector<camera_driver::camera_descriptor> &
         .adapter = this,
         .device = aravis_camera::get_camera_instance(cd),
     };
+    container.camera_descriptor.connected = container.device->opened();
     std::pair<std::string, camera_driver::camera_container> p(cd.id, container);
     mCameraCache.insert(p);
     CDINFO("Camera " << cd.id << " registered");

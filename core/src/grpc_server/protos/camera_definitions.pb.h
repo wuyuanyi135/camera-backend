@@ -994,6 +994,12 @@ class DeviceInfo : public ::google::protobuf::Message /* @@protoc_insertion_poin
   ::mvcam::CameraCapability* mutable_capabilities();
   void set_allocated_capabilities(::mvcam::CameraCapability* capabilities);
 
+  // bool connected = 8;
+  void clear_connected();
+  static const int kConnectedFieldNumber = 8;
+  bool connected() const;
+  void set_connected(bool value);
+
   // @@protoc_insertion_point(class_scope:mvcam.DeviceInfo)
  private:
 
@@ -1005,6 +1011,7 @@ class DeviceInfo : public ::google::protobuf::Message /* @@protoc_insertion_poin
   ::google::protobuf::internal::ArenaStringPtr serial_;
   ::mvcam::AdapterInfo* adapter_;
   ::mvcam::CameraCapability* capabilities_;
+  bool connected_;
   mutable ::google::protobuf::internal::CachedSize _cached_size_;
   friend struct ::protobuf_camera_5fdefinitions_2eproto::TableStruct;
 };
@@ -3153,6 +3160,20 @@ inline void DeviceInfo::set_allocated_capabilities(::mvcam::CameraCapability* ca
   }
   capabilities_ = capabilities;
   // @@protoc_insertion_point(field_set_allocated:mvcam.DeviceInfo.capabilities)
+}
+
+// bool connected = 8;
+inline void DeviceInfo::clear_connected() {
+  connected_ = false;
+}
+inline bool DeviceInfo::connected() const {
+  // @@protoc_insertion_point(field_get:mvcam.DeviceInfo.connected)
+  return connected_;
+}
+inline void DeviceInfo::set_connected(bool value) {
+  
+  connected_ = value;
+  // @@protoc_insertion_point(field_set:mvcam.DeviceInfo.connected)
 }
 
 // -------------------------------------------------------------------

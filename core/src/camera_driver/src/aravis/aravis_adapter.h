@@ -23,6 +23,7 @@ class aravis_adapter : public camera_driver::adapter {
   camera_driver::adapter_capability mCapabilities{
     .should_shutdown = false
   };
+  std::string opened_camera_id;
 
  private:
   std::unordered_map<std::string, camera_driver::camera_container> mCameraCache;

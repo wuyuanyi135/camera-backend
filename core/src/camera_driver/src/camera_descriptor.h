@@ -17,6 +17,7 @@ class camera_descriptor {
   std::string model;
   std::string serial;
   std::string interface;
+  bool connected;
 };
 }
 #endif //CAMERA_BACKEND_CAMERA_INFO_H

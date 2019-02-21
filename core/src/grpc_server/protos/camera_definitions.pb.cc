@@ -432,6 +432,7 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::DeviceInfo, version_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::DeviceInfo, serial_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::DeviceInfo, capabilities_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::DeviceInfo, connected_),
   ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::DeviceListResponse, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -517,16 +518,16 @@ static const ::google::protobuf::internal::MigrationSchema schemas[] GOOGLE_PROT
   { 22, -1, sizeof(::mvcam::AdapterRequest)},
   { 28, -1, sizeof(::mvcam::CameraCapability)},
   { 46, -1, sizeof(::mvcam::DeviceInfo)},
-  { 58, -1, sizeof(::mvcam::DeviceListResponse)},
-  { 64, -1, sizeof(::mvcam::IdRequest)},
-  { 70, -1, sizeof(::mvcam::Parameter)},
-  { 77, -1, sizeof(::mvcam::Configuration)},
-  { 87, -1, sizeof(::mvcam::ConfigureRequest)},
-  { 94, -1, sizeof(::mvcam::Frame)},
-  { 106, -1, sizeof(::mvcam::FrameStream)},
-  { 112, -1, sizeof(::mvcam::StreamingRequest)},
-  { 120, -1, sizeof(::mvcam::Status)},
-  { 128, -1, sizeof(::mvcam::DeviceControlRequest)},
+  { 59, -1, sizeof(::mvcam::DeviceListResponse)},
+  { 65, -1, sizeof(::mvcam::IdRequest)},
+  { 71, -1, sizeof(::mvcam::Parameter)},
+  { 78, -1, sizeof(::mvcam::Configuration)},
+  { 88, -1, sizeof(::mvcam::ConfigureRequest)},
+  { 95, -1, sizeof(::mvcam::Frame)},
+  { 107, -1, sizeof(::mvcam::FrameStream)},
+  { 113, -1, sizeof(::mvcam::StreamingRequest)},
+  { 121, -1, sizeof(::mvcam::Status)},
+  { 129, -1, sizeof(::mvcam::DeviceControlRequest)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
@@ -586,38 +587,39 @@ void AddDescriptorsImpl() {
       "(\010\022\035\n\025can_adjust_frame_rate\030\t \001(\010\022\034\n\024can"
       "_set_frame_number\030\n \001(\010\022\033\n\023can_get_tempe"
       "rature\030\013 \001(\010\022\023\n\013can_suspend\030\014 \001(\010\022\021\n\tcan"
-      "_reset\030\r \001(\010\"\261\001\n\nDeviceInfo\022#\n\007adapter\030\001"
+      "_reset\030\r \001(\010\"\304\001\n\nDeviceInfo\022#\n\007adapter\030\001"
       " \001(\0132\022.mvcam.AdapterInfo\022\023\n\013manufacture\030"
       "\002 \001(\t\022\n\n\002id\030\003 \001(\t\022\r\n\005model\030\004 \001(\t\022\017\n\007vers"
       "ion\030\005 \001(\t\022\016\n\006serial\030\006 \001(\t\022-\n\014capabilitie"
-      "s\030\007 \001(\0132\027.mvcam.CameraCapability\"8\n\022Devi"
-      "ceListResponse\022\"\n\007devices\030\001 \003(\0132\021.mvcam."
-      "DeviceInfo\"\027\n\tIdRequest\022\n\n\002id\030\001 \001(\t\"1\n\tP"
-      "arameter\022\025\n\rshould_update\030\001 \001(\010\022\r\n\005value"
-      "\030\002 \001(\001\"\301\001\n\rConfiguration\022\"\n\010exposure\030\001 \001"
-      "(\0132\020.mvcam.Parameter\022$\n\nframe_rate\030\002 \001(\013"
-      "2\020.mvcam.Parameter\022\036\n\004gain\030\003 \001(\0132\020.mvcam"
-      ".Parameter\022%\n\013black_level\030\004 \001(\0132\020.mvcam."
-      "Parameter\022\037\n\005gamma\030\005 \001(\0132\020.mvcam.Paramet"
-      "er\"V\n\020ConfigureRequest\022\034\n\002id\030\001 \001(\0132\020.mvc"
-      "am.IdRequest\022$\n\006config\030\002 \001(\0132\024.mvcam.Con"
-      "figuration\"\223\001\n\005Frame\022-\n\ttimestamp\030\001 \001(\0132"
-      "\032.google.protobuf.Timestamp\022\n\n\002id\030\002 \001(\004\022"
-      "\014\n\004size\030\003 \001(\r\022\016\n\006height\030\004 \001(\r\022\r\n\005width\030\005"
-      " \001(\r\022\024\n\014pixel_format\030\006 \001(\r\022\014\n\004data\030\007 \001(\014"
-      "\"+\n\013FrameStream\022\034\n\006frames\030\001 \003(\0132\014.mvcam."
-      "Frame\"[\n\020StreamingRequest\022\034\n\002id\030\001 \001(\0132\020."
-      "mvcam.IdRequest\022\025\n\rnumber_frames\030\002 \001(\004\022\022"
-      "\n\nbatch_size\030\004 \001(\004\"@\n\006Status\022\023\n\013temperat"
-      "ure\030\001 \001(\001\022\016\n\006opened\030\002 \001(\010\022\021\n\tcapturing\030\003"
-      " \001(\010\"`\n\024DeviceControlRequest\022\034\n\002id\030\001 \001(\013"
-      "2\020.mvcam.IdRequest\022*\n\006action\030\002 \001(\0162\032.mvc"
-      "am.DeviceControlAction*.\n\023DeviceControlA"
-      "ction\022\013\n\007Suspend\020\000\022\n\n\006Resume\020\001B\'Z%github"
-      ".com/wuyuanyi135/mvprotos/mvcamb\006proto3"
+      "s\030\007 \001(\0132\027.mvcam.CameraCapability\022\021\n\tconn"
+      "ected\030\010 \001(\010\"8\n\022DeviceListResponse\022\"\n\007dev"
+      "ices\030\001 \003(\0132\021.mvcam.DeviceInfo\"\027\n\tIdReque"
+      "st\022\n\n\002id\030\001 \001(\t\"1\n\tParameter\022\025\n\rshould_up"
+      "date\030\001 \001(\010\022\r\n\005value\030\002 \001(\001\"\301\001\n\rConfigurat"
+      "ion\022\"\n\010exposure\030\001 \001(\0132\020.mvcam.Parameter\022"
+      "$\n\nframe_rate\030\002 \001(\0132\020.mvcam.Parameter\022\036\n"
+      "\004gain\030\003 \001(\0132\020.mvcam.Parameter\022%\n\013black_l"
+      "evel\030\004 \001(\0132\020.mvcam.Parameter\022\037\n\005gamma\030\005 "
+      "\001(\0132\020.mvcam.Parameter\"V\n\020ConfigureReques"
+      "t\022\034\n\002id\030\001 \001(\0132\020.mvcam.IdRequest\022$\n\006confi"
+      "g\030\002 \001(\0132\024.mvcam.Configuration\"\223\001\n\005Frame\022"
+      "-\n\ttimestamp\030\001 \001(\0132\032.google.protobuf.Tim"
+      "estamp\022\n\n\002id\030\002 \001(\004\022\014\n\004size\030\003 \001(\r\022\016\n\006heig"
+      "ht\030\004 \001(\r\022\r\n\005width\030\005 \001(\r\022\024\n\014pixel_format\030"
+      "\006 \001(\r\022\014\n\004data\030\007 \001(\014\"+\n\013FrameStream\022\034\n\006fr"
+      "ames\030\001 \003(\0132\014.mvcam.Frame\"[\n\020StreamingReq"
+      "uest\022\034\n\002id\030\001 \001(\0132\020.mvcam.IdRequest\022\025\n\rnu"
+      "mber_frames\030\002 \001(\004\022\022\n\nbatch_size\030\004 \001(\004\"@\n"
+      "\006Status\022\023\n\013temperature\030\001 \001(\001\022\016\n\006opened\030\002"
+      " \001(\010\022\021\n\tcapturing\030\003 \001(\010\"`\n\024DeviceControl"
+      "Request\022\034\n\002id\030\001 \001(\0132\020.mvcam.IdRequest\022*\n"
+      "\006action\030\002 \001(\0162\032.mvcam.DeviceControlActio"
+      "n*.\n\023DeviceControlAction\022\013\n\007Suspend\020\000\022\n\n"
+      "\006Resume\020\001B\'Z%github.com/wuyuanyi135/mvpr"
+      "otos/mvcamb\006proto3"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 1839);
+      descriptor, 1858);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "camera_definitions.proto", &protobuf_RegisterTypes);
   ::protobuf_google_2fprotobuf_2ftimestamp_2eproto::AddDescriptors();
@@ -2439,6 +2441,7 @@ const int DeviceInfo::kModelFieldNumber;
 const int DeviceInfo::kVersionFieldNumber;
 const int DeviceInfo::kSerialFieldNumber;
 const int DeviceInfo::kCapabilitiesFieldNumber;
+const int DeviceInfo::kConnectedFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 DeviceInfo::DeviceInfo()
@@ -2482,6 +2485,7 @@ DeviceInfo::DeviceInfo(const DeviceInfo& from)
   } else {
     capabilities_ = NULL;
   }
+  connected_ = from.connected_;
   // @@protoc_insertion_point(copy_constructor:mvcam.DeviceInfo)
 }
 
@@ -2492,8 +2496,8 @@ void DeviceInfo::SharedCtor() {
   version_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   serial_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   ::memset(&adapter_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&capabilities_) -
-      reinterpret_cast<char*>(&adapter_)) + sizeof(capabilities_));
+      reinterpret_cast<char*>(&connected_) -
+      reinterpret_cast<char*>(&adapter_)) + sizeof(connected_));
 }
 
 DeviceInfo::~DeviceInfo() {
@@ -2544,6 +2548,7 @@ void DeviceInfo::Clear() {
     delete capabilities_;
   }
   capabilities_ = NULL;
+  connected_ = false;
   _internal_metadata_.Clear();
 }
 
@@ -2661,6 +2666,20 @@ bool DeviceInfo::MergePartialFromCodedStream(
         break;
       }
 
+      // bool connected = 8;
+      case 8: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(64u /* 64 & 0xFF */)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &connected_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
       default: {
       handle_unusual:
         if (tag == 0) {
@@ -2749,6 +2768,11 @@ void DeviceInfo::SerializeWithCachedSizes(
       7, this->_internal_capabilities(), output);
   }
 
+  // bool connected = 8;
+  if (this->connected() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(8, this->connected(), output);
+  }
+
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
@@ -2832,6 +2856,11 @@ void DeviceInfo::SerializeWithCachedSizes(
         7, this->_internal_capabilities(), deterministic, target);
   }
 
+  // bool connected = 8;
+  if (this->connected() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(8, this->connected(), target);
+  }
+
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
@@ -2898,6 +2927,11 @@ size_t DeviceInfo::ByteSizeLong() const {
         *capabilities_);
   }
 
+  // bool connected = 8;
+  if (this->connected() != 0) {
+    total_size += 1 + 1;
+  }
+
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
@@ -2951,6 +2985,9 @@ void DeviceInfo::MergeFrom(const DeviceInfo& from) {
   if (from.has_capabilities()) {
     mutable_capabilities()->::mvcam::CameraCapability::MergeFrom(from.capabilities());
   }
+  if (from.connected() != 0) {
+    set_connected(from.connected());
+  }
 }
 
 void DeviceInfo::CopyFrom(const ::google::protobuf::Message& from) {
@@ -2989,6 +3026,7 @@ void DeviceInfo::InternalSwap(DeviceInfo* other) {
     GetArenaNoVirtual());
   swap(adapter_, other->adapter_);
   swap(capabilities_, other->capabilities_);
+  swap(connected_, other->connected_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
 }
 

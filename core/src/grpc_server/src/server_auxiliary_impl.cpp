@@ -86,6 +86,7 @@ void camera_backend_server::transform_device_info(const camera_driver::camera_co
   dest->set_manufacture(src.camera_descriptor.manufacture);
   dest->set_model(src.camera_descriptor.model);
   dest->set_serial(src.camera_descriptor.serial);
+  dest->set_connected(src.camera_descriptor.connected);
   transform_adapter(src.adapter, dest->mutable_adapter());
   transform_device_capabilities(src.device->capabilities(), dest->mutable_capabilities());
 }
