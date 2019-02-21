@@ -13,11 +13,10 @@ class camera_device;
 class camera_descriptor {
  public:
   std::string manufacture;
-  const char* id;
+  std::string id;
   std::string model;
   std::string serial;
   std::string interface;
-  bool connected;
 };
 }
 #endif //CAMERA_BACKEND_CAMERA_INFO_H

@@ -49,7 +49,7 @@ std::unique_ptr<grpc::Server> camera_backend_server::start_server() {
   return server;
 }
 void camera_backend_server::filter_adapter_by_name(const std::string &name,
-                                                   std::vector<camera_driver::adapter*> adapters) {
+                                                   std::vector<camera_driver::adapter *> adapters) {
   for (auto it: mFramework->adapters()) {
     if (it->name() == name) {
       adapters.emplace_back(it);
@@ -61,36 +61,17 @@ void camera_backend_server::filter_adapter_by_name(const std::string &name,
   BOOST_THROW_EXCEPTION(ex);
 }
 
-void camera_backend_server::update_id_index(std::vector<camera_driver::adapter *> &vector) {
-  mCameraCache.clear();
-
-  for (auto &it : vector) {
-    std::vector<camera_driver::camera_descriptor> camera;
-    it->camera_list(camera);
-    for (auto &cam : camera) {
-
-      camera_driver::camera_container container;
-      bool found = it->get_camera_by_id(cam.id, container);
-      assert(found); // camera should be found by its id.
-
-      std::pair<std::string, camera_driver::camera_container> pair(cam.id, container);
-      mCameraCache.insert(pair);
-      CDINFO("Inserting camera: " << cam.id);
-    }
-  }
-}
-void camera_backend_server::transform_device_info(const camera_driver::camera_container &src,
+void camera_backend_server::transform_device_info(camera_driver::camera_device &src,
                                                   mvcam::DeviceInfo *dest) {
-  dest->set_id(src.camera_descriptor.id);
+  dest->set_id(src.camera_descriptor_ref.id);
   dest->set_version("N/A");
-  dest->set_manufacture(src.camera_descriptor.manufacture);
-  dest->set_model(src.camera_descriptor.model);
-  dest->set_serial(src.camera_descriptor.serial);
-  dest->set_connected(src.camera_descriptor.connected);
-  transform_adapter(src.adapter, dest->mutable_adapter());
-  transform_device_capabilities(src.device->capabilities(), dest->mutable_capabilities());
+  dest->set_manufacture(src.camera_descriptor_ref.manufacture);
+  dest->set_model(src.camera_descriptor_ref.model);
+  dest->set_serial(src.camera_descriptor_ref.serial);
+  transform_adapter(src.adapter_ref, dest->mutable_adapter());
+  transform_device_capabilities(src.capabilities(), dest->mutable_capabilities());
 }
-void camera_backend_server::transform_device_capabilities(const camera_driver::camera_capability *src,
+void camera_backend_server::transform_device_capabilities(camera_driver::camera_capability *src,
                                                           mvcam::CameraCapability *dest) const {
   dest->set_can_shutdown(src->can_shutdown);
   dest->set_can_open(src->should_open);
@@ -111,7 +92,7 @@ void camera_backend_server::transform_device_capabilities(const camera_driver::c
 }
 
 template<typename T>
-void camera_backend_server::apply_parameter(camera_driver::camera_container &container,
+void camera_backend_server::apply_parameter(camera_driver::camera_device &camera,
                                             camera_driver::parameter_write<T> &dest,
                                             const mvcam::Parameter &param,
                                             std::string fieldName,
@@ -119,7 +100,7 @@ void camera_backend_server::apply_parameter(camera_driver::camera_container &con
 ) {
   if (param.should_update()) {
     if (!capability) {
-      camera_capability_error ex(container.camera_descriptor);
+      camera_capability_error ex(camera.camera_descriptor_ref);
       ex << error_info(std::string("No capability for setting ") + fieldName);
       BOOST_THROW_EXCEPTION(ex);
     }
@@ -128,18 +109,18 @@ void camera_backend_server::apply_parameter(camera_driver::camera_container &con
     dest.value = value;
   }
 }
-void camera_backend_server::configure_camera(camera_driver::camera_container &container,
+void camera_backend_server::configure_camera(camera_driver::camera_device &camera,
                                              const mvcam::ConfigureRequest *configuration) {
   if (!configuration->has_config()) {
     return;
   }
 
   camera_driver::camera_parameter_write internalConfiguration{};
-  camera_driver::camera_capability *cap = container.device->capabilities();
+  camera_driver::camera_capability *cap = camera.capabilities();
   // configure gain
   const mvcam::Configuration &config = configuration->config();
   if (config.has_gain()) {
-    apply_parameter(container,
+    apply_parameter(camera,
                     internalConfiguration.gain,
                     config.gain(),
                     "gain",
@@ -148,7 +129,7 @@ void camera_backend_server::configure_camera(camera_driver::camera_container &co
   }
 
   if (config.has_exposure()) {
-    apply_parameter(container,
+    apply_parameter(camera,
                     internalConfiguration.exposure,
                     config.exposure(),
                     "exposure",
@@ -157,7 +138,7 @@ void camera_backend_server::configure_camera(camera_driver::camera_container &co
   }
 
   if (config.has_black_level()) {
-    apply_parameter(container,
+    apply_parameter(camera,
                     internalConfiguration.black_level,
                     config.black_level(),
                     "black level",
@@ -166,7 +147,7 @@ void camera_backend_server::configure_camera(camera_driver::camera_container &co
   }
 
   if (config.has_gamma()) {
-    apply_parameter(container,
+    apply_parameter(camera,
                     internalConfiguration.gamma,
                     config.gamma(),
                     "gamma",
@@ -175,7 +156,7 @@ void camera_backend_server::configure_camera(camera_driver::camera_container &co
   }
 
   if (config.has_frame_rate()) {
-    apply_parameter(container,
+    apply_parameter(camera,
                     internalConfiguration.frame_rate,
                     config.frame_rate(),
                     "frame rate",
@@ -185,30 +166,30 @@ void camera_backend_server::configure_camera(camera_driver::camera_container &co
   }
 
   // driver apply the parameters to camera;
-  container.device->set_configuration(internalConfiguration);
+  camera.set_configuration(internalConfiguration);
 }
 
 grpc::Status camera_backend_server::index_camera_call_wrapper(std::string id,
-                                                              std::function<void(camera_driver::camera_container & )> callback) {
+                                                              std::function<void(camera_driver::camera_device&)> callback) {
   // find the device from cache
-  if (mCameraCache.find(id) != mCameraCache.end()) {
-    // found
-    camera_driver::camera_container &container = mCameraCache[id];
-
-    try {
-      callback(container);
-      return grpc::Status::OK;
-    } catch (boost::exception &ex) {
-      return grpc::Status(grpc::INTERNAL, boost::current_exception_diagnostic_information(true));
-    }
-  } else {
+  std::shared_ptr<camera_driver::camera_device> camera;
+  try {
+    camera = this->mFramework->query_by_id(id);
+  } catch (boost::exception &ex) {
     return grpc::Status(grpc::NOT_FOUND, "Id query failed. Try invalidate the cache first.");
   }
+  try {
+    callback(*camera);
+    return grpc::Status::OK;
+  } catch (boost::exception &ex) {
+    return grpc::Status(grpc::INTERNAL, boost::current_exception_diagnostic_information(true));
+  }
 }
-void camera_backend_server::get_configuration_from_camera(camera_driver::camera_container &container,
+
+void camera_backend_server::get_configuration_from_camera(camera_driver::camera_device &camera,
                                                           mvcam::Configuration *dest) {
   camera_driver::camera_parameter_read param{};
-  container.device->get_configuration(param);
+  camera.get_configuration(param);
 
   dest->mutable_black_level()->set_value(param.black_level.value);
   dest->mutable_gamma()->set_value(param.gamma.value);
@@ -218,17 +199,17 @@ void camera_backend_server::get_configuration_from_camera(camera_driver::camera_
 //  dest->mutable_frame_number()->set_value(param.frame_number.value);
 }
 
-void camera_backend_server::get_status_from_camera(camera_driver::camera_container &container, mvcam::Status *dest) {
+void camera_backend_server::get_status_from_camera(camera_driver::camera_device &camera, mvcam::Status *dest) {
   camera_driver::status status{};
-  if(container.device->opened()) {
-    container.device->get_status(status);
+  if (camera.opened()) {
+    camera.get_status(status);
     dest->set_temperature(status.temperature);
   } else {
     dest->set_temperature(std::nan(""));
   }
 
-  dest->set_capturing(container.device->capturing());
-  dest->set_opened(container.device->opened());
+  dest->set_capturing(camera.capturing());
+  dest->set_opened(camera.opened());
 
 }
 

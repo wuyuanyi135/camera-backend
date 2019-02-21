@@ -8,8 +8,8 @@
 #include "vector"
 #include "capability.h"
 #include "camera_descriptor.h"
-#include "camera_container.h"
 namespace camera_driver {
+// Adapter should only create camera. Framework will keep the copy and cache the cameras
 class adapter {
  public:
   virtual std::string description() const = 0;
@@ -36,13 +36,11 @@ class adapter {
   virtual ~adapter() {};
 
  public:
-  /// Query camera descriptor from the id. This function will be called for all adapters when the id query is requested.
-  /// Only the first occurance will be returned.
-  /// Calling this function requires CanGetCameraById capability.
-  /// \param id query id
+  /// Create camera with given id. if the creation fails, throw error.
+  /// \param cd query id
   /// \param descriptor output variable
   /// \return
-  virtual bool get_camera_by_id(std::string id, camera_driver::camera_container &container) = 0;
+  virtual std::shared_ptr<camera_driver::camera_device> create_camera(camera_descriptor &cd) = 0;
 };
 }
 #endif //CAMERA_BACKEND_ADAPTER_H

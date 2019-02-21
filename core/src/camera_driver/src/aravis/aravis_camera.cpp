@@ -57,10 +57,10 @@ aravis_camera::aravis_camera(camera_driver::camera_descriptor &cd) : cd(cd) {
 }
 
 void aravis_camera::open_camera() {
-  mCamera = arv_camera_new(cd.id);
+  mCamera = arv_camera_new(cd.id.c_str());
   mDevice = arv_camera_get_device(mCamera);
   if (mCamera == nullptr || mDevice == nullptr) {
-    camera_driver::camera_start_failed_error ex(*this);
+    camera_driver::camera_start_failed_error ex(this);
     invalidate_camera();
     BOOST_THROW_EXCEPTION(ex);
   }
@@ -124,7 +124,7 @@ void aravis_camera::on_camera_open() {
 }
 bool aravis_camera::opened() {
   if (!mValidFlag) {
-    camera_driver::invalid_camera_error ex(*this);
+    camera_driver::invalid_camera_error ex(this);
     BOOST_THROW_EXCEPTION(ex);
   }
   return mDevice != nullptr;

@@ -23,7 +23,6 @@ std::shared_ptr<framework> framework::get_instance() {
 framework::framework() {
 }
 void framework::update_cache(adapter *obj) {
-  mCameraCache.clear();
   if (obj == nullptr) {
     for (auto &it: INTERFACE_REGISTRATION) {
       update_cache_internal(&*it);
@@ -36,18 +35,20 @@ void framework::update_cache(adapter *obj) {
 void framework::update_cache_internal(adapter *obj) {
   std::vector<camera_descriptor> camera;
   obj->camera_list(camera);
-  for (auto& cd : camera) {
-    camera_driver::camera_container container;
-    bool found = obj->get_camera_by_id(cd.id, container);
 
-    assert(found);
-
-    std::pair<std::string, camera_container> p(cd.id, container);
-
-    mCameraCache.insert(p);
+  std::unordered_map<std::string, std::shared_ptr<camera_device>> tmp;
+  for (auto &cd : camera) {
+    if (mCameraCache.find(cd.id) == mCameraCache.end()) {
+      // not found
+      const std::shared_ptr<camera_device> ptr = obj->create_camera(cd);
+      tmp[cd.id] = ptr;
+    } else {
+      tmp[cd.id] = mCameraCache[cd.id];
+    }
   }
+  mCameraCache = tmp;
 }
-const camera_container &framework::query_by_id(std::string id) {
+const std::shared_ptr<camera_device> framework::query_by_id(std::string id) {
   if (mCameraCache.find(id) == mCameraCache.end()) {
     id_not_found_error ex;
     BOOST_THROW_EXCEPTION(ex);
@@ -55,17 +56,17 @@ const camera_container &framework::query_by_id(std::string id) {
 
   return mCameraCache[id];
 }
-std::vector<adapter*> framework::adapters() {
-  std::vector<adapter*> v;
-  for(std::unique_ptr<adapter>& it: INTERFACE_REGISTRATION) {
+std::vector<adapter *> framework::adapters() {
+  std::vector<adapter *> v;
+  for (std::unique_ptr<adapter> &it: INTERFACE_REGISTRATION) {
     v.emplace_back(it.get());
   }
   return v;
 }
-std::vector<camera_container*> framework::camera_list() {
-  std::vector<camera_container*> containerList;
-  for(auto& cam : mCameraCache) {
-    containerList.emplace_back(&cam.second);
+std::vector<std::shared_ptr<camera_device>> framework::camera_list() {
+  std::vector<std::shared_ptr<camera_device>> containerList;
+  for (auto &cam : mCameraCache) {
+    containerList.emplace_back(cam.second);
   }
   return containerList;
 }

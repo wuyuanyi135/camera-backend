@@ -25,7 +25,6 @@ camera_driver::adapter_capability *const aravis_adapter::capabilities() {
 }
 void aravis_adapter::camera_list(std::vector<camera_driver::camera_descriptor> &cameraList) {
   // rebuild the cache. The camera should ensure the same instance being returned for the camera.
-  mCameraCache.clear();
   arv_update_device_list();
   CDINFO("Updating devices");
 
@@ -42,27 +41,19 @@ void aravis_adapter::camera_list(std::vector<camera_driver::camera_descriptor> &
         .interface = arv_get_device_protocol(i),
     };
     cameraList.emplace_back(cd);
-    camera_driver::camera_container container{
-        .camera_descriptor = cd,
-        .adapter = this,
-        .device = aravis_camera::get_camera_instance(cd),
-    };
-    container.camera_descriptor.connected = container.device->opened();
-    std::pair<std::string, camera_driver::camera_container> p(cd.id, container);
-    mCameraCache.insert(p);
-    CDINFO("Camera " << cd.id << " registered");
   }
 }
 
 aravis_adapter::aravis_adapter() {
   CDINFO("Aravis adapter Loaded");
 }
-bool aravis_adapter::get_camera_by_id(std::string id, camera_driver::camera_container &container) {
-  if (mCameraCache.find(id) == mCameraCache.end()) {
-    return false;
-  }
-  container = mCameraCache[id];
-  return true;
+std::shared_ptr<camera_driver::camera_device> aravis_adapter::create_camera(camera_driver::camera_descriptor &cd) {
+  auto * camera = new aravis_camera(cd);
+  camera->adapter_ref = this;
+  camera->camera_descriptor_ref = cd;
+  std::shared_ptr<camera_driver::camera_device> shared_camera(camera);
+  return shared_camera;
+
 }
 aravis_adapter::~aravis_adapter() {
   arv_shutdown();

@@ -9,6 +9,7 @@
 #include <thread>
 #include <chrono>
 #include <iostream>
+#include <camera_driver.h>
 #include "aravis/aravis_adapter.h"
 #include "lodepng.h"
 #include "logging.h"
@@ -22,8 +23,7 @@ struct adapter_fixture {
 
   camera_driver::adapter *instance;
   camera_driver::camera_descriptor selected_camera_descriptor;
-  camera_driver::camera_container selected_camera;
-
+  std::shared_ptr<camera_driver::camera_device> selected_camera;
   ~adapter_fixture() {
     delete instance;
   }
@@ -51,7 +51,7 @@ struct adapter_fixture {
       }
 
       selected_camera_descriptor = cameraList[choice];
-      instance->get_camera_by_id(selected_camera_descriptor.id, selected_camera);
+      selected_camera = instance->create_camera(selected_camera_descriptor);
       return true;
     }
   }
@@ -69,10 +69,10 @@ BOOST_AUTO_TEST_CASE(test_aravis_environment) {
       return;
     }
 
-    adapter.selected_camera.device->open_camera();
-    BOOST_TEST_CHECK(adapter.selected_camera.device->opened());
+    adapter.selected_camera->open_camera();
+    BOOST_TEST_CHECK(adapter.selected_camera->opened());
 
-    camera_driver::camera_capability *const capabilities = adapter.selected_camera.device->capabilities();
+    camera_driver::camera_capability *const capabilities = adapter.selected_camera->capabilities();
 #define TMP_PRINT_CAP(var, field) BOOST_TEST_MESSAGE(#field<< ": " << var->field)
     TMP_PRINT_CAP(capabilities, can_shutdown);
     TMP_PRINT_CAP(capabilities, should_open);
@@ -108,22 +108,25 @@ BOOST_AUTO_TEST_CASE(test_aravis_reenumerate) {
     }
     BOOST_TEST_MESSAGE("Found " << cameraList.size() << " Camera(s).");
 
-    camera_driver::camera_container container, newContainer;
-    adapter.instance->get_camera_by_id(cameraList[0].id, container);
+    const std::shared_ptr<camera_driver::camera_device> camera1 = adapter.instance->create_camera(cameraList[0]);
 
     BOOST_TEST_MESSAGE("First open");
-    container.device->open_camera();
-    BOOST_TEST_CHECK(container.device->opened());
+    camera1->open_camera();
+    BOOST_TEST_CHECK(camera1->opened());
 
     cameraList.clear();
     adapter.instance->camera_list(cameraList);
     // re-enumerated device must share the same shared_ptr! so it should still be accessible and opened
 
-    BOOST_TEST_CHECK(container.device->opened());
-    adapter.instance->get_camera_by_id(cameraList[0].id, newContainer);
-    BOOST_TEST_CHECK(newContainer.device == container.device);
-    BOOST_TEST_MESSAGE("Should already be opened");
-    BOOST_TEST_CHECK(newContainer.device->opened());
+    BOOST_TEST_CHECK(camera1->opened());
+    const std::shared_ptr<camera_driver::camera_device> camera2 = adapter.instance->create_camera(cameraList[0]);
+    // camera2 should fail to open because now adapter does not cache objects
+    try {
+      camera2->open_camera();
+      BOOST_TEST_FAIL("No error was thrown");
+    } catch (boost::exception &ex) {
+      BOOST_TEST_MESSAGE("EXPECTED ERROR THROWN: " << boost::current_exception_diagnostic_information(true));
+    }
 
   } catch (boost::exception &ex) {
     BOOST_TEST_MESSAGE(boost::current_exception_diagnostic_information(true));
@@ -140,11 +143,11 @@ BOOST_AUTO_TEST_CASE(test_aravis_camera_configuration) {
       return;
     }
 
-    adapter.selected_camera.device->open_camera();
-    BOOST_ASSERT(adapter.selected_camera.device->opened());
+    adapter.selected_camera->open_camera();
+    BOOST_ASSERT(adapter.selected_camera->opened());
 
     camera_driver::camera_parameter_read default_params;
-    adapter.selected_camera.device->get_configuration(default_params);
+    adapter.selected_camera->get_configuration(default_params);
 
 #define PRINT_CONFIGURATION(var, field) BOOST_TEST_MESSAGE(#field << "=" << var.field.value << ", min=" <<var.field.min << ", max=" << var.field.max);
     PRINT_CONFIGURATION(default_params, black_level);
@@ -181,9 +184,9 @@ BOOST_AUTO_TEST_CASE(test_aravis_camera_configuration) {
         }
     };
 
-    adapter.selected_camera.device->set_configuration(params);
+    adapter.selected_camera->set_configuration(params);
     camera_driver::camera_parameter_read modified;
-    adapter.selected_camera.device->get_configuration(modified);
+    adapter.selected_camera->get_configuration(modified);
     PRINT_CONFIGURATION(modified, black_level);
     PRINT_CONFIGURATION(modified, exposure);
     PRINT_CONFIGURATION(modified, frame_rate);
@@ -203,10 +206,10 @@ BOOST_AUTO_TEST_CASE(test_aravis_capture) {
     BOOST_TEST_CHECK(true);
     return;
   }
-  adapter.selected_camera.device->open_camera();
-  assert(adapter.selected_camera.device->opened());
+  adapter.selected_camera->open_camera();
+  assert(adapter.selected_camera->opened());
   camera_driver::frame frame{};
-  adapter.selected_camera.device->capture(frame);
+  adapter.selected_camera->capture(frame);
 
   BOOST_TEST_MESSAGE("Frame Height: " << frame.height);
   BOOST_TEST_MESSAGE("Frame Width: " << frame.width);
@@ -214,8 +217,6 @@ BOOST_AUTO_TEST_CASE(test_aravis_capture) {
   BOOST_TEST_MESSAGE("Frame Size: " << frame.size);
   BOOST_TEST_MESSAGE("Frame Id: " << frame.id);
   BOOST_TEST_MESSAGE("Frame Timestamp: " << frame.time_stamp);
-
-  lodepng::encode("/tmp/test_capture.png", frame.data, frame.width, frame.height, LCT_GREY);
 
   BOOST_TEST_CHECK(true);
 }
@@ -226,10 +227,10 @@ BOOST_AUTO_TEST_CASE(test_aravis_capture_async) {
     BOOST_TEST_CHECK(true);
     return;
   }
-  adapter.selected_camera.device->open_camera();
-  assert(adapter.selected_camera.device->opened());
+  adapter.selected_camera->open_camera();
+  assert(adapter.selected_camera->opened());
 
-  adapter.selected_camera.device->register_capture_start_event_handler(
+  adapter.selected_camera->register_capture_start_event_handler(
       [](camera_driver::camera_device &camera) {
         BOOST_TEST_MESSAGE("Async acquisition started");
       },
@@ -242,15 +243,15 @@ BOOST_AUTO_TEST_CASE(test_aravis_capture_async) {
   param.frame_number.value = 0;
   param.frame_number.should_update = true;
 
-  adapter.selected_camera.device->set_configuration(param);
+  adapter.selected_camera->set_configuration(param);
 
   for (int i = 0; i < 50; ++i) {
-    adapter.selected_camera.device->capture_async([](camera_driver::frame &frame) {
+    adapter.selected_camera->capture_async([](camera_driver::frame &frame) {
       BOOST_TEST_MESSAGE("Frame received! " << frame.id);
     });
 
     std::this_thread::sleep_for(std::chrono::milliseconds(100));
-    adapter.selected_camera.device->stop_capture_async();
+    adapter.selected_camera->stop_capture_async();
   }
   std::this_thread::sleep_for(std::chrono::seconds(1));
 
@@ -263,10 +264,10 @@ BOOST_AUTO_TEST_CASE(test_aravis_capture_async_no_shutdown) {
     BOOST_TEST_CHECK(true);
     return;
   }
-  adapter.selected_camera.device->open_camera();
-  assert(adapter.selected_camera.device->opened());
+  adapter.selected_camera->open_camera();
+  assert(adapter.selected_camera->opened());
 
-  adapter.selected_camera.device->register_capture_start_event_handler(
+  adapter.selected_camera->register_capture_start_event_handler(
       [](camera_driver::camera_device &camera) {
         BOOST_TEST_MESSAGE("Async acquisition started");
       },
@@ -278,10 +279,10 @@ BOOST_AUTO_TEST_CASE(test_aravis_capture_async_no_shutdown) {
   camera_driver::camera_parameter_write param{};
   param.frame_number.value = 0;
   param.frame_number.should_update = true;
-  adapter.selected_camera.device->set_configuration(param);
+  adapter.selected_camera->set_configuration(param);
 
   // without proper stop.
-  adapter.selected_camera.device->capture_async([](camera_driver::frame &frame) {
+  adapter.selected_camera->capture_async([](camera_driver::frame &frame) {
     BOOST_TEST_MESSAGE("Frame received! " << frame.id);
   });
 
@@ -295,10 +296,10 @@ BOOST_AUTO_TEST_CASE(test_aravis_read_status) {
     BOOST_TEST_CHECK(true);
     return;
   }
-  adapter.selected_camera.device->open_camera();
-  assert(adapter.selected_camera.device->opened());
+  adapter.selected_camera->open_camera();
+  assert(adapter.selected_camera->opened());
   camera_driver::status status;
-  adapter.selected_camera.device->get_status(status);
+  adapter.selected_camera->get_status(status);
   BOOST_TEST_MESSAGE("Temperature: " << status.temperature);
 }
 BOOST_AUTO_TEST_CASE(test_aravis_reset) {
@@ -308,14 +309,14 @@ BOOST_AUTO_TEST_CASE(test_aravis_reset) {
     BOOST_TEST_CHECK(true);
     return;
   }
-  adapter.selected_camera.device->open_camera();
-  assert(adapter.selected_camera.device->opened());
+  adapter.selected_camera->open_camera();
+  assert(adapter.selected_camera->opened());
   BOOST_TEST_MESSAGE("Resetting");
-  adapter.selected_camera.device->reset();
+  adapter.selected_camera->reset();
 
   // after reset, the camera instance should be killed. Any access should throw error.
   try {
-    adapter.selected_camera.device->opened();
+    adapter.selected_camera->opened();
     BOOST_TEST_FAIL("After reset, the camera is still accessible without exception?!");
   } catch (boost::exception &ex) {
     BOOST_TEST_MESSAGE("After reset, the camera is not accessible and throw "
@@ -330,8 +331,8 @@ BOOST_AUTO_TEST_CASE(test_aravis_reset) {
     BOOST_TEST_CHECK(true);
     return;
   }
-  adapter.selected_camera.device->open_camera();
-  assert(adapter.selected_camera.device->opened());
+  adapter.selected_camera->open_camera();
+  assert(adapter.selected_camera->opened());
 }
 
 void control_lost_cb(ArvGvDevice *gv_device) {

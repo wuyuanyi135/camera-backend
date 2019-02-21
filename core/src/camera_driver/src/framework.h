@@ -8,7 +8,6 @@
 #include <unordered_map>
 #include "adapter.h"
 #include "aravis/aravis_adapter.h"
-#include "camera_container.h"
 namespace camera_driver {
 class framework {
  private:
@@ -21,20 +20,20 @@ class framework {
   static std::shared_ptr<framework> mInstance;
 
  public:
-  // invoke the list update for each adapter and save the cache.
+  // update the device cache. It only gets the device descriptors. The already opened camera is not tracked in the same cache
   void update_cache(adapter *obj = nullptr);
  private:
   void update_cache_internal(adapter *obj);
 
  private:
-  std::unordered_map<std::string, camera_container> mCameraCache;
+  std::unordered_map<std::string, std::shared_ptr<camera_device>> mCameraCache;
 
  public:
-  const camera_container& query_by_id(std::string id);
+  const std::shared_ptr<camera_device> query_by_id(std::string id);
 
  public:
   std::vector<adapter*> adapters();
-  std::vector<camera_container*> camera_list();
+  std::vector<std::shared_ptr<camera_device>> camera_list();
 };
 }
 #endif //CAMERA_BACKEND_FRAMEWORK_H

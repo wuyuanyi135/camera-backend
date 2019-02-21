@@ -9,11 +9,9 @@
 
 namespace aravis_camera_driver {
 
-std::unordered_map<std::string, std::weak_ptr<aravis_camera>> aravis_camera::mInstance;
-
 void aravis_camera::feature_guard(std::string &fieldName) const {
   if (!arv_device_get_feature(mDevice, fieldName.c_str())) {
-    camera_driver::parameter_not_supported_error ex(*this, fieldName);
+    camera_driver::parameter_not_supported_error ex(this, fieldName);
     BOOST_THROW_EXCEPTION(ex);
   }
 }
@@ -28,11 +26,11 @@ void aravis_camera::field_bounds_internal(const char *feature, long &min, long &
 void aravis_camera::check_status() {
   ArvDeviceStatus status = arv_device_get_status(mDevice);
   if (status == ARV_DEVICE_STATUS_WRITE_ERROR || status == ARV_DEVICE_STATUS_TRANSFER_ERROR || status == ARV_DEVICE_STATUS_TIMEOUT) {
-    camera_driver::write_parameter_error ex(*this, status);
+    camera_driver::write_parameter_error ex(this, status);
     BOOST_THROW_EXCEPTION(ex);
   }
   if (status == ARV_DEVICE_STATUS_UNKNOWN || status == ARV_DEVICE_STATUS_NOT_CONNECTED) {
-    camera_driver::invalid_camera_error ex(*this);
+    camera_driver::invalid_camera_error ex(this);
     BOOST_THROW_EXCEPTION(ex);
   }
 }
@@ -61,7 +59,7 @@ void aravis_camera::set_field_internal(const char *feature, bool value) {
 
 void aravis_camera::open_guard() {
   if (!opened()) {
-    camera_driver::camera_not_open_error ex(*this);
+    camera_driver::camera_not_open_error ex(this);
     BOOST_THROW_EXCEPTION(ex);
   }
 }
@@ -86,7 +84,7 @@ void aravis_camera::get_field_internal(const char *feature, camera_driver::param
 
 void aravis_camera::capture_guard() {
   if (!mCaptureMutex.try_lock()) {
-    camera_driver::camera_capture_started_error ex(*this);
+    camera_driver::camera_capture_started_error ex(this);
     BOOST_THROW_EXCEPTION(ex);
   }
   mCaptureFlag.set_flag_blocking(true);
@@ -121,31 +119,10 @@ void aravis_camera::capture_finalize() {
   mCaptureFlag.exit_critical();
 }
 
-std::shared_ptr<aravis_camera> aravis_camera::get_camera_instance(camera_driver::camera_descriptor &cd) {
-  if (mInstance.find(cd.id) != mInstance.end()) {
-    // previously existing instance. Check whether still available
-    if (!mInstance[cd.id].expired()) {
-      return mInstance[cd.id].lock();
-    }
-  }
-
-  //else, create new one.
-  const std::shared_ptr<aravis_camera> ptr = std::make_shared<aravis_camera>(cd);
-  mInstance[cd.id] = ptr;
-  return ptr;
-
-}
-
 // TODO: when reset this is called. how to ensure the removed camera calling this function?
 void aravis_camera::invalidate_camera() {
   CDINFO("Camera " << cd.model << " was flagged invalid");
   mValidFlag = false;
-
-  // remove the invalid camera from the instance cache
-  if (mInstance.find(cd.id) != mInstance.end() && !mInstance[cd.id].expired()) {
-    mInstance[cd.id].reset();
-    mInstance.erase(cd.id);
-  }
 }
 void aravis_camera::check_device_status_or_invalidate() {
   try {

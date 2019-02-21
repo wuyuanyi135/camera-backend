@@ -24,15 +24,12 @@ class aravis_camera : public camera_driver::camera_device {
   ArvStream* mStream = nullptr;
   ArvBuffer** mBuffers = nullptr;
   std::atomic_bool mValidFlag;
-  static std::unordered_map<std::string, std::weak_ptr<aravis_camera>> mInstance;
   std::unique_ptr<camera_driver::frame> mFrame; // prevent reallocation for each frame
   camera_driver::frame_handler mFrameCallback = nullptr;
   std::mutex mCaptureMutex;
 //  std::mutex mCaptureFinalizingMutex; // the finalization seems very slow and may double run if shutdown the camera just after finalizing capture.
 //  std::atomic_bool mCaptureFlag;
   critical_wait_flag<bool> mCaptureFlag;
- public:
-  static std::shared_ptr<aravis_camera> get_camera_instance(camera_driver::camera_descriptor& cd);
 
  private:
   camera_driver::capture_started_event_handler mStartedCallback = nullptr;

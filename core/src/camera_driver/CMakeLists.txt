@@ -18,25 +18,18 @@ set(LINK_LIBRARIES
 
 add_library(camera_driver SHARED src/framework.cpp)
 INSTALL(TARGETS camera_driver LIBRARY DESTINATION ${DESTINATION_LIB})
-target_link_libraries( camera_driver
+target_link_libraries(camera_driver
         ${LINK_LIBRARIES}
         ${THIRD_PARTY_LIBRARIES}
         )
 
+add_executable(test_framework src/test/test_framework.cpp)
 
-file(GLOB TEST_SOURCES src/test/*.cpp)
+target_link_libraries(test_framework
+        camera_driver
+        ${Boost_SYSTEM_LIBRARY}
+        ${Boost_UNIT_TEST_FRAMEWORK_LIBRARY}
+        boost_test_exec_monitor
+        )
+INSTALL(TARGETS test_framework RUNTIME DESTINATION ${DESTINATION_APP})
 
-foreach(TEST_ENTRY ${TEST_SOURCES})
-    get_filename_component(TARGET ${TEST_ENTRY} NAME)
-
-    add_executable(${TARGET} ${TEST_ENTRY})
-
-    target_link_libraries(${TARGET}
-            camera_driver
-            ${Boost_SYSTEM_LIBRARY}
-            ${Boost_UNIT_TEST_FRAMEWORK_LIBRARY}
-            boost_test_exec_monitor
-            )
-    INSTALL(TARGETS ${TARGET} RUNTIME DESTINATION ${DESTINATION_APP})
-
-endforeach(TEST_ENTRY)

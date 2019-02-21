@@ -9,7 +9,7 @@
 #include "protos/camera_service.grpc.pb.h"
 #include "adapter.h"
 #include "camera_parameter.h"
-#include "camera_container.h"
+#include "frame.h"
 #include "framework.h"
 
 class camera_backend_server : public mvcam::MicroVisionCameraService::Service {
@@ -20,34 +20,32 @@ class camera_backend_server : public mvcam::MicroVisionCameraService::Service {
   // modify this function to register new capabilities
   void transform_adapter(camera_driver::adapter *src,
                          mvcam::AdapterInfo *dest);
-  void transform_device_info(const camera_driver::camera_container &src, mvcam::DeviceInfo *dest);
+  void transform_device_info(camera_driver::camera_device &src, mvcam::DeviceInfo *dest);
   void transform_frame(const camera_driver::frame &frame, mvcam::Frame *dest);
 
 
   /// modify when new parameters are added
-  /// \param container
+  /// \param camera
   /// \param dest
-  void get_configuration_from_camera(camera_driver::camera_container &container, mvcam::Configuration *dest);
-  void configure_camera(camera_driver::camera_container &container, const mvcam::ConfigureRequest *configuration);
+  void get_configuration_from_camera(camera_driver::camera_device &camera, mvcam::Configuration *dest);
+  void configure_camera(camera_driver::camera_device &camera, const mvcam::ConfigureRequest *configuration);
 
   /// modify when new status is added
-  /// \param container
+  /// \param camera
   /// \param dest
-  void get_status_from_camera(camera_driver::camera_container &container, mvcam::Status *dest);
+  void get_status_from_camera(camera_driver::camera_device &camera, mvcam::Status *dest);
 
 
  private:
   void filter_adapter_by_name(const std::string &name, std::vector<camera_driver::adapter*> adapter);
-  void update_id_index(std::vector<camera_driver::adapter *> &vector);
-  std::unordered_map<std::string, camera_driver::camera_container> mCameraCache;
 
   template<typename T>
-  void apply_parameter(camera_driver::camera_container &container,
+  void apply_parameter(camera_driver::camera_device &camera,
                        camera_driver::parameter_write<T> &dest,
                        const mvcam::Parameter &param,
                        std::string fieldName,
                        bool capability
-                       );
+  );
 
 
   /// wrapper function providing the callback function the camera container corresponding to the id. If id does not exist, throw exception.
@@ -55,7 +53,8 @@ class camera_backend_server : public mvcam::MicroVisionCameraService::Service {
   /// \param id
   /// \param callback
   /// \return
-  grpc::Status index_camera_call_wrapper(std::string id, std::function<void(camera_driver::camera_container &)> callback);
+  grpc::Status index_camera_call_wrapper(std::string id,
+                                         std::function<void(camera_driver::camera_device&)> callback);
  public:
   static std::unique_ptr<grpc::Server> start_server();
 
@@ -103,6 +102,6 @@ class camera_backend_server : public mvcam::MicroVisionCameraService::Service {
   grpc::Status Streaming(::grpc::ServerContext *context,
                          const ::mvcam::StreamingRequest *request,
                          ::grpc::ServerWriter<::mvcam::FrameStream> *writer) override;
-  void transform_device_capabilities(const camera_driver::camera_capability *src, mvcam::CameraCapability *dest) const;
+  void transform_device_capabilities(camera_driver::camera_capability *src, mvcam::CameraCapability *dest) const;
 };
 #endif //CAMERA_BACKEND_SERVER_H

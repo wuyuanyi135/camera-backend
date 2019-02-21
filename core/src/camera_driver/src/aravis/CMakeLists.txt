@@ -17,19 +17,14 @@ target_link_libraries(aravis_adapter ${ARAVIS_LIBRARIES} shared)
 find_package(Boost COMPONENTS system unit_test_framework REQUIRED)
 
 
-file(GLOB TEST_SOURCES test/*.cpp)
 
-foreach(TEST_ENTRY ${TEST_SOURCES})
-    get_filename_component(TARGET ${TEST_ENTRY} NAME)
+add_executable(test_aravis test/test_aravis_driver.cpp)
 
-    add_executable(${TARGET} ${TEST_ENTRY})
+target_link_libraries(test_aravis
+        aravis_adapter
+        ${Boost_SYSTEM_LIBRARY}
+        ${Boost_UNIT_TEST_FRAMEWORK_LIBRARY}
+        boost_test_exec_monitor
+        )
+INSTALL(TARGETS test_aravis RUNTIME DESTINATION ${DESTINATION_APP})
 
-    target_link_libraries(${TARGET}
-            camera_driver
-            ${Boost_SYSTEM_LIBRARY}
-            ${Boost_UNIT_TEST_FRAMEWORK_LIBRARY}
-            boost_test_exec_monitor
-            )
-    INSTALL(TARGETS ${TARGET} RUNTIME DESTINATION ${DESTINATION_APP})
-
-endforeach(TEST_ENTRY)
