@@ -54,9 +54,6 @@ extern AdapterCapabilityDefaultTypeInternal _AdapterCapability_default_instance_
 class AdapterInfo;
 class AdapterInfoDefaultTypeInternal;
 extern AdapterInfoDefaultTypeInternal _AdapterInfo_default_instance_;
-class AdapterRequest;
-class AdapterRequestDefaultTypeInternal;
-extern AdapterRequestDefaultTypeInternal _AdapterRequest_default_instance_;
 class AvailableAdaptersResponse;
 class AvailableAdaptersResponseDefaultTypeInternal;
 extern AvailableAdaptersResponseDefaultTypeInternal _AvailableAdaptersResponse_default_instance_;
@@ -75,15 +72,18 @@ extern DeviceControlRequestDefaultTypeInternal _DeviceControlRequest_default_ins
 class DeviceInfo;
 class DeviceInfoDefaultTypeInternal;
 extern DeviceInfoDefaultTypeInternal _DeviceInfo_default_instance_;
-class DeviceListResponse;
-class DeviceListResponseDefaultTypeInternal;
-extern DeviceListResponseDefaultTypeInternal _DeviceListResponse_default_instance_;
 class Frame;
 class FrameDefaultTypeInternal;
 extern FrameDefaultTypeInternal _Frame_default_instance_;
 class FrameStream;
 class FrameStreamDefaultTypeInternal;
 extern FrameStreamDefaultTypeInternal _FrameStream_default_instance_;
+class GetDevicesRequest;
+class GetDevicesRequestDefaultTypeInternal;
+extern GetDevicesRequestDefaultTypeInternal _GetDevicesRequest_default_instance_;
+class GetDevicesResponse;
+class GetDevicesResponseDefaultTypeInternal;
+extern GetDevicesResponseDefaultTypeInternal _GetDevicesResponse_default_instance_;
 class IdRequest;
 class IdRequestDefaultTypeInternal;
 extern IdRequestDefaultTypeInternal _IdRequest_default_instance_;
@@ -101,16 +101,16 @@ namespace google {
 namespace protobuf {
 template<> ::mvcam::AdapterCapability* Arena::CreateMaybeMessage<::mvcam::AdapterCapability>(Arena*);
 template<> ::mvcam::AdapterInfo* Arena::CreateMaybeMessage<::mvcam::AdapterInfo>(Arena*);
-template<> ::mvcam::AdapterRequest* Arena::CreateMaybeMessage<::mvcam::AdapterRequest>(Arena*);
 template<> ::mvcam::AvailableAdaptersResponse* Arena::CreateMaybeMessage<::mvcam::AvailableAdaptersResponse>(Arena*);
 template<> ::mvcam::CameraCapability* Arena::CreateMaybeMessage<::mvcam::CameraCapability>(Arena*);
 template<> ::mvcam::Configuration* Arena::CreateMaybeMessage<::mvcam::Configuration>(Arena*);
 template<> ::mvcam::ConfigureRequest* Arena::CreateMaybeMessage<::mvcam::ConfigureRequest>(Arena*);
 template<> ::mvcam::DeviceControlRequest* Arena::CreateMaybeMessage<::mvcam::DeviceControlRequest>(Arena*);
 template<> ::mvcam::DeviceInfo* Arena::CreateMaybeMessage<::mvcam::DeviceInfo>(Arena*);
-template<> ::mvcam::DeviceListResponse* Arena::CreateMaybeMessage<::mvcam::DeviceListResponse>(Arena*);
 template<> ::mvcam::Frame* Arena::CreateMaybeMessage<::mvcam::Frame>(Arena*);
 template<> ::mvcam::FrameStream* Arena::CreateMaybeMessage<::mvcam::FrameStream>(Arena*);
+template<> ::mvcam::GetDevicesRequest* Arena::CreateMaybeMessage<::mvcam::GetDevicesRequest>(Arena*);
+template<> ::mvcam::GetDevicesResponse* Arena::CreateMaybeMessage<::mvcam::GetDevicesResponse>(Arena*);
 template<> ::mvcam::IdRequest* Arena::CreateMaybeMessage<::mvcam::IdRequest>(Arena*);
 template<> ::mvcam::Parameter* Arena::CreateMaybeMessage<::mvcam::Parameter>(Arena*);
 template<> ::mvcam::Status* Arena::CreateMaybeMessage<::mvcam::Status>(Arena*);
@@ -515,24 +515,24 @@ class AvailableAdaptersResponse : public ::google::protobuf::Message /* @@protoc
 };
 // -------------------------------------------------------------------
 
-class AdapterRequest : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mvcam.AdapterRequest) */ {
+class GetDevicesRequest : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mvcam.GetDevicesRequest) */ {
  public:
-  AdapterRequest();
-  virtual ~AdapterRequest();
+  GetDevicesRequest();
+  virtual ~GetDevicesRequest();
 
-  AdapterRequest(const AdapterRequest& from);
+  GetDevicesRequest(const GetDevicesRequest& from);
 
-  inline AdapterRequest& operator=(const AdapterRequest& from) {
+  inline GetDevicesRequest& operator=(const GetDevicesRequest& from) {
     CopyFrom(from);
     return *this;
   }
   #if LANG_CXX11
-  AdapterRequest(AdapterRequest&& from) noexcept
-    : AdapterRequest() {
+  GetDevicesRequest(GetDevicesRequest&& from) noexcept
+    : GetDevicesRequest() {
     *this = ::std::move(from);
   }
 
-  inline AdapterRequest& operator=(AdapterRequest&& from) noexcept {
+  inline GetDevicesRequest& operator=(GetDevicesRequest&& from) noexcept {
     if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
       if (this != &from) InternalSwap(&from);
     } else {
@@ -542,34 +542,34 @@ class AdapterRequest : public ::google::protobuf::Message /* @@protoc_insertion_
   }
   #endif
   static const ::google::protobuf::Descriptor* descriptor();
-  static const AdapterRequest& default_instance();
+  static const GetDevicesRequest& default_instance();
 
   static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
-  static inline const AdapterRequest* internal_default_instance() {
-    return reinterpret_cast<const AdapterRequest*>(
-               &_AdapterRequest_default_instance_);
+  static inline const GetDevicesRequest* internal_default_instance() {
+    return reinterpret_cast<const GetDevicesRequest*>(
+               &_GetDevicesRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     3;
 
-  void Swap(AdapterRequest* other);
-  friend void swap(AdapterRequest& a, AdapterRequest& b) {
+  void Swap(GetDevicesRequest* other);
+  friend void swap(GetDevicesRequest& a, GetDevicesRequest& b) {
     a.Swap(&b);
   }
 
   // implements Message ----------------------------------------------
 
-  inline AdapterRequest* New() const final {
-    return CreateMaybeMessage<AdapterRequest>(NULL);
+  inline GetDevicesRequest* New() const final {
+    return CreateMaybeMessage<GetDevicesRequest>(NULL);
   }
 
-  AdapterRequest* New(::google::protobuf::Arena* arena) const final {
-    return CreateMaybeMessage<AdapterRequest>(arena);
+  GetDevicesRequest* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<GetDevicesRequest>(arena);
   }
   void CopyFrom(const ::google::protobuf::Message& from) final;
   void MergeFrom(const ::google::protobuf::Message& from) final;
-  void CopyFrom(const AdapterRequest& from);
-  void MergeFrom(const AdapterRequest& from);
+  void CopyFrom(const GetDevicesRequest& from);
+  void MergeFrom(const GetDevicesRequest& from);
   void Clear() final;
   bool IsInitialized() const final;
 
@@ -586,7 +586,7 @@ class AdapterRequest : public ::google::protobuf::Message /* @@protoc_insertion_
   void SharedCtor();
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(AdapterRequest* other);
+  void InternalSwap(GetDevicesRequest* other);
   private:
   inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
     return NULL;
@@ -602,25 +602,32 @@ class AdapterRequest : public ::google::protobuf::Message /* @@protoc_insertion_
 
   // accessors -------------------------------------------------------
 
-  // string name = 1;
-  void clear_name();
-  static const int kNameFieldNumber = 1;
-  const ::std::string& name() const;
-  void set_name(const ::std::string& value);
+  // string adapter_name = 1;
+  void clear_adapter_name();
+  static const int kAdapterNameFieldNumber = 1;
+  const ::std::string& adapter_name() const;
+  void set_adapter_name(const ::std::string& value);
   #if LANG_CXX11
-  void set_name(::std::string&& value);
+  void set_adapter_name(::std::string&& value);
   #endif
-  void set_name(const char* value);
-  void set_name(const char* value, size_t size);
-  ::std::string* mutable_name();
-  ::std::string* release_name();
-  void set_allocated_name(::std::string* name);
+  void set_adapter_name(const char* value);
+  void set_adapter_name(const char* value, size_t size);
+  ::std::string* mutable_adapter_name();
+  ::std::string* release_adapter_name();
+  void set_allocated_adapter_name(::std::string* adapter_name);
 
-  // @@protoc_insertion_point(class_scope:mvcam.AdapterRequest)
+  // bool use_cache = 2;
+  void clear_use_cache();
+  static const int kUseCacheFieldNumber = 2;
+  bool use_cache() const;
+  void set_use_cache(bool value);
+
+  // @@protoc_insertion_point(class_scope:mvcam.GetDevicesRequest)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::google::protobuf::internal::ArenaStringPtr name_;
+  ::google::protobuf::internal::ArenaStringPtr adapter_name_;
+  bool use_cache_;
   mutable ::google::protobuf::internal::CachedSize _cached_size_;
   friend struct ::protobuf_camera_5fdefinitions_2eproto::TableStruct;
 };
@@ -1017,24 +1024,24 @@ class DeviceInfo : public ::google::protobuf::Message /* @@protoc_insertion_poin
 };
 // -------------------------------------------------------------------
 
-class DeviceListResponse : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mvcam.DeviceListResponse) */ {
+class GetDevicesResponse : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mvcam.GetDevicesResponse) */ {
  public:
-  DeviceListResponse();
-  virtual ~DeviceListResponse();
+  GetDevicesResponse();
+  virtual ~GetDevicesResponse();
 
-  DeviceListResponse(const DeviceListResponse& from);
+  GetDevicesResponse(const GetDevicesResponse& from);
 
-  inline DeviceListResponse& operator=(const DeviceListResponse& from) {
+  inline GetDevicesResponse& operator=(const GetDevicesResponse& from) {
     CopyFrom(from);
     return *this;
   }
   #if LANG_CXX11
-  DeviceListResponse(DeviceListResponse&& from) noexcept
-    : DeviceListResponse() {
+  GetDevicesResponse(GetDevicesResponse&& from) noexcept
+    : GetDevicesResponse() {
     *this = ::std::move(from);
   }
 
-  inline DeviceListResponse& operator=(DeviceListResponse&& from) noexcept {
+  inline GetDevicesResponse& operator=(GetDevicesResponse&& from) noexcept {
     if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
       if (this != &from) InternalSwap(&from);
     } else {
@@ -1044,34 +1051,34 @@ class DeviceListResponse : public ::google::protobuf::Message /* @@protoc_insert
   }
   #endif
   static const ::google::protobuf::Descriptor* descriptor();
-  static const DeviceListResponse& default_instance();
+  static const GetDevicesResponse& default_instance();
 
   static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
-  static inline const DeviceListResponse* internal_default_instance() {
-    return reinterpret_cast<const DeviceListResponse*>(
-               &_DeviceListResponse_default_instance_);
+  static inline const GetDevicesResponse* internal_default_instance() {
+    return reinterpret_cast<const GetDevicesResponse*>(
+               &_GetDevicesResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     6;
 
-  void Swap(DeviceListResponse* other);
-  friend void swap(DeviceListResponse& a, DeviceListResponse& b) {
+  void Swap(GetDevicesResponse* other);
+  friend void swap(GetDevicesResponse& a, GetDevicesResponse& b) {
     a.Swap(&b);
   }
 
   // implements Message ----------------------------------------------
 
-  inline DeviceListResponse* New() const final {
-    return CreateMaybeMessage<DeviceListResponse>(NULL);
+  inline GetDevicesResponse* New() const final {
+    return CreateMaybeMessage<GetDevicesResponse>(NULL);
   }
 
-  DeviceListResponse* New(::google::protobuf::Arena* arena) const final {
-    return CreateMaybeMessage<DeviceListResponse>(arena);
+  GetDevicesResponse* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<GetDevicesResponse>(arena);
   }
   void CopyFrom(const ::google::protobuf::Message& from) final;
   void MergeFrom(const ::google::protobuf::Message& from) final;
-  void CopyFrom(const DeviceListResponse& from);
-  void MergeFrom(const DeviceListResponse& from);
+  void CopyFrom(const GetDevicesResponse& from);
+  void MergeFrom(const GetDevicesResponse& from);
   void Clear() final;
   bool IsInitialized() const final;
 
@@ -1088,7 +1095,7 @@ class DeviceListResponse : public ::google::protobuf::Message /* @@protoc_insert
   void SharedCtor();
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(DeviceListResponse* other);
+  void InternalSwap(GetDevicesResponse* other);
   private:
   inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
     return NULL;
@@ -1116,7 +1123,7 @@ class DeviceListResponse : public ::google::protobuf::Message /* @@protoc_insert
   const ::google::protobuf::RepeatedPtrField< ::mvcam::DeviceInfo >&
       devices() const;
 
-  // @@protoc_insertion_point(class_scope:mvcam.DeviceListResponse)
+  // @@protoc_insertion_point(class_scope:mvcam.GetDevicesResponse)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
@@ -2544,59 +2551,73 @@ AvailableAdaptersResponse::adapters() const {
 
 // -------------------------------------------------------------------
 
-// AdapterRequest
+// GetDevicesRequest
 
-// string name = 1;
-inline void AdapterRequest::clear_name() {
-  name_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+// string adapter_name = 1;
+inline void GetDevicesRequest::clear_adapter_name() {
+  adapter_name_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline const ::std::string& AdapterRequest::name() const {
-  // @@protoc_insertion_point(field_get:mvcam.AdapterRequest.name)
-  return name_.GetNoArena();
+inline const ::std::string& GetDevicesRequest::adapter_name() const {
+  // @@protoc_insertion_point(field_get:mvcam.GetDevicesRequest.adapter_name)
+  return adapter_name_.GetNoArena();
 }
-inline void AdapterRequest::set_name(const ::std::string& value) {
+inline void GetDevicesRequest::set_adapter_name(const ::std::string& value) {
   
-  name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:mvcam.AdapterRequest.name)
+  adapter_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:mvcam.GetDevicesRequest.adapter_name)
 }
 #if LANG_CXX11
-inline void AdapterRequest::set_name(::std::string&& value) {
+inline void GetDevicesRequest::set_adapter_name(::std::string&& value) {
   
-  name_.SetNoArena(
+  adapter_name_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:mvcam.AdapterRequest.name)
+  // @@protoc_insertion_point(field_set_rvalue:mvcam.GetDevicesRequest.adapter_name)
 }
 #endif
-inline void AdapterRequest::set_name(const char* value) {
+inline void GetDevicesRequest::set_adapter_name(const char* value) {
   GOOGLE_DCHECK(value != NULL);
   
-  name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:mvcam.AdapterRequest.name)
+  adapter_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:mvcam.GetDevicesRequest.adapter_name)
 }
-inline void AdapterRequest::set_name(const char* value, size_t size) {
+inline void GetDevicesRequest::set_adapter_name(const char* value, size_t size) {
   
-  name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+  adapter_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:mvcam.AdapterRequest.name)
+  // @@protoc_insertion_point(field_set_pointer:mvcam.GetDevicesRequest.adapter_name)
 }
-inline ::std::string* AdapterRequest::mutable_name() {
+inline ::std::string* GetDevicesRequest::mutable_adapter_name() {
   
-  // @@protoc_insertion_point(field_mutable:mvcam.AdapterRequest.name)
-  return name_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  // @@protoc_insertion_point(field_mutable:mvcam.GetDevicesRequest.adapter_name)
+  return adapter_name_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline ::std::string* AdapterRequest::release_name() {
-  // @@protoc_insertion_point(field_release:mvcam.AdapterRequest.name)
+inline ::std::string* GetDevicesRequest::release_adapter_name() {
+  // @@protoc_insertion_point(field_release:mvcam.GetDevicesRequest.adapter_name)
   
-  return name_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  return adapter_name_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline void AdapterRequest::set_allocated_name(::std::string* name) {
-  if (name != NULL) {
+inline void GetDevicesRequest::set_allocated_adapter_name(::std::string* adapter_name) {
+  if (adapter_name != NULL) {
     
   } else {
     
   }
-  name_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), name);
-  // @@protoc_insertion_point(field_set_allocated:mvcam.AdapterRequest.name)
+  adapter_name_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), adapter_name);
+  // @@protoc_insertion_point(field_set_allocated:mvcam.GetDevicesRequest.adapter_name)
+}
+
+// bool use_cache = 2;
+inline void GetDevicesRequest::clear_use_cache() {
+  use_cache_ = false;
+}
+inline bool GetDevicesRequest::use_cache() const {
+  // @@protoc_insertion_point(field_get:mvcam.GetDevicesRequest.use_cache)
+  return use_cache_;
+}
+inline void GetDevicesRequest::set_use_cache(bool value) {
+  
+  use_cache_ = value;
+  // @@protoc_insertion_point(field_set:mvcam.GetDevicesRequest.use_cache)
 }
 
 // -------------------------------------------------------------------
@@ -3178,35 +3199,35 @@ inline void DeviceInfo::set_connected(bool value) {
 
 // -------------------------------------------------------------------
 
-// DeviceListResponse
+// GetDevicesResponse
 
 // repeated .mvcam.DeviceInfo devices = 1;
-inline int DeviceListResponse::devices_size() const {
+inline int GetDevicesResponse::devices_size() const {
   return devices_.size();
 }
-inline void DeviceListResponse::clear_devices() {
+inline void GetDevicesResponse::clear_devices() {
   devices_.Clear();
 }
-inline ::mvcam::DeviceInfo* DeviceListResponse::mutable_devices(int index) {
-  // @@protoc_insertion_point(field_mutable:mvcam.DeviceListResponse.devices)
+inline ::mvcam::DeviceInfo* GetDevicesResponse::mutable_devices(int index) {
+  // @@protoc_insertion_point(field_mutable:mvcam.GetDevicesResponse.devices)
   return devices_.Mutable(index);
 }
 inline ::google::protobuf::RepeatedPtrField< ::mvcam::DeviceInfo >*
-DeviceListResponse::mutable_devices() {
-  // @@protoc_insertion_point(field_mutable_list:mvcam.DeviceListResponse.devices)
+GetDevicesResponse::mutable_devices() {
+  // @@protoc_insertion_point(field_mutable_list:mvcam.GetDevicesResponse.devices)
   return &devices_;
 }
-inline const ::mvcam::DeviceInfo& DeviceListResponse::devices(int index) const {
-  // @@protoc_insertion_point(field_get:mvcam.DeviceListResponse.devices)
+inline const ::mvcam::DeviceInfo& GetDevicesResponse::devices(int index) const {
+  // @@protoc_insertion_point(field_get:mvcam.GetDevicesResponse.devices)
   return devices_.Get(index);
 }
-inline ::mvcam::DeviceInfo* DeviceListResponse::add_devices() {
-  // @@protoc_insertion_point(field_add:mvcam.DeviceListResponse.devices)
+inline ::mvcam::DeviceInfo* GetDevicesResponse::add_devices() {
+  // @@protoc_insertion_point(field_add:mvcam.GetDevicesResponse.devices)
   return devices_.Add();
 }
 inline const ::google::protobuf::RepeatedPtrField< ::mvcam::DeviceInfo >&
-DeviceListResponse::devices() const {
-  // @@protoc_insertion_point(field_list:mvcam.DeviceListResponse.devices)
+GetDevicesResponse::devices() const {
+  // @@protoc_insertion_point(field_list:mvcam.GetDevicesResponse.devices)
   return devices_;
 }
 

@@ -70,20 +70,20 @@ void MicroVisionCameraService::Stub::experimental_async::GetAvailableAdapters(::
   return ::grpc::internal::ClientAsyncResponseReaderFactory< ::mvcam::AvailableAdaptersResponse>::Create(channel_.get(), cq, rpcmethod_GetAvailableAdapters_, context, request, false);
 }
 
-::grpc::Status MicroVisionCameraService::Stub::GetDevices(::grpc::ClientContext* context, const ::mvcam::AdapterRequest& request, ::mvcam::DeviceListResponse* response) {
+::grpc::Status MicroVisionCameraService::Stub::GetDevices(::grpc::ClientContext* context, const ::mvcam::GetDevicesRequest& request, ::mvcam::GetDevicesResponse* response) {
   return ::grpc::internal::BlockingUnaryCall(channel_.get(), rpcmethod_GetDevices_, context, request, response);
 }
 
-void MicroVisionCameraService::Stub::experimental_async::GetDevices(::grpc::ClientContext* context, const ::mvcam::AdapterRequest* request, ::mvcam::DeviceListResponse* response, std::function<void(::grpc::Status)> f) {
+void MicroVisionCameraService::Stub::experimental_async::GetDevices(::grpc::ClientContext* context, const ::mvcam::GetDevicesRequest* request, ::mvcam::GetDevicesResponse* response, std::function<void(::grpc::Status)> f) {
   return ::grpc::internal::CallbackUnaryCall(stub_->channel_.get(), stub_->rpcmethod_GetDevices_, context, request, response, std::move(f));
 }
 
-::grpc::ClientAsyncResponseReader< ::mvcam::DeviceListResponse>* MicroVisionCameraService::Stub::AsyncGetDevicesRaw(::grpc::ClientContext* context, const ::mvcam::AdapterRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::mvcam::DeviceListResponse>::Create(channel_.get(), cq, rpcmethod_GetDevices_, context, request, true);
+::grpc::ClientAsyncResponseReader< ::mvcam::GetDevicesResponse>* MicroVisionCameraService::Stub::AsyncGetDevicesRaw(::grpc::ClientContext* context, const ::mvcam::GetDevicesRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::mvcam::GetDevicesResponse>::Create(channel_.get(), cq, rpcmethod_GetDevices_, context, request, true);
 }
 
-::grpc::ClientAsyncResponseReader< ::mvcam::DeviceListResponse>* MicroVisionCameraService::Stub::PrepareAsyncGetDevicesRaw(::grpc::ClientContext* context, const ::mvcam::AdapterRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::mvcam::DeviceListResponse>::Create(channel_.get(), cq, rpcmethod_GetDevices_, context, request, false);
+::grpc::ClientAsyncResponseReader< ::mvcam::GetDevicesResponse>* MicroVisionCameraService::Stub::PrepareAsyncGetDevicesRaw(::grpc::ClientContext* context, const ::mvcam::GetDevicesRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::mvcam::GetDevicesResponse>::Create(channel_.get(), cq, rpcmethod_GetDevices_, context, request, false);
 }
 
 ::grpc::Status MicroVisionCameraService::Stub::QueryDeviceById(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::mvcam::DeviceInfo* response) {
@@ -255,7 +255,7 @@ MicroVisionCameraService::Service::Service() {
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       MicroVisionCameraService_method_names[1],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< MicroVisionCameraService::Service, ::mvcam::AdapterRequest, ::mvcam::DeviceListResponse>(
+      new ::grpc::internal::RpcMethodHandler< MicroVisionCameraService::Service, ::mvcam::GetDevicesRequest, ::mvcam::GetDevicesResponse>(
           std::mem_fn(&MicroVisionCameraService::Service::GetDevices), this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       MicroVisionCameraService_method_names[2],
@@ -319,7 +319,7 @@ MicroVisionCameraService::Service::~Service() {
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status MicroVisionCameraService::Service::GetDevices(::grpc::ServerContext* context, const ::mvcam::AdapterRequest* request, ::mvcam::DeviceListResponse* response) {
+::grpc::Status MicroVisionCameraService::Service::GetDevices(::grpc::ServerContext* context, const ::mvcam::GetDevicesRequest* request, ::mvcam::GetDevicesResponse* response) {
   (void) context;
   (void) request;
   (void) response;

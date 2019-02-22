@@ -24,16 +24,18 @@ grpc::Status camera_backend_server::GetAvailableAdapters(::grpc::ServerContext *
   return grpc::Status::OK;
 }
 grpc::Status camera_backend_server::GetDevices(::grpc::ServerContext *context,
-                                               const mvcam::AdapterRequest *request,
-                                               mvcam::DeviceListResponse *response) {
+                                               const mvcam::GetDevicesRequest *request,
+                                               mvcam::GetDevicesResponse *response) {
   try {
     std::vector<camera_driver::adapter *> adapter(mFramework->adapters());
-    if (!request->name().empty()) {
-      filter_adapter_by_name(request->name(), adapter);
+    if (!request->adapter_name().empty()) {
+      filter_adapter_by_name(request->adapter_name(), adapter);
     }
 
-    for (auto& it : adapter)
-      mFramework->update_cache(it);
+    if(!request->use_cache()) {
+      for (auto& it : adapter)
+        mFramework->update_cache(it);
+    }
 
     for (auto& it: mFramework->camera_list()) {
       mvcam::DeviceInfo *pInfo = response->add_devices();
@@ -138,7 +140,7 @@ grpc::Status camera_backend_server::Streaming(::grpc::ServerContext *context,
   } catch (boost::exception& e) {
     return grpc::Status(grpc::NOT_FOUND, "Camera not found");
   }
-  
+
   if (!camera->capabilities()->can_capture_async) {
     return grpc::Status(grpc::UNAVAILABLE, "No capability: can_capture_async");
   }

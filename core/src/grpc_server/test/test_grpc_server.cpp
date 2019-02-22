@@ -73,8 +73,8 @@ BOOST_AUTO_TEST_CASE(test_get_adapter) {
 BOOST_AUTO_TEST_CASE(test_list_cameras) {
   client_fixture client;
   grpc::ClientContext context;
-  mvcam::AdapterRequest req;
-  mvcam::DeviceListResponse resp;
+  mvcam::GetDevicesRequest req;
+  mvcam::GetDevicesResponse resp;
 
   grpc::Status status = client.stub->GetDevices(&context, req, &resp);
   if (!status.ok()) {
@@ -94,8 +94,8 @@ BOOST_AUTO_TEST_CASE(test_list_cameras) {
 }
 BOOST_AUTO_TEST_CASE(test_detect_multiple_times) {
   client_fixture client;
-  mvcam::AdapterRequest req;
-  mvcam::DeviceListResponse resp;
+  mvcam::GetDevicesRequest req;
+  mvcam::GetDevicesResponse resp;
 
   for (int i = 0; i < 10; ++i) {
     grpc::ClientContext context;
@@ -121,8 +121,8 @@ BOOST_AUTO_TEST_CASE(test_open_shutdown_existing_camera) {
 
   {
     grpc::ClientContext context;
-    mvcam::AdapterRequest req;
-    mvcam::DeviceListResponse resp;
+    mvcam::GetDevicesRequest req;
+    mvcam::GetDevicesResponse resp;
 
     grpc::Status status = client.stub->GetDevices(&context, req, &resp);
     if (!status.ok()) {
@@ -196,8 +196,8 @@ BOOST_AUTO_TEST_CASE(test_open_non_existing_camera) {
 
   {
     grpc::ClientContext context;
-    mvcam::AdapterRequest req;
-    mvcam::DeviceListResponse resp;
+    mvcam::GetDevicesRequest req;
+    mvcam::GetDevicesResponse resp;
 
     grpc::Status status = client.stub->GetDevices(&context, req, &resp);
     if (!status.ok()) {
@@ -228,9 +228,8 @@ BOOST_AUTO_TEST_CASE(test_configure) {
 
   {
     grpc::ClientContext context;
-    mvcam::AdapterRequest req;
-    mvcam::DeviceListResponse resp;
-
+    mvcam::GetDevicesRequest req;
+    mvcam::GetDevicesResponse resp;
     grpc::Status status = client.stub->GetDevices(&context, req, &resp);
     if (!status.ok()) {
       BOOST_TEST_FAIL(status.error_message());
@@ -319,8 +318,8 @@ BOOST_AUTO_TEST_CASE(test_sync_capture) {
   std::string id;
   {
     grpc::ClientContext context;
-    mvcam::AdapterRequest req;
-    mvcam::DeviceListResponse resp;
+    mvcam::GetDevicesRequest req;
+    mvcam::GetDevicesResponse resp;
 
     grpc::Status status = client.stub->GetDevices(&context, req, &resp);
     if (!status.ok()) {
@@ -376,8 +375,8 @@ BOOST_AUTO_TEST_CASE(test_async_capture) {
 
   {
     grpc::ClientContext context;
-    mvcam::AdapterRequest req;
-    mvcam::DeviceListResponse resp;
+    mvcam::GetDevicesRequest req;
+    mvcam::GetDevicesResponse resp;
 
     grpc::Status status = client.stub->GetDevices(&context, req, &resp);
     if (!status.ok()) {

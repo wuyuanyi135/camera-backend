@@ -65,8 +65,8 @@ class camera_backend_server : public mvcam::MicroVisionCameraService::Service {
                                     const ::google::protobuf::Empty *request,
                                     mvcam::AvailableAdaptersResponse *response) override;
   grpc::Status GetDevices(::grpc::ServerContext *context,
-                          const mvcam::AdapterRequest *request,
-                          mvcam::DeviceListResponse *response) override;
+                          const mvcam::GetDevicesRequest *request,
+                          mvcam::GetDevicesResponse *response) override;
   grpc::Status QueryDeviceById(::grpc::ServerContext *context,
                                const mvcam::IdRequest *request,
                                mvcam::DeviceInfo *response) override;

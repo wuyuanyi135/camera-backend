@@ -49,12 +49,12 @@ class MicroVisionCameraService final {
     // Get devices with the adapter selector. If not provided, all devices are listed.
     // The requested adapter (or all) should be updated upon this invocation.
     // This function will update the id-map if cached.
-    virtual ::grpc::Status GetDevices(::grpc::ClientContext* context, const ::mvcam::AdapterRequest& request, ::mvcam::DeviceListResponse* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::mvcam::DeviceListResponse>> AsyncGetDevices(::grpc::ClientContext* context, const ::mvcam::AdapterRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::mvcam::DeviceListResponse>>(AsyncGetDevicesRaw(context, request, cq));
+    virtual ::grpc::Status GetDevices(::grpc::ClientContext* context, const ::mvcam::GetDevicesRequest& request, ::mvcam::GetDevicesResponse* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::mvcam::GetDevicesResponse>> AsyncGetDevices(::grpc::ClientContext* context, const ::mvcam::GetDevicesRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::mvcam::GetDevicesResponse>>(AsyncGetDevicesRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::mvcam::DeviceListResponse>> PrepareAsyncGetDevices(::grpc::ClientContext* context, const ::mvcam::AdapterRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::mvcam::DeviceListResponse>>(PrepareAsyncGetDevicesRaw(context, request, cq));
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::mvcam::GetDevicesResponse>> PrepareAsyncGetDevices(::grpc::ClientContext* context, const ::mvcam::GetDevicesRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::mvcam::GetDevicesResponse>>(PrepareAsyncGetDevicesRaw(context, request, cq));
     }
     // Get device descriptor by id. This method is rarely used. Query is mainly performed by the framework.
     // The id will be cached by framework. The GetDevices function will invalidate the cache.
@@ -141,7 +141,7 @@ class MicroVisionCameraService final {
       // Get devices with the adapter selector. If not provided, all devices are listed.
       // The requested adapter (or all) should be updated upon this invocation.
       // This function will update the id-map if cached.
-      virtual void GetDevices(::grpc::ClientContext* context, const ::mvcam::AdapterRequest* request, ::mvcam::DeviceListResponse* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void GetDevices(::grpc::ClientContext* context, const ::mvcam::GetDevicesRequest* request, ::mvcam::GetDevicesResponse* response, std::function<void(::grpc::Status)>) = 0;
       // Get device descriptor by id. This method is rarely used. Query is mainly performed by the framework.
       // The id will be cached by framework. The GetDevices function will invalidate the cache.
       virtual void QueryDeviceById(::grpc::ClientContext* context, const ::mvcam::IdRequest* request, ::mvcam::DeviceInfo* response, std::function<void(::grpc::Status)>) = 0;
@@ -162,8 +162,8 @@ class MicroVisionCameraService final {
   private:
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::mvcam::AvailableAdaptersResponse>* AsyncGetAvailableAdaptersRaw(::grpc::ClientContext* context, const ::google::protobuf::Empty& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::mvcam::AvailableAdaptersResponse>* PrepareAsyncGetAvailableAdaptersRaw(::grpc::ClientContext* context, const ::google::protobuf::Empty& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::mvcam::DeviceListResponse>* AsyncGetDevicesRaw(::grpc::ClientContext* context, const ::mvcam::AdapterRequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::mvcam::DeviceListResponse>* PrepareAsyncGetDevicesRaw(::grpc::ClientContext* context, const ::mvcam::AdapterRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::mvcam::GetDevicesResponse>* AsyncGetDevicesRaw(::grpc::ClientContext* context, const ::mvcam::GetDevicesRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::mvcam::GetDevicesResponse>* PrepareAsyncGetDevicesRaw(::grpc::ClientContext* context, const ::mvcam::GetDevicesRequest& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::mvcam::DeviceInfo>* AsyncQueryDeviceByIdRaw(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::mvcam::DeviceInfo>* PrepareAsyncQueryDeviceByIdRaw(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::google::protobuf::Empty>* AsyncOpenCameraRaw(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::grpc::CompletionQueue* cq) = 0;
@@ -196,12 +196,12 @@ class MicroVisionCameraService final {
     std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::mvcam::AvailableAdaptersResponse>> PrepareAsyncGetAvailableAdapters(::grpc::ClientContext* context, const ::google::protobuf::Empty& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::mvcam::AvailableAdaptersResponse>>(PrepareAsyncGetAvailableAdaptersRaw(context, request, cq));
     }
-    ::grpc::Status GetDevices(::grpc::ClientContext* context, const ::mvcam::AdapterRequest& request, ::mvcam::DeviceListResponse* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::mvcam::DeviceListResponse>> AsyncGetDevices(::grpc::ClientContext* context, const ::mvcam::AdapterRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::mvcam::DeviceListResponse>>(AsyncGetDevicesRaw(context, request, cq));
+    ::grpc::Status GetDevices(::grpc::ClientContext* context, const ::mvcam::GetDevicesRequest& request, ::mvcam::GetDevicesResponse* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::mvcam::GetDevicesResponse>> AsyncGetDevices(::grpc::ClientContext* context, const ::mvcam::GetDevicesRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::mvcam::GetDevicesResponse>>(AsyncGetDevicesRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::mvcam::DeviceListResponse>> PrepareAsyncGetDevices(::grpc::ClientContext* context, const ::mvcam::AdapterRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::mvcam::DeviceListResponse>>(PrepareAsyncGetDevicesRaw(context, request, cq));
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::mvcam::GetDevicesResponse>> PrepareAsyncGetDevices(::grpc::ClientContext* context, const ::mvcam::GetDevicesRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::mvcam::GetDevicesResponse>>(PrepareAsyncGetDevicesRaw(context, request, cq));
     }
     ::grpc::Status QueryDeviceById(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::mvcam::DeviceInfo* response) override;
     std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::mvcam::DeviceInfo>> AsyncQueryDeviceById(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::grpc::CompletionQueue* cq) {
@@ -279,7 +279,7 @@ class MicroVisionCameraService final {
       public StubInterface::experimental_async_interface {
      public:
       void GetAvailableAdapters(::grpc::ClientContext* context, const ::google::protobuf::Empty* request, ::mvcam::AvailableAdaptersResponse* response, std::function<void(::grpc::Status)>) override;
-      void GetDevices(::grpc::ClientContext* context, const ::mvcam::AdapterRequest* request, ::mvcam::DeviceListResponse* response, std::function<void(::grpc::Status)>) override;
+      void GetDevices(::grpc::ClientContext* context, const ::mvcam::GetDevicesRequest* request, ::mvcam::GetDevicesResponse* response, std::function<void(::grpc::Status)>) override;
       void QueryDeviceById(::grpc::ClientContext* context, const ::mvcam::IdRequest* request, ::mvcam::DeviceInfo* response, std::function<void(::grpc::Status)>) override;
       void OpenCamera(::grpc::ClientContext* context, const ::mvcam::IdRequest* request, ::google::protobuf::Empty* response, std::function<void(::grpc::Status)>) override;
       void ShutdownCamera(::grpc::ClientContext* context, const ::mvcam::IdRequest* request, ::google::protobuf::Empty* response, std::function<void(::grpc::Status)>) override;
@@ -303,8 +303,8 @@ class MicroVisionCameraService final {
     class experimental_async async_stub_{this};
     ::grpc::ClientAsyncResponseReader< ::mvcam::AvailableAdaptersResponse>* AsyncGetAvailableAdaptersRaw(::grpc::ClientContext* context, const ::google::protobuf::Empty& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::mvcam::AvailableAdaptersResponse>* PrepareAsyncGetAvailableAdaptersRaw(::grpc::ClientContext* context, const ::google::protobuf::Empty& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::mvcam::DeviceListResponse>* AsyncGetDevicesRaw(::grpc::ClientContext* context, const ::mvcam::AdapterRequest& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::mvcam::DeviceListResponse>* PrepareAsyncGetDevicesRaw(::grpc::ClientContext* context, const ::mvcam::AdapterRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::mvcam::GetDevicesResponse>* AsyncGetDevicesRaw(::grpc::ClientContext* context, const ::mvcam::GetDevicesRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::mvcam::GetDevicesResponse>* PrepareAsyncGetDevicesRaw(::grpc::ClientContext* context, const ::mvcam::GetDevicesRequest& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::mvcam::DeviceInfo>* AsyncQueryDeviceByIdRaw(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::mvcam::DeviceInfo>* PrepareAsyncQueryDeviceByIdRaw(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::google::protobuf::Empty>* AsyncOpenCameraRaw(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::grpc::CompletionQueue* cq) override;
@@ -350,7 +350,7 @@ class MicroVisionCameraService final {
     // Get devices with the adapter selector. If not provided, all devices are listed.
     // The requested adapter (or all) should be updated upon this invocation.
     // This function will update the id-map if cached.
-    virtual ::grpc::Status GetDevices(::grpc::ServerContext* context, const ::mvcam::AdapterRequest* request, ::mvcam::DeviceListResponse* response);
+    virtual ::grpc::Status GetDevices(::grpc::ServerContext* context, const ::mvcam::GetDevicesRequest* request, ::mvcam::GetDevicesResponse* response);
     // Get device descriptor by id. This method is rarely used. Query is mainly performed by the framework.
     // The id will be cached by framework. The GetDevices function will invalidate the cache.
     virtual ::grpc::Status QueryDeviceById(::grpc::ServerContext* context, const ::mvcam::IdRequest* request, ::mvcam::DeviceInfo* response);
@@ -399,11 +399,11 @@ class MicroVisionCameraService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetDevices(::grpc::ServerContext* context, const ::mvcam::AdapterRequest* request, ::mvcam::DeviceListResponse* response) override {
+    ::grpc::Status GetDevices(::grpc::ServerContext* context, const ::mvcam::GetDevicesRequest* request, ::mvcam::GetDevicesResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestGetDevices(::grpc::ServerContext* context, ::mvcam::AdapterRequest* request, ::grpc::ServerAsyncResponseWriter< ::mvcam::DeviceListResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+    void RequestGetDevices(::grpc::ServerContext* context, ::mvcam::GetDevicesRequest* request, ::grpc::ServerAsyncResponseWriter< ::mvcam::GetDevicesResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncUnary(1, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
@@ -640,10 +640,10 @@ class MicroVisionCameraService final {
    public:
     ExperimentalWithCallbackMethod_GetDevices() {
       ::grpc::Service::experimental().MarkMethodCallback(1,
-        new ::grpc::internal::CallbackUnaryHandler< ::mvcam::AdapterRequest, ::mvcam::DeviceListResponse>(
+        new ::grpc::internal::CallbackUnaryHandler< ::mvcam::GetDevicesRequest, ::mvcam::GetDevicesResponse>(
           [this](::grpc::ServerContext* context,
-                 const ::mvcam::AdapterRequest* request,
-                 ::mvcam::DeviceListResponse* response,
+                 const ::mvcam::GetDevicesRequest* request,
+                 ::mvcam::GetDevicesResponse* response,
                  ::grpc::experimental::ServerCallbackRpcController* controller) {
                    return this->GetDevices(context, request, response, controller);
                  }));
@@ -652,11 +652,11 @@ class MicroVisionCameraService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetDevices(::grpc::ServerContext* context, const ::mvcam::AdapterRequest* request, ::mvcam::DeviceListResponse* response) override {
+    ::grpc::Status GetDevices(::grpc::ServerContext* context, const ::mvcam::GetDevicesRequest* request, ::mvcam::GetDevicesResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual void GetDevices(::grpc::ServerContext* context, const ::mvcam::AdapterRequest* request, ::mvcam::DeviceListResponse* response, ::grpc::experimental::ServerCallbackRpcController* controller) { controller->Finish(::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "")); }
+    virtual void GetDevices(::grpc::ServerContext* context, const ::mvcam::GetDevicesRequest* request, ::mvcam::GetDevicesResponse* response, ::grpc::experimental::ServerCallbackRpcController* controller) { controller->Finish(::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "")); }
   };
   template <class BaseClass>
   class ExperimentalWithCallbackMethod_QueryDeviceById : public BaseClass {
@@ -935,7 +935,7 @@ class MicroVisionCameraService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetDevices(::grpc::ServerContext* context, const ::mvcam::AdapterRequest* request, ::mvcam::DeviceListResponse* response) override {
+    ::grpc::Status GetDevices(::grpc::ServerContext* context, const ::mvcam::GetDevicesRequest* request, ::mvcam::GetDevicesResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1142,7 +1142,7 @@ class MicroVisionCameraService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetDevices(::grpc::ServerContext* context, const ::mvcam::AdapterRequest* request, ::mvcam::DeviceListResponse* response) override {
+    ::grpc::Status GetDevices(::grpc::ServerContext* context, const ::mvcam::GetDevicesRequest* request, ::mvcam::GetDevicesResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1394,7 +1394,7 @@ class MicroVisionCameraService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetDevices(::grpc::ServerContext* context, const ::mvcam::AdapterRequest* request, ::mvcam::DeviceListResponse* response) override {
+    ::grpc::Status GetDevices(::grpc::ServerContext* context, const ::mvcam::GetDevicesRequest* request, ::mvcam::GetDevicesResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1674,18 +1674,18 @@ class MicroVisionCameraService final {
    public:
     WithStreamedUnaryMethod_GetDevices() {
       ::grpc::Service::MarkMethodStreamed(1,
-        new ::grpc::internal::StreamedUnaryHandler< ::mvcam::AdapterRequest, ::mvcam::DeviceListResponse>(std::bind(&WithStreamedUnaryMethod_GetDevices<BaseClass>::StreamedGetDevices, this, std::placeholders::_1, std::placeholders::_2)));
+        new ::grpc::internal::StreamedUnaryHandler< ::mvcam::GetDevicesRequest, ::mvcam::GetDevicesResponse>(std::bind(&WithStreamedUnaryMethod_GetDevices<BaseClass>::StreamedGetDevices, this, std::placeholders::_1, std::placeholders::_2)));
     }
     ~WithStreamedUnaryMethod_GetDevices() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status GetDevices(::grpc::ServerContext* context, const ::mvcam::AdapterRequest* request, ::mvcam::DeviceListResponse* response) override {
+    ::grpc::Status GetDevices(::grpc::ServerContext* context, const ::mvcam::GetDevicesRequest* request, ::mvcam::GetDevicesResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedGetDevices(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::mvcam::AdapterRequest,::mvcam::DeviceListResponse>* server_unary_streamer) = 0;
+    virtual ::grpc::Status StreamedGetDevices(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::mvcam::GetDevicesRequest,::mvcam::GetDevicesResponse>* server_unary_streamer) = 0;
   };
   template <class BaseClass>
   class WithStreamedUnaryMethod_QueryDeviceById : public BaseClass {
