@@ -92,7 +92,12 @@ class invalid_camera_error: public camera_error {
 
   }
 };
+class camera_already_open: public camera_error {
+ public:
+  explicit camera_already_open(const camera_device *device) : camera_error(device) {
 
+  }
+};
 } // namespace
 
 

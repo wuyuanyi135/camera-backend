@@ -57,6 +57,10 @@ aravis_camera::aravis_camera(camera_driver::camera_descriptor &cd) : cd(cd) {
 }
 
 void aravis_camera::open_camera() {
+  if (opened()) {
+    camera_driver::camera_already_open ex(this);
+    BOOST_THROW_EXCEPTION(ex);
+  }
   mCamera = arv_camera_new(cd.id.c_str());
   mDevice = arv_camera_get_device(mCamera);
   if (mCamera == nullptr || mDevice == nullptr) {
