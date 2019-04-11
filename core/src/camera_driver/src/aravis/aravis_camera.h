@@ -25,6 +25,7 @@ class aravis_camera : public camera_driver::camera_device {
   ArvBuffer** mBuffers = nullptr;
   std::atomic_bool mValidFlag;
   std::unique_ptr<camera_driver::frame> mFrame; // prevent reallocation for each frame
+  std::unique_ptr<camera_driver::camera_parameter_read> mParameterBoundCache; // cache the camera's parameter bounds
   camera_driver::frame_handler mFrameCallback = nullptr;
   std::mutex mCaptureMutex;
 //  std::mutex mCaptureFinalizingMutex; // the finalization seems very slow and may double run if shutdown the camera just after finalizing capture.

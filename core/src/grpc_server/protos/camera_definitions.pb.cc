@@ -401,7 +401,6 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   ~0u,  // no _weak_field_map_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::ConfigureRequest, id_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::ConfigureRequest, config_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::ConfigureRequest, query_),
   ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::Frame, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -454,11 +453,11 @@ static const ::google::protobuf::internal::MigrationSchema schemas[] GOOGLE_PROT
   { 46, -1, sizeof(::mvcam::Parameter)},
   { 54, -1, sizeof(::mvcam::Configuration)},
   { 64, -1, sizeof(::mvcam::ConfigureRequest)},
-  { 72, -1, sizeof(::mvcam::Frame)},
-  { 84, -1, sizeof(::mvcam::FrameStream)},
-  { 90, -1, sizeof(::mvcam::StreamingRequest)},
-  { 98, -1, sizeof(::mvcam::Status)},
-  { 106, -1, sizeof(::mvcam::DeviceControlRequest)},
+  { 71, -1, sizeof(::mvcam::Frame)},
+  { 83, -1, sizeof(::mvcam::FrameStream)},
+  { 89, -1, sizeof(::mvcam::StreamingRequest)},
+  { 97, -1, sizeof(::mvcam::Status)},
+  { 105, -1, sizeof(::mvcam::DeviceControlRequest)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
@@ -518,26 +517,25 @@ void AddDescriptorsImpl() {
       "\0132\020.mvcam.Parameter\022\036\n\004gain\030\003 \001(\0132\020.mvca"
       "m.Parameter\022%\n\013black_level\030\004 \001(\0132\020.mvcam"
       ".Parameter\022\037\n\005gamma\030\005 \001(\0132\020.mvcam.Parame"
-      "ter\"e\n\020ConfigureRequest\022\034\n\002id\030\001 \001(\0132\020.mv"
+      "ter\"V\n\020ConfigureRequest\022\034\n\002id\030\001 \001(\0132\020.mv"
       "cam.IdRequest\022$\n\006config\030\002 \001(\0132\024.mvcam.Co"
-      "nfiguration\022\r\n\005query\030\003 \001(\010\"\223\001\n\005Frame\022-\n\t"
-      "timestamp\030\001 \001(\0132\032.google.protobuf.Timest"
-      "amp\022\n\n\002id\030\002 \001(\004\022\014\n\004size\030\003 \001(\r\022\016\n\006height\030"
-      "\004 \001(\r\022\r\n\005width\030\005 \001(\r\022\024\n\014pixel_format\030\006 \001"
-      "(\r\022\014\n\004data\030\007 \001(\014\"+\n\013FrameStream\022\034\n\006frame"
-      "s\030\001 \003(\0132\014.mvcam.Frame\"[\n\020StreamingReques"
-      "t\022\034\n\002id\030\001 \001(\0132\020.mvcam.IdRequest\022\025\n\rnumbe"
-      "r_frames\030\002 \001(\004\022\022\n\nbatch_size\030\004 \001(\004\"@\n\006St"
-      "atus\022\023\n\013temperature\030\001 \001(\001\022\016\n\006opened\030\002 \001("
-      "\010\022\021\n\tcapturing\030\003 \001(\010\"`\n\024DeviceControlReq"
-      "uest\022\034\n\002id\030\001 \001(\0132\020.mvcam.IdRequest\022*\n\006ac"
-      "tion\030\002 \001(\0162\032.mvcam.DeviceControlAction*."
-      "\n\023DeviceControlAction\022\013\n\007Suspend\020\000\022\n\n\006Re"
-      "sume\020\001B\'Z%github.com/wuyuanyi135/mvproto"
-      "s/mvcamb\006proto3"
+      "nfiguration\"\223\001\n\005Frame\022-\n\ttimestamp\030\001 \001(\013"
+      "2\032.google.protobuf.Timestamp\022\n\n\002id\030\002 \001(\004"
+      "\022\014\n\004size\030\003 \001(\r\022\016\n\006height\030\004 \001(\r\022\r\n\005width\030"
+      "\005 \001(\r\022\024\n\014pixel_format\030\006 \001(\r\022\014\n\004data\030\007 \001("
+      "\014\"+\n\013FrameStream\022\034\n\006frames\030\001 \003(\0132\014.mvcam"
+      ".Frame\"[\n\020StreamingRequest\022\034\n\002id\030\001 \001(\0132\020"
+      ".mvcam.IdRequest\022\025\n\rnumber_frames\030\002 \001(\004\022"
+      "\022\n\nbatch_size\030\004 \001(\004\"@\n\006Status\022\023\n\013tempera"
+      "ture\030\001 \001(\001\022\016\n\006opened\030\002 \001(\010\022\021\n\tcapturing\030"
+      "\003 \001(\010\"`\n\024DeviceControlRequest\022\034\n\002id\030\001 \001("
+      "\0132\020.mvcam.IdRequest\022*\n\006action\030\002 \001(\0162\032.mv"
+      "cam.DeviceControlAction*.\n\023DeviceControl"
+      "Action\022\013\n\007Suspend\020\000\022\n\n\006Resume\020\001B\'Z%githu"
+      "b.com/wuyuanyi135/mvprotos/mvcamb\006proto3"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 1415);
+      descriptor, 1400);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "camera_definitions.proto", &protobuf_RegisterTypes);
   ::protobuf_google_2fprotobuf_2ftimestamp_2eproto::AddDescriptors();
@@ -3244,7 +3242,6 @@ void ConfigureRequest::InitAsDefaultInstance() {
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int ConfigureRequest::kIdFieldNumber;
 const int ConfigureRequest::kConfigFieldNumber;
-const int ConfigureRequest::kQueryFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 ConfigureRequest::ConfigureRequest()
@@ -3268,14 +3265,13 @@ ConfigureRequest::ConfigureRequest(const ConfigureRequest& from)
   } else {
     config_ = NULL;
   }
-  query_ = from.query_;
   // @@protoc_insertion_point(copy_constructor:mvcam.ConfigureRequest)
 }
 
 void ConfigureRequest::SharedCtor() {
   ::memset(&id_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&query_) -
-      reinterpret_cast<char*>(&id_)) + sizeof(query_));
+      reinterpret_cast<char*>(&config_) -
+      reinterpret_cast<char*>(&id_)) + sizeof(config_));
 }
 
 ConfigureRequest::~ConfigureRequest() {
@@ -3316,7 +3312,6 @@ void ConfigureRequest::Clear() {
     delete config_;
   }
   config_ = NULL;
-  query_ = false;
   _internal_metadata_.Clear();
 }
 
@@ -3348,20 +3343,6 @@ bool ConfigureRequest::MergePartialFromCodedStream(
             static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
                input, mutable_config()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // bool query = 3;
-      case 3: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(24u /* 24 & 0xFF */)) {
-
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
-                 input, &query_)));
         } else {
           goto handle_unusual;
         }
@@ -3406,11 +3387,6 @@ void ConfigureRequest::SerializeWithCachedSizes(
       2, this->_internal_config(), output);
   }
 
-  // bool query = 3;
-  if (this->query() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteBool(3, this->query(), output);
-  }
-
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
@@ -3437,11 +3413,6 @@ void ConfigureRequest::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
         2, this->_internal_config(), deterministic, target);
-  }
-
-  // bool query = 3;
-  if (this->query() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(3, this->query(), target);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -3473,11 +3444,6 @@ size_t ConfigureRequest::ByteSizeLong() const {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSize(
         *config_);
-  }
-
-  // bool query = 3;
-  if (this->query() != 0) {
-    total_size += 1 + 1;
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
@@ -3513,9 +3479,6 @@ void ConfigureRequest::MergeFrom(const ConfigureRequest& from) {
   if (from.has_config()) {
     mutable_config()->::mvcam::Configuration::MergeFrom(from.config());
   }
-  if (from.query() != 0) {
-    set_query(from.query());
-  }
 }
 
 void ConfigureRequest::CopyFrom(const ::google::protobuf::Message& from) {
@@ -3544,7 +3507,6 @@ void ConfigureRequest::InternalSwap(ConfigureRequest* other) {
   using std::swap;
   swap(id_, other->id_);
   swap(config_, other->config_);
-  swap(query_, other->query_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
 }
 

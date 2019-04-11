@@ -156,10 +156,24 @@ void camera_backend_server::get_configuration_from_camera(camera_driver::camera_
   camera.get_configuration(param);
 
   dest->mutable_black_level()->set_value(param.black_level.value);
+  dest->mutable_black_level()->set_max(param.black_level.max);
+  dest->mutable_black_level()->set_min(param.black_level.min);
+
   dest->mutable_gamma()->set_value(param.gamma.value);
+  dest->mutable_gamma()->set_max(param.gamma.max);
+  dest->mutable_gamma()->set_min(param.gamma.min);
+
   dest->mutable_exposure()->set_value(param.exposure.value);
+  dest->mutable_exposure()->set_min(param.exposure.min);
+  dest->mutable_exposure()->set_max(param.exposure.max);
+
   dest->mutable_frame_rate()->set_value(param.frame_rate.value);
+  dest->mutable_frame_rate()->set_min(param.frame_rate.min);
+  dest->mutable_frame_rate()->set_max(param.frame_rate.max);
+
   dest->mutable_gain()->set_value(param.gain.value);
+  dest->mutable_gain()->set_max(param.gain.max);
+  dest->mutable_gain()->set_min(param.gain.min);
 //  dest->mutable_frame_number()->set_value(param.frame_number.value);
 }
 

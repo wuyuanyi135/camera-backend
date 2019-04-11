@@ -1309,19 +1309,12 @@ class ConfigureRequest : public ::google::protobuf::Message /* @@protoc_insertio
   ::mvcam::Configuration* mutable_config();
   void set_allocated_config(::mvcam::Configuration* config);
 
-  // bool query = 3;
-  void clear_query();
-  static const int kQueryFieldNumber = 3;
-  bool query() const;
-  void set_query(bool value);
-
   // @@protoc_insertion_point(class_scope:mvcam.ConfigureRequest)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   ::mvcam::IdRequest* id_;
   ::mvcam::Configuration* config_;
-  bool query_;
   mutable ::google::protobuf::internal::CachedSize _cached_size_;
   friend struct ::protobuf_camera_5fdefinitions_2eproto::TableStruct;
 };
@@ -3096,20 +3089,6 @@ inline void ConfigureRequest::set_allocated_config(::mvcam::Configuration* confi
   }
   config_ = config;
   // @@protoc_insertion_point(field_set_allocated:mvcam.ConfigureRequest.config)
-}
-
-// bool query = 3;
-inline void ConfigureRequest::clear_query() {
-  query_ = false;
-}
-inline bool ConfigureRequest::query() const {
-  // @@protoc_insertion_point(field_get:mvcam.ConfigureRequest.query)
-  return query_;
-}
-inline void ConfigureRequest::set_query(bool value) {
-  
-  query_ = value;
-  // @@protoc_insertion_point(field_set:mvcam.ConfigureRequest.query)
 }
 
 // -------------------------------------------------------------------

@@ -31,12 +31,12 @@ grpc::Status camera_backend_server::GetDevices(::grpc::ServerContext *context,
       filter_adapter_by_name(request->adapter_name(), adapter);
     }
 
-    if(!request->use_cache()) {
-      for (auto& it : adapter)
+    if (!request->use_cache()) {
+      for (auto &it : adapter)
         mFramework->update_cache(it);
     }
 
-    for (auto& it: mFramework->camera_list()) {
+    for (auto &it: mFramework->camera_list()) {
       mvcam::DeviceInfo *pInfo = response->add_devices();
       transform_device_info(*it, pInfo);
     }
@@ -84,7 +84,8 @@ grpc::Status camera_backend_server::ConfigureCamera(::grpc::ServerContext *conte
 grpc::Status camera_backend_server::GetConfiguration(::grpc::ServerContext *context,
                                                      const mvcam::IdRequest *request,
                                                      mvcam::Configuration *response) {
-  return index_camera_call_wrapper(request->id(), [this, response](camera_driver::camera_device &camera) {
+  return index_camera_call_wrapper(request->id(), [this, response, request](camera_driver::camera_device &camera) {
+    // read parameters from the camera
     get_configuration_from_camera(camera, response);
   });
 }
@@ -115,7 +116,7 @@ grpc::Status camera_backend_server::Streaming(::grpc::ServerContext *context,
   std::shared_ptr<camera_driver::camera_device> camera;
   try {
     camera = mFramework->query_by_id(id);
-  } catch (boost::exception& e) {
+  } catch (boost::exception &e) {
     return grpc::Status(grpc::NOT_FOUND, "Camera not found");
   }
 
@@ -223,4 +224,5 @@ grpc::Status camera_backend_server::ControlDeviceState(::grpc::ServerContext *co
     }
   });
 }
+
 
