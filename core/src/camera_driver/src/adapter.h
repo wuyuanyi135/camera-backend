@@ -6,7 +6,6 @@
 #define CAMERA_BACKEND_ADAPTER_H
 #include "string"
 #include "vector"
-#include "capability.h"
 #include "camera_descriptor.h"
 namespace camera_driver {
 // Adapter should only create camera. Framework will keep the copy and cache the cameras
@@ -16,9 +15,6 @@ class adapter {
   virtual std::string name() const = 0;
   virtual std::string version() const = 0;
 
-  /// List the capabilities of the adapter
-  /// \return capabilities
-  virtual adapter_capability *const capabilities() = 0;
 
   /// Camera functions
  public:

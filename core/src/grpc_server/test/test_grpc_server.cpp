@@ -258,10 +258,10 @@ BOOST_AUTO_TEST_CASE(test_configure) {
       BOOST_TEST_FAIL(status.error_message());
       return;
     }
-    BOOST_TEST_MESSAGE("Exposure: " << resp.exposure().value());
-    BOOST_TEST_MESSAGE("Gain: " << resp.gain().value());
-    BOOST_TEST_MESSAGE("frame rate: " << resp.frame_rate().value());
-//    BOOST_TEST_MESSAGE("frame number: " << resp.frame_number().value());
+#define DISPLAY_PARAM(NAME, V) BOOST_TEST_MESSAGE(NAME <<": " << V.value() << " [" << V.min() << ", " <<V.max()<<"]");
+    DISPLAY_PARAM("Exposure", resp.exposure());
+    DISPLAY_PARAM("Gain", resp.gain());
+    DISPLAY_PARAM("Frame", resp.frame_rate());
   }
 
   {
@@ -273,11 +273,8 @@ BOOST_AUTO_TEST_CASE(test_configure) {
 //    pConfiguration->mutable_frame_number()->set_value(5);
 //    pConfiguration->mutable_frame_number()->set_should_update(true);
     pConfiguration->mutable_frame_rate()->set_value(30);
-    pConfiguration->mutable_frame_rate()->set_should_update(true);
     pConfiguration->mutable_gain()->set_value(5);
-    pConfiguration->mutable_gain()->set_should_update(true);
     pConfiguration->mutable_exposure()->set_value(45);
-    pConfiguration->mutable_exposure()->set_should_update(true);
 
     grpc::Status status = client.stub->ConfigureCamera(&context, req, &emptyResponse);
     if (!status.ok()) {
@@ -294,9 +291,9 @@ BOOST_AUTO_TEST_CASE(test_configure) {
       BOOST_TEST_FAIL(status.error_message());
       return;
     }
-    BOOST_TEST_MESSAGE("Exposure: " << resp.exposure().value());
-    BOOST_TEST_MESSAGE("Gain: " << resp.gain().value());
-    BOOST_TEST_MESSAGE("frame rate: " << resp.frame_rate().value());
+    DISPLAY_PARAM("Exposure", resp.exposure());
+    DISPLAY_PARAM("Gain", resp.gain());
+    DISPLAY_PARAM("Frame", resp.frame_rate());
 //    BOOST_TEST_MESSAGE("frame number: " << resp.frame_number().value());
   }
 

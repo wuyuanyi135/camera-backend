@@ -86,17 +86,7 @@ void aravis_camera::shutdown_camera() {
   mCamera = nullptr;
   mDevice = nullptr;
 }
-camera_driver::camera_capability *aravis_camera::capabilities() {
-//  open_guard();
-//  if (!arv_device_get_feature(mDevice, "ExposureTime")) mCapabilities.can_adjust_exposure = false;
-//  if (!arv_device_get_feature(mDevice, "AcquisitionFrameRate")) mCapabilities.can_adjust_frame_rate = false;
-//  if (!arv_device_get_feature(mDevice, "Gain")) mCapabilities.can_adjust_gain = false;
-//  if (!arv_device_get_feature(mDevice, "BlackLevel")) mCapabilities.can_adjust_black_level = false;
-//  if (!arv_device_get_feature(mDevice, "Gamma")) mCapabilities.can_adjust_gamma = false;
-//  if (!arv_device_get_feature(mDevice, "AcquisitionFrameCount")) mCapabilities.can_set_frame_number = false;
 
-  return &mCapabilities;
-}
 void aravis_camera::set_configuration(camera_driver::camera_parameter_write &param) {
   open_guard();
   try {
@@ -141,6 +131,26 @@ bool aravis_camera::valid() {
 void aravis_camera::get_configuration(camera_driver::camera_parameter_read &param) {
   open_guard();
 
+  auto& parameterBoundCache = this->mParameterBoundCache;
+  if (parameterBoundCache == nullptr) {
+    parameterBoundCache = std::make_unique<camera_driver::camera_parameter_read>();
+#define SET_BOUNDS(FEATURE, V) field_bounds_internal(FEATURE, V.min, V.max)
+    SET_BOUNDS("ExposureTime", parameterBoundCache->exposure);
+    SET_BOUNDS("AcquisitionFrameRate", parameterBoundCache->frame_rate);
+    SET_BOUNDS("Gain", parameterBoundCache->gain);
+    SET_BOUNDS("BlackLevel", parameterBoundCache->black_level);
+    SET_BOUNDS("Gamma", parameterBoundCache->gamma);
+    SET_BOUNDS("AcquisitionFrameCount", parameterBoundCache->frame_number);
+  }
+
+#define COPY_BOUNDS(DEST, SRC) DEST.min = SRC.min;DEST.max = SRC.max
+  COPY_BOUNDS(param.exposure, parameterBoundCache->exposure);
+  COPY_BOUNDS(param.frame_rate, parameterBoundCache->frame_rate);
+  COPY_BOUNDS(param.gain, parameterBoundCache->gain);
+  COPY_BOUNDS(param.black_level, parameterBoundCache->black_level);
+  COPY_BOUNDS(param.gamma, parameterBoundCache->gamma);
+  COPY_BOUNDS(param.frame_number, parameterBoundCache->frame_number);
+  
   get_parameter_internal(param.exposure, "ExposureTime");
   get_parameter_internal(param.frame_rate, "AcquisitionFrameRate");
   get_parameter_internal(param.gain, "Gain");

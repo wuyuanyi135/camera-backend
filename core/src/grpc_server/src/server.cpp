@@ -10,7 +10,6 @@
 
 #include "server.h"
 #include "error.h"
-#include "capability.h"
 #include "logging.h"
 #include "config.h"
 
@@ -32,12 +31,12 @@ grpc::Status camera_backend_server::GetDevices(::grpc::ServerContext *context,
       filter_adapter_by_name(request->adapter_name(), adapter);
     }
 
-    if(!request->use_cache()) {
-      for (auto& it : adapter)
+    if (!request->use_cache()) {
+      for (auto &it : adapter)
         mFramework->update_cache(it);
     }
 
-    for (auto& it: mFramework->camera_list()) {
+    for (auto &it: mFramework->camera_list()) {
       mvcam::DeviceInfo *pInfo = response->add_devices();
       transform_device_info(*it, pInfo);
     }
@@ -62,12 +61,6 @@ grpc::Status camera_backend_server::OpenCamera(::grpc::ServerContext *context,
                                                const mvcam::IdRequest *request,
                                                google::protobuf::Empty *response) {
   return index_camera_call_wrapper(request->id(), [](camera_driver::camera_device &camera) {
-    // Guarded by can_open capability
-    if (!camera.capabilities()->should_open) {
-      camera_capability_error ex(camera.camera_descriptor_ref);
-//      ex << error_info("No capability: can_open");
-      BOOST_THROW_EXCEPTION(ex);
-    }
     camera.open_camera();
   });
 }
@@ -76,11 +69,6 @@ grpc::Status camera_backend_server::ShutdownCamera(::grpc::ServerContext *contex
                                                    const mvcam::IdRequest *request,
                                                    ::google::protobuf::Empty *response) {
   return index_camera_call_wrapper(request->id(), [](camera_driver::camera_device &camera) {
-    if (!camera.capabilities()->can_shutdown) {
-      camera_capability_error ex(camera.camera_descriptor_ref);
-      ex << error_info("No capability: can_shutdown");
-      BOOST_THROW_EXCEPTION(ex);
-    }
     camera.shutdown_camera();
   });
 }
@@ -96,7 +84,8 @@ grpc::Status camera_backend_server::ConfigureCamera(::grpc::ServerContext *conte
 grpc::Status camera_backend_server::GetConfiguration(::grpc::ServerContext *context,
                                                      const mvcam::IdRequest *request,
                                                      mvcam::Configuration *response) {
-  return index_camera_call_wrapper(request->id(), [this, response](camera_driver::camera_device &camera) {
+  return index_camera_call_wrapper(request->id(), [this, response, request](camera_driver::camera_device &camera) {
+    // read parameters from the camera
     get_configuration_from_camera(camera, response);
   });
 }
@@ -113,19 +102,9 @@ grpc::Status camera_backend_server::Capture(::grpc::ServerContext *context,
                                             const ::mvcam::IdRequest *request,
                                             ::mvcam::Frame *response) {
   return index_camera_call_wrapper(request->id(), [this, response](camera_driver::camera_device &camera) {
-    if (!camera.capabilities()->can_capture) {
-      camera_capability_error ex(camera.camera_descriptor_ref);
-      ex << error_info("No capability: can_capture");
-      BOOST_THROW_EXCEPTION(ex);
-    }
-
-    try {
-      camera_driver::frame frame;
-      camera.capture(frame);
-      transform_frame(frame, response);
-    } catch (boost::exception &ex) {
-      throw;
-    }
+    camera_driver::frame frame;
+    camera.capture(frame);
+    transform_frame(frame, response);
   });
 }
 
@@ -137,12 +116,8 @@ grpc::Status camera_backend_server::Streaming(::grpc::ServerContext *context,
   std::shared_ptr<camera_driver::camera_device> camera;
   try {
     camera = mFramework->query_by_id(id);
-  } catch (boost::exception& e) {
+  } catch (boost::exception &e) {
     return grpc::Status(grpc::NOT_FOUND, "Camera not found");
-  }
-
-  if (!camera->capabilities()->can_capture_async) {
-    return grpc::Status(grpc::UNAVAILABLE, "No capability: can_capture_async");
   }
 
   if (camera->capturing()) {
@@ -230,12 +205,6 @@ grpc::Status camera_backend_server::ResetDevice(::grpc::ServerContext *context,
                                                 ::google::protobuf::Empty *response) {
 
   return index_camera_call_wrapper(request->id(), [this, response](camera_driver::camera_device &camera) {
-    if (!camera.capabilities()->can_reset) {
-      camera_capability_error ex(camera.camera_descriptor_ref);
-      ex << error_info("No capability: can_reset");
-      BOOST_THROW_EXCEPTION(ex);
-    }
-
     try {
       camera.reset();
     } catch (boost::exception &ex) {
@@ -248,12 +217,6 @@ grpc::Status camera_backend_server::ControlDeviceState(::grpc::ServerContext *co
                                                        const ::mvcam::DeviceControlRequest *request,
                                                        ::google::protobuf::Empty *response) {
   return index_camera_call_wrapper(request->id().id(), [this, response](camera_driver::camera_device &camera) {
-    if (!camera.capabilities()->can_suspend) {
-      camera_capability_error ex(camera.camera_descriptor_ref);
-      ex << error_info("No capability: can_suspend");
-      BOOST_THROW_EXCEPTION(ex);
-    }
-
     try {
       camera.suspend();
     } catch (boost::exception &ex) {
@@ -261,4 +224,5 @@ grpc::Status camera_backend_server::ControlDeviceState(::grpc::ServerContext *co
     }
   });
 }
+
 

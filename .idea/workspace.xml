@@ -19,10 +19,23 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a23e60ba-2f13-4dfd-9f58-962b3f794ff5" name="Default Changelist" comment="">
+    <list default="true" id="a23e60ba-2f13-4dfd-9f58-962b3f794ff5" name="Default Changelist" comment="update proto">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/protos/MicroVision-proto" beforeDir="false" afterPath="$PROJECT_DIR$/core/protos/MicroVision-proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/protos/MicroVision-proto/mvcam/camera_definitions.proto" beforeDir="false" afterPath="$PROJECT_DIR$/core/protos/MicroVision-proto/mvcam/camera_definitions.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/camera_driver/src/adapter.h" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/camera_driver/src/adapter.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/camera_driver/src/aravis/aravis_adapter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/camera_driver/src/aravis/aravis_adapter.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/camera_driver/src/aravis/aravis_adapter.h" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/camera_driver/src/aravis/aravis_adapter.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/src/camera_driver/src/aravis/aravis_camera.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/camera_driver/src/aravis/aravis_camera.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/camera_driver/src/exceptions.h" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/camera_driver/src/exceptions.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/camera_driver/src/aravis/aravis_camera.h" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/camera_driver/src/aravis/aravis_camera.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/camera_driver/src/aravis/test/test_aravis_driver.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/camera_driver/src/aravis/test/test_aravis_driver.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/camera_driver/src/camera_driver.h" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/camera_driver/src/camera_driver.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/camera_driver/src/capability.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/grpc_server/protos/camera_definitions.pb.cc" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/grpc_server/protos/camera_definitions.pb.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/grpc_server/protos/camera_definitions.pb.h" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/grpc_server/protos/camera_definitions.pb.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/grpc_server/src/server.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/grpc_server/src/server.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/grpc_server/src/server.h" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/grpc_server/src/server.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/grpc_server/src/server_auxiliary_impl.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/grpc_server/src/server_auxiliary_impl.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <ignored path="$PROJECT_DIR$/CMakeFiles/" />
@@ -58,31 +71,37 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/src/camera_driver/src/aravis/aravis_adapter.cpp">
+        <entry file="file://$PROJECT_DIR$/core/src/grpc_server/src/config.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="309">
-              <caret line="31" selection-start-line="31" selection-end-line="31" />
+            <state relative-caret-position="420">
+              <caret line="40" column="1" selection-start-line="40" selection-start-column="1" selection-end-line="40" selection-end-column="1" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/src/grpc_server/src/server_auxiliary_impl.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1050">
-              <caret line="70" selection-start-line="70" selection-end-line="70" />
-              <folding>
-                <element signature="e#43#75#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/core/src/grpc_server/src/config.h">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file:///usr/include/boost/throw_exception.hpp">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/src/grpc_server/src/error.cpp">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/src/grpc_server/src/error.h">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/src/grpc_server/src/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="83">
-              <caret line="58" lean-forward="true" selection-start-line="58" selection-end-line="58" />
+            <state relative-caret-position="120">
+              <caret line="8" column="42" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="42" />
+              <folding>
+                <element signature="e#42#61#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -90,8 +109,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/src/grpc_server/src/server.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="615">
-              <caret line="41" selection-start-line="41" selection-end-line="41" />
+            <state relative-caret-position="239">
+              <caret line="33" column="26" selection-start-line="33" selection-start-column="17" selection-end-line="33" selection-end-column="26" />
               <folding>
                 <element signature="e#43#75#0" expanded="true" />
               </folding>
@@ -100,55 +119,43 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/src/camera_driver/src/framework.cpp">
+        <entry file="file://$PROJECT_DIR$/core/src/grpc_server/src/server.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="34" column="16" selection-start-line="34" selection-start-column="16" selection-end-line="34" selection-end-column="16" />
+            <state relative-caret-position="179">
+              <caret line="89" selection-start-line="89" selection-end-line="89" />
               <folding>
-                <element signature="e#43#62#0" expanded="true" />
+                <element signature="e#107#124#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/src/camera_driver/src/aravis/aravis_camera.cpp">
+        <entry file="file://$PROJECT_DIR$/core/src/grpc_server/src/server_auxiliary_impl.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="990">
-              <caret line="66" column="29" selection-start-line="66" selection-start-column="29" selection-end-line="66" selection-end-column="29" />
+            <state relative-caret-position="1065">
+              <caret line="128" column="32" selection-start-line="128" selection-start-column="32" selection-end-line="128" selection-end-column="32" />
               <folding>
-                <element signature="e#42#59#0" expanded="true" />
+                <element signature="e#43#75#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/src/camera_driver/src/exceptions.h">
+        <entry file="file://$PROJECT_DIR$/core/protos/MicroVision-proto/mvcam/camera_service.proto">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1455">
-              <caret line="97" selection-start-line="97" selection-end-line="97" />
+            <state relative-caret-position="322">
+              <caret line="26" column="53" lean-forward="true" selection-start-line="26" selection-start-column="53" selection-end-line="26" selection-end-column="53" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/src/camera_driver/src/aravis/aravis_camera.h">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/core/protos/MicroVision-proto/mvcam/camera_definitions.proto">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="25" column="21" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
-              <folding>
-                <element signature="e#121#137#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/src/camera_driver/src/aravis/aravis_camera_internal.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="885">
-              <caret line="59" column="20" selection-start-line="59" selection-start-column="20" selection-end-line="59" selection-end-column="20" />
+            <state relative-caret-position="187">
+              <caret line="57" column="45" selection-start-line="57" selection-start-column="45" selection-end-line="57" selection-end-column="45" />
             </state>
           </provider>
         </entry>
@@ -165,13 +172,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>rep_-&gt;elements</find>
-      <find>framestream</find>
-      <find>return</find>
-      <find>13</find>
-      <find>async</find>
-      <find>numberFrames</find>
-      <find>cancelled</find>
       <find>capturing</find>
       <find>shutdown</find>
       <find>nan</find>
@@ -195,6 +195,13 @@
       <find>mValidFlag</find>
       <find>arv_camera_get_device</find>
       <find>guard</find>
+      <find>capability</find>
+      <find>range</find>
+      <find>capa</find>
+      <find>cap</find>
+      <find>capabili</find>
+      <find>capabilit</find>
+      <find>in_use</find>
     </findStrings>
     <replaceStrings>
       <replace>mvcam</replace>
@@ -203,7 +210,12 @@
   </component>
   <component name="Git.Settings">
     <option name="ROOT_SYNC" value="DONT_SYNC" />
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/core/protos/MicroVision-proto" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -238,27 +250,27 @@
         <option value="$PROJECT_DIR$/docker/build_docker_env.sh" />
         <option value="$PROJECT_DIR$/docker/build_docker.sh" />
         <option value="$PROJECT_DIR$/core/src/grpc_server/CMakeLists.txt" />
-        <option value="$PROJECT_DIR$/core/src/camera_driver/src/aravis/aravis_camera.h" />
-        <option value="$PROJECT_DIR$/core/src/camera_driver/src/aravis/aravis_adapter.h" />
         <option value="$PROJECT_DIR$/core/src/camera_driver/src/aravis/aravis_camera_internal.cpp" />
-        <option value="$PROJECT_DIR$/core/src/camera_driver/src/aravis/aravis_adapter.cpp" />
         <option value="$PROJECT_DIR$/core/src/camera_driver/src/aravis/aravis_camera_template_impl.tcc" />
         <option value="$PROJECT_DIR$/core/src/camera_driver/CMakeLists.txt" />
-        <option value="$PROJECT_DIR$/core/src/camera_driver/src/aravis/test/test_aravis_driver.cpp" />
         <option value="$PROJECT_DIR$/core/src/camera_driver/src/framework.h" />
         <option value="$PROJECT_DIR$/core/src/camera_driver/src/framework.cpp" />
         <option value="$PROJECT_DIR$/core/src/camera_driver/src/aravis/CMakeLists.txt" />
-        <option value="$PROJECT_DIR$/core/src/camera_driver/src/camera_driver.h" />
         <option value="$PROJECT_DIR$/core/src/camera_driver/src/test/test_framework.cpp" />
-        <option value="$PROJECT_DIR$/core/src/camera_driver/src/adapter.h" />
         <option value="$PROJECT_DIR$/core/src/camera_driver/src/camera_descriptor.h" />
         <option value="$PROJECT_DIR$/core/src/grpc_server/test/test_grpc_server.cpp" />
+        <option value="$PROJECT_DIR$/core/src/camera_driver/src/exceptions.h" />
+        <option value="$PROJECT_DIR$/core/src/camera_driver/src/camera_driver.h" />
+        <option value="$PROJECT_DIR$/core/src/camera_driver/src/aravis/aravis_adapter.cpp" />
+        <option value="$PROJECT_DIR$/core/src/camera_driver/src/aravis/aravis_adapter.h" />
+        <option value="$PROJECT_DIR$/core/src/camera_driver/src/aravis/aravis_camera.h" />
+        <option value="$PROJECT_DIR$/core/src/camera_driver/src/aravis/aravis_camera.cpp" />
+        <option value="$PROJECT_DIR$/core/src/camera_driver/src/aravis/test/test_aravis_driver.cpp" />
+        <option value="$PROJECT_DIR$/core/src/camera_driver/src/adapter.h" />
         <option value="$PROJECT_DIR$/core/src/grpc_server/src/server.h" />
         <option value="$PROJECT_DIR$/core/src/grpc_server/src/server_auxiliary_impl.cpp" />
-        <option value="$PROJECT_DIR$/core/protos/MicroVision-proto/mvcam/camera_definitions.proto" />
         <option value="$PROJECT_DIR$/core/src/grpc_server/src/server.cpp" />
-        <option value="$PROJECT_DIR$/core/src/camera_driver/src/aravis/aravis_camera.cpp" />
-        <option value="$PROJECT_DIR$/core/src/camera_driver/src/exceptions.h" />
+        <option value="$PROJECT_DIR$/core/protos/MicroVision-proto/mvcam/camera_definitions.proto" />
       </list>
     </option>
   </component>
@@ -271,10 +283,125 @@
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
-    <navigator currentView="Scope" currentSubView="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope" proportions="" version="1">
+    <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="camera_backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="camera_backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="protos" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="camera_backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="protos" type="462c0819:PsiDirectoryNode" />
+              <item name="MicroVision-proto" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="camera_backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="protos" type="462c0819:PsiDirectoryNode" />
+              <item name="MicroVision-proto" type="462c0819:PsiDirectoryNode" />
+              <item name="mvcam" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="camera_backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="protos" type="462c0819:PsiDirectoryNode" />
+              <item name="MicroVision-proto" type="462c0819:PsiDirectoryNode" />
+              <item name="mvcgi" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="camera_backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="camera_backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="camera_driver" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="camera_backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="camera_driver" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="camera_backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="camera_driver" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="aravis" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="camera_backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="camera_driver" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="aravis" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="camera_backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="camera_driver" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="camera_backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="grpc_server" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="camera_backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="grpc_server" type="462c0819:PsiDirectoryNode" />
+              <item name=".idea" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="camera_backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="grpc_server" type="462c0819:PsiDirectoryNode" />
+              <item name="protos" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="camera_backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="grpc_server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="camera_backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
+            </path>
+            <path>
+              <item name="camera_backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
+              <item name="Scratches" type="d62648e6:ScratchProjectViewPane$MyRootNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="Scope">
         <subPane subId="Scope 'Project Non-Source Files'; set:Project Non-Source Files; class com.jetbrains.cidr.lang.search.scopes.ProjectSourcesScopeProvider$NonSourceFilesScope">
           <expand>
@@ -295,88 +422,6 @@
               <item name="camera_backend" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
               <item name="core" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
-          <expand>
-            <path>
-              <item name="camera_backend" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="~/CLionProjects/camera-backend" type="442cc68d:ScopeViewTreeModel$RootNode" />
-            </path>
-            <path>
-              <item name="camera_backend" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="~/CLionProjects/camera-backend" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="core" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="camera_backend" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="~/CLionProjects/camera-backend" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="core" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="protos" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="camera_backend" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="~/CLionProjects/camera-backend" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="core" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="protos" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="MicroVision-proto" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="camera_backend" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="~/CLionProjects/camera-backend" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="core" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="camera_backend" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="~/CLionProjects/camera-backend" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="core" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="camera_driver" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="camera_backend" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="~/CLionProjects/camera-backend" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="core" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="camera_driver" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="camera_backend" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="~/CLionProjects/camera-backend" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="core" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="camera_driver" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="aravis" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="camera_backend" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="~/CLionProjects/camera-backend" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="core" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="camera_driver" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="test" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="camera_backend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
-            </path>
-            <path>
-              <item name="camera_backend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
-              <item name="Scratches" type="d62648e6:ScratchProjectViewPane$MyRootNode" />
             </path>
           </expand>
           <select />
@@ -424,7 +469,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="CMake Application.grpc_server_app">
+  <component name="RunManager" selected="CMake Application.all">
     <configuration default="true" type="elmot.embedded.openocd.conf.type" factoryName="elmot.embedded.openocd.conf.factory" singleton="false" PASS_PARENT_ENVS_2="true">
       <openocd gdb-port="3333" telnet-port="4444" reset-type="INIT" download-type="ALWAYS" />
       <method v="2">
@@ -801,6 +846,7 @@
       <workItem from="1554836448133" duration="26000" />
       <workItem from="1554849120436" duration="4309000" />
       <workItem from="1554855163635" duration="1224000" />
+      <workItem from="1554941507857" duration="2258000" />
     </task>
     <task id="LOCAL-00001" summary="persist, selectable build configuration">
       <created>1541468783830</created>
@@ -901,7 +947,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="523296000" />
+    <option name="totallyTimeSpent" value="525602000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -916,12 +962,12 @@
     <frame x="67" y="27" width="1853" height="1053" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.495637" visible="true" weight="0.39513004" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.495637" visible="true" weight="0.2429441" />
       <window_info id="Structure" order="1" sideWeight="0.504363" side_tool="true" weight="0.3431101" />
       <window_info id="Favorites" order="2" sideWeight="0.504363" side_tool="true" weight="0.3431101" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32824427" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4997233" visible="true" weight="0.25299892" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4997233" weight="0.25299892" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4991699" weight="0.3991276" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -932,7 +978,7 @@
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.3293348" />
       <window_info anchor="bottom" id="CMake" order="11" sideWeight="0.4803542" weight="0.32824427" />
       <window_info anchor="bottom" id="Docker" order="12" sideWeight="0.49474266" weight="0.47494555" />
-      <window_info anchor="bottom" id="Messages" order="13" sideWeight="0.54178196" weight="0.37077427" />
+      <window_info active="true" anchor="bottom" id="Messages" order="13" sideWeight="0.54178196" visible="true" weight="0.12540895" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -1142,15 +1188,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/core/protos/camera_definitions.proto" />
-    <entry file="file://$PROJECT_DIR$/docker/Dockerfile" />
-    <entry file="file://$PROJECT_DIR$/docker/Dockerfile.env.cross" />
-    <entry file="file://$PROJECT_DIR$/core/src/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docker/build_dockerfiles.sh" />
-    <entry file="file://$PROJECT_DIR$/core/PostInstall.cmake" />
-    <entry file="file://$PROJECT_DIR$/docker/Dockerfile.cross" />
     <entry file="file://$PROJECT_DIR$/core/src/shared/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -1234,19 +1271,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/grpc_server/src/config.h">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/grpc_server/src/main.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="42" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="42" />
-          <folding>
-            <element signature="e#42#61#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
@@ -1258,36 +1282,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="815" column="6" selection-start-line="815" selection-start-column="6" selection-end-line="815" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/protos/MicroVision-proto/mvcam/camera_service.proto">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/camera_driver/src/aravis/test/test_aravis_driver.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="124" column="19" lean-forward="true" selection-start-line="124" selection-start-column="19" selection-end-line="124" selection-end-column="19" />
-          <folding>
-            <element signature="e#88#123#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/camera_driver/src/aravis/aravis_camera_template_impl.tcc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="68" selection-start-line="9" selection-start-column="68" selection-end-line="9" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/camera_driver/src/framework.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="35" column="46" selection-start-line="35" selection-start-column="46" selection-end-line="35" selection-end-column="46" />
-          <folding>
-            <element signature="e#113#130#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1305,19 +1299,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/camera_driver/src/frame.h">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/camera_driver/src/camera_driver.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="26" column="29" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
-          <folding>
-            <element signature="e#108#138#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///usr/include/c++/8/tuple">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="173">
@@ -1332,67 +1313,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/grpc_server/test/test_grpc_server.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5670">
-          <caret line="378" column="35" selection-start-line="378" selection-start-column="35" selection-end-line="378" selection-end-column="35" />
-          <folding>
-            <element signature="e#129#164#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/camera_driver/src/aravis/aravis_adapter.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="94" selection-start-line="19" selection-start-column="94" selection-end-line="19" selection-end-column="94" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/protos/MicroVision-proto/mvcam/camera_definitions.proto">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="18" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/grpc_server/src/server.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1005">
-          <caret line="67" column="37" selection-start-line="67" selection-start-column="37" selection-end-line="67" selection-end-column="37" />
-          <folding>
-            <element signature="e#107#124#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/grpc_server/src/config.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="40" column="1" selection-start-line="40" selection-start-column="1" selection-end-line="40" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/camera_driver/src/adapter.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="29" column="15" selection-start-line="29" selection-start-column="15" selection-end-line="29" selection-end-column="15" />
-          <folding>
-            <element signature="e#109#126#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/camera_driver/src/test/test_framework.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="72" selection-start-line="72" selection-end-line="72" />
-          <folding>
-            <element signature="e#83#118#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///usr/include/boost/function/function_template.hpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="173">
@@ -1400,71 +1320,67 @@
         </state>
       </provider>
     </entry>
+    <entry file="file:///usr/include/boost/throw_exception.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="83">
+          <caret line="58" lean-forward="true" selection-start-line="58" selection-end-line="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/grpc_server/test/test_grpc_server.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="48" column="62" selection-start-line="48" selection-start-column="62" selection-end-line="48" selection-end-column="62" />
+          <folding>
+            <element signature="e#129#164#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/camera_driver/src/capability.h">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/camera_driver/src/aravis/test/test_aravis_driver.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="79" column="5" selection-start-line="79" selection-start-column="5" selection-end-line="79" selection-end-column="5" />
+          <folding>
+            <element signature="e#88#123#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/core/src/camera_driver/src/aravis/aravis_adapter.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="31" selection-start-line="31" selection-end-line="31" />
+        <state relative-caret-position="270">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/camera_driver/src/camera_descriptor.h">
+    <entry file="file://$PROJECT_DIR$/core/src/camera_driver/src/aravis/aravis_adapter.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/grpc_server/src/server_auxiliary_impl.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1050">
-          <caret line="70" selection-start-line="70" selection-end-line="70" />
+        <state relative-caret-position="270">
+          <caret line="18" column="109" selection-start-line="18" selection-start-column="109" selection-end-line="18" selection-end-column="109" />
           <folding>
-            <element signature="e#43#75#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/grpc_server/src/server.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="41" selection-start-line="41" selection-end-line="41" />
-          <folding>
-            <element signature="e#43#75#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/camera_driver/src/framework.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="34" column="16" selection-start-line="34" selection-start-column="16" selection-end-line="34" selection-end-column="16" />
-          <folding>
-            <element signature="e#43#62#0" expanded="true" />
+            <element signature="e#123#147#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/core/src/camera_driver/src/aravis/aravis_camera.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="990">
-          <caret line="66" column="29" selection-start-line="66" selection-start-column="29" selection-end-line="66" selection-end-column="29" />
+        <state relative-caret-position="287">
+          <caret line="152" column="12" selection-start-line="152" selection-start-column="12" selection-end-line="152" selection-end-column="12" />
           <folding>
             <element signature="e#42#59#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/camera_driver/src/exceptions.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1455">
-          <caret line="97" selection-start-line="97" selection-end-line="97" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/src/camera_driver/src/aravis/aravis_camera.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="21" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
+        <state relative-caret-position="360">
+          <caret line="42" selection-start-line="42" selection-end-line="42" />
           <folding>
             <element signature="e#121#137#0" expanded="true" />
           </folding>
@@ -1473,15 +1389,160 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/core/src/camera_driver/src/aravis/aravis_camera_internal.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="885">
-          <caret line="59" column="20" selection-start-line="59" selection-start-column="20" selection-end-line="59" selection-end-column="20" />
+        <state relative-caret-position="15">
+          <caret line="80" column="20" selection-start-line="80" selection-start-column="20" selection-end-line="80" selection-end-column="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file:///usr/include/boost/throw_exception.hpp">
+    <entry file="file://$PROJECT_DIR$/core/src/camera_driver/src/aravis/aravis_camera_template_impl.tcc">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="83">
-          <caret line="58" lean-forward="true" selection-start-line="58" selection-end-line="58" />
+        <state relative-caret-position="300">
+          <caret line="20" column="17" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/camera_driver/src/test/test_framework.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" column="44" selection-start-line="31" selection-start-column="44" selection-end-line="31" selection-end-column="44" />
+          <folding>
+            <element signature="e#83#118#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/camera_driver/src/adapter.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/camera_driver/src/camera_descriptor.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/camera_driver/src/camera_driver.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="277">
+          <caret line="22" column="20" lean-forward="true" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
+          <folding>
+            <element signature="e#108#138#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/camera_driver/src/camera_parameter.h">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/camera_driver/src/event_handlers.h">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/camera_driver/src/exceptions.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="278">
+          <caret line="74" column="16" selection-start-line="74" selection-start-column="16" selection-end-line="74" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/camera_driver/src/frame.h">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/camera_driver/src/frame_handler.h">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/camera_driver/src/framework.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#113#130#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/camera_driver/src/framework.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-143">
+          <caret line="12" column="2" selection-start-line="12" selection-start-column="2" selection-end-line="12" selection-end-column="2" />
+          <folding>
+            <element signature="e#43#62#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/camera_driver/src/status.h">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/grpc_server/src/config.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="40" column="1" selection-start-line="40" selection-start-column="1" selection-end-line="40" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/grpc_server/src/config.h">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/grpc_server/src/error.cpp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/grpc_server/src/error.h">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/grpc_server/src/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="42" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="42" />
+          <folding>
+            <element signature="e#42#61#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/grpc_server/src/server.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="89" selection-start-line="89" selection-end-line="89" />
+          <folding>
+            <element signature="e#107#124#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/grpc_server/src/server_auxiliary_impl.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1065">
+          <caret line="128" column="32" selection-start-line="128" selection-start-column="32" selection-end-line="128" selection-end-column="32" />
+          <folding>
+            <element signature="e#43#75#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/protos/MicroVision-proto/mvcam/camera_service.proto">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="26" column="53" lean-forward="true" selection-start-line="26" selection-start-column="53" selection-end-line="26" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/grpc_server/src/server.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="33" column="26" selection-start-line="33" selection-start-column="17" selection-end-line="33" selection-end-column="26" />
+          <folding>
+            <element signature="e#43#75#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/protos/MicroVision-proto/mvcam/camera_definitions.proto">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="57" column="45" selection-start-line="57" selection-start-column="45" selection-end-line="57" selection-end-column="45" />
         </state>
       </provider>
     </entry>

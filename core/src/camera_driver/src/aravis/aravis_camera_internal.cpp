@@ -66,11 +66,11 @@ void aravis_camera::open_guard() {
 
 void aravis_camera::get_field_internal(const char *feature, camera_driver::parameter_read<double> &p) {
   p.value = arv_device_get_float_feature_value(mDevice, feature);
-  arv_device_get_float_feature_bounds(mDevice, feature, &p.min, &p.max);
+//  arv_device_get_float_feature_bounds(mDevice, feature, &p.min, &p.max);
 }
 void aravis_camera::get_field_internal(const char *feature, camera_driver::parameter_read<long> &p) {
   p.value = arv_device_get_integer_feature_value(mDevice, feature);
-  arv_device_get_integer_feature_bounds(mDevice, feature, &p.min, &p.max);
+//  arv_device_get_integer_feature_bounds(mDevice, feature, &p.min, &p.max);
 }
 void aravis_camera::get_field_internal(const char *feature, camera_driver::parameter_read<std::string &> &p) {
   p.value = std::string(arv_device_get_string_feature_value(mDevice, feature));

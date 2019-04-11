@@ -20,9 +20,7 @@ std::string aravis_adapter::version() const {
   v << ARAVIS_MAJOR_VERSION << "." << ARAVIS_MINOR_VERSION << "." << ARAVIS_MICRO_VERSION;
   return v.str();
 }
-camera_driver::adapter_capability *const aravis_adapter::capabilities() {
-  return &mCapabilities;
-}
+
 void aravis_adapter::camera_list(std::vector<camera_driver::camera_descriptor> &cameraList) {
   // rebuild the cache. The camera should ensure the same instance being returned for the camera.
   arv_update_device_list();

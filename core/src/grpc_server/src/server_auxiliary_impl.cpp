@@ -9,7 +9,6 @@
 
 #include "server.h"
 #include "error.h"
-#include "capability.h"
 #include "logging.h"
 #include "config.h"
 
@@ -31,9 +30,6 @@ void camera_backend_server::transform_adapter(camera_driver::adapter *src,
   dest->set_name(src->name());
   dest->set_in_use(true);
   dest->set_version(src->version());
-  camera_driver::adapter_capability *adapterCapability = src->capabilities();
-  mvcam::AdapterCapability *capability = dest->mutable_capability();
-  capability->set_should_shut_down(adapterCapability->should_shutdown);
 }
 
 std::unique_ptr<grpc::Server> camera_backend_server::start_server() {
@@ -70,45 +66,18 @@ void camera_backend_server::transform_device_info(camera_driver::camera_device &
   dest->set_serial(src.camera_descriptor_ref.serial);
   dest->set_connected(src.opened());
   transform_adapter(src.adapter_ref, dest->mutable_adapter());
-  transform_device_capabilities(src.capabilities(), dest->mutable_capabilities());
 }
-void camera_backend_server::transform_device_capabilities(camera_driver::camera_capability *src,
-                                                          mvcam::CameraCapability *dest) const {
-  dest->set_can_shutdown(src->can_shutdown);
-  dest->set_can_open(src->should_open);
-  dest->set_can_capture_async(src->can_capture_async);
-  dest->set_can_capture(src->can_capture);
 
-  dest->set_can_adjust_exposure(src->can_adjust_exposure);
-
-  dest->set_can_adjust_gain(src->can_adjust_gain);
-
-  dest->set_can_adjust_gamma(src->can_adjust_gamma);
-  dest->set_can_adjust_black_level(src->can_adjust_black_level);
-  dest->set_can_adjust_frame_rate(src->can_adjust_frame_rate);
-  dest->set_can_set_frame_number(src->can_set_frame_number);
-  dest->set_can_get_temperature(src->can_get_temperature);
-  dest->set_can_suspend(src->can_suspend);
-  dest->set_can_reset(src->can_reset);
-}
 
 template<typename T>
 void camera_backend_server::apply_parameter(camera_driver::camera_device &camera,
                                             camera_driver::parameter_write<T> &dest,
                                             const mvcam::Parameter &param,
-                                            std::string fieldName,
-                                            bool capability
+                                            std::string fieldName
 ) {
-  if (param.should_update()) {
-    if (!capability) {
-      camera_capability_error ex(camera.camera_descriptor_ref);
-      ex << error_info(std::string("No capability for setting ") + fieldName);
-      BOOST_THROW_EXCEPTION(ex);
-    }
-    T &&value = param.value();
-    dest.should_update = true;
-    dest.value = value;
-  }
+  T &&value = param.value();
+  dest.should_update = true;
+  dest.value = value;
 }
 void camera_backend_server::configure_camera(camera_driver::camera_device &camera,
                                              const mvcam::ConfigureRequest *configuration) {
@@ -117,15 +86,13 @@ void camera_backend_server::configure_camera(camera_driver::camera_device &camer
   }
 
   camera_driver::camera_parameter_write internalConfiguration{};
-  camera_driver::camera_capability *cap = camera.capabilities();
   // configure gain
   const mvcam::Configuration &config = configuration->config();
   if (config.has_gain()) {
     apply_parameter(camera,
                     internalConfiguration.gain,
                     config.gain(),
-                    "gain",
-                    cap->can_adjust_gain
+                    "gain"
     );
   }
 
@@ -133,8 +100,7 @@ void camera_backend_server::configure_camera(camera_driver::camera_device &camer
     apply_parameter(camera,
                     internalConfiguration.exposure,
                     config.exposure(),
-                    "exposure",
-                    cap->can_adjust_exposure
+                    "exposure"
     );
   }
 
@@ -142,8 +108,7 @@ void camera_backend_server::configure_camera(camera_driver::camera_device &camer
     apply_parameter(camera,
                     internalConfiguration.black_level,
                     config.black_level(),
-                    "black level",
-                    cap->can_adjust_black_level
+                    "black level"
     );
   }
 
@@ -151,8 +116,7 @@ void camera_backend_server::configure_camera(camera_driver::camera_device &camer
     apply_parameter(camera,
                     internalConfiguration.gamma,
                     config.gamma(),
-                    "gamma",
-                    cap->can_adjust_gamma
+                    "gamma"
     );
   }
 
@@ -160,8 +124,7 @@ void camera_backend_server::configure_camera(camera_driver::camera_device &camer
     apply_parameter(camera,
                     internalConfiguration.frame_rate,
                     config.frame_rate(),
-                    "frame rate",
-                    cap->can_adjust_frame_rate
+                    "frame rate"
     );
 
   }
@@ -193,10 +156,24 @@ void camera_backend_server::get_configuration_from_camera(camera_driver::camera_
   camera.get_configuration(param);
 
   dest->mutable_black_level()->set_value(param.black_level.value);
+  dest->mutable_black_level()->set_max(param.black_level.max);
+  dest->mutable_black_level()->set_min(param.black_level.min);
+
   dest->mutable_gamma()->set_value(param.gamma.value);
+  dest->mutable_gamma()->set_max(param.gamma.max);
+  dest->mutable_gamma()->set_min(param.gamma.min);
+
   dest->mutable_exposure()->set_value(param.exposure.value);
+  dest->mutable_exposure()->set_min(param.exposure.min);
+  dest->mutable_exposure()->set_max(param.exposure.max);
+
   dest->mutable_frame_rate()->set_value(param.frame_rate.value);
+  dest->mutable_frame_rate()->set_min(param.frame_rate.min);
+  dest->mutable_frame_rate()->set_max(param.frame_rate.max);
+
   dest->mutable_gain()->set_value(param.gain.value);
+  dest->mutable_gain()->set_max(param.gain.max);
+  dest->mutable_gain()->set_min(param.gain.min);
 //  dest->mutable_frame_number()->set_value(param.frame_number.value);
 }
 
