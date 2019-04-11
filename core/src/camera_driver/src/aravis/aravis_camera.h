@@ -35,29 +35,11 @@ class aravis_camera : public camera_driver::camera_device {
   camera_driver::capture_started_event_handler mStartedCallback = nullptr;
   camera_driver::capture_stopped_event_handler mStoppedCallback = nullptr;
 
-
-  camera_driver::camera_capability mCapabilities{
-      .can_shutdown = true,
-      .should_open = true,
-      .can_capture_async = true,
-      .can_capture = true,
-      .can_adjust_exposure = true,
-      .can_adjust_gain = true,
-      .can_adjust_gamma = true,
-      .can_adjust_black_level = true,
-      .can_adjust_frame_rate = true,
-      .can_set_frame_number = true,
-      .can_get_temperature = true,
-      .can_suspend = false,
-      .can_reset = true,
-  };
-
  public:
   ~aravis_camera();
   explicit aravis_camera(camera_driver::camera_descriptor &cd);
   void open_camera() override;
   void shutdown_camera() override;
-  camera_driver::camera_capability *capabilities() override;
   void set_configuration(camera_driver::camera_parameter_write &param) override;
   void get_configuration(camera_driver::camera_parameter_read &param) override;
   bool opened() override;

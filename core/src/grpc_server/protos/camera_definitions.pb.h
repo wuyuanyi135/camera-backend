@@ -40,7 +40,7 @@ namespace protobuf_camera_5fdefinitions_2eproto {
 struct TableStruct {
   static const ::google::protobuf::internal::ParseTableField entries[];
   static const ::google::protobuf::internal::AuxillaryParseTableField aux[];
-  static const ::google::protobuf::internal::ParseTable schema[16];
+  static const ::google::protobuf::internal::ParseTable schema[14];
   static const ::google::protobuf::internal::FieldMetadata field_metadata[];
   static const ::google::protobuf::internal::SerializationTable serialization_table[];
   static const ::google::protobuf::uint32 offsets[];
@@ -48,18 +48,12 @@ struct TableStruct {
 void AddDescriptors();
 }  // namespace protobuf_camera_5fdefinitions_2eproto
 namespace mvcam {
-class AdapterCapability;
-class AdapterCapabilityDefaultTypeInternal;
-extern AdapterCapabilityDefaultTypeInternal _AdapterCapability_default_instance_;
 class AdapterInfo;
 class AdapterInfoDefaultTypeInternal;
 extern AdapterInfoDefaultTypeInternal _AdapterInfo_default_instance_;
 class AvailableAdaptersResponse;
 class AvailableAdaptersResponseDefaultTypeInternal;
 extern AvailableAdaptersResponseDefaultTypeInternal _AvailableAdaptersResponse_default_instance_;
-class CameraCapability;
-class CameraCapabilityDefaultTypeInternal;
-extern CameraCapabilityDefaultTypeInternal _CameraCapability_default_instance_;
 class Configuration;
 class ConfigurationDefaultTypeInternal;
 extern ConfigurationDefaultTypeInternal _Configuration_default_instance_;
@@ -99,10 +93,8 @@ extern StreamingRequestDefaultTypeInternal _StreamingRequest_default_instance_;
 }  // namespace mvcam
 namespace google {
 namespace protobuf {
-template<> ::mvcam::AdapterCapability* Arena::CreateMaybeMessage<::mvcam::AdapterCapability>(Arena*);
 template<> ::mvcam::AdapterInfo* Arena::CreateMaybeMessage<::mvcam::AdapterInfo>(Arena*);
 template<> ::mvcam::AvailableAdaptersResponse* Arena::CreateMaybeMessage<::mvcam::AvailableAdaptersResponse>(Arena*);
-template<> ::mvcam::CameraCapability* Arena::CreateMaybeMessage<::mvcam::CameraCapability>(Arena*);
 template<> ::mvcam::Configuration* Arena::CreateMaybeMessage<::mvcam::Configuration>(Arena*);
 template<> ::mvcam::ConfigureRequest* Arena::CreateMaybeMessage<::mvcam::ConfigureRequest>(Arena*);
 template<> ::mvcam::DeviceControlRequest* Arena::CreateMaybeMessage<::mvcam::DeviceControlRequest>(Arena*);
@@ -142,109 +134,6 @@ inline bool DeviceControlAction_Parse(
 }
 // ===================================================================
 
-class AdapterCapability : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mvcam.AdapterCapability) */ {
- public:
-  AdapterCapability();
-  virtual ~AdapterCapability();
-
-  AdapterCapability(const AdapterCapability& from);
-
-  inline AdapterCapability& operator=(const AdapterCapability& from) {
-    CopyFrom(from);
-    return *this;
-  }
-  #if LANG_CXX11
-  AdapterCapability(AdapterCapability&& from) noexcept
-    : AdapterCapability() {
-    *this = ::std::move(from);
-  }
-
-  inline AdapterCapability& operator=(AdapterCapability&& from) noexcept {
-    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
-      if (this != &from) InternalSwap(&from);
-    } else {
-      CopyFrom(from);
-    }
-    return *this;
-  }
-  #endif
-  static const ::google::protobuf::Descriptor* descriptor();
-  static const AdapterCapability& default_instance();
-
-  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
-  static inline const AdapterCapability* internal_default_instance() {
-    return reinterpret_cast<const AdapterCapability*>(
-               &_AdapterCapability_default_instance_);
-  }
-  static constexpr int kIndexInFileMessages =
-    0;
-
-  void Swap(AdapterCapability* other);
-  friend void swap(AdapterCapability& a, AdapterCapability& b) {
-    a.Swap(&b);
-  }
-
-  // implements Message ----------------------------------------------
-
-  inline AdapterCapability* New() const final {
-    return CreateMaybeMessage<AdapterCapability>(NULL);
-  }
-
-  AdapterCapability* New(::google::protobuf::Arena* arena) const final {
-    return CreateMaybeMessage<AdapterCapability>(arena);
-  }
-  void CopyFrom(const ::google::protobuf::Message& from) final;
-  void MergeFrom(const ::google::protobuf::Message& from) final;
-  void CopyFrom(const AdapterCapability& from);
-  void MergeFrom(const AdapterCapability& from);
-  void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  bool MergePartialFromCodedStream(
-      ::google::protobuf::io::CodedInputStream* input) final;
-  void SerializeWithCachedSizes(
-      ::google::protobuf::io::CodedOutputStream* output) const final;
-  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
-      bool deterministic, ::google::protobuf::uint8* target) const final;
-  int GetCachedSize() const final { return _cached_size_.Get(); }
-
-  private:
-  void SharedCtor();
-  void SharedDtor();
-  void SetCachedSize(int size) const final;
-  void InternalSwap(AdapterCapability* other);
-  private:
-  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
-    return NULL;
-  }
-  inline void* MaybeArenaPtr() const {
-    return NULL;
-  }
-  public:
-
-  ::google::protobuf::Metadata GetMetadata() const final;
-
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-
-  // bool should_shut_down = 1;
-  void clear_should_shut_down();
-  static const int kShouldShutDownFieldNumber = 1;
-  bool should_shut_down() const;
-  void set_should_shut_down(bool value);
-
-  // @@protoc_insertion_point(class_scope:mvcam.AdapterCapability)
- private:
-
-  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  bool should_shut_down_;
-  mutable ::google::protobuf::internal::CachedSize _cached_size_;
-  friend struct ::protobuf_camera_5fdefinitions_2eproto::TableStruct;
-};
-// -------------------------------------------------------------------
-
 class AdapterInfo : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mvcam.AdapterInfo) */ {
  public:
   AdapterInfo();
@@ -280,7 +169,7 @@ class AdapterInfo : public ::google::protobuf::Message /* @@protoc_insertion_poi
                &_AdapterInfo_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    1;
+    0;
 
   void Swap(AdapterInfo* other);
   friend void swap(AdapterInfo& a, AdapterInfo& b) {
@@ -374,18 +263,6 @@ class AdapterInfo : public ::google::protobuf::Message /* @@protoc_insertion_poi
   ::std::string* release_description();
   void set_allocated_description(::std::string* description);
 
-  // .mvcam.AdapterCapability capability = 5;
-  bool has_capability() const;
-  void clear_capability();
-  static const int kCapabilityFieldNumber = 5;
-  private:
-  const ::mvcam::AdapterCapability& _internal_capability() const;
-  public:
-  const ::mvcam::AdapterCapability& capability() const;
-  ::mvcam::AdapterCapability* release_capability();
-  ::mvcam::AdapterCapability* mutable_capability();
-  void set_allocated_capability(::mvcam::AdapterCapability* capability);
-
   // bool in_use = 4;
   void clear_in_use();
   static const int kInUseFieldNumber = 4;
@@ -399,7 +276,6 @@ class AdapterInfo : public ::google::protobuf::Message /* @@protoc_insertion_poi
   ::google::protobuf::internal::ArenaStringPtr name_;
   ::google::protobuf::internal::ArenaStringPtr version_;
   ::google::protobuf::internal::ArenaStringPtr description_;
-  ::mvcam::AdapterCapability* capability_;
   bool in_use_;
   mutable ::google::protobuf::internal::CachedSize _cached_size_;
   friend struct ::protobuf_camera_5fdefinitions_2eproto::TableStruct;
@@ -441,7 +317,7 @@ class AvailableAdaptersResponse : public ::google::protobuf::Message /* @@protoc
                &_AvailableAdaptersResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    2;
+    1;
 
   void Swap(AvailableAdaptersResponse* other);
   friend void swap(AvailableAdaptersResponse& a, AvailableAdaptersResponse& b) {
@@ -550,7 +426,7 @@ class GetDevicesRequest : public ::google::protobuf::Message /* @@protoc_inserti
                &_GetDevicesRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    3;
+    2;
 
   void Swap(GetDevicesRequest* other);
   friend void swap(GetDevicesRequest& a, GetDevicesRequest& b) {
@@ -633,193 +509,6 @@ class GetDevicesRequest : public ::google::protobuf::Message /* @@protoc_inserti
 };
 // -------------------------------------------------------------------
 
-class CameraCapability : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mvcam.CameraCapability) */ {
- public:
-  CameraCapability();
-  virtual ~CameraCapability();
-
-  CameraCapability(const CameraCapability& from);
-
-  inline CameraCapability& operator=(const CameraCapability& from) {
-    CopyFrom(from);
-    return *this;
-  }
-  #if LANG_CXX11
-  CameraCapability(CameraCapability&& from) noexcept
-    : CameraCapability() {
-    *this = ::std::move(from);
-  }
-
-  inline CameraCapability& operator=(CameraCapability&& from) noexcept {
-    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
-      if (this != &from) InternalSwap(&from);
-    } else {
-      CopyFrom(from);
-    }
-    return *this;
-  }
-  #endif
-  static const ::google::protobuf::Descriptor* descriptor();
-  static const CameraCapability& default_instance();
-
-  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
-  static inline const CameraCapability* internal_default_instance() {
-    return reinterpret_cast<const CameraCapability*>(
-               &_CameraCapability_default_instance_);
-  }
-  static constexpr int kIndexInFileMessages =
-    4;
-
-  void Swap(CameraCapability* other);
-  friend void swap(CameraCapability& a, CameraCapability& b) {
-    a.Swap(&b);
-  }
-
-  // implements Message ----------------------------------------------
-
-  inline CameraCapability* New() const final {
-    return CreateMaybeMessage<CameraCapability>(NULL);
-  }
-
-  CameraCapability* New(::google::protobuf::Arena* arena) const final {
-    return CreateMaybeMessage<CameraCapability>(arena);
-  }
-  void CopyFrom(const ::google::protobuf::Message& from) final;
-  void MergeFrom(const ::google::protobuf::Message& from) final;
-  void CopyFrom(const CameraCapability& from);
-  void MergeFrom(const CameraCapability& from);
-  void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  bool MergePartialFromCodedStream(
-      ::google::protobuf::io::CodedInputStream* input) final;
-  void SerializeWithCachedSizes(
-      ::google::protobuf::io::CodedOutputStream* output) const final;
-  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
-      bool deterministic, ::google::protobuf::uint8* target) const final;
-  int GetCachedSize() const final { return _cached_size_.Get(); }
-
-  private:
-  void SharedCtor();
-  void SharedDtor();
-  void SetCachedSize(int size) const final;
-  void InternalSwap(CameraCapability* other);
-  private:
-  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
-    return NULL;
-  }
-  inline void* MaybeArenaPtr() const {
-    return NULL;
-  }
-  public:
-
-  ::google::protobuf::Metadata GetMetadata() const final;
-
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-
-  // bool can_shutdown = 1;
-  void clear_can_shutdown();
-  static const int kCanShutdownFieldNumber = 1;
-  bool can_shutdown() const;
-  void set_can_shutdown(bool value);
-
-  // bool can_open = 2;
-  void clear_can_open();
-  static const int kCanOpenFieldNumber = 2;
-  bool can_open() const;
-  void set_can_open(bool value);
-
-  // bool can_capture_async = 3;
-  void clear_can_capture_async();
-  static const int kCanCaptureAsyncFieldNumber = 3;
-  bool can_capture_async() const;
-  void set_can_capture_async(bool value);
-
-  // bool can_capture = 4;
-  void clear_can_capture();
-  static const int kCanCaptureFieldNumber = 4;
-  bool can_capture() const;
-  void set_can_capture(bool value);
-
-  // bool can_adjust_exposure = 5;
-  void clear_can_adjust_exposure();
-  static const int kCanAdjustExposureFieldNumber = 5;
-  bool can_adjust_exposure() const;
-  void set_can_adjust_exposure(bool value);
-
-  // bool can_adjust_gain = 6;
-  void clear_can_adjust_gain();
-  static const int kCanAdjustGainFieldNumber = 6;
-  bool can_adjust_gain() const;
-  void set_can_adjust_gain(bool value);
-
-  // bool can_adjust_gamma = 7;
-  void clear_can_adjust_gamma();
-  static const int kCanAdjustGammaFieldNumber = 7;
-  bool can_adjust_gamma() const;
-  void set_can_adjust_gamma(bool value);
-
-  // bool can_adjust_black_level = 8;
-  void clear_can_adjust_black_level();
-  static const int kCanAdjustBlackLevelFieldNumber = 8;
-  bool can_adjust_black_level() const;
-  void set_can_adjust_black_level(bool value);
-
-  // bool can_adjust_frame_rate = 9;
-  void clear_can_adjust_frame_rate();
-  static const int kCanAdjustFrameRateFieldNumber = 9;
-  bool can_adjust_frame_rate() const;
-  void set_can_adjust_frame_rate(bool value);
-
-  // bool can_set_frame_number = 10;
-  void clear_can_set_frame_number();
-  static const int kCanSetFrameNumberFieldNumber = 10;
-  bool can_set_frame_number() const;
-  void set_can_set_frame_number(bool value);
-
-  // bool can_get_temperature = 11;
-  void clear_can_get_temperature();
-  static const int kCanGetTemperatureFieldNumber = 11;
-  bool can_get_temperature() const;
-  void set_can_get_temperature(bool value);
-
-  // bool can_suspend = 12;
-  void clear_can_suspend();
-  static const int kCanSuspendFieldNumber = 12;
-  bool can_suspend() const;
-  void set_can_suspend(bool value);
-
-  // bool can_reset = 13;
-  void clear_can_reset();
-  static const int kCanResetFieldNumber = 13;
-  bool can_reset() const;
-  void set_can_reset(bool value);
-
-  // @@protoc_insertion_point(class_scope:mvcam.CameraCapability)
- private:
-
-  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  bool can_shutdown_;
-  bool can_open_;
-  bool can_capture_async_;
-  bool can_capture_;
-  bool can_adjust_exposure_;
-  bool can_adjust_gain_;
-  bool can_adjust_gamma_;
-  bool can_adjust_black_level_;
-  bool can_adjust_frame_rate_;
-  bool can_set_frame_number_;
-  bool can_get_temperature_;
-  bool can_suspend_;
-  bool can_reset_;
-  mutable ::google::protobuf::internal::CachedSize _cached_size_;
-  friend struct ::protobuf_camera_5fdefinitions_2eproto::TableStruct;
-};
-// -------------------------------------------------------------------
-
 class DeviceInfo : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mvcam.DeviceInfo) */ {
  public:
   DeviceInfo();
@@ -855,7 +544,7 @@ class DeviceInfo : public ::google::protobuf::Message /* @@protoc_insertion_poin
                &_DeviceInfo_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    5;
+    3;
 
   void Swap(DeviceInfo* other);
   friend void swap(DeviceInfo& a, DeviceInfo& b) {
@@ -989,18 +678,6 @@ class DeviceInfo : public ::google::protobuf::Message /* @@protoc_insertion_poin
   ::mvcam::AdapterInfo* mutable_adapter();
   void set_allocated_adapter(::mvcam::AdapterInfo* adapter);
 
-  // .mvcam.CameraCapability capabilities = 7;
-  bool has_capabilities() const;
-  void clear_capabilities();
-  static const int kCapabilitiesFieldNumber = 7;
-  private:
-  const ::mvcam::CameraCapability& _internal_capabilities() const;
-  public:
-  const ::mvcam::CameraCapability& capabilities() const;
-  ::mvcam::CameraCapability* release_capabilities();
-  ::mvcam::CameraCapability* mutable_capabilities();
-  void set_allocated_capabilities(::mvcam::CameraCapability* capabilities);
-
   // bool connected = 8;
   void clear_connected();
   static const int kConnectedFieldNumber = 8;
@@ -1017,7 +694,6 @@ class DeviceInfo : public ::google::protobuf::Message /* @@protoc_insertion_poin
   ::google::protobuf::internal::ArenaStringPtr version_;
   ::google::protobuf::internal::ArenaStringPtr serial_;
   ::mvcam::AdapterInfo* adapter_;
-  ::mvcam::CameraCapability* capabilities_;
   bool connected_;
   mutable ::google::protobuf::internal::CachedSize _cached_size_;
   friend struct ::protobuf_camera_5fdefinitions_2eproto::TableStruct;
@@ -1059,7 +735,7 @@ class GetDevicesResponse : public ::google::protobuf::Message /* @@protoc_insert
                &_GetDevicesResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    6;
+    4;
 
   void Swap(GetDevicesResponse* other);
   friend void swap(GetDevicesResponse& a, GetDevicesResponse& b) {
@@ -1168,7 +844,7 @@ class IdRequest : public ::google::protobuf::Message /* @@protoc_insertion_point
                &_IdRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    7;
+    5;
 
   void Swap(IdRequest* other);
   friend void swap(IdRequest& a, IdRequest& b) {
@@ -1279,7 +955,7 @@ class Parameter : public ::google::protobuf::Message /* @@protoc_insertion_point
                &_Parameter_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    8;
+    6;
 
   void Swap(Parameter* other);
   friend void swap(Parameter& a, Parameter& b) {
@@ -1337,18 +1013,25 @@ class Parameter : public ::google::protobuf::Message /* @@protoc_insertion_point
   double value() const;
   void set_value(double value);
 
-  // bool should_update = 1;
-  void clear_should_update();
-  static const int kShouldUpdateFieldNumber = 1;
-  bool should_update() const;
-  void set_should_update(bool value);
+  // double min = 3;
+  void clear_min();
+  static const int kMinFieldNumber = 3;
+  double min() const;
+  void set_min(double value);
+
+  // double max = 4;
+  void clear_max();
+  static const int kMaxFieldNumber = 4;
+  double max() const;
+  void set_max(double value);
 
   // @@protoc_insertion_point(class_scope:mvcam.Parameter)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   double value_;
-  bool should_update_;
+  double min_;
+  double max_;
   mutable ::google::protobuf::internal::CachedSize _cached_size_;
   friend struct ::protobuf_camera_5fdefinitions_2eproto::TableStruct;
 };
@@ -1389,7 +1072,7 @@ class Configuration : public ::google::protobuf::Message /* @@protoc_insertion_p
                &_Configuration_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    9;
+    7;
 
   void Swap(Configuration* other);
   friend void swap(Configuration& a, Configuration& b) {
@@ -1550,7 +1233,7 @@ class ConfigureRequest : public ::google::protobuf::Message /* @@protoc_insertio
                &_ConfigureRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    10;
+    8;
 
   void Swap(ConfigureRequest* other);
   friend void swap(ConfigureRequest& a, ConfigureRequest& b) {
@@ -1626,12 +1309,19 @@ class ConfigureRequest : public ::google::protobuf::Message /* @@protoc_insertio
   ::mvcam::Configuration* mutable_config();
   void set_allocated_config(::mvcam::Configuration* config);
 
+  // bool query = 3;
+  void clear_query();
+  static const int kQueryFieldNumber = 3;
+  bool query() const;
+  void set_query(bool value);
+
   // @@protoc_insertion_point(class_scope:mvcam.ConfigureRequest)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   ::mvcam::IdRequest* id_;
   ::mvcam::Configuration* config_;
+  bool query_;
   mutable ::google::protobuf::internal::CachedSize _cached_size_;
   friend struct ::protobuf_camera_5fdefinitions_2eproto::TableStruct;
 };
@@ -1672,7 +1362,7 @@ class Frame : public ::google::protobuf::Message /* @@protoc_insertion_point(cla
                &_Frame_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    11;
+    9;
 
   void Swap(Frame* other);
   friend void swap(Frame& a, Frame& b) {
@@ -1831,7 +1521,7 @@ class FrameStream : public ::google::protobuf::Message /* @@protoc_insertion_poi
                &_FrameStream_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    12;
+    10;
 
   void Swap(FrameStream* other);
   friend void swap(FrameStream& a, FrameStream& b) {
@@ -1940,7 +1630,7 @@ class StreamingRequest : public ::google::protobuf::Message /* @@protoc_insertio
                &_StreamingRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    13;
+    11;
 
   void Swap(StreamingRequest* other);
   friend void swap(StreamingRequest& a, StreamingRequest& b) {
@@ -2063,7 +1753,7 @@ class Status : public ::google::protobuf::Message /* @@protoc_insertion_point(cl
                &_Status_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    14;
+    12;
 
   void Swap(Status* other);
   friend void swap(Status& a, Status& b) {
@@ -2180,7 +1870,7 @@ class DeviceControlRequest : public ::google::protobuf::Message /* @@protoc_inse
                &_DeviceControlRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    15;
+    13;
 
   void Swap(DeviceControlRequest* other);
   friend void swap(DeviceControlRequest& a, DeviceControlRequest& b) {
@@ -2268,24 +1958,6 @@ class DeviceControlRequest : public ::google::protobuf::Message /* @@protoc_inse
   #pragma GCC diagnostic push
   #pragma GCC diagnostic ignored "-Wstrict-aliasing"
 #endif  // __GNUC__
-// AdapterCapability
-
-// bool should_shut_down = 1;
-inline void AdapterCapability::clear_should_shut_down() {
-  should_shut_down_ = false;
-}
-inline bool AdapterCapability::should_shut_down() const {
-  // @@protoc_insertion_point(field_get:mvcam.AdapterCapability.should_shut_down)
-  return should_shut_down_;
-}
-inline void AdapterCapability::set_should_shut_down(bool value) {
-  
-  should_shut_down_ = value;
-  // @@protoc_insertion_point(field_set:mvcam.AdapterCapability.should_shut_down)
-}
-
-// -------------------------------------------------------------------
-
 // AdapterInfo
 
 // string name = 1;
@@ -2461,60 +2133,6 @@ inline void AdapterInfo::set_in_use(bool value) {
   // @@protoc_insertion_point(field_set:mvcam.AdapterInfo.in_use)
 }
 
-// .mvcam.AdapterCapability capability = 5;
-inline bool AdapterInfo::has_capability() const {
-  return this != internal_default_instance() && capability_ != NULL;
-}
-inline void AdapterInfo::clear_capability() {
-  if (GetArenaNoVirtual() == NULL && capability_ != NULL) {
-    delete capability_;
-  }
-  capability_ = NULL;
-}
-inline const ::mvcam::AdapterCapability& AdapterInfo::_internal_capability() const {
-  return *capability_;
-}
-inline const ::mvcam::AdapterCapability& AdapterInfo::capability() const {
-  const ::mvcam::AdapterCapability* p = capability_;
-  // @@protoc_insertion_point(field_get:mvcam.AdapterInfo.capability)
-  return p != NULL ? *p : *reinterpret_cast<const ::mvcam::AdapterCapability*>(
-      &::mvcam::_AdapterCapability_default_instance_);
-}
-inline ::mvcam::AdapterCapability* AdapterInfo::release_capability() {
-  // @@protoc_insertion_point(field_release:mvcam.AdapterInfo.capability)
-  
-  ::mvcam::AdapterCapability* temp = capability_;
-  capability_ = NULL;
-  return temp;
-}
-inline ::mvcam::AdapterCapability* AdapterInfo::mutable_capability() {
-  
-  if (capability_ == NULL) {
-    auto* p = CreateMaybeMessage<::mvcam::AdapterCapability>(GetArenaNoVirtual());
-    capability_ = p;
-  }
-  // @@protoc_insertion_point(field_mutable:mvcam.AdapterInfo.capability)
-  return capability_;
-}
-inline void AdapterInfo::set_allocated_capability(::mvcam::AdapterCapability* capability) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete capability_;
-  }
-  if (capability) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      capability = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, capability, submessage_arena);
-    }
-    
-  } else {
-    
-  }
-  capability_ = capability;
-  // @@protoc_insertion_point(field_set_allocated:mvcam.AdapterInfo.capability)
-}
-
 // -------------------------------------------------------------------
 
 // AvailableAdaptersResponse
@@ -2618,192 +2236,6 @@ inline void GetDevicesRequest::set_use_cache(bool value) {
   
   use_cache_ = value;
   // @@protoc_insertion_point(field_set:mvcam.GetDevicesRequest.use_cache)
-}
-
-// -------------------------------------------------------------------
-
-// CameraCapability
-
-// bool can_shutdown = 1;
-inline void CameraCapability::clear_can_shutdown() {
-  can_shutdown_ = false;
-}
-inline bool CameraCapability::can_shutdown() const {
-  // @@protoc_insertion_point(field_get:mvcam.CameraCapability.can_shutdown)
-  return can_shutdown_;
-}
-inline void CameraCapability::set_can_shutdown(bool value) {
-  
-  can_shutdown_ = value;
-  // @@protoc_insertion_point(field_set:mvcam.CameraCapability.can_shutdown)
-}
-
-// bool can_open = 2;
-inline void CameraCapability::clear_can_open() {
-  can_open_ = false;
-}
-inline bool CameraCapability::can_open() const {
-  // @@protoc_insertion_point(field_get:mvcam.CameraCapability.can_open)
-  return can_open_;
-}
-inline void CameraCapability::set_can_open(bool value) {
-  
-  can_open_ = value;
-  // @@protoc_insertion_point(field_set:mvcam.CameraCapability.can_open)
-}
-
-// bool can_capture_async = 3;
-inline void CameraCapability::clear_can_capture_async() {
-  can_capture_async_ = false;
-}
-inline bool CameraCapability::can_capture_async() const {
-  // @@protoc_insertion_point(field_get:mvcam.CameraCapability.can_capture_async)
-  return can_capture_async_;
-}
-inline void CameraCapability::set_can_capture_async(bool value) {
-  
-  can_capture_async_ = value;
-  // @@protoc_insertion_point(field_set:mvcam.CameraCapability.can_capture_async)
-}
-
-// bool can_capture = 4;
-inline void CameraCapability::clear_can_capture() {
-  can_capture_ = false;
-}
-inline bool CameraCapability::can_capture() const {
-  // @@protoc_insertion_point(field_get:mvcam.CameraCapability.can_capture)
-  return can_capture_;
-}
-inline void CameraCapability::set_can_capture(bool value) {
-  
-  can_capture_ = value;
-  // @@protoc_insertion_point(field_set:mvcam.CameraCapability.can_capture)
-}
-
-// bool can_adjust_exposure = 5;
-inline void CameraCapability::clear_can_adjust_exposure() {
-  can_adjust_exposure_ = false;
-}
-inline bool CameraCapability::can_adjust_exposure() const {
-  // @@protoc_insertion_point(field_get:mvcam.CameraCapability.can_adjust_exposure)
-  return can_adjust_exposure_;
-}
-inline void CameraCapability::set_can_adjust_exposure(bool value) {
-  
-  can_adjust_exposure_ = value;
-  // @@protoc_insertion_point(field_set:mvcam.CameraCapability.can_adjust_exposure)
-}
-
-// bool can_adjust_gain = 6;
-inline void CameraCapability::clear_can_adjust_gain() {
-  can_adjust_gain_ = false;
-}
-inline bool CameraCapability::can_adjust_gain() const {
-  // @@protoc_insertion_point(field_get:mvcam.CameraCapability.can_adjust_gain)
-  return can_adjust_gain_;
-}
-inline void CameraCapability::set_can_adjust_gain(bool value) {
-  
-  can_adjust_gain_ = value;
-  // @@protoc_insertion_point(field_set:mvcam.CameraCapability.can_adjust_gain)
-}
-
-// bool can_adjust_gamma = 7;
-inline void CameraCapability::clear_can_adjust_gamma() {
-  can_adjust_gamma_ = false;
-}
-inline bool CameraCapability::can_adjust_gamma() const {
-  // @@protoc_insertion_point(field_get:mvcam.CameraCapability.can_adjust_gamma)
-  return can_adjust_gamma_;
-}
-inline void CameraCapability::set_can_adjust_gamma(bool value) {
-  
-  can_adjust_gamma_ = value;
-  // @@protoc_insertion_point(field_set:mvcam.CameraCapability.can_adjust_gamma)
-}
-
-// bool can_adjust_black_level = 8;
-inline void CameraCapability::clear_can_adjust_black_level() {
-  can_adjust_black_level_ = false;
-}
-inline bool CameraCapability::can_adjust_black_level() const {
-  // @@protoc_insertion_point(field_get:mvcam.CameraCapability.can_adjust_black_level)
-  return can_adjust_black_level_;
-}
-inline void CameraCapability::set_can_adjust_black_level(bool value) {
-  
-  can_adjust_black_level_ = value;
-  // @@protoc_insertion_point(field_set:mvcam.CameraCapability.can_adjust_black_level)
-}
-
-// bool can_adjust_frame_rate = 9;
-inline void CameraCapability::clear_can_adjust_frame_rate() {
-  can_adjust_frame_rate_ = false;
-}
-inline bool CameraCapability::can_adjust_frame_rate() const {
-  // @@protoc_insertion_point(field_get:mvcam.CameraCapability.can_adjust_frame_rate)
-  return can_adjust_frame_rate_;
-}
-inline void CameraCapability::set_can_adjust_frame_rate(bool value) {
-  
-  can_adjust_frame_rate_ = value;
-  // @@protoc_insertion_point(field_set:mvcam.CameraCapability.can_adjust_frame_rate)
-}
-
-// bool can_set_frame_number = 10;
-inline void CameraCapability::clear_can_set_frame_number() {
-  can_set_frame_number_ = false;
-}
-inline bool CameraCapability::can_set_frame_number() const {
-  // @@protoc_insertion_point(field_get:mvcam.CameraCapability.can_set_frame_number)
-  return can_set_frame_number_;
-}
-inline void CameraCapability::set_can_set_frame_number(bool value) {
-  
-  can_set_frame_number_ = value;
-  // @@protoc_insertion_point(field_set:mvcam.CameraCapability.can_set_frame_number)
-}
-
-// bool can_get_temperature = 11;
-inline void CameraCapability::clear_can_get_temperature() {
-  can_get_temperature_ = false;
-}
-inline bool CameraCapability::can_get_temperature() const {
-  // @@protoc_insertion_point(field_get:mvcam.CameraCapability.can_get_temperature)
-  return can_get_temperature_;
-}
-inline void CameraCapability::set_can_get_temperature(bool value) {
-  
-  can_get_temperature_ = value;
-  // @@protoc_insertion_point(field_set:mvcam.CameraCapability.can_get_temperature)
-}
-
-// bool can_suspend = 12;
-inline void CameraCapability::clear_can_suspend() {
-  can_suspend_ = false;
-}
-inline bool CameraCapability::can_suspend() const {
-  // @@protoc_insertion_point(field_get:mvcam.CameraCapability.can_suspend)
-  return can_suspend_;
-}
-inline void CameraCapability::set_can_suspend(bool value) {
-  
-  can_suspend_ = value;
-  // @@protoc_insertion_point(field_set:mvcam.CameraCapability.can_suspend)
-}
-
-// bool can_reset = 13;
-inline void CameraCapability::clear_can_reset() {
-  can_reset_ = false;
-}
-inline bool CameraCapability::can_reset() const {
-  // @@protoc_insertion_point(field_get:mvcam.CameraCapability.can_reset)
-  return can_reset_;
-}
-inline void CameraCapability::set_can_reset(bool value) {
-  
-  can_reset_ = value;
-  // @@protoc_insertion_point(field_set:mvcam.CameraCapability.can_reset)
 }
 
 // -------------------------------------------------------------------
@@ -3129,60 +2561,6 @@ inline void DeviceInfo::set_allocated_serial(::std::string* serial) {
   // @@protoc_insertion_point(field_set_allocated:mvcam.DeviceInfo.serial)
 }
 
-// .mvcam.CameraCapability capabilities = 7;
-inline bool DeviceInfo::has_capabilities() const {
-  return this != internal_default_instance() && capabilities_ != NULL;
-}
-inline void DeviceInfo::clear_capabilities() {
-  if (GetArenaNoVirtual() == NULL && capabilities_ != NULL) {
-    delete capabilities_;
-  }
-  capabilities_ = NULL;
-}
-inline const ::mvcam::CameraCapability& DeviceInfo::_internal_capabilities() const {
-  return *capabilities_;
-}
-inline const ::mvcam::CameraCapability& DeviceInfo::capabilities() const {
-  const ::mvcam::CameraCapability* p = capabilities_;
-  // @@protoc_insertion_point(field_get:mvcam.DeviceInfo.capabilities)
-  return p != NULL ? *p : *reinterpret_cast<const ::mvcam::CameraCapability*>(
-      &::mvcam::_CameraCapability_default_instance_);
-}
-inline ::mvcam::CameraCapability* DeviceInfo::release_capabilities() {
-  // @@protoc_insertion_point(field_release:mvcam.DeviceInfo.capabilities)
-  
-  ::mvcam::CameraCapability* temp = capabilities_;
-  capabilities_ = NULL;
-  return temp;
-}
-inline ::mvcam::CameraCapability* DeviceInfo::mutable_capabilities() {
-  
-  if (capabilities_ == NULL) {
-    auto* p = CreateMaybeMessage<::mvcam::CameraCapability>(GetArenaNoVirtual());
-    capabilities_ = p;
-  }
-  // @@protoc_insertion_point(field_mutable:mvcam.DeviceInfo.capabilities)
-  return capabilities_;
-}
-inline void DeviceInfo::set_allocated_capabilities(::mvcam::CameraCapability* capabilities) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete capabilities_;
-  }
-  if (capabilities) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      capabilities = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, capabilities, submessage_arena);
-    }
-    
-  } else {
-    
-  }
-  capabilities_ = capabilities;
-  // @@protoc_insertion_point(field_set_allocated:mvcam.DeviceInfo.capabilities)
-}
-
 // bool connected = 8;
 inline void DeviceInfo::clear_connected() {
   connected_ = false;
@@ -3292,20 +2670,6 @@ inline void IdRequest::set_allocated_id(::std::string* id) {
 
 // Parameter
 
-// bool should_update = 1;
-inline void Parameter::clear_should_update() {
-  should_update_ = false;
-}
-inline bool Parameter::should_update() const {
-  // @@protoc_insertion_point(field_get:mvcam.Parameter.should_update)
-  return should_update_;
-}
-inline void Parameter::set_should_update(bool value) {
-  
-  should_update_ = value;
-  // @@protoc_insertion_point(field_set:mvcam.Parameter.should_update)
-}
-
 // double value = 2;
 inline void Parameter::clear_value() {
   value_ = 0;
@@ -3318,6 +2682,34 @@ inline void Parameter::set_value(double value) {
   
   value_ = value;
   // @@protoc_insertion_point(field_set:mvcam.Parameter.value)
+}
+
+// double min = 3;
+inline void Parameter::clear_min() {
+  min_ = 0;
+}
+inline double Parameter::min() const {
+  // @@protoc_insertion_point(field_get:mvcam.Parameter.min)
+  return min_;
+}
+inline void Parameter::set_min(double value) {
+  
+  min_ = value;
+  // @@protoc_insertion_point(field_set:mvcam.Parameter.min)
+}
+
+// double max = 4;
+inline void Parameter::clear_max() {
+  max_ = 0;
+}
+inline double Parameter::max() const {
+  // @@protoc_insertion_point(field_get:mvcam.Parameter.max)
+  return max_;
+}
+inline void Parameter::set_max(double value) {
+  
+  max_ = value;
+  // @@protoc_insertion_point(field_set:mvcam.Parameter.max)
 }
 
 // -------------------------------------------------------------------
@@ -3704,6 +3096,20 @@ inline void ConfigureRequest::set_allocated_config(::mvcam::Configuration* confi
   }
   config_ = config;
   // @@protoc_insertion_point(field_set_allocated:mvcam.ConfigureRequest.config)
+}
+
+// bool query = 3;
+inline void ConfigureRequest::clear_query() {
+  query_ = false;
+}
+inline bool ConfigureRequest::query() const {
+  // @@protoc_insertion_point(field_get:mvcam.ConfigureRequest.query)
+  return query_;
+}
+inline void ConfigureRequest::set_query(bool value) {
+  
+  query_ = value;
+  // @@protoc_insertion_point(field_set:mvcam.ConfigureRequest.query)
 }
 
 // -------------------------------------------------------------------
@@ -4123,10 +3529,6 @@ inline void DeviceControlRequest::set_action(::mvcam::DeviceControlAction value)
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
-// -------------------------------------------------------------------
-
-// -------------------------------------------------------------------
-
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------

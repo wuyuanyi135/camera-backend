@@ -86,17 +86,7 @@ void aravis_camera::shutdown_camera() {
   mCamera = nullptr;
   mDevice = nullptr;
 }
-camera_driver::camera_capability *aravis_camera::capabilities() {
-//  open_guard();
-//  if (!arv_device_get_feature(mDevice, "ExposureTime")) mCapabilities.can_adjust_exposure = false;
-//  if (!arv_device_get_feature(mDevice, "AcquisitionFrameRate")) mCapabilities.can_adjust_frame_rate = false;
-//  if (!arv_device_get_feature(mDevice, "Gain")) mCapabilities.can_adjust_gain = false;
-//  if (!arv_device_get_feature(mDevice, "BlackLevel")) mCapabilities.can_adjust_black_level = false;
-//  if (!arv_device_get_feature(mDevice, "Gamma")) mCapabilities.can_adjust_gamma = false;
-//  if (!arv_device_get_feature(mDevice, "AcquisitionFrameCount")) mCapabilities.can_set_frame_number = false;
 
-  return &mCapabilities;
-}
 void aravis_camera::set_configuration(camera_driver::camera_parameter_write &param) {
   open_guard();
   try {

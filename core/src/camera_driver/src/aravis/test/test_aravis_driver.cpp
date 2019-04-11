@@ -72,22 +72,6 @@ BOOST_AUTO_TEST_CASE(test_aravis_environment) {
     adapter.selected_camera->open_camera();
     BOOST_TEST_CHECK(adapter.selected_camera->opened());
 
-    camera_driver::camera_capability *const capabilities = adapter.selected_camera->capabilities();
-#define TMP_PRINT_CAP(var, field) BOOST_TEST_MESSAGE(#field<< ": " << var->field)
-    TMP_PRINT_CAP(capabilities, can_shutdown);
-    TMP_PRINT_CAP(capabilities, should_open);
-    TMP_PRINT_CAP(capabilities, can_capture_async);
-    TMP_PRINT_CAP(capabilities, can_capture);
-    TMP_PRINT_CAP(capabilities, can_adjust_exposure);
-    TMP_PRINT_CAP(capabilities, can_adjust_gain);
-    TMP_PRINT_CAP(capabilities, can_adjust_gamma);
-    TMP_PRINT_CAP(capabilities, can_adjust_black_level);
-    TMP_PRINT_CAP(capabilities, can_adjust_frame_rate);
-    TMP_PRINT_CAP(capabilities, can_set_frame_number);
-    TMP_PRINT_CAP(capabilities, can_get_temperature);
-    TMP_PRINT_CAP(capabilities, can_suspend);
-    TMP_PRINT_CAP(capabilities, can_reset);
-
   } catch (boost::exception &ex) {
     BOOST_TEST_MESSAGE(boost::current_exception_diagnostic_information(true));
     throw;

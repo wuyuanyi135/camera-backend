@@ -6,7 +6,6 @@
 #define CAMERA_BACKEND_CAMERA_H
 
 #include "camera_descriptor.h"
-#include "capability.h"
 #include "camera_parameter.h"
 #include "frame.h"
 #include "status.h"
@@ -22,9 +21,6 @@ class camera_device {
  public:
   virtual void open_camera() = 0;
   virtual void shutdown_camera() = 0;
-
-  /// static capabilities: should not require open.
-  virtual camera_capability* capabilities() = 0;
 
  public:
   /// Configure the camera parameter. Do not check the capabilities in this function. The invoker will observe the capability limitation.

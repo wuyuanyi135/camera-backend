@@ -273,11 +273,8 @@ BOOST_AUTO_TEST_CASE(test_configure) {
 //    pConfiguration->mutable_frame_number()->set_value(5);
 //    pConfiguration->mutable_frame_number()->set_should_update(true);
     pConfiguration->mutable_frame_rate()->set_value(30);
-    pConfiguration->mutable_frame_rate()->set_should_update(true);
     pConfiguration->mutable_gain()->set_value(5);
-    pConfiguration->mutable_gain()->set_should_update(true);
     pConfiguration->mutable_exposure()->set_value(45);
-    pConfiguration->mutable_exposure()->set_should_update(true);
 
     grpc::Status status = client.stub->ConfigureCamera(&context, req, &emptyResponse);
     if (!status.ok()) {

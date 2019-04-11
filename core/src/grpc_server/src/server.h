@@ -17,7 +17,6 @@ class camera_backend_server : public mvcam::MicroVisionCameraService::Service {
   std::shared_ptr<camera_driver::framework> mFramework;
   void load_adapters();
 
-  // modify this function to register new capabilities
   void transform_adapter(camera_driver::adapter *src,
                          mvcam::AdapterInfo *dest);
   void transform_device_info(camera_driver::camera_device &src, mvcam::DeviceInfo *dest);
@@ -43,8 +42,7 @@ class camera_backend_server : public mvcam::MicroVisionCameraService::Service {
   void apply_parameter(camera_driver::camera_device &camera,
                        camera_driver::parameter_write<T> &dest,
                        const mvcam::Parameter &param,
-                       std::string fieldName,
-                       bool capability
+                       std::string fieldName
   );
 
 
@@ -88,7 +86,7 @@ class camera_backend_server : public mvcam::MicroVisionCameraService::Service {
   grpc::Status ControlDeviceState(::grpc::ServerContext *context,
                                   const ::mvcam::DeviceControlRequest *request,
                                   ::google::protobuf::Empty *response) override;
-  /// This function does not check capabilities. Front end should decide whether the status entry should be displayed or not.
+
   /// \param context
   /// \param request
   /// \param response
@@ -102,6 +100,6 @@ class camera_backend_server : public mvcam::MicroVisionCameraService::Service {
   grpc::Status Streaming(::grpc::ServerContext *context,
                          const ::mvcam::StreamingRequest *request,
                          ::grpc::ServerWriter<::mvcam::FrameStream> *writer) override;
-  void transform_device_capabilities(camera_driver::camera_capability *src, mvcam::CameraCapability *dest) const;
+
 };
 #endif //CAMERA_BACKEND_SERVER_H
