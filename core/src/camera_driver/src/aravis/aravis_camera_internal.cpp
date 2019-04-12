@@ -121,7 +121,7 @@ void aravis_camera::capture_finalize() {
 
 // TODO: when reset this is called. how to ensure the removed camera calling this function?
 void aravis_camera::invalidate_camera() {
-  CDINFO("Camera " << cd.model << " was flagged invalid");
+  CDINFO("Camera " << id << " was flagged invalid");
   mValidFlag = false;
 }
 void aravis_camera::check_device_status_or_invalidate() {

@@ -18,7 +18,7 @@
 namespace aravis_camera_driver {
 class aravis_camera : public camera_driver::camera_device {
  private:
-  camera_driver::camera_descriptor cd;
+  std::string id;
   ArvCamera *mCamera = nullptr;
   ArvDevice *mDevice = nullptr;
   ArvStream* mStream = nullptr;
@@ -38,7 +38,7 @@ class aravis_camera : public camera_driver::camera_device {
 
  public:
   ~aravis_camera();
-  explicit aravis_camera(camera_driver::camera_descriptor &cd);
+  explicit aravis_camera(std::string id);
   void open_camera() override;
   void shutdown_camera() override;
   void set_configuration(camera_driver::camera_parameter_write &param) override;

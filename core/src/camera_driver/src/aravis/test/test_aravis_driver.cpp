@@ -51,7 +51,7 @@ struct adapter_fixture {
       }
 
       selected_camera_descriptor = cameraList[choice];
-      selected_camera = instance->create_camera(selected_camera_descriptor);
+      selected_camera = instance->create_camera(selected_camera_descriptor.id);
       return true;
     }
   }
@@ -92,7 +92,7 @@ BOOST_AUTO_TEST_CASE(test_aravis_reenumerate) {
     }
     BOOST_TEST_MESSAGE("Found " << cameraList.size() << " Camera(s).");
 
-    const std::shared_ptr<camera_driver::camera_device> camera1 = adapter.instance->create_camera(cameraList[0]);
+    const std::shared_ptr<camera_driver::camera_device> camera1 = adapter.instance->create_camera(cameraList[0].id);
 
     BOOST_TEST_MESSAGE("First open");
     camera1->open_camera();
@@ -103,7 +103,7 @@ BOOST_AUTO_TEST_CASE(test_aravis_reenumerate) {
     // re-enumerated device must share the same shared_ptr! so it should still be accessible and opened
 
     BOOST_TEST_CHECK(camera1->opened());
-    const std::shared_ptr<camera_driver::camera_device> camera2 = adapter.instance->create_camera(cameraList[0]);
+    const std::shared_ptr<camera_driver::camera_device> camera2 = adapter.instance->create_camera(cameraList[0].id);
     // camera2 should fail to open because now adapter does not cache objects
     try {
       camera2->open_camera();

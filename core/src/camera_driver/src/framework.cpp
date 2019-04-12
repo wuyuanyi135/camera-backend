@@ -6,11 +6,11 @@
 #include <iostream>
 
 #include "framework.h"
+#include "camera_driver.h"
 #include "exceptions.h"
 namespace camera_driver {
-std::unique_ptr<adapter> framework::INTERFACE_REGISTRATION[] = {
-    std::unique_ptr<adapter>(new aravis_camera_driver::aravis_adapter()),
-};
+std::unique_ptr<adapter>
+    framework::INTERFACE_REGISTRATION = std::unique_ptr<adapter>(new aravis_camera_driver::aravis_adapter());
 
 std::shared_ptr<framework> framework::mInstance;
 
@@ -22,53 +22,26 @@ std::shared_ptr<framework> framework::get_instance() {
 }
 framework::framework() {
 }
-void framework::update_cache(adapter *obj) {
-  if (obj == nullptr) {
-    for (auto &it: INTERFACE_REGISTRATION) {
-      update_cache_internal(&*it);
+
+adapter *framework::get_adapter() {
+  return &*INTERFACE_REGISTRATION;
+}
+std::vector<camera_driver::camera_descriptor> framework::camera_list() {
+  std::vector<camera_driver::camera_descriptor> list;
+  get_adapter()->camera_list(list);
+
+  return list;
+}
+
+void framework::select_camera_by_id(std::string id) {
+
+  if (this->selected_camera) {
+    if (id == this->selected_camera->id) {
+      return;
     }
-  } else {
-    update_cache_internal(obj);
+    this->selected_camera.reset();
   }
-}
-
-void framework::update_cache_internal(adapter *obj) {
-  std::vector<camera_descriptor> camera;
-  obj->camera_list(camera);
-
-  std::unordered_map<std::string, std::shared_ptr<camera_device>> tmp;
-  for (auto &cd : camera) {
-    if (mCameraCache.find(cd.id) == mCameraCache.end()) {
-      // not found
-      const std::shared_ptr<camera_device> ptr = obj->create_camera(cd);
-      tmp[cd.id] = ptr;
-    } else {
-      tmp[cd.id] = mCameraCache[cd.id];
-    }
-  }
-  mCameraCache = tmp;
-}
-const std::shared_ptr<camera_device> framework::query_by_id(std::string id) {
-  if (mCameraCache.find(id) == mCameraCache.end()) {
-    id_not_found_error ex;
-    BOOST_THROW_EXCEPTION(ex);
-  }
-
-  return mCameraCache[id];
-}
-std::vector<adapter *> framework::adapters() {
-  std::vector<adapter *> v;
-  for (std::unique_ptr<adapter> &it: INTERFACE_REGISTRATION) {
-    v.emplace_back(it.get());
-  }
-  return v;
-}
-std::vector<std::shared_ptr<camera_device>> framework::camera_list() {
-  std::vector<std::shared_ptr<camera_device>> containerList;
-  for (auto &cam : mCameraCache) {
-    containerList.emplace_back(cam.second);
-  }
-  return containerList;
+  this->selected_camera = this->get_adapter()->create_camera(id);
 }
 
 }

@@ -14,12 +14,15 @@
 
 class camera_backend_server : public mvcam::MicroVisionCameraService::Service {
  private:
+  bool currentOpened = false;
+  bool currentCapturing = false;
+ private:
   std::shared_ptr<camera_driver::framework> mFramework;
   void load_adapters();
 
   void transform_adapter(camera_driver::adapter *src,
                          mvcam::AdapterInfo *dest);
-  void transform_device_info(camera_driver::camera_device &src, mvcam::DeviceInfo *dest);
+  void transform_device_info(camera_driver::camera_descriptor &src, mvcam::DeviceInfo *dest);
   void transform_frame(const camera_driver::frame &frame, mvcam::Frame *dest);
 
 
@@ -27,7 +30,7 @@ class camera_backend_server : public mvcam::MicroVisionCameraService::Service {
   /// \param camera
   /// \param dest
   void get_configuration_from_camera(camera_driver::camera_device &camera, mvcam::Configuration *dest);
-  void configure_camera(camera_driver::camera_device &camera, const mvcam::ConfigureRequest *configuration);
+  void configure_camera(camera_driver::camera_device &camera, const mvcam::ConfigureCameraReq *configuration);
 
   /// modify when new status is added
   /// \param camera
@@ -36,7 +39,6 @@ class camera_backend_server : public mvcam::MicroVisionCameraService::Service {
 
 
  private:
-  void filter_adapter_by_name(const std::string &name, std::vector<camera_driver::adapter*> adapter);
 
   template<typename T>
   void apply_parameter(camera_driver::camera_device &camera,
@@ -45,61 +47,54 @@ class camera_backend_server : public mvcam::MicroVisionCameraService::Service {
                        std::string fieldName
   );
 
-
-  /// wrapper function providing the callback function the camera container corresponding to the id. If id does not exist, throw exception.
-  //  In callback, throw exception to raise a grpc error status.
-  /// \param id
-  /// \param callback
-  /// \return
-  grpc::Status index_camera_call_wrapper(std::string id,
-                                         std::function<void(camera_driver::camera_device&)> callback);
  public:
   static std::unique_ptr<grpc::Server> start_server();
 
  public:
   camera_backend_server();
   ~camera_backend_server() override;
-  grpc::Status GetAvailableAdapters(::grpc::ServerContext *context,
-                                    const ::google::protobuf::Empty *request,
-                                    mvcam::AvailableAdaptersResponse *response) override;
+  grpc::Status GetAdapter(::grpc::ServerContext *context,
+                          const ::mvcam::GetAdapterReq *request,
+                          ::mvcam::GetAdapterRes *response) override;
   grpc::Status GetDevices(::grpc::ServerContext *context,
-                          const mvcam::GetDevicesRequest *request,
-                          mvcam::GetDevicesResponse *response) override;
-  grpc::Status QueryDeviceById(::grpc::ServerContext *context,
-                               const mvcam::IdRequest *request,
-                               mvcam::DeviceInfo *response) override;
+                          const ::mvcam::GetDevicesReq *request,
+                          ::mvcam::GetDevicesRes *response) override;
   grpc::Status OpenCamera(::grpc::ServerContext *context,
-                          const mvcam::IdRequest *request,
-                          ::google::protobuf::Empty *response) override;
+                          const ::mvcam::OpenCameraReq *request,
+                          ::mvcam::OpenCameraRes *response) override;
   grpc::Status ShutdownCamera(::grpc::ServerContext *context,
-                              const mvcam::IdRequest *request,
-                              ::google::protobuf::Empty *response) override;
+                              const ::mvcam::ShutdownCameraReq *request,
+                              ::mvcam::ShutdownCameraRes *response) override;
+  grpc::Status Opened(::grpc::ServerContext *context,
+                      const ::mvcam::OpenedReq *request,
+                      ::mvcam::OpenedRes *response) override;
+  grpc::Status Capturing(::grpc::ServerContext *context,
+                         const ::mvcam::CapturingReq *request,
+                         ::mvcam::CapturingRes *response) override;
   grpc::Status ConfigureCamera(::grpc::ServerContext *context,
-                               const mvcam::ConfigureRequest *request,
-                               ::google::protobuf::Empty *response) override;
+                               const ::mvcam::ConfigureCameraReq *request,
+                               ::mvcam::ConfigureCameraRes *response) override;
   grpc::Status GetConfiguration(::grpc::ServerContext *context,
-                                const mvcam::IdRequest *request,
-                                mvcam::Configuration *response) override;
-  grpc::Status ResetDevice(::grpc::ServerContext *context,
-                           const ::mvcam::IdRequest *request,
-                           ::google::protobuf::Empty *response) override;
-  grpc::Status ControlDeviceState(::grpc::ServerContext *context,
-                                  const ::mvcam::DeviceControlRequest *request,
-                                  ::google::protobuf::Empty *response) override;
-
-  /// \param context
-  /// \param request
-  /// \param response
-  /// \return
+                                const ::mvcam::GetConfigureReq *request,
+                                ::mvcam::GetConfigurationRes *response) override;
   grpc::Status GetStatus(::grpc::ServerContext *context,
-                         const mvcam::IdRequest *request,
-                         mvcam::Status *response) override;
+                         const ::mvcam::GetStatusReq *request,
+                         ::mvcam::GetStatusRes *response) override;
   grpc::Status Capture(::grpc::ServerContext *context,
-                       const ::mvcam::IdRequest *request,
-                       ::mvcam::Frame *response) override;
+                       const ::mvcam::CaptureReq *request,
+                       ::mvcam::CaptureRes *response) override;
   grpc::Status Streaming(::grpc::ServerContext *context,
-                         const ::mvcam::StreamingRequest *request,
+                         const ::mvcam::StreamingReq *request,
                          ::grpc::ServerWriter<::mvcam::FrameStream> *writer) override;
+  grpc::Status WorkingStateStreaming(::grpc::ServerContext *context,
+                                     const ::mvcam::WorkingStateStreamingReq *request,
+                                     ::grpc::ServerWriter<::mvcam::WorkingStateStream> *writer) override;
+  grpc::Status ResetDevice(::grpc::ServerContext *context,
+                           const ::mvcam::ResetDeviceReq *request,
+                           ::mvcam::ResetDeviceRes *response) override;
+  grpc::Status ControlDeviceState(::grpc::ServerContext *context,
+                                  const ::mvcam::ControlDeviceStateReq *request,
+                                  ::mvcam::ControlDeviceStateRes *response) override;
 
 };
 #endif //CAMERA_BACKEND_SERVER_H

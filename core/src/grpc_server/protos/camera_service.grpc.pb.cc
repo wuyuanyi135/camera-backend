@@ -19,16 +19,18 @@
 namespace mvcam {
 
 static const char* MicroVisionCameraService_method_names[] = {
-  "/mvcam.MicroVisionCameraService/GetAvailableAdapters",
+  "/mvcam.MicroVisionCameraService/GetAdapter",
   "/mvcam.MicroVisionCameraService/GetDevices",
-  "/mvcam.MicroVisionCameraService/QueryDeviceById",
   "/mvcam.MicroVisionCameraService/OpenCamera",
   "/mvcam.MicroVisionCameraService/ShutdownCamera",
+  "/mvcam.MicroVisionCameraService/Opened",
+  "/mvcam.MicroVisionCameraService/Capturing",
   "/mvcam.MicroVisionCameraService/ConfigureCamera",
   "/mvcam.MicroVisionCameraService/GetConfiguration",
   "/mvcam.MicroVisionCameraService/GetStatus",
   "/mvcam.MicroVisionCameraService/Capture",
   "/mvcam.MicroVisionCameraService/Streaming",
+  "/mvcam.MicroVisionCameraService/WorkingStateStreaming",
   "/mvcam.MicroVisionCameraService/ResetDevice",
   "/mvcam.MicroVisionCameraService/ControlDeviceState",
 };
@@ -40,356 +42,414 @@ std::unique_ptr< MicroVisionCameraService::Stub> MicroVisionCameraService::NewSt
 }
 
 MicroVisionCameraService::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel)
-  : channel_(channel), rpcmethod_GetAvailableAdapters_(MicroVisionCameraService_method_names[0], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  : channel_(channel), rpcmethod_GetAdapter_(MicroVisionCameraService_method_names[0], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   , rpcmethod_GetDevices_(MicroVisionCameraService_method_names[1], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_QueryDeviceById_(MicroVisionCameraService_method_names[2], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_OpenCamera_(MicroVisionCameraService_method_names[3], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_ShutdownCamera_(MicroVisionCameraService_method_names[4], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_ConfigureCamera_(MicroVisionCameraService_method_names[5], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_GetConfiguration_(MicroVisionCameraService_method_names[6], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_GetStatus_(MicroVisionCameraService_method_names[7], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_Capture_(MicroVisionCameraService_method_names[8], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_Streaming_(MicroVisionCameraService_method_names[9], ::grpc::internal::RpcMethod::SERVER_STREAMING, channel)
-  , rpcmethod_ResetDevice_(MicroVisionCameraService_method_names[10], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_ControlDeviceState_(MicroVisionCameraService_method_names[11], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_OpenCamera_(MicroVisionCameraService_method_names[2], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_ShutdownCamera_(MicroVisionCameraService_method_names[3], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_Opened_(MicroVisionCameraService_method_names[4], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_Capturing_(MicroVisionCameraService_method_names[5], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_ConfigureCamera_(MicroVisionCameraService_method_names[6], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_GetConfiguration_(MicroVisionCameraService_method_names[7], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_GetStatus_(MicroVisionCameraService_method_names[8], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_Capture_(MicroVisionCameraService_method_names[9], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_Streaming_(MicroVisionCameraService_method_names[10], ::grpc::internal::RpcMethod::SERVER_STREAMING, channel)
+  , rpcmethod_WorkingStateStreaming_(MicroVisionCameraService_method_names[11], ::grpc::internal::RpcMethod::SERVER_STREAMING, channel)
+  , rpcmethod_ResetDevice_(MicroVisionCameraService_method_names[12], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_ControlDeviceState_(MicroVisionCameraService_method_names[13], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   {}
 
-::grpc::Status MicroVisionCameraService::Stub::GetAvailableAdapters(::grpc::ClientContext* context, const ::google::protobuf::Empty& request, ::mvcam::AvailableAdaptersResponse* response) {
-  return ::grpc::internal::BlockingUnaryCall(channel_.get(), rpcmethod_GetAvailableAdapters_, context, request, response);
+::grpc::Status MicroVisionCameraService::Stub::GetAdapter(::grpc::ClientContext* context, const ::mvcam::GetAdapterReq& request, ::mvcam::GetAdapterRes* response) {
+  return ::grpc::internal::BlockingUnaryCall(channel_.get(), rpcmethod_GetAdapter_, context, request, response);
 }
 
-void MicroVisionCameraService::Stub::experimental_async::GetAvailableAdapters(::grpc::ClientContext* context, const ::google::protobuf::Empty* request, ::mvcam::AvailableAdaptersResponse* response, std::function<void(::grpc::Status)> f) {
-  return ::grpc::internal::CallbackUnaryCall(stub_->channel_.get(), stub_->rpcmethod_GetAvailableAdapters_, context, request, response, std::move(f));
+void MicroVisionCameraService::Stub::experimental_async::GetAdapter(::grpc::ClientContext* context, const ::mvcam::GetAdapterReq* request, ::mvcam::GetAdapterRes* response, std::function<void(::grpc::Status)> f) {
+  return ::grpc::internal::CallbackUnaryCall(stub_->channel_.get(), stub_->rpcmethod_GetAdapter_, context, request, response, std::move(f));
 }
 
-::grpc::ClientAsyncResponseReader< ::mvcam::AvailableAdaptersResponse>* MicroVisionCameraService::Stub::AsyncGetAvailableAdaptersRaw(::grpc::ClientContext* context, const ::google::protobuf::Empty& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::mvcam::AvailableAdaptersResponse>::Create(channel_.get(), cq, rpcmethod_GetAvailableAdapters_, context, request, true);
+::grpc::ClientAsyncResponseReader< ::mvcam::GetAdapterRes>* MicroVisionCameraService::Stub::AsyncGetAdapterRaw(::grpc::ClientContext* context, const ::mvcam::GetAdapterReq& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::mvcam::GetAdapterRes>::Create(channel_.get(), cq, rpcmethod_GetAdapter_, context, request, true);
 }
 
-::grpc::ClientAsyncResponseReader< ::mvcam::AvailableAdaptersResponse>* MicroVisionCameraService::Stub::PrepareAsyncGetAvailableAdaptersRaw(::grpc::ClientContext* context, const ::google::protobuf::Empty& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::mvcam::AvailableAdaptersResponse>::Create(channel_.get(), cq, rpcmethod_GetAvailableAdapters_, context, request, false);
+::grpc::ClientAsyncResponseReader< ::mvcam::GetAdapterRes>* MicroVisionCameraService::Stub::PrepareAsyncGetAdapterRaw(::grpc::ClientContext* context, const ::mvcam::GetAdapterReq& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::mvcam::GetAdapterRes>::Create(channel_.get(), cq, rpcmethod_GetAdapter_, context, request, false);
 }
 
-::grpc::Status MicroVisionCameraService::Stub::GetDevices(::grpc::ClientContext* context, const ::mvcam::GetDevicesRequest& request, ::mvcam::GetDevicesResponse* response) {
+::grpc::Status MicroVisionCameraService::Stub::GetDevices(::grpc::ClientContext* context, const ::mvcam::GetDevicesReq& request, ::mvcam::GetDevicesRes* response) {
   return ::grpc::internal::BlockingUnaryCall(channel_.get(), rpcmethod_GetDevices_, context, request, response);
 }
 
-void MicroVisionCameraService::Stub::experimental_async::GetDevices(::grpc::ClientContext* context, const ::mvcam::GetDevicesRequest* request, ::mvcam::GetDevicesResponse* response, std::function<void(::grpc::Status)> f) {
+void MicroVisionCameraService::Stub::experimental_async::GetDevices(::grpc::ClientContext* context, const ::mvcam::GetDevicesReq* request, ::mvcam::GetDevicesRes* response, std::function<void(::grpc::Status)> f) {
   return ::grpc::internal::CallbackUnaryCall(stub_->channel_.get(), stub_->rpcmethod_GetDevices_, context, request, response, std::move(f));
 }
 
-::grpc::ClientAsyncResponseReader< ::mvcam::GetDevicesResponse>* MicroVisionCameraService::Stub::AsyncGetDevicesRaw(::grpc::ClientContext* context, const ::mvcam::GetDevicesRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::mvcam::GetDevicesResponse>::Create(channel_.get(), cq, rpcmethod_GetDevices_, context, request, true);
+::grpc::ClientAsyncResponseReader< ::mvcam::GetDevicesRes>* MicroVisionCameraService::Stub::AsyncGetDevicesRaw(::grpc::ClientContext* context, const ::mvcam::GetDevicesReq& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::mvcam::GetDevicesRes>::Create(channel_.get(), cq, rpcmethod_GetDevices_, context, request, true);
 }
 
-::grpc::ClientAsyncResponseReader< ::mvcam::GetDevicesResponse>* MicroVisionCameraService::Stub::PrepareAsyncGetDevicesRaw(::grpc::ClientContext* context, const ::mvcam::GetDevicesRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::mvcam::GetDevicesResponse>::Create(channel_.get(), cq, rpcmethod_GetDevices_, context, request, false);
+::grpc::ClientAsyncResponseReader< ::mvcam::GetDevicesRes>* MicroVisionCameraService::Stub::PrepareAsyncGetDevicesRaw(::grpc::ClientContext* context, const ::mvcam::GetDevicesReq& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::mvcam::GetDevicesRes>::Create(channel_.get(), cq, rpcmethod_GetDevices_, context, request, false);
 }
 
-::grpc::Status MicroVisionCameraService::Stub::QueryDeviceById(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::mvcam::DeviceInfo* response) {
-  return ::grpc::internal::BlockingUnaryCall(channel_.get(), rpcmethod_QueryDeviceById_, context, request, response);
-}
-
-void MicroVisionCameraService::Stub::experimental_async::QueryDeviceById(::grpc::ClientContext* context, const ::mvcam::IdRequest* request, ::mvcam::DeviceInfo* response, std::function<void(::grpc::Status)> f) {
-  return ::grpc::internal::CallbackUnaryCall(stub_->channel_.get(), stub_->rpcmethod_QueryDeviceById_, context, request, response, std::move(f));
-}
-
-::grpc::ClientAsyncResponseReader< ::mvcam::DeviceInfo>* MicroVisionCameraService::Stub::AsyncQueryDeviceByIdRaw(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::mvcam::DeviceInfo>::Create(channel_.get(), cq, rpcmethod_QueryDeviceById_, context, request, true);
-}
-
-::grpc::ClientAsyncResponseReader< ::mvcam::DeviceInfo>* MicroVisionCameraService::Stub::PrepareAsyncQueryDeviceByIdRaw(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::mvcam::DeviceInfo>::Create(channel_.get(), cq, rpcmethod_QueryDeviceById_, context, request, false);
-}
-
-::grpc::Status MicroVisionCameraService::Stub::OpenCamera(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::google::protobuf::Empty* response) {
+::grpc::Status MicroVisionCameraService::Stub::OpenCamera(::grpc::ClientContext* context, const ::mvcam::OpenCameraReq& request, ::mvcam::OpenCameraRes* response) {
   return ::grpc::internal::BlockingUnaryCall(channel_.get(), rpcmethod_OpenCamera_, context, request, response);
 }
 
-void MicroVisionCameraService::Stub::experimental_async::OpenCamera(::grpc::ClientContext* context, const ::mvcam::IdRequest* request, ::google::protobuf::Empty* response, std::function<void(::grpc::Status)> f) {
+void MicroVisionCameraService::Stub::experimental_async::OpenCamera(::grpc::ClientContext* context, const ::mvcam::OpenCameraReq* request, ::mvcam::OpenCameraRes* response, std::function<void(::grpc::Status)> f) {
   return ::grpc::internal::CallbackUnaryCall(stub_->channel_.get(), stub_->rpcmethod_OpenCamera_, context, request, response, std::move(f));
 }
 
-::grpc::ClientAsyncResponseReader< ::google::protobuf::Empty>* MicroVisionCameraService::Stub::AsyncOpenCameraRaw(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::google::protobuf::Empty>::Create(channel_.get(), cq, rpcmethod_OpenCamera_, context, request, true);
+::grpc::ClientAsyncResponseReader< ::mvcam::OpenCameraRes>* MicroVisionCameraService::Stub::AsyncOpenCameraRaw(::grpc::ClientContext* context, const ::mvcam::OpenCameraReq& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::mvcam::OpenCameraRes>::Create(channel_.get(), cq, rpcmethod_OpenCamera_, context, request, true);
 }
 
-::grpc::ClientAsyncResponseReader< ::google::protobuf::Empty>* MicroVisionCameraService::Stub::PrepareAsyncOpenCameraRaw(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::google::protobuf::Empty>::Create(channel_.get(), cq, rpcmethod_OpenCamera_, context, request, false);
+::grpc::ClientAsyncResponseReader< ::mvcam::OpenCameraRes>* MicroVisionCameraService::Stub::PrepareAsyncOpenCameraRaw(::grpc::ClientContext* context, const ::mvcam::OpenCameraReq& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::mvcam::OpenCameraRes>::Create(channel_.get(), cq, rpcmethod_OpenCamera_, context, request, false);
 }
 
-::grpc::Status MicroVisionCameraService::Stub::ShutdownCamera(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::google::protobuf::Empty* response) {
+::grpc::Status MicroVisionCameraService::Stub::ShutdownCamera(::grpc::ClientContext* context, const ::mvcam::ShutdownCameraReq& request, ::mvcam::ShutdownCameraRes* response) {
   return ::grpc::internal::BlockingUnaryCall(channel_.get(), rpcmethod_ShutdownCamera_, context, request, response);
 }
 
-void MicroVisionCameraService::Stub::experimental_async::ShutdownCamera(::grpc::ClientContext* context, const ::mvcam::IdRequest* request, ::google::protobuf::Empty* response, std::function<void(::grpc::Status)> f) {
+void MicroVisionCameraService::Stub::experimental_async::ShutdownCamera(::grpc::ClientContext* context, const ::mvcam::ShutdownCameraReq* request, ::mvcam::ShutdownCameraRes* response, std::function<void(::grpc::Status)> f) {
   return ::grpc::internal::CallbackUnaryCall(stub_->channel_.get(), stub_->rpcmethod_ShutdownCamera_, context, request, response, std::move(f));
 }
 
-::grpc::ClientAsyncResponseReader< ::google::protobuf::Empty>* MicroVisionCameraService::Stub::AsyncShutdownCameraRaw(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::google::protobuf::Empty>::Create(channel_.get(), cq, rpcmethod_ShutdownCamera_, context, request, true);
+::grpc::ClientAsyncResponseReader< ::mvcam::ShutdownCameraRes>* MicroVisionCameraService::Stub::AsyncShutdownCameraRaw(::grpc::ClientContext* context, const ::mvcam::ShutdownCameraReq& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::mvcam::ShutdownCameraRes>::Create(channel_.get(), cq, rpcmethod_ShutdownCamera_, context, request, true);
 }
 
-::grpc::ClientAsyncResponseReader< ::google::protobuf::Empty>* MicroVisionCameraService::Stub::PrepareAsyncShutdownCameraRaw(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::google::protobuf::Empty>::Create(channel_.get(), cq, rpcmethod_ShutdownCamera_, context, request, false);
+::grpc::ClientAsyncResponseReader< ::mvcam::ShutdownCameraRes>* MicroVisionCameraService::Stub::PrepareAsyncShutdownCameraRaw(::grpc::ClientContext* context, const ::mvcam::ShutdownCameraReq& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::mvcam::ShutdownCameraRes>::Create(channel_.get(), cq, rpcmethod_ShutdownCamera_, context, request, false);
 }
 
-::grpc::Status MicroVisionCameraService::Stub::ConfigureCamera(::grpc::ClientContext* context, const ::mvcam::ConfigureRequest& request, ::google::protobuf::Empty* response) {
+::grpc::Status MicroVisionCameraService::Stub::Opened(::grpc::ClientContext* context, const ::mvcam::OpenedReq& request, ::mvcam::OpenedRes* response) {
+  return ::grpc::internal::BlockingUnaryCall(channel_.get(), rpcmethod_Opened_, context, request, response);
+}
+
+void MicroVisionCameraService::Stub::experimental_async::Opened(::grpc::ClientContext* context, const ::mvcam::OpenedReq* request, ::mvcam::OpenedRes* response, std::function<void(::grpc::Status)> f) {
+  return ::grpc::internal::CallbackUnaryCall(stub_->channel_.get(), stub_->rpcmethod_Opened_, context, request, response, std::move(f));
+}
+
+::grpc::ClientAsyncResponseReader< ::mvcam::OpenedRes>* MicroVisionCameraService::Stub::AsyncOpenedRaw(::grpc::ClientContext* context, const ::mvcam::OpenedReq& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::mvcam::OpenedRes>::Create(channel_.get(), cq, rpcmethod_Opened_, context, request, true);
+}
+
+::grpc::ClientAsyncResponseReader< ::mvcam::OpenedRes>* MicroVisionCameraService::Stub::PrepareAsyncOpenedRaw(::grpc::ClientContext* context, const ::mvcam::OpenedReq& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::mvcam::OpenedRes>::Create(channel_.get(), cq, rpcmethod_Opened_, context, request, false);
+}
+
+::grpc::Status MicroVisionCameraService::Stub::Capturing(::grpc::ClientContext* context, const ::mvcam::CapturingReq& request, ::mvcam::CapturingRes* response) {
+  return ::grpc::internal::BlockingUnaryCall(channel_.get(), rpcmethod_Capturing_, context, request, response);
+}
+
+void MicroVisionCameraService::Stub::experimental_async::Capturing(::grpc::ClientContext* context, const ::mvcam::CapturingReq* request, ::mvcam::CapturingRes* response, std::function<void(::grpc::Status)> f) {
+  return ::grpc::internal::CallbackUnaryCall(stub_->channel_.get(), stub_->rpcmethod_Capturing_, context, request, response, std::move(f));
+}
+
+::grpc::ClientAsyncResponseReader< ::mvcam::CapturingRes>* MicroVisionCameraService::Stub::AsyncCapturingRaw(::grpc::ClientContext* context, const ::mvcam::CapturingReq& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::mvcam::CapturingRes>::Create(channel_.get(), cq, rpcmethod_Capturing_, context, request, true);
+}
+
+::grpc::ClientAsyncResponseReader< ::mvcam::CapturingRes>* MicroVisionCameraService::Stub::PrepareAsyncCapturingRaw(::grpc::ClientContext* context, const ::mvcam::CapturingReq& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::mvcam::CapturingRes>::Create(channel_.get(), cq, rpcmethod_Capturing_, context, request, false);
+}
+
+::grpc::Status MicroVisionCameraService::Stub::ConfigureCamera(::grpc::ClientContext* context, const ::mvcam::ConfigureCameraReq& request, ::mvcam::ConfigureCameraRes* response) {
   return ::grpc::internal::BlockingUnaryCall(channel_.get(), rpcmethod_ConfigureCamera_, context, request, response);
 }
 
-void MicroVisionCameraService::Stub::experimental_async::ConfigureCamera(::grpc::ClientContext* context, const ::mvcam::ConfigureRequest* request, ::google::protobuf::Empty* response, std::function<void(::grpc::Status)> f) {
+void MicroVisionCameraService::Stub::experimental_async::ConfigureCamera(::grpc::ClientContext* context, const ::mvcam::ConfigureCameraReq* request, ::mvcam::ConfigureCameraRes* response, std::function<void(::grpc::Status)> f) {
   return ::grpc::internal::CallbackUnaryCall(stub_->channel_.get(), stub_->rpcmethod_ConfigureCamera_, context, request, response, std::move(f));
 }
 
-::grpc::ClientAsyncResponseReader< ::google::protobuf::Empty>* MicroVisionCameraService::Stub::AsyncConfigureCameraRaw(::grpc::ClientContext* context, const ::mvcam::ConfigureRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::google::protobuf::Empty>::Create(channel_.get(), cq, rpcmethod_ConfigureCamera_, context, request, true);
+::grpc::ClientAsyncResponseReader< ::mvcam::ConfigureCameraRes>* MicroVisionCameraService::Stub::AsyncConfigureCameraRaw(::grpc::ClientContext* context, const ::mvcam::ConfigureCameraReq& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::mvcam::ConfigureCameraRes>::Create(channel_.get(), cq, rpcmethod_ConfigureCamera_, context, request, true);
 }
 
-::grpc::ClientAsyncResponseReader< ::google::protobuf::Empty>* MicroVisionCameraService::Stub::PrepareAsyncConfigureCameraRaw(::grpc::ClientContext* context, const ::mvcam::ConfigureRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::google::protobuf::Empty>::Create(channel_.get(), cq, rpcmethod_ConfigureCamera_, context, request, false);
+::grpc::ClientAsyncResponseReader< ::mvcam::ConfigureCameraRes>* MicroVisionCameraService::Stub::PrepareAsyncConfigureCameraRaw(::grpc::ClientContext* context, const ::mvcam::ConfigureCameraReq& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::mvcam::ConfigureCameraRes>::Create(channel_.get(), cq, rpcmethod_ConfigureCamera_, context, request, false);
 }
 
-::grpc::Status MicroVisionCameraService::Stub::GetConfiguration(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::mvcam::Configuration* response) {
+::grpc::Status MicroVisionCameraService::Stub::GetConfiguration(::grpc::ClientContext* context, const ::mvcam::GetConfigureReq& request, ::mvcam::GetConfigurationRes* response) {
   return ::grpc::internal::BlockingUnaryCall(channel_.get(), rpcmethod_GetConfiguration_, context, request, response);
 }
 
-void MicroVisionCameraService::Stub::experimental_async::GetConfiguration(::grpc::ClientContext* context, const ::mvcam::IdRequest* request, ::mvcam::Configuration* response, std::function<void(::grpc::Status)> f) {
+void MicroVisionCameraService::Stub::experimental_async::GetConfiguration(::grpc::ClientContext* context, const ::mvcam::GetConfigureReq* request, ::mvcam::GetConfigurationRes* response, std::function<void(::grpc::Status)> f) {
   return ::grpc::internal::CallbackUnaryCall(stub_->channel_.get(), stub_->rpcmethod_GetConfiguration_, context, request, response, std::move(f));
 }
 
-::grpc::ClientAsyncResponseReader< ::mvcam::Configuration>* MicroVisionCameraService::Stub::AsyncGetConfigurationRaw(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::mvcam::Configuration>::Create(channel_.get(), cq, rpcmethod_GetConfiguration_, context, request, true);
+::grpc::ClientAsyncResponseReader< ::mvcam::GetConfigurationRes>* MicroVisionCameraService::Stub::AsyncGetConfigurationRaw(::grpc::ClientContext* context, const ::mvcam::GetConfigureReq& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::mvcam::GetConfigurationRes>::Create(channel_.get(), cq, rpcmethod_GetConfiguration_, context, request, true);
 }
 
-::grpc::ClientAsyncResponseReader< ::mvcam::Configuration>* MicroVisionCameraService::Stub::PrepareAsyncGetConfigurationRaw(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::mvcam::Configuration>::Create(channel_.get(), cq, rpcmethod_GetConfiguration_, context, request, false);
+::grpc::ClientAsyncResponseReader< ::mvcam::GetConfigurationRes>* MicroVisionCameraService::Stub::PrepareAsyncGetConfigurationRaw(::grpc::ClientContext* context, const ::mvcam::GetConfigureReq& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::mvcam::GetConfigurationRes>::Create(channel_.get(), cq, rpcmethod_GetConfiguration_, context, request, false);
 }
 
-::grpc::Status MicroVisionCameraService::Stub::GetStatus(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::mvcam::Status* response) {
+::grpc::Status MicroVisionCameraService::Stub::GetStatus(::grpc::ClientContext* context, const ::mvcam::GetStatusReq& request, ::mvcam::GetStatusRes* response) {
   return ::grpc::internal::BlockingUnaryCall(channel_.get(), rpcmethod_GetStatus_, context, request, response);
 }
 
-void MicroVisionCameraService::Stub::experimental_async::GetStatus(::grpc::ClientContext* context, const ::mvcam::IdRequest* request, ::mvcam::Status* response, std::function<void(::grpc::Status)> f) {
+void MicroVisionCameraService::Stub::experimental_async::GetStatus(::grpc::ClientContext* context, const ::mvcam::GetStatusReq* request, ::mvcam::GetStatusRes* response, std::function<void(::grpc::Status)> f) {
   return ::grpc::internal::CallbackUnaryCall(stub_->channel_.get(), stub_->rpcmethod_GetStatus_, context, request, response, std::move(f));
 }
 
-::grpc::ClientAsyncResponseReader< ::mvcam::Status>* MicroVisionCameraService::Stub::AsyncGetStatusRaw(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::mvcam::Status>::Create(channel_.get(), cq, rpcmethod_GetStatus_, context, request, true);
+::grpc::ClientAsyncResponseReader< ::mvcam::GetStatusRes>* MicroVisionCameraService::Stub::AsyncGetStatusRaw(::grpc::ClientContext* context, const ::mvcam::GetStatusReq& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::mvcam::GetStatusRes>::Create(channel_.get(), cq, rpcmethod_GetStatus_, context, request, true);
 }
 
-::grpc::ClientAsyncResponseReader< ::mvcam::Status>* MicroVisionCameraService::Stub::PrepareAsyncGetStatusRaw(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::mvcam::Status>::Create(channel_.get(), cq, rpcmethod_GetStatus_, context, request, false);
+::grpc::ClientAsyncResponseReader< ::mvcam::GetStatusRes>* MicroVisionCameraService::Stub::PrepareAsyncGetStatusRaw(::grpc::ClientContext* context, const ::mvcam::GetStatusReq& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::mvcam::GetStatusRes>::Create(channel_.get(), cq, rpcmethod_GetStatus_, context, request, false);
 }
 
-::grpc::Status MicroVisionCameraService::Stub::Capture(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::mvcam::Frame* response) {
+::grpc::Status MicroVisionCameraService::Stub::Capture(::grpc::ClientContext* context, const ::mvcam::CaptureReq& request, ::mvcam::CaptureRes* response) {
   return ::grpc::internal::BlockingUnaryCall(channel_.get(), rpcmethod_Capture_, context, request, response);
 }
 
-void MicroVisionCameraService::Stub::experimental_async::Capture(::grpc::ClientContext* context, const ::mvcam::IdRequest* request, ::mvcam::Frame* response, std::function<void(::grpc::Status)> f) {
+void MicroVisionCameraService::Stub::experimental_async::Capture(::grpc::ClientContext* context, const ::mvcam::CaptureReq* request, ::mvcam::CaptureRes* response, std::function<void(::grpc::Status)> f) {
   return ::grpc::internal::CallbackUnaryCall(stub_->channel_.get(), stub_->rpcmethod_Capture_, context, request, response, std::move(f));
 }
 
-::grpc::ClientAsyncResponseReader< ::mvcam::Frame>* MicroVisionCameraService::Stub::AsyncCaptureRaw(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::mvcam::Frame>::Create(channel_.get(), cq, rpcmethod_Capture_, context, request, true);
+::grpc::ClientAsyncResponseReader< ::mvcam::CaptureRes>* MicroVisionCameraService::Stub::AsyncCaptureRaw(::grpc::ClientContext* context, const ::mvcam::CaptureReq& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::mvcam::CaptureRes>::Create(channel_.get(), cq, rpcmethod_Capture_, context, request, true);
 }
 
-::grpc::ClientAsyncResponseReader< ::mvcam::Frame>* MicroVisionCameraService::Stub::PrepareAsyncCaptureRaw(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::mvcam::Frame>::Create(channel_.get(), cq, rpcmethod_Capture_, context, request, false);
+::grpc::ClientAsyncResponseReader< ::mvcam::CaptureRes>* MicroVisionCameraService::Stub::PrepareAsyncCaptureRaw(::grpc::ClientContext* context, const ::mvcam::CaptureReq& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::mvcam::CaptureRes>::Create(channel_.get(), cq, rpcmethod_Capture_, context, request, false);
 }
 
-::grpc::ClientReader< ::mvcam::FrameStream>* MicroVisionCameraService::Stub::StreamingRaw(::grpc::ClientContext* context, const ::mvcam::StreamingRequest& request) {
+::grpc::ClientReader< ::mvcam::FrameStream>* MicroVisionCameraService::Stub::StreamingRaw(::grpc::ClientContext* context, const ::mvcam::StreamingReq& request) {
   return ::grpc::internal::ClientReaderFactory< ::mvcam::FrameStream>::Create(channel_.get(), rpcmethod_Streaming_, context, request);
 }
 
-void MicroVisionCameraService::Stub::experimental_async::Streaming(::grpc::ClientContext* context, ::mvcam::StreamingRequest* request, ::grpc::experimental::ClientReadReactor< ::mvcam::FrameStream>* reactor) {
+void MicroVisionCameraService::Stub::experimental_async::Streaming(::grpc::ClientContext* context, ::mvcam::StreamingReq* request, ::grpc::experimental::ClientReadReactor< ::mvcam::FrameStream>* reactor) {
   ::grpc::internal::ClientCallbackReaderFactory< ::mvcam::FrameStream>::Create(stub_->channel_.get(), stub_->rpcmethod_Streaming_, context, request, reactor);
 }
 
-::grpc::ClientAsyncReader< ::mvcam::FrameStream>* MicroVisionCameraService::Stub::AsyncStreamingRaw(::grpc::ClientContext* context, const ::mvcam::StreamingRequest& request, ::grpc::CompletionQueue* cq, void* tag) {
+::grpc::ClientAsyncReader< ::mvcam::FrameStream>* MicroVisionCameraService::Stub::AsyncStreamingRaw(::grpc::ClientContext* context, const ::mvcam::StreamingReq& request, ::grpc::CompletionQueue* cq, void* tag) {
   return ::grpc::internal::ClientAsyncReaderFactory< ::mvcam::FrameStream>::Create(channel_.get(), cq, rpcmethod_Streaming_, context, request, true, tag);
 }
 
-::grpc::ClientAsyncReader< ::mvcam::FrameStream>* MicroVisionCameraService::Stub::PrepareAsyncStreamingRaw(::grpc::ClientContext* context, const ::mvcam::StreamingRequest& request, ::grpc::CompletionQueue* cq) {
+::grpc::ClientAsyncReader< ::mvcam::FrameStream>* MicroVisionCameraService::Stub::PrepareAsyncStreamingRaw(::grpc::ClientContext* context, const ::mvcam::StreamingReq& request, ::grpc::CompletionQueue* cq) {
   return ::grpc::internal::ClientAsyncReaderFactory< ::mvcam::FrameStream>::Create(channel_.get(), cq, rpcmethod_Streaming_, context, request, false, nullptr);
 }
 
-::grpc::Status MicroVisionCameraService::Stub::ResetDevice(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::google::protobuf::Empty* response) {
+::grpc::ClientReader< ::mvcam::WorkingStateStream>* MicroVisionCameraService::Stub::WorkingStateStreamingRaw(::grpc::ClientContext* context, const ::mvcam::WorkingStateStreamingReq& request) {
+  return ::grpc::internal::ClientReaderFactory< ::mvcam::WorkingStateStream>::Create(channel_.get(), rpcmethod_WorkingStateStreaming_, context, request);
+}
+
+void MicroVisionCameraService::Stub::experimental_async::WorkingStateStreaming(::grpc::ClientContext* context, ::mvcam::WorkingStateStreamingReq* request, ::grpc::experimental::ClientReadReactor< ::mvcam::WorkingStateStream>* reactor) {
+  ::grpc::internal::ClientCallbackReaderFactory< ::mvcam::WorkingStateStream>::Create(stub_->channel_.get(), stub_->rpcmethod_WorkingStateStreaming_, context, request, reactor);
+}
+
+::grpc::ClientAsyncReader< ::mvcam::WorkingStateStream>* MicroVisionCameraService::Stub::AsyncWorkingStateStreamingRaw(::grpc::ClientContext* context, const ::mvcam::WorkingStateStreamingReq& request, ::grpc::CompletionQueue* cq, void* tag) {
+  return ::grpc::internal::ClientAsyncReaderFactory< ::mvcam::WorkingStateStream>::Create(channel_.get(), cq, rpcmethod_WorkingStateStreaming_, context, request, true, tag);
+}
+
+::grpc::ClientAsyncReader< ::mvcam::WorkingStateStream>* MicroVisionCameraService::Stub::PrepareAsyncWorkingStateStreamingRaw(::grpc::ClientContext* context, const ::mvcam::WorkingStateStreamingReq& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncReaderFactory< ::mvcam::WorkingStateStream>::Create(channel_.get(), cq, rpcmethod_WorkingStateStreaming_, context, request, false, nullptr);
+}
+
+::grpc::Status MicroVisionCameraService::Stub::ResetDevice(::grpc::ClientContext* context, const ::mvcam::ResetDeviceReq& request, ::mvcam::ResetDeviceRes* response) {
   return ::grpc::internal::BlockingUnaryCall(channel_.get(), rpcmethod_ResetDevice_, context, request, response);
 }
 
-void MicroVisionCameraService::Stub::experimental_async::ResetDevice(::grpc::ClientContext* context, const ::mvcam::IdRequest* request, ::google::protobuf::Empty* response, std::function<void(::grpc::Status)> f) {
+void MicroVisionCameraService::Stub::experimental_async::ResetDevice(::grpc::ClientContext* context, const ::mvcam::ResetDeviceReq* request, ::mvcam::ResetDeviceRes* response, std::function<void(::grpc::Status)> f) {
   return ::grpc::internal::CallbackUnaryCall(stub_->channel_.get(), stub_->rpcmethod_ResetDevice_, context, request, response, std::move(f));
 }
 
-::grpc::ClientAsyncResponseReader< ::google::protobuf::Empty>* MicroVisionCameraService::Stub::AsyncResetDeviceRaw(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::google::protobuf::Empty>::Create(channel_.get(), cq, rpcmethod_ResetDevice_, context, request, true);
+::grpc::ClientAsyncResponseReader< ::mvcam::ResetDeviceRes>* MicroVisionCameraService::Stub::AsyncResetDeviceRaw(::grpc::ClientContext* context, const ::mvcam::ResetDeviceReq& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::mvcam::ResetDeviceRes>::Create(channel_.get(), cq, rpcmethod_ResetDevice_, context, request, true);
 }
 
-::grpc::ClientAsyncResponseReader< ::google::protobuf::Empty>* MicroVisionCameraService::Stub::PrepareAsyncResetDeviceRaw(::grpc::ClientContext* context, const ::mvcam::IdRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::google::protobuf::Empty>::Create(channel_.get(), cq, rpcmethod_ResetDevice_, context, request, false);
+::grpc::ClientAsyncResponseReader< ::mvcam::ResetDeviceRes>* MicroVisionCameraService::Stub::PrepareAsyncResetDeviceRaw(::grpc::ClientContext* context, const ::mvcam::ResetDeviceReq& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::mvcam::ResetDeviceRes>::Create(channel_.get(), cq, rpcmethod_ResetDevice_, context, request, false);
 }
 
-::grpc::Status MicroVisionCameraService::Stub::ControlDeviceState(::grpc::ClientContext* context, const ::mvcam::DeviceControlRequest& request, ::google::protobuf::Empty* response) {
+::grpc::Status MicroVisionCameraService::Stub::ControlDeviceState(::grpc::ClientContext* context, const ::mvcam::ControlDeviceStateReq& request, ::mvcam::ControlDeviceStateRes* response) {
   return ::grpc::internal::BlockingUnaryCall(channel_.get(), rpcmethod_ControlDeviceState_, context, request, response);
 }
 
-void MicroVisionCameraService::Stub::experimental_async::ControlDeviceState(::grpc::ClientContext* context, const ::mvcam::DeviceControlRequest* request, ::google::protobuf::Empty* response, std::function<void(::grpc::Status)> f) {
+void MicroVisionCameraService::Stub::experimental_async::ControlDeviceState(::grpc::ClientContext* context, const ::mvcam::ControlDeviceStateReq* request, ::mvcam::ControlDeviceStateRes* response, std::function<void(::grpc::Status)> f) {
   return ::grpc::internal::CallbackUnaryCall(stub_->channel_.get(), stub_->rpcmethod_ControlDeviceState_, context, request, response, std::move(f));
 }
 
-::grpc::ClientAsyncResponseReader< ::google::protobuf::Empty>* MicroVisionCameraService::Stub::AsyncControlDeviceStateRaw(::grpc::ClientContext* context, const ::mvcam::DeviceControlRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::google::protobuf::Empty>::Create(channel_.get(), cq, rpcmethod_ControlDeviceState_, context, request, true);
+::grpc::ClientAsyncResponseReader< ::mvcam::ControlDeviceStateRes>* MicroVisionCameraService::Stub::AsyncControlDeviceStateRaw(::grpc::ClientContext* context, const ::mvcam::ControlDeviceStateReq& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::mvcam::ControlDeviceStateRes>::Create(channel_.get(), cq, rpcmethod_ControlDeviceState_, context, request, true);
 }
 
-::grpc::ClientAsyncResponseReader< ::google::protobuf::Empty>* MicroVisionCameraService::Stub::PrepareAsyncControlDeviceStateRaw(::grpc::ClientContext* context, const ::mvcam::DeviceControlRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::google::protobuf::Empty>::Create(channel_.get(), cq, rpcmethod_ControlDeviceState_, context, request, false);
+::grpc::ClientAsyncResponseReader< ::mvcam::ControlDeviceStateRes>* MicroVisionCameraService::Stub::PrepareAsyncControlDeviceStateRaw(::grpc::ClientContext* context, const ::mvcam::ControlDeviceStateReq& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::mvcam::ControlDeviceStateRes>::Create(channel_.get(), cq, rpcmethod_ControlDeviceState_, context, request, false);
 }
 
 MicroVisionCameraService::Service::Service() {
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       MicroVisionCameraService_method_names[0],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< MicroVisionCameraService::Service, ::google::protobuf::Empty, ::mvcam::AvailableAdaptersResponse>(
-          std::mem_fn(&MicroVisionCameraService::Service::GetAvailableAdapters), this)));
+      new ::grpc::internal::RpcMethodHandler< MicroVisionCameraService::Service, ::mvcam::GetAdapterReq, ::mvcam::GetAdapterRes>(
+          std::mem_fn(&MicroVisionCameraService::Service::GetAdapter), this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       MicroVisionCameraService_method_names[1],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< MicroVisionCameraService::Service, ::mvcam::GetDevicesRequest, ::mvcam::GetDevicesResponse>(
+      new ::grpc::internal::RpcMethodHandler< MicroVisionCameraService::Service, ::mvcam::GetDevicesReq, ::mvcam::GetDevicesRes>(
           std::mem_fn(&MicroVisionCameraService::Service::GetDevices), this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       MicroVisionCameraService_method_names[2],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< MicroVisionCameraService::Service, ::mvcam::IdRequest, ::mvcam::DeviceInfo>(
-          std::mem_fn(&MicroVisionCameraService::Service::QueryDeviceById), this)));
+      new ::grpc::internal::RpcMethodHandler< MicroVisionCameraService::Service, ::mvcam::OpenCameraReq, ::mvcam::OpenCameraRes>(
+          std::mem_fn(&MicroVisionCameraService::Service::OpenCamera), this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       MicroVisionCameraService_method_names[3],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< MicroVisionCameraService::Service, ::mvcam::IdRequest, ::google::protobuf::Empty>(
-          std::mem_fn(&MicroVisionCameraService::Service::OpenCamera), this)));
+      new ::grpc::internal::RpcMethodHandler< MicroVisionCameraService::Service, ::mvcam::ShutdownCameraReq, ::mvcam::ShutdownCameraRes>(
+          std::mem_fn(&MicroVisionCameraService::Service::ShutdownCamera), this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       MicroVisionCameraService_method_names[4],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< MicroVisionCameraService::Service, ::mvcam::IdRequest, ::google::protobuf::Empty>(
-          std::mem_fn(&MicroVisionCameraService::Service::ShutdownCamera), this)));
+      new ::grpc::internal::RpcMethodHandler< MicroVisionCameraService::Service, ::mvcam::OpenedReq, ::mvcam::OpenedRes>(
+          std::mem_fn(&MicroVisionCameraService::Service::Opened), this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       MicroVisionCameraService_method_names[5],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< MicroVisionCameraService::Service, ::mvcam::ConfigureRequest, ::google::protobuf::Empty>(
-          std::mem_fn(&MicroVisionCameraService::Service::ConfigureCamera), this)));
+      new ::grpc::internal::RpcMethodHandler< MicroVisionCameraService::Service, ::mvcam::CapturingReq, ::mvcam::CapturingRes>(
+          std::mem_fn(&MicroVisionCameraService::Service::Capturing), this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       MicroVisionCameraService_method_names[6],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< MicroVisionCameraService::Service, ::mvcam::IdRequest, ::mvcam::Configuration>(
-          std::mem_fn(&MicroVisionCameraService::Service::GetConfiguration), this)));
+      new ::grpc::internal::RpcMethodHandler< MicroVisionCameraService::Service, ::mvcam::ConfigureCameraReq, ::mvcam::ConfigureCameraRes>(
+          std::mem_fn(&MicroVisionCameraService::Service::ConfigureCamera), this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       MicroVisionCameraService_method_names[7],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< MicroVisionCameraService::Service, ::mvcam::IdRequest, ::mvcam::Status>(
-          std::mem_fn(&MicroVisionCameraService::Service::GetStatus), this)));
+      new ::grpc::internal::RpcMethodHandler< MicroVisionCameraService::Service, ::mvcam::GetConfigureReq, ::mvcam::GetConfigurationRes>(
+          std::mem_fn(&MicroVisionCameraService::Service::GetConfiguration), this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       MicroVisionCameraService_method_names[8],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< MicroVisionCameraService::Service, ::mvcam::IdRequest, ::mvcam::Frame>(
-          std::mem_fn(&MicroVisionCameraService::Service::Capture), this)));
+      new ::grpc::internal::RpcMethodHandler< MicroVisionCameraService::Service, ::mvcam::GetStatusReq, ::mvcam::GetStatusRes>(
+          std::mem_fn(&MicroVisionCameraService::Service::GetStatus), this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       MicroVisionCameraService_method_names[9],
-      ::grpc::internal::RpcMethod::SERVER_STREAMING,
-      new ::grpc::internal::ServerStreamingHandler< MicroVisionCameraService::Service, ::mvcam::StreamingRequest, ::mvcam::FrameStream>(
-          std::mem_fn(&MicroVisionCameraService::Service::Streaming), this)));
+      ::grpc::internal::RpcMethod::NORMAL_RPC,
+      new ::grpc::internal::RpcMethodHandler< MicroVisionCameraService::Service, ::mvcam::CaptureReq, ::mvcam::CaptureRes>(
+          std::mem_fn(&MicroVisionCameraService::Service::Capture), this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       MicroVisionCameraService_method_names[10],
-      ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< MicroVisionCameraService::Service, ::mvcam::IdRequest, ::google::protobuf::Empty>(
-          std::mem_fn(&MicroVisionCameraService::Service::ResetDevice), this)));
+      ::grpc::internal::RpcMethod::SERVER_STREAMING,
+      new ::grpc::internal::ServerStreamingHandler< MicroVisionCameraService::Service, ::mvcam::StreamingReq, ::mvcam::FrameStream>(
+          std::mem_fn(&MicroVisionCameraService::Service::Streaming), this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       MicroVisionCameraService_method_names[11],
+      ::grpc::internal::RpcMethod::SERVER_STREAMING,
+      new ::grpc::internal::ServerStreamingHandler< MicroVisionCameraService::Service, ::mvcam::WorkingStateStreamingReq, ::mvcam::WorkingStateStream>(
+          std::mem_fn(&MicroVisionCameraService::Service::WorkingStateStreaming), this)));
+  AddMethod(new ::grpc::internal::RpcServiceMethod(
+      MicroVisionCameraService_method_names[12],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< MicroVisionCameraService::Service, ::mvcam::DeviceControlRequest, ::google::protobuf::Empty>(
+      new ::grpc::internal::RpcMethodHandler< MicroVisionCameraService::Service, ::mvcam::ResetDeviceReq, ::mvcam::ResetDeviceRes>(
+          std::mem_fn(&MicroVisionCameraService::Service::ResetDevice), this)));
+  AddMethod(new ::grpc::internal::RpcServiceMethod(
+      MicroVisionCameraService_method_names[13],
+      ::grpc::internal::RpcMethod::NORMAL_RPC,
+      new ::grpc::internal::RpcMethodHandler< MicroVisionCameraService::Service, ::mvcam::ControlDeviceStateReq, ::mvcam::ControlDeviceStateRes>(
           std::mem_fn(&MicroVisionCameraService::Service::ControlDeviceState), this)));
 }
 
 MicroVisionCameraService::Service::~Service() {
 }
 
-::grpc::Status MicroVisionCameraService::Service::GetAvailableAdapters(::grpc::ServerContext* context, const ::google::protobuf::Empty* request, ::mvcam::AvailableAdaptersResponse* response) {
+::grpc::Status MicroVisionCameraService::Service::GetAdapter(::grpc::ServerContext* context, const ::mvcam::GetAdapterReq* request, ::mvcam::GetAdapterRes* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status MicroVisionCameraService::Service::GetDevices(::grpc::ServerContext* context, const ::mvcam::GetDevicesRequest* request, ::mvcam::GetDevicesResponse* response) {
+::grpc::Status MicroVisionCameraService::Service::GetDevices(::grpc::ServerContext* context, const ::mvcam::GetDevicesReq* request, ::mvcam::GetDevicesRes* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status MicroVisionCameraService::Service::QueryDeviceById(::grpc::ServerContext* context, const ::mvcam::IdRequest* request, ::mvcam::DeviceInfo* response) {
+::grpc::Status MicroVisionCameraService::Service::OpenCamera(::grpc::ServerContext* context, const ::mvcam::OpenCameraReq* request, ::mvcam::OpenCameraRes* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status MicroVisionCameraService::Service::OpenCamera(::grpc::ServerContext* context, const ::mvcam::IdRequest* request, ::google::protobuf::Empty* response) {
+::grpc::Status MicroVisionCameraService::Service::ShutdownCamera(::grpc::ServerContext* context, const ::mvcam::ShutdownCameraReq* request, ::mvcam::ShutdownCameraRes* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status MicroVisionCameraService::Service::ShutdownCamera(::grpc::ServerContext* context, const ::mvcam::IdRequest* request, ::google::protobuf::Empty* response) {
+::grpc::Status MicroVisionCameraService::Service::Opened(::grpc::ServerContext* context, const ::mvcam::OpenedReq* request, ::mvcam::OpenedRes* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status MicroVisionCameraService::Service::ConfigureCamera(::grpc::ServerContext* context, const ::mvcam::ConfigureRequest* request, ::google::protobuf::Empty* response) {
+::grpc::Status MicroVisionCameraService::Service::Capturing(::grpc::ServerContext* context, const ::mvcam::CapturingReq* request, ::mvcam::CapturingRes* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status MicroVisionCameraService::Service::GetConfiguration(::grpc::ServerContext* context, const ::mvcam::IdRequest* request, ::mvcam::Configuration* response) {
+::grpc::Status MicroVisionCameraService::Service::ConfigureCamera(::grpc::ServerContext* context, const ::mvcam::ConfigureCameraReq* request, ::mvcam::ConfigureCameraRes* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status MicroVisionCameraService::Service::GetStatus(::grpc::ServerContext* context, const ::mvcam::IdRequest* request, ::mvcam::Status* response) {
+::grpc::Status MicroVisionCameraService::Service::GetConfiguration(::grpc::ServerContext* context, const ::mvcam::GetConfigureReq* request, ::mvcam::GetConfigurationRes* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status MicroVisionCameraService::Service::Capture(::grpc::ServerContext* context, const ::mvcam::IdRequest* request, ::mvcam::Frame* response) {
+::grpc::Status MicroVisionCameraService::Service::GetStatus(::grpc::ServerContext* context, const ::mvcam::GetStatusReq* request, ::mvcam::GetStatusRes* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status MicroVisionCameraService::Service::Streaming(::grpc::ServerContext* context, const ::mvcam::StreamingRequest* request, ::grpc::ServerWriter< ::mvcam::FrameStream>* writer) {
+::grpc::Status MicroVisionCameraService::Service::Capture(::grpc::ServerContext* context, const ::mvcam::CaptureReq* request, ::mvcam::CaptureRes* response) {
+  (void) context;
+  (void) request;
+  (void) response;
+  return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+}
+
+::grpc::Status MicroVisionCameraService::Service::Streaming(::grpc::ServerContext* context, const ::mvcam::StreamingReq* request, ::grpc::ServerWriter< ::mvcam::FrameStream>* writer) {
   (void) context;
   (void) request;
   (void) writer;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status MicroVisionCameraService::Service::ResetDevice(::grpc::ServerContext* context, const ::mvcam::IdRequest* request, ::google::protobuf::Empty* response) {
+::grpc::Status MicroVisionCameraService::Service::WorkingStateStreaming(::grpc::ServerContext* context, const ::mvcam::WorkingStateStreamingReq* request, ::grpc::ServerWriter< ::mvcam::WorkingStateStream>* writer) {
+  (void) context;
+  (void) request;
+  (void) writer;
+  return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+}
+
+::grpc::Status MicroVisionCameraService::Service::ResetDevice(::grpc::ServerContext* context, const ::mvcam::ResetDeviceReq* request, ::mvcam::ResetDeviceRes* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status MicroVisionCameraService::Service::ControlDeviceState(::grpc::ServerContext* context, const ::mvcam::DeviceControlRequest* request, ::google::protobuf::Empty* response) {
+::grpc::Status MicroVisionCameraService::Service::ControlDeviceState(::grpc::ServerContext* context, const ::mvcam::ControlDeviceStateReq* request, ::mvcam::ControlDeviceStateRes* response) {
   (void) context;
   (void) request;
   (void) response;

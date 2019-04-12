@@ -26,9 +26,10 @@
 #include <google/protobuf/generated_message_util.h>
 #include <google/protobuf/inlined_string_field.h>
 #include <google/protobuf/metadata.h>
+#include <google/protobuf/message.h>
 #include <google/protobuf/repeated_field.h>  // IWYU pragma: export
 #include <google/protobuf/extension_set.h>  // IWYU pragma: export
-#include <google/protobuf/empty.pb.h>
+#include <google/protobuf/unknown_field_set.h>
 #include "camera_definitions.pb.h"
 // @@protoc_insertion_point(includes)
 #define PROTOBUF_INTERNAL_EXPORT_protobuf_camera_5fservice_2eproto 
@@ -38,7 +39,7 @@ namespace protobuf_camera_5fservice_2eproto {
 struct TableStruct {
   static const ::google::protobuf::internal::ParseTableField entries[];
   static const ::google::protobuf::internal::AuxillaryParseTableField aux[];
-  static const ::google::protobuf::internal::ParseTable schema[1];
+  static const ::google::protobuf::internal::ParseTable schema[28];
   static const ::google::protobuf::internal::FieldMetadata field_metadata[];
   static const ::google::protobuf::internal::SerializationTable serialization_table[];
   static const ::google::protobuf::uint32 offsets[];
@@ -46,12 +47,2981 @@ struct TableStruct {
 void AddDescriptors();
 }  // namespace protobuf_camera_5fservice_2eproto
 namespace mvcam {
+class CaptureReq;
+class CaptureReqDefaultTypeInternal;
+extern CaptureReqDefaultTypeInternal _CaptureReq_default_instance_;
+class CaptureRes;
+class CaptureResDefaultTypeInternal;
+extern CaptureResDefaultTypeInternal _CaptureRes_default_instance_;
+class CapturingReq;
+class CapturingReqDefaultTypeInternal;
+extern CapturingReqDefaultTypeInternal _CapturingReq_default_instance_;
+class CapturingRes;
+class CapturingResDefaultTypeInternal;
+extern CapturingResDefaultTypeInternal _CapturingRes_default_instance_;
+class ConfigureCameraReq;
+class ConfigureCameraReqDefaultTypeInternal;
+extern ConfigureCameraReqDefaultTypeInternal _ConfigureCameraReq_default_instance_;
+class ConfigureCameraRes;
+class ConfigureCameraResDefaultTypeInternal;
+extern ConfigureCameraResDefaultTypeInternal _ConfigureCameraRes_default_instance_;
+class ControlDeviceStateReq;
+class ControlDeviceStateReqDefaultTypeInternal;
+extern ControlDeviceStateReqDefaultTypeInternal _ControlDeviceStateReq_default_instance_;
+class ControlDeviceStateRes;
+class ControlDeviceStateResDefaultTypeInternal;
+extern ControlDeviceStateResDefaultTypeInternal _ControlDeviceStateRes_default_instance_;
+class FrameStream;
+class FrameStreamDefaultTypeInternal;
+extern FrameStreamDefaultTypeInternal _FrameStream_default_instance_;
+class GetAdapterReq;
+class GetAdapterReqDefaultTypeInternal;
+extern GetAdapterReqDefaultTypeInternal _GetAdapterReq_default_instance_;
+class GetAdapterRes;
+class GetAdapterResDefaultTypeInternal;
+extern GetAdapterResDefaultTypeInternal _GetAdapterRes_default_instance_;
+class GetConfigurationRes;
+class GetConfigurationResDefaultTypeInternal;
+extern GetConfigurationResDefaultTypeInternal _GetConfigurationRes_default_instance_;
+class GetConfigureReq;
+class GetConfigureReqDefaultTypeInternal;
+extern GetConfigureReqDefaultTypeInternal _GetConfigureReq_default_instance_;
+class GetDevicesReq;
+class GetDevicesReqDefaultTypeInternal;
+extern GetDevicesReqDefaultTypeInternal _GetDevicesReq_default_instance_;
+class GetDevicesRes;
+class GetDevicesResDefaultTypeInternal;
+extern GetDevicesResDefaultTypeInternal _GetDevicesRes_default_instance_;
+class GetStatusReq;
+class GetStatusReqDefaultTypeInternal;
+extern GetStatusReqDefaultTypeInternal _GetStatusReq_default_instance_;
+class GetStatusRes;
+class GetStatusResDefaultTypeInternal;
+extern GetStatusResDefaultTypeInternal _GetStatusRes_default_instance_;
+class OpenCameraReq;
+class OpenCameraReqDefaultTypeInternal;
+extern OpenCameraReqDefaultTypeInternal _OpenCameraReq_default_instance_;
+class OpenCameraRes;
+class OpenCameraResDefaultTypeInternal;
+extern OpenCameraResDefaultTypeInternal _OpenCameraRes_default_instance_;
+class OpenedReq;
+class OpenedReqDefaultTypeInternal;
+extern OpenedReqDefaultTypeInternal _OpenedReq_default_instance_;
+class OpenedRes;
+class OpenedResDefaultTypeInternal;
+extern OpenedResDefaultTypeInternal _OpenedRes_default_instance_;
+class ResetDeviceReq;
+class ResetDeviceReqDefaultTypeInternal;
+extern ResetDeviceReqDefaultTypeInternal _ResetDeviceReq_default_instance_;
+class ResetDeviceRes;
+class ResetDeviceResDefaultTypeInternal;
+extern ResetDeviceResDefaultTypeInternal _ResetDeviceRes_default_instance_;
+class ShutdownCameraReq;
+class ShutdownCameraReqDefaultTypeInternal;
+extern ShutdownCameraReqDefaultTypeInternal _ShutdownCameraReq_default_instance_;
+class ShutdownCameraRes;
+class ShutdownCameraResDefaultTypeInternal;
+extern ShutdownCameraResDefaultTypeInternal _ShutdownCameraRes_default_instance_;
+class StreamingReq;
+class StreamingReqDefaultTypeInternal;
+extern StreamingReqDefaultTypeInternal _StreamingReq_default_instance_;
+class WorkingStateStream;
+class WorkingStateStreamDefaultTypeInternal;
+extern WorkingStateStreamDefaultTypeInternal _WorkingStateStream_default_instance_;
+class WorkingStateStreamingReq;
+class WorkingStateStreamingReqDefaultTypeInternal;
+extern WorkingStateStreamingReqDefaultTypeInternal _WorkingStateStreamingReq_default_instance_;
 }  // namespace mvcam
+namespace google {
+namespace protobuf {
+template<> ::mvcam::CaptureReq* Arena::CreateMaybeMessage<::mvcam::CaptureReq>(Arena*);
+template<> ::mvcam::CaptureRes* Arena::CreateMaybeMessage<::mvcam::CaptureRes>(Arena*);
+template<> ::mvcam::CapturingReq* Arena::CreateMaybeMessage<::mvcam::CapturingReq>(Arena*);
+template<> ::mvcam::CapturingRes* Arena::CreateMaybeMessage<::mvcam::CapturingRes>(Arena*);
+template<> ::mvcam::ConfigureCameraReq* Arena::CreateMaybeMessage<::mvcam::ConfigureCameraReq>(Arena*);
+template<> ::mvcam::ConfigureCameraRes* Arena::CreateMaybeMessage<::mvcam::ConfigureCameraRes>(Arena*);
+template<> ::mvcam::ControlDeviceStateReq* Arena::CreateMaybeMessage<::mvcam::ControlDeviceStateReq>(Arena*);
+template<> ::mvcam::ControlDeviceStateRes* Arena::CreateMaybeMessage<::mvcam::ControlDeviceStateRes>(Arena*);
+template<> ::mvcam::FrameStream* Arena::CreateMaybeMessage<::mvcam::FrameStream>(Arena*);
+template<> ::mvcam::GetAdapterReq* Arena::CreateMaybeMessage<::mvcam::GetAdapterReq>(Arena*);
+template<> ::mvcam::GetAdapterRes* Arena::CreateMaybeMessage<::mvcam::GetAdapterRes>(Arena*);
+template<> ::mvcam::GetConfigurationRes* Arena::CreateMaybeMessage<::mvcam::GetConfigurationRes>(Arena*);
+template<> ::mvcam::GetConfigureReq* Arena::CreateMaybeMessage<::mvcam::GetConfigureReq>(Arena*);
+template<> ::mvcam::GetDevicesReq* Arena::CreateMaybeMessage<::mvcam::GetDevicesReq>(Arena*);
+template<> ::mvcam::GetDevicesRes* Arena::CreateMaybeMessage<::mvcam::GetDevicesRes>(Arena*);
+template<> ::mvcam::GetStatusReq* Arena::CreateMaybeMessage<::mvcam::GetStatusReq>(Arena*);
+template<> ::mvcam::GetStatusRes* Arena::CreateMaybeMessage<::mvcam::GetStatusRes>(Arena*);
+template<> ::mvcam::OpenCameraReq* Arena::CreateMaybeMessage<::mvcam::OpenCameraReq>(Arena*);
+template<> ::mvcam::OpenCameraRes* Arena::CreateMaybeMessage<::mvcam::OpenCameraRes>(Arena*);
+template<> ::mvcam::OpenedReq* Arena::CreateMaybeMessage<::mvcam::OpenedReq>(Arena*);
+template<> ::mvcam::OpenedRes* Arena::CreateMaybeMessage<::mvcam::OpenedRes>(Arena*);
+template<> ::mvcam::ResetDeviceReq* Arena::CreateMaybeMessage<::mvcam::ResetDeviceReq>(Arena*);
+template<> ::mvcam::ResetDeviceRes* Arena::CreateMaybeMessage<::mvcam::ResetDeviceRes>(Arena*);
+template<> ::mvcam::ShutdownCameraReq* Arena::CreateMaybeMessage<::mvcam::ShutdownCameraReq>(Arena*);
+template<> ::mvcam::ShutdownCameraRes* Arena::CreateMaybeMessage<::mvcam::ShutdownCameraRes>(Arena*);
+template<> ::mvcam::StreamingReq* Arena::CreateMaybeMessage<::mvcam::StreamingReq>(Arena*);
+template<> ::mvcam::WorkingStateStream* Arena::CreateMaybeMessage<::mvcam::WorkingStateStream>(Arena*);
+template<> ::mvcam::WorkingStateStreamingReq* Arena::CreateMaybeMessage<::mvcam::WorkingStateStreamingReq>(Arena*);
+}  // namespace protobuf
+}  // namespace google
 namespace mvcam {
 
 // ===================================================================
 
+class GetAdapterReq : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mvcam.GetAdapterReq) */ {
+ public:
+  GetAdapterReq();
+  virtual ~GetAdapterReq();
 
+  GetAdapterReq(const GetAdapterReq& from);
+
+  inline GetAdapterReq& operator=(const GetAdapterReq& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  GetAdapterReq(GetAdapterReq&& from) noexcept
+    : GetAdapterReq() {
+    *this = ::std::move(from);
+  }
+
+  inline GetAdapterReq& operator=(GetAdapterReq&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const GetAdapterReq& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const GetAdapterReq* internal_default_instance() {
+    return reinterpret_cast<const GetAdapterReq*>(
+               &_GetAdapterReq_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    0;
+
+  void Swap(GetAdapterReq* other);
+  friend void swap(GetAdapterReq& a, GetAdapterReq& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline GetAdapterReq* New() const final {
+    return CreateMaybeMessage<GetAdapterReq>(NULL);
+  }
+
+  GetAdapterReq* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<GetAdapterReq>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const GetAdapterReq& from);
+  void MergeFrom(const GetAdapterReq& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(GetAdapterReq* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // @@protoc_insertion_point(class_scope:mvcam.GetAdapterReq)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  friend struct ::protobuf_camera_5fservice_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class GetAdapterRes : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mvcam.GetAdapterRes) */ {
+ public:
+  GetAdapterRes();
+  virtual ~GetAdapterRes();
+
+  GetAdapterRes(const GetAdapterRes& from);
+
+  inline GetAdapterRes& operator=(const GetAdapterRes& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  GetAdapterRes(GetAdapterRes&& from) noexcept
+    : GetAdapterRes() {
+    *this = ::std::move(from);
+  }
+
+  inline GetAdapterRes& operator=(GetAdapterRes&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const GetAdapterRes& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const GetAdapterRes* internal_default_instance() {
+    return reinterpret_cast<const GetAdapterRes*>(
+               &_GetAdapterRes_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    1;
+
+  void Swap(GetAdapterRes* other);
+  friend void swap(GetAdapterRes& a, GetAdapterRes& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline GetAdapterRes* New() const final {
+    return CreateMaybeMessage<GetAdapterRes>(NULL);
+  }
+
+  GetAdapterRes* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<GetAdapterRes>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const GetAdapterRes& from);
+  void MergeFrom(const GetAdapterRes& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(GetAdapterRes* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // .mvcam.AdapterInfo adapter = 1;
+  bool has_adapter() const;
+  void clear_adapter();
+  static const int kAdapterFieldNumber = 1;
+  private:
+  const ::mvcam::AdapterInfo& _internal_adapter() const;
+  public:
+  const ::mvcam::AdapterInfo& adapter() const;
+  ::mvcam::AdapterInfo* release_adapter();
+  ::mvcam::AdapterInfo* mutable_adapter();
+  void set_allocated_adapter(::mvcam::AdapterInfo* adapter);
+
+  // @@protoc_insertion_point(class_scope:mvcam.GetAdapterRes)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::mvcam::AdapterInfo* adapter_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  friend struct ::protobuf_camera_5fservice_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class GetDevicesReq : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mvcam.GetDevicesReq) */ {
+ public:
+  GetDevicesReq();
+  virtual ~GetDevicesReq();
+
+  GetDevicesReq(const GetDevicesReq& from);
+
+  inline GetDevicesReq& operator=(const GetDevicesReq& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  GetDevicesReq(GetDevicesReq&& from) noexcept
+    : GetDevicesReq() {
+    *this = ::std::move(from);
+  }
+
+  inline GetDevicesReq& operator=(GetDevicesReq&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const GetDevicesReq& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const GetDevicesReq* internal_default_instance() {
+    return reinterpret_cast<const GetDevicesReq*>(
+               &_GetDevicesReq_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    2;
+
+  void Swap(GetDevicesReq* other);
+  friend void swap(GetDevicesReq& a, GetDevicesReq& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline GetDevicesReq* New() const final {
+    return CreateMaybeMessage<GetDevicesReq>(NULL);
+  }
+
+  GetDevicesReq* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<GetDevicesReq>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const GetDevicesReq& from);
+  void MergeFrom(const GetDevicesReq& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(GetDevicesReq* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // @@protoc_insertion_point(class_scope:mvcam.GetDevicesReq)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  friend struct ::protobuf_camera_5fservice_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class GetDevicesRes : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mvcam.GetDevicesRes) */ {
+ public:
+  GetDevicesRes();
+  virtual ~GetDevicesRes();
+
+  GetDevicesRes(const GetDevicesRes& from);
+
+  inline GetDevicesRes& operator=(const GetDevicesRes& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  GetDevicesRes(GetDevicesRes&& from) noexcept
+    : GetDevicesRes() {
+    *this = ::std::move(from);
+  }
+
+  inline GetDevicesRes& operator=(GetDevicesRes&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const GetDevicesRes& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const GetDevicesRes* internal_default_instance() {
+    return reinterpret_cast<const GetDevicesRes*>(
+               &_GetDevicesRes_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    3;
+
+  void Swap(GetDevicesRes* other);
+  friend void swap(GetDevicesRes& a, GetDevicesRes& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline GetDevicesRes* New() const final {
+    return CreateMaybeMessage<GetDevicesRes>(NULL);
+  }
+
+  GetDevicesRes* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<GetDevicesRes>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const GetDevicesRes& from);
+  void MergeFrom(const GetDevicesRes& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(GetDevicesRes* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // repeated .mvcam.DeviceInfo devices = 1;
+  int devices_size() const;
+  void clear_devices();
+  static const int kDevicesFieldNumber = 1;
+  ::mvcam::DeviceInfo* mutable_devices(int index);
+  ::google::protobuf::RepeatedPtrField< ::mvcam::DeviceInfo >*
+      mutable_devices();
+  const ::mvcam::DeviceInfo& devices(int index) const;
+  ::mvcam::DeviceInfo* add_devices();
+  const ::google::protobuf::RepeatedPtrField< ::mvcam::DeviceInfo >&
+      devices() const;
+
+  // @@protoc_insertion_point(class_scope:mvcam.GetDevicesRes)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::RepeatedPtrField< ::mvcam::DeviceInfo > devices_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  friend struct ::protobuf_camera_5fservice_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class OpenCameraReq : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mvcam.OpenCameraReq) */ {
+ public:
+  OpenCameraReq();
+  virtual ~OpenCameraReq();
+
+  OpenCameraReq(const OpenCameraReq& from);
+
+  inline OpenCameraReq& operator=(const OpenCameraReq& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  OpenCameraReq(OpenCameraReq&& from) noexcept
+    : OpenCameraReq() {
+    *this = ::std::move(from);
+  }
+
+  inline OpenCameraReq& operator=(OpenCameraReq&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const OpenCameraReq& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const OpenCameraReq* internal_default_instance() {
+    return reinterpret_cast<const OpenCameraReq*>(
+               &_OpenCameraReq_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    4;
+
+  void Swap(OpenCameraReq* other);
+  friend void swap(OpenCameraReq& a, OpenCameraReq& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline OpenCameraReq* New() const final {
+    return CreateMaybeMessage<OpenCameraReq>(NULL);
+  }
+
+  OpenCameraReq* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<OpenCameraReq>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const OpenCameraReq& from);
+  void MergeFrom(const OpenCameraReq& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(OpenCameraReq* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // string id = 1;
+  void clear_id();
+  static const int kIdFieldNumber = 1;
+  const ::std::string& id() const;
+  void set_id(const ::std::string& value);
+  #if LANG_CXX11
+  void set_id(::std::string&& value);
+  #endif
+  void set_id(const char* value);
+  void set_id(const char* value, size_t size);
+  ::std::string* mutable_id();
+  ::std::string* release_id();
+  void set_allocated_id(::std::string* id);
+
+  // @@protoc_insertion_point(class_scope:mvcam.OpenCameraReq)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::ArenaStringPtr id_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  friend struct ::protobuf_camera_5fservice_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class OpenCameraRes : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mvcam.OpenCameraRes) */ {
+ public:
+  OpenCameraRes();
+  virtual ~OpenCameraRes();
+
+  OpenCameraRes(const OpenCameraRes& from);
+
+  inline OpenCameraRes& operator=(const OpenCameraRes& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  OpenCameraRes(OpenCameraRes&& from) noexcept
+    : OpenCameraRes() {
+    *this = ::std::move(from);
+  }
+
+  inline OpenCameraRes& operator=(OpenCameraRes&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const OpenCameraRes& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const OpenCameraRes* internal_default_instance() {
+    return reinterpret_cast<const OpenCameraRes*>(
+               &_OpenCameraRes_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    5;
+
+  void Swap(OpenCameraRes* other);
+  friend void swap(OpenCameraRes& a, OpenCameraRes& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline OpenCameraRes* New() const final {
+    return CreateMaybeMessage<OpenCameraRes>(NULL);
+  }
+
+  OpenCameraRes* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<OpenCameraRes>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const OpenCameraRes& from);
+  void MergeFrom(const OpenCameraRes& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(OpenCameraRes* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // @@protoc_insertion_point(class_scope:mvcam.OpenCameraRes)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  friend struct ::protobuf_camera_5fservice_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class ShutdownCameraReq : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mvcam.ShutdownCameraReq) */ {
+ public:
+  ShutdownCameraReq();
+  virtual ~ShutdownCameraReq();
+
+  ShutdownCameraReq(const ShutdownCameraReq& from);
+
+  inline ShutdownCameraReq& operator=(const ShutdownCameraReq& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  ShutdownCameraReq(ShutdownCameraReq&& from) noexcept
+    : ShutdownCameraReq() {
+    *this = ::std::move(from);
+  }
+
+  inline ShutdownCameraReq& operator=(ShutdownCameraReq&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const ShutdownCameraReq& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const ShutdownCameraReq* internal_default_instance() {
+    return reinterpret_cast<const ShutdownCameraReq*>(
+               &_ShutdownCameraReq_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    6;
+
+  void Swap(ShutdownCameraReq* other);
+  friend void swap(ShutdownCameraReq& a, ShutdownCameraReq& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline ShutdownCameraReq* New() const final {
+    return CreateMaybeMessage<ShutdownCameraReq>(NULL);
+  }
+
+  ShutdownCameraReq* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<ShutdownCameraReq>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const ShutdownCameraReq& from);
+  void MergeFrom(const ShutdownCameraReq& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(ShutdownCameraReq* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // @@protoc_insertion_point(class_scope:mvcam.ShutdownCameraReq)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  friend struct ::protobuf_camera_5fservice_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class ShutdownCameraRes : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mvcam.ShutdownCameraRes) */ {
+ public:
+  ShutdownCameraRes();
+  virtual ~ShutdownCameraRes();
+
+  ShutdownCameraRes(const ShutdownCameraRes& from);
+
+  inline ShutdownCameraRes& operator=(const ShutdownCameraRes& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  ShutdownCameraRes(ShutdownCameraRes&& from) noexcept
+    : ShutdownCameraRes() {
+    *this = ::std::move(from);
+  }
+
+  inline ShutdownCameraRes& operator=(ShutdownCameraRes&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const ShutdownCameraRes& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const ShutdownCameraRes* internal_default_instance() {
+    return reinterpret_cast<const ShutdownCameraRes*>(
+               &_ShutdownCameraRes_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    7;
+
+  void Swap(ShutdownCameraRes* other);
+  friend void swap(ShutdownCameraRes& a, ShutdownCameraRes& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline ShutdownCameraRes* New() const final {
+    return CreateMaybeMessage<ShutdownCameraRes>(NULL);
+  }
+
+  ShutdownCameraRes* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<ShutdownCameraRes>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const ShutdownCameraRes& from);
+  void MergeFrom(const ShutdownCameraRes& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(ShutdownCameraRes* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // @@protoc_insertion_point(class_scope:mvcam.ShutdownCameraRes)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  friend struct ::protobuf_camera_5fservice_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class OpenedReq : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mvcam.OpenedReq) */ {
+ public:
+  OpenedReq();
+  virtual ~OpenedReq();
+
+  OpenedReq(const OpenedReq& from);
+
+  inline OpenedReq& operator=(const OpenedReq& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  OpenedReq(OpenedReq&& from) noexcept
+    : OpenedReq() {
+    *this = ::std::move(from);
+  }
+
+  inline OpenedReq& operator=(OpenedReq&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const OpenedReq& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const OpenedReq* internal_default_instance() {
+    return reinterpret_cast<const OpenedReq*>(
+               &_OpenedReq_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    8;
+
+  void Swap(OpenedReq* other);
+  friend void swap(OpenedReq& a, OpenedReq& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline OpenedReq* New() const final {
+    return CreateMaybeMessage<OpenedReq>(NULL);
+  }
+
+  OpenedReq* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<OpenedReq>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const OpenedReq& from);
+  void MergeFrom(const OpenedReq& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(OpenedReq* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // @@protoc_insertion_point(class_scope:mvcam.OpenedReq)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  friend struct ::protobuf_camera_5fservice_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class OpenedRes : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mvcam.OpenedRes) */ {
+ public:
+  OpenedRes();
+  virtual ~OpenedRes();
+
+  OpenedRes(const OpenedRes& from);
+
+  inline OpenedRes& operator=(const OpenedRes& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  OpenedRes(OpenedRes&& from) noexcept
+    : OpenedRes() {
+    *this = ::std::move(from);
+  }
+
+  inline OpenedRes& operator=(OpenedRes&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const OpenedRes& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const OpenedRes* internal_default_instance() {
+    return reinterpret_cast<const OpenedRes*>(
+               &_OpenedRes_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    9;
+
+  void Swap(OpenedRes* other);
+  friend void swap(OpenedRes& a, OpenedRes& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline OpenedRes* New() const final {
+    return CreateMaybeMessage<OpenedRes>(NULL);
+  }
+
+  OpenedRes* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<OpenedRes>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const OpenedRes& from);
+  void MergeFrom(const OpenedRes& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(OpenedRes* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // bool opened = 1;
+  void clear_opened();
+  static const int kOpenedFieldNumber = 1;
+  bool opened() const;
+  void set_opened(bool value);
+
+  // @@protoc_insertion_point(class_scope:mvcam.OpenedRes)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  bool opened_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  friend struct ::protobuf_camera_5fservice_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class CapturingReq : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mvcam.CapturingReq) */ {
+ public:
+  CapturingReq();
+  virtual ~CapturingReq();
+
+  CapturingReq(const CapturingReq& from);
+
+  inline CapturingReq& operator=(const CapturingReq& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  CapturingReq(CapturingReq&& from) noexcept
+    : CapturingReq() {
+    *this = ::std::move(from);
+  }
+
+  inline CapturingReq& operator=(CapturingReq&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const CapturingReq& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const CapturingReq* internal_default_instance() {
+    return reinterpret_cast<const CapturingReq*>(
+               &_CapturingReq_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    10;
+
+  void Swap(CapturingReq* other);
+  friend void swap(CapturingReq& a, CapturingReq& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline CapturingReq* New() const final {
+    return CreateMaybeMessage<CapturingReq>(NULL);
+  }
+
+  CapturingReq* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<CapturingReq>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const CapturingReq& from);
+  void MergeFrom(const CapturingReq& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(CapturingReq* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // @@protoc_insertion_point(class_scope:mvcam.CapturingReq)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  friend struct ::protobuf_camera_5fservice_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class CapturingRes : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mvcam.CapturingRes) */ {
+ public:
+  CapturingRes();
+  virtual ~CapturingRes();
+
+  CapturingRes(const CapturingRes& from);
+
+  inline CapturingRes& operator=(const CapturingRes& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  CapturingRes(CapturingRes&& from) noexcept
+    : CapturingRes() {
+    *this = ::std::move(from);
+  }
+
+  inline CapturingRes& operator=(CapturingRes&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const CapturingRes& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const CapturingRes* internal_default_instance() {
+    return reinterpret_cast<const CapturingRes*>(
+               &_CapturingRes_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    11;
+
+  void Swap(CapturingRes* other);
+  friend void swap(CapturingRes& a, CapturingRes& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline CapturingRes* New() const final {
+    return CreateMaybeMessage<CapturingRes>(NULL);
+  }
+
+  CapturingRes* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<CapturingRes>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const CapturingRes& from);
+  void MergeFrom(const CapturingRes& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(CapturingRes* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // bool capturing = 1;
+  void clear_capturing();
+  static const int kCapturingFieldNumber = 1;
+  bool capturing() const;
+  void set_capturing(bool value);
+
+  // @@protoc_insertion_point(class_scope:mvcam.CapturingRes)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  bool capturing_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  friend struct ::protobuf_camera_5fservice_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class ConfigureCameraReq : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mvcam.ConfigureCameraReq) */ {
+ public:
+  ConfigureCameraReq();
+  virtual ~ConfigureCameraReq();
+
+  ConfigureCameraReq(const ConfigureCameraReq& from);
+
+  inline ConfigureCameraReq& operator=(const ConfigureCameraReq& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  ConfigureCameraReq(ConfigureCameraReq&& from) noexcept
+    : ConfigureCameraReq() {
+    *this = ::std::move(from);
+  }
+
+  inline ConfigureCameraReq& operator=(ConfigureCameraReq&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const ConfigureCameraReq& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const ConfigureCameraReq* internal_default_instance() {
+    return reinterpret_cast<const ConfigureCameraReq*>(
+               &_ConfigureCameraReq_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    12;
+
+  void Swap(ConfigureCameraReq* other);
+  friend void swap(ConfigureCameraReq& a, ConfigureCameraReq& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline ConfigureCameraReq* New() const final {
+    return CreateMaybeMessage<ConfigureCameraReq>(NULL);
+  }
+
+  ConfigureCameraReq* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<ConfigureCameraReq>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const ConfigureCameraReq& from);
+  void MergeFrom(const ConfigureCameraReq& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(ConfigureCameraReq* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // .mvcam.Configuration config = 1;
+  bool has_config() const;
+  void clear_config();
+  static const int kConfigFieldNumber = 1;
+  private:
+  const ::mvcam::Configuration& _internal_config() const;
+  public:
+  const ::mvcam::Configuration& config() const;
+  ::mvcam::Configuration* release_config();
+  ::mvcam::Configuration* mutable_config();
+  void set_allocated_config(::mvcam::Configuration* config);
+
+  // @@protoc_insertion_point(class_scope:mvcam.ConfigureCameraReq)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::mvcam::Configuration* config_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  friend struct ::protobuf_camera_5fservice_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class ConfigureCameraRes : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mvcam.ConfigureCameraRes) */ {
+ public:
+  ConfigureCameraRes();
+  virtual ~ConfigureCameraRes();
+
+  ConfigureCameraRes(const ConfigureCameraRes& from);
+
+  inline ConfigureCameraRes& operator=(const ConfigureCameraRes& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  ConfigureCameraRes(ConfigureCameraRes&& from) noexcept
+    : ConfigureCameraRes() {
+    *this = ::std::move(from);
+  }
+
+  inline ConfigureCameraRes& operator=(ConfigureCameraRes&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const ConfigureCameraRes& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const ConfigureCameraRes* internal_default_instance() {
+    return reinterpret_cast<const ConfigureCameraRes*>(
+               &_ConfigureCameraRes_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    13;
+
+  void Swap(ConfigureCameraRes* other);
+  friend void swap(ConfigureCameraRes& a, ConfigureCameraRes& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline ConfigureCameraRes* New() const final {
+    return CreateMaybeMessage<ConfigureCameraRes>(NULL);
+  }
+
+  ConfigureCameraRes* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<ConfigureCameraRes>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const ConfigureCameraRes& from);
+  void MergeFrom(const ConfigureCameraRes& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(ConfigureCameraRes* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // @@protoc_insertion_point(class_scope:mvcam.ConfigureCameraRes)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  friend struct ::protobuf_camera_5fservice_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class GetConfigureReq : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mvcam.GetConfigureReq) */ {
+ public:
+  GetConfigureReq();
+  virtual ~GetConfigureReq();
+
+  GetConfigureReq(const GetConfigureReq& from);
+
+  inline GetConfigureReq& operator=(const GetConfigureReq& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  GetConfigureReq(GetConfigureReq&& from) noexcept
+    : GetConfigureReq() {
+    *this = ::std::move(from);
+  }
+
+  inline GetConfigureReq& operator=(GetConfigureReq&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const GetConfigureReq& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const GetConfigureReq* internal_default_instance() {
+    return reinterpret_cast<const GetConfigureReq*>(
+               &_GetConfigureReq_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    14;
+
+  void Swap(GetConfigureReq* other);
+  friend void swap(GetConfigureReq& a, GetConfigureReq& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline GetConfigureReq* New() const final {
+    return CreateMaybeMessage<GetConfigureReq>(NULL);
+  }
+
+  GetConfigureReq* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<GetConfigureReq>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const GetConfigureReq& from);
+  void MergeFrom(const GetConfigureReq& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(GetConfigureReq* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // @@protoc_insertion_point(class_scope:mvcam.GetConfigureReq)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  friend struct ::protobuf_camera_5fservice_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class GetConfigurationRes : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mvcam.GetConfigurationRes) */ {
+ public:
+  GetConfigurationRes();
+  virtual ~GetConfigurationRes();
+
+  GetConfigurationRes(const GetConfigurationRes& from);
+
+  inline GetConfigurationRes& operator=(const GetConfigurationRes& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  GetConfigurationRes(GetConfigurationRes&& from) noexcept
+    : GetConfigurationRes() {
+    *this = ::std::move(from);
+  }
+
+  inline GetConfigurationRes& operator=(GetConfigurationRes&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const GetConfigurationRes& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const GetConfigurationRes* internal_default_instance() {
+    return reinterpret_cast<const GetConfigurationRes*>(
+               &_GetConfigurationRes_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    15;
+
+  void Swap(GetConfigurationRes* other);
+  friend void swap(GetConfigurationRes& a, GetConfigurationRes& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline GetConfigurationRes* New() const final {
+    return CreateMaybeMessage<GetConfigurationRes>(NULL);
+  }
+
+  GetConfigurationRes* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<GetConfigurationRes>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const GetConfigurationRes& from);
+  void MergeFrom(const GetConfigurationRes& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(GetConfigurationRes* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // .mvcam.Configuration config = 1;
+  bool has_config() const;
+  void clear_config();
+  static const int kConfigFieldNumber = 1;
+  private:
+  const ::mvcam::Configuration& _internal_config() const;
+  public:
+  const ::mvcam::Configuration& config() const;
+  ::mvcam::Configuration* release_config();
+  ::mvcam::Configuration* mutable_config();
+  void set_allocated_config(::mvcam::Configuration* config);
+
+  // @@protoc_insertion_point(class_scope:mvcam.GetConfigurationRes)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::mvcam::Configuration* config_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  friend struct ::protobuf_camera_5fservice_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class GetStatusReq : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mvcam.GetStatusReq) */ {
+ public:
+  GetStatusReq();
+  virtual ~GetStatusReq();
+
+  GetStatusReq(const GetStatusReq& from);
+
+  inline GetStatusReq& operator=(const GetStatusReq& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  GetStatusReq(GetStatusReq&& from) noexcept
+    : GetStatusReq() {
+    *this = ::std::move(from);
+  }
+
+  inline GetStatusReq& operator=(GetStatusReq&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const GetStatusReq& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const GetStatusReq* internal_default_instance() {
+    return reinterpret_cast<const GetStatusReq*>(
+               &_GetStatusReq_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    16;
+
+  void Swap(GetStatusReq* other);
+  friend void swap(GetStatusReq& a, GetStatusReq& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline GetStatusReq* New() const final {
+    return CreateMaybeMessage<GetStatusReq>(NULL);
+  }
+
+  GetStatusReq* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<GetStatusReq>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const GetStatusReq& from);
+  void MergeFrom(const GetStatusReq& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(GetStatusReq* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // .mvcam.Status status = 1;
+  bool has_status() const;
+  void clear_status();
+  static const int kStatusFieldNumber = 1;
+  private:
+  const ::mvcam::Status& _internal_status() const;
+  public:
+  const ::mvcam::Status& status() const;
+  ::mvcam::Status* release_status();
+  ::mvcam::Status* mutable_status();
+  void set_allocated_status(::mvcam::Status* status);
+
+  // @@protoc_insertion_point(class_scope:mvcam.GetStatusReq)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::mvcam::Status* status_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  friend struct ::protobuf_camera_5fservice_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class GetStatusRes : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mvcam.GetStatusRes) */ {
+ public:
+  GetStatusRes();
+  virtual ~GetStatusRes();
+
+  GetStatusRes(const GetStatusRes& from);
+
+  inline GetStatusRes& operator=(const GetStatusRes& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  GetStatusRes(GetStatusRes&& from) noexcept
+    : GetStatusRes() {
+    *this = ::std::move(from);
+  }
+
+  inline GetStatusRes& operator=(GetStatusRes&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const GetStatusRes& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const GetStatusRes* internal_default_instance() {
+    return reinterpret_cast<const GetStatusRes*>(
+               &_GetStatusRes_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    17;
+
+  void Swap(GetStatusRes* other);
+  friend void swap(GetStatusRes& a, GetStatusRes& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline GetStatusRes* New() const final {
+    return CreateMaybeMessage<GetStatusRes>(NULL);
+  }
+
+  GetStatusRes* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<GetStatusRes>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const GetStatusRes& from);
+  void MergeFrom(const GetStatusRes& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(GetStatusRes* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // .mvcam.Status status = 1;
+  bool has_status() const;
+  void clear_status();
+  static const int kStatusFieldNumber = 1;
+  private:
+  const ::mvcam::Status& _internal_status() const;
+  public:
+  const ::mvcam::Status& status() const;
+  ::mvcam::Status* release_status();
+  ::mvcam::Status* mutable_status();
+  void set_allocated_status(::mvcam::Status* status);
+
+  // @@protoc_insertion_point(class_scope:mvcam.GetStatusRes)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::mvcam::Status* status_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  friend struct ::protobuf_camera_5fservice_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class CaptureReq : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mvcam.CaptureReq) */ {
+ public:
+  CaptureReq();
+  virtual ~CaptureReq();
+
+  CaptureReq(const CaptureReq& from);
+
+  inline CaptureReq& operator=(const CaptureReq& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  CaptureReq(CaptureReq&& from) noexcept
+    : CaptureReq() {
+    *this = ::std::move(from);
+  }
+
+  inline CaptureReq& operator=(CaptureReq&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const CaptureReq& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const CaptureReq* internal_default_instance() {
+    return reinterpret_cast<const CaptureReq*>(
+               &_CaptureReq_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    18;
+
+  void Swap(CaptureReq* other);
+  friend void swap(CaptureReq& a, CaptureReq& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline CaptureReq* New() const final {
+    return CreateMaybeMessage<CaptureReq>(NULL);
+  }
+
+  CaptureReq* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<CaptureReq>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const CaptureReq& from);
+  void MergeFrom(const CaptureReq& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(CaptureReq* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // @@protoc_insertion_point(class_scope:mvcam.CaptureReq)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  friend struct ::protobuf_camera_5fservice_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class CaptureRes : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mvcam.CaptureRes) */ {
+ public:
+  CaptureRes();
+  virtual ~CaptureRes();
+
+  CaptureRes(const CaptureRes& from);
+
+  inline CaptureRes& operator=(const CaptureRes& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  CaptureRes(CaptureRes&& from) noexcept
+    : CaptureRes() {
+    *this = ::std::move(from);
+  }
+
+  inline CaptureRes& operator=(CaptureRes&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const CaptureRes& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const CaptureRes* internal_default_instance() {
+    return reinterpret_cast<const CaptureRes*>(
+               &_CaptureRes_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    19;
+
+  void Swap(CaptureRes* other);
+  friend void swap(CaptureRes& a, CaptureRes& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline CaptureRes* New() const final {
+    return CreateMaybeMessage<CaptureRes>(NULL);
+  }
+
+  CaptureRes* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<CaptureRes>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const CaptureRes& from);
+  void MergeFrom(const CaptureRes& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(CaptureRes* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // .mvcam.Frame frame = 1;
+  bool has_frame() const;
+  void clear_frame();
+  static const int kFrameFieldNumber = 1;
+  private:
+  const ::mvcam::Frame& _internal_frame() const;
+  public:
+  const ::mvcam::Frame& frame() const;
+  ::mvcam::Frame* release_frame();
+  ::mvcam::Frame* mutable_frame();
+  void set_allocated_frame(::mvcam::Frame* frame);
+
+  // @@protoc_insertion_point(class_scope:mvcam.CaptureRes)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::mvcam::Frame* frame_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  friend struct ::protobuf_camera_5fservice_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class StreamingReq : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mvcam.StreamingReq) */ {
+ public:
+  StreamingReq();
+  virtual ~StreamingReq();
+
+  StreamingReq(const StreamingReq& from);
+
+  inline StreamingReq& operator=(const StreamingReq& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  StreamingReq(StreamingReq&& from) noexcept
+    : StreamingReq() {
+    *this = ::std::move(from);
+  }
+
+  inline StreamingReq& operator=(StreamingReq&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const StreamingReq& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const StreamingReq* internal_default_instance() {
+    return reinterpret_cast<const StreamingReq*>(
+               &_StreamingReq_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    20;
+
+  void Swap(StreamingReq* other);
+  friend void swap(StreamingReq& a, StreamingReq& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline StreamingReq* New() const final {
+    return CreateMaybeMessage<StreamingReq>(NULL);
+  }
+
+  StreamingReq* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<StreamingReq>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const StreamingReq& from);
+  void MergeFrom(const StreamingReq& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(StreamingReq* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // uint64 number_frames = 2;
+  void clear_number_frames();
+  static const int kNumberFramesFieldNumber = 2;
+  ::google::protobuf::uint64 number_frames() const;
+  void set_number_frames(::google::protobuf::uint64 value);
+
+  // uint64 batch_size = 4;
+  void clear_batch_size();
+  static const int kBatchSizeFieldNumber = 4;
+  ::google::protobuf::uint64 batch_size() const;
+  void set_batch_size(::google::protobuf::uint64 value);
+
+  // @@protoc_insertion_point(class_scope:mvcam.StreamingReq)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::uint64 number_frames_;
+  ::google::protobuf::uint64 batch_size_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  friend struct ::protobuf_camera_5fservice_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class FrameStream : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mvcam.FrameStream) */ {
+ public:
+  FrameStream();
+  virtual ~FrameStream();
+
+  FrameStream(const FrameStream& from);
+
+  inline FrameStream& operator=(const FrameStream& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  FrameStream(FrameStream&& from) noexcept
+    : FrameStream() {
+    *this = ::std::move(from);
+  }
+
+  inline FrameStream& operator=(FrameStream&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const FrameStream& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const FrameStream* internal_default_instance() {
+    return reinterpret_cast<const FrameStream*>(
+               &_FrameStream_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    21;
+
+  void Swap(FrameStream* other);
+  friend void swap(FrameStream& a, FrameStream& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline FrameStream* New() const final {
+    return CreateMaybeMessage<FrameStream>(NULL);
+  }
+
+  FrameStream* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<FrameStream>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const FrameStream& from);
+  void MergeFrom(const FrameStream& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(FrameStream* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // repeated .mvcam.Frame frames = 1;
+  int frames_size() const;
+  void clear_frames();
+  static const int kFramesFieldNumber = 1;
+  ::mvcam::Frame* mutable_frames(int index);
+  ::google::protobuf::RepeatedPtrField< ::mvcam::Frame >*
+      mutable_frames();
+  const ::mvcam::Frame& frames(int index) const;
+  ::mvcam::Frame* add_frames();
+  const ::google::protobuf::RepeatedPtrField< ::mvcam::Frame >&
+      frames() const;
+
+  // @@protoc_insertion_point(class_scope:mvcam.FrameStream)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::RepeatedPtrField< ::mvcam::Frame > frames_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  friend struct ::protobuf_camera_5fservice_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class WorkingStateStreamingReq : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mvcam.WorkingStateStreamingReq) */ {
+ public:
+  WorkingStateStreamingReq();
+  virtual ~WorkingStateStreamingReq();
+
+  WorkingStateStreamingReq(const WorkingStateStreamingReq& from);
+
+  inline WorkingStateStreamingReq& operator=(const WorkingStateStreamingReq& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  WorkingStateStreamingReq(WorkingStateStreamingReq&& from) noexcept
+    : WorkingStateStreamingReq() {
+    *this = ::std::move(from);
+  }
+
+  inline WorkingStateStreamingReq& operator=(WorkingStateStreamingReq&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const WorkingStateStreamingReq& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const WorkingStateStreamingReq* internal_default_instance() {
+    return reinterpret_cast<const WorkingStateStreamingReq*>(
+               &_WorkingStateStreamingReq_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    22;
+
+  void Swap(WorkingStateStreamingReq* other);
+  friend void swap(WorkingStateStreamingReq& a, WorkingStateStreamingReq& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline WorkingStateStreamingReq* New() const final {
+    return CreateMaybeMessage<WorkingStateStreamingReq>(NULL);
+  }
+
+  WorkingStateStreamingReq* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<WorkingStateStreamingReq>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const WorkingStateStreamingReq& from);
+  void MergeFrom(const WorkingStateStreamingReq& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(WorkingStateStreamingReq* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // @@protoc_insertion_point(class_scope:mvcam.WorkingStateStreamingReq)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  friend struct ::protobuf_camera_5fservice_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class WorkingStateStream : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mvcam.WorkingStateStream) */ {
+ public:
+  WorkingStateStream();
+  virtual ~WorkingStateStream();
+
+  WorkingStateStream(const WorkingStateStream& from);
+
+  inline WorkingStateStream& operator=(const WorkingStateStream& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  WorkingStateStream(WorkingStateStream&& from) noexcept
+    : WorkingStateStream() {
+    *this = ::std::move(from);
+  }
+
+  inline WorkingStateStream& operator=(WorkingStateStream&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const WorkingStateStream& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const WorkingStateStream* internal_default_instance() {
+    return reinterpret_cast<const WorkingStateStream*>(
+               &_WorkingStateStream_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    23;
+
+  void Swap(WorkingStateStream* other);
+  friend void swap(WorkingStateStream& a, WorkingStateStream& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline WorkingStateStream* New() const final {
+    return CreateMaybeMessage<WorkingStateStream>(NULL);
+  }
+
+  WorkingStateStream* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<WorkingStateStream>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const WorkingStateStream& from);
+  void MergeFrom(const WorkingStateStream& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(WorkingStateStream* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // bool opened = 1;
+  void clear_opened();
+  static const int kOpenedFieldNumber = 1;
+  bool opened() const;
+  void set_opened(bool value);
+
+  // bool capturing = 2;
+  void clear_capturing();
+  static const int kCapturingFieldNumber = 2;
+  bool capturing() const;
+  void set_capturing(bool value);
+
+  // @@protoc_insertion_point(class_scope:mvcam.WorkingStateStream)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  bool opened_;
+  bool capturing_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  friend struct ::protobuf_camera_5fservice_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class ResetDeviceReq : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mvcam.ResetDeviceReq) */ {
+ public:
+  ResetDeviceReq();
+  virtual ~ResetDeviceReq();
+
+  ResetDeviceReq(const ResetDeviceReq& from);
+
+  inline ResetDeviceReq& operator=(const ResetDeviceReq& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  ResetDeviceReq(ResetDeviceReq&& from) noexcept
+    : ResetDeviceReq() {
+    *this = ::std::move(from);
+  }
+
+  inline ResetDeviceReq& operator=(ResetDeviceReq&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const ResetDeviceReq& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const ResetDeviceReq* internal_default_instance() {
+    return reinterpret_cast<const ResetDeviceReq*>(
+               &_ResetDeviceReq_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    24;
+
+  void Swap(ResetDeviceReq* other);
+  friend void swap(ResetDeviceReq& a, ResetDeviceReq& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline ResetDeviceReq* New() const final {
+    return CreateMaybeMessage<ResetDeviceReq>(NULL);
+  }
+
+  ResetDeviceReq* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<ResetDeviceReq>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const ResetDeviceReq& from);
+  void MergeFrom(const ResetDeviceReq& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(ResetDeviceReq* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // @@protoc_insertion_point(class_scope:mvcam.ResetDeviceReq)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  friend struct ::protobuf_camera_5fservice_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class ResetDeviceRes : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mvcam.ResetDeviceRes) */ {
+ public:
+  ResetDeviceRes();
+  virtual ~ResetDeviceRes();
+
+  ResetDeviceRes(const ResetDeviceRes& from);
+
+  inline ResetDeviceRes& operator=(const ResetDeviceRes& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  ResetDeviceRes(ResetDeviceRes&& from) noexcept
+    : ResetDeviceRes() {
+    *this = ::std::move(from);
+  }
+
+  inline ResetDeviceRes& operator=(ResetDeviceRes&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const ResetDeviceRes& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const ResetDeviceRes* internal_default_instance() {
+    return reinterpret_cast<const ResetDeviceRes*>(
+               &_ResetDeviceRes_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    25;
+
+  void Swap(ResetDeviceRes* other);
+  friend void swap(ResetDeviceRes& a, ResetDeviceRes& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline ResetDeviceRes* New() const final {
+    return CreateMaybeMessage<ResetDeviceRes>(NULL);
+  }
+
+  ResetDeviceRes* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<ResetDeviceRes>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const ResetDeviceRes& from);
+  void MergeFrom(const ResetDeviceRes& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(ResetDeviceRes* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // @@protoc_insertion_point(class_scope:mvcam.ResetDeviceRes)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  friend struct ::protobuf_camera_5fservice_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class ControlDeviceStateReq : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mvcam.ControlDeviceStateReq) */ {
+ public:
+  ControlDeviceStateReq();
+  virtual ~ControlDeviceStateReq();
+
+  ControlDeviceStateReq(const ControlDeviceStateReq& from);
+
+  inline ControlDeviceStateReq& operator=(const ControlDeviceStateReq& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  ControlDeviceStateReq(ControlDeviceStateReq&& from) noexcept
+    : ControlDeviceStateReq() {
+    *this = ::std::move(from);
+  }
+
+  inline ControlDeviceStateReq& operator=(ControlDeviceStateReq&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const ControlDeviceStateReq& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const ControlDeviceStateReq* internal_default_instance() {
+    return reinterpret_cast<const ControlDeviceStateReq*>(
+               &_ControlDeviceStateReq_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    26;
+
+  void Swap(ControlDeviceStateReq* other);
+  friend void swap(ControlDeviceStateReq& a, ControlDeviceStateReq& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline ControlDeviceStateReq* New() const final {
+    return CreateMaybeMessage<ControlDeviceStateReq>(NULL);
+  }
+
+  ControlDeviceStateReq* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<ControlDeviceStateReq>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const ControlDeviceStateReq& from);
+  void MergeFrom(const ControlDeviceStateReq& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(ControlDeviceStateReq* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // .mvcam.DeviceControlAction action = 1;
+  void clear_action();
+  static const int kActionFieldNumber = 1;
+  ::mvcam::DeviceControlAction action() const;
+  void set_action(::mvcam::DeviceControlAction value);
+
+  // @@protoc_insertion_point(class_scope:mvcam.ControlDeviceStateReq)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  int action_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  friend struct ::protobuf_camera_5fservice_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class ControlDeviceStateRes : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mvcam.ControlDeviceStateRes) */ {
+ public:
+  ControlDeviceStateRes();
+  virtual ~ControlDeviceStateRes();
+
+  ControlDeviceStateRes(const ControlDeviceStateRes& from);
+
+  inline ControlDeviceStateRes& operator=(const ControlDeviceStateRes& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  ControlDeviceStateRes(ControlDeviceStateRes&& from) noexcept
+    : ControlDeviceStateRes() {
+    *this = ::std::move(from);
+  }
+
+  inline ControlDeviceStateRes& operator=(ControlDeviceStateRes&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const ControlDeviceStateRes& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const ControlDeviceStateRes* internal_default_instance() {
+    return reinterpret_cast<const ControlDeviceStateRes*>(
+               &_ControlDeviceStateRes_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    27;
+
+  void Swap(ControlDeviceStateRes* other);
+  friend void swap(ControlDeviceStateRes& a, ControlDeviceStateRes& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline ControlDeviceStateRes* New() const final {
+    return CreateMaybeMessage<ControlDeviceStateRes>(NULL);
+  }
+
+  ControlDeviceStateRes* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<ControlDeviceStateRes>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const ControlDeviceStateRes& from);
+  void MergeFrom(const ControlDeviceStateRes& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(ControlDeviceStateRes* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // @@protoc_insertion_point(class_scope:mvcam.ControlDeviceStateRes)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  friend struct ::protobuf_camera_5fservice_2eproto::TableStruct;
+};
 // ===================================================================
 
 
@@ -61,9 +3031,666 @@ namespace mvcam {
   #pragma GCC diagnostic push
   #pragma GCC diagnostic ignored "-Wstrict-aliasing"
 #endif  // __GNUC__
+// GetAdapterReq
+
+// -------------------------------------------------------------------
+
+// GetAdapterRes
+
+// .mvcam.AdapterInfo adapter = 1;
+inline bool GetAdapterRes::has_adapter() const {
+  return this != internal_default_instance() && adapter_ != NULL;
+}
+inline const ::mvcam::AdapterInfo& GetAdapterRes::_internal_adapter() const {
+  return *adapter_;
+}
+inline const ::mvcam::AdapterInfo& GetAdapterRes::adapter() const {
+  const ::mvcam::AdapterInfo* p = adapter_;
+  // @@protoc_insertion_point(field_get:mvcam.GetAdapterRes.adapter)
+  return p != NULL ? *p : *reinterpret_cast<const ::mvcam::AdapterInfo*>(
+      &::mvcam::_AdapterInfo_default_instance_);
+}
+inline ::mvcam::AdapterInfo* GetAdapterRes::release_adapter() {
+  // @@protoc_insertion_point(field_release:mvcam.GetAdapterRes.adapter)
+  
+  ::mvcam::AdapterInfo* temp = adapter_;
+  adapter_ = NULL;
+  return temp;
+}
+inline ::mvcam::AdapterInfo* GetAdapterRes::mutable_adapter() {
+  
+  if (adapter_ == NULL) {
+    auto* p = CreateMaybeMessage<::mvcam::AdapterInfo>(GetArenaNoVirtual());
+    adapter_ = p;
+  }
+  // @@protoc_insertion_point(field_mutable:mvcam.GetAdapterRes.adapter)
+  return adapter_;
+}
+inline void GetAdapterRes::set_allocated_adapter(::mvcam::AdapterInfo* adapter) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete reinterpret_cast< ::google::protobuf::MessageLite*>(adapter_);
+  }
+  if (adapter) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      adapter = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, adapter, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  adapter_ = adapter;
+  // @@protoc_insertion_point(field_set_allocated:mvcam.GetAdapterRes.adapter)
+}
+
+// -------------------------------------------------------------------
+
+// GetDevicesReq
+
+// -------------------------------------------------------------------
+
+// GetDevicesRes
+
+// repeated .mvcam.DeviceInfo devices = 1;
+inline int GetDevicesRes::devices_size() const {
+  return devices_.size();
+}
+inline ::mvcam::DeviceInfo* GetDevicesRes::mutable_devices(int index) {
+  // @@protoc_insertion_point(field_mutable:mvcam.GetDevicesRes.devices)
+  return devices_.Mutable(index);
+}
+inline ::google::protobuf::RepeatedPtrField< ::mvcam::DeviceInfo >*
+GetDevicesRes::mutable_devices() {
+  // @@protoc_insertion_point(field_mutable_list:mvcam.GetDevicesRes.devices)
+  return &devices_;
+}
+inline const ::mvcam::DeviceInfo& GetDevicesRes::devices(int index) const {
+  // @@protoc_insertion_point(field_get:mvcam.GetDevicesRes.devices)
+  return devices_.Get(index);
+}
+inline ::mvcam::DeviceInfo* GetDevicesRes::add_devices() {
+  // @@protoc_insertion_point(field_add:mvcam.GetDevicesRes.devices)
+  return devices_.Add();
+}
+inline const ::google::protobuf::RepeatedPtrField< ::mvcam::DeviceInfo >&
+GetDevicesRes::devices() const {
+  // @@protoc_insertion_point(field_list:mvcam.GetDevicesRes.devices)
+  return devices_;
+}
+
+// -------------------------------------------------------------------
+
+// OpenCameraReq
+
+// string id = 1;
+inline void OpenCameraReq::clear_id() {
+  id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& OpenCameraReq::id() const {
+  // @@protoc_insertion_point(field_get:mvcam.OpenCameraReq.id)
+  return id_.GetNoArena();
+}
+inline void OpenCameraReq::set_id(const ::std::string& value) {
+  
+  id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:mvcam.OpenCameraReq.id)
+}
+#if LANG_CXX11
+inline void OpenCameraReq::set_id(::std::string&& value) {
+  
+  id_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:mvcam.OpenCameraReq.id)
+}
+#endif
+inline void OpenCameraReq::set_id(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  
+  id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:mvcam.OpenCameraReq.id)
+}
+inline void OpenCameraReq::set_id(const char* value, size_t size) {
+  
+  id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:mvcam.OpenCameraReq.id)
+}
+inline ::std::string* OpenCameraReq::mutable_id() {
+  
+  // @@protoc_insertion_point(field_mutable:mvcam.OpenCameraReq.id)
+  return id_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* OpenCameraReq::release_id() {
+  // @@protoc_insertion_point(field_release:mvcam.OpenCameraReq.id)
+  
+  return id_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void OpenCameraReq::set_allocated_id(::std::string* id) {
+  if (id != NULL) {
+    
+  } else {
+    
+  }
+  id_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), id);
+  // @@protoc_insertion_point(field_set_allocated:mvcam.OpenCameraReq.id)
+}
+
+// -------------------------------------------------------------------
+
+// OpenCameraRes
+
+// -------------------------------------------------------------------
+
+// ShutdownCameraReq
+
+// -------------------------------------------------------------------
+
+// ShutdownCameraRes
+
+// -------------------------------------------------------------------
+
+// OpenedReq
+
+// -------------------------------------------------------------------
+
+// OpenedRes
+
+// bool opened = 1;
+inline void OpenedRes::clear_opened() {
+  opened_ = false;
+}
+inline bool OpenedRes::opened() const {
+  // @@protoc_insertion_point(field_get:mvcam.OpenedRes.opened)
+  return opened_;
+}
+inline void OpenedRes::set_opened(bool value) {
+  
+  opened_ = value;
+  // @@protoc_insertion_point(field_set:mvcam.OpenedRes.opened)
+}
+
+// -------------------------------------------------------------------
+
+// CapturingReq
+
+// -------------------------------------------------------------------
+
+// CapturingRes
+
+// bool capturing = 1;
+inline void CapturingRes::clear_capturing() {
+  capturing_ = false;
+}
+inline bool CapturingRes::capturing() const {
+  // @@protoc_insertion_point(field_get:mvcam.CapturingRes.capturing)
+  return capturing_;
+}
+inline void CapturingRes::set_capturing(bool value) {
+  
+  capturing_ = value;
+  // @@protoc_insertion_point(field_set:mvcam.CapturingRes.capturing)
+}
+
+// -------------------------------------------------------------------
+
+// ConfigureCameraReq
+
+// .mvcam.Configuration config = 1;
+inline bool ConfigureCameraReq::has_config() const {
+  return this != internal_default_instance() && config_ != NULL;
+}
+inline const ::mvcam::Configuration& ConfigureCameraReq::_internal_config() const {
+  return *config_;
+}
+inline const ::mvcam::Configuration& ConfigureCameraReq::config() const {
+  const ::mvcam::Configuration* p = config_;
+  // @@protoc_insertion_point(field_get:mvcam.ConfigureCameraReq.config)
+  return p != NULL ? *p : *reinterpret_cast<const ::mvcam::Configuration*>(
+      &::mvcam::_Configuration_default_instance_);
+}
+inline ::mvcam::Configuration* ConfigureCameraReq::release_config() {
+  // @@protoc_insertion_point(field_release:mvcam.ConfigureCameraReq.config)
+  
+  ::mvcam::Configuration* temp = config_;
+  config_ = NULL;
+  return temp;
+}
+inline ::mvcam::Configuration* ConfigureCameraReq::mutable_config() {
+  
+  if (config_ == NULL) {
+    auto* p = CreateMaybeMessage<::mvcam::Configuration>(GetArenaNoVirtual());
+    config_ = p;
+  }
+  // @@protoc_insertion_point(field_mutable:mvcam.ConfigureCameraReq.config)
+  return config_;
+}
+inline void ConfigureCameraReq::set_allocated_config(::mvcam::Configuration* config) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete reinterpret_cast< ::google::protobuf::MessageLite*>(config_);
+  }
+  if (config) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      config = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, config, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  config_ = config;
+  // @@protoc_insertion_point(field_set_allocated:mvcam.ConfigureCameraReq.config)
+}
+
+// -------------------------------------------------------------------
+
+// ConfigureCameraRes
+
+// -------------------------------------------------------------------
+
+// GetConfigureReq
+
+// -------------------------------------------------------------------
+
+// GetConfigurationRes
+
+// .mvcam.Configuration config = 1;
+inline bool GetConfigurationRes::has_config() const {
+  return this != internal_default_instance() && config_ != NULL;
+}
+inline const ::mvcam::Configuration& GetConfigurationRes::_internal_config() const {
+  return *config_;
+}
+inline const ::mvcam::Configuration& GetConfigurationRes::config() const {
+  const ::mvcam::Configuration* p = config_;
+  // @@protoc_insertion_point(field_get:mvcam.GetConfigurationRes.config)
+  return p != NULL ? *p : *reinterpret_cast<const ::mvcam::Configuration*>(
+      &::mvcam::_Configuration_default_instance_);
+}
+inline ::mvcam::Configuration* GetConfigurationRes::release_config() {
+  // @@protoc_insertion_point(field_release:mvcam.GetConfigurationRes.config)
+  
+  ::mvcam::Configuration* temp = config_;
+  config_ = NULL;
+  return temp;
+}
+inline ::mvcam::Configuration* GetConfigurationRes::mutable_config() {
+  
+  if (config_ == NULL) {
+    auto* p = CreateMaybeMessage<::mvcam::Configuration>(GetArenaNoVirtual());
+    config_ = p;
+  }
+  // @@protoc_insertion_point(field_mutable:mvcam.GetConfigurationRes.config)
+  return config_;
+}
+inline void GetConfigurationRes::set_allocated_config(::mvcam::Configuration* config) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete reinterpret_cast< ::google::protobuf::MessageLite*>(config_);
+  }
+  if (config) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      config = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, config, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  config_ = config;
+  // @@protoc_insertion_point(field_set_allocated:mvcam.GetConfigurationRes.config)
+}
+
+// -------------------------------------------------------------------
+
+// GetStatusReq
+
+// .mvcam.Status status = 1;
+inline bool GetStatusReq::has_status() const {
+  return this != internal_default_instance() && status_ != NULL;
+}
+inline const ::mvcam::Status& GetStatusReq::_internal_status() const {
+  return *status_;
+}
+inline const ::mvcam::Status& GetStatusReq::status() const {
+  const ::mvcam::Status* p = status_;
+  // @@protoc_insertion_point(field_get:mvcam.GetStatusReq.status)
+  return p != NULL ? *p : *reinterpret_cast<const ::mvcam::Status*>(
+      &::mvcam::_Status_default_instance_);
+}
+inline ::mvcam::Status* GetStatusReq::release_status() {
+  // @@protoc_insertion_point(field_release:mvcam.GetStatusReq.status)
+  
+  ::mvcam::Status* temp = status_;
+  status_ = NULL;
+  return temp;
+}
+inline ::mvcam::Status* GetStatusReq::mutable_status() {
+  
+  if (status_ == NULL) {
+    auto* p = CreateMaybeMessage<::mvcam::Status>(GetArenaNoVirtual());
+    status_ = p;
+  }
+  // @@protoc_insertion_point(field_mutable:mvcam.GetStatusReq.status)
+  return status_;
+}
+inline void GetStatusReq::set_allocated_status(::mvcam::Status* status) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete reinterpret_cast< ::google::protobuf::MessageLite*>(status_);
+  }
+  if (status) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      status = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, status, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  status_ = status;
+  // @@protoc_insertion_point(field_set_allocated:mvcam.GetStatusReq.status)
+}
+
+// -------------------------------------------------------------------
+
+// GetStatusRes
+
+// .mvcam.Status status = 1;
+inline bool GetStatusRes::has_status() const {
+  return this != internal_default_instance() && status_ != NULL;
+}
+inline const ::mvcam::Status& GetStatusRes::_internal_status() const {
+  return *status_;
+}
+inline const ::mvcam::Status& GetStatusRes::status() const {
+  const ::mvcam::Status* p = status_;
+  // @@protoc_insertion_point(field_get:mvcam.GetStatusRes.status)
+  return p != NULL ? *p : *reinterpret_cast<const ::mvcam::Status*>(
+      &::mvcam::_Status_default_instance_);
+}
+inline ::mvcam::Status* GetStatusRes::release_status() {
+  // @@protoc_insertion_point(field_release:mvcam.GetStatusRes.status)
+  
+  ::mvcam::Status* temp = status_;
+  status_ = NULL;
+  return temp;
+}
+inline ::mvcam::Status* GetStatusRes::mutable_status() {
+  
+  if (status_ == NULL) {
+    auto* p = CreateMaybeMessage<::mvcam::Status>(GetArenaNoVirtual());
+    status_ = p;
+  }
+  // @@protoc_insertion_point(field_mutable:mvcam.GetStatusRes.status)
+  return status_;
+}
+inline void GetStatusRes::set_allocated_status(::mvcam::Status* status) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete reinterpret_cast< ::google::protobuf::MessageLite*>(status_);
+  }
+  if (status) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      status = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, status, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  status_ = status;
+  // @@protoc_insertion_point(field_set_allocated:mvcam.GetStatusRes.status)
+}
+
+// -------------------------------------------------------------------
+
+// CaptureReq
+
+// -------------------------------------------------------------------
+
+// CaptureRes
+
+// .mvcam.Frame frame = 1;
+inline bool CaptureRes::has_frame() const {
+  return this != internal_default_instance() && frame_ != NULL;
+}
+inline const ::mvcam::Frame& CaptureRes::_internal_frame() const {
+  return *frame_;
+}
+inline const ::mvcam::Frame& CaptureRes::frame() const {
+  const ::mvcam::Frame* p = frame_;
+  // @@protoc_insertion_point(field_get:mvcam.CaptureRes.frame)
+  return p != NULL ? *p : *reinterpret_cast<const ::mvcam::Frame*>(
+      &::mvcam::_Frame_default_instance_);
+}
+inline ::mvcam::Frame* CaptureRes::release_frame() {
+  // @@protoc_insertion_point(field_release:mvcam.CaptureRes.frame)
+  
+  ::mvcam::Frame* temp = frame_;
+  frame_ = NULL;
+  return temp;
+}
+inline ::mvcam::Frame* CaptureRes::mutable_frame() {
+  
+  if (frame_ == NULL) {
+    auto* p = CreateMaybeMessage<::mvcam::Frame>(GetArenaNoVirtual());
+    frame_ = p;
+  }
+  // @@protoc_insertion_point(field_mutable:mvcam.CaptureRes.frame)
+  return frame_;
+}
+inline void CaptureRes::set_allocated_frame(::mvcam::Frame* frame) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete reinterpret_cast< ::google::protobuf::MessageLite*>(frame_);
+  }
+  if (frame) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      frame = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, frame, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  frame_ = frame;
+  // @@protoc_insertion_point(field_set_allocated:mvcam.CaptureRes.frame)
+}
+
+// -------------------------------------------------------------------
+
+// StreamingReq
+
+// uint64 number_frames = 2;
+inline void StreamingReq::clear_number_frames() {
+  number_frames_ = GOOGLE_ULONGLONG(0);
+}
+inline ::google::protobuf::uint64 StreamingReq::number_frames() const {
+  // @@protoc_insertion_point(field_get:mvcam.StreamingReq.number_frames)
+  return number_frames_;
+}
+inline void StreamingReq::set_number_frames(::google::protobuf::uint64 value) {
+  
+  number_frames_ = value;
+  // @@protoc_insertion_point(field_set:mvcam.StreamingReq.number_frames)
+}
+
+// uint64 batch_size = 4;
+inline void StreamingReq::clear_batch_size() {
+  batch_size_ = GOOGLE_ULONGLONG(0);
+}
+inline ::google::protobuf::uint64 StreamingReq::batch_size() const {
+  // @@protoc_insertion_point(field_get:mvcam.StreamingReq.batch_size)
+  return batch_size_;
+}
+inline void StreamingReq::set_batch_size(::google::protobuf::uint64 value) {
+  
+  batch_size_ = value;
+  // @@protoc_insertion_point(field_set:mvcam.StreamingReq.batch_size)
+}
+
+// -------------------------------------------------------------------
+
+// FrameStream
+
+// repeated .mvcam.Frame frames = 1;
+inline int FrameStream::frames_size() const {
+  return frames_.size();
+}
+inline ::mvcam::Frame* FrameStream::mutable_frames(int index) {
+  // @@protoc_insertion_point(field_mutable:mvcam.FrameStream.frames)
+  return frames_.Mutable(index);
+}
+inline ::google::protobuf::RepeatedPtrField< ::mvcam::Frame >*
+FrameStream::mutable_frames() {
+  // @@protoc_insertion_point(field_mutable_list:mvcam.FrameStream.frames)
+  return &frames_;
+}
+inline const ::mvcam::Frame& FrameStream::frames(int index) const {
+  // @@protoc_insertion_point(field_get:mvcam.FrameStream.frames)
+  return frames_.Get(index);
+}
+inline ::mvcam::Frame* FrameStream::add_frames() {
+  // @@protoc_insertion_point(field_add:mvcam.FrameStream.frames)
+  return frames_.Add();
+}
+inline const ::google::protobuf::RepeatedPtrField< ::mvcam::Frame >&
+FrameStream::frames() const {
+  // @@protoc_insertion_point(field_list:mvcam.FrameStream.frames)
+  return frames_;
+}
+
+// -------------------------------------------------------------------
+
+// WorkingStateStreamingReq
+
+// -------------------------------------------------------------------
+
+// WorkingStateStream
+
+// bool opened = 1;
+inline void WorkingStateStream::clear_opened() {
+  opened_ = false;
+}
+inline bool WorkingStateStream::opened() const {
+  // @@protoc_insertion_point(field_get:mvcam.WorkingStateStream.opened)
+  return opened_;
+}
+inline void WorkingStateStream::set_opened(bool value) {
+  
+  opened_ = value;
+  // @@protoc_insertion_point(field_set:mvcam.WorkingStateStream.opened)
+}
+
+// bool capturing = 2;
+inline void WorkingStateStream::clear_capturing() {
+  capturing_ = false;
+}
+inline bool WorkingStateStream::capturing() const {
+  // @@protoc_insertion_point(field_get:mvcam.WorkingStateStream.capturing)
+  return capturing_;
+}
+inline void WorkingStateStream::set_capturing(bool value) {
+  
+  capturing_ = value;
+  // @@protoc_insertion_point(field_set:mvcam.WorkingStateStream.capturing)
+}
+
+// -------------------------------------------------------------------
+
+// ResetDeviceReq
+
+// -------------------------------------------------------------------
+
+// ResetDeviceRes
+
+// -------------------------------------------------------------------
+
+// ControlDeviceStateReq
+
+// .mvcam.DeviceControlAction action = 1;
+inline void ControlDeviceStateReq::clear_action() {
+  action_ = 0;
+}
+inline ::mvcam::DeviceControlAction ControlDeviceStateReq::action() const {
+  // @@protoc_insertion_point(field_get:mvcam.ControlDeviceStateReq.action)
+  return static_cast< ::mvcam::DeviceControlAction >(action_);
+}
+inline void ControlDeviceStateReq::set_action(::mvcam::DeviceControlAction value) {
+  
+  action_ = value;
+  // @@protoc_insertion_point(field_set:mvcam.ControlDeviceStateReq.action)
+}
+
+// -------------------------------------------------------------------
+
+// ControlDeviceStateRes
+
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
 
 // @@protoc_insertion_point(namespace_scope)
 
