@@ -44,28 +44,15 @@ std::unique_ptr<grpc::Server> camera_backend_server::start_server() {
   std::unique_ptr<grpc::Server> server(builder.BuildAndStart());
   return server;
 }
-void camera_backend_server::filter_adapter_by_name(const std::string &name,
-                                                   std::vector<camera_driver::adapter *> adapters) {
-  for (auto it: mFramework->adapters()) {
-    if (it->name() == name) {
-      adapters.emplace_back(it);
-      return;
-    }
-  }
-  adapter_not_found_error ex;
-  ex << error_info(std::string("By name: ") + name);
-  BOOST_THROW_EXCEPTION(ex);
-}
 
-void camera_backend_server::transform_device_info(camera_driver::camera_device &src,
+
+void camera_backend_server::transform_device_info(camera_driver::camera_descriptor &src,
                                                   mvcam::DeviceInfo *dest) {
-  dest->set_id(src.camera_descriptor_ref.id);
+  dest->set_id(src.id);
   dest->set_version("N/A");
-  dest->set_manufacture(src.camera_descriptor_ref.manufacture);
-  dest->set_model(src.camera_descriptor_ref.model);
-  dest->set_serial(src.camera_descriptor_ref.serial);
-  dest->set_connected(src.opened());
-  transform_adapter(src.adapter_ref, dest->mutable_adapter());
+  dest->set_manufacture(src.manufacture);
+  dest->set_model(src.model);
+  dest->set_serial(src.serial);
 }
 
 
@@ -80,7 +67,7 @@ void camera_backend_server::apply_parameter(camera_driver::camera_device &camera
   dest.value = value;
 }
 void camera_backend_server::configure_camera(camera_driver::camera_device &camera,
-                                             const mvcam::ConfigureRequest *configuration) {
+                                             const mvcam::ConfigureCameraReq *configuration) {
   if (!configuration->has_config()) {
     return;
   }
@@ -133,23 +120,6 @@ void camera_backend_server::configure_camera(camera_driver::camera_device &camer
   camera.set_configuration(internalConfiguration);
 }
 
-grpc::Status camera_backend_server::index_camera_call_wrapper(std::string id,
-                                                              std::function<void(camera_driver::camera_device&)> callback) {
-  // find the device from cache
-  std::shared_ptr<camera_driver::camera_device> camera;
-  try {
-    camera = this->mFramework->query_by_id(id);
-  } catch (boost::exception &ex) {
-    return grpc::Status(grpc::NOT_FOUND, "Id query failed. Try invalidate the cache first.");
-  }
-  try {
-    callback(*camera);
-    return grpc::Status::OK;
-  } catch (boost::exception &ex) {
-    return grpc::Status(grpc::INTERNAL, boost::current_exception_diagnostic_information(true));
-  }
-}
-
 void camera_backend_server::get_configuration_from_camera(camera_driver::camera_device &camera,
                                                           mvcam::Configuration *dest) {
   camera_driver::camera_parameter_read param{};
@@ -185,10 +155,6 @@ void camera_backend_server::get_status_from_camera(camera_driver::camera_device 
   } else {
     dest->set_temperature(std::nan(""));
   }
-
-  dest->set_capturing(camera.capturing());
-  dest->set_opened(camera.opened());
-
 }
 
 void camera_backend_server::transform_frame(const camera_driver::frame &frame, mvcam::Frame *dest) {

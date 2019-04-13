@@ -20,12 +20,7 @@
 // @@protoc_insertion_point(includes)
 
 namespace protobuf_camera_5fdefinitions_2eproto {
-extern PROTOBUF_INTERNAL_EXPORT_protobuf_camera_5fdefinitions_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_AdapterInfo;
-extern PROTOBUF_INTERNAL_EXPORT_protobuf_camera_5fdefinitions_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_IdRequest;
 extern PROTOBUF_INTERNAL_EXPORT_protobuf_camera_5fdefinitions_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_Parameter;
-extern PROTOBUF_INTERNAL_EXPORT_protobuf_camera_5fdefinitions_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_Configuration;
-extern PROTOBUF_INTERNAL_EXPORT_protobuf_camera_5fdefinitions_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_DeviceInfo;
-extern PROTOBUF_INTERNAL_EXPORT_protobuf_camera_5fdefinitions_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_Frame;
 }  // namespace protobuf_camera_5fdefinitions_2eproto
 namespace protobuf_google_2fprotobuf_2ftimestamp_2eproto {
 extern PROTOBUF_INTERNAL_EXPORT_protobuf_google_2fprotobuf_2ftimestamp_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_Timestamp;
@@ -36,31 +31,6 @@ class AdapterInfoDefaultTypeInternal {
   ::google::protobuf::internal::ExplicitlyConstructed<AdapterInfo>
       _instance;
 } _AdapterInfo_default_instance_;
-class AvailableAdaptersResponseDefaultTypeInternal {
- public:
-  ::google::protobuf::internal::ExplicitlyConstructed<AvailableAdaptersResponse>
-      _instance;
-} _AvailableAdaptersResponse_default_instance_;
-class GetDevicesRequestDefaultTypeInternal {
- public:
-  ::google::protobuf::internal::ExplicitlyConstructed<GetDevicesRequest>
-      _instance;
-} _GetDevicesRequest_default_instance_;
-class DeviceInfoDefaultTypeInternal {
- public:
-  ::google::protobuf::internal::ExplicitlyConstructed<DeviceInfo>
-      _instance;
-} _DeviceInfo_default_instance_;
-class GetDevicesResponseDefaultTypeInternal {
- public:
-  ::google::protobuf::internal::ExplicitlyConstructed<GetDevicesResponse>
-      _instance;
-} _GetDevicesResponse_default_instance_;
-class IdRequestDefaultTypeInternal {
- public:
-  ::google::protobuf::internal::ExplicitlyConstructed<IdRequest>
-      _instance;
-} _IdRequest_default_instance_;
 class ParameterDefaultTypeInternal {
  public:
   ::google::protobuf::internal::ExplicitlyConstructed<Parameter>
@@ -71,36 +41,21 @@ class ConfigurationDefaultTypeInternal {
   ::google::protobuf::internal::ExplicitlyConstructed<Configuration>
       _instance;
 } _Configuration_default_instance_;
-class ConfigureRequestDefaultTypeInternal {
- public:
-  ::google::protobuf::internal::ExplicitlyConstructed<ConfigureRequest>
-      _instance;
-} _ConfigureRequest_default_instance_;
 class FrameDefaultTypeInternal {
  public:
   ::google::protobuf::internal::ExplicitlyConstructed<Frame>
       _instance;
 } _Frame_default_instance_;
-class FrameStreamDefaultTypeInternal {
+class DeviceInfoDefaultTypeInternal {
  public:
-  ::google::protobuf::internal::ExplicitlyConstructed<FrameStream>
+  ::google::protobuf::internal::ExplicitlyConstructed<DeviceInfo>
       _instance;
-} _FrameStream_default_instance_;
-class StreamingRequestDefaultTypeInternal {
- public:
-  ::google::protobuf::internal::ExplicitlyConstructed<StreamingRequest>
-      _instance;
-} _StreamingRequest_default_instance_;
+} _DeviceInfo_default_instance_;
 class StatusDefaultTypeInternal {
  public:
   ::google::protobuf::internal::ExplicitlyConstructed<Status>
       _instance;
 } _Status_default_instance_;
-class DeviceControlRequestDefaultTypeInternal {
- public:
-  ::google::protobuf::internal::ExplicitlyConstructed<DeviceControlRequest>
-      _instance;
-} _DeviceControlRequest_default_instance_;
 }  // namespace mvcam
 namespace protobuf_camera_5fdefinitions_2eproto {
 static void InitDefaultsAdapterInfo() {
@@ -116,79 +71,6 @@ static void InitDefaultsAdapterInfo() {
 
 ::google::protobuf::internal::SCCInfo<0> scc_info_AdapterInfo =
     {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsAdapterInfo}, {}};
-
-static void InitDefaultsAvailableAdaptersResponse() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::mvcam::_AvailableAdaptersResponse_default_instance_;
-    new (ptr) ::mvcam::AvailableAdaptersResponse();
-    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::mvcam::AvailableAdaptersResponse::InitAsDefaultInstance();
-}
-
-::google::protobuf::internal::SCCInfo<1> scc_info_AvailableAdaptersResponse =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsAvailableAdaptersResponse}, {
-      &protobuf_camera_5fdefinitions_2eproto::scc_info_AdapterInfo.base,}};
-
-static void InitDefaultsGetDevicesRequest() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::mvcam::_GetDevicesRequest_default_instance_;
-    new (ptr) ::mvcam::GetDevicesRequest();
-    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::mvcam::GetDevicesRequest::InitAsDefaultInstance();
-}
-
-::google::protobuf::internal::SCCInfo<0> scc_info_GetDevicesRequest =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsGetDevicesRequest}, {}};
-
-static void InitDefaultsDeviceInfo() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::mvcam::_DeviceInfo_default_instance_;
-    new (ptr) ::mvcam::DeviceInfo();
-    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::mvcam::DeviceInfo::InitAsDefaultInstance();
-}
-
-::google::protobuf::internal::SCCInfo<1> scc_info_DeviceInfo =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsDeviceInfo}, {
-      &protobuf_camera_5fdefinitions_2eproto::scc_info_AdapterInfo.base,}};
-
-static void InitDefaultsGetDevicesResponse() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::mvcam::_GetDevicesResponse_default_instance_;
-    new (ptr) ::mvcam::GetDevicesResponse();
-    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::mvcam::GetDevicesResponse::InitAsDefaultInstance();
-}
-
-::google::protobuf::internal::SCCInfo<1> scc_info_GetDevicesResponse =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsGetDevicesResponse}, {
-      &protobuf_camera_5fdefinitions_2eproto::scc_info_DeviceInfo.base,}};
-
-static void InitDefaultsIdRequest() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::mvcam::_IdRequest_default_instance_;
-    new (ptr) ::mvcam::IdRequest();
-    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::mvcam::IdRequest::InitAsDefaultInstance();
-}
-
-::google::protobuf::internal::SCCInfo<0> scc_info_IdRequest =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsIdRequest}, {}};
 
 static void InitDefaultsParameter() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -219,22 +101,6 @@ static void InitDefaultsConfiguration() {
     {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsConfiguration}, {
       &protobuf_camera_5fdefinitions_2eproto::scc_info_Parameter.base,}};
 
-static void InitDefaultsConfigureRequest() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::mvcam::_ConfigureRequest_default_instance_;
-    new (ptr) ::mvcam::ConfigureRequest();
-    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::mvcam::ConfigureRequest::InitAsDefaultInstance();
-}
-
-::google::protobuf::internal::SCCInfo<2> scc_info_ConfigureRequest =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 2, InitDefaultsConfigureRequest}, {
-      &protobuf_camera_5fdefinitions_2eproto::scc_info_IdRequest.base,
-      &protobuf_camera_5fdefinitions_2eproto::scc_info_Configuration.base,}};
-
 static void InitDefaultsFrame() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
@@ -250,35 +116,19 @@ static void InitDefaultsFrame() {
     {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsFrame}, {
       &protobuf_google_2fprotobuf_2ftimestamp_2eproto::scc_info_Timestamp.base,}};
 
-static void InitDefaultsFrameStream() {
+static void InitDefaultsDeviceInfo() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::mvcam::_FrameStream_default_instance_;
-    new (ptr) ::mvcam::FrameStream();
+    void* ptr = &::mvcam::_DeviceInfo_default_instance_;
+    new (ptr) ::mvcam::DeviceInfo();
     ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::mvcam::FrameStream::InitAsDefaultInstance();
+  ::mvcam::DeviceInfo::InitAsDefaultInstance();
 }
 
-::google::protobuf::internal::SCCInfo<1> scc_info_FrameStream =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsFrameStream}, {
-      &protobuf_camera_5fdefinitions_2eproto::scc_info_Frame.base,}};
-
-static void InitDefaultsStreamingRequest() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::mvcam::_StreamingRequest_default_instance_;
-    new (ptr) ::mvcam::StreamingRequest();
-    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::mvcam::StreamingRequest::InitAsDefaultInstance();
-}
-
-::google::protobuf::internal::SCCInfo<1> scc_info_StreamingRequest =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsStreamingRequest}, {
-      &protobuf_camera_5fdefinitions_2eproto::scc_info_IdRequest.base,}};
+::google::protobuf::internal::SCCInfo<0> scc_info_DeviceInfo =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsDeviceInfo}, {}};
 
 static void InitDefaultsStatus() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -294,39 +144,16 @@ static void InitDefaultsStatus() {
 ::google::protobuf::internal::SCCInfo<0> scc_info_Status =
     {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsStatus}, {}};
 
-static void InitDefaultsDeviceControlRequest() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::mvcam::_DeviceControlRequest_default_instance_;
-    new (ptr) ::mvcam::DeviceControlRequest();
-    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::mvcam::DeviceControlRequest::InitAsDefaultInstance();
-}
-
-::google::protobuf::internal::SCCInfo<1> scc_info_DeviceControlRequest =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsDeviceControlRequest}, {
-      &protobuf_camera_5fdefinitions_2eproto::scc_info_IdRequest.base,}};
-
 void InitDefaults() {
   ::google::protobuf::internal::InitSCC(&scc_info_AdapterInfo.base);
-  ::google::protobuf::internal::InitSCC(&scc_info_AvailableAdaptersResponse.base);
-  ::google::protobuf::internal::InitSCC(&scc_info_GetDevicesRequest.base);
-  ::google::protobuf::internal::InitSCC(&scc_info_DeviceInfo.base);
-  ::google::protobuf::internal::InitSCC(&scc_info_GetDevicesResponse.base);
-  ::google::protobuf::internal::InitSCC(&scc_info_IdRequest.base);
   ::google::protobuf::internal::InitSCC(&scc_info_Parameter.base);
   ::google::protobuf::internal::InitSCC(&scc_info_Configuration.base);
-  ::google::protobuf::internal::InitSCC(&scc_info_ConfigureRequest.base);
   ::google::protobuf::internal::InitSCC(&scc_info_Frame.base);
-  ::google::protobuf::internal::InitSCC(&scc_info_FrameStream.base);
-  ::google::protobuf::internal::InitSCC(&scc_info_StreamingRequest.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_DeviceInfo.base);
   ::google::protobuf::internal::InitSCC(&scc_info_Status.base);
-  ::google::protobuf::internal::InitSCC(&scc_info_DeviceControlRequest.base);
 }
 
-::google::protobuf::Metadata file_level_metadata[14];
+::google::protobuf::Metadata file_level_metadata[6];
 const ::google::protobuf::EnumDescriptor* file_level_enum_descriptors[1];
 
 const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
@@ -339,43 +166,6 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::AdapterInfo, version_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::AdapterInfo, description_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::AdapterInfo, in_use_),
-  ~0u,  // no _has_bits_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::AvailableAdaptersResponse, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::AvailableAdaptersResponse, adapters_),
-  ~0u,  // no _has_bits_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::GetDevicesRequest, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::GetDevicesRequest, adapter_name_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::GetDevicesRequest, use_cache_),
-  ~0u,  // no _has_bits_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::DeviceInfo, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::DeviceInfo, adapter_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::DeviceInfo, manufacture_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::DeviceInfo, id_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::DeviceInfo, model_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::DeviceInfo, version_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::DeviceInfo, serial_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::DeviceInfo, connected_),
-  ~0u,  // no _has_bits_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::GetDevicesResponse, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::GetDevicesResponse, devices_),
-  ~0u,  // no _has_bits_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::IdRequest, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::IdRequest, id_),
   ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::Parameter, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -395,13 +185,6 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::Configuration, black_level_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::Configuration, gamma_),
   ~0u,  // no _has_bits_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::ConfigureRequest, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::ConfigureRequest, id_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::ConfigureRequest, config_),
-  ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::Frame, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
@@ -414,67 +197,38 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::Frame, pixel_format_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::Frame, data_),
   ~0u,  // no _has_bits_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::FrameStream, _internal_metadata_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::DeviceInfo, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::FrameStream, frames_),
-  ~0u,  // no _has_bits_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::StreamingRequest, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::StreamingRequest, id_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::StreamingRequest, number_frames_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::StreamingRequest, batch_size_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::DeviceInfo, manufacture_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::DeviceInfo, id_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::DeviceInfo, model_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::DeviceInfo, version_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::DeviceInfo, serial_),
   ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::Status, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::Status, temperature_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::Status, opened_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::Status, capturing_),
-  ~0u,  // no _has_bits_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::DeviceControlRequest, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::DeviceControlRequest, id_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::mvcam::DeviceControlRequest, action_),
 };
 static const ::google::protobuf::internal::MigrationSchema schemas[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, sizeof(::mvcam::AdapterInfo)},
-  { 9, -1, sizeof(::mvcam::AvailableAdaptersResponse)},
-  { 15, -1, sizeof(::mvcam::GetDevicesRequest)},
-  { 22, -1, sizeof(::mvcam::DeviceInfo)},
-  { 34, -1, sizeof(::mvcam::GetDevicesResponse)},
-  { 40, -1, sizeof(::mvcam::IdRequest)},
-  { 46, -1, sizeof(::mvcam::Parameter)},
-  { 54, -1, sizeof(::mvcam::Configuration)},
-  { 64, -1, sizeof(::mvcam::ConfigureRequest)},
-  { 71, -1, sizeof(::mvcam::Frame)},
-  { 83, -1, sizeof(::mvcam::FrameStream)},
-  { 89, -1, sizeof(::mvcam::StreamingRequest)},
-  { 97, -1, sizeof(::mvcam::Status)},
-  { 105, -1, sizeof(::mvcam::DeviceControlRequest)},
+  { 9, -1, sizeof(::mvcam::Parameter)},
+  { 17, -1, sizeof(::mvcam::Configuration)},
+  { 27, -1, sizeof(::mvcam::Frame)},
+  { 39, -1, sizeof(::mvcam::DeviceInfo)},
+  { 49, -1, sizeof(::mvcam::Status)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
   reinterpret_cast<const ::google::protobuf::Message*>(&::mvcam::_AdapterInfo_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&::mvcam::_AvailableAdaptersResponse_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&::mvcam::_GetDevicesRequest_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&::mvcam::_DeviceInfo_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&::mvcam::_GetDevicesResponse_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&::mvcam::_IdRequest_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::mvcam::_Parameter_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::mvcam::_Configuration_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&::mvcam::_ConfigureRequest_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::mvcam::_Frame_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&::mvcam::_FrameStream_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&::mvcam::_StreamingRequest_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::mvcam::_DeviceInfo_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::mvcam::_Status_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&::mvcam::_DeviceControlRequest_default_instance_),
 };
 
 void protobuf_AssignDescriptors() {
@@ -492,7 +246,7 @@ void protobuf_AssignDescriptorsOnce() {
 void protobuf_RegisterTypes(const ::std::string&) GOOGLE_PROTOBUF_ATTRIBUTE_COLD;
 void protobuf_RegisterTypes(const ::std::string&) {
   protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::internal::RegisterAllTypes(file_level_metadata, 14);
+  ::google::protobuf::internal::RegisterAllTypes(file_level_metadata, 6);
 }
 
 void AddDescriptorsImpl() {
@@ -501,41 +255,26 @@ void AddDescriptorsImpl() {
       "\n\030camera_definitions.proto\022\005mvcam\032\037googl"
       "e/protobuf/timestamp.proto\"Q\n\013AdapterInf"
       "o\022\014\n\004name\030\001 \001(\t\022\017\n\007version\030\002 \001(\t\022\023\n\013desc"
-      "ription\030\003 \001(\t\022\016\n\006in_use\030\004 \001(\010\"A\n\031Availab"
-      "leAdaptersResponse\022$\n\010adapters\030\001 \003(\0132\022.m"
-      "vcam.AdapterInfo\"<\n\021GetDevicesRequest\022\024\n"
-      "\014adapter_name\030\001 \001(\t\022\021\n\tuse_cache\030\002 \001(\010\"\225"
-      "\001\n\nDeviceInfo\022#\n\007adapter\030\001 \001(\0132\022.mvcam.A"
-      "dapterInfo\022\023\n\013manufacture\030\002 \001(\t\022\n\n\002id\030\003 "
-      "\001(\t\022\r\n\005model\030\004 \001(\t\022\017\n\007version\030\005 \001(\t\022\016\n\006s"
-      "erial\030\006 \001(\t\022\021\n\tconnected\030\010 \001(\010\"8\n\022GetDev"
-      "icesResponse\022\"\n\007devices\030\001 \003(\0132\021.mvcam.De"
-      "viceInfo\"\027\n\tIdRequest\022\n\n\002id\030\001 \001(\t\"4\n\tPar"
-      "ameter\022\r\n\005value\030\002 \001(\001\022\013\n\003min\030\003 \001(\001\022\013\n\003ma"
-      "x\030\004 \001(\001\"\301\001\n\rConfiguration\022\"\n\010exposure\030\001 "
-      "\001(\0132\020.mvcam.Parameter\022$\n\nframe_rate\030\002 \001("
-      "\0132\020.mvcam.Parameter\022\036\n\004gain\030\003 \001(\0132\020.mvca"
-      "m.Parameter\022%\n\013black_level\030\004 \001(\0132\020.mvcam"
-      ".Parameter\022\037\n\005gamma\030\005 \001(\0132\020.mvcam.Parame"
-      "ter\"V\n\020ConfigureRequest\022\034\n\002id\030\001 \001(\0132\020.mv"
-      "cam.IdRequest\022$\n\006config\030\002 \001(\0132\024.mvcam.Co"
-      "nfiguration\"\223\001\n\005Frame\022-\n\ttimestamp\030\001 \001(\013"
-      "2\032.google.protobuf.Timestamp\022\n\n\002id\030\002 \001(\004"
-      "\022\014\n\004size\030\003 \001(\r\022\016\n\006height\030\004 \001(\r\022\r\n\005width\030"
-      "\005 \001(\r\022\024\n\014pixel_format\030\006 \001(\r\022\014\n\004data\030\007 \001("
-      "\014\"+\n\013FrameStream\022\034\n\006frames\030\001 \003(\0132\014.mvcam"
-      ".Frame\"[\n\020StreamingRequest\022\034\n\002id\030\001 \001(\0132\020"
-      ".mvcam.IdRequest\022\025\n\rnumber_frames\030\002 \001(\004\022"
-      "\022\n\nbatch_size\030\004 \001(\004\"@\n\006Status\022\023\n\013tempera"
-      "ture\030\001 \001(\001\022\016\n\006opened\030\002 \001(\010\022\021\n\tcapturing\030"
-      "\003 \001(\010\"`\n\024DeviceControlRequest\022\034\n\002id\030\001 \001("
-      "\0132\020.mvcam.IdRequest\022*\n\006action\030\002 \001(\0162\032.mv"
-      "cam.DeviceControlAction*.\n\023DeviceControl"
-      "Action\022\013\n\007Suspend\020\000\022\n\n\006Resume\020\001B\'Z%githu"
-      "b.com/wuyuanyi135/mvprotos/mvcamb\006proto3"
+      "ription\030\003 \001(\t\022\016\n\006in_use\030\004 \001(\010\"4\n\tParamet"
+      "er\022\r\n\005value\030\002 \001(\001\022\013\n\003min\030\003 \001(\001\022\013\n\003max\030\004 "
+      "\001(\001\"\301\001\n\rConfiguration\022\"\n\010exposure\030\001 \001(\0132"
+      "\020.mvcam.Parameter\022$\n\nframe_rate\030\002 \001(\0132\020."
+      "mvcam.Parameter\022\036\n\004gain\030\003 \001(\0132\020.mvcam.Pa"
+      "rameter\022%\n\013black_level\030\004 \001(\0132\020.mvcam.Par"
+      "ameter\022\037\n\005gamma\030\005 \001(\0132\020.mvcam.Parameter\""
+      "\223\001\n\005Frame\022-\n\ttimestamp\030\001 \001(\0132\032.google.pr"
+      "otobuf.Timestamp\022\n\n\002id\030\002 \001(\004\022\014\n\004size\030\003 \001"
+      "(\r\022\016\n\006height\030\004 \001(\r\022\r\n\005width\030\005 \001(\r\022\024\n\014pix"
+      "el_format\030\006 \001(\r\022\014\n\004data\030\007 \001(\014\"]\n\nDeviceI"
+      "nfo\022\023\n\013manufacture\030\002 \001(\t\022\n\n\002id\030\003 \001(\t\022\r\n\005"
+      "model\030\004 \001(\t\022\017\n\007version\030\005 \001(\t\022\016\n\006serial\030\006"
+      " \001(\t\"\035\n\006Status\022\023\n\013temperature\030\001 \001(\001*.\n\023D"
+      "eviceControlAction\022\013\n\007Suspend\020\000\022\n\n\006Resum"
+      "e\020\001B\'Z%github.com/wuyuanyi135/mvprotos/m"
+      "vcamb\006proto3"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 1400);
+      descriptor, 772);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "camera_definitions.proto", &protobuf_RegisterTypes);
   ::protobuf_google_2fprotobuf_2ftimestamp_2eproto::AddDescriptors();
@@ -958,1547 +697,6 @@ void AdapterInfo::InternalSwap(AdapterInfo* other) {
 }
 
 ::google::protobuf::Metadata AdapterInfo::GetMetadata() const {
-  protobuf_camera_5fdefinitions_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_camera_5fdefinitions_2eproto::file_level_metadata[kIndexInFileMessages];
-}
-
-
-// ===================================================================
-
-void AvailableAdaptersResponse::InitAsDefaultInstance() {
-}
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int AvailableAdaptersResponse::kAdaptersFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
-
-AvailableAdaptersResponse::AvailableAdaptersResponse()
-  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  ::google::protobuf::internal::InitSCC(
-      &protobuf_camera_5fdefinitions_2eproto::scc_info_AvailableAdaptersResponse.base);
-  SharedCtor();
-  // @@protoc_insertion_point(constructor:mvcam.AvailableAdaptersResponse)
-}
-AvailableAdaptersResponse::AvailableAdaptersResponse(const AvailableAdaptersResponse& from)
-  : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
-      adapters_(from.adapters_) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  // @@protoc_insertion_point(copy_constructor:mvcam.AvailableAdaptersResponse)
-}
-
-void AvailableAdaptersResponse::SharedCtor() {
-}
-
-AvailableAdaptersResponse::~AvailableAdaptersResponse() {
-  // @@protoc_insertion_point(destructor:mvcam.AvailableAdaptersResponse)
-  SharedDtor();
-}
-
-void AvailableAdaptersResponse::SharedDtor() {
-}
-
-void AvailableAdaptersResponse::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
-}
-const ::google::protobuf::Descriptor* AvailableAdaptersResponse::descriptor() {
-  ::protobuf_camera_5fdefinitions_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_camera_5fdefinitions_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
-}
-
-const AvailableAdaptersResponse& AvailableAdaptersResponse::default_instance() {
-  ::google::protobuf::internal::InitSCC(&protobuf_camera_5fdefinitions_2eproto::scc_info_AvailableAdaptersResponse.base);
-  return *internal_default_instance();
-}
-
-
-void AvailableAdaptersResponse::Clear() {
-// @@protoc_insertion_point(message_clear_start:mvcam.AvailableAdaptersResponse)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  adapters_.Clear();
-  _internal_metadata_.Clear();
-}
-
-bool AvailableAdaptersResponse::MergePartialFromCodedStream(
-    ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:mvcam.AvailableAdaptersResponse)
-  for (;;) {
-    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // repeated .mvcam.AdapterInfo adapters = 1;
-      case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-                input, add_adapters()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::google::protobuf::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:mvcam.AvailableAdaptersResponse)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:mvcam.AvailableAdaptersResponse)
-  return false;
-#undef DO_
-}
-
-void AvailableAdaptersResponse::SerializeWithCachedSizes(
-    ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:mvcam.AvailableAdaptersResponse)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // repeated .mvcam.AdapterInfo adapters = 1;
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->adapters_size()); i < n; i++) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1,
-      this->adapters(static_cast<int>(i)),
-      output);
-  }
-
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
-  }
-  // @@protoc_insertion_point(serialize_end:mvcam.AvailableAdaptersResponse)
-}
-
-::google::protobuf::uint8* AvailableAdaptersResponse::InternalSerializeWithCachedSizesToArray(
-    bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic; // Unused
-  // @@protoc_insertion_point(serialize_to_array_start:mvcam.AvailableAdaptersResponse)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // repeated .mvcam.AdapterInfo adapters = 1;
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->adapters_size()); i < n; i++) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        1, this->adapters(static_cast<int>(i)), deterministic, target);
-  }
-
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:mvcam.AvailableAdaptersResponse)
-  return target;
-}
-
-size_t AvailableAdaptersResponse::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:mvcam.AvailableAdaptersResponse)
-  size_t total_size = 0;
-
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    total_size +=
-      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
-  }
-  // repeated .mvcam.AdapterInfo adapters = 1;
-  {
-    unsigned int count = static_cast<unsigned int>(this->adapters_size());
-    total_size += 1UL * count;
-    for (unsigned int i = 0; i < count; i++) {
-      total_size +=
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
-          this->adapters(static_cast<int>(i)));
-    }
-  }
-
-  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
-}
-
-void AvailableAdaptersResponse::MergeFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:mvcam.AvailableAdaptersResponse)
-  GOOGLE_DCHECK_NE(&from, this);
-  const AvailableAdaptersResponse* source =
-      ::google::protobuf::internal::DynamicCastToGenerated<const AvailableAdaptersResponse>(
-          &from);
-  if (source == NULL) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:mvcam.AvailableAdaptersResponse)
-    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:mvcam.AvailableAdaptersResponse)
-    MergeFrom(*source);
-  }
-}
-
-void AvailableAdaptersResponse::MergeFrom(const AvailableAdaptersResponse& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:mvcam.AvailableAdaptersResponse)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  adapters_.MergeFrom(from.adapters_);
-}
-
-void AvailableAdaptersResponse::CopyFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:mvcam.AvailableAdaptersResponse)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-void AvailableAdaptersResponse::CopyFrom(const AvailableAdaptersResponse& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:mvcam.AvailableAdaptersResponse)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool AvailableAdaptersResponse::IsInitialized() const {
-  return true;
-}
-
-void AvailableAdaptersResponse::Swap(AvailableAdaptersResponse* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
-void AvailableAdaptersResponse::InternalSwap(AvailableAdaptersResponse* other) {
-  using std::swap;
-  CastToBase(&adapters_)->InternalSwap(CastToBase(&other->adapters_));
-  _internal_metadata_.Swap(&other->_internal_metadata_);
-}
-
-::google::protobuf::Metadata AvailableAdaptersResponse::GetMetadata() const {
-  protobuf_camera_5fdefinitions_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_camera_5fdefinitions_2eproto::file_level_metadata[kIndexInFileMessages];
-}
-
-
-// ===================================================================
-
-void GetDevicesRequest::InitAsDefaultInstance() {
-}
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int GetDevicesRequest::kAdapterNameFieldNumber;
-const int GetDevicesRequest::kUseCacheFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
-
-GetDevicesRequest::GetDevicesRequest()
-  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  ::google::protobuf::internal::InitSCC(
-      &protobuf_camera_5fdefinitions_2eproto::scc_info_GetDevicesRequest.base);
-  SharedCtor();
-  // @@protoc_insertion_point(constructor:mvcam.GetDevicesRequest)
-}
-GetDevicesRequest::GetDevicesRequest(const GetDevicesRequest& from)
-  : ::google::protobuf::Message(),
-      _internal_metadata_(NULL) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  adapter_name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.adapter_name().size() > 0) {
-    adapter_name_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.adapter_name_);
-  }
-  use_cache_ = from.use_cache_;
-  // @@protoc_insertion_point(copy_constructor:mvcam.GetDevicesRequest)
-}
-
-void GetDevicesRequest::SharedCtor() {
-  adapter_name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  use_cache_ = false;
-}
-
-GetDevicesRequest::~GetDevicesRequest() {
-  // @@protoc_insertion_point(destructor:mvcam.GetDevicesRequest)
-  SharedDtor();
-}
-
-void GetDevicesRequest::SharedDtor() {
-  adapter_name_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-
-void GetDevicesRequest::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
-}
-const ::google::protobuf::Descriptor* GetDevicesRequest::descriptor() {
-  ::protobuf_camera_5fdefinitions_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_camera_5fdefinitions_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
-}
-
-const GetDevicesRequest& GetDevicesRequest::default_instance() {
-  ::google::protobuf::internal::InitSCC(&protobuf_camera_5fdefinitions_2eproto::scc_info_GetDevicesRequest.base);
-  return *internal_default_instance();
-}
-
-
-void GetDevicesRequest::Clear() {
-// @@protoc_insertion_point(message_clear_start:mvcam.GetDevicesRequest)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  adapter_name_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  use_cache_ = false;
-  _internal_metadata_.Clear();
-}
-
-bool GetDevicesRequest::MergePartialFromCodedStream(
-    ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:mvcam.GetDevicesRequest)
-  for (;;) {
-    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // string adapter_name = 1;
-      case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_adapter_name()));
-          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            this->adapter_name().data(), static_cast<int>(this->adapter_name().length()),
-            ::google::protobuf::internal::WireFormatLite::PARSE,
-            "mvcam.GetDevicesRequest.adapter_name"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // bool use_cache = 2;
-      case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(16u /* 16 & 0xFF */)) {
-
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
-                 input, &use_cache_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::google::protobuf::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:mvcam.GetDevicesRequest)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:mvcam.GetDevicesRequest)
-  return false;
-#undef DO_
-}
-
-void GetDevicesRequest::SerializeWithCachedSizes(
-    ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:mvcam.GetDevicesRequest)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // string adapter_name = 1;
-  if (this->adapter_name().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->adapter_name().data(), static_cast<int>(this->adapter_name().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "mvcam.GetDevicesRequest.adapter_name");
-    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      1, this->adapter_name(), output);
-  }
-
-  // bool use_cache = 2;
-  if (this->use_cache() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteBool(2, this->use_cache(), output);
-  }
-
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
-  }
-  // @@protoc_insertion_point(serialize_end:mvcam.GetDevicesRequest)
-}
-
-::google::protobuf::uint8* GetDevicesRequest::InternalSerializeWithCachedSizesToArray(
-    bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic; // Unused
-  // @@protoc_insertion_point(serialize_to_array_start:mvcam.GetDevicesRequest)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // string adapter_name = 1;
-  if (this->adapter_name().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->adapter_name().data(), static_cast<int>(this->adapter_name().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "mvcam.GetDevicesRequest.adapter_name");
-    target =
-      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        1, this->adapter_name(), target);
-  }
-
-  // bool use_cache = 2;
-  if (this->use_cache() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(2, this->use_cache(), target);
-  }
-
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:mvcam.GetDevicesRequest)
-  return target;
-}
-
-size_t GetDevicesRequest::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:mvcam.GetDevicesRequest)
-  size_t total_size = 0;
-
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    total_size +=
-      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
-  }
-  // string adapter_name = 1;
-  if (this->adapter_name().size() > 0) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->adapter_name());
-  }
-
-  // bool use_cache = 2;
-  if (this->use_cache() != 0) {
-    total_size += 1 + 1;
-  }
-
-  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
-}
-
-void GetDevicesRequest::MergeFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:mvcam.GetDevicesRequest)
-  GOOGLE_DCHECK_NE(&from, this);
-  const GetDevicesRequest* source =
-      ::google::protobuf::internal::DynamicCastToGenerated<const GetDevicesRequest>(
-          &from);
-  if (source == NULL) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:mvcam.GetDevicesRequest)
-    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:mvcam.GetDevicesRequest)
-    MergeFrom(*source);
-  }
-}
-
-void GetDevicesRequest::MergeFrom(const GetDevicesRequest& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:mvcam.GetDevicesRequest)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  if (from.adapter_name().size() > 0) {
-
-    adapter_name_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.adapter_name_);
-  }
-  if (from.use_cache() != 0) {
-    set_use_cache(from.use_cache());
-  }
-}
-
-void GetDevicesRequest::CopyFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:mvcam.GetDevicesRequest)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-void GetDevicesRequest::CopyFrom(const GetDevicesRequest& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:mvcam.GetDevicesRequest)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool GetDevicesRequest::IsInitialized() const {
-  return true;
-}
-
-void GetDevicesRequest::Swap(GetDevicesRequest* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
-void GetDevicesRequest::InternalSwap(GetDevicesRequest* other) {
-  using std::swap;
-  adapter_name_.Swap(&other->adapter_name_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
-  swap(use_cache_, other->use_cache_);
-  _internal_metadata_.Swap(&other->_internal_metadata_);
-}
-
-::google::protobuf::Metadata GetDevicesRequest::GetMetadata() const {
-  protobuf_camera_5fdefinitions_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_camera_5fdefinitions_2eproto::file_level_metadata[kIndexInFileMessages];
-}
-
-
-// ===================================================================
-
-void DeviceInfo::InitAsDefaultInstance() {
-  ::mvcam::_DeviceInfo_default_instance_._instance.get_mutable()->adapter_ = const_cast< ::mvcam::AdapterInfo*>(
-      ::mvcam::AdapterInfo::internal_default_instance());
-}
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int DeviceInfo::kAdapterFieldNumber;
-const int DeviceInfo::kManufactureFieldNumber;
-const int DeviceInfo::kIdFieldNumber;
-const int DeviceInfo::kModelFieldNumber;
-const int DeviceInfo::kVersionFieldNumber;
-const int DeviceInfo::kSerialFieldNumber;
-const int DeviceInfo::kConnectedFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
-
-DeviceInfo::DeviceInfo()
-  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  ::google::protobuf::internal::InitSCC(
-      &protobuf_camera_5fdefinitions_2eproto::scc_info_DeviceInfo.base);
-  SharedCtor();
-  // @@protoc_insertion_point(constructor:mvcam.DeviceInfo)
-}
-DeviceInfo::DeviceInfo(const DeviceInfo& from)
-  : ::google::protobuf::Message(),
-      _internal_metadata_(NULL) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  manufacture_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.manufacture().size() > 0) {
-    manufacture_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.manufacture_);
-  }
-  id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.id().size() > 0) {
-    id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.id_);
-  }
-  model_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.model().size() > 0) {
-    model_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.model_);
-  }
-  version_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.version().size() > 0) {
-    version_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.version_);
-  }
-  serial_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.serial().size() > 0) {
-    serial_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.serial_);
-  }
-  if (from.has_adapter()) {
-    adapter_ = new ::mvcam::AdapterInfo(*from.adapter_);
-  } else {
-    adapter_ = NULL;
-  }
-  connected_ = from.connected_;
-  // @@protoc_insertion_point(copy_constructor:mvcam.DeviceInfo)
-}
-
-void DeviceInfo::SharedCtor() {
-  manufacture_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  model_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  version_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  serial_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  ::memset(&adapter_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&connected_) -
-      reinterpret_cast<char*>(&adapter_)) + sizeof(connected_));
-}
-
-DeviceInfo::~DeviceInfo() {
-  // @@protoc_insertion_point(destructor:mvcam.DeviceInfo)
-  SharedDtor();
-}
-
-void DeviceInfo::SharedDtor() {
-  manufacture_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  id_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  model_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  version_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  serial_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (this != internal_default_instance()) delete adapter_;
-}
-
-void DeviceInfo::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
-}
-const ::google::protobuf::Descriptor* DeviceInfo::descriptor() {
-  ::protobuf_camera_5fdefinitions_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_camera_5fdefinitions_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
-}
-
-const DeviceInfo& DeviceInfo::default_instance() {
-  ::google::protobuf::internal::InitSCC(&protobuf_camera_5fdefinitions_2eproto::scc_info_DeviceInfo.base);
-  return *internal_default_instance();
-}
-
-
-void DeviceInfo::Clear() {
-// @@protoc_insertion_point(message_clear_start:mvcam.DeviceInfo)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  manufacture_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  model_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  version_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  serial_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (GetArenaNoVirtual() == NULL && adapter_ != NULL) {
-    delete adapter_;
-  }
-  adapter_ = NULL;
-  connected_ = false;
-  _internal_metadata_.Clear();
-}
-
-bool DeviceInfo::MergePartialFromCodedStream(
-    ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:mvcam.DeviceInfo)
-  for (;;) {
-    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // .mvcam.AdapterInfo adapter = 1;
-      case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_adapter()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // string manufacture = 2;
-      case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_manufacture()));
-          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            this->manufacture().data(), static_cast<int>(this->manufacture().length()),
-            ::google::protobuf::internal::WireFormatLite::PARSE,
-            "mvcam.DeviceInfo.manufacture"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // string id = 3;
-      case 3: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(26u /* 26 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_id()));
-          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            this->id().data(), static_cast<int>(this->id().length()),
-            ::google::protobuf::internal::WireFormatLite::PARSE,
-            "mvcam.DeviceInfo.id"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // string model = 4;
-      case 4: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(34u /* 34 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_model()));
-          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            this->model().data(), static_cast<int>(this->model().length()),
-            ::google::protobuf::internal::WireFormatLite::PARSE,
-            "mvcam.DeviceInfo.model"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // string version = 5;
-      case 5: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(42u /* 42 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_version()));
-          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            this->version().data(), static_cast<int>(this->version().length()),
-            ::google::protobuf::internal::WireFormatLite::PARSE,
-            "mvcam.DeviceInfo.version"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // string serial = 6;
-      case 6: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(50u /* 50 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_serial()));
-          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            this->serial().data(), static_cast<int>(this->serial().length()),
-            ::google::protobuf::internal::WireFormatLite::PARSE,
-            "mvcam.DeviceInfo.serial"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // bool connected = 8;
-      case 8: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(64u /* 64 & 0xFF */)) {
-
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
-                 input, &connected_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::google::protobuf::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:mvcam.DeviceInfo)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:mvcam.DeviceInfo)
-  return false;
-#undef DO_
-}
-
-void DeviceInfo::SerializeWithCachedSizes(
-    ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:mvcam.DeviceInfo)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // .mvcam.AdapterInfo adapter = 1;
-  if (this->has_adapter()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, this->_internal_adapter(), output);
-  }
-
-  // string manufacture = 2;
-  if (this->manufacture().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->manufacture().data(), static_cast<int>(this->manufacture().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "mvcam.DeviceInfo.manufacture");
-    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      2, this->manufacture(), output);
-  }
-
-  // string id = 3;
-  if (this->id().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->id().data(), static_cast<int>(this->id().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "mvcam.DeviceInfo.id");
-    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      3, this->id(), output);
-  }
-
-  // string model = 4;
-  if (this->model().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->model().data(), static_cast<int>(this->model().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "mvcam.DeviceInfo.model");
-    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      4, this->model(), output);
-  }
-
-  // string version = 5;
-  if (this->version().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->version().data(), static_cast<int>(this->version().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "mvcam.DeviceInfo.version");
-    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      5, this->version(), output);
-  }
-
-  // string serial = 6;
-  if (this->serial().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->serial().data(), static_cast<int>(this->serial().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "mvcam.DeviceInfo.serial");
-    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      6, this->serial(), output);
-  }
-
-  // bool connected = 8;
-  if (this->connected() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteBool(8, this->connected(), output);
-  }
-
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
-  }
-  // @@protoc_insertion_point(serialize_end:mvcam.DeviceInfo)
-}
-
-::google::protobuf::uint8* DeviceInfo::InternalSerializeWithCachedSizesToArray(
-    bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic; // Unused
-  // @@protoc_insertion_point(serialize_to_array_start:mvcam.DeviceInfo)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // .mvcam.AdapterInfo adapter = 1;
-  if (this->has_adapter()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        1, this->_internal_adapter(), deterministic, target);
-  }
-
-  // string manufacture = 2;
-  if (this->manufacture().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->manufacture().data(), static_cast<int>(this->manufacture().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "mvcam.DeviceInfo.manufacture");
-    target =
-      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        2, this->manufacture(), target);
-  }
-
-  // string id = 3;
-  if (this->id().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->id().data(), static_cast<int>(this->id().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "mvcam.DeviceInfo.id");
-    target =
-      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        3, this->id(), target);
-  }
-
-  // string model = 4;
-  if (this->model().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->model().data(), static_cast<int>(this->model().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "mvcam.DeviceInfo.model");
-    target =
-      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        4, this->model(), target);
-  }
-
-  // string version = 5;
-  if (this->version().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->version().data(), static_cast<int>(this->version().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "mvcam.DeviceInfo.version");
-    target =
-      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        5, this->version(), target);
-  }
-
-  // string serial = 6;
-  if (this->serial().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->serial().data(), static_cast<int>(this->serial().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "mvcam.DeviceInfo.serial");
-    target =
-      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        6, this->serial(), target);
-  }
-
-  // bool connected = 8;
-  if (this->connected() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(8, this->connected(), target);
-  }
-
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:mvcam.DeviceInfo)
-  return target;
-}
-
-size_t DeviceInfo::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:mvcam.DeviceInfo)
-  size_t total_size = 0;
-
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    total_size +=
-      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
-  }
-  // string manufacture = 2;
-  if (this->manufacture().size() > 0) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->manufacture());
-  }
-
-  // string id = 3;
-  if (this->id().size() > 0) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->id());
-  }
-
-  // string model = 4;
-  if (this->model().size() > 0) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->model());
-  }
-
-  // string version = 5;
-  if (this->version().size() > 0) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->version());
-  }
-
-  // string serial = 6;
-  if (this->serial().size() > 0) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->serial());
-  }
-
-  // .mvcam.AdapterInfo adapter = 1;
-  if (this->has_adapter()) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *adapter_);
-  }
-
-  // bool connected = 8;
-  if (this->connected() != 0) {
-    total_size += 1 + 1;
-  }
-
-  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
-}
-
-void DeviceInfo::MergeFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:mvcam.DeviceInfo)
-  GOOGLE_DCHECK_NE(&from, this);
-  const DeviceInfo* source =
-      ::google::protobuf::internal::DynamicCastToGenerated<const DeviceInfo>(
-          &from);
-  if (source == NULL) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:mvcam.DeviceInfo)
-    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:mvcam.DeviceInfo)
-    MergeFrom(*source);
-  }
-}
-
-void DeviceInfo::MergeFrom(const DeviceInfo& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:mvcam.DeviceInfo)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  if (from.manufacture().size() > 0) {
-
-    manufacture_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.manufacture_);
-  }
-  if (from.id().size() > 0) {
-
-    id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.id_);
-  }
-  if (from.model().size() > 0) {
-
-    model_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.model_);
-  }
-  if (from.version().size() > 0) {
-
-    version_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.version_);
-  }
-  if (from.serial().size() > 0) {
-
-    serial_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.serial_);
-  }
-  if (from.has_adapter()) {
-    mutable_adapter()->::mvcam::AdapterInfo::MergeFrom(from.adapter());
-  }
-  if (from.connected() != 0) {
-    set_connected(from.connected());
-  }
-}
-
-void DeviceInfo::CopyFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:mvcam.DeviceInfo)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-void DeviceInfo::CopyFrom(const DeviceInfo& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:mvcam.DeviceInfo)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool DeviceInfo::IsInitialized() const {
-  return true;
-}
-
-void DeviceInfo::Swap(DeviceInfo* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
-void DeviceInfo::InternalSwap(DeviceInfo* other) {
-  using std::swap;
-  manufacture_.Swap(&other->manufacture_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
-  id_.Swap(&other->id_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
-  model_.Swap(&other->model_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
-  version_.Swap(&other->version_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
-  serial_.Swap(&other->serial_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
-  swap(adapter_, other->adapter_);
-  swap(connected_, other->connected_);
-  _internal_metadata_.Swap(&other->_internal_metadata_);
-}
-
-::google::protobuf::Metadata DeviceInfo::GetMetadata() const {
-  protobuf_camera_5fdefinitions_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_camera_5fdefinitions_2eproto::file_level_metadata[kIndexInFileMessages];
-}
-
-
-// ===================================================================
-
-void GetDevicesResponse::InitAsDefaultInstance() {
-}
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int GetDevicesResponse::kDevicesFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
-
-GetDevicesResponse::GetDevicesResponse()
-  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  ::google::protobuf::internal::InitSCC(
-      &protobuf_camera_5fdefinitions_2eproto::scc_info_GetDevicesResponse.base);
-  SharedCtor();
-  // @@protoc_insertion_point(constructor:mvcam.GetDevicesResponse)
-}
-GetDevicesResponse::GetDevicesResponse(const GetDevicesResponse& from)
-  : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
-      devices_(from.devices_) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  // @@protoc_insertion_point(copy_constructor:mvcam.GetDevicesResponse)
-}
-
-void GetDevicesResponse::SharedCtor() {
-}
-
-GetDevicesResponse::~GetDevicesResponse() {
-  // @@protoc_insertion_point(destructor:mvcam.GetDevicesResponse)
-  SharedDtor();
-}
-
-void GetDevicesResponse::SharedDtor() {
-}
-
-void GetDevicesResponse::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
-}
-const ::google::protobuf::Descriptor* GetDevicesResponse::descriptor() {
-  ::protobuf_camera_5fdefinitions_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_camera_5fdefinitions_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
-}
-
-const GetDevicesResponse& GetDevicesResponse::default_instance() {
-  ::google::protobuf::internal::InitSCC(&protobuf_camera_5fdefinitions_2eproto::scc_info_GetDevicesResponse.base);
-  return *internal_default_instance();
-}
-
-
-void GetDevicesResponse::Clear() {
-// @@protoc_insertion_point(message_clear_start:mvcam.GetDevicesResponse)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  devices_.Clear();
-  _internal_metadata_.Clear();
-}
-
-bool GetDevicesResponse::MergePartialFromCodedStream(
-    ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:mvcam.GetDevicesResponse)
-  for (;;) {
-    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // repeated .mvcam.DeviceInfo devices = 1;
-      case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-                input, add_devices()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::google::protobuf::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:mvcam.GetDevicesResponse)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:mvcam.GetDevicesResponse)
-  return false;
-#undef DO_
-}
-
-void GetDevicesResponse::SerializeWithCachedSizes(
-    ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:mvcam.GetDevicesResponse)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // repeated .mvcam.DeviceInfo devices = 1;
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->devices_size()); i < n; i++) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1,
-      this->devices(static_cast<int>(i)),
-      output);
-  }
-
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
-  }
-  // @@protoc_insertion_point(serialize_end:mvcam.GetDevicesResponse)
-}
-
-::google::protobuf::uint8* GetDevicesResponse::InternalSerializeWithCachedSizesToArray(
-    bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic; // Unused
-  // @@protoc_insertion_point(serialize_to_array_start:mvcam.GetDevicesResponse)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // repeated .mvcam.DeviceInfo devices = 1;
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->devices_size()); i < n; i++) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        1, this->devices(static_cast<int>(i)), deterministic, target);
-  }
-
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:mvcam.GetDevicesResponse)
-  return target;
-}
-
-size_t GetDevicesResponse::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:mvcam.GetDevicesResponse)
-  size_t total_size = 0;
-
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    total_size +=
-      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
-  }
-  // repeated .mvcam.DeviceInfo devices = 1;
-  {
-    unsigned int count = static_cast<unsigned int>(this->devices_size());
-    total_size += 1UL * count;
-    for (unsigned int i = 0; i < count; i++) {
-      total_size +=
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
-          this->devices(static_cast<int>(i)));
-    }
-  }
-
-  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
-}
-
-void GetDevicesResponse::MergeFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:mvcam.GetDevicesResponse)
-  GOOGLE_DCHECK_NE(&from, this);
-  const GetDevicesResponse* source =
-      ::google::protobuf::internal::DynamicCastToGenerated<const GetDevicesResponse>(
-          &from);
-  if (source == NULL) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:mvcam.GetDevicesResponse)
-    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:mvcam.GetDevicesResponse)
-    MergeFrom(*source);
-  }
-}
-
-void GetDevicesResponse::MergeFrom(const GetDevicesResponse& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:mvcam.GetDevicesResponse)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  devices_.MergeFrom(from.devices_);
-}
-
-void GetDevicesResponse::CopyFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:mvcam.GetDevicesResponse)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-void GetDevicesResponse::CopyFrom(const GetDevicesResponse& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:mvcam.GetDevicesResponse)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool GetDevicesResponse::IsInitialized() const {
-  return true;
-}
-
-void GetDevicesResponse::Swap(GetDevicesResponse* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
-void GetDevicesResponse::InternalSwap(GetDevicesResponse* other) {
-  using std::swap;
-  CastToBase(&devices_)->InternalSwap(CastToBase(&other->devices_));
-  _internal_metadata_.Swap(&other->_internal_metadata_);
-}
-
-::google::protobuf::Metadata GetDevicesResponse::GetMetadata() const {
-  protobuf_camera_5fdefinitions_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_camera_5fdefinitions_2eproto::file_level_metadata[kIndexInFileMessages];
-}
-
-
-// ===================================================================
-
-void IdRequest::InitAsDefaultInstance() {
-}
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int IdRequest::kIdFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
-
-IdRequest::IdRequest()
-  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  ::google::protobuf::internal::InitSCC(
-      &protobuf_camera_5fdefinitions_2eproto::scc_info_IdRequest.base);
-  SharedCtor();
-  // @@protoc_insertion_point(constructor:mvcam.IdRequest)
-}
-IdRequest::IdRequest(const IdRequest& from)
-  : ::google::protobuf::Message(),
-      _internal_metadata_(NULL) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.id().size() > 0) {
-    id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.id_);
-  }
-  // @@protoc_insertion_point(copy_constructor:mvcam.IdRequest)
-}
-
-void IdRequest::SharedCtor() {
-  id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-
-IdRequest::~IdRequest() {
-  // @@protoc_insertion_point(destructor:mvcam.IdRequest)
-  SharedDtor();
-}
-
-void IdRequest::SharedDtor() {
-  id_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-
-void IdRequest::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
-}
-const ::google::protobuf::Descriptor* IdRequest::descriptor() {
-  ::protobuf_camera_5fdefinitions_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_camera_5fdefinitions_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
-}
-
-const IdRequest& IdRequest::default_instance() {
-  ::google::protobuf::internal::InitSCC(&protobuf_camera_5fdefinitions_2eproto::scc_info_IdRequest.base);
-  return *internal_default_instance();
-}
-
-
-void IdRequest::Clear() {
-// @@protoc_insertion_point(message_clear_start:mvcam.IdRequest)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  _internal_metadata_.Clear();
-}
-
-bool IdRequest::MergePartialFromCodedStream(
-    ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:mvcam.IdRequest)
-  for (;;) {
-    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // string id = 1;
-      case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_id()));
-          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            this->id().data(), static_cast<int>(this->id().length()),
-            ::google::protobuf::internal::WireFormatLite::PARSE,
-            "mvcam.IdRequest.id"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::google::protobuf::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:mvcam.IdRequest)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:mvcam.IdRequest)
-  return false;
-#undef DO_
-}
-
-void IdRequest::SerializeWithCachedSizes(
-    ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:mvcam.IdRequest)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // string id = 1;
-  if (this->id().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->id().data(), static_cast<int>(this->id().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "mvcam.IdRequest.id");
-    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      1, this->id(), output);
-  }
-
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
-  }
-  // @@protoc_insertion_point(serialize_end:mvcam.IdRequest)
-}
-
-::google::protobuf::uint8* IdRequest::InternalSerializeWithCachedSizesToArray(
-    bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic; // Unused
-  // @@protoc_insertion_point(serialize_to_array_start:mvcam.IdRequest)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // string id = 1;
-  if (this->id().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->id().data(), static_cast<int>(this->id().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "mvcam.IdRequest.id");
-    target =
-      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        1, this->id(), target);
-  }
-
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:mvcam.IdRequest)
-  return target;
-}
-
-size_t IdRequest::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:mvcam.IdRequest)
-  size_t total_size = 0;
-
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    total_size +=
-      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
-  }
-  // string id = 1;
-  if (this->id().size() > 0) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->id());
-  }
-
-  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
-}
-
-void IdRequest::MergeFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:mvcam.IdRequest)
-  GOOGLE_DCHECK_NE(&from, this);
-  const IdRequest* source =
-      ::google::protobuf::internal::DynamicCastToGenerated<const IdRequest>(
-          &from);
-  if (source == NULL) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:mvcam.IdRequest)
-    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:mvcam.IdRequest)
-    MergeFrom(*source);
-  }
-}
-
-void IdRequest::MergeFrom(const IdRequest& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:mvcam.IdRequest)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  if (from.id().size() > 0) {
-
-    id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.id_);
-  }
-}
-
-void IdRequest::CopyFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:mvcam.IdRequest)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-void IdRequest::CopyFrom(const IdRequest& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:mvcam.IdRequest)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool IdRequest::IsInitialized() const {
-  return true;
-}
-
-void IdRequest::Swap(IdRequest* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
-void IdRequest::InternalSwap(IdRequest* other) {
-  using std::swap;
-  id_.Swap(&other->id_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
-  _internal_metadata_.Swap(&other->_internal_metadata_);
-}
-
-::google::protobuf::Metadata IdRequest::GetMetadata() const {
   protobuf_camera_5fdefinitions_2eproto::protobuf_AssignDescriptorsOnce();
   return ::protobuf_camera_5fdefinitions_2eproto::file_level_metadata[kIndexInFileMessages];
 }
@@ -3233,291 +1431,6 @@ void Configuration::InternalSwap(Configuration* other) {
 
 // ===================================================================
 
-void ConfigureRequest::InitAsDefaultInstance() {
-  ::mvcam::_ConfigureRequest_default_instance_._instance.get_mutable()->id_ = const_cast< ::mvcam::IdRequest*>(
-      ::mvcam::IdRequest::internal_default_instance());
-  ::mvcam::_ConfigureRequest_default_instance_._instance.get_mutable()->config_ = const_cast< ::mvcam::Configuration*>(
-      ::mvcam::Configuration::internal_default_instance());
-}
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int ConfigureRequest::kIdFieldNumber;
-const int ConfigureRequest::kConfigFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
-
-ConfigureRequest::ConfigureRequest()
-  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  ::google::protobuf::internal::InitSCC(
-      &protobuf_camera_5fdefinitions_2eproto::scc_info_ConfigureRequest.base);
-  SharedCtor();
-  // @@protoc_insertion_point(constructor:mvcam.ConfigureRequest)
-}
-ConfigureRequest::ConfigureRequest(const ConfigureRequest& from)
-  : ::google::protobuf::Message(),
-      _internal_metadata_(NULL) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  if (from.has_id()) {
-    id_ = new ::mvcam::IdRequest(*from.id_);
-  } else {
-    id_ = NULL;
-  }
-  if (from.has_config()) {
-    config_ = new ::mvcam::Configuration(*from.config_);
-  } else {
-    config_ = NULL;
-  }
-  // @@protoc_insertion_point(copy_constructor:mvcam.ConfigureRequest)
-}
-
-void ConfigureRequest::SharedCtor() {
-  ::memset(&id_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&config_) -
-      reinterpret_cast<char*>(&id_)) + sizeof(config_));
-}
-
-ConfigureRequest::~ConfigureRequest() {
-  // @@protoc_insertion_point(destructor:mvcam.ConfigureRequest)
-  SharedDtor();
-}
-
-void ConfigureRequest::SharedDtor() {
-  if (this != internal_default_instance()) delete id_;
-  if (this != internal_default_instance()) delete config_;
-}
-
-void ConfigureRequest::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
-}
-const ::google::protobuf::Descriptor* ConfigureRequest::descriptor() {
-  ::protobuf_camera_5fdefinitions_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_camera_5fdefinitions_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
-}
-
-const ConfigureRequest& ConfigureRequest::default_instance() {
-  ::google::protobuf::internal::InitSCC(&protobuf_camera_5fdefinitions_2eproto::scc_info_ConfigureRequest.base);
-  return *internal_default_instance();
-}
-
-
-void ConfigureRequest::Clear() {
-// @@protoc_insertion_point(message_clear_start:mvcam.ConfigureRequest)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  if (GetArenaNoVirtual() == NULL && id_ != NULL) {
-    delete id_;
-  }
-  id_ = NULL;
-  if (GetArenaNoVirtual() == NULL && config_ != NULL) {
-    delete config_;
-  }
-  config_ = NULL;
-  _internal_metadata_.Clear();
-}
-
-bool ConfigureRequest::MergePartialFromCodedStream(
-    ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:mvcam.ConfigureRequest)
-  for (;;) {
-    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // .mvcam.IdRequest id = 1;
-      case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_id()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .mvcam.Configuration config = 2;
-      case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_config()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::google::protobuf::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:mvcam.ConfigureRequest)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:mvcam.ConfigureRequest)
-  return false;
-#undef DO_
-}
-
-void ConfigureRequest::SerializeWithCachedSizes(
-    ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:mvcam.ConfigureRequest)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // .mvcam.IdRequest id = 1;
-  if (this->has_id()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, this->_internal_id(), output);
-  }
-
-  // .mvcam.Configuration config = 2;
-  if (this->has_config()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      2, this->_internal_config(), output);
-  }
-
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
-  }
-  // @@protoc_insertion_point(serialize_end:mvcam.ConfigureRequest)
-}
-
-::google::protobuf::uint8* ConfigureRequest::InternalSerializeWithCachedSizesToArray(
-    bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic; // Unused
-  // @@protoc_insertion_point(serialize_to_array_start:mvcam.ConfigureRequest)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // .mvcam.IdRequest id = 1;
-  if (this->has_id()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        1, this->_internal_id(), deterministic, target);
-  }
-
-  // .mvcam.Configuration config = 2;
-  if (this->has_config()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        2, this->_internal_config(), deterministic, target);
-  }
-
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:mvcam.ConfigureRequest)
-  return target;
-}
-
-size_t ConfigureRequest::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:mvcam.ConfigureRequest)
-  size_t total_size = 0;
-
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    total_size +=
-      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
-  }
-  // .mvcam.IdRequest id = 1;
-  if (this->has_id()) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *id_);
-  }
-
-  // .mvcam.Configuration config = 2;
-  if (this->has_config()) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *config_);
-  }
-
-  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
-}
-
-void ConfigureRequest::MergeFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:mvcam.ConfigureRequest)
-  GOOGLE_DCHECK_NE(&from, this);
-  const ConfigureRequest* source =
-      ::google::protobuf::internal::DynamicCastToGenerated<const ConfigureRequest>(
-          &from);
-  if (source == NULL) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:mvcam.ConfigureRequest)
-    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:mvcam.ConfigureRequest)
-    MergeFrom(*source);
-  }
-}
-
-void ConfigureRequest::MergeFrom(const ConfigureRequest& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:mvcam.ConfigureRequest)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  if (from.has_id()) {
-    mutable_id()->::mvcam::IdRequest::MergeFrom(from.id());
-  }
-  if (from.has_config()) {
-    mutable_config()->::mvcam::Configuration::MergeFrom(from.config());
-  }
-}
-
-void ConfigureRequest::CopyFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:mvcam.ConfigureRequest)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-void ConfigureRequest::CopyFrom(const ConfigureRequest& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:mvcam.ConfigureRequest)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool ConfigureRequest::IsInitialized() const {
-  return true;
-}
-
-void ConfigureRequest::Swap(ConfigureRequest* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
-void ConfigureRequest::InternalSwap(ConfigureRequest* other) {
-  using std::swap;
-  swap(id_, other->id_);
-  swap(config_, other->config_);
-  _internal_metadata_.Swap(&other->_internal_metadata_);
-}
-
-::google::protobuf::Metadata ConfigureRequest::GetMetadata() const {
-  protobuf_camera_5fdefinitions_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_camera_5fdefinitions_2eproto::file_level_metadata[kIndexInFileMessages];
-}
-
-
-// ===================================================================
-
 void Frame::InitAsDefaultInstance() {
   ::mvcam::_Frame_default_instance_._instance.get_mutable()->timestamp_ = const_cast< ::google::protobuf::Timestamp*>(
       ::google::protobuf::Timestamp::internal_default_instance());
@@ -3992,356 +1905,183 @@ void Frame::InternalSwap(Frame* other) {
 
 // ===================================================================
 
-void FrameStream::InitAsDefaultInstance() {
+void DeviceInfo::InitAsDefaultInstance() {
 }
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int FrameStream::kFramesFieldNumber;
+const int DeviceInfo::kManufactureFieldNumber;
+const int DeviceInfo::kIdFieldNumber;
+const int DeviceInfo::kModelFieldNumber;
+const int DeviceInfo::kVersionFieldNumber;
+const int DeviceInfo::kSerialFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
-FrameStream::FrameStream()
+DeviceInfo::DeviceInfo()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
   ::google::protobuf::internal::InitSCC(
-      &protobuf_camera_5fdefinitions_2eproto::scc_info_FrameStream.base);
+      &protobuf_camera_5fdefinitions_2eproto::scc_info_DeviceInfo.base);
   SharedCtor();
-  // @@protoc_insertion_point(constructor:mvcam.FrameStream)
+  // @@protoc_insertion_point(constructor:mvcam.DeviceInfo)
 }
-FrameStream::FrameStream(const FrameStream& from)
-  : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
-      frames_(from.frames_) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  // @@protoc_insertion_point(copy_constructor:mvcam.FrameStream)
-}
-
-void FrameStream::SharedCtor() {
-}
-
-FrameStream::~FrameStream() {
-  // @@protoc_insertion_point(destructor:mvcam.FrameStream)
-  SharedDtor();
-}
-
-void FrameStream::SharedDtor() {
-}
-
-void FrameStream::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
-}
-const ::google::protobuf::Descriptor* FrameStream::descriptor() {
-  ::protobuf_camera_5fdefinitions_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_camera_5fdefinitions_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
-}
-
-const FrameStream& FrameStream::default_instance() {
-  ::google::protobuf::internal::InitSCC(&protobuf_camera_5fdefinitions_2eproto::scc_info_FrameStream.base);
-  return *internal_default_instance();
-}
-
-
-void FrameStream::Clear() {
-// @@protoc_insertion_point(message_clear_start:mvcam.FrameStream)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  frames_.Clear();
-  _internal_metadata_.Clear();
-}
-
-bool FrameStream::MergePartialFromCodedStream(
-    ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:mvcam.FrameStream)
-  for (;;) {
-    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // repeated .mvcam.Frame frames = 1;
-      case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-                input, add_frames()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::google::protobuf::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:mvcam.FrameStream)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:mvcam.FrameStream)
-  return false;
-#undef DO_
-}
-
-void FrameStream::SerializeWithCachedSizes(
-    ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:mvcam.FrameStream)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // repeated .mvcam.Frame frames = 1;
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->frames_size()); i < n; i++) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1,
-      this->frames(static_cast<int>(i)),
-      output);
-  }
-
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
-  }
-  // @@protoc_insertion_point(serialize_end:mvcam.FrameStream)
-}
-
-::google::protobuf::uint8* FrameStream::InternalSerializeWithCachedSizesToArray(
-    bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic; // Unused
-  // @@protoc_insertion_point(serialize_to_array_start:mvcam.FrameStream)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // repeated .mvcam.Frame frames = 1;
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->frames_size()); i < n; i++) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        1, this->frames(static_cast<int>(i)), deterministic, target);
-  }
-
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:mvcam.FrameStream)
-  return target;
-}
-
-size_t FrameStream::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:mvcam.FrameStream)
-  size_t total_size = 0;
-
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    total_size +=
-      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
-  }
-  // repeated .mvcam.Frame frames = 1;
-  {
-    unsigned int count = static_cast<unsigned int>(this->frames_size());
-    total_size += 1UL * count;
-    for (unsigned int i = 0; i < count; i++) {
-      total_size +=
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
-          this->frames(static_cast<int>(i)));
-    }
-  }
-
-  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
-}
-
-void FrameStream::MergeFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:mvcam.FrameStream)
-  GOOGLE_DCHECK_NE(&from, this);
-  const FrameStream* source =
-      ::google::protobuf::internal::DynamicCastToGenerated<const FrameStream>(
-          &from);
-  if (source == NULL) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:mvcam.FrameStream)
-    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:mvcam.FrameStream)
-    MergeFrom(*source);
-  }
-}
-
-void FrameStream::MergeFrom(const FrameStream& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:mvcam.FrameStream)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  frames_.MergeFrom(from.frames_);
-}
-
-void FrameStream::CopyFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:mvcam.FrameStream)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-void FrameStream::CopyFrom(const FrameStream& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:mvcam.FrameStream)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool FrameStream::IsInitialized() const {
-  return true;
-}
-
-void FrameStream::Swap(FrameStream* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
-void FrameStream::InternalSwap(FrameStream* other) {
-  using std::swap;
-  CastToBase(&frames_)->InternalSwap(CastToBase(&other->frames_));
-  _internal_metadata_.Swap(&other->_internal_metadata_);
-}
-
-::google::protobuf::Metadata FrameStream::GetMetadata() const {
-  protobuf_camera_5fdefinitions_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_camera_5fdefinitions_2eproto::file_level_metadata[kIndexInFileMessages];
-}
-
-
-// ===================================================================
-
-void StreamingRequest::InitAsDefaultInstance() {
-  ::mvcam::_StreamingRequest_default_instance_._instance.get_mutable()->id_ = const_cast< ::mvcam::IdRequest*>(
-      ::mvcam::IdRequest::internal_default_instance());
-}
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int StreamingRequest::kIdFieldNumber;
-const int StreamingRequest::kNumberFramesFieldNumber;
-const int StreamingRequest::kBatchSizeFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
-
-StreamingRequest::StreamingRequest()
-  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  ::google::protobuf::internal::InitSCC(
-      &protobuf_camera_5fdefinitions_2eproto::scc_info_StreamingRequest.base);
-  SharedCtor();
-  // @@protoc_insertion_point(constructor:mvcam.StreamingRequest)
-}
-StreamingRequest::StreamingRequest(const StreamingRequest& from)
+DeviceInfo::DeviceInfo(const DeviceInfo& from)
   : ::google::protobuf::Message(),
       _internal_metadata_(NULL) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  if (from.has_id()) {
-    id_ = new ::mvcam::IdRequest(*from.id_);
-  } else {
-    id_ = NULL;
+  manufacture_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.manufacture().size() > 0) {
+    manufacture_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.manufacture_);
   }
-  ::memcpy(&number_frames_, &from.number_frames_,
-    static_cast<size_t>(reinterpret_cast<char*>(&batch_size_) -
-    reinterpret_cast<char*>(&number_frames_)) + sizeof(batch_size_));
-  // @@protoc_insertion_point(copy_constructor:mvcam.StreamingRequest)
+  id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.id().size() > 0) {
+    id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.id_);
+  }
+  model_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.model().size() > 0) {
+    model_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.model_);
+  }
+  version_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.version().size() > 0) {
+    version_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.version_);
+  }
+  serial_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.serial().size() > 0) {
+    serial_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.serial_);
+  }
+  // @@protoc_insertion_point(copy_constructor:mvcam.DeviceInfo)
 }
 
-void StreamingRequest::SharedCtor() {
-  ::memset(&id_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&batch_size_) -
-      reinterpret_cast<char*>(&id_)) + sizeof(batch_size_));
+void DeviceInfo::SharedCtor() {
+  manufacture_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  model_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  version_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  serial_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 
-StreamingRequest::~StreamingRequest() {
-  // @@protoc_insertion_point(destructor:mvcam.StreamingRequest)
+DeviceInfo::~DeviceInfo() {
+  // @@protoc_insertion_point(destructor:mvcam.DeviceInfo)
   SharedDtor();
 }
 
-void StreamingRequest::SharedDtor() {
-  if (this != internal_default_instance()) delete id_;
+void DeviceInfo::SharedDtor() {
+  manufacture_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  id_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  model_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  version_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  serial_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 
-void StreamingRequest::SetCachedSize(int size) const {
+void DeviceInfo::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const ::google::protobuf::Descriptor* StreamingRequest::descriptor() {
+const ::google::protobuf::Descriptor* DeviceInfo::descriptor() {
   ::protobuf_camera_5fdefinitions_2eproto::protobuf_AssignDescriptorsOnce();
   return ::protobuf_camera_5fdefinitions_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
 }
 
-const StreamingRequest& StreamingRequest::default_instance() {
-  ::google::protobuf::internal::InitSCC(&protobuf_camera_5fdefinitions_2eproto::scc_info_StreamingRequest.base);
+const DeviceInfo& DeviceInfo::default_instance() {
+  ::google::protobuf::internal::InitSCC(&protobuf_camera_5fdefinitions_2eproto::scc_info_DeviceInfo.base);
   return *internal_default_instance();
 }
 
 
-void StreamingRequest::Clear() {
-// @@protoc_insertion_point(message_clear_start:mvcam.StreamingRequest)
+void DeviceInfo::Clear() {
+// @@protoc_insertion_point(message_clear_start:mvcam.DeviceInfo)
   ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArenaNoVirtual() == NULL && id_ != NULL) {
-    delete id_;
-  }
-  id_ = NULL;
-  ::memset(&number_frames_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&batch_size_) -
-      reinterpret_cast<char*>(&number_frames_)) + sizeof(batch_size_));
+  manufacture_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  model_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  version_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  serial_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   _internal_metadata_.Clear();
 }
 
-bool StreamingRequest::MergePartialFromCodedStream(
+bool DeviceInfo::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:mvcam.StreamingRequest)
+  // @@protoc_insertion_point(parse_start:mvcam.DeviceInfo)
   for (;;) {
     ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // .mvcam.IdRequest id = 1;
-      case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_id()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // uint64 number_frames = 2;
+      // string manufacture = 2;
       case 2: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(16u /* 16 & 0xFF */)) {
-
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::uint64, ::google::protobuf::internal::WireFormatLite::TYPE_UINT64>(
-                 input, &number_frames_)));
+            static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_manufacture()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->manufacture().data(), static_cast<int>(this->manufacture().length()),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "mvcam.DeviceInfo.manufacture"));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // uint64 batch_size = 4;
+      // string id = 3;
+      case 3: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(26u /* 26 & 0xFF */)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_id()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->id().data(), static_cast<int>(this->id().length()),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "mvcam.DeviceInfo.id"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // string model = 4;
       case 4: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(32u /* 32 & 0xFF */)) {
+            static_cast< ::google::protobuf::uint8>(34u /* 34 & 0xFF */)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_model()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->model().data(), static_cast<int>(this->model().length()),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "mvcam.DeviceInfo.model"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
 
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::uint64, ::google::protobuf::internal::WireFormatLite::TYPE_UINT64>(
-                 input, &batch_size_)));
+      // string version = 5;
+      case 5: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(42u /* 42 & 0xFF */)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_version()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->version().data(), static_cast<int>(this->version().length()),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "mvcam.DeviceInfo.version"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // string serial = 6;
+      case 6: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(50u /* 50 & 0xFF */)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_serial()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->serial().data(), static_cast<int>(this->serial().length()),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "mvcam.DeviceInfo.serial"));
         } else {
           goto handle_unusual;
         }
@@ -4360,77 +2100,149 @@ bool StreamingRequest::MergePartialFromCodedStream(
     }
   }
 success:
-  // @@protoc_insertion_point(parse_success:mvcam.StreamingRequest)
+  // @@protoc_insertion_point(parse_success:mvcam.DeviceInfo)
   return true;
 failure:
-  // @@protoc_insertion_point(parse_failure:mvcam.StreamingRequest)
+  // @@protoc_insertion_point(parse_failure:mvcam.DeviceInfo)
   return false;
 #undef DO_
 }
 
-void StreamingRequest::SerializeWithCachedSizes(
+void DeviceInfo::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:mvcam.StreamingRequest)
+  // @@protoc_insertion_point(serialize_start:mvcam.DeviceInfo)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .mvcam.IdRequest id = 1;
-  if (this->has_id()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, this->_internal_id(), output);
+  // string manufacture = 2;
+  if (this->manufacture().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->manufacture().data(), static_cast<int>(this->manufacture().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "mvcam.DeviceInfo.manufacture");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      2, this->manufacture(), output);
   }
 
-  // uint64 number_frames = 2;
-  if (this->number_frames() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteUInt64(2, this->number_frames(), output);
+  // string id = 3;
+  if (this->id().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->id().data(), static_cast<int>(this->id().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "mvcam.DeviceInfo.id");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      3, this->id(), output);
   }
 
-  // uint64 batch_size = 4;
-  if (this->batch_size() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteUInt64(4, this->batch_size(), output);
+  // string model = 4;
+  if (this->model().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->model().data(), static_cast<int>(this->model().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "mvcam.DeviceInfo.model");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      4, this->model(), output);
+  }
+
+  // string version = 5;
+  if (this->version().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->version().data(), static_cast<int>(this->version().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "mvcam.DeviceInfo.version");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      5, this->version(), output);
+  }
+
+  // string serial = 6;
+  if (this->serial().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->serial().data(), static_cast<int>(this->serial().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "mvcam.DeviceInfo.serial");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      6, this->serial(), output);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
   }
-  // @@protoc_insertion_point(serialize_end:mvcam.StreamingRequest)
+  // @@protoc_insertion_point(serialize_end:mvcam.DeviceInfo)
 }
 
-::google::protobuf::uint8* StreamingRequest::InternalSerializeWithCachedSizesToArray(
+::google::protobuf::uint8* DeviceInfo::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
   (void)deterministic; // Unused
-  // @@protoc_insertion_point(serialize_to_array_start:mvcam.StreamingRequest)
+  // @@protoc_insertion_point(serialize_to_array_start:mvcam.DeviceInfo)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .mvcam.IdRequest id = 1;
-  if (this->has_id()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        1, this->_internal_id(), deterministic, target);
+  // string manufacture = 2;
+  if (this->manufacture().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->manufacture().data(), static_cast<int>(this->manufacture().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "mvcam.DeviceInfo.manufacture");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        2, this->manufacture(), target);
   }
 
-  // uint64 number_frames = 2;
-  if (this->number_frames() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteUInt64ToArray(2, this->number_frames(), target);
+  // string id = 3;
+  if (this->id().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->id().data(), static_cast<int>(this->id().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "mvcam.DeviceInfo.id");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        3, this->id(), target);
   }
 
-  // uint64 batch_size = 4;
-  if (this->batch_size() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteUInt64ToArray(4, this->batch_size(), target);
+  // string model = 4;
+  if (this->model().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->model().data(), static_cast<int>(this->model().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "mvcam.DeviceInfo.model");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        4, this->model(), target);
+  }
+
+  // string version = 5;
+  if (this->version().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->version().data(), static_cast<int>(this->version().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "mvcam.DeviceInfo.version");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        5, this->version(), target);
+  }
+
+  // string serial = 6;
+  if (this->serial().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->serial().data(), static_cast<int>(this->serial().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "mvcam.DeviceInfo.serial");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        6, this->serial(), target);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:mvcam.StreamingRequest)
+  // @@protoc_insertion_point(serialize_to_array_end:mvcam.DeviceInfo)
   return target;
 }
 
-size_t StreamingRequest::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:mvcam.StreamingRequest)
+size_t DeviceInfo::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:mvcam.DeviceInfo)
   size_t total_size = 0;
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -4438,25 +2250,39 @@ size_t StreamingRequest::ByteSizeLong() const {
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
   }
-  // .mvcam.IdRequest id = 1;
-  if (this->has_id()) {
+  // string manufacture = 2;
+  if (this->manufacture().size() > 0) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *id_);
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->manufacture());
   }
 
-  // uint64 number_frames = 2;
-  if (this->number_frames() != 0) {
+  // string id = 3;
+  if (this->id().size() > 0) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::UInt64Size(
-        this->number_frames());
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->id());
   }
 
-  // uint64 batch_size = 4;
-  if (this->batch_size() != 0) {
+  // string model = 4;
+  if (this->model().size() > 0) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::UInt64Size(
-        this->batch_size());
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->model());
+  }
+
+  // string version = 5;
+  if (this->version().size() > 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->version());
+  }
+
+  // string serial = 6;
+  if (this->serial().size() > 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->serial());
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
@@ -4464,70 +2290,88 @@ size_t StreamingRequest::ByteSizeLong() const {
   return total_size;
 }
 
-void StreamingRequest::MergeFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:mvcam.StreamingRequest)
+void DeviceInfo::MergeFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:mvcam.DeviceInfo)
   GOOGLE_DCHECK_NE(&from, this);
-  const StreamingRequest* source =
-      ::google::protobuf::internal::DynamicCastToGenerated<const StreamingRequest>(
+  const DeviceInfo* source =
+      ::google::protobuf::internal::DynamicCastToGenerated<const DeviceInfo>(
           &from);
   if (source == NULL) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:mvcam.StreamingRequest)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:mvcam.DeviceInfo)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:mvcam.StreamingRequest)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:mvcam.DeviceInfo)
     MergeFrom(*source);
   }
 }
 
-void StreamingRequest::MergeFrom(const StreamingRequest& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:mvcam.StreamingRequest)
+void DeviceInfo::MergeFrom(const DeviceInfo& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:mvcam.DeviceInfo)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_id()) {
-    mutable_id()->::mvcam::IdRequest::MergeFrom(from.id());
+  if (from.manufacture().size() > 0) {
+
+    manufacture_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.manufacture_);
   }
-  if (from.number_frames() != 0) {
-    set_number_frames(from.number_frames());
+  if (from.id().size() > 0) {
+
+    id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.id_);
   }
-  if (from.batch_size() != 0) {
-    set_batch_size(from.batch_size());
+  if (from.model().size() > 0) {
+
+    model_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.model_);
+  }
+  if (from.version().size() > 0) {
+
+    version_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.version_);
+  }
+  if (from.serial().size() > 0) {
+
+    serial_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.serial_);
   }
 }
 
-void StreamingRequest::CopyFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:mvcam.StreamingRequest)
+void DeviceInfo::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:mvcam.DeviceInfo)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-void StreamingRequest::CopyFrom(const StreamingRequest& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:mvcam.StreamingRequest)
+void DeviceInfo::CopyFrom(const DeviceInfo& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:mvcam.DeviceInfo)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool StreamingRequest::IsInitialized() const {
+bool DeviceInfo::IsInitialized() const {
   return true;
 }
 
-void StreamingRequest::Swap(StreamingRequest* other) {
+void DeviceInfo::Swap(DeviceInfo* other) {
   if (other == this) return;
   InternalSwap(other);
 }
-void StreamingRequest::InternalSwap(StreamingRequest* other) {
+void DeviceInfo::InternalSwap(DeviceInfo* other) {
   using std::swap;
-  swap(id_, other->id_);
-  swap(number_frames_, other->number_frames_);
-  swap(batch_size_, other->batch_size_);
+  manufacture_.Swap(&other->manufacture_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  id_.Swap(&other->id_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  model_.Swap(&other->model_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  version_.Swap(&other->version_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  serial_.Swap(&other->serial_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
   _internal_metadata_.Swap(&other->_internal_metadata_);
 }
 
-::google::protobuf::Metadata StreamingRequest::GetMetadata() const {
+::google::protobuf::Metadata DeviceInfo::GetMetadata() const {
   protobuf_camera_5fdefinitions_2eproto::protobuf_AssignDescriptorsOnce();
   return ::protobuf_camera_5fdefinitions_2eproto::file_level_metadata[kIndexInFileMessages];
 }
@@ -4539,8 +2383,6 @@ void Status::InitAsDefaultInstance() {
 }
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int Status::kTemperatureFieldNumber;
-const int Status::kOpenedFieldNumber;
-const int Status::kCapturingFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 Status::Status()
@@ -4554,16 +2396,12 @@ Status::Status(const Status& from)
   : ::google::protobuf::Message(),
       _internal_metadata_(NULL) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::memcpy(&temperature_, &from.temperature_,
-    static_cast<size_t>(reinterpret_cast<char*>(&capturing_) -
-    reinterpret_cast<char*>(&temperature_)) + sizeof(capturing_));
+  temperature_ = from.temperature_;
   // @@protoc_insertion_point(copy_constructor:mvcam.Status)
 }
 
 void Status::SharedCtor() {
-  ::memset(&temperature_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&capturing_) -
-      reinterpret_cast<char*>(&temperature_)) + sizeof(capturing_));
+  temperature_ = 0;
 }
 
 Status::~Status() {
@@ -4594,9 +2432,7 @@ void Status::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  ::memset(&temperature_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&capturing_) -
-      reinterpret_cast<char*>(&temperature_)) + sizeof(capturing_));
+  temperature_ = 0;
   _internal_metadata_.Clear();
 }
 
@@ -4618,34 +2454,6 @@ bool Status::MergePartialFromCodedStream(
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
                  input, &temperature_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // bool opened = 2;
-      case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(16u /* 16 & 0xFF */)) {
-
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
-                 input, &opened_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // bool capturing = 3;
-      case 3: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(24u /* 24 & 0xFF */)) {
-
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
-                 input, &capturing_)));
         } else {
           goto handle_unusual;
         }
@@ -4683,16 +2491,6 @@ void Status::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteDouble(1, this->temperature(), output);
   }
 
-  // bool opened = 2;
-  if (this->opened() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteBool(2, this->opened(), output);
-  }
-
-  // bool capturing = 3;
-  if (this->capturing() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteBool(3, this->capturing(), output);
-  }
-
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
@@ -4710,16 +2508,6 @@ void Status::SerializeWithCachedSizes(
   // double temperature = 1;
   if (this->temperature() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(1, this->temperature(), target);
-  }
-
-  // bool opened = 2;
-  if (this->opened() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(2, this->opened(), target);
-  }
-
-  // bool capturing = 3;
-  if (this->capturing() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(3, this->capturing(), target);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -4742,16 +2530,6 @@ size_t Status::ByteSizeLong() const {
   // double temperature = 1;
   if (this->temperature() != 0) {
     total_size += 1 + 8;
-  }
-
-  // bool opened = 2;
-  if (this->opened() != 0) {
-    total_size += 1 + 1;
-  }
-
-  // bool capturing = 3;
-  if (this->capturing() != 0) {
-    total_size += 1 + 1;
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
@@ -4784,12 +2562,6 @@ void Status::MergeFrom(const Status& from) {
   if (from.temperature() != 0) {
     set_temperature(from.temperature());
   }
-  if (from.opened() != 0) {
-    set_opened(from.opened());
-  }
-  if (from.capturing() != 0) {
-    set_capturing(from.capturing());
-  }
 }
 
 void Status::CopyFrom(const ::google::protobuf::Message& from) {
@@ -4817,288 +2589,10 @@ void Status::Swap(Status* other) {
 void Status::InternalSwap(Status* other) {
   using std::swap;
   swap(temperature_, other->temperature_);
-  swap(opened_, other->opened_);
-  swap(capturing_, other->capturing_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
 }
 
 ::google::protobuf::Metadata Status::GetMetadata() const {
-  protobuf_camera_5fdefinitions_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_camera_5fdefinitions_2eproto::file_level_metadata[kIndexInFileMessages];
-}
-
-
-// ===================================================================
-
-void DeviceControlRequest::InitAsDefaultInstance() {
-  ::mvcam::_DeviceControlRequest_default_instance_._instance.get_mutable()->id_ = const_cast< ::mvcam::IdRequest*>(
-      ::mvcam::IdRequest::internal_default_instance());
-}
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int DeviceControlRequest::kIdFieldNumber;
-const int DeviceControlRequest::kActionFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
-
-DeviceControlRequest::DeviceControlRequest()
-  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  ::google::protobuf::internal::InitSCC(
-      &protobuf_camera_5fdefinitions_2eproto::scc_info_DeviceControlRequest.base);
-  SharedCtor();
-  // @@protoc_insertion_point(constructor:mvcam.DeviceControlRequest)
-}
-DeviceControlRequest::DeviceControlRequest(const DeviceControlRequest& from)
-  : ::google::protobuf::Message(),
-      _internal_metadata_(NULL) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  if (from.has_id()) {
-    id_ = new ::mvcam::IdRequest(*from.id_);
-  } else {
-    id_ = NULL;
-  }
-  action_ = from.action_;
-  // @@protoc_insertion_point(copy_constructor:mvcam.DeviceControlRequest)
-}
-
-void DeviceControlRequest::SharedCtor() {
-  ::memset(&id_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&action_) -
-      reinterpret_cast<char*>(&id_)) + sizeof(action_));
-}
-
-DeviceControlRequest::~DeviceControlRequest() {
-  // @@protoc_insertion_point(destructor:mvcam.DeviceControlRequest)
-  SharedDtor();
-}
-
-void DeviceControlRequest::SharedDtor() {
-  if (this != internal_default_instance()) delete id_;
-}
-
-void DeviceControlRequest::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
-}
-const ::google::protobuf::Descriptor* DeviceControlRequest::descriptor() {
-  ::protobuf_camera_5fdefinitions_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_camera_5fdefinitions_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
-}
-
-const DeviceControlRequest& DeviceControlRequest::default_instance() {
-  ::google::protobuf::internal::InitSCC(&protobuf_camera_5fdefinitions_2eproto::scc_info_DeviceControlRequest.base);
-  return *internal_default_instance();
-}
-
-
-void DeviceControlRequest::Clear() {
-// @@protoc_insertion_point(message_clear_start:mvcam.DeviceControlRequest)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  if (GetArenaNoVirtual() == NULL && id_ != NULL) {
-    delete id_;
-  }
-  id_ = NULL;
-  action_ = 0;
-  _internal_metadata_.Clear();
-}
-
-bool DeviceControlRequest::MergePartialFromCodedStream(
-    ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:mvcam.DeviceControlRequest)
-  for (;;) {
-    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // .mvcam.IdRequest id = 1;
-      case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_id()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .mvcam.DeviceControlAction action = 2;
-      case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(16u /* 16 & 0xFF */)) {
-          int value;
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
-                 input, &value)));
-          set_action(static_cast< ::mvcam::DeviceControlAction >(value));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::google::protobuf::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:mvcam.DeviceControlRequest)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:mvcam.DeviceControlRequest)
-  return false;
-#undef DO_
-}
-
-void DeviceControlRequest::SerializeWithCachedSizes(
-    ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:mvcam.DeviceControlRequest)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // .mvcam.IdRequest id = 1;
-  if (this->has_id()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, this->_internal_id(), output);
-  }
-
-  // .mvcam.DeviceControlAction action = 2;
-  if (this->action() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteEnum(
-      2, this->action(), output);
-  }
-
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
-  }
-  // @@protoc_insertion_point(serialize_end:mvcam.DeviceControlRequest)
-}
-
-::google::protobuf::uint8* DeviceControlRequest::InternalSerializeWithCachedSizesToArray(
-    bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic; // Unused
-  // @@protoc_insertion_point(serialize_to_array_start:mvcam.DeviceControlRequest)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // .mvcam.IdRequest id = 1;
-  if (this->has_id()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        1, this->_internal_id(), deterministic, target);
-  }
-
-  // .mvcam.DeviceControlAction action = 2;
-  if (this->action() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
-      2, this->action(), target);
-  }
-
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:mvcam.DeviceControlRequest)
-  return target;
-}
-
-size_t DeviceControlRequest::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:mvcam.DeviceControlRequest)
-  size_t total_size = 0;
-
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    total_size +=
-      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
-  }
-  // .mvcam.IdRequest id = 1;
-  if (this->has_id()) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *id_);
-  }
-
-  // .mvcam.DeviceControlAction action = 2;
-  if (this->action() != 0) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::EnumSize(this->action());
-  }
-
-  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
-}
-
-void DeviceControlRequest::MergeFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:mvcam.DeviceControlRequest)
-  GOOGLE_DCHECK_NE(&from, this);
-  const DeviceControlRequest* source =
-      ::google::protobuf::internal::DynamicCastToGenerated<const DeviceControlRequest>(
-          &from);
-  if (source == NULL) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:mvcam.DeviceControlRequest)
-    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:mvcam.DeviceControlRequest)
-    MergeFrom(*source);
-  }
-}
-
-void DeviceControlRequest::MergeFrom(const DeviceControlRequest& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:mvcam.DeviceControlRequest)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  if (from.has_id()) {
-    mutable_id()->::mvcam::IdRequest::MergeFrom(from.id());
-  }
-  if (from.action() != 0) {
-    set_action(from.action());
-  }
-}
-
-void DeviceControlRequest::CopyFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:mvcam.DeviceControlRequest)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-void DeviceControlRequest::CopyFrom(const DeviceControlRequest& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:mvcam.DeviceControlRequest)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool DeviceControlRequest::IsInitialized() const {
-  return true;
-}
-
-void DeviceControlRequest::Swap(DeviceControlRequest* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
-void DeviceControlRequest::InternalSwap(DeviceControlRequest* other) {
-  using std::swap;
-  swap(id_, other->id_);
-  swap(action_, other->action_);
-  _internal_metadata_.Swap(&other->_internal_metadata_);
-}
-
-::google::protobuf::Metadata DeviceControlRequest::GetMetadata() const {
   protobuf_camera_5fdefinitions_2eproto::protobuf_AssignDescriptorsOnce();
   return ::protobuf_camera_5fdefinitions_2eproto::file_level_metadata[kIndexInFileMessages];
 }
@@ -5111,44 +2605,20 @@ namespace protobuf {
 template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::mvcam::AdapterInfo* Arena::CreateMaybeMessage< ::mvcam::AdapterInfo >(Arena* arena) {
   return Arena::CreateInternal< ::mvcam::AdapterInfo >(arena);
 }
-template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::mvcam::AvailableAdaptersResponse* Arena::CreateMaybeMessage< ::mvcam::AvailableAdaptersResponse >(Arena* arena) {
-  return Arena::CreateInternal< ::mvcam::AvailableAdaptersResponse >(arena);
-}
-template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::mvcam::GetDevicesRequest* Arena::CreateMaybeMessage< ::mvcam::GetDevicesRequest >(Arena* arena) {
-  return Arena::CreateInternal< ::mvcam::GetDevicesRequest >(arena);
-}
-template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::mvcam::DeviceInfo* Arena::CreateMaybeMessage< ::mvcam::DeviceInfo >(Arena* arena) {
-  return Arena::CreateInternal< ::mvcam::DeviceInfo >(arena);
-}
-template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::mvcam::GetDevicesResponse* Arena::CreateMaybeMessage< ::mvcam::GetDevicesResponse >(Arena* arena) {
-  return Arena::CreateInternal< ::mvcam::GetDevicesResponse >(arena);
-}
-template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::mvcam::IdRequest* Arena::CreateMaybeMessage< ::mvcam::IdRequest >(Arena* arena) {
-  return Arena::CreateInternal< ::mvcam::IdRequest >(arena);
-}
 template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::mvcam::Parameter* Arena::CreateMaybeMessage< ::mvcam::Parameter >(Arena* arena) {
   return Arena::CreateInternal< ::mvcam::Parameter >(arena);
 }
 template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::mvcam::Configuration* Arena::CreateMaybeMessage< ::mvcam::Configuration >(Arena* arena) {
   return Arena::CreateInternal< ::mvcam::Configuration >(arena);
 }
-template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::mvcam::ConfigureRequest* Arena::CreateMaybeMessage< ::mvcam::ConfigureRequest >(Arena* arena) {
-  return Arena::CreateInternal< ::mvcam::ConfigureRequest >(arena);
-}
 template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::mvcam::Frame* Arena::CreateMaybeMessage< ::mvcam::Frame >(Arena* arena) {
   return Arena::CreateInternal< ::mvcam::Frame >(arena);
 }
-template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::mvcam::FrameStream* Arena::CreateMaybeMessage< ::mvcam::FrameStream >(Arena* arena) {
-  return Arena::CreateInternal< ::mvcam::FrameStream >(arena);
-}
-template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::mvcam::StreamingRequest* Arena::CreateMaybeMessage< ::mvcam::StreamingRequest >(Arena* arena) {
-  return Arena::CreateInternal< ::mvcam::StreamingRequest >(arena);
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::mvcam::DeviceInfo* Arena::CreateMaybeMessage< ::mvcam::DeviceInfo >(Arena* arena) {
+  return Arena::CreateInternal< ::mvcam::DeviceInfo >(arena);
 }
 template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::mvcam::Status* Arena::CreateMaybeMessage< ::mvcam::Status >(Arena* arena) {
   return Arena::CreateInternal< ::mvcam::Status >(arena);
-}
-template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::mvcam::DeviceControlRequest* Arena::CreateMaybeMessage< ::mvcam::DeviceControlRequest >(Arena* arena) {
-  return Arena::CreateInternal< ::mvcam::DeviceControlRequest >(arena);
 }
 }  // namespace protobuf
 }  // namespace google

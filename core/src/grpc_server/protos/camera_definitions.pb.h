@@ -40,7 +40,7 @@ namespace protobuf_camera_5fdefinitions_2eproto {
 struct TableStruct {
   static const ::google::protobuf::internal::ParseTableField entries[];
   static const ::google::protobuf::internal::AuxillaryParseTableField aux[];
-  static const ::google::protobuf::internal::ParseTable schema[14];
+  static const ::google::protobuf::internal::ParseTable schema[6];
   static const ::google::protobuf::internal::FieldMetadata field_metadata[];
   static const ::google::protobuf::internal::SerializationTable serialization_table[];
   static const ::google::protobuf::uint32 offsets[];
@@ -51,62 +51,30 @@ namespace mvcam {
 class AdapterInfo;
 class AdapterInfoDefaultTypeInternal;
 extern AdapterInfoDefaultTypeInternal _AdapterInfo_default_instance_;
-class AvailableAdaptersResponse;
-class AvailableAdaptersResponseDefaultTypeInternal;
-extern AvailableAdaptersResponseDefaultTypeInternal _AvailableAdaptersResponse_default_instance_;
 class Configuration;
 class ConfigurationDefaultTypeInternal;
 extern ConfigurationDefaultTypeInternal _Configuration_default_instance_;
-class ConfigureRequest;
-class ConfigureRequestDefaultTypeInternal;
-extern ConfigureRequestDefaultTypeInternal _ConfigureRequest_default_instance_;
-class DeviceControlRequest;
-class DeviceControlRequestDefaultTypeInternal;
-extern DeviceControlRequestDefaultTypeInternal _DeviceControlRequest_default_instance_;
 class DeviceInfo;
 class DeviceInfoDefaultTypeInternal;
 extern DeviceInfoDefaultTypeInternal _DeviceInfo_default_instance_;
 class Frame;
 class FrameDefaultTypeInternal;
 extern FrameDefaultTypeInternal _Frame_default_instance_;
-class FrameStream;
-class FrameStreamDefaultTypeInternal;
-extern FrameStreamDefaultTypeInternal _FrameStream_default_instance_;
-class GetDevicesRequest;
-class GetDevicesRequestDefaultTypeInternal;
-extern GetDevicesRequestDefaultTypeInternal _GetDevicesRequest_default_instance_;
-class GetDevicesResponse;
-class GetDevicesResponseDefaultTypeInternal;
-extern GetDevicesResponseDefaultTypeInternal _GetDevicesResponse_default_instance_;
-class IdRequest;
-class IdRequestDefaultTypeInternal;
-extern IdRequestDefaultTypeInternal _IdRequest_default_instance_;
 class Parameter;
 class ParameterDefaultTypeInternal;
 extern ParameterDefaultTypeInternal _Parameter_default_instance_;
 class Status;
 class StatusDefaultTypeInternal;
 extern StatusDefaultTypeInternal _Status_default_instance_;
-class StreamingRequest;
-class StreamingRequestDefaultTypeInternal;
-extern StreamingRequestDefaultTypeInternal _StreamingRequest_default_instance_;
 }  // namespace mvcam
 namespace google {
 namespace protobuf {
 template<> ::mvcam::AdapterInfo* Arena::CreateMaybeMessage<::mvcam::AdapterInfo>(Arena*);
-template<> ::mvcam::AvailableAdaptersResponse* Arena::CreateMaybeMessage<::mvcam::AvailableAdaptersResponse>(Arena*);
 template<> ::mvcam::Configuration* Arena::CreateMaybeMessage<::mvcam::Configuration>(Arena*);
-template<> ::mvcam::ConfigureRequest* Arena::CreateMaybeMessage<::mvcam::ConfigureRequest>(Arena*);
-template<> ::mvcam::DeviceControlRequest* Arena::CreateMaybeMessage<::mvcam::DeviceControlRequest>(Arena*);
 template<> ::mvcam::DeviceInfo* Arena::CreateMaybeMessage<::mvcam::DeviceInfo>(Arena*);
 template<> ::mvcam::Frame* Arena::CreateMaybeMessage<::mvcam::Frame>(Arena*);
-template<> ::mvcam::FrameStream* Arena::CreateMaybeMessage<::mvcam::FrameStream>(Arena*);
-template<> ::mvcam::GetDevicesRequest* Arena::CreateMaybeMessage<::mvcam::GetDevicesRequest>(Arena*);
-template<> ::mvcam::GetDevicesResponse* Arena::CreateMaybeMessage<::mvcam::GetDevicesResponse>(Arena*);
-template<> ::mvcam::IdRequest* Arena::CreateMaybeMessage<::mvcam::IdRequest>(Arena*);
 template<> ::mvcam::Parameter* Arena::CreateMaybeMessage<::mvcam::Parameter>(Arena*);
 template<> ::mvcam::Status* Arena::CreateMaybeMessage<::mvcam::Status>(Arena*);
-template<> ::mvcam::StreamingRequest* Arena::CreateMaybeMessage<::mvcam::StreamingRequest>(Arena*);
 }  // namespace protobuf
 }  // namespace google
 namespace mvcam {
@@ -282,644 +250,6 @@ class AdapterInfo : public ::google::protobuf::Message /* @@protoc_insertion_poi
 };
 // -------------------------------------------------------------------
 
-class AvailableAdaptersResponse : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mvcam.AvailableAdaptersResponse) */ {
- public:
-  AvailableAdaptersResponse();
-  virtual ~AvailableAdaptersResponse();
-
-  AvailableAdaptersResponse(const AvailableAdaptersResponse& from);
-
-  inline AvailableAdaptersResponse& operator=(const AvailableAdaptersResponse& from) {
-    CopyFrom(from);
-    return *this;
-  }
-  #if LANG_CXX11
-  AvailableAdaptersResponse(AvailableAdaptersResponse&& from) noexcept
-    : AvailableAdaptersResponse() {
-    *this = ::std::move(from);
-  }
-
-  inline AvailableAdaptersResponse& operator=(AvailableAdaptersResponse&& from) noexcept {
-    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
-      if (this != &from) InternalSwap(&from);
-    } else {
-      CopyFrom(from);
-    }
-    return *this;
-  }
-  #endif
-  static const ::google::protobuf::Descriptor* descriptor();
-  static const AvailableAdaptersResponse& default_instance();
-
-  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
-  static inline const AvailableAdaptersResponse* internal_default_instance() {
-    return reinterpret_cast<const AvailableAdaptersResponse*>(
-               &_AvailableAdaptersResponse_default_instance_);
-  }
-  static constexpr int kIndexInFileMessages =
-    1;
-
-  void Swap(AvailableAdaptersResponse* other);
-  friend void swap(AvailableAdaptersResponse& a, AvailableAdaptersResponse& b) {
-    a.Swap(&b);
-  }
-
-  // implements Message ----------------------------------------------
-
-  inline AvailableAdaptersResponse* New() const final {
-    return CreateMaybeMessage<AvailableAdaptersResponse>(NULL);
-  }
-
-  AvailableAdaptersResponse* New(::google::protobuf::Arena* arena) const final {
-    return CreateMaybeMessage<AvailableAdaptersResponse>(arena);
-  }
-  void CopyFrom(const ::google::protobuf::Message& from) final;
-  void MergeFrom(const ::google::protobuf::Message& from) final;
-  void CopyFrom(const AvailableAdaptersResponse& from);
-  void MergeFrom(const AvailableAdaptersResponse& from);
-  void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  bool MergePartialFromCodedStream(
-      ::google::protobuf::io::CodedInputStream* input) final;
-  void SerializeWithCachedSizes(
-      ::google::protobuf::io::CodedOutputStream* output) const final;
-  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
-      bool deterministic, ::google::protobuf::uint8* target) const final;
-  int GetCachedSize() const final { return _cached_size_.Get(); }
-
-  private:
-  void SharedCtor();
-  void SharedDtor();
-  void SetCachedSize(int size) const final;
-  void InternalSwap(AvailableAdaptersResponse* other);
-  private:
-  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
-    return NULL;
-  }
-  inline void* MaybeArenaPtr() const {
-    return NULL;
-  }
-  public:
-
-  ::google::protobuf::Metadata GetMetadata() const final;
-
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-
-  // repeated .mvcam.AdapterInfo adapters = 1;
-  int adapters_size() const;
-  void clear_adapters();
-  static const int kAdaptersFieldNumber = 1;
-  ::mvcam::AdapterInfo* mutable_adapters(int index);
-  ::google::protobuf::RepeatedPtrField< ::mvcam::AdapterInfo >*
-      mutable_adapters();
-  const ::mvcam::AdapterInfo& adapters(int index) const;
-  ::mvcam::AdapterInfo* add_adapters();
-  const ::google::protobuf::RepeatedPtrField< ::mvcam::AdapterInfo >&
-      adapters() const;
-
-  // @@protoc_insertion_point(class_scope:mvcam.AvailableAdaptersResponse)
- private:
-
-  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::google::protobuf::RepeatedPtrField< ::mvcam::AdapterInfo > adapters_;
-  mutable ::google::protobuf::internal::CachedSize _cached_size_;
-  friend struct ::protobuf_camera_5fdefinitions_2eproto::TableStruct;
-};
-// -------------------------------------------------------------------
-
-class GetDevicesRequest : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mvcam.GetDevicesRequest) */ {
- public:
-  GetDevicesRequest();
-  virtual ~GetDevicesRequest();
-
-  GetDevicesRequest(const GetDevicesRequest& from);
-
-  inline GetDevicesRequest& operator=(const GetDevicesRequest& from) {
-    CopyFrom(from);
-    return *this;
-  }
-  #if LANG_CXX11
-  GetDevicesRequest(GetDevicesRequest&& from) noexcept
-    : GetDevicesRequest() {
-    *this = ::std::move(from);
-  }
-
-  inline GetDevicesRequest& operator=(GetDevicesRequest&& from) noexcept {
-    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
-      if (this != &from) InternalSwap(&from);
-    } else {
-      CopyFrom(from);
-    }
-    return *this;
-  }
-  #endif
-  static const ::google::protobuf::Descriptor* descriptor();
-  static const GetDevicesRequest& default_instance();
-
-  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
-  static inline const GetDevicesRequest* internal_default_instance() {
-    return reinterpret_cast<const GetDevicesRequest*>(
-               &_GetDevicesRequest_default_instance_);
-  }
-  static constexpr int kIndexInFileMessages =
-    2;
-
-  void Swap(GetDevicesRequest* other);
-  friend void swap(GetDevicesRequest& a, GetDevicesRequest& b) {
-    a.Swap(&b);
-  }
-
-  // implements Message ----------------------------------------------
-
-  inline GetDevicesRequest* New() const final {
-    return CreateMaybeMessage<GetDevicesRequest>(NULL);
-  }
-
-  GetDevicesRequest* New(::google::protobuf::Arena* arena) const final {
-    return CreateMaybeMessage<GetDevicesRequest>(arena);
-  }
-  void CopyFrom(const ::google::protobuf::Message& from) final;
-  void MergeFrom(const ::google::protobuf::Message& from) final;
-  void CopyFrom(const GetDevicesRequest& from);
-  void MergeFrom(const GetDevicesRequest& from);
-  void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  bool MergePartialFromCodedStream(
-      ::google::protobuf::io::CodedInputStream* input) final;
-  void SerializeWithCachedSizes(
-      ::google::protobuf::io::CodedOutputStream* output) const final;
-  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
-      bool deterministic, ::google::protobuf::uint8* target) const final;
-  int GetCachedSize() const final { return _cached_size_.Get(); }
-
-  private:
-  void SharedCtor();
-  void SharedDtor();
-  void SetCachedSize(int size) const final;
-  void InternalSwap(GetDevicesRequest* other);
-  private:
-  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
-    return NULL;
-  }
-  inline void* MaybeArenaPtr() const {
-    return NULL;
-  }
-  public:
-
-  ::google::protobuf::Metadata GetMetadata() const final;
-
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-
-  // string adapter_name = 1;
-  void clear_adapter_name();
-  static const int kAdapterNameFieldNumber = 1;
-  const ::std::string& adapter_name() const;
-  void set_adapter_name(const ::std::string& value);
-  #if LANG_CXX11
-  void set_adapter_name(::std::string&& value);
-  #endif
-  void set_adapter_name(const char* value);
-  void set_adapter_name(const char* value, size_t size);
-  ::std::string* mutable_adapter_name();
-  ::std::string* release_adapter_name();
-  void set_allocated_adapter_name(::std::string* adapter_name);
-
-  // bool use_cache = 2;
-  void clear_use_cache();
-  static const int kUseCacheFieldNumber = 2;
-  bool use_cache() const;
-  void set_use_cache(bool value);
-
-  // @@protoc_insertion_point(class_scope:mvcam.GetDevicesRequest)
- private:
-
-  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::google::protobuf::internal::ArenaStringPtr adapter_name_;
-  bool use_cache_;
-  mutable ::google::protobuf::internal::CachedSize _cached_size_;
-  friend struct ::protobuf_camera_5fdefinitions_2eproto::TableStruct;
-};
-// -------------------------------------------------------------------
-
-class DeviceInfo : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mvcam.DeviceInfo) */ {
- public:
-  DeviceInfo();
-  virtual ~DeviceInfo();
-
-  DeviceInfo(const DeviceInfo& from);
-
-  inline DeviceInfo& operator=(const DeviceInfo& from) {
-    CopyFrom(from);
-    return *this;
-  }
-  #if LANG_CXX11
-  DeviceInfo(DeviceInfo&& from) noexcept
-    : DeviceInfo() {
-    *this = ::std::move(from);
-  }
-
-  inline DeviceInfo& operator=(DeviceInfo&& from) noexcept {
-    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
-      if (this != &from) InternalSwap(&from);
-    } else {
-      CopyFrom(from);
-    }
-    return *this;
-  }
-  #endif
-  static const ::google::protobuf::Descriptor* descriptor();
-  static const DeviceInfo& default_instance();
-
-  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
-  static inline const DeviceInfo* internal_default_instance() {
-    return reinterpret_cast<const DeviceInfo*>(
-               &_DeviceInfo_default_instance_);
-  }
-  static constexpr int kIndexInFileMessages =
-    3;
-
-  void Swap(DeviceInfo* other);
-  friend void swap(DeviceInfo& a, DeviceInfo& b) {
-    a.Swap(&b);
-  }
-
-  // implements Message ----------------------------------------------
-
-  inline DeviceInfo* New() const final {
-    return CreateMaybeMessage<DeviceInfo>(NULL);
-  }
-
-  DeviceInfo* New(::google::protobuf::Arena* arena) const final {
-    return CreateMaybeMessage<DeviceInfo>(arena);
-  }
-  void CopyFrom(const ::google::protobuf::Message& from) final;
-  void MergeFrom(const ::google::protobuf::Message& from) final;
-  void CopyFrom(const DeviceInfo& from);
-  void MergeFrom(const DeviceInfo& from);
-  void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  bool MergePartialFromCodedStream(
-      ::google::protobuf::io::CodedInputStream* input) final;
-  void SerializeWithCachedSizes(
-      ::google::protobuf::io::CodedOutputStream* output) const final;
-  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
-      bool deterministic, ::google::protobuf::uint8* target) const final;
-  int GetCachedSize() const final { return _cached_size_.Get(); }
-
-  private:
-  void SharedCtor();
-  void SharedDtor();
-  void SetCachedSize(int size) const final;
-  void InternalSwap(DeviceInfo* other);
-  private:
-  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
-    return NULL;
-  }
-  inline void* MaybeArenaPtr() const {
-    return NULL;
-  }
-  public:
-
-  ::google::protobuf::Metadata GetMetadata() const final;
-
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-
-  // string manufacture = 2;
-  void clear_manufacture();
-  static const int kManufactureFieldNumber = 2;
-  const ::std::string& manufacture() const;
-  void set_manufacture(const ::std::string& value);
-  #if LANG_CXX11
-  void set_manufacture(::std::string&& value);
-  #endif
-  void set_manufacture(const char* value);
-  void set_manufacture(const char* value, size_t size);
-  ::std::string* mutable_manufacture();
-  ::std::string* release_manufacture();
-  void set_allocated_manufacture(::std::string* manufacture);
-
-  // string id = 3;
-  void clear_id();
-  static const int kIdFieldNumber = 3;
-  const ::std::string& id() const;
-  void set_id(const ::std::string& value);
-  #if LANG_CXX11
-  void set_id(::std::string&& value);
-  #endif
-  void set_id(const char* value);
-  void set_id(const char* value, size_t size);
-  ::std::string* mutable_id();
-  ::std::string* release_id();
-  void set_allocated_id(::std::string* id);
-
-  // string model = 4;
-  void clear_model();
-  static const int kModelFieldNumber = 4;
-  const ::std::string& model() const;
-  void set_model(const ::std::string& value);
-  #if LANG_CXX11
-  void set_model(::std::string&& value);
-  #endif
-  void set_model(const char* value);
-  void set_model(const char* value, size_t size);
-  ::std::string* mutable_model();
-  ::std::string* release_model();
-  void set_allocated_model(::std::string* model);
-
-  // string version = 5;
-  void clear_version();
-  static const int kVersionFieldNumber = 5;
-  const ::std::string& version() const;
-  void set_version(const ::std::string& value);
-  #if LANG_CXX11
-  void set_version(::std::string&& value);
-  #endif
-  void set_version(const char* value);
-  void set_version(const char* value, size_t size);
-  ::std::string* mutable_version();
-  ::std::string* release_version();
-  void set_allocated_version(::std::string* version);
-
-  // string serial = 6;
-  void clear_serial();
-  static const int kSerialFieldNumber = 6;
-  const ::std::string& serial() const;
-  void set_serial(const ::std::string& value);
-  #if LANG_CXX11
-  void set_serial(::std::string&& value);
-  #endif
-  void set_serial(const char* value);
-  void set_serial(const char* value, size_t size);
-  ::std::string* mutable_serial();
-  ::std::string* release_serial();
-  void set_allocated_serial(::std::string* serial);
-
-  // .mvcam.AdapterInfo adapter = 1;
-  bool has_adapter() const;
-  void clear_adapter();
-  static const int kAdapterFieldNumber = 1;
-  private:
-  const ::mvcam::AdapterInfo& _internal_adapter() const;
-  public:
-  const ::mvcam::AdapterInfo& adapter() const;
-  ::mvcam::AdapterInfo* release_adapter();
-  ::mvcam::AdapterInfo* mutable_adapter();
-  void set_allocated_adapter(::mvcam::AdapterInfo* adapter);
-
-  // bool connected = 8;
-  void clear_connected();
-  static const int kConnectedFieldNumber = 8;
-  bool connected() const;
-  void set_connected(bool value);
-
-  // @@protoc_insertion_point(class_scope:mvcam.DeviceInfo)
- private:
-
-  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::google::protobuf::internal::ArenaStringPtr manufacture_;
-  ::google::protobuf::internal::ArenaStringPtr id_;
-  ::google::protobuf::internal::ArenaStringPtr model_;
-  ::google::protobuf::internal::ArenaStringPtr version_;
-  ::google::protobuf::internal::ArenaStringPtr serial_;
-  ::mvcam::AdapterInfo* adapter_;
-  bool connected_;
-  mutable ::google::protobuf::internal::CachedSize _cached_size_;
-  friend struct ::protobuf_camera_5fdefinitions_2eproto::TableStruct;
-};
-// -------------------------------------------------------------------
-
-class GetDevicesResponse : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mvcam.GetDevicesResponse) */ {
- public:
-  GetDevicesResponse();
-  virtual ~GetDevicesResponse();
-
-  GetDevicesResponse(const GetDevicesResponse& from);
-
-  inline GetDevicesResponse& operator=(const GetDevicesResponse& from) {
-    CopyFrom(from);
-    return *this;
-  }
-  #if LANG_CXX11
-  GetDevicesResponse(GetDevicesResponse&& from) noexcept
-    : GetDevicesResponse() {
-    *this = ::std::move(from);
-  }
-
-  inline GetDevicesResponse& operator=(GetDevicesResponse&& from) noexcept {
-    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
-      if (this != &from) InternalSwap(&from);
-    } else {
-      CopyFrom(from);
-    }
-    return *this;
-  }
-  #endif
-  static const ::google::protobuf::Descriptor* descriptor();
-  static const GetDevicesResponse& default_instance();
-
-  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
-  static inline const GetDevicesResponse* internal_default_instance() {
-    return reinterpret_cast<const GetDevicesResponse*>(
-               &_GetDevicesResponse_default_instance_);
-  }
-  static constexpr int kIndexInFileMessages =
-    4;
-
-  void Swap(GetDevicesResponse* other);
-  friend void swap(GetDevicesResponse& a, GetDevicesResponse& b) {
-    a.Swap(&b);
-  }
-
-  // implements Message ----------------------------------------------
-
-  inline GetDevicesResponse* New() const final {
-    return CreateMaybeMessage<GetDevicesResponse>(NULL);
-  }
-
-  GetDevicesResponse* New(::google::protobuf::Arena* arena) const final {
-    return CreateMaybeMessage<GetDevicesResponse>(arena);
-  }
-  void CopyFrom(const ::google::protobuf::Message& from) final;
-  void MergeFrom(const ::google::protobuf::Message& from) final;
-  void CopyFrom(const GetDevicesResponse& from);
-  void MergeFrom(const GetDevicesResponse& from);
-  void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  bool MergePartialFromCodedStream(
-      ::google::protobuf::io::CodedInputStream* input) final;
-  void SerializeWithCachedSizes(
-      ::google::protobuf::io::CodedOutputStream* output) const final;
-  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
-      bool deterministic, ::google::protobuf::uint8* target) const final;
-  int GetCachedSize() const final { return _cached_size_.Get(); }
-
-  private:
-  void SharedCtor();
-  void SharedDtor();
-  void SetCachedSize(int size) const final;
-  void InternalSwap(GetDevicesResponse* other);
-  private:
-  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
-    return NULL;
-  }
-  inline void* MaybeArenaPtr() const {
-    return NULL;
-  }
-  public:
-
-  ::google::protobuf::Metadata GetMetadata() const final;
-
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-
-  // repeated .mvcam.DeviceInfo devices = 1;
-  int devices_size() const;
-  void clear_devices();
-  static const int kDevicesFieldNumber = 1;
-  ::mvcam::DeviceInfo* mutable_devices(int index);
-  ::google::protobuf::RepeatedPtrField< ::mvcam::DeviceInfo >*
-      mutable_devices();
-  const ::mvcam::DeviceInfo& devices(int index) const;
-  ::mvcam::DeviceInfo* add_devices();
-  const ::google::protobuf::RepeatedPtrField< ::mvcam::DeviceInfo >&
-      devices() const;
-
-  // @@protoc_insertion_point(class_scope:mvcam.GetDevicesResponse)
- private:
-
-  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::google::protobuf::RepeatedPtrField< ::mvcam::DeviceInfo > devices_;
-  mutable ::google::protobuf::internal::CachedSize _cached_size_;
-  friend struct ::protobuf_camera_5fdefinitions_2eproto::TableStruct;
-};
-// -------------------------------------------------------------------
-
-class IdRequest : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mvcam.IdRequest) */ {
- public:
-  IdRequest();
-  virtual ~IdRequest();
-
-  IdRequest(const IdRequest& from);
-
-  inline IdRequest& operator=(const IdRequest& from) {
-    CopyFrom(from);
-    return *this;
-  }
-  #if LANG_CXX11
-  IdRequest(IdRequest&& from) noexcept
-    : IdRequest() {
-    *this = ::std::move(from);
-  }
-
-  inline IdRequest& operator=(IdRequest&& from) noexcept {
-    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
-      if (this != &from) InternalSwap(&from);
-    } else {
-      CopyFrom(from);
-    }
-    return *this;
-  }
-  #endif
-  static const ::google::protobuf::Descriptor* descriptor();
-  static const IdRequest& default_instance();
-
-  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
-  static inline const IdRequest* internal_default_instance() {
-    return reinterpret_cast<const IdRequest*>(
-               &_IdRequest_default_instance_);
-  }
-  static constexpr int kIndexInFileMessages =
-    5;
-
-  void Swap(IdRequest* other);
-  friend void swap(IdRequest& a, IdRequest& b) {
-    a.Swap(&b);
-  }
-
-  // implements Message ----------------------------------------------
-
-  inline IdRequest* New() const final {
-    return CreateMaybeMessage<IdRequest>(NULL);
-  }
-
-  IdRequest* New(::google::protobuf::Arena* arena) const final {
-    return CreateMaybeMessage<IdRequest>(arena);
-  }
-  void CopyFrom(const ::google::protobuf::Message& from) final;
-  void MergeFrom(const ::google::protobuf::Message& from) final;
-  void CopyFrom(const IdRequest& from);
-  void MergeFrom(const IdRequest& from);
-  void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  bool MergePartialFromCodedStream(
-      ::google::protobuf::io::CodedInputStream* input) final;
-  void SerializeWithCachedSizes(
-      ::google::protobuf::io::CodedOutputStream* output) const final;
-  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
-      bool deterministic, ::google::protobuf::uint8* target) const final;
-  int GetCachedSize() const final { return _cached_size_.Get(); }
-
-  private:
-  void SharedCtor();
-  void SharedDtor();
-  void SetCachedSize(int size) const final;
-  void InternalSwap(IdRequest* other);
-  private:
-  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
-    return NULL;
-  }
-  inline void* MaybeArenaPtr() const {
-    return NULL;
-  }
-  public:
-
-  ::google::protobuf::Metadata GetMetadata() const final;
-
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-
-  // string id = 1;
-  void clear_id();
-  static const int kIdFieldNumber = 1;
-  const ::std::string& id() const;
-  void set_id(const ::std::string& value);
-  #if LANG_CXX11
-  void set_id(::std::string&& value);
-  #endif
-  void set_id(const char* value);
-  void set_id(const char* value, size_t size);
-  ::std::string* mutable_id();
-  ::std::string* release_id();
-  void set_allocated_id(::std::string* id);
-
-  // @@protoc_insertion_point(class_scope:mvcam.IdRequest)
- private:
-
-  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::google::protobuf::internal::ArenaStringPtr id_;
-  mutable ::google::protobuf::internal::CachedSize _cached_size_;
-  friend struct ::protobuf_camera_5fdefinitions_2eproto::TableStruct;
-};
-// -------------------------------------------------------------------
-
 class Parameter : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mvcam.Parameter) */ {
  public:
   Parameter();
@@ -955,7 +285,7 @@ class Parameter : public ::google::protobuf::Message /* @@protoc_insertion_point
                &_Parameter_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    6;
+    1;
 
   void Swap(Parameter* other);
   friend void swap(Parameter& a, Parameter& b) {
@@ -1072,7 +402,7 @@ class Configuration : public ::google::protobuf::Message /* @@protoc_insertion_p
                &_Configuration_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    7;
+    2;
 
   void Swap(Configuration* other);
   friend void swap(Configuration& a, Configuration& b) {
@@ -1198,128 +528,6 @@ class Configuration : public ::google::protobuf::Message /* @@protoc_insertion_p
 };
 // -------------------------------------------------------------------
 
-class ConfigureRequest : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mvcam.ConfigureRequest) */ {
- public:
-  ConfigureRequest();
-  virtual ~ConfigureRequest();
-
-  ConfigureRequest(const ConfigureRequest& from);
-
-  inline ConfigureRequest& operator=(const ConfigureRequest& from) {
-    CopyFrom(from);
-    return *this;
-  }
-  #if LANG_CXX11
-  ConfigureRequest(ConfigureRequest&& from) noexcept
-    : ConfigureRequest() {
-    *this = ::std::move(from);
-  }
-
-  inline ConfigureRequest& operator=(ConfigureRequest&& from) noexcept {
-    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
-      if (this != &from) InternalSwap(&from);
-    } else {
-      CopyFrom(from);
-    }
-    return *this;
-  }
-  #endif
-  static const ::google::protobuf::Descriptor* descriptor();
-  static const ConfigureRequest& default_instance();
-
-  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
-  static inline const ConfigureRequest* internal_default_instance() {
-    return reinterpret_cast<const ConfigureRequest*>(
-               &_ConfigureRequest_default_instance_);
-  }
-  static constexpr int kIndexInFileMessages =
-    8;
-
-  void Swap(ConfigureRequest* other);
-  friend void swap(ConfigureRequest& a, ConfigureRequest& b) {
-    a.Swap(&b);
-  }
-
-  // implements Message ----------------------------------------------
-
-  inline ConfigureRequest* New() const final {
-    return CreateMaybeMessage<ConfigureRequest>(NULL);
-  }
-
-  ConfigureRequest* New(::google::protobuf::Arena* arena) const final {
-    return CreateMaybeMessage<ConfigureRequest>(arena);
-  }
-  void CopyFrom(const ::google::protobuf::Message& from) final;
-  void MergeFrom(const ::google::protobuf::Message& from) final;
-  void CopyFrom(const ConfigureRequest& from);
-  void MergeFrom(const ConfigureRequest& from);
-  void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  bool MergePartialFromCodedStream(
-      ::google::protobuf::io::CodedInputStream* input) final;
-  void SerializeWithCachedSizes(
-      ::google::protobuf::io::CodedOutputStream* output) const final;
-  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
-      bool deterministic, ::google::protobuf::uint8* target) const final;
-  int GetCachedSize() const final { return _cached_size_.Get(); }
-
-  private:
-  void SharedCtor();
-  void SharedDtor();
-  void SetCachedSize(int size) const final;
-  void InternalSwap(ConfigureRequest* other);
-  private:
-  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
-    return NULL;
-  }
-  inline void* MaybeArenaPtr() const {
-    return NULL;
-  }
-  public:
-
-  ::google::protobuf::Metadata GetMetadata() const final;
-
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-
-  // .mvcam.IdRequest id = 1;
-  bool has_id() const;
-  void clear_id();
-  static const int kIdFieldNumber = 1;
-  private:
-  const ::mvcam::IdRequest& _internal_id() const;
-  public:
-  const ::mvcam::IdRequest& id() const;
-  ::mvcam::IdRequest* release_id();
-  ::mvcam::IdRequest* mutable_id();
-  void set_allocated_id(::mvcam::IdRequest* id);
-
-  // .mvcam.Configuration config = 2;
-  bool has_config() const;
-  void clear_config();
-  static const int kConfigFieldNumber = 2;
-  private:
-  const ::mvcam::Configuration& _internal_config() const;
-  public:
-  const ::mvcam::Configuration& config() const;
-  ::mvcam::Configuration* release_config();
-  ::mvcam::Configuration* mutable_config();
-  void set_allocated_config(::mvcam::Configuration* config);
-
-  // @@protoc_insertion_point(class_scope:mvcam.ConfigureRequest)
- private:
-
-  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::mvcam::IdRequest* id_;
-  ::mvcam::Configuration* config_;
-  mutable ::google::protobuf::internal::CachedSize _cached_size_;
-  friend struct ::protobuf_camera_5fdefinitions_2eproto::TableStruct;
-};
-// -------------------------------------------------------------------
-
 class Frame : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mvcam.Frame) */ {
  public:
   Frame();
@@ -1355,7 +563,7 @@ class Frame : public ::google::protobuf::Message /* @@protoc_insertion_point(cla
                &_Frame_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    9;
+    3;
 
   void Swap(Frame* other);
   friend void swap(Frame& a, Frame& b) {
@@ -1479,24 +687,24 @@ class Frame : public ::google::protobuf::Message /* @@protoc_insertion_point(cla
 };
 // -------------------------------------------------------------------
 
-class FrameStream : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mvcam.FrameStream) */ {
+class DeviceInfo : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mvcam.DeviceInfo) */ {
  public:
-  FrameStream();
-  virtual ~FrameStream();
+  DeviceInfo();
+  virtual ~DeviceInfo();
 
-  FrameStream(const FrameStream& from);
+  DeviceInfo(const DeviceInfo& from);
 
-  inline FrameStream& operator=(const FrameStream& from) {
+  inline DeviceInfo& operator=(const DeviceInfo& from) {
     CopyFrom(from);
     return *this;
   }
   #if LANG_CXX11
-  FrameStream(FrameStream&& from) noexcept
-    : FrameStream() {
+  DeviceInfo(DeviceInfo&& from) noexcept
+    : DeviceInfo() {
     *this = ::std::move(from);
   }
 
-  inline FrameStream& operator=(FrameStream&& from) noexcept {
+  inline DeviceInfo& operator=(DeviceInfo&& from) noexcept {
     if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
       if (this != &from) InternalSwap(&from);
     } else {
@@ -1506,34 +714,34 @@ class FrameStream : public ::google::protobuf::Message /* @@protoc_insertion_poi
   }
   #endif
   static const ::google::protobuf::Descriptor* descriptor();
-  static const FrameStream& default_instance();
+  static const DeviceInfo& default_instance();
 
   static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
-  static inline const FrameStream* internal_default_instance() {
-    return reinterpret_cast<const FrameStream*>(
-               &_FrameStream_default_instance_);
+  static inline const DeviceInfo* internal_default_instance() {
+    return reinterpret_cast<const DeviceInfo*>(
+               &_DeviceInfo_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    10;
+    4;
 
-  void Swap(FrameStream* other);
-  friend void swap(FrameStream& a, FrameStream& b) {
+  void Swap(DeviceInfo* other);
+  friend void swap(DeviceInfo& a, DeviceInfo& b) {
     a.Swap(&b);
   }
 
   // implements Message ----------------------------------------------
 
-  inline FrameStream* New() const final {
-    return CreateMaybeMessage<FrameStream>(NULL);
+  inline DeviceInfo* New() const final {
+    return CreateMaybeMessage<DeviceInfo>(NULL);
   }
 
-  FrameStream* New(::google::protobuf::Arena* arena) const final {
-    return CreateMaybeMessage<FrameStream>(arena);
+  DeviceInfo* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<DeviceInfo>(arena);
   }
   void CopyFrom(const ::google::protobuf::Message& from) final;
   void MergeFrom(const ::google::protobuf::Message& from) final;
-  void CopyFrom(const FrameStream& from);
-  void MergeFrom(const FrameStream& from);
+  void CopyFrom(const DeviceInfo& from);
+  void MergeFrom(const DeviceInfo& from);
   void Clear() final;
   bool IsInitialized() const final;
 
@@ -1550,7 +758,7 @@ class FrameStream : public ::google::protobuf::Message /* @@protoc_insertion_poi
   void SharedCtor();
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(FrameStream* other);
+  void InternalSwap(DeviceInfo* other);
   private:
   inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
     return NULL;
@@ -1566,146 +774,85 @@ class FrameStream : public ::google::protobuf::Message /* @@protoc_insertion_poi
 
   // accessors -------------------------------------------------------
 
-  // repeated .mvcam.Frame frames = 1;
-  int frames_size() const;
-  void clear_frames();
-  static const int kFramesFieldNumber = 1;
-  ::mvcam::Frame* mutable_frames(int index);
-  ::google::protobuf::RepeatedPtrField< ::mvcam::Frame >*
-      mutable_frames();
-  const ::mvcam::Frame& frames(int index) const;
-  ::mvcam::Frame* add_frames();
-  const ::google::protobuf::RepeatedPtrField< ::mvcam::Frame >&
-      frames() const;
-
-  // @@protoc_insertion_point(class_scope:mvcam.FrameStream)
- private:
-
-  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::google::protobuf::RepeatedPtrField< ::mvcam::Frame > frames_;
-  mutable ::google::protobuf::internal::CachedSize _cached_size_;
-  friend struct ::protobuf_camera_5fdefinitions_2eproto::TableStruct;
-};
-// -------------------------------------------------------------------
-
-class StreamingRequest : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mvcam.StreamingRequest) */ {
- public:
-  StreamingRequest();
-  virtual ~StreamingRequest();
-
-  StreamingRequest(const StreamingRequest& from);
-
-  inline StreamingRequest& operator=(const StreamingRequest& from) {
-    CopyFrom(from);
-    return *this;
-  }
+  // string manufacture = 2;
+  void clear_manufacture();
+  static const int kManufactureFieldNumber = 2;
+  const ::std::string& manufacture() const;
+  void set_manufacture(const ::std::string& value);
   #if LANG_CXX11
-  StreamingRequest(StreamingRequest&& from) noexcept
-    : StreamingRequest() {
-    *this = ::std::move(from);
-  }
-
-  inline StreamingRequest& operator=(StreamingRequest&& from) noexcept {
-    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
-      if (this != &from) InternalSwap(&from);
-    } else {
-      CopyFrom(from);
-    }
-    return *this;
-  }
+  void set_manufacture(::std::string&& value);
   #endif
-  static const ::google::protobuf::Descriptor* descriptor();
-  static const StreamingRequest& default_instance();
+  void set_manufacture(const char* value);
+  void set_manufacture(const char* value, size_t size);
+  ::std::string* mutable_manufacture();
+  ::std::string* release_manufacture();
+  void set_allocated_manufacture(::std::string* manufacture);
 
-  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
-  static inline const StreamingRequest* internal_default_instance() {
-    return reinterpret_cast<const StreamingRequest*>(
-               &_StreamingRequest_default_instance_);
-  }
-  static constexpr int kIndexInFileMessages =
-    11;
-
-  void Swap(StreamingRequest* other);
-  friend void swap(StreamingRequest& a, StreamingRequest& b) {
-    a.Swap(&b);
-  }
-
-  // implements Message ----------------------------------------------
-
-  inline StreamingRequest* New() const final {
-    return CreateMaybeMessage<StreamingRequest>(NULL);
-  }
-
-  StreamingRequest* New(::google::protobuf::Arena* arena) const final {
-    return CreateMaybeMessage<StreamingRequest>(arena);
-  }
-  void CopyFrom(const ::google::protobuf::Message& from) final;
-  void MergeFrom(const ::google::protobuf::Message& from) final;
-  void CopyFrom(const StreamingRequest& from);
-  void MergeFrom(const StreamingRequest& from);
-  void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  bool MergePartialFromCodedStream(
-      ::google::protobuf::io::CodedInputStream* input) final;
-  void SerializeWithCachedSizes(
-      ::google::protobuf::io::CodedOutputStream* output) const final;
-  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
-      bool deterministic, ::google::protobuf::uint8* target) const final;
-  int GetCachedSize() const final { return _cached_size_.Get(); }
-
-  private:
-  void SharedCtor();
-  void SharedDtor();
-  void SetCachedSize(int size) const final;
-  void InternalSwap(StreamingRequest* other);
-  private:
-  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
-    return NULL;
-  }
-  inline void* MaybeArenaPtr() const {
-    return NULL;
-  }
-  public:
-
-  ::google::protobuf::Metadata GetMetadata() const final;
-
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-
-  // .mvcam.IdRequest id = 1;
-  bool has_id() const;
+  // string id = 3;
   void clear_id();
-  static const int kIdFieldNumber = 1;
-  private:
-  const ::mvcam::IdRequest& _internal_id() const;
-  public:
-  const ::mvcam::IdRequest& id() const;
-  ::mvcam::IdRequest* release_id();
-  ::mvcam::IdRequest* mutable_id();
-  void set_allocated_id(::mvcam::IdRequest* id);
+  static const int kIdFieldNumber = 3;
+  const ::std::string& id() const;
+  void set_id(const ::std::string& value);
+  #if LANG_CXX11
+  void set_id(::std::string&& value);
+  #endif
+  void set_id(const char* value);
+  void set_id(const char* value, size_t size);
+  ::std::string* mutable_id();
+  ::std::string* release_id();
+  void set_allocated_id(::std::string* id);
 
-  // uint64 number_frames = 2;
-  void clear_number_frames();
-  static const int kNumberFramesFieldNumber = 2;
-  ::google::protobuf::uint64 number_frames() const;
-  void set_number_frames(::google::protobuf::uint64 value);
+  // string model = 4;
+  void clear_model();
+  static const int kModelFieldNumber = 4;
+  const ::std::string& model() const;
+  void set_model(const ::std::string& value);
+  #if LANG_CXX11
+  void set_model(::std::string&& value);
+  #endif
+  void set_model(const char* value);
+  void set_model(const char* value, size_t size);
+  ::std::string* mutable_model();
+  ::std::string* release_model();
+  void set_allocated_model(::std::string* model);
 
-  // uint64 batch_size = 4;
-  void clear_batch_size();
-  static const int kBatchSizeFieldNumber = 4;
-  ::google::protobuf::uint64 batch_size() const;
-  void set_batch_size(::google::protobuf::uint64 value);
+  // string version = 5;
+  void clear_version();
+  static const int kVersionFieldNumber = 5;
+  const ::std::string& version() const;
+  void set_version(const ::std::string& value);
+  #if LANG_CXX11
+  void set_version(::std::string&& value);
+  #endif
+  void set_version(const char* value);
+  void set_version(const char* value, size_t size);
+  ::std::string* mutable_version();
+  ::std::string* release_version();
+  void set_allocated_version(::std::string* version);
 
-  // @@protoc_insertion_point(class_scope:mvcam.StreamingRequest)
+  // string serial = 6;
+  void clear_serial();
+  static const int kSerialFieldNumber = 6;
+  const ::std::string& serial() const;
+  void set_serial(const ::std::string& value);
+  #if LANG_CXX11
+  void set_serial(::std::string&& value);
+  #endif
+  void set_serial(const char* value);
+  void set_serial(const char* value, size_t size);
+  ::std::string* mutable_serial();
+  ::std::string* release_serial();
+  void set_allocated_serial(::std::string* serial);
+
+  // @@protoc_insertion_point(class_scope:mvcam.DeviceInfo)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::mvcam::IdRequest* id_;
-  ::google::protobuf::uint64 number_frames_;
-  ::google::protobuf::uint64 batch_size_;
+  ::google::protobuf::internal::ArenaStringPtr manufacture_;
+  ::google::protobuf::internal::ArenaStringPtr id_;
+  ::google::protobuf::internal::ArenaStringPtr model_;
+  ::google::protobuf::internal::ArenaStringPtr version_;
+  ::google::protobuf::internal::ArenaStringPtr serial_;
   mutable ::google::protobuf::internal::CachedSize _cached_size_;
   friend struct ::protobuf_camera_5fdefinitions_2eproto::TableStruct;
 };
@@ -1746,7 +893,7 @@ class Status : public ::google::protobuf::Message /* @@protoc_insertion_point(cl
                &_Status_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    12;
+    5;
 
   void Swap(Status* other);
   friend void swap(Status& a, Status& b) {
@@ -1804,141 +951,11 @@ class Status : public ::google::protobuf::Message /* @@protoc_insertion_point(cl
   double temperature() const;
   void set_temperature(double value);
 
-  // bool opened = 2;
-  void clear_opened();
-  static const int kOpenedFieldNumber = 2;
-  bool opened() const;
-  void set_opened(bool value);
-
-  // bool capturing = 3;
-  void clear_capturing();
-  static const int kCapturingFieldNumber = 3;
-  bool capturing() const;
-  void set_capturing(bool value);
-
   // @@protoc_insertion_point(class_scope:mvcam.Status)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   double temperature_;
-  bool opened_;
-  bool capturing_;
-  mutable ::google::protobuf::internal::CachedSize _cached_size_;
-  friend struct ::protobuf_camera_5fdefinitions_2eproto::TableStruct;
-};
-// -------------------------------------------------------------------
-
-class DeviceControlRequest : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:mvcam.DeviceControlRequest) */ {
- public:
-  DeviceControlRequest();
-  virtual ~DeviceControlRequest();
-
-  DeviceControlRequest(const DeviceControlRequest& from);
-
-  inline DeviceControlRequest& operator=(const DeviceControlRequest& from) {
-    CopyFrom(from);
-    return *this;
-  }
-  #if LANG_CXX11
-  DeviceControlRequest(DeviceControlRequest&& from) noexcept
-    : DeviceControlRequest() {
-    *this = ::std::move(from);
-  }
-
-  inline DeviceControlRequest& operator=(DeviceControlRequest&& from) noexcept {
-    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
-      if (this != &from) InternalSwap(&from);
-    } else {
-      CopyFrom(from);
-    }
-    return *this;
-  }
-  #endif
-  static const ::google::protobuf::Descriptor* descriptor();
-  static const DeviceControlRequest& default_instance();
-
-  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
-  static inline const DeviceControlRequest* internal_default_instance() {
-    return reinterpret_cast<const DeviceControlRequest*>(
-               &_DeviceControlRequest_default_instance_);
-  }
-  static constexpr int kIndexInFileMessages =
-    13;
-
-  void Swap(DeviceControlRequest* other);
-  friend void swap(DeviceControlRequest& a, DeviceControlRequest& b) {
-    a.Swap(&b);
-  }
-
-  // implements Message ----------------------------------------------
-
-  inline DeviceControlRequest* New() const final {
-    return CreateMaybeMessage<DeviceControlRequest>(NULL);
-  }
-
-  DeviceControlRequest* New(::google::protobuf::Arena* arena) const final {
-    return CreateMaybeMessage<DeviceControlRequest>(arena);
-  }
-  void CopyFrom(const ::google::protobuf::Message& from) final;
-  void MergeFrom(const ::google::protobuf::Message& from) final;
-  void CopyFrom(const DeviceControlRequest& from);
-  void MergeFrom(const DeviceControlRequest& from);
-  void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  bool MergePartialFromCodedStream(
-      ::google::protobuf::io::CodedInputStream* input) final;
-  void SerializeWithCachedSizes(
-      ::google::protobuf::io::CodedOutputStream* output) const final;
-  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
-      bool deterministic, ::google::protobuf::uint8* target) const final;
-  int GetCachedSize() const final { return _cached_size_.Get(); }
-
-  private:
-  void SharedCtor();
-  void SharedDtor();
-  void SetCachedSize(int size) const final;
-  void InternalSwap(DeviceControlRequest* other);
-  private:
-  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
-    return NULL;
-  }
-  inline void* MaybeArenaPtr() const {
-    return NULL;
-  }
-  public:
-
-  ::google::protobuf::Metadata GetMetadata() const final;
-
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-
-  // .mvcam.IdRequest id = 1;
-  bool has_id() const;
-  void clear_id();
-  static const int kIdFieldNumber = 1;
-  private:
-  const ::mvcam::IdRequest& _internal_id() const;
-  public:
-  const ::mvcam::IdRequest& id() const;
-  ::mvcam::IdRequest* release_id();
-  ::mvcam::IdRequest* mutable_id();
-  void set_allocated_id(::mvcam::IdRequest* id);
-
-  // .mvcam.DeviceControlAction action = 2;
-  void clear_action();
-  static const int kActionFieldNumber = 2;
-  ::mvcam::DeviceControlAction action() const;
-  void set_action(::mvcam::DeviceControlAction value);
-
-  // @@protoc_insertion_point(class_scope:mvcam.DeviceControlRequest)
- private:
-
-  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::mvcam::IdRequest* id_;
-  int action_;
   mutable ::google::protobuf::internal::CachedSize _cached_size_;
   friend struct ::protobuf_camera_5fdefinitions_2eproto::TableStruct;
 };
@@ -2124,539 +1141,6 @@ inline void AdapterInfo::set_in_use(bool value) {
   
   in_use_ = value;
   // @@protoc_insertion_point(field_set:mvcam.AdapterInfo.in_use)
-}
-
-// -------------------------------------------------------------------
-
-// AvailableAdaptersResponse
-
-// repeated .mvcam.AdapterInfo adapters = 1;
-inline int AvailableAdaptersResponse::adapters_size() const {
-  return adapters_.size();
-}
-inline void AvailableAdaptersResponse::clear_adapters() {
-  adapters_.Clear();
-}
-inline ::mvcam::AdapterInfo* AvailableAdaptersResponse::mutable_adapters(int index) {
-  // @@protoc_insertion_point(field_mutable:mvcam.AvailableAdaptersResponse.adapters)
-  return adapters_.Mutable(index);
-}
-inline ::google::protobuf::RepeatedPtrField< ::mvcam::AdapterInfo >*
-AvailableAdaptersResponse::mutable_adapters() {
-  // @@protoc_insertion_point(field_mutable_list:mvcam.AvailableAdaptersResponse.adapters)
-  return &adapters_;
-}
-inline const ::mvcam::AdapterInfo& AvailableAdaptersResponse::adapters(int index) const {
-  // @@protoc_insertion_point(field_get:mvcam.AvailableAdaptersResponse.adapters)
-  return adapters_.Get(index);
-}
-inline ::mvcam::AdapterInfo* AvailableAdaptersResponse::add_adapters() {
-  // @@protoc_insertion_point(field_add:mvcam.AvailableAdaptersResponse.adapters)
-  return adapters_.Add();
-}
-inline const ::google::protobuf::RepeatedPtrField< ::mvcam::AdapterInfo >&
-AvailableAdaptersResponse::adapters() const {
-  // @@protoc_insertion_point(field_list:mvcam.AvailableAdaptersResponse.adapters)
-  return adapters_;
-}
-
-// -------------------------------------------------------------------
-
-// GetDevicesRequest
-
-// string adapter_name = 1;
-inline void GetDevicesRequest::clear_adapter_name() {
-  adapter_name_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline const ::std::string& GetDevicesRequest::adapter_name() const {
-  // @@protoc_insertion_point(field_get:mvcam.GetDevicesRequest.adapter_name)
-  return adapter_name_.GetNoArena();
-}
-inline void GetDevicesRequest::set_adapter_name(const ::std::string& value) {
-  
-  adapter_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:mvcam.GetDevicesRequest.adapter_name)
-}
-#if LANG_CXX11
-inline void GetDevicesRequest::set_adapter_name(::std::string&& value) {
-  
-  adapter_name_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:mvcam.GetDevicesRequest.adapter_name)
-}
-#endif
-inline void GetDevicesRequest::set_adapter_name(const char* value) {
-  GOOGLE_DCHECK(value != NULL);
-  
-  adapter_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:mvcam.GetDevicesRequest.adapter_name)
-}
-inline void GetDevicesRequest::set_adapter_name(const char* value, size_t size) {
-  
-  adapter_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:mvcam.GetDevicesRequest.adapter_name)
-}
-inline ::std::string* GetDevicesRequest::mutable_adapter_name() {
-  
-  // @@protoc_insertion_point(field_mutable:mvcam.GetDevicesRequest.adapter_name)
-  return adapter_name_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline ::std::string* GetDevicesRequest::release_adapter_name() {
-  // @@protoc_insertion_point(field_release:mvcam.GetDevicesRequest.adapter_name)
-  
-  return adapter_name_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline void GetDevicesRequest::set_allocated_adapter_name(::std::string* adapter_name) {
-  if (adapter_name != NULL) {
-    
-  } else {
-    
-  }
-  adapter_name_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), adapter_name);
-  // @@protoc_insertion_point(field_set_allocated:mvcam.GetDevicesRequest.adapter_name)
-}
-
-// bool use_cache = 2;
-inline void GetDevicesRequest::clear_use_cache() {
-  use_cache_ = false;
-}
-inline bool GetDevicesRequest::use_cache() const {
-  // @@protoc_insertion_point(field_get:mvcam.GetDevicesRequest.use_cache)
-  return use_cache_;
-}
-inline void GetDevicesRequest::set_use_cache(bool value) {
-  
-  use_cache_ = value;
-  // @@protoc_insertion_point(field_set:mvcam.GetDevicesRequest.use_cache)
-}
-
-// -------------------------------------------------------------------
-
-// DeviceInfo
-
-// .mvcam.AdapterInfo adapter = 1;
-inline bool DeviceInfo::has_adapter() const {
-  return this != internal_default_instance() && adapter_ != NULL;
-}
-inline void DeviceInfo::clear_adapter() {
-  if (GetArenaNoVirtual() == NULL && adapter_ != NULL) {
-    delete adapter_;
-  }
-  adapter_ = NULL;
-}
-inline const ::mvcam::AdapterInfo& DeviceInfo::_internal_adapter() const {
-  return *adapter_;
-}
-inline const ::mvcam::AdapterInfo& DeviceInfo::adapter() const {
-  const ::mvcam::AdapterInfo* p = adapter_;
-  // @@protoc_insertion_point(field_get:mvcam.DeviceInfo.adapter)
-  return p != NULL ? *p : *reinterpret_cast<const ::mvcam::AdapterInfo*>(
-      &::mvcam::_AdapterInfo_default_instance_);
-}
-inline ::mvcam::AdapterInfo* DeviceInfo::release_adapter() {
-  // @@protoc_insertion_point(field_release:mvcam.DeviceInfo.adapter)
-  
-  ::mvcam::AdapterInfo* temp = adapter_;
-  adapter_ = NULL;
-  return temp;
-}
-inline ::mvcam::AdapterInfo* DeviceInfo::mutable_adapter() {
-  
-  if (adapter_ == NULL) {
-    auto* p = CreateMaybeMessage<::mvcam::AdapterInfo>(GetArenaNoVirtual());
-    adapter_ = p;
-  }
-  // @@protoc_insertion_point(field_mutable:mvcam.DeviceInfo.adapter)
-  return adapter_;
-}
-inline void DeviceInfo::set_allocated_adapter(::mvcam::AdapterInfo* adapter) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete adapter_;
-  }
-  if (adapter) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      adapter = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, adapter, submessage_arena);
-    }
-    
-  } else {
-    
-  }
-  adapter_ = adapter;
-  // @@protoc_insertion_point(field_set_allocated:mvcam.DeviceInfo.adapter)
-}
-
-// string manufacture = 2;
-inline void DeviceInfo::clear_manufacture() {
-  manufacture_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline const ::std::string& DeviceInfo::manufacture() const {
-  // @@protoc_insertion_point(field_get:mvcam.DeviceInfo.manufacture)
-  return manufacture_.GetNoArena();
-}
-inline void DeviceInfo::set_manufacture(const ::std::string& value) {
-  
-  manufacture_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:mvcam.DeviceInfo.manufacture)
-}
-#if LANG_CXX11
-inline void DeviceInfo::set_manufacture(::std::string&& value) {
-  
-  manufacture_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:mvcam.DeviceInfo.manufacture)
-}
-#endif
-inline void DeviceInfo::set_manufacture(const char* value) {
-  GOOGLE_DCHECK(value != NULL);
-  
-  manufacture_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:mvcam.DeviceInfo.manufacture)
-}
-inline void DeviceInfo::set_manufacture(const char* value, size_t size) {
-  
-  manufacture_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:mvcam.DeviceInfo.manufacture)
-}
-inline ::std::string* DeviceInfo::mutable_manufacture() {
-  
-  // @@protoc_insertion_point(field_mutable:mvcam.DeviceInfo.manufacture)
-  return manufacture_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline ::std::string* DeviceInfo::release_manufacture() {
-  // @@protoc_insertion_point(field_release:mvcam.DeviceInfo.manufacture)
-  
-  return manufacture_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline void DeviceInfo::set_allocated_manufacture(::std::string* manufacture) {
-  if (manufacture != NULL) {
-    
-  } else {
-    
-  }
-  manufacture_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), manufacture);
-  // @@protoc_insertion_point(field_set_allocated:mvcam.DeviceInfo.manufacture)
-}
-
-// string id = 3;
-inline void DeviceInfo::clear_id() {
-  id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline const ::std::string& DeviceInfo::id() const {
-  // @@protoc_insertion_point(field_get:mvcam.DeviceInfo.id)
-  return id_.GetNoArena();
-}
-inline void DeviceInfo::set_id(const ::std::string& value) {
-  
-  id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:mvcam.DeviceInfo.id)
-}
-#if LANG_CXX11
-inline void DeviceInfo::set_id(::std::string&& value) {
-  
-  id_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:mvcam.DeviceInfo.id)
-}
-#endif
-inline void DeviceInfo::set_id(const char* value) {
-  GOOGLE_DCHECK(value != NULL);
-  
-  id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:mvcam.DeviceInfo.id)
-}
-inline void DeviceInfo::set_id(const char* value, size_t size) {
-  
-  id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:mvcam.DeviceInfo.id)
-}
-inline ::std::string* DeviceInfo::mutable_id() {
-  
-  // @@protoc_insertion_point(field_mutable:mvcam.DeviceInfo.id)
-  return id_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline ::std::string* DeviceInfo::release_id() {
-  // @@protoc_insertion_point(field_release:mvcam.DeviceInfo.id)
-  
-  return id_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline void DeviceInfo::set_allocated_id(::std::string* id) {
-  if (id != NULL) {
-    
-  } else {
-    
-  }
-  id_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), id);
-  // @@protoc_insertion_point(field_set_allocated:mvcam.DeviceInfo.id)
-}
-
-// string model = 4;
-inline void DeviceInfo::clear_model() {
-  model_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline const ::std::string& DeviceInfo::model() const {
-  // @@protoc_insertion_point(field_get:mvcam.DeviceInfo.model)
-  return model_.GetNoArena();
-}
-inline void DeviceInfo::set_model(const ::std::string& value) {
-  
-  model_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:mvcam.DeviceInfo.model)
-}
-#if LANG_CXX11
-inline void DeviceInfo::set_model(::std::string&& value) {
-  
-  model_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:mvcam.DeviceInfo.model)
-}
-#endif
-inline void DeviceInfo::set_model(const char* value) {
-  GOOGLE_DCHECK(value != NULL);
-  
-  model_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:mvcam.DeviceInfo.model)
-}
-inline void DeviceInfo::set_model(const char* value, size_t size) {
-  
-  model_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:mvcam.DeviceInfo.model)
-}
-inline ::std::string* DeviceInfo::mutable_model() {
-  
-  // @@protoc_insertion_point(field_mutable:mvcam.DeviceInfo.model)
-  return model_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline ::std::string* DeviceInfo::release_model() {
-  // @@protoc_insertion_point(field_release:mvcam.DeviceInfo.model)
-  
-  return model_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline void DeviceInfo::set_allocated_model(::std::string* model) {
-  if (model != NULL) {
-    
-  } else {
-    
-  }
-  model_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), model);
-  // @@protoc_insertion_point(field_set_allocated:mvcam.DeviceInfo.model)
-}
-
-// string version = 5;
-inline void DeviceInfo::clear_version() {
-  version_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline const ::std::string& DeviceInfo::version() const {
-  // @@protoc_insertion_point(field_get:mvcam.DeviceInfo.version)
-  return version_.GetNoArena();
-}
-inline void DeviceInfo::set_version(const ::std::string& value) {
-  
-  version_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:mvcam.DeviceInfo.version)
-}
-#if LANG_CXX11
-inline void DeviceInfo::set_version(::std::string&& value) {
-  
-  version_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:mvcam.DeviceInfo.version)
-}
-#endif
-inline void DeviceInfo::set_version(const char* value) {
-  GOOGLE_DCHECK(value != NULL);
-  
-  version_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:mvcam.DeviceInfo.version)
-}
-inline void DeviceInfo::set_version(const char* value, size_t size) {
-  
-  version_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:mvcam.DeviceInfo.version)
-}
-inline ::std::string* DeviceInfo::mutable_version() {
-  
-  // @@protoc_insertion_point(field_mutable:mvcam.DeviceInfo.version)
-  return version_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline ::std::string* DeviceInfo::release_version() {
-  // @@protoc_insertion_point(field_release:mvcam.DeviceInfo.version)
-  
-  return version_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline void DeviceInfo::set_allocated_version(::std::string* version) {
-  if (version != NULL) {
-    
-  } else {
-    
-  }
-  version_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), version);
-  // @@protoc_insertion_point(field_set_allocated:mvcam.DeviceInfo.version)
-}
-
-// string serial = 6;
-inline void DeviceInfo::clear_serial() {
-  serial_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline const ::std::string& DeviceInfo::serial() const {
-  // @@protoc_insertion_point(field_get:mvcam.DeviceInfo.serial)
-  return serial_.GetNoArena();
-}
-inline void DeviceInfo::set_serial(const ::std::string& value) {
-  
-  serial_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:mvcam.DeviceInfo.serial)
-}
-#if LANG_CXX11
-inline void DeviceInfo::set_serial(::std::string&& value) {
-  
-  serial_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:mvcam.DeviceInfo.serial)
-}
-#endif
-inline void DeviceInfo::set_serial(const char* value) {
-  GOOGLE_DCHECK(value != NULL);
-  
-  serial_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:mvcam.DeviceInfo.serial)
-}
-inline void DeviceInfo::set_serial(const char* value, size_t size) {
-  
-  serial_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:mvcam.DeviceInfo.serial)
-}
-inline ::std::string* DeviceInfo::mutable_serial() {
-  
-  // @@protoc_insertion_point(field_mutable:mvcam.DeviceInfo.serial)
-  return serial_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline ::std::string* DeviceInfo::release_serial() {
-  // @@protoc_insertion_point(field_release:mvcam.DeviceInfo.serial)
-  
-  return serial_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline void DeviceInfo::set_allocated_serial(::std::string* serial) {
-  if (serial != NULL) {
-    
-  } else {
-    
-  }
-  serial_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), serial);
-  // @@protoc_insertion_point(field_set_allocated:mvcam.DeviceInfo.serial)
-}
-
-// bool connected = 8;
-inline void DeviceInfo::clear_connected() {
-  connected_ = false;
-}
-inline bool DeviceInfo::connected() const {
-  // @@protoc_insertion_point(field_get:mvcam.DeviceInfo.connected)
-  return connected_;
-}
-inline void DeviceInfo::set_connected(bool value) {
-  
-  connected_ = value;
-  // @@protoc_insertion_point(field_set:mvcam.DeviceInfo.connected)
-}
-
-// -------------------------------------------------------------------
-
-// GetDevicesResponse
-
-// repeated .mvcam.DeviceInfo devices = 1;
-inline int GetDevicesResponse::devices_size() const {
-  return devices_.size();
-}
-inline void GetDevicesResponse::clear_devices() {
-  devices_.Clear();
-}
-inline ::mvcam::DeviceInfo* GetDevicesResponse::mutable_devices(int index) {
-  // @@protoc_insertion_point(field_mutable:mvcam.GetDevicesResponse.devices)
-  return devices_.Mutable(index);
-}
-inline ::google::protobuf::RepeatedPtrField< ::mvcam::DeviceInfo >*
-GetDevicesResponse::mutable_devices() {
-  // @@protoc_insertion_point(field_mutable_list:mvcam.GetDevicesResponse.devices)
-  return &devices_;
-}
-inline const ::mvcam::DeviceInfo& GetDevicesResponse::devices(int index) const {
-  // @@protoc_insertion_point(field_get:mvcam.GetDevicesResponse.devices)
-  return devices_.Get(index);
-}
-inline ::mvcam::DeviceInfo* GetDevicesResponse::add_devices() {
-  // @@protoc_insertion_point(field_add:mvcam.GetDevicesResponse.devices)
-  return devices_.Add();
-}
-inline const ::google::protobuf::RepeatedPtrField< ::mvcam::DeviceInfo >&
-GetDevicesResponse::devices() const {
-  // @@protoc_insertion_point(field_list:mvcam.GetDevicesResponse.devices)
-  return devices_;
-}
-
-// -------------------------------------------------------------------
-
-// IdRequest
-
-// string id = 1;
-inline void IdRequest::clear_id() {
-  id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline const ::std::string& IdRequest::id() const {
-  // @@protoc_insertion_point(field_get:mvcam.IdRequest.id)
-  return id_.GetNoArena();
-}
-inline void IdRequest::set_id(const ::std::string& value) {
-  
-  id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:mvcam.IdRequest.id)
-}
-#if LANG_CXX11
-inline void IdRequest::set_id(::std::string&& value) {
-  
-  id_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:mvcam.IdRequest.id)
-}
-#endif
-inline void IdRequest::set_id(const char* value) {
-  GOOGLE_DCHECK(value != NULL);
-  
-  id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:mvcam.IdRequest.id)
-}
-inline void IdRequest::set_id(const char* value, size_t size) {
-  
-  id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:mvcam.IdRequest.id)
-}
-inline ::std::string* IdRequest::mutable_id() {
-  
-  // @@protoc_insertion_point(field_mutable:mvcam.IdRequest.id)
-  return id_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline ::std::string* IdRequest::release_id() {
-  // @@protoc_insertion_point(field_release:mvcam.IdRequest.id)
-  
-  return id_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline void IdRequest::set_allocated_id(::std::string* id) {
-  if (id != NULL) {
-    
-  } else {
-    
-  }
-  id_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), id);
-  // @@protoc_insertion_point(field_set_allocated:mvcam.IdRequest.id)
 }
 
 // -------------------------------------------------------------------
@@ -2981,118 +1465,6 @@ inline void Configuration::set_allocated_gamma(::mvcam::Parameter* gamma) {
 
 // -------------------------------------------------------------------
 
-// ConfigureRequest
-
-// .mvcam.IdRequest id = 1;
-inline bool ConfigureRequest::has_id() const {
-  return this != internal_default_instance() && id_ != NULL;
-}
-inline void ConfigureRequest::clear_id() {
-  if (GetArenaNoVirtual() == NULL && id_ != NULL) {
-    delete id_;
-  }
-  id_ = NULL;
-}
-inline const ::mvcam::IdRequest& ConfigureRequest::_internal_id() const {
-  return *id_;
-}
-inline const ::mvcam::IdRequest& ConfigureRequest::id() const {
-  const ::mvcam::IdRequest* p = id_;
-  // @@protoc_insertion_point(field_get:mvcam.ConfigureRequest.id)
-  return p != NULL ? *p : *reinterpret_cast<const ::mvcam::IdRequest*>(
-      &::mvcam::_IdRequest_default_instance_);
-}
-inline ::mvcam::IdRequest* ConfigureRequest::release_id() {
-  // @@protoc_insertion_point(field_release:mvcam.ConfigureRequest.id)
-  
-  ::mvcam::IdRequest* temp = id_;
-  id_ = NULL;
-  return temp;
-}
-inline ::mvcam::IdRequest* ConfigureRequest::mutable_id() {
-  
-  if (id_ == NULL) {
-    auto* p = CreateMaybeMessage<::mvcam::IdRequest>(GetArenaNoVirtual());
-    id_ = p;
-  }
-  // @@protoc_insertion_point(field_mutable:mvcam.ConfigureRequest.id)
-  return id_;
-}
-inline void ConfigureRequest::set_allocated_id(::mvcam::IdRequest* id) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete id_;
-  }
-  if (id) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      id = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, id, submessage_arena);
-    }
-    
-  } else {
-    
-  }
-  id_ = id;
-  // @@protoc_insertion_point(field_set_allocated:mvcam.ConfigureRequest.id)
-}
-
-// .mvcam.Configuration config = 2;
-inline bool ConfigureRequest::has_config() const {
-  return this != internal_default_instance() && config_ != NULL;
-}
-inline void ConfigureRequest::clear_config() {
-  if (GetArenaNoVirtual() == NULL && config_ != NULL) {
-    delete config_;
-  }
-  config_ = NULL;
-}
-inline const ::mvcam::Configuration& ConfigureRequest::_internal_config() const {
-  return *config_;
-}
-inline const ::mvcam::Configuration& ConfigureRequest::config() const {
-  const ::mvcam::Configuration* p = config_;
-  // @@protoc_insertion_point(field_get:mvcam.ConfigureRequest.config)
-  return p != NULL ? *p : *reinterpret_cast<const ::mvcam::Configuration*>(
-      &::mvcam::_Configuration_default_instance_);
-}
-inline ::mvcam::Configuration* ConfigureRequest::release_config() {
-  // @@protoc_insertion_point(field_release:mvcam.ConfigureRequest.config)
-  
-  ::mvcam::Configuration* temp = config_;
-  config_ = NULL;
-  return temp;
-}
-inline ::mvcam::Configuration* ConfigureRequest::mutable_config() {
-  
-  if (config_ == NULL) {
-    auto* p = CreateMaybeMessage<::mvcam::Configuration>(GetArenaNoVirtual());
-    config_ = p;
-  }
-  // @@protoc_insertion_point(field_mutable:mvcam.ConfigureRequest.config)
-  return config_;
-}
-inline void ConfigureRequest::set_allocated_config(::mvcam::Configuration* config) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete config_;
-  }
-  if (config) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      config = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, config, submessage_arena);
-    }
-    
-  } else {
-    
-  }
-  config_ = config;
-  // @@protoc_insertion_point(field_set_allocated:mvcam.ConfigureRequest.config)
-}
-
-// -------------------------------------------------------------------
-
 // Frame
 
 // .google.protobuf.Timestamp timestamp = 1;
@@ -3269,122 +1641,271 @@ inline void Frame::set_allocated_data(::std::string* data) {
 
 // -------------------------------------------------------------------
 
-// FrameStream
+// DeviceInfo
 
-// repeated .mvcam.Frame frames = 1;
-inline int FrameStream::frames_size() const {
-  return frames_.size();
+// string manufacture = 2;
+inline void DeviceInfo::clear_manufacture() {
+  manufacture_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline void FrameStream::clear_frames() {
-  frames_.Clear();
+inline const ::std::string& DeviceInfo::manufacture() const {
+  // @@protoc_insertion_point(field_get:mvcam.DeviceInfo.manufacture)
+  return manufacture_.GetNoArena();
 }
-inline ::mvcam::Frame* FrameStream::mutable_frames(int index) {
-  // @@protoc_insertion_point(field_mutable:mvcam.FrameStream.frames)
-  return frames_.Mutable(index);
-}
-inline ::google::protobuf::RepeatedPtrField< ::mvcam::Frame >*
-FrameStream::mutable_frames() {
-  // @@protoc_insertion_point(field_mutable_list:mvcam.FrameStream.frames)
-  return &frames_;
-}
-inline const ::mvcam::Frame& FrameStream::frames(int index) const {
-  // @@protoc_insertion_point(field_get:mvcam.FrameStream.frames)
-  return frames_.Get(index);
-}
-inline ::mvcam::Frame* FrameStream::add_frames() {
-  // @@protoc_insertion_point(field_add:mvcam.FrameStream.frames)
-  return frames_.Add();
-}
-inline const ::google::protobuf::RepeatedPtrField< ::mvcam::Frame >&
-FrameStream::frames() const {
-  // @@protoc_insertion_point(field_list:mvcam.FrameStream.frames)
-  return frames_;
-}
-
-// -------------------------------------------------------------------
-
-// StreamingRequest
-
-// .mvcam.IdRequest id = 1;
-inline bool StreamingRequest::has_id() const {
-  return this != internal_default_instance() && id_ != NULL;
-}
-inline void StreamingRequest::clear_id() {
-  if (GetArenaNoVirtual() == NULL && id_ != NULL) {
-    delete id_;
-  }
-  id_ = NULL;
-}
-inline const ::mvcam::IdRequest& StreamingRequest::_internal_id() const {
-  return *id_;
-}
-inline const ::mvcam::IdRequest& StreamingRequest::id() const {
-  const ::mvcam::IdRequest* p = id_;
-  // @@protoc_insertion_point(field_get:mvcam.StreamingRequest.id)
-  return p != NULL ? *p : *reinterpret_cast<const ::mvcam::IdRequest*>(
-      &::mvcam::_IdRequest_default_instance_);
-}
-inline ::mvcam::IdRequest* StreamingRequest::release_id() {
-  // @@protoc_insertion_point(field_release:mvcam.StreamingRequest.id)
+inline void DeviceInfo::set_manufacture(const ::std::string& value) {
   
-  ::mvcam::IdRequest* temp = id_;
-  id_ = NULL;
-  return temp;
+  manufacture_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:mvcam.DeviceInfo.manufacture)
 }
-inline ::mvcam::IdRequest* StreamingRequest::mutable_id() {
+#if LANG_CXX11
+inline void DeviceInfo::set_manufacture(::std::string&& value) {
   
-  if (id_ == NULL) {
-    auto* p = CreateMaybeMessage<::mvcam::IdRequest>(GetArenaNoVirtual());
-    id_ = p;
-  }
-  // @@protoc_insertion_point(field_mutable:mvcam.StreamingRequest.id)
-  return id_;
+  manufacture_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:mvcam.DeviceInfo.manufacture)
 }
-inline void StreamingRequest::set_allocated_id(::mvcam::IdRequest* id) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete id_;
-  }
-  if (id) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      id = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, id, submessage_arena);
-    }
+#endif
+inline void DeviceInfo::set_manufacture(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  
+  manufacture_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:mvcam.DeviceInfo.manufacture)
+}
+inline void DeviceInfo::set_manufacture(const char* value, size_t size) {
+  
+  manufacture_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:mvcam.DeviceInfo.manufacture)
+}
+inline ::std::string* DeviceInfo::mutable_manufacture() {
+  
+  // @@protoc_insertion_point(field_mutable:mvcam.DeviceInfo.manufacture)
+  return manufacture_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* DeviceInfo::release_manufacture() {
+  // @@protoc_insertion_point(field_release:mvcam.DeviceInfo.manufacture)
+  
+  return manufacture_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void DeviceInfo::set_allocated_manufacture(::std::string* manufacture) {
+  if (manufacture != NULL) {
     
   } else {
     
   }
-  id_ = id;
-  // @@protoc_insertion_point(field_set_allocated:mvcam.StreamingRequest.id)
+  manufacture_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), manufacture);
+  // @@protoc_insertion_point(field_set_allocated:mvcam.DeviceInfo.manufacture)
 }
 
-// uint64 number_frames = 2;
-inline void StreamingRequest::clear_number_frames() {
-  number_frames_ = GOOGLE_ULONGLONG(0);
+// string id = 3;
+inline void DeviceInfo::clear_id() {
+  id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline ::google::protobuf::uint64 StreamingRequest::number_frames() const {
-  // @@protoc_insertion_point(field_get:mvcam.StreamingRequest.number_frames)
-  return number_frames_;
+inline const ::std::string& DeviceInfo::id() const {
+  // @@protoc_insertion_point(field_get:mvcam.DeviceInfo.id)
+  return id_.GetNoArena();
 }
-inline void StreamingRequest::set_number_frames(::google::protobuf::uint64 value) {
+inline void DeviceInfo::set_id(const ::std::string& value) {
   
-  number_frames_ = value;
-  // @@protoc_insertion_point(field_set:mvcam.StreamingRequest.number_frames)
+  id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:mvcam.DeviceInfo.id)
+}
+#if LANG_CXX11
+inline void DeviceInfo::set_id(::std::string&& value) {
+  
+  id_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:mvcam.DeviceInfo.id)
+}
+#endif
+inline void DeviceInfo::set_id(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  
+  id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:mvcam.DeviceInfo.id)
+}
+inline void DeviceInfo::set_id(const char* value, size_t size) {
+  
+  id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:mvcam.DeviceInfo.id)
+}
+inline ::std::string* DeviceInfo::mutable_id() {
+  
+  // @@protoc_insertion_point(field_mutable:mvcam.DeviceInfo.id)
+  return id_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* DeviceInfo::release_id() {
+  // @@protoc_insertion_point(field_release:mvcam.DeviceInfo.id)
+  
+  return id_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void DeviceInfo::set_allocated_id(::std::string* id) {
+  if (id != NULL) {
+    
+  } else {
+    
+  }
+  id_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), id);
+  // @@protoc_insertion_point(field_set_allocated:mvcam.DeviceInfo.id)
 }
 
-// uint64 batch_size = 4;
-inline void StreamingRequest::clear_batch_size() {
-  batch_size_ = GOOGLE_ULONGLONG(0);
+// string model = 4;
+inline void DeviceInfo::clear_model() {
+  model_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline ::google::protobuf::uint64 StreamingRequest::batch_size() const {
-  // @@protoc_insertion_point(field_get:mvcam.StreamingRequest.batch_size)
-  return batch_size_;
+inline const ::std::string& DeviceInfo::model() const {
+  // @@protoc_insertion_point(field_get:mvcam.DeviceInfo.model)
+  return model_.GetNoArena();
 }
-inline void StreamingRequest::set_batch_size(::google::protobuf::uint64 value) {
+inline void DeviceInfo::set_model(const ::std::string& value) {
   
-  batch_size_ = value;
-  // @@protoc_insertion_point(field_set:mvcam.StreamingRequest.batch_size)
+  model_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:mvcam.DeviceInfo.model)
+}
+#if LANG_CXX11
+inline void DeviceInfo::set_model(::std::string&& value) {
+  
+  model_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:mvcam.DeviceInfo.model)
+}
+#endif
+inline void DeviceInfo::set_model(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  
+  model_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:mvcam.DeviceInfo.model)
+}
+inline void DeviceInfo::set_model(const char* value, size_t size) {
+  
+  model_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:mvcam.DeviceInfo.model)
+}
+inline ::std::string* DeviceInfo::mutable_model() {
+  
+  // @@protoc_insertion_point(field_mutable:mvcam.DeviceInfo.model)
+  return model_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* DeviceInfo::release_model() {
+  // @@protoc_insertion_point(field_release:mvcam.DeviceInfo.model)
+  
+  return model_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void DeviceInfo::set_allocated_model(::std::string* model) {
+  if (model != NULL) {
+    
+  } else {
+    
+  }
+  model_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), model);
+  // @@protoc_insertion_point(field_set_allocated:mvcam.DeviceInfo.model)
+}
+
+// string version = 5;
+inline void DeviceInfo::clear_version() {
+  version_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& DeviceInfo::version() const {
+  // @@protoc_insertion_point(field_get:mvcam.DeviceInfo.version)
+  return version_.GetNoArena();
+}
+inline void DeviceInfo::set_version(const ::std::string& value) {
+  
+  version_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:mvcam.DeviceInfo.version)
+}
+#if LANG_CXX11
+inline void DeviceInfo::set_version(::std::string&& value) {
+  
+  version_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:mvcam.DeviceInfo.version)
+}
+#endif
+inline void DeviceInfo::set_version(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  
+  version_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:mvcam.DeviceInfo.version)
+}
+inline void DeviceInfo::set_version(const char* value, size_t size) {
+  
+  version_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:mvcam.DeviceInfo.version)
+}
+inline ::std::string* DeviceInfo::mutable_version() {
+  
+  // @@protoc_insertion_point(field_mutable:mvcam.DeviceInfo.version)
+  return version_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* DeviceInfo::release_version() {
+  // @@protoc_insertion_point(field_release:mvcam.DeviceInfo.version)
+  
+  return version_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void DeviceInfo::set_allocated_version(::std::string* version) {
+  if (version != NULL) {
+    
+  } else {
+    
+  }
+  version_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), version);
+  // @@protoc_insertion_point(field_set_allocated:mvcam.DeviceInfo.version)
+}
+
+// string serial = 6;
+inline void DeviceInfo::clear_serial() {
+  serial_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& DeviceInfo::serial() const {
+  // @@protoc_insertion_point(field_get:mvcam.DeviceInfo.serial)
+  return serial_.GetNoArena();
+}
+inline void DeviceInfo::set_serial(const ::std::string& value) {
+  
+  serial_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:mvcam.DeviceInfo.serial)
+}
+#if LANG_CXX11
+inline void DeviceInfo::set_serial(::std::string&& value) {
+  
+  serial_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:mvcam.DeviceInfo.serial)
+}
+#endif
+inline void DeviceInfo::set_serial(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  
+  serial_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:mvcam.DeviceInfo.serial)
+}
+inline void DeviceInfo::set_serial(const char* value, size_t size) {
+  
+  serial_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:mvcam.DeviceInfo.serial)
+}
+inline ::std::string* DeviceInfo::mutable_serial() {
+  
+  // @@protoc_insertion_point(field_mutable:mvcam.DeviceInfo.serial)
+  return serial_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* DeviceInfo::release_serial() {
+  // @@protoc_insertion_point(field_release:mvcam.DeviceInfo.serial)
+  
+  return serial_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void DeviceInfo::set_allocated_serial(::std::string* serial) {
+  if (serial != NULL) {
+    
+  } else {
+    
+  }
+  serial_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), serial);
+  // @@protoc_insertion_point(field_set_allocated:mvcam.DeviceInfo.serial)
 }
 
 // -------------------------------------------------------------------
@@ -3405,125 +1926,9 @@ inline void Status::set_temperature(double value) {
   // @@protoc_insertion_point(field_set:mvcam.Status.temperature)
 }
 
-// bool opened = 2;
-inline void Status::clear_opened() {
-  opened_ = false;
-}
-inline bool Status::opened() const {
-  // @@protoc_insertion_point(field_get:mvcam.Status.opened)
-  return opened_;
-}
-inline void Status::set_opened(bool value) {
-  
-  opened_ = value;
-  // @@protoc_insertion_point(field_set:mvcam.Status.opened)
-}
-
-// bool capturing = 3;
-inline void Status::clear_capturing() {
-  capturing_ = false;
-}
-inline bool Status::capturing() const {
-  // @@protoc_insertion_point(field_get:mvcam.Status.capturing)
-  return capturing_;
-}
-inline void Status::set_capturing(bool value) {
-  
-  capturing_ = value;
-  // @@protoc_insertion_point(field_set:mvcam.Status.capturing)
-}
-
-// -------------------------------------------------------------------
-
-// DeviceControlRequest
-
-// .mvcam.IdRequest id = 1;
-inline bool DeviceControlRequest::has_id() const {
-  return this != internal_default_instance() && id_ != NULL;
-}
-inline void DeviceControlRequest::clear_id() {
-  if (GetArenaNoVirtual() == NULL && id_ != NULL) {
-    delete id_;
-  }
-  id_ = NULL;
-}
-inline const ::mvcam::IdRequest& DeviceControlRequest::_internal_id() const {
-  return *id_;
-}
-inline const ::mvcam::IdRequest& DeviceControlRequest::id() const {
-  const ::mvcam::IdRequest* p = id_;
-  // @@protoc_insertion_point(field_get:mvcam.DeviceControlRequest.id)
-  return p != NULL ? *p : *reinterpret_cast<const ::mvcam::IdRequest*>(
-      &::mvcam::_IdRequest_default_instance_);
-}
-inline ::mvcam::IdRequest* DeviceControlRequest::release_id() {
-  // @@protoc_insertion_point(field_release:mvcam.DeviceControlRequest.id)
-  
-  ::mvcam::IdRequest* temp = id_;
-  id_ = NULL;
-  return temp;
-}
-inline ::mvcam::IdRequest* DeviceControlRequest::mutable_id() {
-  
-  if (id_ == NULL) {
-    auto* p = CreateMaybeMessage<::mvcam::IdRequest>(GetArenaNoVirtual());
-    id_ = p;
-  }
-  // @@protoc_insertion_point(field_mutable:mvcam.DeviceControlRequest.id)
-  return id_;
-}
-inline void DeviceControlRequest::set_allocated_id(::mvcam::IdRequest* id) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete id_;
-  }
-  if (id) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      id = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, id, submessage_arena);
-    }
-    
-  } else {
-    
-  }
-  id_ = id;
-  // @@protoc_insertion_point(field_set_allocated:mvcam.DeviceControlRequest.id)
-}
-
-// .mvcam.DeviceControlAction action = 2;
-inline void DeviceControlRequest::clear_action() {
-  action_ = 0;
-}
-inline ::mvcam::DeviceControlAction DeviceControlRequest::action() const {
-  // @@protoc_insertion_point(field_get:mvcam.DeviceControlRequest.action)
-  return static_cast< ::mvcam::DeviceControlAction >(action_);
-}
-inline void DeviceControlRequest::set_action(::mvcam::DeviceControlAction value) {
-  
-  action_ = value;
-  // @@protoc_insertion_point(field_set:mvcam.DeviceControlRequest.action)
-}
-
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
-// -------------------------------------------------------------------
-
-// -------------------------------------------------------------------
-
-// -------------------------------------------------------------------
-
-// -------------------------------------------------------------------
-
-// -------------------------------------------------------------------
-
-// -------------------------------------------------------------------
-
-// -------------------------------------------------------------------
-
-// -------------------------------------------------------------------
-
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------

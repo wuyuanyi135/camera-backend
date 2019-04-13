@@ -37,4 +37,14 @@ class config_provider {
   void create_default_config();
 };
 
+template<typename RetType>
+RetType config_provider::read(std::string field) {
+  return mTree.get<RetType>(field);
+}
+
+template<typename RetType>
+RetType config_provider::read(std::string field, RetType defaultValue) {
+  return mTree.get<RetType>(field, defaultValue);
+}
+
 #endif //CAMERA_BACKEND_CONFIG_H

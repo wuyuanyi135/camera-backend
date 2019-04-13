@@ -15,71 +15,124 @@ BOOST_AUTO_TEST_CASE(test_framework_singleton) {
   BOOST_TEST_CHECK(framework1 == framework2);
 }
 
-BOOST_AUTO_TEST_CASE(test_framework_list_adapters) {
+BOOST_AUTO_TEST_CASE(test_framework_list_adapter) {
   const std::shared_ptr<camera_driver::framework> &framework = camera_driver::framework::get_instance();
-  const std::vector<camera_driver::adapter *> &adapters = framework->adapters();
+  const camera_driver::adapter * adapter = framework->get_adapter();
 
-  BOOST_TEST_MESSAGE("There are " << adapters.size() << " adapters");
 
-  for (auto& adapter : adapters) {
-    BOOST_TEST_MESSAGE( adapter->name() << ": " << adapter->description());
-  }
+  BOOST_TEST_MESSAGE( adapter->name() << ": " << adapter->description());
 }
 
 BOOST_AUTO_TEST_CASE(test_framework_list_cameras) {
   const std::shared_ptr<camera_driver::framework> &framework = camera_driver::framework::get_instance();
-  framework->update_cache(nullptr);
-  std::vector<std::shared_ptr<camera_driver::camera_device>> cameraList = framework->camera_list();
+  std::vector<camera_driver::camera_descriptor> cameraList = framework->camera_list();
   BOOST_TEST_MESSAGE("There are " << cameraList.size() << " cameras");
 
   for (auto& cam : cameraList) {
-    BOOST_TEST_MESSAGE(cam->camera_descriptor_ref.id);
+    BOOST_TEST_MESSAGE(cam.id);
   }
 }
 
 BOOST_AUTO_TEST_CASE(test_framework_open_camera) {
   const std::shared_ptr<camera_driver::framework> &framework = camera_driver::framework::get_instance();
-  framework->update_cache(nullptr);
-  std::vector<std::shared_ptr<camera_driver::camera_device>> cameraList = framework->camera_list();
+  std::vector<camera_driver::camera_descriptor> cameraList = framework->camera_list();
   if (cameraList.empty()) {
     return;
   }
 
-  cameraList.front()->open_camera();
-  BOOST_TEST_CHECK(cameraList.front()->opened());
+  framework->select_camera_by_id(cameraList.front().id);
+  const std::shared_ptr<camera_driver::camera_device> camera = framework->selected_camera;
+  camera->open_camera();
+  BOOST_TEST_CHECK(camera->opened());
 
-  cameraList.front()->shutdown_camera();
-  BOOST_TEST_CHECK(!cameraList.front()->opened());
+  camera->shutdown_camera();
+  BOOST_TEST_CHECK(!camera->opened());
 }
 
 BOOST_AUTO_TEST_CASE(test_framework_list_open_list) {
   const std::shared_ptr<camera_driver::framework> &framework = camera_driver::framework::get_instance();
-  framework->update_cache(nullptr);
-  std::vector<std::shared_ptr<camera_driver::camera_device>> cameraList = framework->camera_list();
+  std::vector<camera_driver::camera_descriptor> cameraList = framework->camera_list();
   if (cameraList.empty()) {
     return;
   }
 
-  std::shared_ptr<camera_driver::camera_device> &selectedCamera = cameraList.front();
+  framework->select_camera_by_id(cameraList.front().id);
+
+  std::shared_ptr<camera_driver::camera_device> selectedCamera = framework->selected_camera;
   selectedCamera->open_camera();
   BOOST_TEST_CHECK(selectedCamera->opened());
 
-  std::vector<std::shared_ptr<camera_driver::camera_device>> cameraListNew = framework->camera_list();
+  std::vector<camera_driver::camera_descriptor> cameraListNew = framework->camera_list();
   BOOST_TEST_CHECK(selectedCamera->opened());
-  BOOST_TEST_CHECK(cameraListNew.front()->opened());
-  cameraListNew.front()->shutdown_camera();
+
+
+
+  selectedCamera->shutdown_camera();
   BOOST_TEST_CHECK(!selectedCamera->opened());
 
 }
 BOOST_AUTO_TEST_CASE(test_framework_list_multiple_times) {
   const std::shared_ptr<camera_driver::framework> &framework = camera_driver::framework::get_instance();
   for (int i = 0; i < 10; ++i) {
-    framework->update_cache(nullptr);
-    std::vector<std::shared_ptr<camera_driver::camera_device>> cameraList = framework->camera_list();
-    BOOST_TEST_MESSAGE("ID: " << cameraList.front()->camera_descriptor_ref.id);
-    std::this_thread::sleep_for(std::chrono::seconds(1));
+    std::vector<camera_driver::camera_descriptor> cameraList = framework->camera_list();
+    BOOST_TEST_MESSAGE("ID: " << cameraList.front().id);
+    std::this_thread::sleep_for(std::chrono::milliseconds(200));
   }
+}
 
+BOOST_AUTO_TEST_CASE(test_framework_open_multiple_times) {
+  const std::shared_ptr<camera_driver::framework> &framework = camera_driver::framework::get_instance();
+  std::vector<camera_driver::camera_descriptor> cameraList = framework->camera_list();
+  framework->select_camera_by_id(cameraList.front().id);
+  std::shared_ptr<camera_driver::camera_device> selectedCamera = framework->selected_camera;
+  try { selectedCamera->open_camera(); } catch (std::exception &e) {}
+  BOOST_TEST_CHECK(selectedCamera->opened());
+  try { selectedCamera->open_camera(); } catch (std::exception &e) {}
+  BOOST_TEST_CHECK(selectedCamera->opened());
+  try { selectedCamera->open_camera(); } catch (std::exception &e) {}
+  BOOST_TEST_CHECK(selectedCamera->opened());
+  try { selectedCamera->shutdown_camera(); } catch (std::exception &e) {}
+  BOOST_TEST_CHECK(!selectedCamera->opened());
+  try { selectedCamera->shutdown_camera(); } catch (std::exception &e) {}
+  BOOST_TEST_CHECK(!selectedCamera->opened());
+  try { selectedCamera->open_camera(); } catch (std::exception &e) {}
+  BOOST_TEST_CHECK(selectedCamera->opened());
+  try { selectedCamera->open_camera(); } catch (std::exception &e) {}
+  BOOST_TEST_CHECK(selectedCamera->opened());
+  try { selectedCamera->shutdown_camera(); } catch (std::exception &e) {}
+  BOOST_TEST_CHECK(!selectedCamera->opened());
+}
 
+BOOST_AUTO_TEST_CASE(test_framework_open_multiple_times_and_list) {
+  const std::shared_ptr<camera_driver::framework> &framework = camera_driver::framework::get_instance();
+  std::vector<camera_driver::camera_descriptor> cameraList = framework->camera_list();
+  framework->select_camera_by_id(cameraList.front().id);
+  std::shared_ptr<camera_driver::camera_device> selectedCamera = framework->selected_camera;
+  try { selectedCamera->open_camera(); } catch (std::exception &e) {}
+  BOOST_TEST_CHECK(selectedCamera->opened());
+
+  cameraList = framework->camera_list();
+  framework->select_camera_by_id(cameraList.front().id);
+  try { selectedCamera->open_camera(); } catch (std::exception &e) {}
+  BOOST_TEST_CHECK(selectedCamera->opened());
+
+  cameraList = framework->camera_list();
+  framework->select_camera_by_id(cameraList.front().id);
+  selectedCamera = framework->selected_camera;
+  try { selectedCamera->open_camera(); } catch (std::exception &e) {}
+  BOOST_TEST_CHECK(selectedCamera->opened());
+
+  try { selectedCamera->shutdown_camera(); } catch (std::exception &e) {}
+  BOOST_TEST_CHECK(!selectedCamera->opened());
+
+  try { selectedCamera->shutdown_camera(); } catch (std::exception &e) {}
+  BOOST_TEST_CHECK(!selectedCamera->opened());
+
+  try { selectedCamera->open_camera(); } catch (std::exception &e) {}
+  BOOST_TEST_CHECK(selectedCamera->opened());
+  try { selectedCamera->open_camera(); } catch (std::exception &e) {}
+  BOOST_TEST_CHECK(selectedCamera->opened());
+  try { selectedCamera->shutdown_camera(); } catch (std::exception &e) {}
+  BOOST_TEST_CHECK(!selectedCamera->opened());
 }
 BOOST_AUTO_TEST_SUITE_END()

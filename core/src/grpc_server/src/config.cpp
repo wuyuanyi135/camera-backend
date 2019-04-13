@@ -20,6 +20,7 @@ void config_provider::create_default_config() {
 
   mTree.put("listen_port", "5074");
   mTree.put("listen_ip", "0.0.0.0");
+  mTree.put("working_state_check_interval_ms", 1000);
   // TODO: put more here
 
   std::ofstream f(CONFIG_FILE_NAME);
@@ -44,15 +45,7 @@ std::string config_provider::read(std::string field) {
   return mTree.get<std::string>(field);
 }
 
-template<typename RetType>
-RetType config_provider::read(std::string field) {
-  return mTree.get<RetType>(field);
-}
 
-template<typename RetType>
-RetType config_provider::read(std::string field, RetType defaultValue) {
-  return mTree.get<RetType>(field, defaultValue);
-}
 void config_provider::write(std::string field, std::string value, bool save) {
   mTree.put(field, value);
 

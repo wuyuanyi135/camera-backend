@@ -45,13 +45,11 @@ void aravis_adapter::camera_list(std::vector<camera_driver::camera_descriptor> &
 aravis_adapter::aravis_adapter() {
   CDINFO("Aravis adapter Loaded");
 }
-std::shared_ptr<camera_driver::camera_device> aravis_adapter::create_camera(camera_driver::camera_descriptor &cd) {
-  auto * camera = new aravis_camera(cd);
+std::shared_ptr<camera_driver::camera_device> aravis_adapter::create_camera(std::string id) {
+  auto * camera = new aravis_camera(id);
   camera->adapter_ref = this;
-  camera->camera_descriptor_ref = cd;
   std::shared_ptr<camera_driver::camera_device> shared_camera(camera);
   return shared_camera;
-
 }
 aravis_adapter::~aravis_adapter() {
   arv_shutdown();

@@ -51,9 +51,10 @@ aravis_camera::~aravis_camera() {
 
 }
 
-aravis_camera::aravis_camera(camera_driver::camera_descriptor &cd) : cd(cd) {
+aravis_camera::aravis_camera(const std::string id) {
   mCaptureFlag.set_flag_blocking(false);
   mValidFlag = true;
+  this->id = id;
 }
 
 void aravis_camera::open_camera() {
@@ -61,7 +62,7 @@ void aravis_camera::open_camera() {
     camera_driver::camera_already_open ex(this);
     BOOST_THROW_EXCEPTION(ex);
   }
-  mCamera = arv_camera_new(cd.id.c_str());
+  mCamera = arv_camera_new(id.c_str());
   mDevice = arv_camera_get_device(mCamera);
   if (mCamera == nullptr || mDevice == nullptr) {
     camera_driver::camera_start_failed_error ex(this);
@@ -72,7 +73,7 @@ void aravis_camera::open_camera() {
 }
 void aravis_camera::shutdown_camera() {
   if (!opened()) {
-    CDWARNING("Trying to shutdown an unopend camera: " << cd.id);
+    CDWARNING("Trying to shutdown an unopend camera: " << id);
     return;
   }
 

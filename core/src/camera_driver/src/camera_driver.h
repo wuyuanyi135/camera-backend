@@ -17,7 +17,7 @@ namespace camera_driver{
 class camera_device {
  public:
   adapter* adapter_ref;
-  camera_descriptor camera_descriptor_ref;
+  std::string id;
  public:
   virtual void open_camera() = 0;
   virtual void shutdown_camera() = 0;

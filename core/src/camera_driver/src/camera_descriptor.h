@@ -8,7 +8,9 @@
 #include <vector>
 #include <memory>
 
+
 namespace camera_driver {
+class adapter;
 class camera_device;
 class camera_descriptor {
  public:
